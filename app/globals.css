@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-green: #618020;
+  --color-brand-green-dark: #334311;
+  --color-brand-green-light: #c6e28a;
+  --color-brand-green-border: #c1e082;
+  --color-brand-grey-dark: #262626;
+  --color-brand-cream: #f7f5ef;
+  --font-sans: var(--font-inter);
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: #1c1c1c;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+input, select, textarea { font-size: 16px; }
+:focus-visible { outline: 2px solid #618020; outline-offset: 3px; border-radius: 3px; }
+
+/* ── Spacing ──────────────────────────────────────────────── */
+.section    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
+.section-sm { padding-block: clamp(2rem,   4vw, 3.5rem); }
+
+/* ── Eyebrow ──────────────────────────────────────────────── */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #618020;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.75rem;
+  min-height: 48px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.btn-primary { background: #618020; color: #fff; border-color: #618020; }
+.btn-primary:hover { background: #4e6819; border-color: #4e6819; }
+
+.btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
+.btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+.btn-white { background: #fff; color: #334311; border-color: #fff; }
+.btn-white:hover { background: #c6e28a; border-color: #c6e28a; color: #334311; }
+
+/* ── Swipe carousel (mobile) ──────────────────────────────── */
+.swipe-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0.875rem;
+  padding-bottom: 0.5rem;
+}
+.swipe-row::-webkit-scrollbar { display: none; }
+.swipe-row > * { scroll-snap-align: start; flex-shrink: 0; }
+
+/* ── Card lift ────────────────────────────────────────────── */
+.card-lift { transition: box-shadow 0.2s ease, transform 0.2s ease; }
+.card-lift:hover { box-shadow: 0 8px 28px rgba(51,67,17,0.11); transform: translateY(-2px); }
+
+.btn-outline-dark {
+  background: transparent;
+  color: #334311;
+  border-color: #334311;
+}
+.btn-outline-dark:hover { background: #334311; color: #ffffff; }
+
+/* Teal accent pulled from logo */
+.text-teal { color: #2a9d8f; }
+.bg-teal    { background-color: #2a9d8f; }

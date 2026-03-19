@@ -1,0 +1,154 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { BookingButton } from '@/components/BookingButton'
+import { buildMetadata } from '@/lib/seo'
+import { BOOKING_URLS } from '@/lib/constants'
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
+  description: 'Advanced clinical massage for chronic pain, sciatica, RSI, headaches and postural conditions in Archway, North London. Book with Carlos Bonvicine today.',
+  path: '/services/advanced-clinical-massage',
+})
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
+  description: 'Expert clinical massage for chronic pain, sciatica, RSI, headaches, and complex postural conditions in Archway, North London.',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Range and Restore Sports Massage',
+    address: { '@type': 'PostalAddress', streetAddress: '130 Junction Road', addressLocality: 'London', postalCode: 'N19 5LB' },
+  },
+  areaServed: { '@type': 'City', name: 'London' },
+  serviceType: 'Clinical Massage',
+}
+
+export default function AdvancedClinicalMassagePage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+
+      <div className="bg-[#c6e28a] py-12 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-[#618020] font-semibold uppercase tracking-widest text-sm mb-3">Clinical Massage · Archway London</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#334311] mb-4">
+            Advanced Clinical Massage and Soft Tissue Remedial Therapy
+          </h1>
+          <h2 className="text-2xl lg:text-3xl font-semibold text-[#334311]/80">
+            Expert Treatment for Chronic Pain, Postural Issues, and Complex Conditions
+          </h2>
+          <div className="mt-6">
+            <BookingButton href={BOOKING_URLS.advancedClinical} label="Book Now" />
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="space-y-12">
+          <section>
+            <h2 className="text-2xl font-bold text-[#334311] mb-4">Who is this treatment for?</h2>
+            <p className="text-gray-700 mb-4">Advanced Clinical Massage is designed for clients dealing with complex or persistent conditions, including:</p>
+            <ul className="space-y-2">
+              {[
+                'Chronic pain or long-standing muscular tension',
+                'Sciatica and nerve-related pain patterns',
+                'Repetitive strain injuries (RSI) and tendinopathies',
+                'Headaches and tension-related symptoms',
+                'Complex postural imbalances and compensatory patterns',
+                'Referred pain from trigger points and myofascial restrictions',
+                'Recovery from injury or surgery requiring targeted rehabilitation',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#618020] flex-shrink-0 mt-0.5" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-gray-700">This treatment is assessment-led and adapted to your specific presentation at every session.</p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-[#334311] mb-4">Choose your ideal session length</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { duration: '30 Minutes', desc: 'Focused clinical treatment for a single area or specific condition. Suitable for follow-up sessions or targeted problem areas.' },
+                { duration: '60 Minutes', desc: 'In-depth assessment and treatment for one or two areas. Provides time for thorough assessment and effective clinical work.' },
+                { duration: '90 Minutes', desc: 'Comprehensive clinical session for complex or multi-area presentations. Recommended for chronic conditions and full-body assessments.' },
+              ].map((option) => (
+                <div key={option.duration} className="bg-[#c6e28a] rounded-xl p-5">
+                  <p className="font-bold text-[#334311] text-lg mb-2">{option.duration}</p>
+                  <p className="text-[#334311]/80 text-sm">{option.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-[#334311] mb-4">What are the benefits?</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                'Reduces chronic pain and stiffness',
+                'Improves posture and joint alignment',
+                'Restores mobility and range of motion',
+                'Relieves muscle fatigue and tension',
+                'Enhances recovery from injuries',
+                'Supports stress reduction and relaxation',
+                'Promotes long-term muscular health',
+              ].map((benefit) => (
+                <li key={benefit} className="flex items-start gap-3 text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#618020] flex-shrink-0 mt-0.5" aria-hidden="true">
+                    <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  </svg>
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-[#334311] mb-4">What techniques are used?</h2>
+            <p className="text-gray-700 mb-3">Each session is tailored to your clinical needs and may include:</p>
+            <ul className="space-y-2">
+              {[
+                'Advanced deep tissue techniques',
+                'Trigger point therapy',
+                'Myofascial release',
+                'Neuromuscular techniques',
+                'Soft tissue mobilisation',
+                'Assisted stretching and joint mobilisation',
+              ].map((tech) => (
+                <li key={tech} className="flex items-center gap-3 text-gray-700">
+                  <span className="w-2 h-2 rounded-full bg-[#618020] flex-shrink-0" aria-hidden="true" />
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="bg-[#334311] text-white rounded-2xl p-8">
+            <h2 className="text-2xl font-bold mb-4">Book your session</h2>
+            <p className="text-[#c6e28a] mb-6">
+              Advanced Clinical Massage provides targeted, evidence-informed treatment for those dealing with persistent pain, complex conditions, and postural issues. Book your session at Range and Restore in Archway, North London, and take the first step towards lasting relief and improved function.
+            </p>
+            <BookingButton href={BOOKING_URLS.advancedClinical} label="BOOK NOW" />
+          </section>
+
+          <div className="border-t pt-8">
+            <h3 className="text-lg font-semibold text-[#334311] mb-4">Related articles</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/blog/desk-posture-pain-massage" className="text-[#618020] hover:text-[#334311] font-medium min-h-[44px] flex items-center">
+                → Say Goodbye to Desk Posture Pain
+              </Link>
+              <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#618020] hover:text-[#334311] font-medium min-h-[44px] flex items-center">
+                → Achilles Tendinitis – How Sports Massage Helps Recovery
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}

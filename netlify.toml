@@ -1,0 +1,105 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# ── Security headers ──────────────────────────────────────────────────────────
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# ── Redirects ─────────────────────────────────────────────────────────────────
+
+# Old booking/Jane App routes (in case they were ever linked externally)
+[[redirects]]
+  from = "/book"
+  to = "https://rangeandrestoresportsmassage.janeapp.co.uk/#/list"
+  status = 301
+
+[[redirects]]
+  from = "/booking"
+  to = "https://rangeandrestoresportsmassage.janeapp.co.uk/#/list"
+  status = 301
+
+# Common misspellings / old URL patterns
+[[redirects]]
+  from = "/service"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/faq"
+  to = "/faqs"
+  status = 301
+
+[[redirects]]
+  from = "/blog/sports-massage"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/sports-massage"
+  to = "/services/sports-deep-tissue-massage"
+  status = 301
+
+[[redirects]]
+  from = "/deep-tissue-massage"
+  to = "/services/sports-deep-tissue-massage"
+  status = 301
+
+[[redirects]]
+  from = "/lymphatic-drainage"
+  to = "/services/manual-lymphatic-drainage"
+  status = 301
+
+[[redirects]]
+  from = "/mld"
+  to = "/services/manual-lymphatic-drainage"
+  status = 301
+
+[[redirects]]
+  from = "/back-pain"
+  to = "/services/back-neck-pain-mot"
+  status = 301
+
+[[redirects]]
+  from = "/neck-pain"
+  to = "/services/back-neck-pain-mot"
+  status = 301
+
+[[redirects]]
+  from = "/gift-card"
+  to = "/gift-cards"
+  status = 301
+
+[[redirects]]
+  from = "/bundles"
+  to = "/services/massage-bundles"
+  status = 301
+
+[[redirects]]
+  from = "/wellness"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms-and-conditions"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy-policy"
+  status = 301
