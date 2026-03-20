@@ -22,10 +22,10 @@ const services = [
 ]
 
 const blogPosts = [
-  { title: 'Hydration and Muscle Health – What Every Client Should Know', href: '/blog/hydration-and-muscle-health',          date: '8 Feb 2026' },
-  { title: 'How Sports Massage Helps Runners Before and After Races',     href: '/blog/sports-massage-for-runners',           date: '1 Feb 2026' },
-  { title: 'Achilles Tendinitis – How Sports Massage Helps Recovery',     href: '/blog/achilles-tendinitis-recovery-massage', date: '1 Feb 2026' },
-  { title: 'Say Goodbye to Desk Posture Pain',                            href: '/blog/desk-posture-pain-massage',            date: '1 Feb 2026' },
+  { title: 'Hydration and Muscle Health – What Every Client Should Know', href: '/blog/hydration-and-muscle-health',          date: '8 Feb 2026', img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=75' },
+  { title: 'How Sports Massage Helps Runners Before and After Races',     href: '/blog/sports-massage-for-runners',           date: '1 Feb 2026', img: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=75' },
+  { title: 'Achilles Tendinitis – How Sports Massage Helps Recovery',     href: '/blog/achilles-tendinitis-recovery-massage', date: '1 Feb 2026', img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=75' },
+  { title: 'Say Goodbye to Desk Posture Pain',                            href: '/blog/desk-posture-pain-massage',            date: '1 Feb 2026', img: 'https://images.unsplash.com/photo-1593476550610-87baa860004a?w=600&q=75' },
 ]
 
 const bundles = [
@@ -73,15 +73,15 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Right: logo */}
+            {/* Right: hero image */}
             <div className="hidden lg:flex items-center justify-center">
-              <div className="bg-white rounded-3xl p-6 shadow-lg shadow-[#334311]/10">
+              <div className="rounded-3xl overflow-hidden shadow-xl shadow-[#334311]/20 w-full max-w-[500px] aspect-[4/3]">
                 <Image
-                  src="/rangeandrestorelogo.png"
-                  alt="Range and Restore Sports Massage"
-                  width={340}
-                  height={200}
-                  className="w-full max-w-[340px] h-auto object-contain"
+                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1000&q=80"
+                  alt="Sports massage therapist treating a client"
+                  width={1000}
+                  height={750}
+                  className="w-full h-full object-cover"
                   priority
                 />
               </div>
@@ -312,14 +312,25 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
   const dateCol  = dark ? 'text-[#c1e082]/60' : 'text-[#618020]/60'
   const linkCol  = dark ? 'text-[#c6e28a] hover:text-white' : 'text-[#618020] hover:text-[#334311]'
   return (
-    <article className={`${width} ${bg} rounded-2xl border p-4 flex flex-col transition-colors`}>
-      <time className={`eyebrow block mb-2 ${dateCol}`} style={{ color: 'inherit' }}>{p.date}</time>
-      <h3 className={`font-bold text-sm leading-snug flex-1 mb-3 ${titleCol}`}>
-        <Link href={p.href} className={`hover:underline ${linkCol}`}>{p.title}</Link>
-      </h3>
-      <Link href={p.href} className={`text-xs font-semibold min-h-[36px] flex items-center transition-colors ${linkCol}`}>
-        Read more →
-      </Link>
+    <article className={`${width} ${bg} rounded-2xl border overflow-hidden flex flex-col transition-colors`}>
+      <div className="relative w-full h-36 flex-shrink-0">
+        <Image
+          src={p.img}
+          alt={p.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 250px, (max-width: 1024px) 50vw, 25vw"
+        />
+      </div>
+      <div className="p-4 flex flex-col flex-1">
+        <time className={`eyebrow block mb-2 ${dateCol}`} style={{ color: 'inherit' }}>{p.date}</time>
+        <h3 className={`font-bold text-sm leading-snug flex-1 mb-3 ${titleCol}`}>
+          <Link href={p.href} className={`hover:underline ${linkCol}`}>{p.title}</Link>
+        </h3>
+        <Link href={p.href} className={`text-xs font-semibold min-h-[36px] flex items-center transition-colors ${linkCol}`}>
+          Read more →
+        </Link>
+      </div>
     </article>
   )
 }

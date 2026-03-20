@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { buildMetadata } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
@@ -64,10 +65,18 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <div className="bg-[#c6e28a] py-12 lg:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#334311]">Our Services</h1>
-          <p className="mt-4 text-xl text-[#334311]/80 max-w-2xl">
+      <div className="relative bg-[#334311] py-16 lg:py-24 overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"
+          alt="Sports massage treatment in progress"
+          fill
+          className="object-cover opacity-30"
+          priority
+          sizes="100vw"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white">Our Services</h1>
+          <p className="mt-4 text-xl text-[#c6e28a]/90 max-w-2xl">
             Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.
           </p>
         </div>

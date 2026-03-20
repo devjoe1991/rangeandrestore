@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
 
@@ -22,6 +23,17 @@ export default function AboutPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
+            {/* Therapist hero image */}
+            <div className="rounded-2xl overflow-hidden mb-8 aspect-[4/3] relative w-full">
+              <Image
+                src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1000&q=80"
+                alt="Sports massage therapist performing soft tissue treatment"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
             <h2 className="text-3xl font-bold text-[#334311] mb-6">Carlos Bonvicine</h2>
             <div className="space-y-4 text-gray-700 text-lg">
               <p>
