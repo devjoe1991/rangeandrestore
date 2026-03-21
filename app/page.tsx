@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
+import { GoogleReviews } from '@/components/GoogleReviews'
+import { FacebookFeed } from '@/components/FacebookFeed'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, buildMetadata } from '@/lib/seo'
 
@@ -13,12 +15,12 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const services = [
-  { title: 'Sports & Deep Tissue Massage',   description: 'For tight muscles, training injuries and recovery. Sessions from 30–90 minutes.',         href: '/services/sports-deep-tissue-massage',   bookingHref: BOOKING_URLS.sportsDeepTissue, emoji: '🏃' },
-  { title: 'Advanced Clinical Massage',       description: 'Chronic pain, sciatica, RSI and postural issues treated with advanced techniques.',        href: '/services/advanced-clinical-massage',     bookingHref: BOOKING_URLS.advancedClinical,  emoji: '🎯' },
-  { title: 'Back & Neck Pain MOT',            description: 'Focused assessment and hands-on treatment for back, neck and desk-related pain.',           href: '/services/back-neck-pain-mot',            bookingHref: BOOKING_URLS.backNeckMot,       emoji: '💆' },
-  { title: 'Relaxation Massage',              description: 'Calm your nervous system and unwind with gentle, pressure-adjusted treatment.',             href: '/services/relaxation-restorative-massage', bookingHref: BOOKING_URLS.relaxation,        emoji: '🌿' },
-  { title: 'Manual Lymphatic Drainage',       description: 'Certified MLD for post-surgery recovery, swelling and immune support.',                    href: '/services/manual-lymphatic-drainage',     bookingHref: BOOKING_URLS.mld,               emoji: '🫧' },
-  { title: '2-Hour Pain Relief Massage',      description: 'Extended deep-dive session covering multiple problem areas for lasting results.',           href: '/services/2-hour-pain-relief-massage',    bookingHref: BOOKING_URLS.twoHourRelief,     emoji: '⏱️' },
+  { title: 'Sports & Deep Tissue Massage',   description: 'For tight muscles, training injuries and recovery. Runner\'s knee, shoulder tension, calf tightness. Sessions from 30–90 minutes.',  href: '/services/sports-deep-tissue-massage',   bookingHref: BOOKING_URLS.sportsDeepTissue, emoji: '🏃' },
+  { title: 'Advanced Clinical Massage',       description: 'Chronic pain, sciatica, tension headaches, chronic neck pain and RSI treated with advanced techniques.',                             href: '/services/advanced-clinical-massage',     bookingHref: BOOKING_URLS.advancedClinical,  emoji: '🎯' },
+  { title: 'Back & Neck Pain MOT',            description: 'Focused assessment and hands-on treatment for persistent lower back pain, desk-related neck pain and postural issues.',              href: '/services/back-neck-pain-mot',            bookingHref: BOOKING_URLS.backNeckMot,       emoji: '💆' },
+  { title: 'Relaxation Massage',              description: 'Calm your nervous system and unwind with gentle, pressure-adjusted treatment.',                                                       href: '/services/relaxation-restorative-massage', bookingHref: BOOKING_URLS.relaxation,        emoji: '🌿' },
+  { title: 'Manual Lymphatic Drainage',       description: 'Certified MLD for post-surgery recovery, swelling and immune support.',                                                              href: '/services/manual-lymphatic-drainage',     bookingHref: BOOKING_URLS.mld,               emoji: '🫧' },
+  { title: '2-Hour Pain Relief Massage',      description: 'Extended session covering multiple problem areas for lasting results. Ideal when a standard session is not enough.',                 href: '/services/2-hour-pain-relief-massage',    bookingHref: BOOKING_URLS.twoHourRelief,     emoji: '⏱️' },
 ]
 
 const blogPosts = [
@@ -57,8 +59,12 @@ export default function HomePage() {
                 Feel better.<br />Move better.<br />Live better.
               </h1>
 
-              <p className="text-[#334311]/75 text-lg sm:text-xl mb-8 max-w-lg leading-relaxed">
-                Personalised sports massage and soft tissue therapy from Carlos Bonvicine — assessment-led treatment for real, lasting results.
+              <p className="text-[#334311]/75 text-lg sm:text-xl mb-3 max-w-lg leading-relaxed">
+                Personalised sports massage and soft tissue therapy from Carlos Bonvicine. Assessment-led treatment for real, lasting results.
+              </p>
+
+              <p className="text-[#334311]/65 text-base mb-8 max-w-lg leading-relaxed">
+                Back pain, neck tension, runner&apos;s knee, shoulder problems? Treatment that targets the cause, not just the symptoms.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -68,7 +74,11 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <p className="mt-8 text-[#334311]/50 text-xs font-semibold tracking-widest uppercase">
+              <p className="mt-4 text-[#334311]/50 text-xs font-semibold tracking-widest uppercase">
+                Sessions available 7 days a week in Archway, North London
+              </p>
+
+              <p className="mt-2 text-[#334311]/50 text-xs font-semibold tracking-widest uppercase">
                 30 · 60 · 90 min &nbsp;·&nbsp; Sports, Remedial &amp; Relaxation &nbsp;·&nbsp; Certified MLD
               </p>
             </div>
@@ -94,7 +104,7 @@ export default function HomePage() {
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
       <section className="section bg-white" aria-labelledby="services-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-7 gap-4">
+          <div className="flex items-end justify-between mb-4 gap-4">
             <div>
               <span className="eyebrow block mb-1.5">Treatments</span>
               <h2 id="services-heading" className="text-2xl sm:text-3xl font-extrabold text-[#334311] tracking-tight">
@@ -105,6 +115,10 @@ export default function HomePage() {
               All services →
             </Link>
           </div>
+
+          <p className="text-sm text-[#334311]/60 mb-6">
+            Dealing with a specific injury or long-standing pain? There is a treatment designed for you.
+          </p>
 
           {/* Mobile swipe carousel */}
           <div className="sm:hidden -mx-4 px-4">
@@ -141,7 +155,7 @@ export default function HomePage() {
                 Treatment that starts with listening
               </h2>
               <p className="text-[#334311]/75 mb-6">
-                Every session at Range and Restore begins with a proper assessment — Carlos takes the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same.
+                Every session at Range and Restore begins with a proper assessment. Carlos takes the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
               </p>
               <ul className="space-y-3 mb-7">
                 {[
@@ -188,7 +202,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. BUNDLE PRICING ────────────────────────────────── */}
+      {/* ── 4. GOOGLE REVIEWS ────────────────────────────────── */}
+      <GoogleReviews />
+
+      {/* ── 5. FACEBOOK FEED ─────────────────────────────────── */}
+      <FacebookFeed />
+
+      {/* ── 6. BUNDLE PRICING ────────────────────────────────── */}
       <section className="section bg-white" aria-labelledby="bundles-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -223,7 +243,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. BLOG / WELLNESS HUB ───────────────────────────── */}
+      {/* ── 7. BLOG / WELLNESS HUB ───────────────────────────── */}
       <section className="section bg-[#334311]" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-7 gap-4">
@@ -260,14 +280,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. CTA BAR ───────────────────────────────────────── */}
+      {/* ── 8. CTA BAR ───────────────────────────────────────── */}
       <section className="section-sm bg-[#618020]" aria-label="Book a session">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
             Ready to feel better?
           </h2>
           <p className="text-[#c6e28a]/90 mb-7 text-base">
-            Book online in seconds or give Carlos a call. Sessions available 7 days.
+            Back pain, injury or tension holding you back? Book online or call Carlos directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <BookingButton label="Book Your Session" variant="white" />

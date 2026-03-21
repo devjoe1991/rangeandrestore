@@ -63,11 +63,24 @@ export default function ContactPage() {
             <div className="mt-8 bg-[#c6e28a] rounded-xl p-6">
               <h3 className="font-bold text-[#334311] mb-2">Location</h3>
               <p className="text-[#334311]/80 text-sm mb-3">
-                Range and Restore is located at 130 Junction Road, Archway, London N19 5LB — within the same building as Reliable Scan, a private diagnostic ultrasound clinic.
+                Range and Restore is located at 130 Junction Road, Archway, London N19 5LB, within the same building as Reliable Scan, a private diagnostic ultrasound clinic.
               </p>
               <p className="text-[#334311]/80 text-sm">
-                The clinic is a short walk from Archway Underground Station (Northern Line). Street parking is available nearby.
+                A short walk from Archway tube (Northern Line). Easy to reach from Tufnell Park, Islington and across North London. Street parking is available nearby.
               </p>
+            </div>
+
+            <div className="mt-6 rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.420517744654!2d-0.1374028!3d51.560524099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bee259e36a3%3A0x91aa9e204602d18b!2sRange%20and%20Restore%20Sports%20Massage!5e0!3m2!1sen!2suk!4v1774130167749!5m2!1sen!2suk"
+                width="100%"
+                height="320"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Range and Restore Sports Massage location"
+              />
             </div>
           </div>
 

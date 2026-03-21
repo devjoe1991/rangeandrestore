@@ -91,7 +91,10 @@ export default function FAQsPage() {
             Frequently Asked Questions
           </h1>
           <p className="mt-4 text-lg text-[#334311]/75 max-w-2xl">
-            Whether you&apos;re new to massage, managing an injury, or just curious about booking — find your answer here.
+            Whether you are new to massage, managing an injury, or just curious about booking, find your answer here.
+          </p>
+          <p className="mt-3 text-base text-[#334311]/60 max-w-xl">
+            Not sure which treatment is right for you? Call Carlos on <a href="tel:+447890716154" className="font-semibold text-[#334311] hover:underline">07890 716154</a>. He is happy to talk it through before you book.
           </p>
         </div>
       </div>

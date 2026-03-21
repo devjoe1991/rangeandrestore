@@ -129,11 +129,11 @@ export default function AdvancedClinicalMassagePage() {
           </section>
 
           <section className="bg-[#334311] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Book your session</h2>
+            <h2 className="text-2xl font-bold mb-4">Sciatica, chronic pain or postural problems?</h2>
             <p className="text-[#c6e28a] mb-6">
-              Advanced Clinical Massage provides targeted, evidence-informed treatment for those dealing with persistent pain, complex conditions, and postural issues. Book your session at Range and Restore in Archway, North London, and take the first step towards lasting relief and improved function.
+              Advanced Clinical Massage at Range and Restore in Archway, North London. Targeted, evidence-led treatment that addresses the root cause and delivers lasting relief.
             </p>
-            <BookingButton href={BOOKING_URLS.advancedClinical} label="BOOK NOW" />
+            <BookingButton href={BOOKING_URLS.advancedClinical} label="Book Today" />
           </section>
 
           <div className="border-t pt-8">

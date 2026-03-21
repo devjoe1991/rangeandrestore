@@ -121,11 +121,11 @@ export default function RelaxationRestorativeMassagePage() {
           </section>
 
           <section className="bg-[#334311] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Book your session</h2>
+            <h2 className="text-2xl font-bold mb-4">Need to switch off and properly recover?</h2>
             <p className="text-[#c6e28a] mb-6">
-              Each session is delivered in a safe, professional setting and tailored to your individual needs, with pressure adjusted throughout. Book your Relaxation Restorative Massage Therapy session today and give your body time to unwind, recover, and feel more restored.
+              Each session is delivered in a safe, professional setting in Archway, North London, with pressure adjusted throughout. Give your body and mind the time to unwind, recover, and feel restored.
             </p>
-            <BookingButton href={BOOKING_URLS.relaxation} label="BOOK NOW" />
+            <BookingButton href={BOOKING_URLS.relaxation} label="Book Today" />
           </section>
 
           <div className="border-t pt-8">

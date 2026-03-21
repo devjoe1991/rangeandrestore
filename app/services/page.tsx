@@ -15,21 +15,21 @@ const services = [
     title: 'Sports, Deep Tissue & Soft Tissue Remedial Massage',
     href: '/services/sports-deep-tissue-massage',
     bookingHref: BOOKING_URLS.sportsDeepTissue,
-    description: 'Targeted treatment for athletes and active individuals dealing with muscle tightness, injury recovery, and performance support.',
+    description: 'Targeted treatment for muscle tightness, runner\'s knee, shoulder tension, calf tightness, injury recovery, and performance support.',
     duration: '30, 60 or 90 minutes',
   },
   {
     title: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
     href: '/services/advanced-clinical-massage',
     bookingHref: BOOKING_URLS.advancedClinical,
-    description: 'Expert clinical massage for chronic pain, sciatica, RSI, headaches, and complex postural conditions.',
+    description: 'Expert clinical massage for sciatica, chronic neck pain, tension headaches, RSI, and complex postural conditions.',
     duration: '30, 60 or 90 minutes',
   },
   {
     title: 'Back & Neck Pain MOT',
     href: '/services/back-neck-pain-mot',
     bookingHref: BOOKING_URLS.backNeckMot,
-    description: 'Focused assessment and treatment for persistent back and neck pain, postural issues, and desk-related strain.',
+    description: 'Focused assessment and treatment for persistent lower back pain, desk-related neck pain, postural issues, and spinal stiffness.',
     duration: '30, 60 or 90 minutes',
   },
   {
@@ -78,6 +78,9 @@ export default function ServicesPage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Our Services</h1>
           <p className="mt-4 text-xl text-[#c6e28a]/90 max-w-2xl">
             Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.
+          </p>
+          <p className="mt-3 text-[#c6e28a]/70 max-w-2xl">
+            Back pain, running injuries, runner&apos;s knee, shoulder problems, sciatica, neck pain. If any of these sound familiar, the right treatment is here.
           </p>
         </div>
       </div>
