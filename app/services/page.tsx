@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage Services',
+  title: 'Sports Massage Services – Archway, London N19',
   description: 'Expert sports massage, deep tissue therapy, MLD and relaxation massage in Archway, North London. View all services and book your session with Carlos Bonvicine.',
   path: '/services',
 })
@@ -65,7 +65,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <div className="relative bg-[#334311] py-16 lg:py-24 overflow-hidden">
+      <div className="relative bg-[#2c3d1f] py-16 lg:py-24 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"
           alt="Sports massage treatment in progress"
@@ -75,11 +75,11 @@ export default function ServicesPage() {
           sizes="100vw"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white">Our Services</h1>
-          <p className="mt-4 text-xl text-[#c6e28a]/90 max-w-2xl">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white">Sports Massage Services in Archway, North London</h1>
+          <p className="mt-4 text-xl text-[#d4ecea]/90 max-w-2xl">
             Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.
           </p>
-          <p className="mt-3 text-[#c6e28a]/70 max-w-2xl">
+          <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
             Back pain, running injuries, runner&apos;s knee, shoulder problems, sciatica, neck pain. If any of these sound familiar, the right treatment is here.
           </p>
         </div>
@@ -91,12 +91,12 @@ export default function ServicesPage() {
             <div key={service.href} className="bg-white border border-gray-200 rounded-xl p-6 lg:p-8 hover:shadow-md transition-shadow">
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-[#334311] mb-2">
-                    <Link href={service.href} className="hover:text-[#618020] transition-colors">
+                  <h2 className="text-2xl font-bold text-[#2c3d1f] mb-2">
+                    <Link href={service.href} className="hover:text-[#4a7a28] transition-colors">
                       {service.title}
                     </Link>
                   </h2>
-                  <p className="text-[#618020] font-medium text-sm mb-3">{service.duration}</p>
+                  <p className="text-[#4a7a28] font-medium text-sm mb-3">{service.duration}</p>
                   <p className="text-gray-600">{service.description}</p>
                 </div>
                 <div className="flex flex-row lg:flex-col gap-3 lg:items-end flex-shrink-0">
@@ -104,13 +104,13 @@ export default function ServicesPage() {
                     href={service.bookingHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#618020] text-white font-semibold px-6 py-3 hover:bg-[#334311] transition-colors min-h-[44px] text-sm"
+                    className="inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-semibold px-6 py-3 hover:bg-[#2c3d1f] transition-colors min-h-[44px] text-sm"
                   >
                     Book Now
                   </a>
                   <Link
                     href={service.href}
-                    className="inline-flex items-center justify-center rounded-md border border-[#618020] text-[#618020] font-semibold px-6 py-3 hover:bg-[#618020] hover:text-white transition-colors min-h-[44px] text-sm"
+                    className="inline-flex items-center justify-center rounded-md border border-[#4a7a28] text-[#4a7a28] font-semibold px-6 py-3 hover:bg-[#4a7a28] hover:text-white transition-colors min-h-[44px] text-sm"
                   >
                     Learn More
                   </Link>

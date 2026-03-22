@@ -4,7 +4,7 @@ import { BUSINESS, BOOKING_URLS } from '@/lib/constants'
 
 export function Footer() {
   return (
-    <footer className="bg-[#334311] text-[#c6e28a]">
+    <footer className="bg-[#2c3d1f] text-[#d4ecea]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
 
@@ -20,8 +20,8 @@ export function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </div>
-            <address className="not-italic text-sm space-y-2 text-[#c6e28a]/75">
-              <p className="text-[#c6e28a]/50 text-xs font-semibold uppercase tracking-widest mb-3">
+            <address className="not-italic text-sm space-y-2 text-[#d4ecea]/75">
+              <p className="text-[#d4ecea]/50 text-xs font-semibold uppercase tracking-widest mb-3">
                 Sports Massage · Archway · London
               </p>
               <p>{BUSINESS.address}</p>
@@ -51,7 +51,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Reviews"
-                className="text-[#c6e28a]/60 hover:text-white transition-colors"
+                className="text-[#d4ecea]/60 hover:text-white transition-colors"
               >
                 <GoogleIcon />
               </a>
@@ -60,7 +60,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-[#c6e28a]/60 hover:text-white transition-colors"
+                className="text-[#d4ecea]/60 hover:text-white transition-colors"
               >
                 <FacebookIcon />
               </a>
@@ -69,7 +69,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-[#c6e28a]/60 hover:text-white transition-colors"
+                className="text-[#d4ecea]/60 hover:text-white transition-colors"
               >
                 <InstagramIcon />
               </a>
@@ -78,30 +78,42 @@ export function Footer() {
 
           {/* Treatments */}
           <div>
-            <p className="text-white font-bold text-sm mb-4 tracking-tight">Treatments</p>
-            <ul className="space-y-1 text-sm text-[#c6e28a]/75">
+            <p className="text-white font-bold text-sm mb-4 tracking-tight">I need help with...</p>
+            <ul className="space-y-1 text-sm text-[#d4ecea]/75">
               {[
-                ['Sports & Deep Tissue Massage', '/services/sports-deep-tissue-massage'],
-                ['Advanced Clinical Massage',     '/services/advanced-clinical-massage'],
-                ['Back & Neck Pain MOT',           '/services/back-neck-pain-mot'],
-                ['Relaxation Massage',             '/services/relaxation-restorative-massage'],
-                ['Manual Lymphatic Drainage',      '/services/manual-lymphatic-drainage'],
-                ['2-Hour Pain Relief',             '/services/2-hour-pain-relief-massage'],
-                ['Massage Bundles',                '/services/massage-bundles'],
+                ['Sports injury or muscle pain',        '/services/sports-deep-tissue-massage'],
+                ['Chronic pain or sciatica',            '/services/advanced-clinical-massage'],
+                ['Back pain or a stiff neck',           '/services/back-neck-pain-mot'],
+                ['Stress and feeling burnt out',        '/services/relaxation-restorative-massage'],
+                ['Post-surgery swelling or recovery',   '/services/manual-lymphatic-drainage'],
+                ['Multiple problem areas',              '/services/2-hour-pain-relief-massage'],
+                ['Regular treatment at a better price', '/services/massage-bundles'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:text-white transition-colors min-h-[36px] flex items-center">
+                  <Link href={href} className="hover:text-white transition-colors min-h-[36px] flex items-center gap-2">
+                    <span className="text-[#2a9d8f] text-xs">→</span>
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className="mt-5 pt-4 border-t border-[#2a9d8f]/25">
+              <a
+                href={BOOKING_URLS.general}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#d4ecea] hover:text-white transition-colors min-h-[44px]"
+              >
+                <span className="text-[#2a9d8f] text-xs">→</span>
+                Book your session
+              </a>
+            </div>
           </div>
 
           {/* Quick links */}
           <div>
             <p className="text-white font-bold text-sm mb-4 tracking-tight">Quick Links</p>
-            <ul className="space-y-1 text-sm text-[#c6e28a]/75">
+            <ul className="space-y-1 text-sm text-[#d4ecea]/75">
               {[
                 ['About Carlos',           '/about'],
                 ['Gallery',                '/gallery'],
@@ -122,11 +134,11 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#618020]/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#c6e28a]/40">
+        <div className="mt-10 pt-6 border-t border-[#2a9d8f]/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#d4ecea]/40">
           <p>© {new Date().getFullYear()} Range and Restore Sports Massage. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="/privacy-policy"      className="hover:text-[#c6e28a] transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-[#c6e28a] transition-colors min-h-[36px] flex items-center">Terms &amp; Conditions</Link>
+            <Link href="/privacy-policy"      className="hover:text-[#d4ecea] transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-[#d4ecea] transition-colors min-h-[36px] flex items-center">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

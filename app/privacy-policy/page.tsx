@@ -11,28 +11,28 @@ export const metadata: Metadata = buildMetadata({
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <div className="bg-[#c6e28a] py-12 lg:py-16">
+      <div className="bg-[#eef2eb] py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#334311]">Privacy Policy</h1>
-          <p className="mt-4 text-[#334311]/70">Last updated: January 2026</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Privacy Policy</h1>
+          <p className="mt-4 text-[#2c3d1f]/70">Last updated: January 2026</p>
         </div>
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">1. Who We Are</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">1. Who We Are</h2>
             <p>
               Range and Restore Sports Massage is operated by Carlos Bonvicine, a sole trader based at {BUSINESS.address}. We are committed to protecting your personal information and being transparent about how we use it.
             </p>
             <p>
               If you have any questions about this policy, please contact us at{' '}
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#618020] hover:underline">{BUSINESS.email}</a>.
+              <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:underline">{BUSINESS.email}</a>.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">2. Information We Collect</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">2. Information We Collect</h2>
             <p>We may collect the following types of personal information:</p>
             <ul className="space-y-2 list-disc list-inside">
               <li><strong>Contact information:</strong> your name, email address, phone number</li>
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">3. How We Use Your Information</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">3. How We Use Your Information</h2>
             <p>We use your personal information to:</p>
             <ul className="space-y-2 list-disc list-inside">
               <li>Provide and manage your massage therapy appointments</li>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">4. Legal Basis for Processing</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">4. Legal Basis for Processing</h2>
             <p>We process your personal information on the following legal bases:</p>
             <ul className="space-y-2 list-disc list-inside">
               <li><strong>Contract:</strong> to fulfil your bookings and provide the services you have requested</li>
@@ -68,14 +68,14 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">5. Health Information</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">5. Health Information</h2>
             <p>
               Health information is treated as special category data under UK GDPR. We collect health details only where necessary to provide safe and appropriate massage therapy. This information is kept securely and never shared with third parties without your explicit consent, except where required by law.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">6. Data Sharing</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">6. Data Sharing</h2>
             <p>We do not sell your personal information. We may share information with:</p>
             <ul className="space-y-2 list-disc list-inside">
               <li><strong>Our booking system provider (JaneApp):</strong> to manage appointments. JaneApp operates GDPR-compliant data practices.</li>
@@ -89,14 +89,14 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">7. Data Retention</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">7. Data Retention</h2>
             <p>
               We retain your personal information for as long as necessary to fulfil the purposes for which it was collected. Treatment records are typically retained for a minimum of 7 years following your last appointment, in line with professional practice guidelines. Contact enquiries are retained for up to 2 years.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">8. Your Rights</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">8. Your Rights</h2>
             <p>Under UK GDPR, you have the right to:</p>
             <ul className="space-y-2 list-disc list-inside">
               <li>Access the personal information we hold about you</li>
@@ -109,42 +109,42 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               To exercise any of these rights, contact us at{' '}
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#618020] hover:underline">{BUSINESS.email}</a>.
+              <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:underline">{BUSINESS.email}</a>.
               We will respond within 30 days.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">9. Cookies and Analytics</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">9. Cookies and Analytics</h2>
             <p>
               Our website may use cookies and analytics tools to understand how visitors use the site. Where analytics tools are used, data is collected anonymously and aggregated. You will be asked for consent before any tracking takes place.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">10. Security</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">10. Security</h2>
             <p>
               We take appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. This includes using secure HTTPS connections on our website and secure, access-controlled storage for client records.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">11. Complaints</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">11. Complaints</h2>
             <p>
               If you are unhappy with how we handle your personal information, you have the right to lodge a complaint with the Information Commissioner&apos;s Office (ICO) at{' '}
-              <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-[#618020] hover:underline">ico.org.uk</a>.
+              <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-[#4a7a28] hover:underline">ico.org.uk</a>.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">12. Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">12. Changes to This Policy</h2>
             <p>
               We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. We encourage you to review this policy periodically.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#334311]">Contact</h2>
+            <h2 className="text-2xl font-bold text-[#2c3d1f]">Contact</h2>
             <p>
               For any privacy-related questions or to exercise your rights, please contact:
             </p>
@@ -152,8 +152,8 @@ export default function PrivacyPolicyPage() {
               <strong>Carlos Bonvicine</strong><br />
               Range and Restore Sports Massage<br />
               {BUSINESS.address}<br />
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#618020] hover:underline">{BUSINESS.email}</a><br />
-              <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#618020] hover:underline">{BUSINESS.phone}</a>
+              <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:underline">{BUSINESS.email}</a><br />
+              <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#4a7a28] hover:underline">{BUSINESS.phone}</a>
             </address>
           </section>
         </div>

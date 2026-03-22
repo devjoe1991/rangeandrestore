@@ -1,27 +1,90 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand-green: #618020;
-  --color-brand-green-dark: #334311;
-  --color-brand-green-light: #c6e28a;
-  --color-brand-green-border: #c1e082;
-  --color-brand-grey-dark: #262626;
-  --color-brand-cream: #f7f5ef;
+  --color-brand-green:        #4a7a28;
+  --color-brand-green-dark:   #2c3d1f;
+  --color-brand-green-light:  #c8d9b8;
+  --color-brand-green-border: #dde5d0;
+  --color-brand-grey-dark:    #262626;
+  --color-brand-cream:        #f5f2eb;
+  --color-accent:             #2a9d8f;
+  --color-accent-light:       #d4ecea;
+  --color-bg-sage:            #eef2eb;
   --font-sans: var(--font-inter);
+
+  /* Shadow system */
+  --shadow-card: 0 4px 24px rgba(44,61,31,0.07), 0 1px 4px rgba(44,61,31,0.05);
+  --shadow-card-hover: 0 16px 48px rgba(44,61,31,0.14), 0 4px 12px rgba(44,61,31,0.09);
+  --shadow-glow-teal: 0 0 0 2px #d4ecea, 0 8px 32px rgba(42,157,143,0.2);
 }
+
+/* ── Dark mode tokens ─────────────────────────────────────── */
+:root {
+  --page-bg:        #faf9f6;
+  --page-bg-alt:    #f5f2eb;
+  --page-bg-sage:   #eef2eb;
+  --page-text:      #1e2a12;
+  --page-text-muted:#2c3d1f;
+  --card-bg:        #ffffff;
+  --card-border:    #dde5d0;
+  --header-bg:      #ffffff;
+  --header-border:  #dde5d0;
+  --input-bg:       #ffffff;
+  --input-border:   #dde5d0;
+}
+
+.dark {
+  --page-bg:        #0e1a09;
+  --page-bg-alt:    #131f0d;
+  --page-bg-sage:   #162211;
+  --page-text:      #e8f0d8;
+  --page-text-muted:#b8cfaa;
+  --card-bg:        #1a2812;
+  --card-border:    #2a3d1f;
+  --header-bg:      #0e1a09;
+  --header-border:  #1f2d15;
+  --input-bg:       #1a2812;
+  --input-border:   #2a3d1f;
+}
+
+/* ── Semantic colour utility classes ─────────────────────── */
+/* These read from CSS variables above — dark mode is automatic */
+.bg-page        { background-color: var(--page-bg); }
+.bg-page-alt    { background-color: var(--page-bg-alt); }
+.bg-page-sage   { background-color: var(--page-bg-sage); }
+.bg-card        { background-color: var(--card-bg); }
+.bg-header      { background-color: var(--header-bg); }
+.bg-input       { background-color: var(--input-bg); }
+.text-page      { color: var(--page-text); }
+.text-page-muted{ color: var(--page-text-muted); }
+.border-page    { border-color: var(--card-border); }
+.border-header  { border-color: var(--header-border); }
+.border-input   { border-color: var(--input-border); }
+.card-surface   { background-color: var(--card-bg); border-color: var(--card-border); }
+.input-surface  { background-color: var(--input-bg); border-color: var(--input-border); color: var(--page-text); }
 
 /* ── Base ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  background: #ffffff;
-  color: #1c1c1c;
+  background: var(--page-bg);
+  color: var(--page-text);
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-input, select, textarea { font-size: 16px; }
-:focus-visible { outline: 2px solid #618020; outline-offset: 3px; border-radius: 3px; }
+input, select, textarea {
+  font-size: 16px;
+  background: var(--input-bg);
+  color: var(--page-text);
+  border-color: var(--input-border);
+}
+:focus-visible { outline: 2px solid #2a9d8f; outline-offset: 3px; border-radius: 3px; }
+
+/* Brand selection highlight */
+::selection { background: #d4ecea; color: #1e2a12; }
 
 /* ── Spacing ──────────────────────────────────────────────── */
 .section    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
@@ -31,10 +94,12 @@ input, select, textarea { font-size: 16px; }
 .eyebrow {
   display: inline-block;
   font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #618020;
+  color: #2a9d8f;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid #c8d9b8;
 }
 
 /* ── Buttons ──────────────────────────────────────────────── */
@@ -44,25 +109,30 @@ input, select, textarea { font-size: 16px; }
   justify-content: center;
   gap: 0.5rem;
   border-radius: 9999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9375rem;
   padding: 0.75rem 1.75rem;
   min-height: 48px;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 2px solid transparent;
   white-space: nowrap;
   letter-spacing: 0.01em;
 }
-.btn-primary { background: #618020; color: #fff; border-color: #618020; }
-.btn-primary:hover { background: #4e6819; border-color: #4e6819; }
+.btn-primary { background: #2a9d8f; color: #fff; border-color: #2a9d8f; }
+.btn-primary:hover {
+  background: #1f7a6e;
+  border-color: #1f7a6e;
+  box-shadow: 0 8px 24px rgba(42,157,143,0.3);
+  transform: translateY(-1px);
+}
 
 .btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
 .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
-.btn-white { background: #fff; color: #334311; border-color: #fff; }
-.btn-white:hover { background: #c6e28a; border-color: #c6e28a; color: #334311; }
+.btn-white { background: #fff; color: #2c3d1f; border-color: #fff; }
+.btn-white:hover { background: #d4ecea; border-color: #d4ecea; color: #1e2a12; }
 
 /* ── Swipe carousel (mobile) ──────────────────────────────── */
 .swipe-row {
@@ -72,22 +142,110 @@ input, select, textarea { font-size: 16px; }
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   gap: 0.875rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 .swipe-row::-webkit-scrollbar { display: none; }
 .swipe-row > * { scroll-snap-align: start; flex-shrink: 0; }
 
 /* ── Card lift ────────────────────────────────────────────── */
-.card-lift { transition: box-shadow 0.2s ease, transform 0.2s ease; }
-.card-lift:hover { box-shadow: 0 8px 28px rgba(51,67,17,0.11); transform: translateY(-2px); }
+.card-lift {
+  transition: box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-lift:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
 
+/* ── Card premium (service cards) ────────────────────────── */
+.card-premium {
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+}
+.card-premium:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+.dark .card-premium {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.40);
+}
+.dark .card-premium:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35);
+}
+
+/* ── Accent bar animation ─────────────────────────────────── */
+.accent-bar {
+  height: 3px;
+  background: #2a9d8f;
+  width: 40px;
+  transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-premium:hover .accent-bar { width: 100%; }
+
+/* ── Fade-up animation ────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+/* ── Button styles ────────────────────────────────────────── */
 .btn-outline-dark {
   background: transparent;
-  color: #334311;
-  border-color: #334311;
+  color: var(--page-text);
+  border-color: var(--card-border);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.btn-outline-dark:hover { background: #334311; color: #ffffff; }
+.btn-outline-dark:hover {
+  background: var(--page-text);
+  color: var(--page-bg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
 
 /* Teal accent pulled from logo */
 .text-teal { color: #2a9d8f; }
 .bg-teal    { background-color: #2a9d8f; }
+
+/* ── Book now button (service cards) ─────────────────────── */
+.book-now-btn {
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.book-now-btn:hover {
+  background: #d4ecea;
+  color: #1e2a12;
+  box-shadow: 0 0 0 2px #d4ecea, 0 8px 24px rgba(42,157,143,0.25);
+}
+
+/* ── Dark mode utility overrides ─────────────────────────── */
+/* Light section backgrounds that need to flip in dark mode */
+.dark .section-light {
+  background: var(--page-bg-sage) !important;
+}
+.dark .section-alt {
+  background: var(--page-bg-alt) !important;
+}
+
+/* Cards in dark mode */
+.dark .card-light {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+}
+
+/* ── Skip link (accessibility) ────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: #2c3d1f;
+  color: #d4ecea;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0; }

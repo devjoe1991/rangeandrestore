@@ -5,26 +5,26 @@ import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Carlos Bonvicine',
-  description: 'Meet Carlos Bonvicine, expert sports massage therapist and certified MLD practitioner based in Archway, North London. Assessment-led treatment for real results.',
+  title: 'Carlos Bonvicine – Soft Tissue Therapist & MLD Practitioner, Archway',
+  description: 'Range and Restore is led by Carlos Bonvicine, a clinical massage therapist and certified MLD practitioner in Archway, North London. Five-star rated, assessment-led, and built around your results.',
   path: '/about',
 })
 
 export default function AboutPage() {
   return (
     <>
-      <div className="bg-[#c6e28a] py-12 lg:py-16">
+      <div className="bg-[#eef2eb] py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#334311]">About Range and Restore</h1>
-          <p className="mt-4 text-xl text-[#334311]/80">Expert soft tissue therapy in Archway, serving Islington, Tufnell Park, Finsbury Park and North London</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Soft Tissue & Clinical Massage Therapist in Archway – Carlos Bonvicine</h1>
+          <p className="mt-4 text-xl text-[#2c3d1f]/80">Clinical massage and soft tissue therapy in Archway, rated five stars by clients across Islington, Tufnell Park, Finsbury Park and North London.</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm">
-            <span className="inline-flex items-center gap-1.5 bg-[#334311]/10 text-[#334311] font-semibold px-3 py-1.5 rounded-full">
+            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">
               <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               Rated 5 Stars on Google
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-[#334311]/10 text-[#334311] font-semibold px-3 py-1.5 rounded-full">Certified MLD Practitioner</span>
-            <span className="inline-flex items-center gap-1.5 bg-[#334311]/10 text-[#334311] font-semibold px-3 py-1.5 rounded-full">Assessment-Led Treatment</span>
-            <span className="inline-flex items-center gap-1.5 bg-[#334311]/10 text-[#334311] font-semibold px-3 py-1.5 rounded-full">Archway, N19</span>
+            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">Certified MLD Practitioner</span>
+            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">Assessment-Led Treatment</span>
+            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">Archway, N19</span>
           </div>
         </div>
       </div>
@@ -36,41 +36,41 @@ export default function AboutPage() {
             <div className="rounded-2xl overflow-hidden mb-8 aspect-[4/3] relative w-full">
               <Image
                 src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
-                alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
+                alt="Carlos Bonvicine, soft tissue therapist at Range and Restore, Archway"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
             </div>
-            <h2 className="text-3xl font-bold text-[#334311] mb-2">Carlos Bonvicine</h2>
-            <p className="text-[#618020] font-medium mb-6">Helping clients across North London move without pain and recover properly.</p>
+            <h2 className="text-3xl font-bold text-[#2c3d1f] mb-2">Carlos Bonvicine</h2>
+            <p className="text-[#4a7a28] font-medium mb-6">Clinical massage therapist. Certified MLD practitioner. Five-star rated in Archway, North London.</p>
             <div className="space-y-4 text-gray-700 text-lg">
               <p>
-                Range and Restore Sports Massage is led by Carlos Bonvicine, a professional sports massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner based in Archway, North London.
+                Range and Restore is a specialist clinic in Archway led by Carlos Bonvicine — a highly qualified clinical massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner with a five-star reputation built on genuine results.
               </p>
               <p>
-                Carlos takes an assessment-led approach to every treatment. Before hands-on work begins, he assesses your posture, movement patterns, and specific concerns to ensure the session is fully tailored to your needs and goals.
+                Carlos works with clients dealing with chronic pain, acute injury, post-surgery recovery, stress, and everything in between. Every session is shaped around you — not a generic treatment protocol. He starts with a full assessment of your posture, movement, and history before any hands-on work begins.
               </p>
               <p>
-                Whether you&apos;re an athlete managing injury, an office worker dealing with postural pain, or someone simply looking to relax and recover, Carlos adapts his approach to deliver the most effective treatment for you.
+                His approach is clinical, thorough, and adaptable. Whether you need deep structural work, lymphatic support, or a focused relief session, Carlos selects the right techniques for where you are right now — and explains everything along the way.
               </p>
               <p>
-                Range and Restore operates within a professional healthcare setting alongside Reliable Scan, a private diagnostic ultrasound clinic in Archway. This allows for coordinated assessment and treatment planning when imaging is required.
+                Range and Restore is based within a professional healthcare setting at 130 Junction Road, Archway, alongside Reliable Scan — a private diagnostic ultrasound clinic. This means imaging and hands-on therapy can be coordinated in one place when it is needed.
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                'Sports Massage Therapist',
+                'Clinical Massage Therapist',
                 'Certified MLD Practitioner',
-                'Soft Tissue Remedial Therapy',
+                'Soft Tissue & Remedial Therapy',
                 'Assessment-Led Approach',
-                'Sports Injury Rehabilitation',
+                'Injury & Pain Rehabilitation',
                 'Post-Surgery Recovery Support',
               ].map((qual) => (
-                <div key={qual} className="flex items-center gap-2 text-[#334311]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#618020] flex-shrink-0" aria-hidden="true">
+                <div key={qual} className="flex items-center gap-2 text-[#2c3d1f]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   <span className="font-medium">{qual}</span>
@@ -84,8 +84,8 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-[#c6e28a] rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-[#334311] mb-4">The Range and Restore Approach</h3>
+            <div className="bg-[#eef2eb] rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-[#2c3d1f] mb-4">The Range and Restore Approach</h3>
               <ul className="space-y-3">
                 {[
                   { title: 'Full Assessment First', desc: 'Every session begins with a posture and movement assessment to identify the root cause of your symptoms.' },
@@ -94,24 +94,24 @@ export default function AboutPage() {
                   { title: 'Aftercare Advice', desc: 'You leave with practical advice and, where needed, movement and exercise recommendations.' },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-3">
-                    <span className="text-[#618020] font-bold text-xl leading-none mt-0.5">→</span>
+                    <span className="text-[#4a7a28] font-bold text-xl leading-none mt-0.5">→</span>
                     <div>
-                      <p className="font-semibold text-[#334311]">{item.title}</p>
-                      <p className="text-[#334311]/70 text-sm">{item.desc}</p>
+                      <p className="font-semibold text-[#2c3d1f]">{item.title}</p>
+                      <p className="text-[#2c3d1f]/70 text-sm">{item.desc}</p>
                     </div>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-[#334311] text-white rounded-2xl p-8">
+            <div className="bg-[#2c3d1f] text-white rounded-2xl p-8">
               <h3 className="text-xl font-bold mb-2">Clinical Collaboration</h3>
-              <p className="text-[#c6e28a]/90 mb-4">
+              <p className="text-[#d4ecea]/90 mb-4">
                 Range and Restore is based at 130 Junction Road, Archway, within the same building as Reliable Scan — a private diagnostic ultrasound clinic led by GMC-registered doctors.
               </p>
               <Link
                 href="/clinical-collaboration"
-                className="inline-flex items-center gap-2 text-[#c6e28a] font-semibold hover:text-white transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 text-[#d4ecea] font-semibold hover:text-white transition-colors min-h-[44px]"
               >
                 Learn about clinical collaboration →
               </Link>

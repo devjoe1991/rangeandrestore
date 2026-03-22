@@ -14,10 +14,12 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Hydration and Muscle Health – What Every Client Should Know',
   description: 'Water makes up around 75% of muscle tissue. Learn why staying hydrated is essential for muscle function, injury prevention, and getting the most from your massage treatment.',
+  image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=75',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Sports Massage Therapist',
+    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
     '@type': 'Organization',
@@ -35,13 +37,13 @@ export default function HydrationMuscleHealthPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-      <div className="bg-[#c6e28a] py-12 lg:py-16">
+      <div className="bg-[#eef2eb] py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#618020] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#334311] mb-4">
+          <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f] mb-4">
             Hydration and Muscle Health – What Every Client Should Know
           </h1>
-          <div className="flex items-center gap-4 text-[#334311]/70 text-sm">
+          <div className="flex items-center gap-4 text-[#2c3d1f]/70 text-sm">
             <time dateTime="2026-02-08">8 February 2026</time>
             <span>·</span>
             <span>By Carlos Bonvicine</span>
@@ -51,7 +53,7 @@ export default function HydrationMuscleHealthPage() {
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-          <p className="text-xl font-medium text-[#334311]">
+          <p className="text-xl font-medium text-[#2c3d1f]">
             Most people know that drinking water is important. But fewer people understand just how directly hydration affects the health, function, and recovery of your muscles — and what that means for your massage treatment.
           </p>
 
@@ -59,7 +61,7 @@ export default function HydrationMuscleHealthPage() {
             Water makes up approximately 75% of muscle tissue. When you&apos;re well hydrated, muscles are more pliable, circulation is efficient, and your body can flush out metabolic waste more effectively. When you&apos;re dehydrated, muscles become stiffer, more prone to cramping, and take significantly longer to recover.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#334311] mt-8 mb-3">Why hydration matters for muscle tissue</h2>
+          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">Why hydration matters for muscle tissue</h2>
 
           <p>
             Muscle fibres are surrounded and supported by connective tissue — fascia, tendons, and ligaments — all of which have a high water content. When you&apos;re adequately hydrated, this connective tissue slides and moves freely. When you&apos;re dehydrated, the tissue becomes denser, more adhesive, and more restricted. This is one of the main reasons people feel stiff in the morning, or after sitting for long periods.
@@ -69,7 +71,7 @@ export default function HydrationMuscleHealthPage() {
             From a massage therapy perspective, hydrated tissue responds far better to treatment. The muscles are more receptive, techniques can penetrate more effectively, and the therapeutic effects tend to last longer. Conversely, working on dehydrated tissue can feel like trying to knead dry clay — harder to shift, more uncomfortable for the client, and less likely to produce lasting change.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#334311] mt-8 mb-3">Hydration and post-massage recovery</h2>
+          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">Hydration and post-massage recovery</h2>
 
           <p>
             One of the most common pieces of advice given after a massage is to drink plenty of water. This isn&apos;t just a courtesy recommendation — there&apos;s a physiological reason behind it.
@@ -83,7 +85,7 @@ export default function HydrationMuscleHealthPage() {
             Clients who come to sessions well hydrated consistently report less post-treatment soreness, better results from the session itself, and faster overall recovery between appointments.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#334311] mt-8 mb-3">Dehydration and injury risk</h2>
+          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">Dehydration and injury risk</h2>
 
           <p>
             Chronic mild dehydration is more common than most people realise. Many people move through their day in a slightly dehydrated state without noticing — particularly those who drink large amounts of coffee or alcohol, work in heated or air-conditioned environments, or exercise regularly without replacing fluids adequately.
@@ -97,7 +99,7 @@ export default function HydrationMuscleHealthPage() {
             For athletes and active individuals, hydration is one of the simplest and most overlooked performance and injury prevention tools available.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#334311] mt-8 mb-3">Practical hydration guidelines</h2>
+          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">Practical hydration guidelines</h2>
 
           <p>The general recommendation of eight glasses of water per day is a rough starting point, but individual needs vary based on body size, activity level, climate, and diet. A more useful indicator is the colour of your urine — pale yellow is the target. Dark yellow or amber suggests dehydration, and clear indicates over-hydration.</p>
 
@@ -110,7 +112,7 @@ export default function HydrationMuscleHealthPage() {
             <li>Foods with high water content — cucumbers, watermelon, oranges, leafy greens — contribute to total daily hydration</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-[#334311] mt-8 mb-3">The bottom line</h2>
+          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">The bottom line</h2>
 
           <p>
             Hydration isn&apos;t a supplement or a biohack — it&apos;s a fundamental requirement for healthy muscle function, injury prevention, and effective recovery. Making it a consistent habit, rather than something you scramble to fix the morning of a massage, will have a noticeable impact on how your muscles feel, how well your treatment works, and how quickly you recover between sessions.
@@ -121,23 +123,23 @@ export default function HydrationMuscleHealthPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#334311] text-white rounded-2xl p-8">
+        <div className="mt-12 bg-[#2c3d1f] text-white rounded-2xl p-8">
           <h2 className="text-2xl font-bold mb-4">Book your sports massage</h2>
-          <p className="text-[#c6e28a] mb-6">
+          <p className="text-[#d4ecea] mb-6">
             Ready to experience assessment-led sports massage in Archway, North London? Book your session with Carlos Bonvicine today.
           </p>
           <BookingButton label="Book Your Session" />
         </div>
 
         <div className="mt-10 border-t pt-8">
-          <h3 className="text-lg font-semibold text-[#334311] mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#618020] hover:text-[#334311] font-medium min-h-[44px] flex items-center">
+          <h3 className="text-lg font-semibold text-[#2c3d1f] mb-4">Related service</h3>
+          <Link href="/services/sports-deep-tissue-massage" className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] flex items-center">
             → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
           </Link>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#618020] font-semibold hover:text-[#334311] min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#4a7a28] font-semibold hover:text-[#2c3d1f] min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

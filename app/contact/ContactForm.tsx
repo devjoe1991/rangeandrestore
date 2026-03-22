@@ -58,12 +58,12 @@ export function ContactForm() {
 
   if (state === 'success') {
     return (
-      <div className="bg-[#c6e28a] rounded-xl p-8 text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12 text-[#618020] mx-auto mb-4" aria-hidden="true">
+      <div className="bg-page-sage rounded-xl p-8 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12 text-[#4a7a28] mx-auto mb-4" aria-hidden="true">
           <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
         </svg>
-        <h3 className="text-xl font-bold text-[#334311] mb-2">Message Sent!</h3>
-        <p className="text-[#334311]/80">Thank you for getting in touch. Carlos will respond as soon as possible.</p>
+        <h3 className="text-xl font-bold text-page mb-2">Message Sent!</h3>
+        <p className="text-page-muted">Thank you for getting in touch. Carlos will respond as soon as possible.</p>
       </div>
     )
   }
@@ -72,7 +72,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="firstName" className="block text-sm font-semibold text-[#334311] mb-1">
+          <label htmlFor="firstName" className="block text-sm font-semibold text-page mb-1">
             First Name <span aria-hidden="true">*</span>
           </label>
           <input
@@ -81,11 +81,11 @@ export function ContactForm() {
             name="firstName"
             required
             autoComplete="given-name"
-            className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#618020] focus:border-transparent"
+            className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
           />
         </div>
         <div>
-          <label htmlFor="lastName" className="block text-sm font-semibold text-[#334311] mb-1">
+          <label htmlFor="lastName" className="block text-sm font-semibold text-page mb-1">
             Last Name <span aria-hidden="true">*</span>
           </label>
           <input
@@ -94,13 +94,13 @@ export function ContactForm() {
             name="lastName"
             required
             autoComplete="family-name"
-            className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#618020] focus:border-transparent"
+            className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-[#334311] mb-1">
+        <label htmlFor="email" className="block text-sm font-semibold text-page mb-1">
           Email Address <span aria-hidden="true">*</span>
         </label>
         <input
@@ -109,32 +109,32 @@ export function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#618020] focus:border-transparent"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-[#334311] mb-1">
-          Phone Number <span className="text-gray-500 font-normal">(optional)</span>
+        <label htmlFor="phone" className="block text-sm font-semibold text-page mb-1">
+          Phone Number <span className="text-page-muted font-normal opacity-80">(optional)</span>
         </label>
         <input
           type="tel"
           id="phone"
           name="phone"
           autoComplete="tel"
-          className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#618020] focus:border-transparent"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
         />
       </div>
 
       <div>
-        <label htmlFor="treatment" className="block text-sm font-semibold text-[#334311] mb-1">
+        <label htmlFor="treatment" className="block text-sm font-semibold text-page mb-1">
           Treatment of Interest <span aria-hidden="true">*</span>
         </label>
         <select
           id="treatment"
           name="treatment"
           required
-          className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#618020] focus:border-transparent bg-white"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
         >
           <option value="">Select a treatment...</option>
           {TREATMENTS.map((t) => (
@@ -144,7 +144,7 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-[#334311] mb-1">
+        <label htmlFor="message" className="block text-sm font-semibold text-page mb-1">
           Message <span aria-hidden="true">*</span>
         </label>
         <textarea
@@ -153,12 +153,12 @@ export function ContactForm() {
           required
           rows={5}
           placeholder="Tell us a bit about what you're looking for, any injuries or conditions, and any questions you have..."
-          className="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#618020] focus:border-transparent resize-y"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent resize-y"
         />
       </div>
 
       {state === 'error' && (
-        <div className="bg-red-50 border border-red-200 rounded-md p-4 text-red-800 text-sm" role="alert">
+        <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800/50 rounded-md p-4 text-red-800 dark:text-red-300 text-sm" role="alert">
           {errorMessage || 'Something went wrong. Please try again or call us directly.'}
         </div>
       )}
@@ -166,7 +166,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={state === 'submitting'}
-        className="w-full inline-flex items-center justify-center rounded-md bg-[#618020] text-white font-semibold px-6 py-4 text-lg hover:bg-[#334311] transition-colors min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-semibold px-6 py-4 text-lg hover:bg-[#2c3d1f] transition-colors min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {state === 'submitting' ? (
           <>
@@ -181,9 +181,9 @@ export function ContactForm() {
         )}
       </button>
 
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-page-muted opacity-80">
         By submitting this form, you agree to our{' '}
-        <a href="/privacy-policy" className="text-[#618020] hover:underline">Privacy Policy</a>.
+        <a href="/privacy-policy" className="text-[#4a7a28] hover:underline">Privacy Policy</a>.
         Your information will only be used to respond to your enquiry.
       </p>
     </form>
