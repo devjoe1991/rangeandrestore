@@ -245,3 +245,39 @@ input, select, textarea {
   transition: top 0.15s ease;
 }
 .skip-link:focus { top: 0; }
+
+/* ── FAQ Plus/Minus Icon ──────────────────────────────────── */
+.faq-icon-container {
+  position: relative;
+}
+.faq-icon-container::before, .faq-icon-container::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
+/* Horizontal */
+.faq-icon-container::before {
+  width: 12px; height: 2px; top: 50%; left: 50%; margin-top: -1px; margin-left: -6px;
+}
+/* Vertical */
+.faq-icon-container::after {
+  width: 2px; height: 12px; top: 50%; left: 50%; margin-top: -6px; margin-left: -1px;
+}
+
+/* Open state for details element */
+details[open] summary .faq-icon-container::after {
+  transform: rotate(90deg);
+}
+details[open] summary .faq-icon-container::before {
+  transform: rotate(180deg);
+}
+
+/* Open state for React buttons using .is-open */
+.faq-icon-container.is-open::after {
+  transform: rotate(90deg);
+}
+.faq-icon-container.is-open::before {
+  transform: rotate(180deg);
+}

@@ -370,7 +370,7 @@ export default function HomePage() {
               <details key={faq.q} className={i < previewFaqs.length - 1 ? 'border-b border-[#003010]/15' : ''}>
                 <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-[#003010] text-base leading-snug hover:bg-[#F7F1E6] transition-colors min-h-[56px]">
                   {faq.q}
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010] font-black text-lg leading-none select-none">+</span>
+                  <span className="faq-icon-container flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010] select-none transition-colors" aria-hidden="true" />
                 </summary>
                 <div className="px-5 pb-5 text-[#003010]/70 leading-relaxed text-sm">
                   {faq.a}
