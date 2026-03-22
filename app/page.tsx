@@ -186,7 +186,7 @@ export default function HomePage() {
             {bundles.map((b) => (
               <div key={b.label}
                 className={`rounded-2xl p-5 text-center relative flex flex-col card-lift border-2 ${
-                  b.popular ? 'bg-[#B7D968] border-[#B7D968]' : 'bg-white border-white'
+                  b.popular ? 'bg-[#B7D968] border-white' : 'bg-white border-white'
                 }`}>
                 {b.popular && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#001D00] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
@@ -367,10 +367,13 @@ export default function HomePage() {
 
           <div className="rounded-2xl border-2 border-[#003010] overflow-hidden bg-white">
             {previewFaqs.map((faq, i) => (
-              <details key={faq.q} className={i < previewFaqs.length - 1 ? 'border-b border-[#003010]/15' : ''}>
+              <details key={faq.q} className={`group ${i < previewFaqs.length - 1 ? 'border-b border-[#003010]/15' : ''}`}>
                 <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-[#003010] text-base leading-snug hover:bg-[#F7F1E6] transition-colors min-h-[56px]">
                   {faq.q}
-                  <span className="faq-icon-container flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010] select-none transition-colors" aria-hidden="true" />
+                  <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010]">
+                    <span className="absolute w-3 h-[2px] bg-current rounded-sm"></span>
+                    <span className="absolute w-[2px] h-3 bg-current rounded-sm transition-transform duration-300 group-open:rotate-90"></span>
+                  </span>
                 </summary>
                 <div className="px-5 pb-5 text-[#003010]/70 leading-relaxed text-sm">
                   {faq.a}

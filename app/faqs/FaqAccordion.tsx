@@ -14,7 +14,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         aria-expanded={open}
       >
         <span className="font-semibold text-page text-base leading-snug">{q}</span>
-        <span className={`faq-icon-container flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 dark:bg-white/10 flex items-center justify-center text-[#003010] dark:text-white select-none transition-colors ${open ? 'is-open' : ''}`} aria-hidden="true" />
+        <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010]">
+          <span className="absolute w-3 h-[2px] bg-current rounded-sm"></span>
+          <span className={`absolute w-[2px] h-3 bg-current rounded-sm transition-transform duration-300 ${open ? 'rotate-90' : ''}`}></span>
+        </span>
       </button>
       {open && (
         <div className="px-5 pb-5 text-page-muted leading-relaxed text-sm">
