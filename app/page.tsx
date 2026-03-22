@@ -386,20 +386,20 @@ export default function HomePage() {
       </section>
 
       {/* ── 8. CTA BAR ───────────────────────────────────────── */}
-      <section className="section-sm bg-[#001D00]" aria-label="Book a session">
+      <section className="section-sm bg-[#B7D968]" aria-label="Book a session">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-[#001D00] tracking-tight mb-3">
             Ready to feel better?
           </h2>
-          <p className="text-white/75 mb-7 text-base">
+          <p className="text-[#003010]/80 mb-7 text-base font-semibold">
             Back pain, injury or tension holding you back? Book online or call Carlos directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" variant="white" />
+            <BookingButton label="Book Your Session" className="bg-[#001D00] text-white hover:bg-white hover:text-[#001D00] border-transparent" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 border border-white/40 hover:bg-white/30 transition-colors text-white"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-[#003010]/10 border border-[#003010]/20 hover:bg-[#003010]/20 transition-colors text-[#001D00]"
             >
               <PhoneIcon />
             </a>

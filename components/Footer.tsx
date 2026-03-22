@@ -4,13 +4,13 @@ import { BUSINESS, BOOKING_URLS } from '@/lib/constants'
 
 export function Footer() {
   return (
-    <footer className="bg-[#B7D968] text-[#001D00]">
+    <footer className="bg-[#001D00] text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
 
           {/* Brand + contact */}
           <div>
-            {/* Logo on white pill so it reads on lime bg */}
+            {/* Logo on white pill so it reads on dark bg */}
             <div className="inline-block bg-white rounded-xl px-3 py-2 mb-5">
               <Image
                 src="/rangeandrestorelogo.png"
@@ -20,27 +20,27 @@ export function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </div>
-            <address className="not-italic text-sm space-y-2 text-[#003010]">
-              <p className="text-[#003010]/60 text-xs font-semibold uppercase tracking-widest mb-3">
+            <address className="not-italic text-sm space-y-2 text-[#B7D968]/90">
+              <p className="text-[#B7D968]/60 text-xs font-semibold uppercase tracking-widest mb-3">
                 Sports Massage · Archway · London
               </p>
               <p>{BUSINESS.address}</p>
               <p>
                 <a href={`tel:${BUSINESS.phoneTel}`}
-                  className="hover:text-[#001D00] transition-colors inline-flex items-center gap-1.5 min-h-[44px]">
+                  className="hover:text-white transition-colors inline-flex items-center gap-1.5 min-h-[44px]">
                   <PhoneIcon /> {BUSINESS.phone}
                 </a>
               </p>
               <p>
                 <a href={`mailto:${BUSINESS.email}`}
-                  className="hover:text-[#001D00] transition-colors break-all min-h-[44px] flex items-center">
+                  className="hover:text-white transition-colors break-all min-h-[44px] flex items-center">
                   {BUSINESS.email}
                 </a>
               </p>
             </address>
             <div className="mt-5">
               <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-                className="btn btn-primary text-sm px-5">
+                className="btn bg-[#B7D968] text-[#001D00] hover:bg-white text-sm px-5">
                 Book Now
               </a>
             </div>
@@ -51,7 +51,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Reviews"
-                className="text-[#003010]/70 hover:text-[#001D00] transition-colors"
+                className="text-[#B7D968]/70 hover:text-white transition-colors"
               >
                 <GoogleIcon />
               </a>
@@ -60,7 +60,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-[#003010]/70 hover:text-[#001D00] transition-colors"
+                className="text-[#B7D968]/70 hover:text-white transition-colors"
               >
                 <FacebookIcon />
               </a>
@@ -69,7 +69,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-[#003010]/70 hover:text-[#001D00] transition-colors"
+                className="text-[#B7D968]/70 hover:text-white transition-colors"
               >
                 <InstagramIcon />
               </a>
@@ -78,8 +78,8 @@ export function Footer() {
 
           {/* Treatments */}
           <div>
-            <p className="text-[#001D00] font-bold text-sm mb-4 tracking-tight">I need help with...</p>
-            <ul className="space-y-1 text-sm text-[#003010]">
+            <p className="text-white font-bold text-sm mb-4 tracking-tight">I need help with...</p>
+            <ul className="space-y-1 text-sm text-[#B7D968]/90">
               {[
                 ['Sports injury or muscle pain',        '/services/sports-deep-tissue-massage'],
                 ['Chronic pain or sciatica',            '/services/advanced-clinical-massage'],
@@ -90,21 +90,21 @@ export function Footer() {
                 ['Regular treatment at a better price', '/services/massage-bundles'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:text-[#001D00] transition-colors min-h-[36px] flex items-center gap-2">
-                    <span className="text-[#003010] text-xs">→</span>
+                  <Link href={href} className="hover:text-white transition-colors min-h-[36px] flex items-center gap-2">
+                    <span className="text-[#B7D968] text-xs">→</span>
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-5 pt-4 border-t border-[#003010]/25">
+            <div className="mt-5 pt-4 border-t border-[#B7D968]/25">
               <a
                 href={BOOKING_URLS.general}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#003010] hover:text-[#001D00] transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#B7D968] hover:text-white transition-colors min-h-[44px]"
               >
-                <span className="text-[#003010] text-xs">→</span>
+                <span className="text-[#B7D968] text-xs">→</span>
                 Book your session
               </a>
             </div>
@@ -112,8 +112,8 @@ export function Footer() {
 
           {/* Quick links */}
           <div>
-            <p className="text-[#001D00] font-bold text-sm mb-4 tracking-tight">Quick Links</p>
-            <ul className="space-y-1 text-sm text-[#003010]">
+            <p className="text-white font-bold text-sm mb-4 tracking-tight">Quick Links</p>
+            <ul className="space-y-1 text-sm text-[#B7D968]/90">
               {[
                 ['About Carlos',           '/about'],
                 ['Gallery',                '/gallery'],
@@ -124,7 +124,7 @@ export function Footer() {
                 ['Clinical Collaboration', '/clinical-collaboration'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:text-[#001D00] transition-colors min-h-[36px] flex items-center">
+                  <Link href={href} className="hover:text-white transition-colors min-h-[36px] flex items-center">
                     {label}
                   </Link>
                 </li>
@@ -134,11 +134,11 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#003010]/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#003010]/60">
+        <div className="mt-10 pt-6 border-t border-[#B7D968]/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#B7D968]/60">
           <p>© {new Date().getFullYear()} Range and Restore Sports Massage. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="/privacy-policy"      className="hover:text-[#001D00] transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-[#001D00] transition-colors min-h-[36px] flex items-center">Terms &amp; Conditions</Link>
+            <Link href="/privacy-policy"      className="hover:text-white transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors min-h-[36px] flex items-center">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

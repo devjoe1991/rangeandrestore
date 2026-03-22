@@ -12,7 +12,7 @@ export function GoogleReviews() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
         {/* EXACT GoCompare Screenshot Style Header */}
-        <h2 id="reviews-heading" className="text-4xl sm:text-5xl lg:text-[4rem] font-black text-[#B7D968] tracking-tight uppercase leading-none mb-8 max-w-3xl">
+        <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#B7D968] tracking-tight uppercase leading-none mb-8">
           Our customers rate us
         </h2>
         
