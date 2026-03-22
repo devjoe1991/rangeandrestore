@@ -20,11 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={dmSans.variable} suppressHydrationWarning>
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t!=='light'&&p)){document.documentElement.classList.add('dark')}})()`,
-          }}
-        />
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Header />
         <main id="main-content">{children}</main>

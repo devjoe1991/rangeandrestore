@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { BUSINESS, NAV_ITEMS, BOOKING_URLS } from '@/lib/constants'
 import { SearchTrigger } from './SiteSearch'
-import { ThemeToggle } from './ThemeToggle'
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -73,10 +72,9 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right: search + theme toggle + phone + CTA */}
+          {/* Right: search + phone + CTA */}
           <div className="flex items-center gap-3">
             <SearchTrigger className="text-white/80 hover:text-white" />
-            <ThemeToggle />
             <a href={`tel:${BUSINESS.phoneTel}`}
               className="flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-[#B7D968] transition-colors min-h-[44px]">
               <PhoneIcon /> {BUSINESS.phone}
@@ -151,13 +149,6 @@ export function Header() {
             className="flex items-center justify-center gap-2 text-white font-semibold text-base min-h-[48px]">
             <PhoneIcon /> {BUSINESS.phone}
           </a>
-          <div className="flex items-center justify-between pt-2 pb-1">
-            <div>
-              <span className="text-sm font-semibold text-white">Appearance</span>
-              <p className="text-xs text-white/50 mt-0.5">Light · Dark · System</p>
-            </div>
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     </>
