@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { GoogleReviews } from '@/components/GoogleReviews'
-import { FacebookFeed } from '@/components/FacebookFeed'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, buildMetadata } from '@/lib/seo'
 
@@ -87,8 +86,8 @@ export default function HomePage() {
             <div className="hidden lg:flex items-center justify-center">
               <div className="rounded-3xl overflow-hidden shadow-xl shadow-[#334311]/20 w-full max-w-[500px] aspect-[4/3]">
                 <Image
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1000&q=80"
-                  alt="Sports massage therapist treating a client"
+                  src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
+                  alt="Carlos Bonvicine, sports massage therapist at Range and Restore"
                   width={1000}
                   height={750}
                   className="w-full h-full object-cover"
@@ -205,10 +204,7 @@ export default function HomePage() {
       {/* ── 4. GOOGLE REVIEWS ────────────────────────────────── */}
       <GoogleReviews />
 
-      {/* ── 5. FACEBOOK FEED ─────────────────────────────────── */}
-      <FacebookFeed />
-
-      {/* ── 6. BUNDLE PRICING ────────────────────────────────── */}
+      {/* ── 5. BUNDLE PRICING ────────────────────────────────── */}
       <section className="section bg-white" aria-labelledby="bundles-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -298,6 +294,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
     </>
   )
 }

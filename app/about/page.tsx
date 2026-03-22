@@ -35,8 +35,8 @@ export default function AboutPage() {
             {/* Therapist hero image */}
             <div className="rounded-2xl overflow-hidden mb-8 aspect-[4/3] relative w-full">
               <Image
-                src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1000&q=80"
-                alt="Sports massage therapist performing soft tissue treatment"
+                src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
+                alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
