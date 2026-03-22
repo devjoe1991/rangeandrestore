@@ -135,16 +135,16 @@ export default function HomePage() {
           src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
           alt="Carlos Bonvicine, sports massage therapist and founder of Range and Restore, Archway, North London"
           fill
-          className="object-cover object-[center_25%]"
+          className="object-cover object-[center_10%]"
           priority
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#003010]/70" />
 
-        <div className="relative flex flex-col items-center justify-center text-center px-4 py-14 sm:py-20" style={{ minHeight: '400px' }}>
+        <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-12 sm:pt-24 sm:pb-16" style={{ minHeight: '460px' }}>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight mb-4 max-w-3xl uppercase">
-            Move Better.<br />Feel Better.<br />Live Strong
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight mb-4 max-w-3xl uppercase mt-24 sm:mt-32">
+            Move Better.<br />Feel Better.<br />Live Stronger
           </h1>
 
           <p className="text-white/80 text-base sm:text-lg mb-7 max-w-xl leading-relaxed">
