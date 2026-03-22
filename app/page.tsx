@@ -64,7 +64,7 @@ const blogPosts = [
     title:    'Hydration and Muscle Health – What Every Client Should Know',
     href:     '/blog/hydration-and-muscle-health',
     date:     '8 Feb 2026',
-    img:      'https://images.unsplash.com/photo-1558227092-1eb1997d956a?w=800&q=80',
+    img:      '/hydration-wellness.png',
     imgAlt:   'Water and hydration for muscle recovery',
     category: 'Recovery',
     readTime: '4 min read',
