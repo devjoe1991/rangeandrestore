@@ -37,13 +37,13 @@ export default function SportsMassageForRunnersPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage Helps Runners Before and After Races
           </h1>
-          <div className="flex items-center gap-4 text-[#2c3d1f]/70 text-sm">
+          <div className="flex items-center gap-4 text-page-muted opacity-80 text-sm">
             <time dateTime="2026-02-01">1 February 2026</time>
             <span>·</span>
             <span>By Carlos Bonvicine</span>
@@ -52,8 +52,8 @@ export default function SportsMassageForRunnersPage() {
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-          <p className="text-xl font-medium text-[#2c3d1f]">
+        <div className="prose prose-lg max-w-none text-page-muted space-y-6">
+          <p className="text-xl font-medium text-page">
             Whether you&apos;re preparing for your first 5K or training for a full marathon, sports massage is one of the most effective tools you can add to your training programme. It supports performance, reduces injury risk, and dramatically improves your ability to recover.
           </p>
 
@@ -61,7 +61,7 @@ export default function SportsMassageForRunnersPage() {
             Running places enormous repetitive demand on the muscles, tendons, and connective tissues of the legs, hips, and lower back. Over time — particularly during peak training periods — this accumulation of stress can lead to tightness, imbalances, and injury. Sports massage addresses these issues directly, keeping your body functioning at its best throughout the training cycle.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">Before the race: preparation massage</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Before the race: preparation massage</h2>
 
           <p>
             A pre-race massage, typically delivered 2–5 days before race day, is designed to prepare your muscles for the demands ahead. The goals are different from a deep recovery session — the priority is to stimulate circulation, reduce any residual tightness from training, and help you feel ready to perform.
@@ -77,7 +77,7 @@ export default function SportsMassageForRunnersPage() {
             <li>Assessment of any areas of concern that might affect your race performance</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">After the race: recovery massage</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">After the race: recovery massage</h2>
 
           <p>
             Post-race massage is where the real benefits of sports massage for runners become most evident. After a race — whether a 10K or a marathon — your muscles are dealing with significant metabolic stress, micro-tears in the muscle fibres, and accumulated waste products that need to be cleared.
@@ -96,7 +96,7 @@ export default function SportsMassageForRunnersPage() {
             <li>Reduced swelling and fluid retention in the lower limbs</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">During training: maintenance massage</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">During training: maintenance massage</h2>
 
           <p>
             Beyond pre- and post-race treatment, regular maintenance massage throughout the training cycle is arguably the most valuable application of sports massage for runners. The cumulative effect of running — particularly when mileage is high — gradually tightens the muscles, compresses the joints, and creates postural imbalances that, if left unaddressed, become the conditions that lead to injury.
@@ -115,7 +115,7 @@ export default function SportsMassageForRunnersPage() {
             <li>Lower back and glute tension from running gait</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">What to expect from a session at Range and Restore</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What to expect from a session at Range and Restore</h2>
 
           <p>
             Every session at Range and Restore begins with a brief assessment. For runners, this typically involves looking at your training history, recent mileage, any areas of concern, and your upcoming race schedule. This helps to shape a treatment that is genuinely relevant to where you are in your training cycle, rather than a generic approach.
@@ -134,15 +134,15 @@ export default function SportsMassageForRunnersPage() {
           <BookingButton label="Book Your Session" />
         </div>
 
-        <div className="mt-10 border-t pt-8">
-          <h3 className="text-lg font-semibold text-[#2c3d1f] mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] flex items-center">
+        <div className="mt-10 border-t border-page pt-8">
+          <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
+          <Link href="/services/sports-deep-tissue-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
             → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
           </Link>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#4a7a28] font-semibold hover:text-[#2c3d1f] min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#4a7a28] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

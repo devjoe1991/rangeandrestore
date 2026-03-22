@@ -12,37 +12,37 @@ export const metadata: Metadata = buildMetadata({
 export default function ClinicalCollaborationPage() {
   return (
     <>
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Clinical Collaboration</h1>
-          <p className="mt-4 text-xl text-[#2c3d1f]/80">Range and Restore &amp; Reliable Scan – Assessment and Treatment Under One Roof</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-page">Clinical Collaboration</h1>
+          <p className="mt-4 text-xl text-page-muted">Range and Restore &amp; Reliable Scan – Assessment and Treatment Under One Roof</p>
         </div>
       </div>
 
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="space-y-10">
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">A Unique Clinical Setting</h2>
-            <p className="text-gray-700 text-lg mb-4">
+            <h2 className="text-2xl font-bold text-page mb-4">A Unique Clinical Setting</h2>
+            <p className="text-page-muted text-lg mb-4">
               Range and Restore Sports Massage is based at 130 Junction Road, Archway, within the same building as Reliable Scan — a private diagnostic ultrasound clinic led by GMC-registered doctors.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-page-muted mb-4">
               This co-location creates a genuine opportunity for coordinated care between sports massage therapy and diagnostic imaging — something rarely available in a community setting. For clients who require both assessment and treatment, everything can be arranged within the same building, with clear communication between practitioners.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">About Reliable Scan</h2>
-            <p className="text-gray-700 mb-4">
+            <h2 className="text-2xl font-bold text-page mb-4">About Reliable Scan</h2>
+            <p className="text-page-muted mb-4">
               Reliable Scan is a private diagnostic ultrasound clinic providing musculoskeletal (MSK) ultrasound imaging, pregnancy scans, and other diagnostic services. The clinic is led by GMC-registered doctors with specialist training in diagnostic imaging.
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-page-muted mb-4">
               MSK ultrasound is particularly useful for assessing soft tissue injuries that are difficult to diagnose from symptoms alone — including tendon tears, bursitis, muscle tears, joint effusions, and nerve compression. It provides real-time, dynamic imaging that can directly inform treatment decisions.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">How the Collaboration Works</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">How the Collaboration Works</h2>
             <div className="space-y-4">
               {[
                 {
@@ -58,17 +58,17 @@ export default function ClinicalCollaborationPage() {
                   desc: 'Diagnostic imaging does not change the hands-on treatment itself, but it does inform clinical decision-making — how much pressure to use, which areas to prioritise, what contraindications to be aware of, and how realistic the expected recovery timeline is.',
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-[#eef2eb] rounded-xl p-6">
-                  <h3 className="font-bold text-[#2c3d1f] mb-2">{item.title}</h3>
-                  <p className="text-[#2c3d1f]/80 text-sm">{item.desc}</p>
+                <div key={item.title} className="bg-page-sage rounded-xl p-6">
+                  <h3 className="font-bold text-page mb-2">{item.title}</h3>
+                  <p className="text-page-muted text-sm">{item.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">Who is this relevant for?</h2>
-            <p className="text-gray-700 mb-4">Clinical collaboration between Range and Restore and Reliable Scan may be particularly relevant for:</p>
+            <h2 className="text-2xl font-bold text-page mb-4">Who is this relevant for?</h2>
+            <p className="text-page-muted mb-4">Clinical collaboration between Range and Restore and Reliable Scan may be particularly relevant for:</p>
             <ul className="space-y-2">
               {[
                 'Clients with persistent or unexplained soft tissue pain that has not responded to treatment',
@@ -77,7 +77,7 @@ export default function ClinicalCollaborationPage() {
                 'Clients with complex or chronic conditions where a multi-practitioner approach is beneficial',
                 'Anyone who has been advised to get an MSK scan by their GP or physiotherapist',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-gray-700">
+                <li key={item} className="flex items-start gap-3 text-page-muted">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
@@ -99,7 +99,7 @@ export default function ClinicalCollaborationPage() {
               <BookingButton label="Book Your Session" />
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-md border-2 border-[#d4ecea] text-[#d4ecea] font-semibold px-6 py-3 hover:bg-[#eef2eb] hover:text-[#2c3d1f] transition-colors min-h-[44px]"
+                className="inline-flex items-center justify-center rounded-md border-2 border-[#d4ecea] text-[#d4ecea] font-semibold px-6 py-3 hover:bg-page-sage hover:text-page transition-colors min-h-[44px]"
               >
                 Ask a Question
               </Link>

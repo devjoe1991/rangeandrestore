@@ -34,26 +34,26 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact info */}
           <div>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-bold text-page mb-6">Get in Touch</h2>
 
             <div className="space-y-6">
               <div>
-                <h3 className="font-semibold text-[#2c3d1f] mb-1">Address</h3>
-                <address className="not-italic text-gray-700">
+                <h3 className="font-semibold text-page mb-1">Address</h3>
+                <address className="not-italic text-page-muted">
                   {BUSINESS.address}
                 </address>
               </div>
 
               <div>
-                <h3 className="font-semibold text-[#2c3d1f] mb-1">Phone</h3>
-                <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] inline-flex items-center">
+                <h3 className="font-semibold text-page mb-1">Phone</h3>
+                <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.phone}
                 </a>
               </div>
 
               <div>
-                <h3 className="font-semibold text-[#2c3d1f] mb-1">Email</h3>
-                <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] inline-flex items-center">
+                <h3 className="font-semibold text-page mb-1">Email</h3>
+                <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.email}
                 </a>
               </div>
@@ -71,12 +71,12 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-8 bg-[#eef2eb] rounded-xl p-6">
-              <h3 className="font-bold text-[#2c3d1f] mb-2">Location</h3>
-              <p className="text-[#2c3d1f]/80 text-sm mb-3">
+            <div className="mt-8 bg-page-sage rounded-xl p-6">
+              <h3 className="font-bold text-page mb-2">Location</h3>
+              <p className="text-page-muted text-sm mb-3">
                 Range and Restore is located at 130 Junction Road, Archway, London N19 5LB, within the same building as Reliable Scan, a private diagnostic ultrasound clinic.
               </p>
-              <p className="text-[#2c3d1f]/80 text-sm">
+              <p className="text-page-muted text-sm">
                 A short walk from Archway tube (Northern Line). Easy to reach from Tufnell Park, Islington and across North London. Street parking is available nearby.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
 
           {/* Contact form */}
           <div>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-6">Send a Message</h2>
+            <h2 className="text-2xl font-bold text-page mb-6">Send a Message</h2>
             <ContactForm />
           </div>
         </div>

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: 'Range and Restore | Sports Massage Archway London',
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-GB" className={inter.variable} suppressHydrationWarning>
+    <html lang="en-GB" className={dmSans.variable} suppressHydrationWarning>
       <body>
         <script
           dangerouslySetInnerHTML={{

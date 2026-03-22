@@ -88,16 +88,16 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 gap-6">
           {services.map((service) => (
-            <div key={service.href} className="bg-white border border-gray-200 rounded-xl p-6 lg:p-8 hover:shadow-md transition-shadow">
+            <div key={service.href} className="bg-card border border-page rounded-xl p-6 lg:p-8 hover:shadow-md dark:hover:shadow-black/30 transition-shadow">
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-[#2c3d1f] mb-2">
+                  <h2 className="text-2xl font-bold text-page mb-2">
                     <Link href={service.href} className="hover:text-[#4a7a28] transition-colors">
                       {service.title}
                     </Link>
                   </h2>
                   <p className="text-[#4a7a28] font-medium text-sm mb-3">{service.duration}</p>
-                  <p className="text-gray-600">{service.description}</p>
+                  <p className="text-page-muted">{service.description}</p>
                 </div>
                 <div className="flex flex-row lg:flex-col gap-3 lg:items-end flex-shrink-0">
                   <a

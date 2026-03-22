@@ -22,11 +22,11 @@ export default function GalleryPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Gallery</h1>
-          <p className="mt-3 text-xl text-[#2c3d1f]/80">Inside Range and Restore Sports Massage, Archway</p>
-          <p className="mt-4 text-[#2c3d1f]/65 max-w-2xl">
+          <h1 className="text-4xl lg:text-5xl font-bold text-page">Gallery</h1>
+          <p className="mt-3 text-xl text-page-muted">Inside Range and Restore Sports Massage, Archway</p>
+          <p className="mt-4 text-page-muted opacity-80 max-w-2xl">
             Real clinic photos from Range and Restore in Archway, North London — treatment sessions, the professional clinic environment, and the hands-on, assessment-led approach Carlos brings to every appointment.
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function GalleryPage() {
         <GalleryClient images={images} />
 
         {/* ── CTA ──────────────────────────────────────────────── */}
-        <div className="mt-12 pt-10 border-t border-[#dde5d0] flex flex-col sm:flex-row gap-4 items-start">
+        <div className="mt-12 pt-10 border-t border-page flex flex-col sm:flex-row gap-4 items-start">
           <BookingButton label="Book Your Session" />
           <Link
             href="/about"

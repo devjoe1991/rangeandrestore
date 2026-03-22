@@ -37,13 +37,13 @@ export default function AchillesTendinitisPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Achilles Tendinitis – How Sports Massage Helps Recovery
           </h1>
-          <div className="flex items-center gap-4 text-[#2c3d1f]/70 text-sm">
+          <div className="flex items-center gap-4 text-page-muted opacity-80 text-sm">
             <time dateTime="2026-02-01">1 February 2026</time>
             <span>·</span>
             <span>By Carlos Bonvicine</span>
@@ -52,12 +52,12 @@ export default function AchillesTendinitisPage() {
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-          <p className="text-xl font-medium text-[#2c3d1f]">
+        <div className="prose prose-lg max-w-none text-page-muted space-y-6">
+          <p className="text-xl font-medium text-page">
             Achilles tendinitis is one of the most common overuse injuries affecting runners, cyclists, and active individuals. Left unmanaged, it can progress from a nagging discomfort to a serious injury that keeps you off your feet for months. Sports massage and targeted soft tissue therapy offer an effective, non-invasive approach to supporting recovery and preventing recurrence.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">What is Achilles tendinitis?</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is Achilles tendinitis?</h2>
 
           <p>
             The Achilles tendon connects the calf muscles — the gastrocnemius and soleus — to the heel bone (calcaneus). It is the largest tendon in the body and handles enormous loads during running, jumping, and walking. Achilles tendinitis is an overuse injury characterised by inflammation and degeneration of the tendon, typically at the mid-portion or where it attaches to the heel.
@@ -67,7 +67,7 @@ export default function AchillesTendinitisPage() {
             Common symptoms include pain and stiffness in the tendon — particularly in the morning or after periods of inactivity — swelling, tenderness to touch, and pain that worsens with activity and improves with rest, at least in the early stages.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">What causes it?</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What causes it?</h2>
 
           <p>Achilles tendinitis is most commonly caused by:</p>
           <ul className="space-y-2 list-disc list-inside">
@@ -83,33 +83,33 @@ export default function AchillesTendinitisPage() {
             The underlying issue is often not just in the tendon itself, but in the surrounding muscles — particularly the calf complex — which have become so tight and overloaded that the tendon is under constant excessive tension.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">How sports massage supports recovery</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">How sports massage supports recovery</h2>
 
           <p>
             Sports massage and soft tissue therapy address Achilles tendinitis by targeting the muscle and fascial tension that is contributing to the problem, rather than focusing solely on the tendon itself. Direct work on an acutely inflamed tendon should be avoided — but working the surrounding tissue is both appropriate and highly effective.
           </p>
 
-          <h3 className="text-xl font-bold text-[#2c3d1f] mt-6 mb-2">Reducing calf muscle tension</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Reducing calf muscle tension</h3>
           <p>
             The gastrocnemius and soleus muscles are almost always a central part of the problem in Achilles tendinitis. Deep tissue massage, trigger point therapy, and soft tissue release applied to these muscles reduces the tension they are transmitting to the tendon, providing immediate relief and creating conditions more favourable for healing.
           </p>
 
-          <h3 className="text-xl font-bold text-[#2c3d1f] mt-6 mb-2">Addressing the full kinetic chain</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Addressing the full kinetic chain</h3>
           <p>
             Because Achilles tendinitis is often driven by loading and movement patterns further up the leg — particularly the hamstrings, glutes, and hip flexors — effective treatment looks beyond the calf alone. An assessment-led session will identify areas of tightness or weakness contributing to the problem and address them as part of a comprehensive treatment.
           </p>
 
-          <h3 className="text-xl font-bold text-[#2c3d1f] mt-6 mb-2">Improving tissue health and circulation</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving tissue health and circulation</h3>
           <p>
             Tendons have a relatively poor blood supply compared to muscle tissue, which is one of the reasons they are slow to heal. Massage increases local circulation, improving the delivery of nutrients and oxygen to the affected area and supporting the tissue repair process.
           </p>
 
-          <h3 className="text-xl font-bold text-[#2c3d1f] mt-6 mb-2">Myofascial release and mobility work</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Myofascial release and mobility work</h3>
           <p>
             Restrictions in the fascia surrounding the calf and lower leg can contribute to altered mechanics and increased tendon load. Myofascial release techniques address these restrictions, while assisted stretching and mobility work helps restore functional range of motion in the ankle and surrounding joints.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">How many sessions will I need?</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">How many sessions will I need?</h2>
 
           <p>
             This varies considerably depending on the severity and duration of the tendinitis, your training load, and how consistently you can attend treatment. Mild to moderate cases that are caught early often respond well within 3–6 sessions. Longer-standing or more severe cases may require ongoing management over several months.
@@ -119,7 +119,7 @@ export default function AchillesTendinitisPage() {
             Between sessions, relative rest — reducing running volume without necessarily stopping entirely — combined with appropriate loading exercises (typically eccentric calf work, prescribed by a physiotherapist or sports rehab specialist) is usually recommended. At Range and Restore, advice on what to do between sessions is always part of the treatment.
           </p>
 
-          <h2 className="text-2xl font-bold text-[#2c3d1f] mt-8 mb-3">When to seek additional help</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek additional help</h2>
 
           <p>
             Sports massage is a highly effective component of Achilles tendinitis management, but it works best as part of a broader approach. If your symptoms are severe, if you have experienced a sudden worsening of pain, or if you suspect a partial or complete Achilles rupture, you should seek assessment from a sports medicine physician or physiotherapist before beginning massage treatment.
@@ -138,15 +138,15 @@ export default function AchillesTendinitisPage() {
           <BookingButton label="Book Your Session" />
         </div>
 
-        <div className="mt-10 border-t pt-8">
-          <h3 className="text-lg font-semibold text-[#2c3d1f] mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] flex items-center">
+        <div className="mt-10 border-t border-page pt-8">
+          <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
+          <Link href="/services/sports-deep-tissue-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
             → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
           </Link>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#4a7a28] font-semibold hover:text-[#2c3d1f] min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#4a7a28] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

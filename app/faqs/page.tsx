@@ -26,16 +26,16 @@ export default function FAQsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-[#2c3d1f] tracking-tight">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-page tracking-tight">
             Frequently Asked Questions
           </h1>
-          <p className="mt-4 text-lg text-[#2c3d1f]/75 max-w-2xl">
+          <p className="mt-4 text-lg text-page-muted max-w-2xl">
             Whether you are new to massage, managing an injury, or just curious about booking, find your answer here.
           </p>
-          <p className="mt-3 text-base text-[#2c3d1f]/60 max-w-xl">
-            Not sure which treatment is right for you? Call Carlos on <a href="tel:+447890716154" className="font-semibold text-[#2c3d1f] hover:underline">07890 716154</a>. He is happy to talk it through before you book.
+          <p className="mt-3 text-base text-page-muted opacity-80 max-w-xl">
+            Not sure which treatment is right for you? Call Carlos on <a href="tel:+447890716154" className="font-semibold text-page hover:underline">07890 716154</a>. He is happy to talk it through before you book.
           </p>
         </div>
       </div>

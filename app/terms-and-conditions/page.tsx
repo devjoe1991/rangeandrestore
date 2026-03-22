@@ -11,24 +11,24 @@ export const metadata: Metadata = buildMetadata({
 export default function TermsAndConditionsPage() {
   return (
     <>
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Terms and Conditions</h1>
-          <p className="mt-4 text-[#2c3d1f]/70">Last updated: January 2026</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-page">Terms and Conditions</h1>
+          <p className="mt-4 text-page-muted opacity-80">Last updated: January 2026</p>
         </div>
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
+        <div className="prose prose-lg max-w-none text-page-muted space-y-8">
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">1. About These Terms</h2>
+            <h2 className="text-2xl font-bold text-page">1. About These Terms</h2>
             <p>
               These terms and conditions govern the use of services provided by Range and Restore Sports Massage, operated by Carlos Bonvicine, located at {BUSINESS.address}. By booking an appointment or using our services, you agree to these terms.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">2. Appointments and Booking</h2>
+            <h2 className="text-2xl font-bold text-page">2. Appointments and Booking</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>Appointments can be booked online via our booking system at rangeandrestoresportsmassage.janeapp.co.uk or by contacting us directly.</li>
               <li>A booking confirmation will be sent to the email address provided at the time of booking.</li>
@@ -38,7 +38,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">3. Cancellation and Late Arrival Policy</h2>
+            <h2 className="text-2xl font-bold text-page">3. Cancellation and Late Arrival Policy</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>We require a minimum of 24 hours&apos; notice to cancel or reschedule an appointment.</li>
               <li>Cancellations made with less than 24 hours&apos; notice may be charged at the full session rate.</li>
@@ -49,7 +49,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">4. Payment</h2>
+            <h2 className="text-2xl font-bold text-page">4. Payment</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>Payment is due at the time of your appointment unless otherwise agreed.</li>
               <li>We accept cash and card payments.</li>
@@ -59,7 +59,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">5. Bundle Packages</h2>
+            <h2 className="text-2xl font-bold text-page">5. Bundle Packages</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>Bundle packages are valid for the specified period from the date of first use.</li>
               <li>Bundle packages are non-refundable once purchased.</li>
@@ -70,7 +70,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">6. Gift Cards</h2>
+            <h2 className="text-2xl font-bold text-page">6. Gift Cards</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>Gift cards are valid for 12 months from the date of purchase.</li>
               <li>Gift cards are non-refundable and cannot be exchanged for cash.</li>
@@ -81,7 +81,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">7. Health and Safety</h2>
+            <h2 className="text-2xl font-bold text-page">7. Health and Safety</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>You are required to disclose any relevant medical conditions, injuries, medications, or contraindications before your treatment begins.</li>
               <li>Failure to disclose relevant health information may affect the safety and effectiveness of your treatment.</li>
@@ -92,7 +92,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">8. Conduct</h2>
+            <h2 className="text-2xl font-bold text-page">8. Conduct</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>We expect all clients to treat our therapist and any associated staff with respect and professionalism.</li>
               <li>Any inappropriate, abusive, or disrespectful behaviour will result in immediate termination of the session, and the client will be charged in full.</li>
@@ -101,7 +101,7 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">9. Liability</h2>
+            <h2 className="text-2xl font-bold text-page">9. Liability</h2>
             <ul className="space-y-3 list-disc list-inside">
               <li>We take all reasonable care in providing our services, but we cannot accept liability for any injury, loss, or damage arising from your use of our services unless caused by our negligence.</li>
               <li>We are not liable for any pre-existing conditions that may be aggravated by treatment, provided that treatment was appropriate given the information you disclosed.</li>
@@ -110,21 +110,21 @@ export default function TermsAndConditionsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">10. Governing Law</h2>
+            <h2 className="text-2xl font-bold text-page">10. Governing Law</h2>
             <p>
               These terms and conditions are governed by the laws of England and Wales. Any disputes arising under these terms will be subject to the exclusive jurisdiction of the courts of England and Wales.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">11. Changes to These Terms</h2>
+            <h2 className="text-2xl font-bold text-page">11. Changes to These Terms</h2>
             <p>
               We reserve the right to update these terms and conditions at any time. Changes will be posted on this page with an updated date. Continued use of our services following any changes constitutes your acceptance of the revised terms.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f]">Contact</h2>
+            <h2 className="text-2xl font-bold text-page">Contact</h2>
             <p>If you have any questions about these terms, please contact us:</p>
             <address className="not-italic">
               <strong>Carlos Bonvicine</strong><br />

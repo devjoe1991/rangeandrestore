@@ -38,13 +38,13 @@ export default function ManualLymphaticDrainagePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">MLD · Archway London</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f] mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Manual Lymphatic Drainage (MLD) in Archway, London
           </h1>
-          <h2 className="text-2xl lg:text-3xl font-semibold text-[#2c3d1f]/80">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-page-muted">
             Gentle Support for Natural Healing and Recovery
           </h2>
           <div className="mt-6">
@@ -56,8 +56,8 @@ export default function ManualLymphaticDrainagePage() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="space-y-12">
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">Who is this treatment for?</h2>
-            <p className="text-gray-700 mb-4">Manual Lymphatic Drainage is particularly beneficial for:</p>
+            <h2 className="text-2xl font-bold text-page mb-4">Who is this treatment for?</h2>
+            <p className="text-page-muted mb-4">Manual Lymphatic Drainage is particularly beneficial for:</p>
             <ul className="space-y-2">
               {[
                 'Clients recovering from cosmetic or orthopaedic surgery',
@@ -65,7 +65,7 @@ export default function ManualLymphaticDrainagePage() {
                 'Those managing lymphoedema or post-injury recovery',
                 'People seeking improved circulation, healing, or immune support',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-3 text-gray-700">
+                <li key={item} className="flex items-start gap-3 text-page-muted">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
@@ -76,23 +76,23 @@ export default function ManualLymphaticDrainagePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">Choose your ideal session length</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { duration: '30 Minutes', desc: 'Focused MLD treatment for a specific area. Suitable for targeted swelling management or follow-up sessions.' },
                 { duration: '60 Minutes', desc: 'A thorough MLD session covering multiple areas. Recommended for post-surgery recovery and general lymphatic support.' },
                 { duration: '90 Minutes', desc: 'Comprehensive full-body MLD treatment. Ideal for more complex lymphatic conditions or full post-surgical recovery support.' },
               ].map((option) => (
-                <div key={option.duration} className="bg-[#eef2eb] rounded-xl p-5">
-                  <p className="font-bold text-[#2c3d1f] text-lg mb-2">{option.duration}</p>
-                  <p className="text-[#2c3d1f]/80 text-sm">{option.desc}</p>
+                <div key={option.duration} className="bg-page-sage rounded-xl p-5">
+                  <p className="font-bold text-page text-lg mb-2">{option.duration}</p>
+                  <p className="text-page-muted text-sm">{option.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">What are the benefits?</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">What are the benefits?</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 'Reduced swelling, bruising, and water retention',
@@ -101,7 +101,7 @@ export default function ManualLymphaticDrainagePage() {
                 'Boosted immune function and natural detoxification',
                 'Gentle relaxation for body and mind',
               ].map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3 text-gray-700">
+                <li key={benefit} className="flex items-start gap-3 text-page-muted">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
@@ -112,15 +112,15 @@ export default function ManualLymphaticDrainagePage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#2c3d1f] mb-4">What techniques are used?</h2>
-            <p className="text-gray-700 mb-3">MLD uses specialised, gentle techniques including:</p>
+            <h2 className="text-2xl font-bold text-page mb-4">What techniques are used?</h2>
+            <p className="text-page-muted mb-3">MLD uses specialised, gentle techniques including:</p>
             <ul className="space-y-2">
               {[
                 'Gentle rhythmic hand movements',
                 'Precise pressure techniques designed to stimulate lymph flow',
                 'Safe, non-invasive methods suitable for post-surgery clients',
               ].map((tech) => (
-                <li key={tech} className="flex items-center gap-3 text-gray-700">
+                <li key={tech} className="flex items-center gap-3 text-page-muted">
                   <span className="w-2 h-2 rounded-full bg-[#4a7a28] flex-shrink-0" aria-hidden="true" />
                   {tech}
                 </li>
@@ -137,12 +137,12 @@ export default function ManualLymphaticDrainagePage() {
           </section>
 
           <div className="border-t pt-8">
-            <h3 className="text-lg font-semibold text-[#2c3d1f] mb-4">Related services</h3>
+            <h3 className="text-lg font-semibold text-page mb-4">Related services</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/services/advanced-clinical-massage" className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] flex items-center">
+              <Link href="/services/advanced-clinical-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Advanced Clinical Massage &amp; Soft Tissue Remedial Therapy
               </Link>
-              <Link href="/services/2-hour-pain-relief-massage" className="text-[#4a7a28] hover:text-[#2c3d1f] font-medium min-h-[44px] flex items-center">
+              <Link href="/services/2-hour-pain-relief-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
                 → 2-Hour Pain Relief Massage
               </Link>
             </div>

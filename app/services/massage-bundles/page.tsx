@@ -52,13 +52,13 @@ const bundles = [
 export default function MassageBundlesPage() {
   return (
     <>
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f] mb-4">Massage Bundle Offers</h1>
-          <h2 className="text-2xl lg:text-3xl font-semibold text-[#2c3d1f]/80">
+          <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">Massage Bundle Offers</h1>
+          <h2 className="text-2xl lg:text-3xl font-semibold text-page-muted">
             Invest in Your Long-Term Wellbeing
           </h2>
-          <p className="mt-4 text-lg text-[#2c3d1f]/80 max-w-2xl">
+          <p className="mt-4 text-lg text-page-muted max-w-2xl">
             Regular massage is one of the most effective investments you can make in your health, recovery, and quality of life. Our bundle packages make consistent treatment more accessible and affordable, so you can commit to your wellbeing without compromise.
           </p>
         </div>
@@ -67,19 +67,19 @@ export default function MassageBundlesPage() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="space-y-10">
           {bundles.map((bundle) => (
-            <div key={bundle.title} className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-10 hover:shadow-md transition-shadow">
+            <div key={bundle.title} className="bg-card border border-page rounded-2xl p-6 lg:p-10 hover:shadow-md transition-shadow">
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <h2 className="text-2xl font-bold text-[#2c3d1f]">{bundle.title}</h2>
-                    <span className="inline-block bg-[#eef2eb] text-[#2c3d1f] text-sm font-semibold px-3 py-1 rounded-full">{bundle.saving}</span>
+                    <h2 className="text-2xl font-bold text-page">{bundle.title}</h2>
+                    <span className="inline-block bg-page-sage text-page text-sm font-semibold px-3 py-1 rounded-full">{bundle.saving}</span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-4">
                     <span className="text-4xl font-bold text-[#4a7a28]">{bundle.price}</span>
-                    <span className="text-gray-500 text-sm">{bundle.validity}</span>
+                    <span className="text-page-muted opacity-80 text-sm">{bundle.validity}</span>
                   </div>
-                  <p className="text-gray-700 mb-3">{bundle.description}</p>
-                  <p className="text-gray-600 text-sm italic">{bundle.ideal}</p>
+                  <p className="text-page-muted mb-3">{bundle.description}</p>
+                  <p className="text-page-muted text-sm italic">{bundle.ideal}</p>
                 </div>
                 <div className="flex-shrink-0">
                   <a
@@ -105,7 +105,7 @@ export default function MassageBundlesPage() {
             <BookingButton label="Book Your Bundle" />
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md border-2 border-[#d4ecea] text-[#d4ecea] font-semibold px-8 py-3 hover:bg-[#eef2eb] hover:text-[#2c3d1f] transition-colors min-h-[44px]"
+              className="inline-flex items-center justify-center rounded-md border-2 border-[#d4ecea] text-[#d4ecea] font-semibold px-8 py-3 hover:bg-page-sage hover:text-page transition-colors min-h-[44px]"
             >
               Ask a Question
             </Link>
@@ -113,8 +113,8 @@ export default function MassageBundlesPage() {
         </div>
 
         <div className="mt-10 bg-[#eeeeee] rounded-xl p-6">
-          <h3 className="text-lg font-bold text-[#2c3d1f] mb-3">Bundle Terms</h3>
-          <ul className="space-y-2 text-gray-700 text-sm">
+          <h3 className="text-lg font-bold text-page mb-3">Bundle Terms</h3>
+          <ul className="space-y-2 text-page-muted text-sm">
             <li className="flex items-start gap-2">
               <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
               Bundles are valid for the specified period from the date of first use.

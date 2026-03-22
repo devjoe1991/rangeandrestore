@@ -38,28 +38,28 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Wellness Hub</h1>
-          <p className="mt-4 text-xl text-[#2c3d1f]/80">Expert advice on massage, recovery, and long-term muscle health</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-page">Wellness Hub</h1>
+          <p className="mt-4 text-xl text-page-muted">Expert advice on massage, recovery, and long-term muscle health</p>
         </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {posts.map((post) => (
-            <article key={post.slug} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+            <article key={post.slug} className="bg-card border border-page rounded-xl overflow-hidden hover:shadow-md dark:hover:shadow-black/30 transition-shadow">
               <div className="p-6">
-                <time className="text-sm text-gray-500 uppercase tracking-wide">{post.date}</time>
-                <h2 className="text-xl font-bold text-[#2c3d1f] mt-2 mb-3 leading-snug">
+                <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
+                <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">
                   <Link href={`/blog/${post.slug}`} className="hover:text-[#4a7a28] transition-colors">
                     {post.title}
                   </Link>
                 </h2>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
+                <p className="text-page-muted mb-4">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-[#4a7a28] font-semibold hover:text-[#2c3d1f] transition-colors min-h-[44px]"
+                  className="inline-flex items-center text-[#4a7a28] font-semibold hover:text-page transition-colors min-h-[44px]"
                 >
                   Read more →
                 </Link>

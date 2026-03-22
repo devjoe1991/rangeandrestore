@@ -13,18 +13,18 @@ export const metadata: Metadata = buildMetadata({
 export default function AboutPage() {
   return (
     <>
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Soft Tissue & Clinical Massage Therapist in Archway – Carlos Bonvicine</h1>
-          <p className="mt-4 text-xl text-[#2c3d1f]/80">Clinical massage and soft tissue therapy in Archway, rated five stars by clients across Islington, Tufnell Park, Finsbury Park and North London.</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-page">Soft Tissue & Clinical Massage Therapist in Archway – Carlos Bonvicine</h1>
+          <p className="mt-4 text-xl text-page-muted">Clinical massage and soft tissue therapy in Archway, rated five stars by clients across Islington, Tufnell Park, Finsbury Park and North London.</p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm">
-            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">
+            <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">
               <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               Rated 5 Stars on Google
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">Certified MLD Practitioner</span>
-            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">Assessment-Led Treatment</span>
-            <span className="inline-flex items-center gap-1.5 bg-[#2c3d1f]/10 text-[#2c3d1f] font-semibold px-3 py-1.5 rounded-full">Archway, N19</span>
+            <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Certified MLD Practitioner</span>
+            <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Assessment-Led Treatment</span>
+            <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Archway, N19</span>
           </div>
         </div>
       </div>
@@ -43,9 +43,9 @@ export default function AboutPage() {
                 priority
               />
             </div>
-            <h2 className="text-3xl font-bold text-[#2c3d1f] mb-2">Carlos Bonvicine</h2>
+            <h2 className="text-3xl font-bold text-page mb-2">Carlos Bonvicine</h2>
             <p className="text-[#4a7a28] font-medium mb-6">Clinical massage therapist. Certified MLD practitioner. Five-star rated in Archway, North London.</p>
-            <div className="space-y-4 text-gray-700 text-lg">
+            <div className="space-y-4 text-page-muted text-lg">
               <p>
                 Range and Restore is a specialist clinic in Archway led by Carlos Bonvicine — a highly qualified clinical massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner with a five-star reputation built on genuine results.
               </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 'Injury & Pain Rehabilitation',
                 'Post-Surgery Recovery Support',
               ].map((qual) => (
-                <div key={qual} className="flex items-center gap-2 text-[#2c3d1f]">
+                <div key={qual} className="flex items-center gap-2 text-page">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
@@ -84,8 +84,8 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-[#eef2eb] rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-[#2c3d1f] mb-4">The Range and Restore Approach</h3>
+            <div className="bg-page-sage rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-page mb-4">The Range and Restore Approach</h3>
               <ul className="space-y-3">
                 {[
                   { title: 'Full Assessment First', desc: 'Every session begins with a posture and movement assessment to identify the root cause of your symptoms.' },
@@ -96,8 +96,8 @@ export default function AboutPage() {
                   <li key={item.title} className="flex gap-3">
                     <span className="text-[#4a7a28] font-bold text-xl leading-none mt-0.5">→</span>
                     <div>
-                      <p className="font-semibold text-[#2c3d1f]">{item.title}</p>
-                      <p className="text-[#2c3d1f]/70 text-sm">{item.desc}</p>
+                      <p className="font-semibold text-page">{item.title}</p>
+                      <p className="text-page-muted text-sm">{item.desc}</p>
                     </div>
                   </li>
                 ))}

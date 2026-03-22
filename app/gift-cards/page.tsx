@@ -11,23 +11,23 @@ export const metadata: Metadata = buildMetadata({
 export default function GiftCardsPage() {
   return (
     <>
-      <div className="bg-[#eef2eb] py-12 lg:py-16">
+      <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#2c3d1f]">Gift Cards</h1>
-          <p className="mt-4 text-xl text-[#2c3d1f]/80">The perfect gift for friends, family, or yourself</p>
+          <h1 className="text-4xl lg:text-5xl font-bold text-page">Gift Cards</h1>
+          <p className="mt-4 text-xl text-page-muted">The perfect gift for friends, family, or yourself</p>
         </div>
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20 text-center">
-        <h2 className="text-3xl font-bold text-[#2c3d1f] mb-6">
+        <h2 className="text-3xl font-bold text-page mb-6">
           Treat your friends and family to a rejuvenating massage session
         </h2>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="text-lg text-page-muted mb-8">
           Perfect for every occasion. Gift cards are valid for 12 months from the purchase date and can be redeemed against any treatment at Range and Restore Sports Massage in Archway, North London.
         </p>
 
-        <div className="bg-[#eef2eb] rounded-2xl p-10 mb-8">
-          <p className="text-2xl font-bold text-[#2c3d1f] mb-6">Spread the love</p>
+        <div className="bg-page-sage rounded-2xl p-10 mb-8">
+          <p className="text-2xl font-bold text-page mb-6">Spread the love</p>
           <a
             href={BOOKING_URLS.giftCards}
             target="_blank"
@@ -36,12 +36,12 @@ export default function GiftCardsPage() {
           >
             Purchase a Gift Card
           </a>
-          <p className="text-sm text-[#2c3d1f]/70 mt-4">Secure online purchase. Valid for 12 months.</p>
+          <p className="text-sm text-page-muted opacity-80 mt-4">Secure online purchase. Valid for 12 months.</p>
         </div>
 
-        <div className="bg-[#eeeeee] rounded-xl p-6 text-left">
-          <h3 className="text-xl font-bold text-[#2c3d1f] mb-4">Gift Card Terms</h3>
-          <ul className="space-y-2 text-gray-700">
+        <div className="bg-page-alt rounded-xl p-6 text-left border border-page">
+          <h3 className="text-xl font-bold text-page mb-4">Gift Card Terms</h3>
+          <ul className="space-y-2 text-page-muted">
             <li className="flex items-start gap-2">
               <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
               Gift cards are valid for 12 months from the purchase date.
