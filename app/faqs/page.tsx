@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
-import FaqAccordion, { faqs } from './FaqAccordion'
+import FaqAccordion from './FaqAccordion'
+import { faqs } from './data'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage FAQs – Range and Restore Archway',

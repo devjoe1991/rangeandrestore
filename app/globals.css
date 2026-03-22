@@ -1,33 +1,31 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand-green:        #4a7a28;
-  --color-brand-green-dark:   #2c3d1f;
-  --color-brand-green-light:  #c8d9b8;
-  --color-brand-green-border: #dde5d0;
+  --color-brand-green:        #003010;
+  --color-brand-green-dark:   #003010;
+  --color-brand-green-light:  #B7D968;
   --color-brand-grey-dark:    #262626;
-  --color-brand-cream:        #f5f2eb;
-  --color-accent:             #2c3d1f;
-  --color-accent-light:       #C5E47D;
-  --color-bg-sage:            #eef2eb;
+  --color-brand-cream:        #F7F1E6;
+  --color-accent:             #E7E780;
+  --color-accent-light:       #B7D968;
   --font-sans: var(--font-inter);
 
   /* Shadow system */
-  --shadow-card: 0 4px 24px rgba(44,61,31,0.07), 0 1px 4px rgba(44,61,31,0.05);
-  --shadow-card-hover: 0 16px 48px rgba(44,61,31,0.14), 0 4px 12px rgba(44,61,31,0.09);
-  --shadow-glow-green: 0 0 0 2px #C5E47D, 0 8px 32px rgba(44,61,31,0.2);
+  --shadow-card: 0 4px 24px rgba(0,48,16,0.07), 0 1px 4px rgba(0,48,16,0.05);
+  --shadow-card-hover: 0 16px 48px rgba(0,48,16,0.14), 0 4px 12px rgba(0,48,16,0.09);
+  --shadow-glow-green: 0 0 0 2px #B7D968, 0 8px 32px rgba(0,48,16,0.2);
 }
 
 /* ── Dark mode tokens ─────────────────────────────────────── */
 :root {
-  --page-bg:        #faf9f6;
-  --page-bg-alt:    #f5f2eb;
-  --page-bg-sage:   #eef2eb;
-  --page-text:      #1e2a12;
-  --page-text-muted:#2c3d1f;
+  --page-bg:        #F7F1E6;
+  --page-bg-alt:    #F7F1E6;
+  --page-bg-sage:   #F7F1E6;
+  --page-text:      #001D00;
+  --page-text-muted:#003010;
   --card-bg:        #ffffff;
   --card-border:    #dde5d0;
-  --header-bg:      #153C13;
+  --header-bg:      #003010;
   --header-border:  transparent;
   --input-bg:       #ffffff;
   --input-border:   #dde5d0;
@@ -37,11 +35,11 @@
   --page-bg:        #0e1a09;
   --page-bg-alt:    #131f0d;
   --page-bg-sage:   #162211;
-  --page-text:      #e8f0d8;
-  --page-text-muted:#b8cfaa;
+  --page-text:      #F7F1E6;
+  --page-text-muted:#B7D968;
   --card-bg:        #1a2812;
   --card-border:    #2a3d1f;
-  --header-bg:      #153C13;
+  --header-bg:      #003010;
   --header-border:  transparent;
   --input-bg:       #1a2812;
   --input-border:   #2a3d1f;
