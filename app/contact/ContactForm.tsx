@@ -59,7 +59,7 @@ export function ContactForm() {
   if (state === 'success') {
     return (
       <div className="bg-page-sage rounded-xl p-8 text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12 text-[#4a7a28] mx-auto mb-4" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12 text-[#2ab4b8] mx-auto mb-4" aria-hidden="true">
           <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
         </svg>
         <h3 className="text-xl font-bold text-page mb-2">Message Sent!</h3>
@@ -81,7 +81,7 @@ export function ContactForm() {
             name="firstName"
             required
             autoComplete="given-name"
-            className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
+            className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2ab4b8] focus:border-transparent"
           />
         </div>
         <div>
@@ -94,7 +94,7 @@ export function ContactForm() {
             name="lastName"
             required
             autoComplete="family-name"
-            className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
+            className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2ab4b8] focus:border-transparent"
           />
         </div>
       </div>
@@ -109,7 +109,7 @@ export function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2ab4b8] focus:border-transparent"
         />
       </div>
 
@@ -122,7 +122,7 @@ export function ContactForm() {
           id="phone"
           name="phone"
           autoComplete="tel"
-          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2ab4b8] focus:border-transparent"
         />
       </div>
 
@@ -134,7 +134,7 @@ export function ContactForm() {
           id="treatment"
           name="treatment"
           required
-          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2ab4b8] focus:border-transparent"
         >
           <option value="">Select a treatment...</option>
           {TREATMENTS.map((t) => (
@@ -153,7 +153,7 @@ export function ContactForm() {
           required
           rows={5}
           placeholder="Tell us a bit about what you're looking for, any injuries or conditions, and any questions you have..."
-          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4a7a28] focus:border-transparent resize-y"
+          className="w-full input-surface border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2ab4b8] focus:border-transparent resize-y"
         />
       </div>
 
@@ -166,7 +166,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={state === 'submitting'}
-        className="w-full inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-semibold px-6 py-4 text-lg hover:bg-[#2c3d1f] transition-colors min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-semibold px-6 py-4 text-lg hover:bg-[#2a5a56] transition-colors min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {state === 'submitting' ? (
           <>
@@ -183,7 +183,7 @@ export function ContactForm() {
 
       <p className="text-xs text-page-muted opacity-80">
         By submitting this form, you agree to our{' '}
-        <a href="/privacy-policy" className="text-[#4a7a28] hover:underline">Privacy Policy</a>.
+        <a href="/privacy-policy" className="text-[#2ab4b8] hover:underline">Privacy Policy</a>.
         Your information will only be used to respond to your enquiry.
       </p>
     </form>

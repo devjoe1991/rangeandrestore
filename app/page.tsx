@@ -10,7 +10,7 @@ import { faqs } from '@/app/faqs/data'
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage Archway London',
   description:
-    'Clinical massage and soft tissue therapy in Archway, North London. Five-star rated. Assessment-led treatment for pain relief, injury recovery and mobility. Book today.',
+    'Sports Massage & Soft Tissue Remedial Therapy in Archway, North London. BTEC Level 5 qualified. Five-star rated. Assessment-led treatment for pain relief, injury recovery and mobility. Book today.',
   path: '/',
 })
 
@@ -21,6 +21,7 @@ const services = [
     solution: 'Targeted deep tissue therapy releases tension, restores movement and gets you back to full training faster.',
     href: '/services/sports-deep-tissue-massage',
     bookingHref: BOOKING_URLS.sportsDeepTissue,
+    badge: 'Sports Specialist',
   },
   {
     title: 'Advanced Clinical Massage',
@@ -113,16 +114,16 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
 
       {/* ── OFFER BANNER ─────────────────────────────────────── */}
-      <div style={{ backgroundColor: '#E7E780' }} className="py-3 px-4">
+      <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
-          <span className="text-[#003010] text-sm font-bold leading-snug">
-            New client offer — mention this site and get <span className="text-[#003010]">10% off your first session</span>
+          <span className="text-[#1a2330] text-sm font-bold leading-snug">
+            New client offer — mention this site and get <span className="text-[#1a3d3a]">10% off your first session</span>
           </span>
           <a
             href={BOOKING_URLS.general}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 text-xs font-black bg-[#003010] text-white px-3 py-1.5 rounded-full hover:bg-[#001D00] transition-colors whitespace-nowrap"
+            className="flex-shrink-0 text-xs font-black bg-[#1a3d3a] text-white px-3 py-1.5 rounded-full hover:bg-[#122a28] transition-colors whitespace-nowrap"
           >
             Book now
           </a>
@@ -139,17 +140,30 @@ export default function HomePage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#003010]/70" />
+        <div className="absolute inset-0 bg-[#1a3d3a]/60" />
 
         <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-12 sm:pt-24 sm:pb-16" style={{ minHeight: '460px' }}>
-          
+
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight mb-4 max-w-3xl uppercase mt-24 sm:mt-32">
             Move Better.<br />Feel Better.<br />Live Stronger
           </h1>
 
-          <p className="text-white/80 text-base sm:text-lg mb-7 max-w-xl leading-relaxed">
-            Clinical massage in Archway, North London. Led by Carlos Bonvicine, certified MLD Practitioner.
+          <p className="text-white/90 text-base sm:text-lg mb-5 max-w-xl leading-relaxed">
+            Sports Massage &amp; Soft Tissue Remedial Therapy in Archway, North London.<br />
+            Led by Carlos Bonvicine, BTEC Level 5 qualified therapist.
           </p>
+
+          {/* Credential badges */}
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
+            {['BTEC Level 5', 'Sports Massage', 'Fully Insured', 'Certified MLD'].map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex items-center gap-1 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-[#2ab4b8]/60"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
 
           <div className="flex flex-row gap-3 justify-center flex-wrap mb-6">
             <BookingButton label="Book Your Session" />
@@ -170,10 +184,10 @@ export default function HomePage() {
       </section>
 
       {/* ── 2. BUNDLE PRICING ────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#003010' }} aria-labelledby="bundles-heading">
+      <section className="section" style={{ backgroundColor: '#1a3d3a' }} aria-labelledby="bundles-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <span className="eyebrow block mb-2">Better Value</span>
+            <span className="eyebrow block mb-2" style={{ color: '#7dd94a', borderBottomColor: '#7dd94a' }}>Better Value</span>
             <h2 id="bundles-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Invest in your long-term wellbeing
             </h2>
@@ -186,29 +200,29 @@ export default function HomePage() {
             {bundles.map((b) => (
               <div key={b.label}
                 className={`rounded-2xl p-5 text-center relative flex flex-col card-lift border-2 ${
-                  b.popular ? 'bg-[#B7D968] border-white' : 'bg-white border-white'
+                  b.popular ? 'bg-[#7dd94a] border-white' : 'bg-white border-white'
                 }`}>
                 {b.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#001D00] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#122a28] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
                     Best Value
                   </span>
                 )}
-                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#003010]/80' : 'text-[#003010]/60'}`}>
+                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#1a3d3a]/80' : 'text-[#1a3d3a]/60'}`}>
                   {b.label}
                 </p>
-                <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-[#001D00]' : 'text-[#003010]'}`}>
+                <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
                   {b.price}
                 </p>
-                <p className={`text-xs font-bold mt-0.5 ${b.popular ? 'text-[#003010]/90' : 'text-[#003010]/80'}`}>
+                <p className={`text-xs font-bold mt-0.5 ${b.popular ? 'text-[#1a3d3a]/90' : 'text-[#1a3d3a]/80'}`}>
                   {b.perSession}
                 </p>
-                <p className={`text-xs font-semibold mt-1 mb-4 ${b.popular ? 'text-[#003010]/70' : 'text-[#003010]/50'}`}>
+                <p className={`text-xs font-semibold mt-1 mb-4 ${b.popular ? 'text-[#1a3d3a]/70' : 'text-[#1a3d3a]/50'}`}>
                   Valid {b.valid}
                 </p>
                 <Link
                   href="/services/massage-bundles"
                   className={`mt-auto text-xs font-bold py-2 px-3 rounded-full transition-all ${
-                    b.popular ? 'bg-[#001D00] text-white hover:bg-white hover:text-[#001D00]' : 'bg-[#003010]/10 text-[#003010] hover:bg-[#003010] hover:text-white'
+                    b.popular ? 'bg-[#122a28] text-white hover:bg-white hover:text-[#122a28]' : 'bg-[#1a3d3a]/10 text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white'
                   }`}
                 >
                   View details
@@ -223,22 +237,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      
+
       {/* ── 2.5 PROMO BLOCK ───────────────────────────────────── */}
-      <section className="py-8" style={{ backgroundColor: '#E7E780' }}>
+      <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#001D00] tracking-tight mb-1">Give the gift of movement</h2>
-            <p className="text-[#003010] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
+            <h2 className="text-2xl font-black text-[#1a2330] tracking-tight mb-1">Give the gift of movement</h2>
+            <p className="text-[#1a3d3a] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
           </div>
-          <Link href="/gift-cards" className="btn whitespace-nowrap bg-[#003010] text-[#B7D968] hover:bg-[#001D00] shadow-sm">
+          <Link href="/gift-cards" className="btn whitespace-nowrap bg-[#1a3d3a] text-[#7dd94a] hover:bg-[#122a28] shadow-sm">
             Buy a Gift Card
           </Link>
         </div>
       </section>
 
       {/* ── 3. SERVICES ──────────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F7F1E6' }} aria-label="Treatments">
+      <section className="section bg-page" aria-label="Treatments">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
             {services.map((s) => <ServiceCard key={s.href} s={s} />)}
@@ -250,28 +264,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      
+
       {/* ── 5. GOOGLE REVIEWS ────────────────────────────────── */}
       <GoogleReviews />
 
       {/* ── 3.5 WHY CHOOSE RANGE & RESTORE ─────────────────────── */}
-      <section className="section pb-8" style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center text-[#001D00]">
-          <h2 className="text-3xl font-extrabold tracking-tight mb-8">Why Choose Range & Restore?</h2>
+      <section className="section pb-8 bg-page-sage">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center text-page">
+          <h2 className="text-3xl font-extrabold tracking-tight mb-8">Why Choose Range &amp; Restore?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             {[
-              'Fully personalised to your needs and goals',
+              'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
               'Advanced soft tissue and remedial techniques',
-              'Certified Manual Lymphatic Drainage (MLD)',
+              'Certified Full Body Manual Lymphatic Drainage (MLD)',
               'Aftercare advice included in every session',
               'Based at 130 Junction Road, Archway N19 5LB',
               '5-Star Rated on Google Reviews'
             ].map((item) => (
-              <div key={item} className="flex items-start gap-4 bg-white p-5 rounded-xl border-2 border-[#dde5d0] card-lift">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="text-[#B7D968] flex-shrink-0" aria-hidden="true">
+              <div key={item} className="flex items-start gap-4 bg-card p-5 rounded-xl border-2 border-page card-lift">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0" style={{ color: '#2ab4b8' }} aria-hidden="true">
                   <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm font-bold text-[#003010] leading-snug">{item}</span>
+                <span className="text-sm font-bold text-page leading-snug">{item}</span>
               </div>
             ))}
           </div>
@@ -279,38 +293,38 @@ export default function HomePage() {
       </section>
 
       {/* ── 4. ABOUT CARLOS ──────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F7F1E6' }} aria-labelledby="about-heading">
+      <section className="section bg-page" aria-labelledby="about-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
             <div>
-              <span className="eyebrow block mb-2" style={{ color: '#003010', borderBottomColor: '#B7D968' }}>About the Practice</span>
-              <h2 id="about-heading" className="text-2xl sm:text-3xl font-extrabold text-[#001D00] tracking-tight mb-5">
+              <span className="eyebrow block mb-2">About the Practice</span>
+              <h2 id="about-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-5">
                 Treatment that starts with listening
               </h2>
-              <p className="text-[#003010]/80 mb-6 font-medium">
+              <p className="text-page-muted mb-6 font-medium">
                 Every session at Range and Restore begins with a proper assessment. Carlos takes the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
               </p>
-              
-              <Link href="/about" className="btn bg-[#003010] text-[#B7D968] hover:bg-[#001D00] text-sm shadow-sm">Meet Carlos →</Link>
+
+              <Link href="/about" className="btn bg-[#1a3d3a] text-[#7dd94a] hover:bg-[#2a7a3a] text-sm shadow-sm">Meet Carlos →</Link>
             </div>
 
             {/* Carlos card */}
-            <div className="bg-[#003010] text-white rounded-3xl p-8 flex flex-col gap-5">
+            <div className="bg-[#1a3d3a] text-white rounded-3xl p-8 flex flex-col gap-5">
               <div>
                 <p className="text-3xl font-extrabold tracking-tight leading-none mb-1">Carlos Bonvicine</p>
-                <p className="text-[#B7D968]/80 text-sm font-semibold">Soft Tissue & Clinical Massage Therapist</p>
-                <p className="text-[#B7D968]/80 text-sm font-semibold">Certified MLD Practitioner</p>
+                <p className="text-[#7dd94a]/90 text-sm font-semibold">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
+                <p className="text-[#7dd94a]/80 text-xs font-semibold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
               </div>
               <p className="text-white/80 text-sm leading-relaxed">
                 &ldquo;My goal is simple. Help you feel better and move better, using evidence-based soft tissue therapy tailored exactly to you.&rdquo;
               </p>
-              <div className="border-t border-[#B7D968]/20 pt-4">
-                <p className="text-xs text-[#B7D968] uppercase tracking-widest font-extrabold">Based at</p>
+              <div className="border-t border-[#7dd94a]/20 pt-4">
+                <p className="text-xs text-[#2ab4b8] uppercase tracking-widest font-extrabold">Based at</p>
                 <p className="text-white/90 text-sm mt-1 font-medium">130 Junction Road, Archway<br />London N19 5LB</p>
                 <p className="text-sm mt-2">
                   <a href={`tel:${BUSINESS.phoneTel}`}
-                    className="text-[#B7D968] hover:text-white transition-colors font-semibold inline-flex items-center gap-1.5 min-h-[44px]">
+                    className="text-[#7dd94a] hover:text-white transition-colors font-semibold inline-flex items-center gap-1.5 min-h-[44px]">
                     <PhoneIcon /> {BUSINESS.phone}
                   </a>
                 </p>
@@ -322,16 +336,16 @@ export default function HomePage() {
       </section>
 
       {/* ── 6. BLOG / WELLNESS HUB ───────────────────────────── */}
-      <section className="section bg-[#003010]" aria-labelledby="blog-heading">
+      <section className="section bg-[#1a3d3a]" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-7 gap-4">
             <div>
-              <span className="eyebrow block mb-1.5" style={{ color: '#B7D968', borderBottomColor: '#003010' }}>Wellness Hub</span>
+              <span className="eyebrow block mb-1.5" style={{ color: '#7dd94a', borderBottomColor: '#7dd94a' }}>Wellness Hub</span>
               <h2 id="blog-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                 Expert advice &amp; insights
               </h2>
             </div>
-            <Link href="/blog" className="text-[#B7D968] text-sm font-semibold hover:text-white transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
+            <Link href="/blog" className="text-[#7dd94a] text-sm font-semibold hover:text-white transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
               All posts →
             </Link>
           </div>
@@ -351,7 +365,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-6 sm:hidden">
-            <Link href="/blog" className="text-[#B7D968] text-sm font-semibold min-h-[44px] inline-flex items-center">
+            <Link href="/blog" className="text-[#7dd94a] text-sm font-semibold min-h-[44px] inline-flex items-center">
               View all posts →
             </Link>
           </div>
@@ -359,23 +373,23 @@ export default function HomePage() {
       </section>
 
       {/* ── 7. FAQs PREVIEW ──────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F7F1E6' }} aria-labelledby="faq-preview-heading">
+      <section className="section bg-page" aria-labelledby="faq-preview-heading">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 id="faq-preview-heading" className="text-2xl sm:text-3xl font-extrabold text-[#003010] tracking-tight mb-6">
+          <h2 id="faq-preview-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-6">
             FAQs
           </h2>
 
-          <div className="rounded-2xl border-2 border-[#003010] overflow-hidden bg-white">
+          <div className="rounded-2xl border-2 border-[#1a3d3a] overflow-hidden bg-card">
             {previewFaqs.map((faq, i) => (
-              <details key={faq.q} className={`group ${i < previewFaqs.length - 1 ? 'border-b border-[#003010]/15' : ''}`}>
-                <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-[#003010] text-base leading-snug hover:bg-[#F7F1E6] transition-colors min-h-[56px]">
+              <details key={faq.q} className={`group ${i < previewFaqs.length - 1 ? 'border-b border-[#1a3d3a]/15' : ''}`}>
+                <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-page text-base leading-snug hover:bg-page-sage transition-colors min-h-[56px]">
                   {faq.q}
-                  <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010]">
+                  <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#1a3d3a]/10 flex items-center justify-center text-[#1a3d3a]">
                     <span className="absolute w-3 h-[2px] bg-current rounded-sm"></span>
                     <span className="absolute w-[2px] h-3 bg-current rounded-sm transition-transform duration-300 group-open:rotate-90"></span>
                   </span>
                 </summary>
-                <div className="px-5 pb-5 text-[#003010]/70 leading-relaxed text-sm">
+                <div className="px-5 pb-5 text-page-muted leading-relaxed text-sm">
                   {faq.a}
                 </div>
               </details>
@@ -389,20 +403,20 @@ export default function HomePage() {
       </section>
 
       {/* ── 8. CTA BAR ───────────────────────────────────────── */}
-      <section className="section-sm bg-[#B7D968]" aria-label="Book a session">
+      <section className="section-sm bg-[#7dd94a]" aria-label="Book a session">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-2xl sm:text-4xl font-black text-[#001D00] tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-[#1a2330] tracking-tight mb-3">
             Ready to feel better?
           </h2>
-          <p className="text-[#003010]/80 mb-7 text-base font-semibold">
+          <p className="text-[#1a3d3a]/80 mb-7 text-base font-semibold">
             Back pain, injury or tension holding you back? Book online or call Carlos directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-[#001D00] text-white hover:bg-white hover:text-[#001D00] border-transparent" />
+            <BookingButton label="Book Your Session" className="bg-[#1a2330] text-white hover:bg-white hover:text-[#1a2330] border-transparent" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-[#003010]/10 border border-[#003010]/20 hover:bg-[#003010]/20 transition-colors text-[#001D00]"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1a3d3a]/10 border border-[#1a3d3a]/20 hover:bg-[#1a3d3a]/20 transition-colors text-[#1a2330]"
             >
               <PhoneIcon />
             </a>
@@ -419,30 +433,37 @@ export default function HomePage() {
 function ServiceCard({ s }: { s: typeof services[0] }) {
   return (
     <div
-      className="group card-lift rounded-[20px] overflow-hidden flex flex-col cursor-pointer bg-white shadow-sm h-full"
-      style={{ border: '2px solid #003010' }}
+      className="group card-lift rounded-[20px] overflow-hidden flex flex-col cursor-pointer bg-card shadow-sm h-full"
+      style={{ border: '2px solid #1a3d3a' }}
     >
       {/* Top accent bar */}
-      <div style={{ height: '4px', background: '#003010', width: '100%' }} />
+      <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
 
       <div className="p-4 sm:p-5 flex flex-col flex-1">
-        <h3 className="font-black text-[#003010] text-sm sm:text-base leading-tight mb-2 tracking-tight">{s.title}</h3>
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <h3 className="font-black text-page text-sm sm:text-base leading-tight tracking-tight">{s.title}</h3>
+          {s.badge && (
+            <span className="flex-shrink-0 text-[0.55rem] font-black uppercase tracking-widest px-2 py-0.5 rounded-full bg-[#2ab4b8] text-white whitespace-nowrap">
+              {s.badge}
+            </span>
+          )}
+        </div>
 
         {/* Problem pill */}
         <div
           className="rounded-xl px-3 py-2 mb-3 border"
-          style={{ background: 'rgba(44,61,31,0.05)', borderColor: 'rgba(44,61,31,0.15)' }}
+          style={{ background: 'rgba(42,180,184,0.06)', borderColor: 'rgba(42,180,184,0.2)' }}
         >
-          <p className="text-[#003010] text-xs font-bold leading-snug line-clamp-2">{s.problem}</p>
+          <p className="text-page text-xs font-bold leading-snug line-clamp-2">{s.problem}</p>
         </div>
 
-        <p className="text-[#003010]/60 text-xs leading-relaxed flex-1 mb-4">{s.solution}</p>
+        <p className="text-page-muted text-xs leading-relaxed flex-1 mb-4">{s.solution}</p>
 
         {/* CTA row */}
-        <div className="flex items-center gap-2 pt-3 border-t border-[#003010]/10">
+        <div className="flex items-center gap-2 pt-3 border-t border-[#1a3d3a]/10">
           <Link
             href={s.href}
-            className="text-[#003010] text-xs font-bold hover:text-[#001D00] transition-colors min-h-[44px] flex items-center flex-1 underline underline-offset-2"
+            className="text-page text-xs font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center flex-1 underline underline-offset-2"
           >
             Learn more
           </Link>
@@ -450,7 +471,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
             href={s.bookingHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="book-now-btn bg-[#003010] text-white text-xs font-black px-3 sm:px-4 py-2 rounded-full min-h-[40px] flex items-center whitespace-nowrap"
+            className="book-now-btn bg-[#1a3d3a] text-white text-xs font-black px-3 sm:px-4 py-2 rounded-full min-h-[40px] flex items-center whitespace-nowrap"
           >
             Book now
           </a>
@@ -463,7 +484,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
 function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean; mobile?: boolean }) {
   const width = mobile ? 'w-[280px]' : 'w-full'
   return (
-    <article className={`${width} group rounded-[20px] overflow-hidden flex flex-col card-lift ${dark ? 'bg-[#1f2d15]' : 'bg-card border border-page'}`}>
+    <article className={`${width} group rounded-[20px] overflow-hidden flex flex-col card-lift ${dark ? 'bg-[#1e3d22]' : 'bg-card border border-page'}`}>
       <div className="relative w-full h-48 flex-shrink-0 overflow-hidden">
         <Image
           src={p.img}
@@ -472,9 +493,9 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
           className="object-cover group-hover:scale-105 transition-transform duration-700"
           sizes="(max-width: 640px) 280px, (max-width: 1024px) 50vw, 25vw"
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(44,61,31,0.65) 0%, transparent 55%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(26,74,32,0.65) 0%, transparent 55%)' }} />
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-          <span className="bg-[#003010] text-white text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
+          <span className="bg-[#1a3d3a] text-white text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
             {p.category}
           </span>
           <span className="bg-black/40 backdrop-blur-sm text-white/80 text-[0.6rem] font-semibold px-2.5 py-1 rounded-full">
@@ -482,22 +503,22 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
           </span>
         </div>
         <div className="absolute bottom-3 left-3">
-          <span className="text-[#B7D968]/80 text-[0.65rem] font-semibold">{p.date}</span>
+          <span className="text-[#7dd94a]/80 text-[0.65rem] font-semibold">{p.date}</span>
         </div>
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <h3 className={`font-black text-base leading-snug flex-1 mb-4 tracking-tight ${dark ? 'text-white' : 'text-[#003010]'}`}>
+        <h3 className={`font-black text-base leading-snug flex-1 mb-4 tracking-tight ${dark ? 'text-white' : 'text-page'}`}>
           <Link
             href={p.href}
-            className={`hover:underline underline-offset-2 decoration-2 ${dark ? 'hover:text-[#B7D968] decoration-[#B7D968]' : 'hover:text-[#003010] decoration-[#003010]'}`}
+            className={`hover:underline underline-offset-2 decoration-2 ${dark ? 'hover:text-[#7dd94a] decoration-[#7dd94a]' : 'hover:text-[#1a3d3a] decoration-[#1a3d3a]'}`}
           >
             {p.title}
           </Link>
         </h3>
         <Link
           href={p.href}
-          className={`text-xs font-black uppercase tracking-wide min-h-[44px] flex items-center gap-2 transition-colors ${dark ? 'text-[#B7D968] hover:text-white' : 'text-[#003010] hover:text-white'}`}
+          className={`text-xs font-black uppercase tracking-wide min-h-[44px] flex items-center gap-2 transition-colors ${dark ? 'text-[#7dd94a] hover:text-white' : 'text-page hover:text-white'}`}
         >
           Read article <span aria-hidden="true">→</span>
         </Link>

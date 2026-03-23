@@ -52,14 +52,14 @@ export default function BlogPage() {
               <div className="p-6">
                 <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
                 <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-[#4a7a28] transition-colors">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-[#2ab4b8] transition-colors">
                     {post.title}
                   </Link>
                 </h2>
                 <p className="text-page-muted mb-4">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-[#4a7a28] font-semibold hover:text-page transition-colors min-h-[44px]"
+                  className="inline-flex items-center text-[#2ab4b8] font-semibold hover:text-page transition-colors min-h-[44px]"
                 >
                   Read more →
                 </Link>

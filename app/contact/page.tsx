@@ -22,7 +22,7 @@ export default function ContactPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#2c3d1f]/70" />
+        <div className="absolute inset-0 bg-[#2a5a56]/70" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Contact Range and Restore – Archway, London N19</h1>
           <p className="mt-4 text-xl text-white/80">Get in touch with Range and Restore</p>
@@ -46,25 +46,25 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-semibold text-page mb-1">Phone</h3>
-                <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] inline-flex items-center">
+                <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.phone}
                 </a>
               </div>
 
               <div>
                 <h3 className="font-semibold text-page mb-1">Email</h3>
-                <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] inline-flex items-center">
+                <a href={`mailto:${BUSINESS.email}`} className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.email}
                 </a>
               </div>
 
               <div>
-                <h3 className="font-semibold text-[#2c3d1f] mb-2">Book Online</h3>
+                <h3 className="font-semibold text-[#2a5a56] mb-2">Book Online</h3>
                 <a
                   href={BOOKING_URLS.general}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-semibold px-6 py-3 hover:bg-[#2c3d1f] transition-colors min-h-[44px]"
+                  className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-semibold px-6 py-3 hover:bg-[#2a5a56] transition-colors min-h-[44px]"
                 >
                   Book Your Session
                 </a>

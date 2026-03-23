@@ -14,11 +14,26 @@ export const metadata: Metadata = {
   robots: { index: false },
 }
 
-// ─── Photos will be populated via Google Places API once API key is added ─────
-// Pass an empty array for now — the GalleryClient will show placeholder slots.
-const images: GalleryImage[] = []
+export const revalidate = 3600 // refresh photos every hour
 
-export default function GalleryPage() {
+async function getPhotos(): Promise<GalleryImage[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'
+    const res = await fetch(`${baseUrl}/api/photos`, { next: { revalidate: 3600 } })
+    const data = await res.json()
+    return (data.photos ?? []).map((p: { src: string }, i: number) => ({
+      src: p.src,
+      alt: `Range and Restore Sports Massage clinic photo ${i + 1} — Archway, North London`,
+      caption: `Range and Restore — photo ${i + 1}`,
+    }))
+  } catch {
+    return []
+  }
+}
+
+export default async function GalleryPage() {
+  const images = await getPhotos()
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}

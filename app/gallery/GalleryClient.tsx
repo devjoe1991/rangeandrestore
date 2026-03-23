@@ -80,9 +80,9 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
             <button
               key={i}
               onClick={() => setSelected(i)}
-              className={`relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4a7a28] transition-all ${
+              className={`relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2ab4b8] transition-all ${
                 selected === i
-                  ? 'ring-2 ring-[#4a7a28] ring-offset-2 dark:ring-offset-[#0e1a09] opacity-100'
+                  ? 'ring-2 ring-[#2ab4b8] ring-offset-2 dark:ring-offset-[#0e1a09] opacity-100'
                   : 'opacity-70 hover:opacity-100'
               }`}
               aria-label={`View: ${img.caption}`}
@@ -121,14 +121,14 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
           <div className="flex gap-3 mt-3 justify-end">
             <button
               onClick={() => setSelected((s) => (s === 0 ? images.length - 1 : s - 1))}
-              className="w-10 h-10 rounded-full bg-[#2c3d1f] text-white flex items-center justify-center hover:bg-[#4a7a28] transition-colors"
+              className="w-10 h-10 rounded-full bg-[#2a5a56] text-white flex items-center justify-center hover:bg-[#2ab4b8] transition-colors"
               aria-label="Previous photo"
             >
               <ChevronLeft />
             </button>
             <button
               onClick={() => setSelected((s) => (s === images.length - 1 ? 0 : s + 1))}
-              className="w-10 h-10 rounded-full bg-[#2c3d1f] text-white flex items-center justify-center hover:bg-[#4a7a28] transition-colors"
+              className="w-10 h-10 rounded-full bg-[#2a5a56] text-white flex items-center justify-center hover:bg-[#2ab4b8] transition-colors"
               aria-label="Next photo"
             >
               <ChevronRight />
@@ -143,7 +143,7 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
           <button
             key={i}
             onClick={() => openModal(i)}
-            className="relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4a7a28]"
+            className="relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2ab4b8]"
             aria-label={`Open photo: ${img.caption}`}
           >
             <Image

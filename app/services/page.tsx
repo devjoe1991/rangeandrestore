@@ -65,7 +65,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <div className="relative bg-[#2c3d1f] py-16 lg:py-24 overflow-hidden">
+      <div className="relative bg-[#2a5a56] py-16 lg:py-24 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"
           alt="Sports massage treatment in progress"
@@ -92,11 +92,11 @@ export default function ServicesPage() {
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-page mb-2">
-                    <Link href={service.href} className="hover:text-[#4a7a28] transition-colors">
+                    <Link href={service.href} className="hover:text-[#2ab4b8] transition-colors">
                       {service.title}
                     </Link>
                   </h2>
-                  <p className="text-[#4a7a28] font-medium text-sm mb-3">{service.duration}</p>
+                  <p className="text-[#2ab4b8] font-medium text-sm mb-3">{service.duration}</p>
                   <p className="text-page-muted">{service.description}</p>
                 </div>
                 <div className="flex flex-row lg:flex-col gap-3 lg:items-end flex-shrink-0">
@@ -104,13 +104,13 @@ export default function ServicesPage() {
                     href={service.bookingHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-semibold px-6 py-3 hover:bg-[#2c3d1f] transition-colors min-h-[44px] text-sm"
+                    className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-semibold px-6 py-3 hover:bg-[#2a5a56] transition-colors min-h-[44px] text-sm"
                   >
                     Book Now
                   </a>
                   <Link
                     href={service.href}
-                    className="inline-flex items-center justify-center rounded-md border border-[#4a7a28] text-[#4a7a28] font-semibold px-6 py-3 hover:bg-[#4a7a28] hover:text-white transition-colors min-h-[44px] text-sm"
+                    className="inline-flex items-center justify-center rounded-md border border-[#2ab4b8] text-[#2ab4b8] font-semibold px-6 py-3 hover:bg-[#2ab4b8] hover:text-white transition-colors min-h-[44px] text-sm"
                   >
                     Learn More
                   </Link>

@@ -40,7 +40,7 @@ export default function SportsDeepTissuePage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">Sports Massage · Archway London</p>
+          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Sports Massage · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports &amp; Deep Tissue Massage in Archway, London
           </h1>
@@ -68,7 +68,7 @@ export default function SportsDeepTissuePage() {
                 'Stress-related muscular tightness',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -107,7 +107,7 @@ export default function SportsDeepTissuePage() {
                 'Promotes long-term muscular health',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -129,14 +129,14 @@ export default function SportsDeepTissuePage() {
                 'Trigger point therapy',
               ].map((tech) => (
                 <li key={tech} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#4a7a28] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
                   {tech}
                 </li>
               ))}
             </ul>
           </section>
 
-          <section className="bg-[#2c3d1f] text-white rounded-2xl p-8">
+          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Ready to clear that muscle tightness or injury?</h2>
             <p className="text-[#d4ecea] mb-6">
               Assessment-led sports massage in Archway, North London. Whether you are training, recovering, or managing daily muscular stress, this treatment is designed to support your performance and recovery.
@@ -147,10 +147,10 @@ export default function SportsDeepTissuePage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/sports-massage-for-runners" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
                 → How Sports Massage Helps Runners Before and After Races
               </Link>
-              <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Achilles Tendinitis – How Sports Massage Helps Recovery
               </Link>
             </div>

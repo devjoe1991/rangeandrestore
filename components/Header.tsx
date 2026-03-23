@@ -13,7 +13,6 @@ export function Header() {
   useEffect(() => {
     const onScroll = () => {
       const current = window.scrollY
-      // Always show at top; hide when scrolling down, show when scrolling up
       if (current < 60) {
         setVisible(true)
       } else if (current > lastScrollY.current) {
@@ -53,16 +52,16 @@ export function Header() {
             {NAV_ITEMS.map((item) => (
               <div key={item.href} className="relative group">
                 <Link href={item.href}
-                  className="flex items-center gap-0.5 px-3 h-[44px] text-[0.875rem] font-semibold text-white/90 hover:text-[#B7D968] rounded-lg hover:bg-white/5 transition-colors">
+                  className="flex items-center gap-0.5 px-3 h-[44px] text-[0.875rem] font-semibold text-white/90 hover:text-[#7dd94a] rounded-lg hover:bg-white/5 transition-colors">
                   {item.label}
                   {'children' in item && item.children && <ChevronIcon />}
                 </Link>
                 {'children' in item && item.children && (
-                  <div className="absolute top-full left-0 mt-1 bg-[#001D00] rounded-2xl shadow-xl border border-white/10 p-2 min-w-[230px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-[#162d1a] rounded-2xl shadow-xl border border-white/10 p-2 min-w-[230px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
                     {item.children.map((child) => (
                       <Link key={child.href} href={child.href}
                         className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-white/80 hover:bg-white/10 hover:text-white rounded-xl transition-colors font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#B7D968] flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4b8] flex-shrink-0" />
                         {child.label}
                       </Link>
                     ))}
@@ -76,11 +75,11 @@ export function Header() {
           <div className="flex items-center gap-3">
             <SearchTrigger className="text-white/80 hover:text-white" />
             <a href={`tel:${BUSINESS.phoneTel}`}
-              className="flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-[#B7D968] transition-colors min-h-[44px]">
+              className="flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-[#7dd94a] transition-colors min-h-[44px]">
               <PhoneIcon /> {BUSINESS.phone}
             </a>
             <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full font-bold text-sm px-5 min-h-[44px] bg-[#B7D968] text-[#003010] hover:bg-white transition-colors whitespace-nowrap">
+              className="inline-flex items-center justify-center gap-2 rounded-full font-bold text-sm px-5 min-h-[44px] bg-[#7dd94a] text-[#1a3d3a] hover:bg-white transition-colors whitespace-nowrap">
               Book Now
             </a>
           </div>
@@ -96,11 +95,11 @@ export function Header() {
         </Link>
         <SearchTrigger className="text-white/80 w-10 h-10 justify-center flex-shrink-0" />
         <a href={`tel:${BUSINESS.phoneTel}`} aria-label={`Call us on ${BUSINESS.phone}`}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-[#B7D968] text-[#003010] flex-shrink-0">
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-[#7dd94a] text-[#1a3d3a] flex-shrink-0">
           <PhoneIcon />
         </a>
         <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-[#B7D968] text-[#003010] hover:bg-white transition-colors whitespace-nowrap">
+          className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-[#7dd94a] text-[#1a3d3a] hover:bg-white transition-colors whitespace-nowrap">
           Book Now
         </a>
         <button onClick={() => setMobileOpen(!mobileOpen)}
@@ -113,7 +112,7 @@ export function Header() {
 
       {/* ── Mobile drawer ──────────────────────────────────── */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 bg-[#003010] flex flex-col transition-transform duration-300 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`lg:hidden fixed inset-0 z-40 bg-[#1a3d3a] flex flex-col transition-transform duration-300 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
         aria-hidden={!mobileOpen}>
         <div className="h-[60px] flex-shrink-0 border-b border-white/10" />
 
@@ -128,8 +127,8 @@ export function Header() {
                 <div className="pt-1 pb-2 pl-4 flex flex-col gap-0.5">
                   {item.children.map((child) => (
                     <Link key={child.href} href={child.href} onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-2 text-sm text-[#B7D968]/80 hover:text-white py-2.5 transition-colors min-h-[44px] font-medium">
-                      <span className="w-1 h-1 rounded-full bg-[#B7D968]" />
+                      className="flex items-center gap-2 text-sm text-[#7dd94a]/80 hover:text-white py-2.5 transition-colors min-h-[44px] font-medium">
+                      <span className="w-1 h-1 rounded-full bg-[#2ab4b8]" />
                       {child.label}
                     </Link>
                   ))}
@@ -142,7 +141,7 @@ export function Header() {
         <div className="px-6 pb-10 pt-4 border-t border-white/10 flex flex-col gap-3">
           <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="inline-flex items-center justify-center rounded-full font-bold text-base py-4 bg-[#B7D968] text-[#003010] hover:bg-white transition-colors w-full">
+            className="inline-flex items-center justify-center rounded-full font-bold text-base py-4 bg-[#7dd94a] text-[#1a3d3a] hover:bg-white transition-colors w-full">
             Book Your Session
           </a>
           <a href={`tel:${BUSINESS.phoneTel}`}

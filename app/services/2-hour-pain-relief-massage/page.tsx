@@ -40,7 +40,7 @@ export default function TwoHourPainReliefPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">Extended Treatment · Archway London</p>
+          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Extended Treatment · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             2-Hour Pain Relief Massage
           </h1>
@@ -67,7 +67,7 @@ export default function TwoHourPainReliefPage() {
                 'Anyone wanting a full-body reset and a more thorough corrective session',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -95,7 +95,7 @@ export default function TwoHourPainReliefPage() {
                 'More complete recovery support and longer-lasting results than a standard session',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#4a7a28] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -117,14 +117,14 @@ export default function TwoHourPainReliefPage() {
                 'Joint mobilisation and corrective mobility work where appropriate',
               ].map((tech) => (
                 <li key={tech} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#4a7a28] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
                   {tech}
                 </li>
               ))}
             </ul>
           </section>
 
-          <section className="bg-[#2c3d1f] text-white rounded-2xl p-8">
+          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Multiple problem areas? Get the time your body actually needs.</h2>
             <p className="text-[#d4ecea] mb-6">
               If a standard session is not enough to properly address what is going on, this is the right choice. Delivered in Archway, North London. A clear step towards better movement, less pain, and improved function.
@@ -135,10 +135,10 @@ export default function TwoHourPainReliefPage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related services</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/services/advanced-clinical-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Advanced Clinical Massage &amp; Soft Tissue Remedial Therapy
               </Link>
-              <Link href="/services/massage-bundles" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/services/massage-bundles" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Massage Bundle Offers – Save with Multi-Session Packages
               </Link>
             </div>

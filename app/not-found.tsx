@@ -3,7 +3,7 @@ import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#2c3d1f] flex flex-col">
+    <div className="min-h-screen bg-[#2a5a56] flex flex-col">
       {/* Hero */}
       <div className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20">
         <p className="text-[#d4ecea] text-[8rem] sm:text-[12rem] font-black leading-none tracking-tighter opacity-20 select-none">
@@ -33,7 +33,7 @@ export default function NotFound() {
               <Link
                 key={href}
                 href={href}
-                className="flex items-center gap-2.5 bg-[#1f2d15] hover:bg-[#2a9d8f]/15 border border-[#2a9d8f]/25 hover:border-[#d4ecea]/40 rounded-xl px-4 py-3 text-sm text-[#d4ecea]/80 hover:text-white transition-all min-h-[44px]"
+                className="flex items-center gap-2.5 bg-[#1a3532] hover:bg-[#2a9d8f]/15 border border-[#2a9d8f]/25 hover:border-[#d4ecea]/40 rounded-xl px-4 py-3 text-sm text-[#d4ecea]/80 hover:text-white transition-all min-h-[44px]"
               >
                 <span className="text-[#2a9d8f] text-xs flex-shrink-0">→</span>
                 {label}

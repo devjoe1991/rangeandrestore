@@ -32,7 +32,7 @@ export default function GiftCardsPage() {
             href={BOOKING_URLS.giftCards}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-bold px-10 py-4 text-xl hover:bg-[#2c3d1f] transition-colors min-h-[44px]"
+            className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-bold px-10 py-4 text-xl hover:bg-[#2a5a56] transition-colors min-h-[44px]"
           >
             Purchase a Gift Card
           </a>
@@ -43,19 +43,19 @@ export default function GiftCardsPage() {
           <h3 className="text-xl font-bold text-page mb-4">Gift Card Terms</h3>
           <ul className="space-y-2 text-page-muted">
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Gift cards are valid for 12 months from the purchase date.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Gift cards are non-refundable.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Redeemable against any treatment at Range and Restore Sports Massage.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Cannot be exchanged for cash.
             </li>
           </ul>

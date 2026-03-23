@@ -39,7 +39,7 @@ export default function SportsMassageForRunnersPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#4a7a28] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage Helps Runners Before and After Races
           </h1>
@@ -126,7 +126,7 @@ export default function SportsMassageForRunnersPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#2c3d1f] text-white rounded-2xl p-8">
+        <div className="mt-12 bg-[#2a5a56] text-white rounded-2xl p-8">
           <h2 className="text-2xl font-bold mb-4">Book your sports massage</h2>
           <p className="text-[#d4ecea] mb-6">
             Training for an event? Book your sports massage session at Range and Restore in Archway, North London and give your body the support it needs.
@@ -136,13 +136,13 @@ export default function SportsMassageForRunnersPage() {
 
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#4a7a28] hover:text-page font-medium min-h-[44px] flex items-center">
+          <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
             → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
           </Link>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#4a7a28] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

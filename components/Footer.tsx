@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BUSINESS, BOOKING_URLS } from '@/lib/constants'
+import { BUSINESS, BOOKING_URLS, RELIABLE_SCAN_URL } from '@/lib/constants'
 
 export function Footer() {
   return (
-    <footer className="bg-[#001D00] text-white">
+    <footer className="bg-[#122a28] text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
 
@@ -20,22 +20,33 @@ export function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </div>
-            <address className="not-italic text-sm space-y-2 text-[#B7D968]/90">
-              <p className="text-[#B7D968]/60 text-xs font-semibold uppercase tracking-widest mb-3">
+            <address className="not-italic text-sm space-y-2 text-[#7dd94a]/90">
+              <p className="text-[#7dd94a]/60 text-xs font-semibold uppercase tracking-widest mb-3">
                 Sports Massage · Archway · London
               </p>
               <p>{BUSINESS.address}</p>
+              <p className="text-[#7dd94a]/70 text-xs leading-relaxed">
+                Based alongside{' '}
+                <a
+                  href={RELIABLE_SCAN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2ab4b8] hover:text-white underline decoration-[#2ab4b8]/40 hover:decoration-white transition-colors font-semibold"
+                >
+                  Reliable Scan
+                </a>
+                {' '}— private diagnostic ultrasound clinic
+              </p>
               <p>
                 <a href={`tel:${BUSINESS.phoneTel}`}
                   className="hover:text-white transition-colors inline-flex items-center gap-1.5 min-h-[44px]">
                   <PhoneIcon /> {BUSINESS.phone}
                 </a>
               </p>
-
             </address>
             <div className="mt-5">
               <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-                className="btn bg-[#B7D968] text-[#001D00] hover:bg-white text-sm px-5">
+                className="btn bg-[#7dd94a] text-[#1a3d3a] hover:bg-white text-sm px-5">
                 Book Now
               </a>
             </div>
@@ -46,7 +57,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Reviews"
-                className="text-[#B7D968]/70 hover:text-white transition-colors"
+                className="text-[#7dd94a]/70 hover:text-white transition-colors"
               >
                 <GoogleIcon />
               </a>
@@ -55,7 +66,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-[#B7D968]/70 hover:text-white transition-colors"
+                className="text-[#7dd94a]/70 hover:text-white transition-colors"
               >
                 <FacebookIcon />
               </a>
@@ -64,14 +75,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-[#B7D968]/70 hover:text-white transition-colors"
+                className="text-[#7dd94a]/70 hover:text-white transition-colors"
               >
                 <InstagramIcon />
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
                 aria-label="Email us"
-                className="text-[#B7D968]/70 hover:text-white transition-colors"
+                className="text-[#7dd94a]/70 hover:text-white transition-colors"
               >
                 <EmailIcon />
               </a>
@@ -81,7 +92,7 @@ export function Footer() {
           {/* Treatments */}
           <div>
             <p className="text-white font-bold text-sm mb-4 tracking-tight">I need help with...</p>
-            <ul className="space-y-1 text-sm text-[#B7D968]/90">
+            <ul className="space-y-1 text-sm text-[#7dd94a]/90">
               {[
                 ['Sports injury or muscle pain',        '/services/sports-deep-tissue-massage'],
                 ['Chronic pain or sciatica',            '/services/advanced-clinical-massage'],
@@ -93,20 +104,20 @@ export function Footer() {
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link href={href} className="hover:text-white transition-colors min-h-[36px] flex items-center gap-2">
-                    <span className="text-[#B7D968] text-xs">→</span>
+                    <span className="text-[#2ab4b8] text-xs">→</span>
                     {label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-5 pt-4 border-t border-[#B7D968]/25">
+            <div className="mt-5 pt-4 border-t border-[#7dd94a]/25">
               <a
                 href={BOOKING_URLS.general}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#B7D968] hover:text-white transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#7dd94a] hover:text-white transition-colors min-h-[44px]"
               >
-                <span className="text-[#B7D968] text-xs">→</span>
+                <span className="text-[#2ab4b8] text-xs">→</span>
                 Book your session
               </a>
             </div>
@@ -115,7 +126,7 @@ export function Footer() {
           {/* Quick links */}
           <div>
             <p className="text-white font-bold text-sm mb-4 tracking-tight">Quick Links</p>
-            <ul className="space-y-1 text-sm text-[#B7D968]/90">
+            <ul className="space-y-1 text-sm text-[#7dd94a]/90">
               {[
                 ['About Carlos',           '/about'],
                 ['Gallery',                '/gallery'],
@@ -136,7 +147,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#B7D968]/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#B7D968]/60">
+        <div className="mt-10 pt-6 border-t border-[#7dd94a]/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#7dd94a]/60">
           <p>© {new Date().getFullYear()} Range and Restore Sports Massage. All rights reserved.</p>
           <div className="flex gap-5">
             <Link href="/privacy-policy"      className="hover:text-white transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>

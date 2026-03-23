@@ -75,7 +75,7 @@ export default function MassageBundlesPage() {
                     <span className="inline-block bg-page-sage text-page text-sm font-semibold px-3 py-1 rounded-full">{bundle.saving}</span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-4">
-                    <span className="text-4xl font-bold text-[#4a7a28]">{bundle.price}</span>
+                    <span className="text-4xl font-bold text-[#2ab4b8]">{bundle.price}</span>
                     <span className="text-page-muted opacity-80 text-sm">{bundle.validity}</span>
                   </div>
                   <p className="text-page-muted mb-3">{bundle.description}</p>
@@ -86,7 +86,7 @@ export default function MassageBundlesPage() {
                     href={bundle.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#4a7a28] text-white font-semibold px-8 py-4 hover:bg-[#2c3d1f] transition-colors min-h-[44px] text-base whitespace-nowrap"
+                    className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-semibold px-8 py-4 hover:bg-[#2a5a56] transition-colors min-h-[44px] text-base whitespace-nowrap"
                   >
                     Book This Bundle
                   </a>
@@ -96,7 +96,7 @@ export default function MassageBundlesPage() {
           ))}
         </div>
 
-        <div className="mt-12 bg-[#2c3d1f] text-white rounded-2xl p-8 lg:p-10 text-center">
+        <div className="mt-12 bg-[#2a5a56] text-white rounded-2xl p-8 lg:p-10 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to commit to your health?</h2>
           <p className="text-[#d4ecea] text-lg mb-6 max-w-2xl mx-auto">
             Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.
@@ -116,19 +116,19 @@ export default function MassageBundlesPage() {
           <h3 className="text-lg font-bold text-page mb-3">Bundle Terms</h3>
           <ul className="space-y-2 text-page-muted text-sm">
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Bundles are valid for the specified period from the date of first use.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Sessions are non-transferable and non-refundable once purchased.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Bundles are for personal use only and cannot be shared between clients.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#4a7a28] font-bold mt-0.5">•</span>
+              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
               Sessions must be booked in advance and are subject to availability.
             </li>
           </ul>

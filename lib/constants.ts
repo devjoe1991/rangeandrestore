@@ -1,5 +1,7 @@
 export const BOOKING_BASE = 'https://rangeandrestoresportsmassage.janeapp.co.uk'
 
+export const RELIABLE_SCAN_URL = 'https://reliablescanltd.com/'
+
 export const BOOKING_URLS = {
   general: `${BOOKING_BASE}/#/list`,
   advancedClinical: `${BOOKING_BASE}/#/discipline/1/treatment/1`,
