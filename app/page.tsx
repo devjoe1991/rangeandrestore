@@ -123,7 +123,7 @@ export default function HomePage() {
             href={BOOKING_URLS.general}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 text-xs font-black bg-[#1a3d3a] text-white px-3 py-1.5 rounded-full hover:bg-[#122a28] transition-colors whitespace-nowrap"
+            className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#2ab4b8] transition-all whitespace-nowrap"
           >
             Book now
           </a>
@@ -148,35 +148,28 @@ export default function HomePage() {
             Move Better.<br />Feel Better.<br />Live Stronger
           </h1>
 
-          <p className="text-white/90 text-base sm:text-lg mb-5 max-w-xl leading-relaxed">
-            Sports Massage &amp; Soft Tissue Remedial Therapy in Archway, North London.<br />
-            Led by Carlos Bonvicine, BTEC Level 5 qualified therapist.
+          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-2 max-w-2xl leading-relaxed">
+            Sports Massage <span className="text-[#7dd94a]">&amp;</span> Soft Tissue Remedial Therapy
+          </p>
+          <p className="text-white/90 text-sm sm:text-base mb-6 max-w-xl leading-relaxed font-semibold">
+            Archway, North London.<br />
+            Led by Carlos Bonvicine, <span className="font-black text-white">BTEC Level 5</span> qualified therapist.
           </p>
 
-          {/* Credential badges */}
-          <div className="flex flex-wrap gap-2 justify-center mb-6">
-            {['BTEC Level 5', 'Sports Massage', 'Fully Insured', 'Certified MLD'].map((badge) => (
-              <span
-                key={badge}
-                className="inline-flex items-center gap-1 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-[#2ab4b8]/60"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
+
 
           <div className="flex flex-row gap-3 justify-center flex-wrap mb-6">
             <BookingButton label="Book Your Session" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 border border-white/40 backdrop-blur-sm hover:bg-white/30 transition-colors text-white"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-[#2ab4b8]/60 hover:bg-white/25 hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
           </div>
 
-          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm">
+          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-[#2ab4b8]/60">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
             Archway · North London · N19 5LB
           </span>
@@ -184,14 +177,14 @@ export default function HomePage() {
       </section>
 
       {/* ── 2. BUNDLE PRICING ────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#1a3d3a' }} aria-labelledby="bundles-heading">
+      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="bundles-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <span className="eyebrow block mb-2" style={{ color: '#7dd94a', borderBottomColor: '#7dd94a' }}>Better Value</span>
-            <h2 id="bundles-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <span className="eyebrow block mb-2" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Better Value</span>
+            <h2 id="bundles-heading" className="text-2xl sm:text-3xl font-extrabold text-[#1a2330] tracking-tight">
               Invest in your long-term wellbeing
             </h2>
-            <p className="text-white/80 mt-3 text-sm font-medium max-w-lg mx-auto">
+            <p className="text-[#1a3d3a]/80 mt-3 text-sm font-medium max-w-lg mx-auto">
               Save more and stay consistent. Bundles keep you on track and give your body the ongoing care it needs.
             </p>
           </div>
@@ -245,7 +238,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-black text-[#1a2330] tracking-tight mb-1">Give the gift of movement</h2>
             <p className="text-[#1a3d3a] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
           </div>
-          <Link href="/gift-cards" className="btn whitespace-nowrap bg-[#1a3d3a] text-[#7dd94a] hover:bg-[#122a28] shadow-sm">
+          <Link href="/gift-cards" className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all shadow-sm">
             Buy a Gift Card
           </Link>
         </div>
@@ -306,25 +299,25 @@ export default function HomePage() {
                 Every session at Range and Restore begins with a proper assessment. Carlos takes the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
               </p>
 
-              <Link href="/about" className="btn bg-[#1a3d3a] text-[#7dd94a] hover:bg-[#2a7a3a] text-sm shadow-sm">Meet Carlos →</Link>
+              <Link href="/about" className="btn bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all text-sm shadow-sm">Meet Carlos →</Link>
             </div>
 
             {/* Carlos card */}
-            <div className="bg-[#1a3d3a] text-white rounded-3xl p-8 flex flex-col gap-5">
+            <div className="bg-[#F2EDE4] text-[#1a2330] rounded-3xl p-8 flex flex-col gap-5 border border-[#1a3d3a]/10">
               <div>
-                <p className="text-3xl font-extrabold tracking-tight leading-none mb-1">Carlos Bonvicine</p>
-                <p className="text-[#7dd94a]/90 text-sm font-semibold">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
-                <p className="text-[#7dd94a]/80 text-xs font-semibold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
+                <p className="text-3xl font-extrabold tracking-tight leading-none mb-1 text-[#1a3d3a]">Carlos Bonvicine</p>
+                <p className="text-[#1a3d3a]/90 text-sm font-bold">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
+                <p className="text-[#1a3d3a]/70 text-xs font-bold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
               </div>
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium">
                 &ldquo;My goal is simple. Help you feel better and move better, using evidence-based soft tissue therapy tailored exactly to you.&rdquo;
               </p>
-              <div className="border-t border-[#7dd94a]/20 pt-4">
-                <p className="text-xs text-[#2ab4b8] uppercase tracking-widest font-extrabold">Based at</p>
-                <p className="text-white/90 text-sm mt-1 font-medium">130 Junction Road, Archway<br />London N19 5LB</p>
+              <div className="border-t border-[#1a3d3a]/15 pt-4">
+                <p className="text-xs text-[#1a3d3a] uppercase tracking-widest font-extrabold">Based at</p>
+                <p className="text-[#1a2330]/90 text-sm mt-1 font-bold">130 Junction Road, Archway<br />London N19 5LB</p>
                 <p className="text-sm mt-2">
                   <a href={`tel:${BUSINESS.phoneTel}`}
-                    className="text-[#7dd94a] hover:text-white transition-colors font-semibold inline-flex items-center gap-1.5 min-h-[44px]">
+                    className="text-[#1a3d3a] hover:text-[#2ab4b8] transition-colors font-bold inline-flex items-center gap-1.5 min-h-[44px]">
                     <PhoneIcon /> {BUSINESS.phone}
                   </a>
                 </p>
@@ -336,16 +329,16 @@ export default function HomePage() {
       </section>
 
       {/* ── 6. BLOG / WELLNESS HUB ───────────────────────────── */}
-      <section className="section bg-[#1a3d3a]" aria-labelledby="blog-heading">
+      <section className="section bg-[#F2EDE4]" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-7 gap-4">
             <div>
-              <span className="eyebrow block mb-1.5" style={{ color: '#7dd94a', borderBottomColor: '#7dd94a' }}>Wellness Hub</span>
-              <h2 id="blog-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              <span className="eyebrow block mb-1.5" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Wellness Hub</span>
+              <h2 id="blog-heading" className="text-2xl sm:text-3xl font-extrabold text-[#1a2330] tracking-tight">
                 Expert advice &amp; insights
               </h2>
             </div>
-            <Link href="/blog" className="text-[#7dd94a] text-sm font-semibold hover:text-white transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
+            <Link href="/blog" className="text-[#1a3d3a] text-sm font-bold hover:text-[#2ab4b8] transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
               All posts →
             </Link>
           </div>
@@ -354,18 +347,18 @@ export default function HomePage() {
           <div className="sm:hidden -mx-4 px-4">
             <div className="swipe-row">
               {blogPosts.map((p) => (
-                <BlogCard key={p.href} p={p} dark mobile />
+                <BlogCard key={p.href} p={p} mobile />
               ))}
             </div>
           </div>
 
           {/* Desktop grid */}
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {blogPosts.map((p) => <BlogCard key={p.href} p={p} dark />)}
+            {blogPosts.map((p) => <BlogCard key={p.href} p={p} />)}
           </div>
 
           <div className="mt-6 sm:hidden">
-            <Link href="/blog" className="text-[#7dd94a] text-sm font-semibold min-h-[44px] inline-flex items-center">
+            <Link href="/blog" className="text-[#1a3d3a] text-sm font-bold min-h-[44px] inline-flex items-center">
               View all posts →
             </Link>
           </div>
@@ -412,11 +405,11 @@ export default function HomePage() {
             Back pain, injury or tension holding you back? Book online or call Carlos directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-[#1a2330] text-white hover:bg-white hover:text-[#1a2330] border-transparent" />
+            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1a3d3a]/10 border border-[#1a3d3a]/20 hover:bg-[#1a3d3a]/20 transition-colors text-[#1a2330]"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
@@ -471,7 +464,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
             href={s.bookingHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="book-now-btn bg-[#1a3d3a] text-white text-xs font-black px-3 sm:px-4 py-2 rounded-full min-h-[40px] flex items-center whitespace-nowrap"
+            className="book-now-btn text-xs font-black px-3 sm:px-4 py-2 rounded-full min-h-[40px] flex items-center whitespace-nowrap"
           >
             Book now
           </a>

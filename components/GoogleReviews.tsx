@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 interface Review {
   author_name: string
@@ -18,24 +18,30 @@ function initials(name: string) {
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl p-6" style={{ backgroundColor: '#002008' }}>
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ backgroundColor: '#B7D968', color: '#002008' }}>
+    <div className="flex flex-col gap-3 rounded-2xl p-6 bg-white border border-[#1a3d3a]/10 shadow-sm text-left h-full">
+      <div className="flex items-center gap-3 flex-shrink-0">
+        <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ backgroundColor: '#1a3d3a', color: '#fff' }}>
           {initials(review.author_name)}
         </div>
         <div>
-          <p className="font-semibold text-white text-sm">{review.author_name}</p>
-          <p className="text-white/50 text-xs">{review.relative_time_description}</p>
+          <p className="font-bold text-[#1a2330] text-sm">{review.author_name}</p>
+          <p className="text-[#1a3d3a]/60 text-xs font-semibold">{review.relative_time_description}</p>
         </div>
       </div>
-      <div className="flex gap-0.5">
+      <div className="flex gap-0.5 flex-shrink-0">
         {[1,2,3,4,5].map((i) => (
-          <svg key={i} viewBox="0 0 24 24" fill="#B7D968" className="w-4 h-4">
+          <svg key={i} viewBox="0 0 24 24" fill="#fbbc04" className="w-4 h-4">
             <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
           </svg>
         ))}
       </div>
-      <p className="text-white/80 text-sm leading-relaxed">{review.text}</p>
+      <div 
+        className="overflow-y-auto flex-1 pr-2 pb-1" 
+        style={{ scrollbarWidth: 'thin', scrollbarColor: '#2ab4b8 transparent' }}
+        onMouseDown={(e) => e.stopPropagation()} // Prevent horizontal drag when clicking scrollbar
+      >
+        <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium whitespace-pre-wrap">{review.text}</p>
+      </div>
     </div>
   )
 }
@@ -45,6 +51,29 @@ const PLACE_URL = "https://search.google.com/local/reviews?placeid=ChIJozaeJe4bd
 export function GoogleReviews() {
   const [reviews, setReviews] = useState<Review[]>([])
   const [rating, setRating] = useState<number | null>(null)
+  
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [isDown, setIsDown] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return
+    setIsDown(true)
+    setStartX(e.pageX - scrollRef.current.offsetLeft)
+    setScrollLeft(scrollRef.current.scrollLeft)
+  }
+
+  const handleMouseLeave = () => setIsDown(false)
+  const handleMouseUp = () => setIsDown(false)
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDown || !scrollRef.current) return
+    e.preventDefault() // prevent text selection while dragging
+    const x = e.pageX - scrollRef.current.offsetLeft
+    const walk = (x - startX) * 1.5 // Scroll speed multiplier
+    scrollRef.current.scrollLeft = scrollLeft - walk
+  }
 
   useEffect(() => {
     fetch('/api/reviews')
@@ -57,22 +86,22 @@ export function GoogleReviews() {
   }, [])
 
   return (
-    <section className="section" style={{ backgroundColor: '#003010' }} aria-labelledby="reviews-heading">
+    <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
-        <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#B7D968] tracking-tight uppercase leading-none mb-8">
+        <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#1a2330] tracking-tight uppercase leading-none mb-8">
           Our customers rate us
         </h2>
 
         <div className="flex items-center justify-center gap-2 sm:gap-4 mb-8">
           {[1,2,3,4,5].map((i) => (
-            <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 sm:w-[5.5rem] sm:h-[5.5rem] text-[#B7D968]">
+            <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 sm:w-[5.5rem] sm:h-[5.5rem] text-[#fbbc04]">
               <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-3 sm:gap-5 mb-10 text-white">
+        <div className="flex items-center justify-center gap-3 sm:gap-5 mb-10 text-[#1a2330]">
           <div className="flex items-center gap-2">
             <svg width="34" height="34" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -87,17 +116,26 @@ export function GoogleReviews() {
           </span>
         </div>
 
-        <p className="text-white/90 text-sm sm:text-base font-semibold mb-10">
+        <p className="text-[#1a3d3a]/90 text-sm sm:text-base font-bold mb-10">
           Based on verified reviews on{' '}
-          <a href={PLACE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-bold hover:text-[#B7D968] transition-colors">
+          <a href={PLACE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-black hover:text-[#2ab4b8] transition-colors">
             Google
           </a>.
         </p>
 
         {reviews.length > 0 && (
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div 
+            ref={scrollRef}
+            className={`w-full swipe-row py-2 ${isDown ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
             {reviews.map((review, i) => (
-              <ReviewCard key={i} review={review} />
+              <div key={i} className="w-[85vw] sm:w-[320px] lg:w-[350px] h-[260px] sm:h-[240px] flex-shrink-0">
+                <ReviewCard review={review} />
+              </div>
             ))}
           </div>
         )}

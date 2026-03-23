@@ -114,15 +114,15 @@ export default function AboutPage() {
             </div>
 
             {/* Reliable Scan — compact card */}
-            <div className="bg-[#1a3d3a] text-white rounded-2xl p-8">
-              <h3 className="text-xl font-bold mb-2">Clinical Collaboration</h3>
-              <p className="text-white/80 mb-4 text-sm">
+            <div className="bg-[#F2EDE4] text-[#1a2330] rounded-2xl p-8 border border-[#1a3d3a]/10">
+              <h3 className="text-xl font-bold mb-2 text-[#1a3d3a]">Clinical Collaboration</h3>
+              <p className="text-[#1a3d3a]/80 mb-4 text-sm font-medium">
                 Range and Restore is based at 130 Junction Road, Archway, within the same building as{' '}
                 <a
                   href={RELIABLE_SCAN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#7dd94a] underline decoration-[#7dd94a]/40 hover:text-white hover:decoration-white transition-colors font-semibold"
+                  className="text-[#2a7a3a] underline decoration-[#2a7a3a]/40 hover:text-[#1a3d3a] hover:decoration-[#1a3d3a] transition-colors font-bold"
                 >
                   Reliable Scan
                 </a>
@@ -130,7 +130,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/clinical-collaboration"
-                className="inline-flex items-center gap-2 text-[#7dd94a] font-semibold hover:text-white transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 text-[#2a7a3a] font-bold hover:text-[#1a3d3a] transition-colors min-h-[44px]"
               >
                 Learn about clinical collaboration →
               </Link>

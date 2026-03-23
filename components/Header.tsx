@@ -42,7 +42,7 @@ export function Header() {
 
           {/* Logo — bold text */}
           <Link href="/" aria-label="Range and Restore — Home" className="flex items-center min-h-[44px]">
-            <span className="font-extrabold text-white text-lg tracking-tight leading-none">
+            <span className="font-extrabold text-[#1a2330] text-lg tracking-tight leading-none">
               Range and Restore
             </span>
           </Link>
@@ -52,15 +52,15 @@ export function Header() {
             {NAV_ITEMS.map((item) => (
               <div key={item.href} className="relative group">
                 <Link href={item.href}
-                  className="flex items-center gap-0.5 px-3 h-[44px] text-[0.875rem] font-semibold text-white/90 hover:text-[#7dd94a] rounded-lg hover:bg-white/5 transition-colors">
+                  className="flex items-center gap-0.5 px-3 h-[44px] text-[0.875rem] font-semibold text-[#1a3d3a] hover:text-[#2a7a3a] rounded-lg hover:bg-[#1a3d3a]/5 transition-colors">
                   {item.label}
                   {'children' in item && item.children && <ChevronIcon />}
                 </Link>
                 {'children' in item && item.children && (
-                  <div className="absolute top-full left-0 mt-1 bg-[#162d1a] rounded-2xl shadow-xl border border-white/10 p-2 min-w-[230px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-xl border border-[#1a3d3a]/10 p-2 min-w-[230px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
                     {item.children.map((child) => (
                       <Link key={child.href} href={child.href}
-                        className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-white/80 hover:bg-white/10 hover:text-white rounded-xl transition-colors font-medium">
+                        className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-[#1a3d3a]/80 hover:bg-[#1a3d3a]/5 hover:text-[#1a3d3a] rounded-xl transition-colors font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4b8] flex-shrink-0" />
                         {child.label}
                       </Link>
@@ -73,13 +73,14 @@ export function Header() {
 
           {/* Right: search + phone + CTA */}
           <div className="flex items-center gap-3">
-            <SearchTrigger className="text-white/80 hover:text-white" />
+            <SearchTrigger className="text-[#1a3d3a]/80 hover:text-[#1a3d3a]" />
             <a href={`tel:${BUSINESS.phoneTel}`}
-              className="flex items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-[#7dd94a] transition-colors min-h-[44px]">
-              <PhoneIcon /> {BUSINESS.phone}
+              aria-label={`Call us on ${BUSINESS.phone}`}
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all flex-shrink-0">
+              <PhoneIcon />
             </a>
             <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full font-bold text-sm px-5 min-h-[44px] bg-[#7dd94a] text-[#1a3d3a] hover:bg-white transition-colors whitespace-nowrap">
+              className="inline-flex items-center justify-center gap-2 rounded-full font-bold text-sm px-5 min-h-[44px] bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all whitespace-nowrap">
               Book Now
             </a>
           </div>
@@ -89,21 +90,21 @@ export function Header() {
       {/* ── Mobile sticky bar ──────────────────────────────── */}
       <header className={`lg:hidden ${headerBase} h-[60px] flex items-center px-4 gap-2`}>
         <Link href="/" aria-label="Range and Restore — Home" className="mr-auto flex items-center min-h-[44px]">
-          <span className="font-extrabold text-white text-base tracking-tight leading-none">
+          <span className="font-extrabold text-[#1a2330] text-base tracking-tight leading-none">
             Range and Restore
           </span>
         </Link>
-        <SearchTrigger className="text-white/80 w-10 h-10 justify-center flex-shrink-0" />
+        <SearchTrigger className="text-[#1a3d3a]/80 w-10 h-10 justify-center flex-shrink-0" />
         <a href={`tel:${BUSINESS.phoneTel}`} aria-label={`Call us on ${BUSINESS.phone}`}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-[#7dd94a] text-[#1a3d3a] flex-shrink-0">
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white transition-all flex-shrink-0">
           <PhoneIcon />
         </a>
         <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-[#7dd94a] text-[#1a3d3a] hover:bg-white transition-colors whitespace-nowrap">
+          className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white transition-all whitespace-nowrap">
           Book Now
         </a>
         <button onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-white min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className="text-[#1a2330] min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}>
           {mobileOpen ? <XIcon /> : <MenuIcon />}
@@ -141,7 +142,7 @@ export function Header() {
         <div className="px-6 pb-10 pt-4 border-t border-white/10 flex flex-col gap-3">
           <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="inline-flex items-center justify-center rounded-full font-bold text-base py-4 bg-[#7dd94a] text-[#1a3d3a] hover:bg-white transition-colors w-full">
+            className="inline-flex items-center justify-center rounded-full font-bold text-base py-4 bg-white/10 backdrop-blur-md border border-[#2ab4b8]/60 text-white hover:bg-white hover:text-[#1a2330] transition-colors w-full">
             Book Your Session
           </a>
           <a href={`tel:${BUSINESS.phoneTel}`}
