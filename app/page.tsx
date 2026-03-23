@@ -240,7 +240,7 @@ export default function HomePage() {
       {/* ── 3. SERVICES ──────────────────────────────────────── */}
       <section className="section" style={{ backgroundColor: '#F7F1E6' }} aria-label="Treatments">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
             {services.map((s) => <ServiceCard key={s.href} s={s} />)}
           </div>
 
