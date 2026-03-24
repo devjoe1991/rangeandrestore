@@ -136,9 +136,9 @@ export default function SportsDeepTissuePage() {
             </ul>
           </section>
 
-          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Ready to clear that muscle tightness or injury?</h2>
-            <p className="text-[#d4ecea] mb-6">
+          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to clear that muscle tightness or injury?</h2>
+            <p className="text-[#1a3d3a] font-semibold mb-6">
               Assessment-led sports massage in Archway, North London. Whether you are training, recovering, or managing daily muscular stress, this treatment is designed to support your performance and recovery.
             </p>
             <BookingButton href={BOOKING_URLS.sportsDeepTissue} label="Book Today" />

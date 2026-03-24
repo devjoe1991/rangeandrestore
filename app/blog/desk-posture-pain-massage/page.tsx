@@ -134,10 +134,10 @@ export default function DeskPosturePainMassagePage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#1a3d3a] text-white rounded-2xl p-8">
-          <h2 className="text-2xl font-bold mb-4">Book your Back &amp; Neck Pain MOT</h2>
-          <p className="text-[#d4ecea] mb-6">
-            Ready to address your desk posture pain properly? Book a session with Carlos Bonvicine at Range and Restore in Archway, North London.
+        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to fix your posture?</h2>
+          <p className="text-[#1a3d3a] font-semibold mb-6">
+            Don't let desk work damage your health. Professional postural assessment and remedial massage available in Archway, North London.
           </p>
           <BookingButton label="Book Your Session" />
         </div>

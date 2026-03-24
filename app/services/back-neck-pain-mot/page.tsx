@@ -133,12 +133,12 @@ export default function BackNeckPainMotPage() {
             </ul>
           </section>
 
-          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Persistent back or neck pain?</h2>
-            <p className="text-[#d4ecea] mb-6">
-              Get a proper assessment and targeted treatment at Range and Restore in Archway, North London. Restore comfort, improve mobility, and get to the root of what is causing your pain.
+          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your Back & Neck Pain MOT</h2>
+            <p className="text-[#1a3d3a] font-semibold mb-6">
+              Stop managing the pain and start resolving it. Book your detailed assessment and treatment session in Archway today.
             </p>
-            <BookingButton href={BOOKING_URLS.backNeckMot} label="Book Today" />
+            <BookingButton href={BOOKING_URLS.backNeckMot} label="Book Your MOT" />
           </section>
 
           <div className="border-t pt-8">

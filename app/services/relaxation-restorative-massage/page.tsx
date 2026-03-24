@@ -129,12 +129,12 @@ export default function RelaxationRestorativeMassagePage() {
             </ul>
           </section>
 
-          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Need to switch off and properly recover?</h2>
-            <p className="text-[#d4ecea] mb-6">
-              Each session is delivered in a safe, professional setting in Archway, North London, with pressure adjusted throughout. Give your body and mind the time to unwind, recover, and feel restored.
+          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your relaxation session</h2>
+            <p className="text-[#1a3d3a] font-semibold mb-6">
+              Take the time your body needs to reset and restore. Professional, pressure-adjusted relaxation massage in the heart of Archway.
             </p>
-            <BookingButton href={BOOKING_URLS.relaxation} label="Book Today" />
+            <BookingButton href={BOOKING_URLS.relaxation} label="Book Your Session" />
           </section>
 
           <div className="border-t pt-8">

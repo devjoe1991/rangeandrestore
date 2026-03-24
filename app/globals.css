@@ -146,21 +146,6 @@ input, select, textarea {
 .btn-white { background: #fff; color: #1a3d3a; border-color: #fff; }
 .btn-white:hover { background: #7dd94a; border-color: #7dd94a; color: #1a2330; }
 
-/* Contextual button overrides for dark backgrounds */
-.bg-\[\#1a3d3a\] .btn-primary,
-.bg-teal .btn-primary,
-.bg-\[\#122a28\] .btn-primary {
-  background: #7dd94a;
-  color: #1a2330;
-  border-color: #7dd94a;
-}
-.bg-\[\#1a3d3a\] .btn-primary:hover,
-.bg-teal .btn-primary:hover,
-.bg-\[\#122a28\] .btn-primary:hover {
-  background: #ffffff;
-  color: #1a2330;
-  border-color: #ffffff;
-}
 
 /* ── Swipe carousel (mobile) ──────────────────────────────── */
 .swipe-row {

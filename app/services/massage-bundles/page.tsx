@@ -97,9 +97,9 @@ export default function MassageBundlesPage() {
           ))}
         </div>
 
-        <div className="mt-12 bg-[#1a3d3a] text-white rounded-2xl p-8 lg:p-10 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to commit to your health?</h2>
-          <p className="text-[#d4ecea] text-lg mb-6 max-w-2xl mx-auto">
+        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 lg:p-10 text-center">
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to commit to your health?</h2>
+          <p className="text-[#1a3d3a] text-lg font-semibold mb-6 max-w-2xl mx-auto">
             Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

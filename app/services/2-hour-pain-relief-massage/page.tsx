@@ -124,12 +124,12 @@ export default function TwoHourPainReliefPage() {
             </ul>
           </section>
 
-          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Multiple problem areas? Get the time your body actually needs.</h2>
-            <p className="text-[#d4ecea] mb-6">
-              If a standard session is not enough to properly address what is going on, this is the right choice. Delivered in Archway, North London. A clear step towards better movement, less pain, and improved function.
+          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your 2-hour pain relief session</h2>
+            <p className="text-[#1a3d3a] font-semibold mb-6">
+              When you need more than a standard session to address multiple issues or deeply restore your body. Assessment-led, comprehensive care in Archway today.
             </p>
-            <BookingButton href={BOOKING_URLS.twoHourRelief} label="Book Today" />
+            <BookingButton href={BOOKING_URLS.twoHourRelief} label="Book 2-Hour Session" />
           </section>
 
           <div className="border-t pt-8">

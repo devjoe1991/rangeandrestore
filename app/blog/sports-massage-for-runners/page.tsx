@@ -126,10 +126,10 @@ export default function SportsMassageForRunnersPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#1a3d3a] text-white rounded-2xl p-8">
-          <h2 className="text-2xl font-bold mb-4">Book your sports massage</h2>
-          <p className="text-[#d4ecea] mb-6">
-            Training for an event? Book your sports massage session at Range and Restore in Archway, North London and give your body the support it needs.
+        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recover faster, train harder</h2>
+          <p className="text-[#1a3d3a] font-semibold mb-6">
+            Whether you are training for a marathon or just starting out, professional sports massage can make all the difference. Book your session in Archway now.
           </p>
           <BookingButton label="Book Your Session" />
         </div>

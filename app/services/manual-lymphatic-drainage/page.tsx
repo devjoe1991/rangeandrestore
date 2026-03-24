@@ -128,12 +128,12 @@ export default function ManualLymphaticDrainagePage() {
             </ul>
           </section>
 
-          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-4">Post-surgery or managing swelling?</h2>
-            <p className="text-[#d4ecea] mb-6">
-              Delivered by a Certified MLD Practitioner in Archway, North London. Each session is tailored to your individual needs for effective support with recovery, circulation, and lymphatic health.
+          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your MLD treatment</h2>
+            <p className="text-[#1a3d3a] font-semibold mb-6">
+              Support your recovery with certified Manual Lymphatic Drainage. Assessment-led treatment in a professional clinic environment.
             </p>
-            <BookingButton href={BOOKING_URLS.mld} label="Book Today" />
+            <BookingButton href={BOOKING_URLS.mld} label="Book Your Treatment" />
           </section>
 
           <div className="border-t pt-8">
