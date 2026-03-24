@@ -128,7 +128,7 @@ export default function ManualLymphaticDrainagePage() {
             </ul>
           </section>
 
-          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
+          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Post-surgery or managing swelling?</h2>
             <p className="text-[#d4ecea] mb-6">
               Delivered by a Certified MLD Practitioner in Archway, North London. Each session is tailored to your individual needs for effective support with recovery, circulation, and lymphatic health.

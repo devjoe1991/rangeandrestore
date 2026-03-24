@@ -86,7 +86,7 @@ export default function MassageBundlesPage() {
                     href={bundle.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-semibold px-8 py-4 hover:bg-[#2a5a56] transition-colors min-h-[44px] text-base whitespace-nowrap"
+                    className="btn btn-primary px-8 py-4 text-base whitespace-nowrap"
                   >
                     Book This Bundle
                   </a>
@@ -96,7 +96,7 @@ export default function MassageBundlesPage() {
           ))}
         </div>
 
-        <div className="mt-12 bg-[#2a5a56] text-white rounded-2xl p-8 lg:p-10 text-center">
+        <div className="mt-12 bg-[#1a3d3a] text-white rounded-2xl p-8 lg:p-10 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to commit to your health?</h2>
           <p className="text-[#d4ecea] text-lg mb-6 max-w-2xl mx-auto">
             Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.

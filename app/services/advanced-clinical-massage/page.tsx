@@ -137,7 +137,7 @@ export default function AdvancedClinicalMassagePage() {
             </ul>
           </section>
 
-          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
+          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Sciatica, chronic pain or postural problems?</h2>
             <p className="text-[#d4ecea] mb-6">
               Advanced Clinical Massage at Range and Restore in Archway, North London. Targeted, evidence-led treatment that addresses the root cause and delivers lasting relief.

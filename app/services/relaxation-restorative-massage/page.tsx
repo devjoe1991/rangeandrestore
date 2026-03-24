@@ -129,7 +129,7 @@ export default function RelaxationRestorativeMassagePage() {
             </ul>
           </section>
 
-          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
+          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Need to switch off and properly recover?</h2>
             <p className="text-[#d4ecea] mb-6">
               Each session is delivered in a safe, professional setting in Archway, North London, with pressure adjusted throughout. Give your body and mind the time to unwind, recover, and feel restored.

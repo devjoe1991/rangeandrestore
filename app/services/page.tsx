@@ -65,7 +65,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <div className="relative bg-[#2a5a56] py-16 lg:py-24 overflow-hidden">
+      <div className="relative bg-[#1a3d3a] py-16 lg:py-24 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"
           alt="Sports massage treatment in progress"
@@ -104,13 +104,13 @@ export default function ServicesPage() {
                     href={service.bookingHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-semibold px-6 py-3 hover:bg-[#2a5a56] transition-colors min-h-[44px] text-sm"
+                    className="btn btn-primary text-sm px-6"
                   >
                     Book Now
                   </a>
                   <Link
                     href={service.href}
-                    className="inline-flex items-center justify-center rounded-md border border-[#2ab4b8] text-[#2ab4b8] font-semibold px-6 py-3 hover:bg-[#2ab4b8] hover:text-white transition-colors min-h-[44px] text-sm"
+                    className="text-page text-sm font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2 px-4"
                   >
                     Learn More
                   </Link>

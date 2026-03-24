@@ -123,7 +123,7 @@ export default function HydrationMuscleHealthPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#2a5a56] text-white rounded-2xl p-8">
+        <div className="mt-12 bg-[#1a3d3a] text-white rounded-2xl p-8">
           <h2 className="text-2xl font-bold mb-4">Book your sports massage</h2>
           <p className="text-[#d4ecea] mb-6">
             Ready to experience assessment-led sports massage in Archway, North London? Book your session with Carlos Bonvicine today.

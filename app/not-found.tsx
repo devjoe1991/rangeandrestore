@@ -3,7 +3,7 @@ import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#2a5a56] flex flex-col">
+    <div className="min-h-screen bg-[#1a3d3a] flex flex-col">
       {/* Hero */}
       <div className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20">
         <p className="text-[#d4ecea] text-[8rem] sm:text-[12rem] font-black leading-none tracking-tighter opacity-20 select-none">

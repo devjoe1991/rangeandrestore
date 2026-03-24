@@ -46,7 +46,7 @@ function ReviewCard({ review }: { review: Review }) {
   )
 }
 
-const PLACE_URL = "https://search.google.com/local/reviews?placeid=ChIJozaeJe4bdkgRiCeqpE"
+const PLACE_URL = "https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9"
 
 export function GoogleReviews() {
   const [reviews, setReviews] = useState<Review[]>([])

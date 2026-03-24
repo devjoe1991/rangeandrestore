@@ -130,7 +130,7 @@ export default function AchillesTendinitisPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#2a5a56] text-white rounded-2xl p-8">
+        <div className="mt-12 bg-[#1a3d3a] text-white rounded-2xl p-8">
           <h2 className="text-2xl font-bold mb-4">Book your sports massage</h2>
           <p className="text-[#d4ecea] mb-6">
             Dealing with Achilles pain or calf tightness? Book a session at Range and Restore in Archway, North London and get assessment-led treatment that targets the root cause.

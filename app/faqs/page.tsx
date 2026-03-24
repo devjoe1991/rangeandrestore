@@ -46,7 +46,7 @@ export default function FAQsPage() {
         <FaqAccordion />
 
         {/* CTA */}
-        <div className="mt-10 bg-[#2a5a56] rounded-2xl p-8 text-center">
+        <div className="mt-10 bg-[#1a3d3a] rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-extrabold text-white tracking-tight mb-2">Still have questions?</h2>
           <p className="text-[#d4ecea]/80 mb-6 text-sm">
             Get in touch and Carlos will be happy to help before you book.

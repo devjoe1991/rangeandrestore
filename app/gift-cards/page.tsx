@@ -32,7 +32,7 @@ export default function GiftCardsPage() {
             href={BOOKING_URLS.giftCards}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-[#2ab4b8] text-white font-bold px-10 py-4 text-xl hover:bg-[#2a5a56] transition-colors min-h-[44px]"
+            className="btn btn-primary px-10 py-4 text-xl"
           >
             Purchase a Gift Card
           </a>

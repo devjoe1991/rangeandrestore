@@ -124,7 +124,7 @@ export default function TwoHourPainReliefPage() {
             </ul>
           </section>
 
-          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
+          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Multiple problem areas? Get the time your body actually needs.</h2>
             <p className="text-[#d4ecea] mb-6">
               If a standard session is not enough to properly address what is going on, this is the right choice. Delivered in Archway, North London. A clear step towards better movement, less pain, and improved function.

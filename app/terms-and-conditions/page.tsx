@@ -130,8 +130,8 @@ export default function TermsAndConditionsPage() {
               <strong>Carlos Bonvicine</strong><br />
               Range and Restore Sports Massage<br />
               {BUSINESS.address}<br />
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#4a7a28] hover:underline">{BUSINESS.email}</a><br />
-              <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#4a7a28] hover:underline">{BUSINESS.phone}</a>
+              <a href={`mailto:${BUSINESS.email}`} className="text-[#2ab4b8] hover:underline">{BUSINESS.email}</a><br />
+              <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#2ab4b8] hover:underline">{BUSINESS.phone}</a>
             </address>
           </section>
         </div>

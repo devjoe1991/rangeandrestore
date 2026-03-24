@@ -80,7 +80,7 @@ export default function ClinicalCollaborationPage() {
             </ul>
           </section>
 
-          <section className="bg-[#2a5a56] text-white rounded-2xl p-8">
+          <section className="bg-[#1a3d3a] text-white rounded-2xl p-8">
             <h2 className="text-2xl font-bold mb-4">Book your sports massage assessment</h2>
             <p className="text-[#d4ecea] mb-4">
               Every treatment at Range and Restore begins with a thorough assessment. If imaging is identified as clinically appropriate, the team at <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#7dd94a] underline decoration-[#7dd94a]/40 hover:text-white transition-colors font-semibold">Reliable Scan</a> is on hand in the same building.
