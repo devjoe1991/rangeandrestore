@@ -21,7 +21,6 @@ const services = [
     solution: 'Targeted deep tissue therapy releases tension, restores movement and gets you back to full training faster.',
     href: '/services/sports-deep-tissue-massage',
     bookingHref: BOOKING_URLS.sportsDeepTissue,
-    badge: 'Sports Specialist',
   },
   {
     title: 'Advanced Clinical Massage',
