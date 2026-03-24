@@ -67,8 +67,9 @@ export default function MassageBundlesPage() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="space-y-10">
           {bundles.map((bundle) => (
-            <div key={bundle.title} className="bg-card border border-page rounded-2xl p-6 lg:p-10 hover:shadow-md transition-shadow">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div key={bundle.title} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              <div className="p-6 lg:p-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3 mb-3">
                     <h2 className="text-2xl font-bold text-page">{bundle.title}</h2>

@@ -88,8 +88,9 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 gap-6">
           {services.map((service) => (
-            <div key={service.href} className="bg-card border border-page rounded-xl p-6 lg:p-8 hover:shadow-md dark:hover:shadow-black/30 transition-shadow">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+            <div key={service.href} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              <div className="p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-page mb-2">
                     <Link href={service.href} className="hover:text-[#2ab4b8] transition-colors">

@@ -48,8 +48,9 @@ export default function BlogPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {posts.map((post) => (
-            <article key={post.slug} className="bg-card border border-page rounded-xl overflow-hidden hover:shadow-md dark:hover:shadow-black/30 transition-shadow">
-              <div className="p-6">
+            <article key={post.slug} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              <div className="p-6 flex flex-col flex-grow">
                 <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
                 <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">
                   <Link href={`/blog/${post.slug}`} className="hover:text-[#2ab4b8] transition-colors">
