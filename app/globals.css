@@ -281,3 +281,25 @@ input, select, textarea {
   transition: top 0.15s ease;
 }
 .skip-link:focus { top: 0; }
+
+/* ── Custom Scrollbar (Mobile Visibility) ─────────────────── */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #2ab4b8 transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar:vertical {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2ab4b8;
+  border-radius: 10px;
+  height: 30px; /* Force a consistent thumb length */
+}
+

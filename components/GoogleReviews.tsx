@@ -36,8 +36,7 @@ function ReviewCard({ review }: { review: Review }) {
         ))}
       </div>
       <div 
-        className="overflow-y-auto flex-1 pr-2 pb-1" 
-        style={{ scrollbarWidth: 'thin', scrollbarColor: '#2ab4b8 transparent' }}
+        className="overflow-y-auto flex-1 pr-2 pb-1 custom-scrollbar" 
         onMouseDown={(e) => e.stopPropagation()} // Prevent horizontal drag when clicking scrollbar
       >
         <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium whitespace-pre-wrap">{review.text}</p>
@@ -133,7 +132,7 @@ export function GoogleReviews() {
             onMouseMove={handleMouseMove}
           >
             {reviews.map((review, i) => (
-              <div key={i} className="w-[85vw] sm:w-[320px] lg:w-[350px] h-[260px] sm:h-[240px] flex-shrink-0">
+              <div key={i} className="w-[85vw] sm:w-[320px] lg:w-[350px] h-[240px] flex-shrink-0">
                 <ReviewCard review={review} />
               </div>
             ))}

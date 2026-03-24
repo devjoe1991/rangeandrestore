@@ -432,13 +432,8 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
       <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
 
       <div className="p-4 sm:p-5 flex flex-col flex-1">
-        <div className="flex items-start justify-between gap-2 mb-2">
+        <div className="mb-2">
           <h3 className="font-black text-page text-sm sm:text-base leading-tight tracking-tight">{s.title}</h3>
-          {s.badge && (
-            <span className="flex-shrink-0 text-[0.55rem] font-black uppercase tracking-widest px-2 py-0.5 rounded-full bg-[#2ab4b8] text-white whitespace-nowrap">
-              {s.badge}
-            </span>
-          )}
         </div>
 
         {/* Problem pill */}
