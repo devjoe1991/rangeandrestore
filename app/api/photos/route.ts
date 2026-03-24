@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-const PLACE_ID = 'ChIJozaeJe4bdkgRiCeqpE'
+const PLACE_ID = 'ChIJozaeJe4bdkgRi9ECRiCeqpE'
 const API_KEY = process.env.GOOGLE_PLACES_API
 
 export async function GET() {
