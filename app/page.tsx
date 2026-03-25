@@ -99,10 +99,10 @@ const blogPosts = [
 ]
 
 const bundles = [
-  { label: '5 × 60 min', price: '£350', perSession: '£70/session', valid: '6 months' },
-  { label: '10 × 60 min', price: '£650', perSession: '£65/session', valid: '10 months', popular: true },
-  { label: '5 × 90 min', price: '£500', perSession: '£100/session', valid: '6 months' },
-  { label: '10 × 90 min', price: '£950', perSession: '£95/session', valid: '10 months' },
+  { label: '5 × 60 min', originalPrice: '£425', price: '£350', perSession: '£70/session', saving: 'Saving £75', valid: '6 months' },
+  { label: '10 × 60 min', originalPrice: '£850', price: '£650', perSession: '£65/session', saving: 'Saving £200', valid: '10 months', popular: true },
+  { label: '5 × 90 min', originalPrice: '£625', price: '£500', perSession: '£100/session', saving: 'Saving £125', valid: '6 months' },
+  { label: '10 × 90 min', originalPrice: '£1250', price: '£950', perSession: '£95/session', saving: 'Saving £300', valid: '10 months' },
 ]
 
 export default function HomePage() {
@@ -202,13 +202,23 @@ export default function HomePage() {
                 <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#1a3d3a]/80' : 'text-[#1a3d3a]/60'}`}>
                   {b.label}
                 </p>
+                <p className={`text-[0.65rem] font-bold mb-1 opacity-50 line-through ${b.popular ? 'text-[#1a3d3a]' : 'text-[#1a3d3a]'}`}>
+                  {b.originalPrice}
+                </p>
                 <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
                   {b.price}
                 </p>
                 <p className={`text-xs font-bold mt-0.5 ${b.popular ? 'text-[#1a3d3a]/90' : 'text-[#1a3d3a]/80'}`}>
                   {b.perSession}
                 </p>
-                <p className={`text-xs font-semibold mt-1 mb-4 ${b.popular ? 'text-[#1a3d3a]/70' : 'text-[#1a3d3a]/50'}`}>
+                <div className="mt-2 mb-3">
+                  <span className={`text-[0.65rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-md shadow-sm ${
+                    b.popular ? 'bg-[#122a28] text-[#7dd94a]' : 'bg-[#7dd94a] text-[#1a2330]'
+                  }`}>
+                    {b.saving}
+                  </span>
+                </div>
+                <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-[#1a3d3a]/70' : 'text-[#1a3d3a]/50'}`}>
                   Valid {b.valid}
                 </p>
                 <Link
