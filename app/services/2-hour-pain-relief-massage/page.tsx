@@ -79,7 +79,7 @@ export default function TwoHourPainReliefPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Session length</h2>
             <div className="bg-page-sage rounded-xl p-6">
-              <p className="font-bold text-page text-xl mb-2">2 Hours</p>
+              <p className="font-bold text-page text-xl mb-2">2 Hours – £170</p>
               <p className="text-page-muted">Extended assessment-led treatment covering multiple problem areas and full-body recovery work. This session provides the time needed to properly address complex or long-standing conditions that cannot be fully resolved in a standard 60 or 90 minute appointment.</p>
             </div>
           </section>

@@ -51,7 +51,7 @@ const services = [
     href: '/services/2-hour-pain-relief-massage',
     bookingHref: BOOKING_URLS.twoHourRelief,
     description: 'An extended, comprehensive session for complex or long-standing conditions, multiple problem areas, and deeper recovery work.',
-    duration: '2 hours',
+    duration: '2 hours – £170',
   },
   {
     title: 'Massage Bundle Offers',
