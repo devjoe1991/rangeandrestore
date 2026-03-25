@@ -80,9 +80,9 @@ export default function RelaxationRestorativeMassagePage() {
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { duration: '30 Minutes', desc: 'A short, calming session to ease tension in a specific area such as the back, neck, or shoulders. Perfect for a quick recharge.' },
-                { duration: '60 Minutes', desc: 'A full relaxation session covering the back, shoulders, and legs. Enough time to genuinely unwind and feel restored.' },
-                { duration: '90 Minutes', desc: 'A luxurious, full-body relaxation experience. Ideal for a thorough reset, deep relaxation, and a lasting sense of calm and wellbeing.' },
+                { duration: '30 Minutes – £50', desc: 'A short, calming session to ease tension in a specific area such as the back, neck, or shoulders. Perfect for a quick recharge.' },
+                { duration: '60 Minutes – £75', desc: 'A full relaxation session covering the back, shoulders, and legs. Enough time to genuinely unwind and feel restored.' },
+                { duration: '90 Minutes – £110', desc: 'A luxurious, full-body relaxation experience. Ideal for a thorough reset, deep relaxation, and a lasting sense of calm and wellbeing.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>

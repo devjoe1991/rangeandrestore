@@ -82,9 +82,9 @@ export default function SportsDeepTissuePage() {
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { duration: '30 Minutes', desc: 'Focused treatment for a single area (e.g. calves, hamstrings, shoulders). Ideal for quick recovery or tension release.' },
-                { duration: '60 Minutes', desc: 'In-depth session for one or two areas. Great for targeted injury support, recovery, and restoring mobility.' },
-                { duration: '90 Minutes', desc: 'Full-body or multi-area treatment. Best for athletes, runners, or anyone managing ongoing tension and needing comprehensive care.' },
+                { duration: '30 Minutes – £50', desc: 'Focused treatment for a single area (e.g. calves, hamstrings, shoulders). Ideal for quick recovery or tension release.' },
+                { duration: '60 Minutes – £75', desc: 'In-depth session for one or two areas. Great for targeted injury support, recovery, and restoring mobility.' },
+                { duration: '90 Minutes – £110', desc: 'Full-body or multi-area treatment. Best for athletes, runners, or anyone managing ongoing tension and needing comprehensive care.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>

@@ -81,9 +81,9 @@ export default function BackNeckPainMotPage() {
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { duration: '30 Minutes', desc: 'Quick, targeted relief for a specific area of back or neck pain. Ideal for follow-up sessions and ongoing maintenance.' },
-                { duration: '60 Minutes', desc: 'Focused assessment and treatment of the back and neck, with time to address contributing postural patterns.' },
-                { duration: '90 Minutes', desc: 'Comprehensive Back &amp; Neck MOT with full postural assessment and treatment of the spine, shoulders, and related areas.' },
+                { duration: '30 Minutes – £50', desc: 'Quick, targeted relief for a specific area of back or neck pain. Ideal for follow-up sessions and ongoing maintenance.' },
+                { duration: '60 Minutes – £75', desc: 'Focused assessment and treatment of the back and neck, with time to address contributing postural patterns.' },
+                { duration: '90 Minutes – £110', desc: 'Comprehensive Back &amp; Neck MOT with full postural assessment and treatment of the spine, shoulders, and related areas.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>

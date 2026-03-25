@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
-import { BOOKING_URLS } from '@/lib/constants'
+import { BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Bundle Offers – Archway, London N19',
@@ -18,7 +17,6 @@ const bundles = [
     saving: 'Save £25',
     description: 'Perfect for those committing to regular treatment over six months. Five 60-minute sessions provide consistent care to address ongoing muscular tension, manage injury recovery, or maintain the results of previous treatment.',
     ideal: 'Ideal for: Clients wanting regular maintenance sessions, people managing a specific issue or injury over time, and those looking to build consistent self-care into their routine.',
-    href: BOOKING_URLS.general,
   },
   {
     title: '10 × 60-Minute Sessions',
@@ -27,7 +25,6 @@ const bundles = [
     saving: 'Save £100',
     description: 'The most comprehensive 60-minute bundle for long-term health investment. Ten sessions over ten months ensures consistent, ongoing treatment that delivers lasting improvements to mobility, pain levels, and muscular health.',
     ideal: 'Ideal for: Clients committed to a long-term recovery plan, individuals with chronic pain or recurring injuries, and those who have experienced the benefits of regular massage and want to continue.',
-    href: BOOKING_URLS.general,
   },
   {
     title: '5 × 90-Minute Sessions',
@@ -36,7 +33,6 @@ const bundles = [
     saving: 'Save £25',
     description: 'Five extended sessions for clients who need more comprehensive treatment time. Each 90-minute session allows for a thorough assessment, full-body or multi-area treatment, and detailed aftercare discussion — the ideal format for active individuals and those with complex needs.',
     ideal: 'Ideal for: Athletes and runners, clients with multiple areas of concern, and those who prefer a more thorough, in-depth session each time.',
-    href: BOOKING_URLS.general,
   },
   {
     title: '10 × 90-Minute Sessions',
@@ -45,7 +41,6 @@ const bundles = [
     saving: 'Save £100',
     description: 'The ultimate long-term treatment package. Ten 90-minute sessions over ten months delivers the most complete and consistent care available. Whether you\'re managing a complex condition, supporting athletic performance, or investing in your long-term musculoskeletal health, this bundle provides everything you need.',
     ideal: 'Ideal for: Clients with complex or chronic conditions, performance-focused athletes, and those looking for the best possible long-term value and care.',
-    href: BOOKING_URLS.general,
   },
 ]
 
@@ -82,14 +77,18 @@ export default function MassageBundlesPage() {
                   <p className="text-page-muted mb-3">{bundle.description}</p>
                   <p className="text-page-muted text-sm italic">{bundle.ideal}</p>
                 </div>
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 flex flex-col gap-3">
                   <a
-                    href={bundle.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary px-8 py-4 text-base whitespace-nowrap"
+                    href={`tel:${BUSINESS.phoneTel}`}
+                    className="btn btn-primary px-6 py-3 text-base whitespace-nowrap text-center"
                   >
-                    Book This Bundle
+                    Call to Book
+                  </a>
+                  <a
+                    href={`mailto:${BUSINESS.email}`}
+                    className="inline-flex items-center justify-center rounded-md border-2 border-[#1a3d3a] text-page font-semibold px-6 py-3 hover:bg-page-sage transition-colors min-h-[44px] whitespace-nowrap"
+                  >
+                    Email to Enquire
                   </a>
                 </div>
               </div>
@@ -103,13 +102,18 @@ export default function MassageBundlesPage() {
             Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <BookingButton label="Book Your Bundle" />
-            <Link
-              href="/contact"
+            <a
+              href={`tel:${BUSINESS.phoneTel}`}
+              className="btn btn-primary px-8 py-3 text-base"
+            >
+              Call to Book
+            </a>
+            <a
+              href={`mailto:${BUSINESS.email}`}
               className="inline-flex items-center justify-center rounded-md border-2 border-[#d4ecea] text-[#d4ecea] font-semibold px-8 py-3 hover:bg-page-sage hover:text-page transition-colors min-h-[44px]"
             >
-              Ask a Question
-            </Link>
+              Email to Enquire
+            </a>
           </div>
         </div>
 

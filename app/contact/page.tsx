@@ -16,7 +16,7 @@ export default function ContactPage() {
       {/* ── Hero — building photo background ─────────────────── */}
       <div className="relative py-20 lg:py-28 overflow-hidden">
         <Image
-          src="/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg"
+          src="/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg"
           alt="Range and Restore Sports Massage clinic exterior at 130 Junction Road, Archway, London N19 5LB"
           fill
           className="object-cover"
@@ -84,7 +84,7 @@ export default function ContactPage() {
             {/* Building exterior photo */}
             <div className="mt-6 rounded-xl overflow-hidden relative aspect-[16/7]">
               <Image
-                src="/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg"
+                src="/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg"
                 alt="Exterior of Range and Restore Sports Massage clinic at 130 Junction Road, Archway, London N19 5LB — near Archway tube station, Northern Line"
                 fill
                 className="object-cover"

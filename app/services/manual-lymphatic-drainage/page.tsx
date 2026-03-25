@@ -79,9 +79,9 @@ export default function ManualLymphaticDrainagePage() {
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { duration: '30 Minutes', desc: 'Focused MLD treatment for a specific area. Suitable for targeted swelling management or follow-up sessions.' },
-                { duration: '60 Minutes', desc: 'A thorough MLD session covering multiple areas. Recommended for post-surgery recovery and general lymphatic support.' },
-                { duration: '90 Minutes', desc: 'Comprehensive full-body MLD treatment. Ideal for more complex lymphatic conditions or full post-surgical recovery support.' },
+                { duration: '30 Minutes – £50', desc: 'Focused MLD treatment for a specific area. Suitable for targeted swelling management or follow-up sessions.' },
+                { duration: '60 Minutes – £75', desc: 'A thorough MLD session covering multiple areas. Recommended for post-surgery recovery and general lymphatic support.' },
+                { duration: '90 Minutes – £110', desc: 'Comprehensive full-body MLD treatment. Ideal for more complex lymphatic conditions or full post-surgical recovery support.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>

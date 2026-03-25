@@ -83,9 +83,9 @@ export default function AdvancedClinicalMassagePage() {
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { duration: '30 Minutes', desc: 'Focused clinical treatment for a single area or specific condition. Suitable for follow-up sessions or targeted problem areas.' },
-                { duration: '60 Minutes', desc: 'In-depth assessment and treatment for one or two areas. Provides time for thorough assessment and effective clinical work.' },
-                { duration: '90 Minutes', desc: 'Comprehensive clinical session for complex or multi-area presentations. Recommended for chronic conditions and full-body assessments.' },
+                { duration: '30 Minutes – £50', desc: 'Focused clinical treatment for a single area or specific condition. Suitable for follow-up sessions or targeted problem areas.' },
+                { duration: '60 Minutes – £75', desc: 'In-depth assessment and treatment for one or two areas. Provides time for thorough assessment and effective clinical work.' },
+                { duration: '90 Minutes – £110', desc: 'Comprehensive clinical session for complex or multi-area presentations. Recommended for chronic conditions and full-body assessments.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>

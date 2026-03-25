@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             {/* Therapist hero image */}
-            <div className="rounded-2xl overflow-hidden mb-8 aspect-[4/3] relative w-full">
+            <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
               <Image
                 src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
                 alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
