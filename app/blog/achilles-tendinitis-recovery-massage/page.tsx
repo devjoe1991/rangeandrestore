@@ -4,8 +4,8 @@ import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Achilles Tendinitis – How Sports Massage Helps Recovery',
-  description: 'Achilles tendinitis is a common injury among runners and active people. Discover how targeted sports massage and soft tissue therapy can support your recovery.',
+  title: 'Achilles Tendinitis Massage Recovery | Archway London',
+  description: 'Achilles tendinitis treatment through sports massage and soft tissue therapy in Archway, North London. Recover faster with targeted clinical treatment.',
   path: '/blog/achilles-tendinitis-recovery-massage',
 })
 
@@ -13,7 +13,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Achilles Tendinitis – How Sports Massage Helps Recovery',
-  description: 'Achilles tendinitis is a common injury among runners and active people. Discover how targeted sports massage and soft tissue therapy can support your recovery.',
+  description: 'Achilles tendinitis treatment through sports massage and soft tissue therapy in Archway, North London. Recover faster with targeted clinical treatment.',
   image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
   author: {
     '@type': 'Person',
@@ -27,9 +27,10 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-02-01',
-  dateModified: '2026-02-01',
+  dateModified: '2026-03-26',
   url: 'https://rangeandrestore.co.uk/blog/achilles-tendinitis-recovery-massage',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/achilles-tendinitis-recovery-massage',
+  keywords: 'Achilles tendinitis massage, Achilles tendon recovery, sports massage Archway, calf pain treatment, running injury massage London, soft tissue therapy Achilles',
 }
 
 export default function AchillesTendinitisPage() {
@@ -54,7 +55,7 @@ export default function AchillesTendinitisPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Achilles tendinitis is one of the most common overuse injuries affecting runners, cyclists, and active individuals. Left unmanaged, it can progress from a nagging discomfort to a serious injury that keeps you off your feet for months. Sports massage and targeted soft tissue therapy offer an effective, non-invasive approach to supporting recovery and preventing recurrence.
+            Achilles tendinitis is one of the most common overuse injuries affecting <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium">runners</Link>, cyclists, and active individuals. Left unmanaged, it can progress from a nagging discomfort to a serious injury that keeps you off your feet for months. At Range and Restore in Archway, North London, sports massage and targeted <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">soft tissue therapy</Link> offer an effective, non-invasive approach to supporting recovery and preventing recurrence.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is Achilles tendinitis?</h2>
@@ -116,7 +117,7 @@ export default function AchillesTendinitisPage() {
           </p>
 
           <p>
-            Between sessions, relative rest — reducing running volume without necessarily stopping entirely — combined with appropriate loading exercises (typically eccentric calf work, prescribed by a physiotherapist or sports rehab specialist) is usually recommended. At Range and Restore, advice on what to do between sessions is always part of the treatment.
+            Between sessions, relative rest — reducing running volume without necessarily stopping entirely — combined with appropriate loading exercises (typically eccentric calf work, prescribed by a physiotherapist or sports rehab specialist) is usually recommended. Maintaining good <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydration</Link> also supports tendon recovery. At Range and Restore in Archway, advice on what to do between sessions is always part of the treatment.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek additional help</h2>
@@ -135,14 +136,19 @@ export default function AchillesTendinitisPage() {
           <p className="text-[#1a3d3a] font-semibold mb-6">
             Professional sports massage and soft tissue therapy targeting the root cause of your tendinitis. Book your assessment in Archway today.
           </p>
-          <BookingButton label="Book Your Session" />
+          <BookingButton label="Book Your Achilles Assessment" />
         </div>
 
         <div className="mt-10 border-t border-page pt-8">
-          <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
-            → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
-          </Link>
+          <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
+          <div className="space-y-2">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
+            </Link>
+            <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; How Sports Massage Helps Runners Before and After Races
+            </Link>
+          </div>
         </div>
 
         <div className="mt-6">

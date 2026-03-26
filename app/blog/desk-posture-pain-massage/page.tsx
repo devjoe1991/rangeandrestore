@@ -4,8 +4,8 @@ import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Say Goodbye to Desk Posture Pain',
-  description: "Spending 8+ hours a day at a desk? Chronic neck, shoulder, and back pain are your body's signal. Learn how massage therapy reverses postural damage and delivers lasting relief.",
+  title: 'Desk Posture Pain Relief | Massage Therapy Archway',
+  description: 'Desk posture causing neck, shoulder and back pain? Targeted massage therapy in Archway, North London reverses postural damage and delivers lasting relief.',
   path: '/blog/desk-posture-pain-massage',
 })
 
@@ -13,7 +13,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Say Goodbye to Desk Posture Pain',
-  description: "Spending 8+ hours a day at a desk? Chronic neck, shoulder, and back pain are your body's signal. Learn how massage therapy reverses postural damage and delivers lasting relief.",
+  description: 'Desk posture causing neck, shoulder and back pain? Targeted massage therapy in Archway, North London reverses postural damage and delivers lasting relief.',
   image: 'https://images.unsplash.com/photo-1593476550610-87baa860004a?w=1200&q=75',
   author: {
     '@type': 'Person',
@@ -27,9 +27,10 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-02-01',
-  dateModified: '2026-02-01',
+  dateModified: '2026-03-26',
   url: 'https://rangeandrestore.co.uk/blog/desk-posture-pain-massage',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/desk-posture-pain-massage',
+  keywords: 'desk posture pain massage, neck pain massage London, back pain office worker, postural correction Archway, shoulder tension massage, remedial massage North London',
 }
 
 export default function DeskPosturePainMassagePage() {
@@ -58,7 +59,7 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            The good news is that desk-related postural pain responds exceptionally well to targeted massage therapy and soft tissue treatment. Understanding why it develops in the first place makes it easier to address — and to prevent from returning.
+            The good news is that desk-related postural pain responds exceptionally well to targeted <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">massage therapy and soft tissue treatment</Link>. At Range and Restore in Archway, North London, we see this every week — and help clients reverse it. Understanding why it develops in the first place makes it easier to address — and to prevent from returning.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why sitting causes so much pain</h2>
@@ -120,7 +121,7 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            Alongside treatment, simple workplace adjustments — monitor height, chair position, regular movement breaks — make a significant difference to the rate of progress and the longevity of results. Practical advice on these changes is always part of the conversation at Range and Restore.
+            Alongside treatment, simple workplace adjustments — monitor height, chair position, regular movement breaks — make a significant difference to the rate of progress and the longevity of results. Keeping your body well <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydrated throughout the day</Link> also helps your muscles stay supple and responsive. Practical advice on these changes is always part of the conversation at Range and Restore in Archway.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">You don&apos;t have to accept the pain</h2>
@@ -139,14 +140,19 @@ export default function DeskPosturePainMassagePage() {
           <p className="text-[#1a3d3a] font-semibold mb-6">
             Don't let desk work damage your health. Professional postural assessment and remedial massage available in Archway, North London.
           </p>
-          <BookingButton label="Book Your Session" />
+          <BookingButton label="Book Your Postural Assessment" />
         </div>
 
         <div className="mt-10 border-t border-page pt-8">
-          <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
-          <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
-            → Back &amp; Neck Pain MOT – Soft Tissue Remedial Massage Therapy
-          </Link>
+          <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
+          <div className="space-y-2">
+            <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Back &amp; Neck Pain MOT – Soft Tissue Remedial Massage Therapy
+            </Link>
+            <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Advanced Clinical Massage
+            </Link>
+          </div>
         </div>
 
         <div className="mt-6">

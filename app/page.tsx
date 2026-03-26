@@ -61,6 +61,15 @@ const services = [
 
 const blogPosts = [
   {
+    title:    'Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free',
+    href:     '/blog/sports-massage-soft-tissue-therapy-archway',
+    date:     '26 Mar 2026',
+    img:      '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+    imgAlt:   'Sports massage and soft tissue remedial therapy at Range and Restore clinic in Archway, North London',
+    category: 'Performance',
+    readTime: '7 min read',
+  },
+  {
     title:    'Hydration and Muscle Health – What Every Client Should Know',
     href:     '/blog/hydration-and-muscle-health',
     date:     '8 Feb 2026',
@@ -86,15 +95,6 @@ const blogPosts = [
     imgAlt:   'Person stretching their calf and Achilles tendon — sports massage for Achilles tendinitis recovery in North London',
     category: 'Injury',
     readTime: '6 min read',
-  },
-  {
-    title:    'Say Goodbye to Desk Posture Pain',
-    href:     '/blog/desk-posture-pain-massage',
-    date:     '1 Feb 2026',
-    img:      'https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?w=800&q=80',
-    imgAlt:   'Office worker with neck and shoulder pain from poor desk posture — massage therapy for postural pain relief in Archway',
-    category: 'Posture',
-    readTime: '5 min read',
   },
 ]
 

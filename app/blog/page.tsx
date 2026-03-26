@@ -10,6 +10,12 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free',
+    slug: 'sports-massage-soft-tissue-therapy-archway',
+    date: '26 March 2026',
+    excerpt: 'From runners and cyclists to desk workers and weekend warriors — discover how sports massage and soft tissue remedial therapy in Archway help you move better, recover faster, and stay pain-free.',
+  },
+  {
     title: 'Hydration and Muscle Health – What Every Client Should Know',
     slug: 'hydration-and-muscle-health',
     date: '8 February 2026',

@@ -4,8 +4,8 @@ import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Hydration and Muscle Health – What Every Client Should Know',
-  description: 'Water makes up around 75% of muscle tissue. Learn why staying hydrated is essential for muscle function, injury prevention, and getting the most from your massage treatment.',
+  title: 'Hydration and Muscle Health | Recovery Guide',
+  description: 'Water makes up 75% of muscle tissue. Learn why hydration is essential for muscle function, injury prevention and getting more from your massage treatment.',
   path: '/blog/hydration-and-muscle-health',
 })
 
@@ -13,7 +13,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Hydration and Muscle Health – What Every Client Should Know',
-  description: 'Water makes up around 75% of muscle tissue. Learn why staying hydrated is essential for muscle function, injury prevention, and getting the most from your massage treatment.',
+  description: 'Water makes up 75% of muscle tissue. Learn why hydration is essential for muscle function, injury prevention and getting more from your massage treatment.',
   image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=75',
   author: {
     '@type': 'Person',
@@ -27,9 +27,10 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-02-08',
-  dateModified: '2026-02-08',
+  dateModified: '2026-03-26',
   url: 'https://rangeandrestore.co.uk/blog/hydration-and-muscle-health',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/hydration-and-muscle-health',
+  keywords: 'hydration muscle health, muscle recovery hydration, massage preparation, dehydration injury risk, sports massage recovery, hydration tips athletes',
 }
 
 export default function HydrationMuscleHealthPage() {
@@ -54,7 +55,7 @@ export default function HydrationMuscleHealthPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Most people know that drinking water is important. But fewer people understand just how directly hydration affects the health, function, and recovery of your muscles — and what that means for your massage treatment.
+            Most people know that drinking water is important. But fewer people understand just how directly hydration affects the health, function, and recovery of your muscles — and what that means for your <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">massage treatment</Link>.
           </p>
 
           <p>
@@ -96,7 +97,7 @@ export default function HydrationMuscleHealthPage() {
           </p>
 
           <p>
-            For athletes and active individuals, hydration is one of the simplest and most overlooked performance and injury prevention tools available.
+            For <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium">runners</Link>, cyclists, and active individuals, hydration is one of the simplest and most overlooked performance and injury prevention tools available. Conditions like <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#2ab4b8] hover:text-page font-medium">Achilles tendinitis</Link> and calf strains can be aggravated by chronic dehydration, making recovery longer and treatment less effective.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Practical hydration guidelines</h2>
@@ -119,23 +120,28 @@ export default function HydrationMuscleHealthPage() {
           </p>
 
           <p>
-            If you have questions about what to do before or after your appointment, feel free to ask during your session. Every client is different, and personalised advice is always part of the treatment at Range and Restore.
+            If you have questions about what to do before or after your appointment, feel free to ask during your session. Every client is different, and personalised advice is always part of the treatment at <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Range and Restore in Archway, North London</Link>.
           </p>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Start your recovery journey</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Hydrate well, recover better</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Get professional, assessment-led treatment in Archway, North London. Whether it is hydration-related muscle health or injury recovery, we are here to help.
+            Arrive hydrated and get the most from your session. Professional, assessment-led sports massage and soft tissue therapy in Archway, North London.
           </p>
           <BookingButton label="Book Your Session" />
         </div>
 
         <div className="mt-10 border-t border-page pt-8">
-          <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
-            → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
-          </Link>
+          <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
+          <div className="space-y-2">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
+            </Link>
+            <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; How Sports Massage Helps Runners Before and After Races
+            </Link>
+          </div>
         </div>
 
         <div className="mt-6">

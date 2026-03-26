@@ -4,8 +4,8 @@ import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'How Sports Massage Helps Runners Before and After Races',
-  description: 'Whether training for a 10K or a full marathon, sports massage can help you prepare your body before race day and recover effectively afterwards. Find out how.',
+  title: 'Sports Massage for Runners Archway | Race Recovery',
+  description: 'Sports massage for runners in Archway, North London. Pre-race preparation, post-race recovery and maintenance therapy for 5K to marathon training.',
   path: '/blog/sports-massage-for-runners',
 })
 
@@ -13,7 +13,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'How Sports Massage Helps Runners Before and After Races',
-  description: 'Whether training for a 10K or a full marathon, sports massage can help you prepare your body before race day and recover effectively afterwards.',
+  description: 'Sports massage for runners in Archway, North London. Pre-race preparation, post-race recovery and maintenance therapy for 5K to marathon training.',
   image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&q=75',
   author: {
     '@type': 'Person',
@@ -27,9 +27,10 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-02-01',
-  dateModified: '2026-02-01',
+  dateModified: '2026-03-26',
   url: 'https://rangeandrestore.co.uk/blog/sports-massage-for-runners',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/sports-massage-for-runners',
+  keywords: 'sports massage runners, pre-race massage, post-race recovery massage, marathon training massage, running injury prevention, sports massage Archway London',
 }
 
 export default function SportsMassageForRunnersPage() {
@@ -58,7 +59,7 @@ export default function SportsMassageForRunnersPage() {
           </p>
 
           <p>
-            Running places enormous repetitive demand on the muscles, tendons, and connective tissues of the legs, hips, and lower back. Over time — particularly during peak training periods — this accumulation of stress can lead to tightness, imbalances, and injury. Sports massage addresses these issues directly, keeping your body functioning at its best throughout the training cycle.
+            Running places enormous repetitive demand on the muscles, tendons, and connective tissues of the legs, hips, and lower back. Over time — particularly during peak training periods — this accumulation of stress can lead to tightness, imbalances, and injury. At <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Range and Restore Sports Massage in Archway, North London</Link>, sports massage for runners addresses these issues directly, keeping your body functioning at its best throughout the training cycle.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Before the race: preparation massage</h2>
@@ -108,30 +109,34 @@ export default function SportsMassageForRunnersPage() {
 
           <ul className="space-y-2 list-disc list-inside">
             <li>IT band tightness and iliotibial band syndrome (ITBS)</li>
-            <li>Calf and Achilles tension</li>
+            <li><Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#2ab4b8] hover:text-page font-medium">Calf and Achilles tension</Link></li>
             <li>Hamstring tightness and strain</li>
             <li>Hip flexor restriction</li>
             <li>Plantar fasciitis</li>
             <li>Lower back and glute tension from running gait</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What to expect from a session at Range and Restore</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What to expect from a runner&apos;s session in Archway</h2>
 
           <p>
-            Every session at Range and Restore begins with a brief assessment. For runners, this typically involves looking at your training history, recent mileage, any areas of concern, and your upcoming race schedule. This helps to shape a treatment that is genuinely relevant to where you are in your training cycle, rather than a generic approach.
+            Every session at Range and Restore in Archway begins with a brief assessment. For runners, this typically involves looking at your training history, recent mileage, any areas of concern, and your upcoming race schedule. This helps to shape a <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports massage treatment</Link> that is genuinely relevant to where you are in your training cycle, rather than a generic approach.
           </p>
 
           <p>
             Sessions can range from 30 to 90 minutes depending on your needs. A 30-minute session can be highly effective for a focused follow-up or targeted area, while a 90-minute session allows for a thorough full-body assessment and treatment — ideal in the weeks leading up to a major race or during a high-intensity training block.
           </p>
+
+          <p>
+            Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydrated before and after your session</Link> will also help your muscles respond better to treatment and recover faster between runs.
+          </p>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recover faster, train harder</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Race stronger, recover faster</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Whether you are training for a marathon or just starting out, professional sports massage can make all the difference. Book your session in Archway now.
+            Pre-race preparation, post-race recovery, or ongoing maintenance — book your runner&apos;s sports massage at Range and Restore in Archway, North London.
           </p>
-          <BookingButton label="Book Your Session" />
+          <BookingButton label="Book Your Runner's Massage" />
         </div>
 
         <div className="mt-10 border-t border-page pt-8">
