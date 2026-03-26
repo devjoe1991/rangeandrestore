@@ -116,7 +116,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            New client offer — mention this site and get <span className="text-[#1a3d3a]">10% off your first session</span>
+            New client offer: 10% off your first session. Ideal for back pain, neck tension and sports recovery.
           </span>
           <a
             href={BOOKING_URLS.general}
