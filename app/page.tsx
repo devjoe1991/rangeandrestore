@@ -175,8 +175,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. BUNDLE PRICING ────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="bundles-heading">
+      {/* ── 2. SERVICES ──────────────────────────────────────── */}
+      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-label="Treatments">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
+            {services.map((s) => <ServiceCard key={s.href} s={s} />)}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/services" className="btn btn-primary text-sm">View all services</Link>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ── 2.5 PROMO BLOCK ───────────────────────────────────── */}
+      <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="text-center sm:text-left">
+            <h2 className="text-2xl font-black text-[#1a2330] tracking-tight mb-1">Give the gift of movement</h2>
+            <p className="text-[#1a3d3a] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
+          </div>
+          <Link href="/gift-cards" className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all shadow-sm">
+            Buy a Gift Card
+          </Link>
+        </div>
+      </section>
+
+      {/* ── 3. BUNDLE PRICING ────────────────────────────────── */}
+      <section className="section bg-page" aria-labelledby="bundles-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="eyebrow block mb-2" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Better Value</span>
@@ -192,7 +219,7 @@ export default function HomePage() {
             {bundles.map((b) => (
               <div key={b.label}
                 className={`rounded-2xl p-5 text-center relative flex flex-col card-lift border-2 ${
-                  b.popular ? 'bg-[#7dd94a] border-white' : 'bg-white border-white'
+                  b.popular ? 'bg-[#7dd94a] border-[#122a28]/15' : 'bg-white border-[#1a3d3a]/12'
                 }`}>
                 {b.popular && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#122a28] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
@@ -235,33 +262,6 @@ export default function HomePage() {
 
           <div className="text-center">
             <Link href="/services/massage-bundles" className="btn btn-primary text-sm">See all bundle options</Link>
-          </div>
-        </div>
-      </section>
-
-
-      {/* ── 2.5 PROMO BLOCK ───────────────────────────────────── */}
-      <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] tracking-tight mb-1">Give the gift of movement</h2>
-            <p className="text-[#1a3d3a] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
-          </div>
-          <Link href="/gift-cards" className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all shadow-sm">
-            Buy a Gift Card
-          </Link>
-        </div>
-      </section>
-
-      {/* ── 3. SERVICES ──────────────────────────────────────── */}
-      <section className="section bg-page" aria-label="Treatments">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
-            {services.map((s) => <ServiceCard key={s.href} s={s} />)}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link href="/services" className="btn btn-primary text-sm">View all services</Link>
           </div>
         </div>
       </section>
@@ -436,7 +436,6 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
   return (
     <div
       className="group card-lift rounded-[20px] overflow-hidden flex flex-col cursor-pointer bg-card shadow-sm h-full"
-      style={{ border: '2px solid #1a3d3a' }}
     >
       {/* Top accent bar */}
       <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
