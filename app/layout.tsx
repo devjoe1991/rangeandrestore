@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Range and Restore | Sports Massage Archway London',
   description: 'Expert sports massage, deep tissue and soft tissue remedial therapy in Archway, North London. Book your session with Carlos Bonvicine today.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://rangeandrestore.co.uk'),
+  verification: {
+    google: 'v6gvLdaIjWXEPWw_kZ7bHkPrruqxtzdGeZZ2-ZuboYE',
+  },
 }
 
 export default function RootLayout({
