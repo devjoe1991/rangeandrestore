@@ -2,18 +2,22 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, personSchema, buildBreadcrumbs } from '@/lib/seo'
 import { RELIABLE_SCAN_URL } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Carlos Bonvicine – BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist, Archway',
+  title: 'Carlos Bonvicine | Sports Massage Therapist Archway',
   description: 'Range and Restore is led by Carlos Bonvicine, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner in Archway, North London. Five-star rated, assessment-led, and built around your results.',
   path: '/about',
 })
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'About', path: '/about' }])
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist in Archway – Carlos Bonvicine</h1>

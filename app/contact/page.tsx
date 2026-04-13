@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BUSINESS, BOOKING_URLS } from '@/lib/constants'
 import { ContactForm } from './ContactForm'
 
@@ -10,9 +10,41 @@ export const metadata: Metadata = buildMetadata({
   path: '/contact',
 })
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'Contact', path: '/contact' }])
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Range and Restore Sports Massage',
+  url: 'https://rangeandrestore.co.uk',
+  telephone: '+447890716154',
+  email: 'carlos@rangeandrestore.co.uk',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '130 Junction Road',
+    addressLocality: 'Archway',
+    addressRegion: 'London',
+    postalCode: 'N19 5LB',
+    addressCountry: 'GB',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+447890716154',
+    contactType: 'reservations',
+    availableLanguage: 'English',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '20:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday','Sunday'], opens: '09:00', closes: '17:00' },
+  ],
+}
+
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
+
       {/* ── Hero — building photo background ─────────────────── */}
       <div className="relative py-20 lg:py-28 overflow-hidden">
         <Image

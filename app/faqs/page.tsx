@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import FaqAccordion from './FaqAccordion'
 import { faqs } from './data'
 
@@ -21,10 +21,13 @@ const faqSchema = {
   })),
 }
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'FAQs', path: '/faqs' }])
+
 export default function FAQsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       {/* Header */}
       <div className="bg-page-sage py-12 lg:py-16">

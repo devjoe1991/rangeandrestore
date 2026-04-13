@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Achilles Tendinitis Massage Recovery | Archway London',
   description: 'Achilles tendinitis treatment through sports massage and soft tissue therapy in Archway, North London. Recover faster with targeted clinical treatment.',
   path: '/blog/achilles-tendinitis-recovery-massage',
+  author: true,
 })
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Blog', path: '/blog' },
+  { name: 'Achilles Tendinitis Recovery', path: '/blog/achilles-tendinitis-recovery-massage' },
+])
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -37,6 +43,7 @@ export default function AchillesTendinitisPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

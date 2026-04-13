@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -9,6 +9,11 @@ export const metadata: Metadata = buildMetadata({
   description: 'Extended 2-hour assessment-led massage for chronic pain, multiple problem areas, and comprehensive recovery in Archway, North London. Book with Carlos Bonvicine.',
   path: '/services/2-hour-pain-relief-massage',
 })
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Services', path: '/services' },
+  { name: '2-Hour Pain Relief Massage', path: '/services/2-hour-pain-relief-massage' },
+])
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -37,6 +42,7 @@ export default function TwoHourPainReliefPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -44,9 +50,9 @@ export default function TwoHourPainReliefPage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             2-Hour Pain Relief Massage
           </h1>
-          <h2 className="text-2xl lg:text-3xl font-semibold text-page-muted">
+          <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
             Deep, comprehensive treatment for lasting relief
-          </h2>
+          </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.twoHourRelief} label="Book Now" />
           </div>

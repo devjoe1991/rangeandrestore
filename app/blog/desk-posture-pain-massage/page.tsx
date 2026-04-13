@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Desk Posture Pain Relief | Massage Therapy Archway',
   description: 'Desk posture causing neck, shoulder and back pain? Targeted massage therapy in Archway, North London reverses postural damage and delivers lasting relief.',
   path: '/blog/desk-posture-pain-massage',
+  author: true,
 })
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Blog', path: '/blog' },
+  { name: 'Desk Posture Pain', path: '/blog/desk-posture-pain-massage' },
+])
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -37,6 +43,7 @@ export default function DeskPosturePainMassagePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

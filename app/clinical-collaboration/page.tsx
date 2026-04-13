@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Clinical Collaboration – Archway Massage & Ultrasound',
@@ -9,9 +9,36 @@ export const metadata: Metadata = buildMetadata({
   path: '/clinical-collaboration',
 })
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'Clinical Collaboration', path: '/clinical-collaboration' }])
+
+const collaborationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: 'Range and Restore Sports Massage',
+  url: 'https://rangeandrestore.co.uk',
+  description: 'Range and Restore Sports Massage operates alongside Reliable Scan, a private diagnostic ultrasound clinic in Archway. Coordinated assessment and treatment in one location.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '130 Junction Road',
+    addressLocality: 'Archway',
+    addressRegion: 'London',
+    postalCode: 'N19 5LB',
+    addressCountry: 'GB',
+  },
+  department: {
+    '@type': 'MedicalBusiness',
+    name: 'Reliable Scan',
+    url: 'https://reliablescanltd.com/',
+    description: 'Private diagnostic ultrasound clinic led by GMC-registered doctors.',
+  },
+}
+
 export default function ClinicalCollaborationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collaborationSchema) }} />
+
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Clinical Collaboration</h1>

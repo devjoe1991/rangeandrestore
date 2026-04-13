@@ -2,15 +2,21 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Marathon Massage in Archway | Pre & Post London Marathon Recovery',
   description: 'Marathon preparation and recovery massage in Archway, North London. Pre-marathon and post-marathon sports massage from a therapist with 4 years of hands-on marathon event experience.',
   path: '/blog/marathon-sports-massage-archway',
+  author: true,
 })
 
 export const revalidate = 3600
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Blog', path: '/blog' },
+  { name: 'Marathon Massage Archway', path: '/blog/marathon-sports-massage-archway' },
+])
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -55,6 +61,7 @@ export default async function MarathonSportsMassageArchwayPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

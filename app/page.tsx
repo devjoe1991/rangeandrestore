@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
-import { businessSchema, buildMetadata } from '@/lib/seo'
+import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,6 +111,7 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
 
       {/* ── OFFER BANNER ─────────────────────────────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">

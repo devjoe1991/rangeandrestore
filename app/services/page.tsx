@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -62,9 +62,31 @@ const services = [
   },
 ]
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'Services', path: '/services' }])
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Sports Massage Services in Archway, North London',
+  description: 'Expert sports massage, deep tissue therapy, MLD and relaxation massage in Archway, North London.',
+  url: 'https://rangeandrestore.co.uk/services',
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: services.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.title,
+      url: `https://rangeandrestore.co.uk${s.href}`,
+    })),
+  },
+}
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+
       <div className="relative bg-[#1a3d3a] py-16 lg:py-24 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"

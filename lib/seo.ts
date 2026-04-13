@@ -1,18 +1,20 @@
 import type { Metadata } from 'next'
 
-const SITE_NAME = 'Range and Restore'
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://rangeandrestore.co.uk'
+export const SITE_NAME = 'Range and Restore'
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://rangeandrestore.co.uk'
 
 export function buildMetadata({
   title,
   description,
   path = '/',
   image,
+  author,
 }: {
   title: string
   description: string
   path?: string
   image?: string
+  author?: boolean
 }): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`
   const url = `${BASE_URL}${path}`
@@ -22,6 +24,7 @@ export function buildMetadata({
     title: fullTitle,
     description,
     metadataBase: new URL(BASE_URL),
+    ...(author ? { authors: [{ name: 'Carlos Bonvicine', url: `${BASE_URL}/about` }] } : {}),
     alternates: {
       canonical: url,
     },
@@ -41,6 +44,59 @@ export function buildMetadata({
       images: [ogImage],
     },
   }
+}
+
+export function buildBreadcrumbs(items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+      ...items.map((item, i) => ({
+        '@type': 'ListItem',
+        position: i + 2,
+        name: item.name,
+        item: `${BASE_URL}${item.path}`,
+      })),
+    ],
+  }
+}
+
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: BASE_URL,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Range and Restore Sports Massage',
+    url: BASE_URL,
+  },
+}
+
+export const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Carlos Bonvicine',
+  jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+  description: 'Carlos Bonvicine is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified Manual Lymphatic Drainage (MLD) practitioner based in Archway, North London.',
+  url: `${BASE_URL}/about`,
+  image: 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no',
+  worksFor: {
+    '@type': 'LocalBusiness',
+    name: 'Range and Restore Sports Massage',
+    url: BASE_URL,
+  },
+  knowsAbout: ['Sports Massage', 'Deep Tissue Massage', 'Manual Lymphatic Drainage', 'Soft Tissue Therapy', 'Injury Rehabilitation', 'Clinical Massage', 'Cupping Therapy'],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Qualification', name: 'BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapy' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Certified Manual Lymphatic Drainage (MLD) Practitioner' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Certified Cupping Therapy Practitioner' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/rangeandrestore',
+    'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
+  ],
 }
 
 export const businessSchema = {

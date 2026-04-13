@@ -1,18 +1,15 @@
 import type { Metadata } from 'next'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import Link from 'next/link'
 import { GalleryClient } from './GalleryClient'
 import type { GalleryImage } from './GalleryClient'
 
-export const metadata: Metadata = {
-  ...buildMetadata({
-    title: 'Gallery – Range and Restore Sports Massage Archway',
-    description: 'See inside Range and Restore Sports Massage in Archway, North London. Real clinic photos, treatment sessions and the professional environment behind every appointment with Carlos Bonvicine.',
-    path: '/gallery',
-  }),
-  robots: { index: false },
-}
+export const metadata: Metadata = buildMetadata({
+  title: 'Gallery – Range and Restore Sports Massage Archway',
+  description: 'See inside Range and Restore Sports Massage in Archway, North London. Real clinic photos, treatment sessions and the professional environment behind every appointment with Carlos Bonvicine.',
+  path: '/gallery',
+})
 
 export const revalidate = 3600 // refresh photos every hour
 
@@ -57,11 +54,29 @@ async function getPhotos(): Promise<GalleryImage[]> {
   }
 }
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'Gallery', path: '/gallery' }])
+
+const gallerySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageGallery',
+  name: 'Range and Restore Sports Massage Gallery',
+  description: 'Real clinic photos from Range and Restore in Archway, North London — treatment sessions, the professional clinic environment, and the hands-on approach.',
+  url: 'https://rangeandrestore.co.uk/gallery',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Range and Restore Sports Massage',
+    url: 'https://rangeandrestore.co.uk',
+  },
+}
+
 export default async function GalleryPage() {
   const images = await getPhotos()
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }} />
+
       {/* ── Hero ─────────────────────────────────────────────── */}
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

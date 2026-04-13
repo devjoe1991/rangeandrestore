@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -44,15 +44,40 @@ const bundles = [
   },
 ]
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'Services', path: '/services' }, { name: 'Massage Bundles', path: '/services/massage-bundles' }])
+
+const offersSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'Massage Bundle Offers',
+  description: 'Save with 5 or 10 session massage bundles at Range and Restore in Archway, London.',
+  url: 'https://rangeandrestore.co.uk/services/massage-bundles',
+  itemListElement: bundles.map((b) => ({
+    '@type': 'Offer',
+    name: b.title,
+    price: b.price.replace('£', ''),
+    priceCurrency: 'GBP',
+    availability: 'https://schema.org/InStock',
+    validFrom: '2026-01-01',
+    offeredBy: {
+      '@type': 'LocalBusiness',
+      name: 'Range and Restore Sports Massage',
+    },
+  })),
+}
+
 export default function MassageBundlesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offersSchema) }} />
+
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">Massage Bundle Offers</h1>
-          <h2 className="text-2xl lg:text-3xl font-semibold text-page-muted">
+          <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
             Invest in Your Long-Term Wellbeing
-          </h2>
+          </p>
           <p className="mt-4 text-lg text-page-muted max-w-2xl">
             Regular massage is one of the most effective investments you can make in your health, recovery, and quality of life. Our bundle packages make consistent treatment more accessible and affordable, so you can commit to your wellbeing without compromise.
           </p>

@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Hydration and Muscle Health | Recovery Guide',
   description: 'Water makes up 75% of muscle tissue. Learn why hydration is essential for muscle function, injury prevention and getting more from your massage treatment.',
   path: '/blog/hydration-and-muscle-health',
+  author: true,
 })
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Blog', path: '/blog' },
+  { name: 'Hydration and Muscle Health', path: '/blog/hydration-and-muscle-health' },
+])
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -37,6 +43,7 @@ export default function HydrationMuscleHealthPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

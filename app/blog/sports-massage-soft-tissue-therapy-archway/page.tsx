@@ -2,13 +2,19 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Archway London | Injury Recovery & Performance Therapy',
   description: 'Discover how sports massage and soft tissue remedial therapy in Archway, North London help with recovery, injury prevention, mobility and performance for runners, cyclists and active individuals.',
   path: '/blog/sports-massage-soft-tissue-therapy-archway',
+  author: true,
 })
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Blog', path: '/blog' },
+  { name: 'Sports Massage & Soft Tissue Therapy', path: '/blog/sports-massage-soft-tissue-therapy-archway' },
+])
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -38,6 +44,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

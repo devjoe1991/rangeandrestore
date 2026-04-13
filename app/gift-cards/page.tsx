@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -8,9 +8,30 @@ export const metadata: Metadata = buildMetadata({
   path: '/gift-cards',
 })
 
+const breadcrumbs = buildBreadcrumbs([{ name: 'Gift Cards', path: '/gift-cards' }])
+
+const giftCardSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Range and Restore Gift Card',
+  description: 'Gift card redeemable against any sports massage or soft tissue therapy treatment at Range and Restore in Archway, North London. Valid for 12 months.',
+  url: 'https://rangeandrestore.co.uk/gift-cards',
+  brand: { '@type': 'Organization', name: 'Range and Restore Sports Massage' },
+  offers: {
+    '@type': 'Offer',
+    url: BOOKING_URLS.giftCards,
+    priceCurrency: 'GBP',
+    availability: 'https://schema.org/InStock',
+  },
+}
+
 export default function GiftCardsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(giftCardSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Gift Cards</h1>

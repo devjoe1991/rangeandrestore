@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -9,6 +9,11 @@ export const metadata: Metadata = buildMetadata({
   description: 'Sports and deep tissue massage for injury recovery, performance support, and muscle relief in Archway, North London. Book with Carlos Bonvicine today.',
   path: '/services/sports-deep-tissue-massage',
 })
+
+const breadcrumbs = buildBreadcrumbs([
+  { name: 'Services', path: '/services' },
+  { name: 'Sports & Deep Tissue Massage', path: '/services/sports-deep-tissue-massage' },
+])
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -37,6 +42,7 @@ export default function SportsDeepTissuePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -44,9 +50,9 @@ export default function SportsDeepTissuePage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports &amp; Deep Tissue Massage in Archway, London
           </h1>
-          <h2 className="text-2xl lg:text-3xl font-semibold text-page-muted">
+          <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
             Sports, Deep Tissue and Soft Tissue Remedial Massage Therapy for Injury Recovery
-          </h2>
+          </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.sportsDeepTissue} label="Book Now" />
           </div>
