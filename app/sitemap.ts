@@ -115,6 +115,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/blog/marathon-sports-massage-archway`,
+      lastModified: new Date('2026-04-13'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/faqs`,
       lastModified,
       changeFrequency: 'monthly',

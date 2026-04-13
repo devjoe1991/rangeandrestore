@@ -10,6 +10,12 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Marathon Massage in Archway: Your Pre and Post Race Recovery Guide',
+    slug: 'marathon-sports-massage-archway',
+    date: '13 April 2026',
+    excerpt: 'Pre-marathon preparation, post-marathon recovery, and everything your muscles need to survive 26.2 miles — from a therapist with 4 years of hands-on marathon event experience in Archway, North London.',
+  },
+  {
     title: 'Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free',
     slug: 'sports-massage-soft-tissue-therapy-archway',
     date: '26 March 2026',
