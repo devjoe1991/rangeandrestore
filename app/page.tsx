@@ -61,6 +61,15 @@ const services = [
 
 const blogPosts = [
   {
+    title:    'Marathon Massage in Archway: Your Pre and Post Race Recovery Guide',
+    href:     '/blog/marathon-sports-massage-archway',
+    date:     '13 Apr 2026',
+    img:      'https://lh3.googleusercontent.com/p/AF1QipPwlk_sqmDIVY-g-_dlBgZ4lW0vG1R-m6SyKK0O=s680-w680-h510-rw',
+    imgAlt:   'Carlos Bonvicine providing sports massage at a marathon event — Range and Restore, Archway, North London',
+    category: 'Marathon',
+    readTime: '6 min read',
+  },
+  {
     title:    'Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free',
     href:     '/blog/sports-massage-soft-tissue-therapy-archway',
     date:     '26 Mar 2026',
@@ -86,15 +95,6 @@ const blogPosts = [
     imgAlt:   'Runner training on a road — sports massage in Archway helps runners recover and prevent injury',
     category: 'Running',
     readTime: '5 min read',
-  },
-  {
-    title:    'Achilles Tendinitis – How Sports Massage Helps Recovery',
-    href:     '/blog/achilles-tendinitis-recovery-massage',
-    date:     '1 Feb 2026',
-    img:      'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80',
-    imgAlt:   'Person stretching their calf and Achilles tendon — sports massage for Achilles tendinitis recovery in North London',
-    category: 'Injury',
-    readTime: '6 min read',
   },
 ]
 

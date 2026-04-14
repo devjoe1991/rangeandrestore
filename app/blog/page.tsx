@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -14,6 +15,7 @@ const posts = [
     slug: 'marathon-sports-massage-archway',
     date: '13 April 2026',
     excerpt: 'Pre-marathon preparation, post-marathon recovery, and everything your muscles need to survive 26.2 miles — from a therapist with 4 years of hands-on marathon event experience in Archway, North London.',
+    image: 'https://lh3.googleusercontent.com/p/AF1QipPwlk_sqmDIVY-g-_dlBgZ4lW0vG1R-m6SyKK0O=s680-w680-h510-rw',
   },
   {
     title: 'Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free',
@@ -61,7 +63,19 @@ export default function BlogPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {posts.map((post) => (
             <article key={post.slug} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              {post.image ? (
+                <Link href={`/blog/${post.slug}`} className="block aspect-[4/3] relative overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                </Link>
+              ) : (
+                <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              )}
               <div className="p-6 flex flex-col flex-grow">
                 <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
                 <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">

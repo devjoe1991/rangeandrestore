@@ -23,7 +23,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Marathon Massage in Archway: Your Pre and Post Race Recovery Guide',
   description: 'Marathon preparation and recovery massage in Archway, North London. Pre-marathon and post-marathon sports massage from a therapist with 4 years of hands-on marathon event experience.',
-  image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg',
+  image: 'https://lh3.googleusercontent.com/p/AF1QipPwlk_sqmDIVY-g-_dlBgZ4lW0vG1R-m6SyKK0O=s680-w680-h510-rw',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -78,6 +78,18 @@ export default async function MarathonSportsMassageArchwayPage() {
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+
+        <div className="mb-10 rounded-2xl overflow-hidden">
+          <Image
+            src="https://lh3.googleusercontent.com/p/AF1QipPwlk_sqmDIVY-g-_dlBgZ4lW0vG1R-m6SyKK0O=s680-w680-h510-rw"
+            alt="Carlos Bonvicine providing sports massage at a marathon event — Range and Restore Sports Massage, Archway, North London"
+            width={680}
+            height={510}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             Marathon season is here. Thousands of runners across London have spent months building mileage, grinding through long runs, and testing their limits. But the training plan only tells half the story. What separates a strong race from a painful one often comes down to what you do with your soft tissue before and after those 26.2 miles.
