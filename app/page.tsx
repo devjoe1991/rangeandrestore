@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { GoogleReviews } from '@/components/GoogleReviews'
+import { FacebookFeed } from '@/components/FacebookFeed'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
@@ -374,6 +375,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── 6.5 RECENT ACTIVITY / SOCIALS ────────────────────── */}
+      <FacebookFeed />
 
       {/* ── 7. FAQs PREVIEW ──────────────────────────────────── */}
       <section className="section bg-page" aria-labelledby="faq-preview-heading">

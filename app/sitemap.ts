@@ -145,6 +145,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/socials`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
+    {
       url: `${BASE_URL}/privacy-policy`,
       lastModified,
       changeFrequency: 'yearly',

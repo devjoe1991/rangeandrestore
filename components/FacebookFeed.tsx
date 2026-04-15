@@ -1,18 +1,45 @@
 'use client'
 
-const PAGE_URL = 'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/'
+import { useEffect, useRef, useState } from 'react'
 
-export function FacebookFeed() {
-  const src =
+const PAGE_URL = 'https://www.facebook.com/profile.php?id=61572962878628'
+
+const MIN_WIDTH = 180
+const MAX_WIDTH = 500
+
+function buildSrc(width: number) {
+  return (
     'https://www.facebook.com/plugins/page.php' +
     '?href=' + encodeURIComponent(PAGE_URL) +
     '&tabs=timeline' +
-    '&width=500' +
+    '&width=' + width +
     '&height=600' +
     '&small_header=false' +
     '&adapt_container_width=true' +
     '&hide_cover=false' +
     '&show_facepile=true'
+  )
+}
+
+export function FacebookFeed() {
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState<number | null>(null)
+
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+
+    const measure = () => {
+      const w = Math.round(el.clientWidth)
+      const clamped = Math.max(MIN_WIDTH, Math.min(MAX_WIDTH, w))
+      setWidth((prev) => (prev === clamped ? prev : clamped))
+    }
+
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   return (
     <section className="section bg-page-alt" aria-labelledby="social-heading">
@@ -28,15 +55,22 @@ export function FacebookFeed() {
         </div>
 
         <div className="flex justify-center">
-          <div className="rounded-2xl overflow-hidden shadow-md w-full max-w-[500px]">
-            <iframe
-              src={src}
-              width="500"
-              height="600"
-              style={{ border: 'none', overflow: 'hidden', display: 'block', width: '100%' }}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              title="Range and Restore Sports Massage on Facebook"
-            />
+          <div
+            ref={wrapRef}
+            className="rounded-2xl overflow-hidden shadow-md w-full max-w-[500px] bg-white"
+            style={{ height: 600 }}
+          >
+            {width !== null && (
+              <iframe
+                key={width}
+                src={buildSrc(width)}
+                width={width}
+                height={600}
+                style={{ border: 'none', overflow: 'hidden', display: 'block', width: '100%', height: '100%' }}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Range and Restore Sports Massage on Facebook"
+              />
+            )}
           </div>
         </div>
 

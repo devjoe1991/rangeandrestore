@@ -132,6 +132,7 @@ export function Footer() {
                 ['Gallery',                '/gallery'],
                 ['Gift Cards',             '/gift-cards'],
                 ['Wellness Hub',           '/blog'],
+                ['Socials',                '/socials'],
                 ['FAQs',                   '/faqs'],
                 ['Contact',                '/contact'],
                 ['Clinical Collaboration', '/clinical-collaboration'],
