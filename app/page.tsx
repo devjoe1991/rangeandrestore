@@ -24,6 +24,13 @@ const services = [
     bookingHref: BOOKING_URLS.sportsDeepTissue,
   },
   {
+    title: 'Cupping + Sports / Deep Tissue Massage',
+    problem: 'Deep-seated tightness or fascial restriction holding you back?',
+    solution: 'Integrated cupping plus sports and deep tissue therapy decompresses fascia, releases adhesions and accelerates recovery.',
+    href: '/services/advanced-cupping-sports-deep-tissue',
+    bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
+  },
+  {
     title: 'Advanced Clinical Massage',
     problem: 'Chronic pain, sciatica or persistent tension?',
     solution: 'Assessment-led clinical massage identifies the root cause — effective for back pain, nerve pain, RSI and postural conditions.',

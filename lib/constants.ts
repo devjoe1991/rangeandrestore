@@ -10,6 +10,8 @@ export const BOOKING_URLS = {
   relaxation: `${BOOKING_BASE}/#/discipline/4/treatment/19`,
   mld: `${BOOKING_BASE}/#/discipline/5/treatment/2`,
   twoHourRelief: `${BOOKING_BASE}/#/discipline/7/treatment/32`,
+  // TODO: replace with Jane discipline/treatment IDs for the new cupping service once available
+  cuppingSportsDeepTissue: `${BOOKING_BASE}/#/list`,
   giftCards: `${BOOKING_BASE}/online_gift_cards/new`,
 } as const
 
@@ -29,6 +31,7 @@ export const NAV_ITEMS = [
     href: '/services',
     children: [
       { label: 'Sports & Deep Tissue Massage', href: '/services/sports-deep-tissue-massage' },
+      { label: 'Cupping + Sports Massage', href: '/services/advanced-cupping-sports-deep-tissue' },
       { label: 'Advanced Clinical Massage', href: '/services/advanced-clinical-massage' },
       { label: 'Back & Neck Pain MOT', href: '/services/back-neck-pain-mot' },
       { label: 'Relaxation Massage', href: '/services/relaxation-restorative-massage' },

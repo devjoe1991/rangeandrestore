@@ -163,6 +163,7 @@ export const businessSchema = {
   ],
   makesOffer: [
     { '@type': 'Offer', name: 'Sports & Deep Tissue Massage', description: 'Targeted sports and deep tissue massage for injury recovery, muscle tension and performance support. 30, 60 or 90 minutes.' },
+    { '@type': 'Offer', name: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage', description: 'Integrated cupping therapy combined with sports and deep tissue massage \u2014 static and dynamic cupping, myofascial release and deep tissue work for chronic tension, fascial restriction and recovery. 30, 60 or 90 minutes.' },
     { '@type': 'Offer', name: 'Advanced Clinical Massage', description: 'Assessment-led clinical massage for chronic pain, sciatica, RSI, tension headaches and complex postural conditions.' },
     { '@type': 'Offer', name: 'Back & Neck Pain MOT', description: 'Focused assessment and hands-on treatment for persistent back pain, neck pain and desk-related postural strain.' },
     { '@type': 'Offer', name: 'Manual Lymphatic Drainage (MLD)', description: 'Certified MLD for post-surgery recovery, lymphoedema, swelling and immune support.' },

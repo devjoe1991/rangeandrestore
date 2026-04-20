@@ -19,6 +19,13 @@ const services = [
     duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
   },
   {
+    title: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage',
+    href: '/services/advanced-cupping-sports-deep-tissue',
+    bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
+    description: 'Integrated cupping therapy combined with sports and deep tissue massage — targets deep muscle tension, fascial restrictions, and long-standing adhesions.',
+    duration: '30 min – £60  ·  60 min – £85  ·  90 min – £125',
+  },
+  {
     title: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
     href: '/services/advanced-clinical-massage',
     bookingHref: BOOKING_URLS.advancedClinical,
