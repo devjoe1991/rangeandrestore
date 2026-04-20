@@ -11,6 +11,13 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'How Sports Massage Helps Office Workers in Archway, North London',
+    slug: 'office-worker-massage-archway',
+    date: '20 April 2026',
+    excerpt: 'Long hours at a desk, daily commutes, and late-night laptop sessions build up a relentless load on the body. Targeted sports massage and soft tissue therapy in Archway help office workers and commuters move and feel better.',
+    image: 'https://lh3.googleusercontent.com/p/AF1QipMeGsB5EWhgxJyZ3DNekd_e1muf6vhA700DGX9t=w1200',
+  },
+  {
     title: 'Marathon Massage in Archway: Your Pre and Post Race Recovery Guide',
     slug: 'marathon-sports-massage-archway',
     date: '13 April 2026',
