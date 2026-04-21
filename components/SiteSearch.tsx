@@ -13,12 +13,12 @@ type SearchItem = {
 
 const SEARCH_INDEX: SearchItem[] = [
   // Services
-  { title: 'Sports & Deep Tissue Massage', description: 'Muscle tension, runner\'s knee, shoulder strain, injury recovery', href: '/services/sports-deep-tissue-massage', group: 'Services', keywords: ['sports', 'deep tissue', 'muscle', 'injury', 'runner', 'shoulder', 'knee', 'tension', 'athletic'] },
-  { title: 'Advanced Clinical Massage', description: 'Chronic pain, sciatica, RSI, tension headaches', href: '/services/advanced-clinical-massage', group: 'Services', keywords: ['clinical', 'chronic', 'pain', 'sciatica', 'rsi', 'headache', 'posture', 'nerve'] },
   { title: 'Back & Neck Pain MOT', description: 'Back pain, neck tension, desk posture, stiffness', href: '/services/back-neck-pain-mot', group: 'Services', keywords: ['back', 'neck', 'posture', 'desk', 'spine', 'stiff', 'pain', 'office'] },
-  { title: 'Relaxation Massage', description: 'Stress relief, burnout, calming treatment', href: '/services/relaxation-restorative-massage', group: 'Services', keywords: ['relax', 'stress', 'burnout', 'calm', 'restore', 'gentle', 'unwind'] },
-  { title: 'Manual Lymphatic Drainage (MLD)', description: 'Post-surgery swelling, lymphoedema, recovery', href: '/services/manual-lymphatic-drainage', group: 'Services', keywords: ['mld', 'lymphatic', 'drainage', 'swelling', 'surgery', 'lymphoedema', 'oedema', 'immune'] },
+  { title: 'Advanced Clinical Massage', description: 'Chronic pain, sciatica, RSI, tension headaches', href: '/services/advanced-clinical-massage', group: 'Services', keywords: ['clinical', 'chronic', 'pain', 'sciatica', 'rsi', 'headache', 'posture', 'nerve'] },
+  { title: 'Sports & Deep Tissue Massage', description: 'Muscle tension, runner\'s knee, shoulder strain, injury recovery', href: '/services/sports-deep-tissue-massage', group: 'Services', keywords: ['sports', 'deep tissue', 'muscle', 'injury', 'runner', 'shoulder', 'knee', 'tension', 'athletic'] },
   { title: '2-Hour Pain Relief Massage', description: 'Multiple problem areas, extended treatment', href: '/services/2-hour-pain-relief-massage', group: 'Services', keywords: ['2 hour', 'two hour', 'extended', 'multiple', 'long', 'comprehensive'] },
+  { title: 'Manual Lymphatic Drainage (MLD)', description: 'Post-surgery swelling, lymphoedema, recovery', href: '/services/manual-lymphatic-drainage', group: 'Services', keywords: ['mld', 'lymphatic', 'drainage', 'swelling', 'surgery', 'lymphoedema', 'oedema', 'immune'] },
+  { title: 'Relaxation Massage', description: 'Stress relief, burnout, calming treatment', href: '/services/relaxation-restorative-massage', group: 'Services', keywords: ['relax', 'stress', 'burnout', 'calm', 'restore', 'gentle', 'unwind'] },
   { title: 'Massage Bundle Offers', description: 'Multi-session packages, save money', href: '/services/massage-bundles', group: 'Services', keywords: ['bundle', 'package', 'save', 'discount', 'sessions', 'buy', 'value'] },
   // Blog
   { title: 'Hydration and Muscle Health', description: 'Why water matters for muscle recovery and massage', href: '/blog/hydration-and-muscle-health', group: 'Blog', keywords: ['hydration', 'water', 'muscle', 'health', 'recovery'] },

@@ -17,6 +17,20 @@ export const metadata: Metadata = buildMetadata({
 
 const services = [
   {
+    title: 'Back & Neck Pain MOT',
+    problem: 'Desk-related back pain or a stiff neck?',
+    solution: 'Full postural assessment and focused treatment targeting the exact muscles driving your pain.',
+    href: '/services/back-neck-pain-mot',
+    bookingHref: BOOKING_URLS.backNeckMot,
+  },
+  {
+    title: 'Advanced Clinical Massage',
+    problem: 'Chronic pain, sciatica or persistent tension?',
+    solution: 'Assessment-led clinical massage identifies the root cause — effective for back pain, nerve pain, RSI and postural conditions.',
+    href: '/services/advanced-clinical-massage',
+    bookingHref: BOOKING_URLS.advancedClinical,
+  },
+  {
     title: 'Sports & Deep Tissue Massage',
     problem: 'Training pain or a sports injury that won\'t clear up?',
     solution: 'Targeted deep tissue therapy releases tension, restores movement and gets you back to full training faster.',
@@ -31,25 +45,11 @@ const services = [
     bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
   },
   {
-    title: 'Advanced Clinical Massage',
-    problem: 'Chronic pain, sciatica or persistent tension?',
-    solution: 'Assessment-led clinical massage identifies the root cause — effective for back pain, nerve pain, RSI and postural conditions.',
-    href: '/services/advanced-clinical-massage',
-    bookingHref: BOOKING_URLS.advancedClinical,
-  },
-  {
-    title: 'Back & Neck Pain MOT',
-    problem: 'Desk-related back pain or a stiff neck?',
-    solution: 'Full postural assessment and focused treatment targeting the exact muscles driving your pain.',
-    href: '/services/back-neck-pain-mot',
-    bookingHref: BOOKING_URLS.backNeckMot,
-  },
-  {
-    title: 'Relaxation Massage',
-    problem: 'Burnt out or struggling to switch off?',
-    solution: 'Gentle, pressure-adjusted treatment that calms your nervous system and leaves you genuinely restored.',
-    href: '/services/relaxation-restorative-massage',
-    bookingHref: BOOKING_URLS.relaxation,
+    title: '2-Hour Pain Relief Massage',
+    problem: 'Multiple problem areas that need proper attention?',
+    solution: 'An extended session gives Carlos the time to work through every area properly for deeper, lasting results.',
+    href: '/services/2-hour-pain-relief-massage',
+    bookingHref: BOOKING_URLS.twoHourRelief,
   },
   {
     title: 'Manual Lymphatic Drainage',
@@ -59,11 +59,11 @@ const services = [
     bookingHref: BOOKING_URLS.mld,
   },
   {
-    title: '2-Hour Pain Relief Massage',
-    problem: 'Multiple problem areas that need proper attention?',
-    solution: 'An extended session gives Carlos the time to work through every area properly for deeper, lasting results.',
-    href: '/services/2-hour-pain-relief-massage',
-    bookingHref: BOOKING_URLS.twoHourRelief,
+    title: 'Relaxation Massage',
+    problem: 'Burnt out or struggling to switch off?',
+    solution: 'Gentle, pressure-adjusted treatment that calms your nervous system and leaves you genuinely restored.',
+    href: '/services/relaxation-restorative-massage',
+    bookingHref: BOOKING_URLS.relaxation,
   },
 ]
 

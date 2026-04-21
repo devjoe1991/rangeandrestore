@@ -25,6 +25,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/services/back-neck-pain-mot`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/services/advanced-clinical-massage`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/services/sports-deep-tissue-massage`,
       lastModified,
       changeFrequency: 'monthly',
@@ -37,19 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/services/advanced-clinical-massage`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/back-neck-pain-mot`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/relaxation-restorative-massage`,
+      url: `${BASE_URL}/services/2-hour-pain-relief-massage`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -61,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/services/2-hour-pain-relief-massage`,
+      url: `${BASE_URL}/services/relaxation-restorative-massage`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,

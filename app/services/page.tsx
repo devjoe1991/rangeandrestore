@@ -12,6 +12,20 @@ export const metadata: Metadata = buildMetadata({
 
 const services = [
   {
+    title: 'Back & Neck Pain MOT',
+    href: '/services/back-neck-pain-mot',
+    bookingHref: BOOKING_URLS.backNeckMot,
+    description: 'Focused assessment and treatment for persistent lower back pain, desk-related neck pain, postural issues, and spinal stiffness.',
+    duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
+  },
+  {
+    title: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
+    href: '/services/advanced-clinical-massage',
+    bookingHref: BOOKING_URLS.advancedClinical,
+    description: 'Expert clinical massage for sciatica, chronic neck pain, tension headaches, RSI, and complex postural conditions.',
+    duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
+  },
+  {
     title: 'Sports, Deep Tissue & Soft Tissue Remedial Massage',
     href: '/services/sports-deep-tissue-massage',
     bookingHref: BOOKING_URLS.sportsDeepTissue,
@@ -26,25 +40,11 @@ const services = [
     duration: '30 min – £60  ·  60 min – £85  ·  90 min – £125',
   },
   {
-    title: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
-    href: '/services/advanced-clinical-massage',
-    bookingHref: BOOKING_URLS.advancedClinical,
-    description: 'Expert clinical massage for sciatica, chronic neck pain, tension headaches, RSI, and complex postural conditions.',
-    duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
-  },
-  {
-    title: 'Back & Neck Pain MOT',
-    href: '/services/back-neck-pain-mot',
-    bookingHref: BOOKING_URLS.backNeckMot,
-    description: 'Focused assessment and treatment for persistent lower back pain, desk-related neck pain, postural issues, and spinal stiffness.',
-    duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
-  },
-  {
-    title: 'Relaxation Restorative Massage',
-    href: '/services/relaxation-restorative-massage',
-    bookingHref: BOOKING_URLS.relaxation,
-    description: 'Gentle, calming treatment designed to reduce stress, ease mild tension, and restore your sense of balance.',
-    duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
+    title: '2-Hour Pain Relief Massage',
+    href: '/services/2-hour-pain-relief-massage',
+    bookingHref: BOOKING_URLS.twoHourRelief,
+    description: 'An extended, comprehensive session for complex or long-standing conditions, multiple problem areas, and deeper recovery work.',
+    duration: '2 hours – £170',
   },
   {
     title: 'Manual Lymphatic Drainage (MLD)',
@@ -54,11 +54,11 @@ const services = [
     duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
   },
   {
-    title: '2-Hour Pain Relief Massage',
-    href: '/services/2-hour-pain-relief-massage',
-    bookingHref: BOOKING_URLS.twoHourRelief,
-    description: 'An extended, comprehensive session for complex or long-standing conditions, multiple problem areas, and deeper recovery work.',
-    duration: '2 hours – £170',
+    title: 'Relaxation Restorative Massage',
+    href: '/services/relaxation-restorative-massage',
+    bookingHref: BOOKING_URLS.relaxation,
+    description: 'Gentle, calming treatment designed to reduce stress, ease mild tension, and restore your sense of balance.',
+    duration: '30 min – £50  ·  60 min – £75  ·  90 min – £110',
   },
   {
     title: 'Massage Bundle Offers',
