@@ -13,6 +13,7 @@ export const BOOKING_URLS = {
   // TODO: replace with Jane discipline/treatment IDs for the new cupping service once available
   cuppingSportsDeepTissue: `${BOOKING_BASE}/#/list`,
   giftCards: `${BOOKING_BASE}/online_gift_cards/new`,
+  bundles: `${BOOKING_BASE}/#packages`,
 } as const
 
 export const BUSINESS = {

@@ -107,10 +107,10 @@ const blogPosts = [
 ]
 
 const bundles = [
-  { label: '5 × 60 min', originalPrice: '£425', price: '£350', perSession: '£70/session', saving: 'Saving £75', valid: '6 months' },
-  { label: '10 × 60 min', originalPrice: '£850', price: '£650', perSession: '£65/session', saving: 'Saving £200', valid: '10 months', popular: true },
-  { label: '5 × 90 min', originalPrice: '£625', price: '£500', perSession: '£100/session', saving: 'Saving £125', valid: '6 months' },
-  { label: '10 × 90 min', originalPrice: '£1250', price: '£950', perSession: '£95/session', saving: 'Saving £300', valid: '10 months' },
+  { name: 'Pain Relief & Mobility Plan', label: '5 × 60 min', originalPrice: '£425', price: '£350', perSession: '£70/session', saving: 'Saving £75', valid: '6 months' },
+  { name: 'Pain Relief & Mobility Plan', label: '10 × 60 min', originalPrice: '£850', price: '£650', perSession: '£65/session', saving: 'Saving £200', valid: '12 months', popular: true },
+  { name: 'Advanced Recovery & Performance Plan', label: '5 × 90 min', originalPrice: '£625', price: '£500', perSession: '£100/session', saving: 'Saving £125', valid: '6 months' },
+  { name: 'Advanced Recovery & Performance Plan', label: '10 × 90 min', originalPrice: '£1250', price: '£950', perSession: '£95/session', saving: 'Saving £300', valid: '10 months' },
 ]
 
 export default function HomePage() {
@@ -235,6 +235,9 @@ export default function HomePage() {
                     Best Value
                   </span>
                 )}
+                <p className={`text-[0.7rem] sm:text-xs font-black leading-tight mb-1.5 min-h-[2.5em] ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
+                  {b.name}
+                </p>
                 <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#1a3d3a]/80' : 'text-[#1a3d3a]/60'}`}>
                   {b.label}
                 </p>
@@ -257,14 +260,16 @@ export default function HomePage() {
                 <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-[#1a3d3a]/70' : 'text-[#1a3d3a]/50'}`}>
                   Valid {b.valid}
                 </p>
-                <Link
-                  href="/services/massage-bundles"
+                <a
+                  href={BOOKING_URLS.bundles}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mt-auto text-xs font-bold py-2 px-3 rounded-full transition-all ${
                     b.popular ? 'bg-[#122a28] text-white hover:bg-white hover:text-[#122a28]' : 'bg-[#1a3d3a]/10 text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white'
                   }`}
                 >
-                  View details
-                </Link>
+                  Book now
+                </a>
               </div>
             ))}
           </div>

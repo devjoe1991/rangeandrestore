@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
-import { BUSINESS } from '@/lib/constants'
+import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Bundle Offers – Archway, London N19',
@@ -11,35 +11,35 @@ export const metadata: Metadata = buildMetadata({
 
 const bundles = [
   {
-    title: '5 × 60-Minute Sessions',
+    title: 'Pain Relief & Mobility Plan – 5 × 60-Minute Sessions',
     price: '£350',
-    validity: 'Valid for 6 Months',
+    validity: 'Expires after 6 months',
     saving: 'Save £75',
-    description: 'Perfect for those committing to regular treatment over six months. Five 60-minute sessions provide consistent care to address ongoing muscular tension, manage injury recovery, or maintain the results of previous treatment.',
+    description: 'This 5-session plan is designed to reduce pain, improve mobility, and begin building long-term results through consistent, targeted treatment. Each 60-minute session is tailored to your needs and may include sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, assisted stretching, and aftercare advice.',
     ideal: 'Ideal for: Clients wanting regular maintenance sessions, people managing a specific issue or injury over time, and those looking to build consistent self-care into their routine.',
   },
   {
-    title: '10 × 60-Minute Sessions',
+    title: 'Pain Relief & Mobility Plan – 10 × 60-Minute Sessions',
     price: '£650',
-    validity: 'Valid for 10 Months',
+    validity: 'Expires after 12 months',
     saving: 'Save £200',
-    description: 'The most comprehensive 60-minute bundle for long-term health investment. Ten sessions over ten months ensures consistent, ongoing treatment that delivers lasting improvements to mobility, pain levels, and muscular health.',
+    description: 'This structured 10-session plan is designed to reduce pain, improve mobility, and deliver long-term results through consistent, targeted treatment. Each 60-minute session is tailored to your needs and may include sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, assisted stretching, and aftercare advice.',
     ideal: 'Ideal for: Clients committed to a long-term recovery plan, individuals with chronic pain or recurring injuries, and those who have experienced the benefits of regular massage and want to continue.',
   },
   {
-    title: '5 × 90-Minute Sessions',
+    title: 'Advanced Recovery & Performance Plan – 5 × 90-Minute Sessions',
     price: '£500',
-    validity: 'Valid for 6 Months',
+    validity: 'Expires after 6 months',
     saving: 'Save £125',
-    description: 'Five extended sessions for clients who need more comprehensive treatment time. Each 90-minute session allows for a thorough assessment, full-body or multi-area treatment, and detailed aftercare discussion — the ideal format for active individuals and those with complex needs.',
+    description: 'This 5-session advanced plan is designed for clients who need deeper, more focused treatment to address pain, improve mobility, and accelerate recovery. Each 90-minute session allows for a thorough assessment and extended hands-on work, combining sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, and assisted stretching.',
     ideal: 'Ideal for: Athletes and runners, clients with multiple areas of concern, and those who prefer a more thorough, in-depth session each time.',
   },
   {
-    title: '10 × 90-Minute Sessions',
+    title: 'Advanced Recovery & Performance Plan – 10 × 90-Minute Sessions',
     price: '£950',
-    validity: 'Valid for 10 Months',
+    validity: 'Expires after 10 months',
     saving: 'Save £300',
-    description: 'The ultimate long-term treatment package. Ten 90-minute sessions over ten months delivers the most complete and consistent care available. Whether you\'re managing a complex condition, supporting athletic performance, or investing in your long-term musculoskeletal health, this bundle provides everything you need.',
+    description: 'This 10-session advanced plan is designed for clients committed to achieving long-term pain relief, improved mobility, and optimal physical performance through consistent, high-level treatment. Each 90-minute session provides the time for a full assessment and comprehensive hands-on therapy, combining sports massage, deep tissue work, and advanced soft tissue techniques.',
     ideal: 'Ideal for: Clients with complex or chronic conditions, performance-focused athletes, and those looking for the best possible long-term value and care.',
   },
 ]
@@ -104,16 +104,12 @@ export default function MassageBundlesPage() {
                 </div>
                 <div className="flex-shrink-0 flex flex-col gap-3">
                   <a
-                    href={`tel:${BUSINESS.phoneTel}`}
+                    href={BOOKING_URLS.bundles}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-primary px-6 py-3 text-base whitespace-nowrap text-center"
                   >
-                    Call to Book
-                  </a>
-                  <a
-                    href={`mailto:${BUSINESS.email}`}
-                    className="inline-flex items-center justify-center rounded-md border-2 border-[#1a3d3a] text-page font-semibold px-6 py-3 hover:bg-page-sage transition-colors min-h-[44px] whitespace-nowrap"
-                  >
-                    Email to Enquire
+                    Book Now
                   </a>
                 </div>
               </div>
@@ -126,18 +122,14 @@ export default function MassageBundlesPage() {
           <p className="text-[#1a3d3a] text-lg font-semibold mb-6 max-w-2xl mx-auto">
             Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a
-              href={`tel:${BUSINESS.phoneTel}`}
+              href={BOOKING_URLS.bundles}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary px-8 py-3 text-base"
             >
-              Call to Book
-            </a>
-            <a
-              href={`mailto:${BUSINESS.email}`}
-              className="inline-flex items-center justify-center rounded-md border-2 border-[#d4ecea] text-[#d4ecea] font-semibold px-8 py-3 hover:bg-page-sage hover:text-page transition-colors min-h-[44px]"
-            >
-              Email to Enquire
+              Book Now
             </a>
           </div>
         </div>

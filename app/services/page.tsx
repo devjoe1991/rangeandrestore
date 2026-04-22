@@ -63,7 +63,7 @@ const services = [
   {
     title: 'Massage Bundle Offers',
     href: '/services/massage-bundles',
-    bookingHref: BOOKING_URLS.general,
+    bookingHref: BOOKING_URLS.bundles,
     description: 'Save with 5 or 10 session bundles for 60 or 90 minute treatments. Starting from £350 for 5 × 60 min sessions.',
     duration: 'From £350',
   },
