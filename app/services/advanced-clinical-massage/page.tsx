@@ -48,10 +48,10 @@ export default function AdvancedClinicalMassagePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Clinical Massage · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            Advanced Clinical Massage and Soft Tissue Remedial Therapy
+            Advanced Clinical Massage for Chronic Pain &amp; Complex Conditions in Archway, London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Expert Treatment for Chronic Pain, Postural Issues, and Complex Conditions
+            Dealing with ongoing pain, postural issues or injuries that won&apos;t resolve? This advanced, targeted treatment identifies the root cause and delivers precise hands-on therapy to reduce pain, restore movement and create lasting results.
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.advancedClinical} label="Book Now" />

@@ -48,13 +48,13 @@ export default function SportsDeepTissuePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Sports Massage · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            Sports &amp; Deep Tissue Massage in Archway, London
+            Sports &amp; Deep Tissue Massage in Archway, London for Pain Relief &amp; Faster Recovery
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Sports, Deep Tissue and Soft Tissue Remedial Massage Therapy for Injury Recovery
+            Struggling with back, neck or muscle pain? Targeted treatment designed to relieve tension, restore mobility and help you move and feel better from your very first session.
           </p>
           <div className="mt-6">
-            <BookingButton href={BOOKING_URLS.sportsDeepTissue} label="Book Now" />
+            <BookingButton href={BOOKING_URLS.sportsDeepTissue} label="Book Your Session" />
           </div>
         </div>
       </div>

@@ -48,10 +48,10 @@ export default function BackNeckPainMotPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Remedial Massage · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            Back &amp; Neck Pain MOT – Soft Tissue Therapy Archway
+            Back &amp; Neck Pain MOT – Fix Pain Fast in Archway, London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Back and Neck Pain MOT &ndash; Soft Tissue Remedial Massage Therapy
+            Back, neck or shoulder pain slowing you down? This focused session relieves tension, improves movement and gets you feeling better from your very first visit.
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.backNeckMot} label="Book Now" />

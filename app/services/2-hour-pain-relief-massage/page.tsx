@@ -48,13 +48,13 @@ export default function TwoHourPainReliefPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Extended Treatment · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            2-Hour Pain Relief Massage
+            2-Hour Pain Relief Treatment – For Chronic Pain &amp; Full-Body Reset
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Deep, comprehensive treatment for lasting relief
+            Still dealing with pain that keeps coming back? This extended session works through multiple areas in one visit to reduce deep tension, restore movement and deliver results that shorter sessions often miss.
           </p>
           <div className="mt-6">
-            <BookingButton href={BOOKING_URLS.twoHourRelief} label="Book Now" />
+            <BookingButton href={BOOKING_URLS.twoHourRelief} label="Book 2-Hour Session" />
           </div>
         </div>
       </div>
