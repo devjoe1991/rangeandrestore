@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
 import { FaqAccordion } from '@/components/FaqAccordion'
+import { ComingSoonBadge } from '@/components/ComingSoonBadge'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
-import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Normatec Compression Therapy in Archway London',
@@ -88,7 +87,7 @@ export default function CompressionTherapyPage() {
             Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms. Built for recovery between training sessions, after races, or after a long week on your feet.
           </p>
           <div className="mt-6">
-            <BookingButton href={BOOKING_URLS.compressionFull} label="Book Your Compression Session" />
+            <ComingSoonBadge />
           </div>
         </div>
       </div>
@@ -132,7 +131,7 @@ export default function CompressionTherapyPage() {
                 </div>
               ))}
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">Pricing confirmed at booking. Recovery Suite pricing is being finalised in Jane this month.</p>
+            <p className="text-page-muted text-sm mt-3 italic">Pricing announced at launch.</p>
           </section>
 
           <section>
@@ -234,21 +233,13 @@ export default function CompressionTherapyPage() {
             <FaqAccordion items={faqs} />
           </section>
 
-          {/* CTA */}
+          {/* Coming Soon CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to book your compression session?</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Compression sessions opening soon at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              Recovery Suite booking is opening in Jane this month. Book online or call Carlos directly to schedule.
+              The new Recovery Suite is being built right now. Sauna, compression and full recovery sessions launching soon in Archway, North London.
             </p>
-            <div className="flex flex-row gap-3 flex-wrap">
-              <BookingButton href={BOOKING_URLS.compressionFull} label="Book Online" />
-              <a
-                href={`tel:${BUSINESS.phoneTel}`}
-                className="btn bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all"
-              >
-                Call {BUSINESS.phone}
-              </a>
-            </div>
+            <ComingSoonBadge />
           </section>
 
           <div className="border-t pt-8">

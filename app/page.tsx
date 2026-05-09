@@ -197,18 +197,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2.2 RECOVERY SUITE COMING SOON BANNER ───────────── */}
+      <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
+        <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
+          <span className="text-[#1a2330] text-sm font-bold leading-snug">
+            <span className="font-black">Coming Soon:</span> Our new Advanced Recovery Suite &mdash; sauna, compression and recovery sessions.
+          </span>
+        </div>
+      </div>
+
       {/* ── 2.25 RECOVERY SUITE ─────────────────────────────── */}
       <section className="section bg-[#1a3d3a]" aria-labelledby="recovery-suite-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <span className="inline-block bg-[#7dd94a] text-[#1a2330] text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">
-              New &middot; Now Booking
+            <span className="inline-flex items-center gap-2 bg-[#7dd94a] text-[#1a2330] text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1a2330] animate-pulse" aria-hidden="true" />
+              Coming Soon
             </span>
             <h2 id="recovery-suite-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
-              Introducing the Recovery Suite
+              Coming Soon to Range and Restore &mdash; Our New Advanced Recovery Suite
             </h2>
             <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
-              A dedicated recovery and wellness space alongside the clinic. Hybrid infrared sauna, full body Normatec compression, and recovery packages bookable in one visit.
+              A new dedicated recovery and wellness space is opening at the clinic. Hybrid infrared and traditional sauna, Normatec full-body compression recovery, and recovery-focused wellness and sports recovery sessions. Launching soon at Range and Restore, Archway.
             </p>
           </div>
 
@@ -225,17 +235,20 @@ export default function HomePage() {
                 href: '/recovery-suite/compression-therapy',
               },
               {
-                title: 'Recovery Packages',
-                desc: 'Sauna, compression and sports massage combined in one visit. Best value sequence.',
+                title: 'Recovery Sessions & Packages',
+                desc: 'Standalone sauna, compression or combined recovery sessions, plus full recovery packages with sports massage.',
                 href: '/recovery-suite/recovery-packages',
               },
             ].map((card) => (
               <Link
                 key={card.href}
                 href={card.href}
-                className="group rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#2ab4b8]/30 hover:bg-white/10 hover:border-[#2ab4b8] transition-all card-lift flex flex-col"
+                className="group relative rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#2ab4b8]/30 hover:bg-white/10 hover:border-[#2ab4b8] transition-all card-lift flex flex-col"
               >
-                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 group-hover:text-[#7dd94a] transition-colors">
+                <span className="absolute top-3 right-3 inline-block bg-[#7dd94a] text-[#1a2330] text-[0.55rem] font-black tracking-widest uppercase px-2 py-0.5 rounded-full">
+                  Opening Soon
+                </span>
+                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 pr-20 group-hover:text-[#7dd94a] transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-[#d4ecea]/70 text-xs leading-relaxed flex-1 mb-4">{card.desc}</p>

@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookingButton } from '@/components/BookingButton'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { RecoverySuiteCard } from '@/components/RecoverySuiteCard'
+import { ComingSoonBadge } from '@/components/ComingSoonBadge'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
-import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Suite – Infrared Sauna & Compression Therapy in Archway London',
@@ -70,16 +69,16 @@ export default function RecoverySuitePage() {
           sizes="100vw"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#7dd94a] font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore · Now Booking</p>
+          <p className="text-[#7dd94a] font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore &middot; Coming Soon</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Recovery Suite in Archway, North London</h1>
           <p className="mt-4 text-xl text-[#d4ecea]/90 max-w-2xl">
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
           <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
-            Hybrid infrared sauna, Normatec full body compression and a full range of recovery packages, all bookable in one visit.
+            Hybrid infrared sauna, Normatec full body compression, and a full range of single recovery sessions and recovery packages with sports massage. Launching soon.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <BookingButton href={BOOKING_URLS.general} label="Book a Recovery Session" variant="white" />
+          <div className="mt-6 flex flex-wrap gap-3 items-center">
+            <ComingSoonBadge />
             <Link href="#whats-in-the-suite" className="btn btn-outline-white">Explore the suite</Link>
           </div>
         </div>
@@ -131,12 +130,12 @@ export default function RecoverySuitePage() {
             imageAlt="Normatec 3 full body compression therapy setup at Range and Restore Archway"
           />
           <RecoverySuiteCard
-            title="Recovery Packages"
-            summary="Combine sauna, compression and sports massage in one visit. Packaged pricing for the full sequence, ideal after races, big training blocks or busy weeks."
+            title="Recovery Sessions & Packages"
+            summary="Standalone sauna, compression or combined recovery sessions, plus full recovery packages with sports massage. Pick the level that suits you."
             href="/recovery-suite/recovery-packages"
             // TODO: replace with real photo or composite shot
             image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=75"
-            imageAlt="Recovery packages combining sauna compression and sports massage in Archway"
+            imageAlt="Recovery sessions and packages combining sauna compression and sports massage in Archway"
           />
         </div>
       </div>
@@ -152,9 +151,9 @@ export default function RecoverySuitePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { step: '01', title: 'Pick a single modality', desc: 'Book a sauna or a compression session on its own. Quick to fit in around training or a busy week.' },
-              { step: '02', title: 'Build a combined session', desc: 'Pair sauna and Normatec, or add sports massage to either. The full sequence is bookable in one go.' },
-              { step: '03', title: 'Become a member', desc: 'Recovery memberships for athletes and regulars are coming soon. Get on the list to hear first.' },
+              { step: '01', title: 'Standalone recovery', desc: 'Sauna, compression, or both together. Quick to fit in around training or a busy week, no massage needed.' },
+              { step: '02', title: 'Recovery with massage', desc: 'Add sports massage to your sauna or compression session. The full sequence in one visit.' },
+              { step: '03', title: 'Become a member', desc: 'Recovery memberships for athletes and regulars. Coming soon.' },
             ].map((item) => (
               <div key={item.step} className="bg-page-sage rounded-2xl p-6">
                 <p className="text-[#2ab4b8] font-black text-sm tracking-widest mb-3">{item.step}</p>
@@ -197,22 +196,14 @@ export default function RecoverySuitePage() {
         </div>
       </div>
 
-      {/* Booking note + CTA */}
+      {/* Coming Soon CTA */}
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book a Recovery Session</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">The Recovery Suite is opening soon</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Recovery Suite booking is opening in Jane this month. Book online or call Carlos directly to schedule your session.
+            A new dedicated recovery and wellness space is being built right now at Range and Restore in Archway, North London. Sauna, compression and full recovery sessions launching soon.
           </p>
-          <div className="flex flex-row gap-3 flex-wrap">
-            <BookingButton href={BOOKING_URLS.general} label="Book Online" />
-            <a
-              href={`tel:${BUSINESS.phoneTel}`}
-              className="btn bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all"
-            >
-              Call {BUSINESS.phone}
-            </a>
-          </div>
+          <ComingSoonBadge />
         </section>
       </div>
     </>
