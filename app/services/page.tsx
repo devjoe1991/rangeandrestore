@@ -115,6 +115,14 @@ export default function ServicesPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="mb-8 rounded-2xl border-2 border-[#1a3d3a] bg-page-sage p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+          <div>
+            <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-xs mb-1">New at the Clinic</p>
+            <p className="text-page font-bold leading-snug">Recovery Suite now open. Infrared sauna, Normatec compression and recovery packages alongside your massage.</p>
+          </div>
+          <Link href="/recovery-suite" className="btn btn-primary text-sm whitespace-nowrap">Explore Recovery Suite</Link>
+        </div>
+
         <div className="grid grid-cols-1 gap-6">
           {services.map((service) => (
             <div key={service.href} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>

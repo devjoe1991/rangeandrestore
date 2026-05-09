@@ -197,6 +197,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2.25 RECOVERY SUITE ─────────────────────────────── */}
+      <section className="section bg-[#1a3d3a]" aria-labelledby="recovery-suite-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-[#7dd94a] text-[#1a2330] text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+              New &middot; Now Booking
+            </span>
+            <h2 id="recovery-suite-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+              Introducing the Recovery Suite
+            </h2>
+            <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
+              A dedicated recovery and wellness space alongside the clinic. Hybrid infrared sauna, full body Normatec compression, and recovery packages bookable in one visit.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-7">
+            {[
+              {
+                title: 'Infrared Sauna',
+                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat.',
+                href: '/recovery-suite/infrared-sauna',
+              },
+              {
+                title: 'Compression Therapy',
+                desc: 'Hyperice Normatec 3 Full Body. Pneumatic compression for legs, hips and arms.',
+                href: '/recovery-suite/compression-therapy',
+              },
+              {
+                title: 'Recovery Packages',
+                desc: 'Sauna, compression and sports massage combined in one visit. Best value sequence.',
+                href: '/recovery-suite/recovery-packages',
+              },
+            ].map((card) => (
+              <Link
+                key={card.href}
+                href={card.href}
+                className="group rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#2ab4b8]/30 hover:bg-white/10 hover:border-[#2ab4b8] transition-all card-lift flex flex-col"
+              >
+                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 group-hover:text-[#7dd94a] transition-colors">
+                  {card.title}
+                </h3>
+                <p className="text-[#d4ecea]/70 text-xs leading-relaxed flex-1 mb-4">{card.desc}</p>
+                <span className="text-[#7dd94a] text-xs font-black uppercase tracking-wide inline-flex items-center gap-2">
+                  Learn more <span aria-hidden="true">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/recovery-suite" className="btn bg-[#7dd94a] text-[#1a2330] hover:bg-white text-sm">
+              Explore the Recovery Suite
+            </Link>
+          </div>
+        </div>
+      </section>
+
 
       {/* ── 2.5 PROMO BLOCK ───────────────────────────────────── */}
       <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
