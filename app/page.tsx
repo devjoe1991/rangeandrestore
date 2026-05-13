@@ -201,7 +201,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            <span className="font-black">Coming Soon:</span> Our new Advanced Recovery Suite &mdash; sauna, compression and recovery sessions.
+            <span className="font-black">Coming Soon:</span> Our new Advanced Recovery Suite. Sauna, compression and recovery sessions.
           </span>
         </div>
       </div>
@@ -210,12 +210,8 @@ export default function HomePage() {
       <section className="section bg-[#1a3d3a]" aria-labelledby="recovery-suite-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <span className="inline-flex items-center gap-2 bg-[#7dd94a] text-[#1a2330] text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1a2330] animate-pulse" aria-hidden="true" />
-              Coming Soon
-            </span>
             <h2 id="recovery-suite-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
-              Coming Soon to Range and Restore &mdash; Our New Advanced Recovery Suite
+              Coming Soon to Range and Restore. Our New Advanced Recovery Suite
             </h2>
             <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
               A new dedicated recovery and wellness space is opening at the clinic. Hybrid infrared and traditional sauna, Normatec full-body compression recovery, and recovery-focused wellness and sports recovery sessions. Launching soon at Range and Restore, Archway.
