@@ -151,6 +151,15 @@ export default function SportsDeepTissuePage() {
           </section>
 
           <div className="border-t pt-8">
+            <h3 className="text-lg font-semibold text-page mb-4">Pair this with</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+                → Recovery Packages (Sauna + Compression + Massage)
+              </Link>
+              <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+                → Infrared &amp; Hybrid Sauna
+              </Link>
+            </div>
             <h3 className="text-lg font-semibold text-page mb-4">Related articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">

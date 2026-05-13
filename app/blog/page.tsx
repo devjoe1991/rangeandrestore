@@ -11,6 +11,13 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Sports Massage in Archway, North London: A Local Guide',
+    slug: 'sports-massage-archway-local-guide',
+    date: '9 May 2026',
+    excerpt: 'A North London local guide to sports massage in Archway. Where to book, who it suits, what to look for in a therapist, and how clients across N19, Tufnell Park, Holloway, Highgate and Finsbury Park are using it.',
+    image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg',
+  },
+  {
     title: 'How Sports Massage Helps Office Workers in Archway, North London',
     slug: 'office-worker-massage-archway',
     date: '20 April 2026',
