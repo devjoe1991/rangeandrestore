@@ -73,6 +73,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/recovery-suite`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/recovery-suite/infrared-sauna`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/recovery-suite/compression-therapy`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/recovery-suite/recovery-packages`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/gallery`,
       lastModified,
       changeFrequency: 'monthly',
@@ -125,6 +149,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-04-13'),
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/sports-massage-archway-local-guide`,
+      lastModified: new Date('2026-05-09'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/faqs`,

@@ -111,6 +111,23 @@ export function Footer() {
               ))}
             </ul>
             <div className="mt-5 pt-4 border-t border-[#1a3d3a]/15">
+              <p className="text-[#1a2330] font-extrabold text-sm md:font-bold mb-3 tracking-tight">Recovery Suite</p>
+              <ul className="space-y-1 text-sm text-[#1a3d3a]/90 font-medium">
+                {[
+                  ['Infrared Sauna',        '/recovery-suite/infrared-sauna'],
+                  ['Compression Therapy',   '/recovery-suite/compression-therapy'],
+                  ['Recovery Packages',     '/recovery-suite/recovery-packages'],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <Link href={href} className="hover:text-[#2ab4b8] transition-colors min-h-[36px] flex items-center gap-2">
+                      <span className="text-[#2a7a3a] font-bold text-xs">→</span>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-4 pt-3 border-t border-[#1a3d3a]/15">
               <a
                 href={BOOKING_URLS.general}
                 target="_blank"
@@ -129,6 +146,7 @@ export function Footer() {
             <ul className="space-y-1 text-sm text-[#1a3d3a]/90 font-medium">
               {[
                 ['About Carlos',           '/about'],
+                ['Recovery Suite',         '/recovery-suite'],
                 ['Gallery',                '/gallery'],
                 ['Gift Cards',             '/gift-cards'],
                 ['Wellness Hub',           '/blog'],

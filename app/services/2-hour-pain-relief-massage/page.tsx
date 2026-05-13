@@ -139,6 +139,15 @@ export default function TwoHourPainReliefPage() {
           </section>
 
           <div className="border-t pt-8">
+            <h3 className="text-lg font-semibold text-page mb-4">Pair this with</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+                → Recovery Packages (Sauna + Compression + Massage)
+              </Link>
+              <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+                → Recovery Suite Overview
+              </Link>
+            </div>
             <h3 className="text-lg font-semibold text-page mb-4">Related services</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">

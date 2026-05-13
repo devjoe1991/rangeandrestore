@@ -143,6 +143,11 @@ export default function ManualLymphaticDrainagePage() {
           </section>
 
           <div className="border-t pt-8">
+            <p className="text-page-muted text-sm mb-6 italic">
+              Note: Normatec pneumatic compression in our Recovery Suite is not the same as Manual Lymphatic Drainage. MLD is a clinical hands-on technique for post-surgery recovery and lymphoedema. See
+              {' '}<Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] underline">Compression Therapy</Link>{' '}
+              if you&apos;re looking for general recovery support rather than clinical lymphatic treatment.
+            </p>
             <h3 className="text-lg font-semibold text-page mb-4">Related services</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
