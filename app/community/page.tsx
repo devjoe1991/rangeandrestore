@@ -27,6 +27,8 @@ const partners: Partner[] = [
     headerText: 'Range and Restore × The Dynamic Spud',
     category: 'Archway. Café and Community',
     blurb: 'Range and Restore and The Dynamic Spud bring you good health, real recovery, and hearty, vital Irish food from Dublin to Archway. Two independents looking after the same North London community.',
+    logo: '/the_dynamic_spud_logo.png',
+    logoAlt: 'The Dynamic Spud logo',
     externalUrl: 'https://thedynamicspud.com',
   },
   {
