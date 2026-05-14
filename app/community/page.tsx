@@ -26,8 +26,18 @@ const partners: Partner[] = [
     name: 'Range and Restore × The Dynamic Spud',
     headerText: 'Range and Restore × The Dynamic Spud',
     category: 'Archway. Café and Community',
-    blurb: 'Karen’s independent café in the heart of Archway. Good food, proper coffee, and the kind of place we send clients when they ask where to eat after a session.',
+    blurb: 'Range and Restore and The Dynamic Spud bring you good health, real recovery, and hearty, vital Irish food from Dublin to Archway. Two independents looking after the same North London community.',
     externalUrl: 'https://thedynamicspud.com',
+  },
+  {
+    slug: 'sol-centre',
+    name: 'Range and Restore × Sol Centre',
+    headerText: 'Range and Restore × Sol Centre',
+    category: 'Archway. Yoga, Sauna and Community',
+    blurb: 'Range and Restore and Sol Centre bring you health and wellbeing in Archway. Movement, rest and recovery under one community, from the yoga mat on Fairbridge Road to the treatment room on Junction Road.',
+    logo: '/sol-centre-logo.svg',
+    logoAlt: 'Sol Centre logo',
+    externalUrl: 'https://www.sol-centre.co.uk',
   },
 ]
 
