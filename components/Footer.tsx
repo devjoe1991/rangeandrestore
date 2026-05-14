@@ -151,6 +151,7 @@ export function Footer() {
                 ['Gift Cards',             '/gift-cards'],
                 ['Wellness Hub',           '/blog'],
                 ['Our Archway Community',  '/community'],
+                ['Press & Media',          '/press'],
                 ['Socials',                '/socials'],
                 ['FAQs',                   '/faqs'],
                 ['Contact',                '/contact'],
