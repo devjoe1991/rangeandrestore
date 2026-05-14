@@ -97,7 +97,7 @@ export default function CommunityPage() {
             Our hub on Junction Road is a place you can be one hundred percent confident in. Somewhere your body can rest, restore and recover properly. Local business owners talk about us, recommend us, and collaborate with us. We&apos;ve become a staple in the Archway and North London community, a household name deep rooted in the local bars, cafés, restaurants and studios that make this part of the city what it is.
           </p>
           <p className="text-lg text-page-muted font-medium">
-            If you&apos;re a local independent, or press looking to cover what&apos;s happening on Junction Road, please reach out.
+            If you&apos;re a local independent, please reach out. <Link href="/press" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] font-semibold">Press, podcast and media enquiries have their own page</Link>.
           </p>
         </div>
       </div>
@@ -123,16 +123,24 @@ export default function CommunityPage() {
         </p>
 
         <div className="mt-10 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Local independent or press? Get in touch</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Local independent? Get in touch</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6 max-w-2xl">
-            We collaborate with independents across Archway, Tufnell Park, Holloway, Highgate and North London. Honest referrals, mutual support, real trade going both ways. If you run a local business, or you&apos;re covering what&apos;s happening on Junction Road, we&apos;d love to hear from you.
+            We collaborate with independents across Archway, Tufnell Park, Holloway, Highgate and North London. Honest referrals, mutual support, real trade going both ways. If you run a local business, we&apos;d love to hear from you.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
-          >
-            Reach out <span aria-hidden="true">→</span>
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+            >
+              Reach out <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="/press"
+              className="inline-flex items-center gap-2 bg-white text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a]"
+            >
+              Press &amp; media <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </div>
     </>
