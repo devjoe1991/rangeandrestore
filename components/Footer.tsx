@@ -150,6 +150,7 @@ export function Footer() {
                 ['Gallery',                '/gallery'],
                 ['Gift Cards',             '/gift-cards'],
                 ['Wellness Hub',           '/blog'],
+                ['Our Archway Community',  '/community'],
                 ['Socials',                '/socials'],
                 ['FAQs',                   '/faqs'],
                 ['Contact',                '/contact'],

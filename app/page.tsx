@@ -69,11 +69,20 @@ const services = [
 
 const blogPosts = [
   {
+    title:    'Faster Recovery with Normatec Compression, Now in Archway',
+    href:     '/blog/normatec-full-body-compression-recovery-archway',
+    date:     '13 May 2026',
+    img:      '/normatec-full-body-compression-recovery-archway-north-london.png',
+    imgAlt:   'Hyperice Normatec 3 Full Body pneumatic compression now in the Recovery Suite at Range and Restore, Archway, North London',
+    category: 'Recovery Suite',
+    readTime: '8 min read',
+  },
+  {
     title:    'Marathon Massage in Archway: Your Pre and Post Race Recovery Guide',
     href:     '/blog/marathon-sports-massage-archway',
     date:     '13 Apr 2026',
     img:      'https://lh3.googleusercontent.com/p/AF1QipPwlk_sqmDIVY-g-_dlBgZ4lW0vG1R-m6SyKK0O=s680-w680-h510-rw',
-    imgAlt:   'Carlos Bonvicine providing sports massage at a marathon event — Range and Restore, Archway, North London',
+    imgAlt:   'Carlos Bonvicine providing sports massage at a marathon event, Range and Restore, Archway, North London',
     category: 'Marathon',
     readTime: '6 min read',
   },
