@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={dmSans.variable} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Header />
         <main id="main-content">{children}</main>
