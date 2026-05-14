@@ -41,6 +41,16 @@ const partners: Partner[] = [
     logoAlt: 'Sol Centre logo',
     externalUrl: 'https://www.sol-centre.co.uk',
   },
+  {
+    slug: 'reliable-scan',
+    name: 'Range and Restore × Reliable Scan',
+    headerText: 'Range and Restore × Reliable Scan',
+    category: 'Archway. Same Building, 130 Junction Road',
+    blurb: 'Range and Restore and Reliable Scan share the same building at 130 Junction Road. Private diagnostic ultrasound and specialist sports and recovery therapy under one roof, a genuine healthcare hub for Archway.',
+    logo: '/Reliabale-scan.webp',
+    logoAlt: 'Reliable Scan logo',
+    externalUrl: 'https://reliablescanltd.com',
+  },
 ]
 
 const breadcrumbs = buildBreadcrumbs([
