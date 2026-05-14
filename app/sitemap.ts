@@ -199,6 +199,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${BASE_URL}/community/reliable-scan`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/socials`,
       lastModified,
       changeFrequency: 'weekly',
