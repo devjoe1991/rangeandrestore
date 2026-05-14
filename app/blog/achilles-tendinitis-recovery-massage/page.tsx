@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -136,14 +136,47 @@ export default function AchillesTendinitisPage() {
           <p>
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to rule out more serious pathology, this can be arranged within the same building.
           </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find Achilles tendinitis treatment near you in North London</h2>
+
+          <p>
+            If you have been searching &ldquo;Achilles tendinitis massage near me&rdquo;, &ldquo;Achilles pain treatment North London&rdquo;, &ldquo;runner Achilles therapist Archway&rdquo;, &ldquo;deep tissue massage for Achilles tendinitis London&rdquo; or &ldquo;sports massage Achilles N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
+          </p>
+
+          <p>
+            That covers Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Stroud Green, Muswell Hill, Islington, Camden, Kentish Town, Belsize Park and the wider North London catchment. Range and Restore is the local option for runners and active clients across all of those postcodes who do not want to trek into central London for proper hands-on Achilles treatment.
+          </p>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Don't let Achilles pain hold you back</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Don&apos;t let Achilles pain hold you back</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Professional sports massage and soft tissue therapy targeting the root cause of your tendinitis. Book your assessment in Archway today.
+            Professional sports massage and soft tissue therapy targeting the root cause of your tendinitis in Archway, North London.
           </p>
-          <BookingButton label="Book Your Achilles Assessment" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <a
+              href={BOOKING_URLS.sportsDeepTissue}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+            >
+              Make a Booking
+            </a>
+            <a
+              href={BOOKING_URLS.giftCards}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+            >
+              Buy a Gift Card
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Or ask a question first
+            </Link>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-page pt-8">

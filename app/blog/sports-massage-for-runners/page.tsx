@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -130,20 +130,53 @@ export default function SportsMassageForRunnersPage() {
           </p>
 
           <p>
-            Sessions can range from 30 to 90 minutes depending on your needs. A 30-minute session can be highly effective for a focused follow-up or targeted area, while a 90-minute session allows for a thorough full-body assessment and treatment — ideal in the weeks leading up to a major race or during a high-intensity training block.
+            Sessions can range from 30 to 90 minutes depending on your needs. A 30-minute session can be highly effective for a focused follow-up or targeted area, while a 90-minute session allows for a thorough full-body assessment and treatment, ideal in the weeks leading up to a major race or during a high-intensity training block.
           </p>
 
           <p>
             Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydrated before and after your session</Link> will also help your muscles respond better to treatment and recover faster between runs.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage for runners near you in North London</h2>
+
+          <p>
+            If you have been searching &ldquo;sports massage for runners near me&rdquo;, &ldquo;runners massage North London&rdquo;, &ldquo;post race massage London&rdquo;, &ldquo;10K recovery massage&rdquo;, &ldquo;half marathon massage Archway&rdquo;, &ldquo;deep tissue for runners N19&rdquo; or &ldquo;runner physio Archway&rdquo;, Range and Restore is the local fit. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves runners across N19, N7, N6, N4, N8, N1, NW1 and NW5.
+          </p>
+
+          <p>
+            That includes runners training on Hampstead Heath, Parkland Walk, Highgate Wood, Alexandra Palace, Regent&apos;s Park and the canal paths, from Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. Range and Restore is the North London option for race prep, post-race recovery and ongoing maintenance work.
           </p>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Race stronger, recover faster</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Pre-race preparation, post-race recovery, or ongoing maintenance — book your runner&apos;s sports massage at Range and Restore in Archway, North London.
+            Pre-race preparation, post-race recovery, or ongoing maintenance at Range and Restore in Archway, North London.
           </p>
-          <BookingButton label="Book Your Runner's Massage" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <a
+              href={BOOKING_URLS.sportsDeepTissue}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+            >
+              Make a Booking
+            </a>
+            <a
+              href={BOOKING_URLS.giftCards}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+            >
+              Buy a Gift Card
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Or ask a question first
+            </Link>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-page pt-8">

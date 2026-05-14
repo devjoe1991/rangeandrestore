@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
-import { BOOKING_URLS } from '@/lib/constants'
+import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage Services – Archway, London N19',
@@ -67,6 +67,26 @@ const services = [
     description: 'Save with 5 or 10 session bundles for 60 or 90 minute treatments. Starting from £350 for 5 × 60 min sessions.',
     duration: 'From £350',
   },
+  {
+    title: 'Infrared Sauna (Recovery Suite)',
+    href: '/recovery-suite/infrared-sauna',
+    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation. Pairs with sports massage for cyclists, runners and desk workers across North London.',
+    duration: 'Opening soon · Pricing announced at launch',
+    image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+    imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
+    comingSoon: true,
+  },
+  {
+    title: 'Normatec Compression Therapy (Recovery Suite)',
+    href: '/recovery-suite/compression-therapy',
+    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS, flushes tired legs after long runs, rides or long shifts on your feet.',
+    duration: 'Opening soon · Pricing announced at launch',
+    image: '/normatec-full-body-compression-recovery-archway-north-london.png',
+    imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
+    comingSoon: true,
+  },
 ]
 
 const breadcrumbs = buildBreadcrumbs([{ name: 'Services', path: '/services' }])
@@ -124,38 +144,61 @@ export default function ServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-6">
-          {services.map((service) => (
-            <div key={service.href} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
-              <div className="p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-page mb-2">
-                    <Link href={service.href} className="hover:text-[#2ab4b8] transition-colors">
-                      {service.title}
-                    </Link>
-                  </h2>
-                  <p className="text-[#2ab4b8] font-medium text-sm mb-3">{service.duration}</p>
-                  <p className="text-page-muted">{service.description}</p>
-                </div>
-                <div className="flex flex-row lg:flex-col gap-3 lg:items-end flex-shrink-0">
-                  <a
-                    href={service.bookingHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary text-sm px-6"
-                  >
-                    Book Now
-                  </a>
-                  <Link
-                    href={service.href}
-                    className="text-page text-sm font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2 px-4"
-                  >
-                    Learn More
+          {services.map((service) => {
+            const comingSoon = 'comingSoon' in service && service.comingSoon
+            const image = 'image' in service ? service.image : undefined
+            const imageAlt = 'imageAlt' in service ? service.imageAlt : undefined
+            const ctaLabel = comingSoon ? 'Register Your Interest' : 'Book Now'
+            const isTel = service.bookingHref.startsWith('tel:')
+
+            return (
+              <div key={service.href} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+                <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+                {image && (
+                  <Link href={service.href} className="block relative aspect-[16/9] lg:aspect-[21/9] overflow-hidden">
+                    <Image
+                      src={image}
+                      alt={imageAlt || service.title}
+                      fill
+                      className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                      sizes="(max-width: 1024px) 100vw, 1024px"
+                    />
+                    {comingSoon && (
+                      <span className="absolute top-4 right-4 bg-[#7dd94a] text-[#1a2330] text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full">
+                        Opening Soon
+                      </span>
+                    )}
                   </Link>
+                )}
+                <div className="p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold text-page mb-2">
+                      <Link href={service.href} className="hover:text-[#2ab4b8] transition-colors">
+                        {service.title}
+                      </Link>
+                    </h2>
+                    <p className="text-[#2ab4b8] font-medium text-sm mb-3">{service.duration}</p>
+                    <p className="text-page-muted">{service.description}</p>
+                  </div>
+                  <div className="flex flex-row lg:flex-col gap-3 lg:items-end flex-shrink-0">
+                    <a
+                      href={service.bookingHref}
+                      {...(isTel ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                      className="btn btn-primary text-sm px-6 whitespace-nowrap"
+                    >
+                      {ctaLabel}
+                    </a>
+                    <Link
+                      href={service.href}
+                      className="text-page text-sm font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2 px-4"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </>
