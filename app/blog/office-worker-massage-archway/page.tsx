@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookingButton } from '@/components/BookingButton'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
@@ -219,7 +218,17 @@ export default function OfficeWorkerMassageArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Don&apos;t wait for it to become chronic</h2>
 
           <p>
-            If you&apos;re already dealing with neck, back, or shoulder discomfort from desk work and commuting, the time to address it is now &mdash; before it becomes a long-term issue that&apos;s harder to reverse. Regular treatment makes a real difference to your comfort, posture, and overall wellbeing.
+            If you&apos;re already dealing with neck, back, or shoulder discomfort from desk work and commuting, the time to address it is now, before it becomes a long-term issue that&apos;s harder to reverse. Regular treatment makes a real difference to your comfort, posture, and overall wellbeing.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find office worker massage near you in North London</h2>
+
+          <p>
+            If you have been searching &ldquo;office worker massage near me&rdquo;, &ldquo;back and neck pain massage North London&rdquo;, &ldquo;commuter massage Archway&rdquo;, &ldquo;tech neck treatment London&rdquo;, &ldquo;remote worker massage N19&rdquo;, &ldquo;deep tissue massage for desk workers&rdquo; or &ldquo;sciatica massage Archway&rdquo;, Range and Restore is the local clinic for it. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients across N19, N7, N6, N4, N8, N1, NW1 and NW5.
+          </p>
+
+          <p>
+            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Office workers and commuters across all those postcodes use Range and Restore as the proper local option for posture, back and neck work, instead of generic spa or chain bookings.
           </p>
         </div>
 
@@ -228,7 +237,30 @@ export default function OfficeWorkerMassageArchwayPage() {
           <p className="text-[#1a3d3a] font-semibold mb-6">
             Book a Back &amp; Neck Pain MOT at Range and Restore in Archway, North London. Assessment-led treatment tailored to office workers, commuters, and long-hour desk workers.
           </p>
-          <BookingButton href={BOOKING_URLS.backNeckMot} label="Book Your Back & Neck Pain MOT" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <a
+              href={BOOKING_URLS.backNeckMot}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+            >
+              Make a Booking
+            </a>
+            <a
+              href={BOOKING_URLS.giftCards}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+            >
+              Buy a Gift Card
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Or ask a question first
+            </Link>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-page pt-8">

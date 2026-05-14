@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -225,9 +225,32 @@ export default function SportsMassageArchwayLocalGuidePage() {
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Sports massage in Archway, two minutes from the tube</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Range and Restore Sports Massage. 130 Junction Road, Archway N19 5LB. Assessment-led sessions for runners, desk workers and anyone who lives round here. Book online or give Carlos a call.
+            Range and Restore Sports Massage. 130 Junction Road, Archway N19 5LB. Assessment-led sessions for runners, desk workers and anyone who lives round here.
           </p>
-          <BookingButton label="Book Your Session" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <a
+              href={BOOKING_URLS.sportsDeepTissue}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+            >
+              Make a Booking
+            </a>
+            <a
+              href={BOOKING_URLS.giftCards}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+            >
+              Buy a Gift Card
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Or ask a question first
+            </Link>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-page pt-8">

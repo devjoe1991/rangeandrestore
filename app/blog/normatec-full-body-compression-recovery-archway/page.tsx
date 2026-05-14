@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FaqAccordion } from '@/components/FaqAccordion'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -254,19 +255,47 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           <p>
             If you live or train in North London and you have ever wished a Normatec session was around the corner instead of a tube journey away, that is the bit that has changed. The Hyperice Normatec 3 Full Body is here, ready to go, and waiting on a few final pieces before we open sessions to the public. Register your interest, come in for a look, and we will be in touch the moment the diary opens.
           </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find Normatec compression near you in North London</h2>
+
+          <p>
+            If you have been searching &ldquo;Normatec near me&rdquo;, &ldquo;compression boots London&rdquo;, &ldquo;recovery boots North London&rdquo;, &ldquo;Hyperice Normatec 3 London&rdquo;, &ldquo;compression therapy Archway&rdquo;, &ldquo;Normatec for runners London&rdquo;, &ldquo;recovery suite N19&rdquo; or &ldquo;pneumatic compression therapy near me&rdquo;, this is the local option. Range and Restore is at 130 Junction Road, two minutes from Archway tube on the Northern Line, and serves clients across N19, N7, N6, N4, N8, N1, NW1 and NW5.
+          </p>
+
+          <p>
+            That covers Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. Runners, cyclists, gym-goers, hospitality staff and anyone on their feet all day across those postcodes can now access a pro-grade recovery setup without trekking into the West End or the City.
+          </p>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Register your interest in Normatec compression at Range and Restore</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            The Recovery Suite is launching soon at 130 Junction Road, Archway. Get on the early list and we will let you know the moment compression sessions open, plus introductory pricing for the first cohort.
+            The Recovery Suite is launching soon at 130 Junction Road, Archway. Get on the early list and we will let you know the moment compression sessions open, plus introductory pricing for the first cohort. In the meantime, sports massage is already bookable and gift cards are live.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
-          >
-            Register Your Interest
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+            >
+              Register Your Interest
+            </Link>
+            <a
+              href={BOOKING_URLS.sportsDeepTissue}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+            >
+              Book Sports Massage
+            </a>
+            <a
+              href={BOOKING_URLS.giftCards}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Buy a Gift Card
+            </a>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-page pt-8">

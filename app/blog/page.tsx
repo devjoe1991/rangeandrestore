@@ -11,6 +11,13 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Sports Massage and Recovery for Cyclists in Archway, North London',
+    slug: 'sports-massage-cycling-recovery-archway',
+    date: '14 May 2026',
+    excerpt: 'A North London guide to sports massage and recovery for cyclists. Why long hours in the saddle hit hip flexors, lower back and neck, how the Recovery Suite in Archway helps cyclists recover faster, and how to stack sports massage, infrared sauna and Normatec compression around your riding.',
+    image: '/cycling-recovery-sports-massage-archway-north-london.jpg',
+  },
+  {
     title: 'Faster Recovery with Normatec Compression, Now in Archway',
     slug: 'normatec-full-body-compression-recovery-archway',
     date: '13 May 2026',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -138,16 +138,49 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            At Range and Restore in Archway, every session begins with an assessment of your posture, movement, and specific symptoms. This ensures the treatment is targeted, relevant, and effective — not just a general back rub.
+            At Range and Restore in Archway, every session begins with an assessment of your posture, movement, and specific symptoms. This ensures the treatment is targeted, relevant, and effective, not just a general back rub.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find desk posture pain treatment near you in North London</h2>
+
+          <p>
+            If you have been searching &ldquo;massage for desk pain near me&rdquo;, &ldquo;office posture massage North London&rdquo;, &ldquo;neck and shoulder massage Archway&rdquo;, &ldquo;tech neck treatment London&rdquo;, &ldquo;lower back pain from sitting massage&rdquo; or &ldquo;remote worker massage N19&rdquo;, this is the right post. Range and Restore is the local clinic set up specifically for this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients across N19, N7, N6, N4, N8, N1, NW1 and NW5.
+          </p>
+
+          <p>
+            That includes home workers and office commuters across Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Islington, Camden, Kentish Town, Hampstead, Belsize Park and Stroud Green. If you sit at a desk all day in North London and your body is telling you about it, Range and Restore is the place to fix it without trekking into the West End or the City.
           </p>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to fix your posture?</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Don't let desk work damage your health. Professional postural assessment and remedial massage available in Archway, North London.
+            Don&apos;t let desk work damage your health. Professional postural assessment and remedial massage in Archway, North London.
           </p>
-          <BookingButton label="Book Your Postural Assessment" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <a
+              href={BOOKING_URLS.backNeckMot}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+            >
+              Make a Booking
+            </a>
+            <a
+              href={BOOKING_URLS.giftCards}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+            >
+              Buy a Gift Card
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Or ask a question first
+            </Link>
+          </div>
         </div>
 
         <div className="mt-10 border-t border-page pt-8">

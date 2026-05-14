@@ -65,9 +65,38 @@ const services = [
     href: '/services/relaxation-restorative-massage',
     bookingHref: BOOKING_URLS.relaxation,
   },
+  {
+    title: 'Infrared Sauna',
+    problem: 'Sore, stressed and not sleeping well?',
+    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Recovery, sleep and circulation in one session.',
+    href: '/recovery-suite/infrared-sauna',
+    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+    imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
+    comingSoon: true,
+  },
+  {
+    title: 'Normatec Compression Therapy',
+    problem: 'Heavy legs after long runs, rides or shifts?',
+    solution: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired muscles fast.',
+    href: '/recovery-suite/compression-therapy',
+    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    image: '/normatec-full-body-compression-recovery-archway-north-london.png',
+    imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
+    comingSoon: true,
+  },
 ]
 
 const blogPosts = [
+  {
+    title:    'Sports Massage and Recovery for Cyclists in Archway',
+    href:     '/blog/sports-massage-cycling-recovery-archway',
+    date:     '14 May 2026',
+    img:      '/cycling-recovery-sports-massage-archway-north-london.jpg',
+    imgAlt:   'Sports massage and recovery for cyclists at Range and Restore, Archway, North London',
+    category: 'Cycling',
+    readTime: '9 min read',
+  },
   {
     title:    'Faster Recovery with Normatec Compression, Now in Archway',
     href:     '/blog/normatec-full-body-compression-recovery-archway',
@@ -103,15 +132,6 @@ const blogPosts = [
     imgAlt:   'Water and hydration for muscle recovery',
     category: 'Recovery',
     readTime: '4 min read',
-  },
-  {
-    title:    'How Sports Massage Helps Runners Before and After Races',
-    href:     '/blog/sports-massage-for-runners',
-    date:     '1 Feb 2026',
-    img:      'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80',
-    imgAlt:   'Runner training on a road — sports massage in Archway helps runners recover and prevent injury',
-    category: 'Running',
-    readTime: '5 min read',
   },
 ]
 
@@ -525,12 +545,36 @@ export default function HomePage() {
 /* ── Sub-components ──────────────────────────────────────── */
 
 function ServiceCard({ s }: { s: typeof services[0] }) {
+  const comingSoon = 'comingSoon' in s && s.comingSoon
+  const image = 'image' in s ? s.image : undefined
+  const imageAlt = 'imageAlt' in s ? s.imageAlt : undefined
+  const ctaLabel = comingSoon ? 'Register Your Interest' : 'Book now'
+  const ctaHref = s.bookingHref
+  const isTel = ctaHref.startsWith('tel:')
+
   return (
     <div
       className="group card-lift rounded-[20px] overflow-hidden flex flex-col cursor-pointer bg-card shadow-sm h-full"
     >
       {/* Top accent bar */}
       <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+
+      {image && (
+        <Link href={s.href} className="block relative aspect-[16/9] overflow-hidden">
+          <Image
+            src={image}
+            alt={imageAlt || s.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          {comingSoon && (
+            <span className="absolute top-3 right-3 bg-[#7dd94a] text-[#1a2330] text-[0.55rem] font-black tracking-widest uppercase px-2 py-0.5 rounded-full">
+              Opening Soon
+            </span>
+          )}
+        </Link>
+      )}
 
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         <div className="mb-2">
@@ -556,12 +600,11 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
             Learn more
           </Link>
           <a
-            href={s.bookingHref}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={ctaHref}
+            {...(isTel ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
             className="book-now-btn text-xs font-black px-3 sm:px-4 py-2 rounded-full min-h-[40px] flex items-center whitespace-nowrap"
           >
-            Book now
+            {ctaLabel}
           </a>
         </div>
       </div>
