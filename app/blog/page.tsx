@@ -11,11 +11,18 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Faster Recovery with Normatec Compression, Now in Archway',
+    slug: 'normatec-full-body-compression-recovery-archway',
+    date: '13 May 2026',
+    excerpt: 'Hyperice Normatec 3 Full Body pneumatic compression has joined the Recovery Suite at Range and Restore in Archway. How it works, who it helps, and how to register your interest before launch.',
+    image: '/normatec-full-body-compression-recovery-archway-north-london.png',
+  },
+  {
     title: 'Sports Massage in Archway, North London: A Local Guide',
     slug: 'sports-massage-archway-local-guide',
     date: '9 May 2026',
     excerpt: 'A North London local guide to sports massage in Archway. Where to book, who it suits, what to look for in a therapist, and how clients across N19, Tufnell Park, Holloway, Highgate and Finsbury Park are using it.',
-    image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg',
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'How Sports Massage Helps Office Workers in Archway, North London',
@@ -74,7 +81,7 @@ export default function BlogPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
             <article key={post.slug} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
               {post.image ? (
@@ -84,7 +91,7 @@ export default function BlogPage() {
                     alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </Link>
               ) : (
