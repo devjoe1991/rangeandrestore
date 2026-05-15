@@ -60,7 +60,7 @@ export default function SolCentrePartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Sol Centre</h2>
           <p>
-            Sol Centre describe themselves as &ldquo;a community-focused yoga and sauna studio for movement, rest, and connection,&rdquo; and that’s exactly what the room feels like. They’re at 216 Fairbridge Road, a short walk from our clinic on Junction Road. Hatha, Vinyasa, Ashtanga, Yin, Restorative, Rocket, pregnancy yoga and Pilates, hot and non-hot, all under one roof. There’s a sauna on site as well, which makes it the rare local studio that takes the rest half of training as seriously as the movement half. If you live in N19 and you’ve been looking for somewhere to take a regular class, you’ve probably already walked past the door.
+            Sol Centre describe themselves as &ldquo;a community-focused yoga and sauna studio for movement, rest, and connection,&rdquo; and that’s exactly what the room feels like. They’re at 216 Fairbridge Road, a short walk from our clinic on Junction Road. Hatha, Vinyasa, Ashtanga, Yin, Restorative, Rocket, Community Yoga and Pilates, hot and non-hot, all under one roof. There’s a sauna on site as well, which makes it the rare local studio that takes the rest half of training as seriously as the movement half. If you live in N19 and you’ve been looking for somewhere to take a regular class, you’ve probably already walked past the door.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we work together</h2>
