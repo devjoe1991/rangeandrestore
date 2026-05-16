@@ -9,12 +9,14 @@ export function buildMetadata({
   path = '/',
   image,
   author,
+  noindex,
 }: {
   title: string
   description: string
   path?: string
   image?: string
   author?: boolean
+  noindex?: boolean
 }): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`
   const url = `${BASE_URL}${path}`
@@ -25,6 +27,7 @@ export function buildMetadata({
     description,
     metadataBase: new URL(BASE_URL),
     ...(author ? { authors: [{ name: 'Carlos Bonvicine', url: `${BASE_URL}/about` }] } : {}),
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
     alternates: {
       canonical: url,
     },
@@ -126,7 +129,7 @@ export const businessSchema = {
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '20:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday','Sunday'], opens: '09:00', closes: '17:00' },
   ],
-  priceRange: '££',
+  priceRange: '£50-£170',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card',
   areaServed: [
@@ -160,13 +163,78 @@ export const businessSchema = {
   sameAs: [
     'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
     'https://www.instagram.com/rangeandrestore',
+    'https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9',
   ],
   makesOffer: [
-    { '@type': 'Offer', name: 'Sports & Deep Tissue Massage', description: 'Targeted sports and deep tissue massage for injury recovery, muscle tension and performance support. 30, 60 or 90 minutes.' },
-    { '@type': 'Offer', name: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage', description: 'Integrated cupping therapy combined with sports and deep tissue massage \u2014 static and dynamic cupping, myofascial release and deep tissue work for chronic tension, fascial restriction and recovery. 30, 60 or 90 minutes.' },
-    { '@type': 'Offer', name: 'Advanced Clinical Massage', description: 'Assessment-led clinical massage for chronic pain, sciatica, RSI, tension headaches and complex postural conditions.' },
-    { '@type': 'Offer', name: 'Back & Neck Pain MOT', description: 'Focused assessment and hands-on treatment for persistent back pain, neck pain and desk-related postural strain.' },
-    { '@type': 'Offer', name: 'Manual Lymphatic Drainage (MLD)', description: 'Certified MLD for post-surgery recovery, lymphoedema, swelling and immune support.' },
-    { '@type': 'Offer', name: '2-Hour Pain Relief Massage', description: 'Extended assessment-led session for multiple problem areas and long-standing conditions.' },
+    {
+      '@type': 'Offer',
+      name: 'Sports & Deep Tissue Massage',
+      description: 'Targeted sports and deep tissue massage for injury recovery, muscle tension and performance support. 30, 60 or 90 minutes.',
+      url: `${BASE_URL}/services/sports-deep-tissue-massage`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
+        { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage',
+      description: 'Integrated cupping therapy combined with sports and deep tissue massage \u2014 static and dynamic cupping, myofascial release and deep tissue work for chronic tension, fascial restriction and recovery. 30, 60 or 90 minutes.',
+      url: `${BASE_URL}/services/advanced-cupping-sports-deep-tissue`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '60', priceCurrency: 'GBP', description: '30 minutes' },
+        { '@type': 'PriceSpecification', price: '85', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '125', priceCurrency: 'GBP', description: '90 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: 'Advanced Clinical Massage',
+      description: 'Assessment-led clinical massage for chronic pain, sciatica, RSI, tension headaches and complex postural conditions.',
+      url: `${BASE_URL}/services/advanced-clinical-massage`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
+        { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: 'Back & Neck Pain MOT',
+      description: 'Focused assessment and hands-on treatment for persistent back pain, neck pain and desk-related postural strain.',
+      url: `${BASE_URL}/services/back-neck-pain-mot`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
+        { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: 'Manual Lymphatic Drainage (MLD)',
+      description: 'Certified MLD for post-surgery recovery, lymphoedema, swelling and immune support.',
+      url: `${BASE_URL}/services/manual-lymphatic-drainage`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
+        { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: '2-Hour Pain Relief Massage',
+      description: 'Extended assessment-led session for multiple problem areas and long-standing conditions.',
+      url: `${BASE_URL}/services/2-hour-pain-relief-massage`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '170', priceCurrency: 'GBP', description: '120 minutes' },
+      ],
+    },
   ],
 }

@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Advanced Clinical Massage – Archway, London',
-  description: 'Advanced clinical massage for chronic pain, sciatica, RSI, headaches and postural conditions in Archway, North London. Book with Carlos Bonvicine today.',
+  title: 'Advanced Clinical Massage Archway N19',
+  description: "Soft tissue remedial therapy in Archway. Trigger point, MET and myofascial techniques. BTEC L5. For chronic pain that hasn't responded to general massage.",
   path: '/services/advanced-clinical-massage',
 })
 
@@ -38,11 +38,44 @@ const serviceSchema = {
   serviceType: 'Clinical Massage',
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How is advanced clinical massage different from regular sports massage?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Advanced clinical massage is the right choice when general massage has stopped helping. It combines trigger point therapy, muscle energy techniques (MET), myofascial release, and soft tissue release in a structured assessment-led plan — designed for chronic, complex, or layered presentations rather than general muscle tightness.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What conditions does advanced clinical massage help with?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Common reasons clients book this service include sciatica, chronic lower back pain, repetitive strain injuries (RSI), tension headaches, jaw and TMJ pain, postural problems from desk work, and recovery from old injuries that never fully resolved.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does advanced clinical massage cost in Archway?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute focused session is £50, a 60-minute treatment is £75, and a 90-minute comprehensive session for multi-area or complex cases is £110.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many sessions will I need?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For chronic conditions, most clients see meaningful change within 3-6 sessions spaced 1-2 weeks apart, then move to monthly maintenance. After your first assessment Carlos will give you a realistic plan rather than open-ended bookings.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a referral from a doctor or physio?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No referral is needed. If you are working with a physio or consultant, Carlos is happy to coordinate so the treatments complement rather than overlap.' },
+    },
+  ],
+}
+
 export default function AdvancedClinicalMassagePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

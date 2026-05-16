@@ -6,6 +6,7 @@ export const metadata: Metadata = buildMetadata({
   title: 'Terms and Conditions',
   description: 'Terms and conditions for Range and Restore Sports Massage in Archway, North London.',
   path: '/terms-and-conditions',
+  noindex: true,
 })
 
 export default function TermsAndConditionsPage() {

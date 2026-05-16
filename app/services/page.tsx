@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage Services – Archway, London N19',
-  description: 'Expert sports massage, deep tissue therapy, MLD and relaxation massage in Archway, North London. View all services and book your session with Carlos Bonvicine.',
+  title: 'Massage Services in Archway N19 | Range and Restore',
+  description: 'Sports, deep tissue, cupping, MLD and relaxation massage in Archway. BTEC L5 therapist Carlos Bonvicine. 5★ rated. From £50 · book online.',
   path: '/services',
 })
 

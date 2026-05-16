@@ -6,6 +6,7 @@ export const metadata: Metadata = buildMetadata({
   title: 'Privacy Policy',
   description: 'Privacy policy for Range and Restore Sports Massage. How we collect, use, and protect your personal information.',
   path: '/privacy-policy',
+  noindex: true,
 })
 
 export default function PrivacyPolicyPage() {

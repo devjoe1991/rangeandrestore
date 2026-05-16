@@ -9,9 +9,9 @@ import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage Archway London',
+  title: 'Sports Massage Archway N19 | BTEC L5 Therapist',
   description:
-    'Sports Massage & Soft Tissue Remedial Therapy in Archway, North London. BTEC Level 5 qualified. Five-star rated. Assessment-led treatment for pain relief, injury recovery and mobility. Book today.',
+    'BTEC Level 5 sports massage in Archway N19. 47 five-star reviews. Pain relief, injury recovery, mobility. Book online — same-week slots from £50.',
   path: '/',
 })
 

@@ -4,8 +4,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Achilles Tendinitis Massage Recovery | Archway London',
-  description: 'Achilles tendinitis treatment through sports massage and soft tissue therapy in Archway, North London. Recover faster with targeted clinical treatment.',
+  title: 'Achilles Tendinitis: Does Sports Massage Help?',
+  description: 'How sports massage helps Achilles tendinitis — what to expect, technique, recovery timeline, when to combine with rest or strengthening.',
   path: '/blog/achilles-tendinitis-recovery-massage',
   author: true,
 })
