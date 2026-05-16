@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: '2-Hour Pain Relief Massage – Archway London',
-  description: 'Extended 2-hour assessment-led massage for chronic pain, multiple problem areas, and comprehensive recovery in Archway, North London. Book with Carlos Bonvicine.',
+  title: '2-Hour Pain Relief Massage Archway N19 | £170',
+  description: 'Extended 2-hour assessment-led massage in Archway. For chronic pain, multi-area issues and conditions a 60- or 90-min session cannot fully resolve. BTEC L5.',
   path: '/services/2-hour-pain-relief-massage',
 })
 

@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage – Archway London',
-  description: 'Advanced cupping therapy combined with sports and deep tissue massage in Archway, North London. Relieves muscular tension, releases fascia, and accelerates recovery. Book with Carlos Bonvicine.',
+  title: 'Cupping & Sports Massage Archway N19',
+  description: 'Integrated cupping therapy with sports and deep tissue massage in Archway. Static and dynamic cupping for fascial release and chronic tension. BTEC L5.',
   path: '/services/advanced-cupping-sports-deep-tissue',
 })
 

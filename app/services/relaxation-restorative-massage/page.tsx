@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Relaxation Massage – Archway, North London',
-  description: 'Gentle, calming relaxation massage to reduce stress, ease tension, and restore balance in Archway, North London. Book with Carlos Bonvicine today.',
+  title: 'Relaxation & Restorative Massage Archway N19',
+  description: 'Gentle full-body relaxation massage in Archway. Stress relief, nervous system reset and tension release. 60 or 90 minute sessions, from £75.',
   path: '/services/relaxation-restorative-massage',
 })
 

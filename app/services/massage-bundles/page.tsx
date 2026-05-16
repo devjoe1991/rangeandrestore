@@ -3,8 +3,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Massage Bundle Offers – Archway, London N19',
-  description: 'Save with 5 or 10 session massage bundles at Range and Restore in Archway, London. Packages from £350 for 60 and 90 minute sessions with Carlos Bonvicine.',
+  title: 'Massage Bundles Archway N19 | Save up to £300',
+  description: '5 or 10 session sports and clinical massage bundles in Archway. Save £75 to £300 vs single sessions. 60 or 90 minute slots, valid 6-12 months.',
   path: '/services/massage-bundles',
 })
 
