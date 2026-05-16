@@ -11,14 +11,16 @@ export const metadata: Metadata = buildMetadata({
 
 const breadcrumbs = buildBreadcrumbs([{ name: 'Areas Served', path: '/areas-served' }])
 
-const areas = [
+const areas: { name: string; description: string; href?: string }[] = [
   {
     name: 'Archway, N19',
     description: 'Range and Restore is based at 130 Junction Road, right in the heart of Archway. A short walk from Archway tube station on the Northern Line, the clinic is the most accessible option for sports massage in N19.',
+    href: '/areas-served/archway-n19',
   },
   {
     name: 'Tufnell Park, N7',
-    description: 'Less than a mile from the clinic, Tufnell Park residents can reach Range and Restore in under 10 minutes by foot or a short bus ride. Ideal for regular maintenance sessions around your schedule.',
+    description: 'A flat 10-minute walk from Tufnell Park tube to the clinic. Cyclists, runners and desk-workers from N7 book sports and deep tissue massage and the Back & Neck Pain MOT regularly.',
+    href: '/areas-served/tufnell-park-n7',
   },
   {
     name: 'Holloway, N7',
@@ -105,15 +107,29 @@ export default function AreasServedPage() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {areas.map((area) => (
-            <div key={area.name} className="rounded-[20px] overflow-hidden bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-page mb-2">{area.name}</h2>
-                <p className="text-page-muted text-sm">{area.description}</p>
+          {areas.map((area) => {
+            const inner = (
+              <>
+                <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+                <div className="p-6">
+                  <h2 className="text-xl font-bold text-page mb-2">{area.name}</h2>
+                  <p className="text-page-muted text-sm">{area.description}</p>
+                  {area.href && (
+                    <p className="mt-3 text-[#2ab4b8] font-semibold text-sm">View {area.name.split(',')[0]} page &rarr;</p>
+                  )}
+                </div>
+              </>
+            )
+            return area.href ? (
+              <Link key={area.name} href={area.href} className="rounded-[20px] overflow-hidden bg-card shadow-sm block hover:shadow-md transition-shadow" style={{ border: '2px solid #1a3d3a' }}>
+                {inner}
+              </Link>
+            ) : (
+              <div key={area.name} className="rounded-[20px] overflow-hidden bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+                {inner}
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className="mt-12 prose prose-lg max-w-none text-page-muted space-y-6">

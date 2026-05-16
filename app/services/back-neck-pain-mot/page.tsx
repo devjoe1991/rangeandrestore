@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Back & Neck Pain MOT – Archway, London N19',
-  description: 'Focused assessment and treatment for back and neck pain, posture correction, and desk-related strain in Archway, North London. Book with Carlos Bonvicine.',
+  title: 'Back & Neck Pain MOT | Archway N19 Clinic',
+  description: 'Assessment + treatment for chronic back and neck pain in Archway. BTEC L5 therapist. 90-min session covers posture, mobility, soft tissue work.',
   path: '/services/back-neck-pain-mot',
 })
 
@@ -38,11 +38,44 @@ const serviceSchema = {
   serviceType: 'Remedial Massage',
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a Back and Neck Pain MOT?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A focused 60- or 90-minute session combining postural assessment, mobility testing and hands-on soft tissue treatment of the back, neck, shoulders and contributing areas. It is designed for people whose back or neck pain keeps coming back rather than resolving with general massage.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will the MOT help if my back pain is from desk work?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — desk-related pain is one of the most common reasons clients book this session. The assessment looks at the postural patterns driving the pain (forward head posture, rounded shoulders, hip flexor tightness) and treatment targets the specific muscles compensating, alongside practical advice for between sessions.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does the Back & Neck Pain MOT cost in Archway?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute focused follow-up is £50, a 60-minute MOT session is £75, and the comprehensive 90-minute full MOT with detailed postural assessment is £110.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I get a sports massage or the Back & Neck Pain MOT?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Choose the MOT if your back or neck pain is persistent, recurring, or you want a full postural assessment included. Choose sports or deep tissue massage if you have general muscle tension or want maintenance work without the assessment focus.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the Back & Neck Pain MOT safe if I have a disc issue or sciatica?',
+      acceptedAnswer: { '@type': 'Answer', text: 'In most cases yes — soft tissue work can ease the muscular component of disc-related pain or sciatica. Carlos screens for red flags during the assessment and adapts the treatment accordingly. If your condition needs medical investigation first, he will tell you.' },
+    },
+  ],
+}
+
 export default function BackNeckPainMotPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
