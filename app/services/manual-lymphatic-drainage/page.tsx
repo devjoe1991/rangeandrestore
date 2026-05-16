@@ -5,8 +5,8 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Manual Lymphatic Drainage – Archway London',
-  description: 'Certified Manual Lymphatic Drainage (MLD) for post-surgery recovery, lymphoedema, swelling, and immune support in Archway, North London. Book with Carlos Bonvicine.',
+  title: 'Manual Lymphatic Drainage (MLD) Archway N19',
+  description: 'Certified MLD in Archway for post-surgery recovery, post-op swelling, lymphoedema and immune support. Gentle, evidence-based technique. From £50.',
   path: '/services/manual-lymphatic-drainage',
 })
 
