@@ -54,7 +54,7 @@ export default function AlaricYogaPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Alaric</h2>
           <p>
-            I&apos;ve been working closely with Alaric Newcombe from Alaric Yoga, supporting both his own recovery and many of his students through sports and soft tissue remedial therapy at Range and Restore Sports Massage.
+            Carlos from Range and Restore has been working closely with Alaric Newcombe from Alaric Yoga, supporting both his own recovery and many of his students through sports and soft tissue remedial therapy at Range and Restore Sports Massage.
           </p>
           <p>
             Alaric is a highly respected Senior Level 3 Iyengar Yoga teacher with decades of experience teaching, mentoring and guiding students through yoga, mobility work and pranayama practice. His work places huge emphasis on movement quality, body awareness, breath control, alignment and long-term physical wellbeing.
