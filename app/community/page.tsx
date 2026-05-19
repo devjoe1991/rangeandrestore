@@ -51,6 +51,14 @@ const partners: Partner[] = [
     logoAlt: 'Reliable Scan logo',
     externalUrl: 'https://reliablescanltd.com',
   },
+  {
+    slug: 'alaric-yoga',
+    name: 'Range and Restore × Alaric Yoga',
+    headerText: 'Range and Restore × Alaric Yoga',
+    category: 'Yoga, Mobility and Pranayama',
+    blurb: 'Range and Restore and Alaric Yoga work side by side on movement, recovery and longevity. Senior Iyengar yoga and pranayama with Alaric Newcombe, soft tissue and remedial therapy with Carlos, supporting the same students through their practice.',
+    externalUrl: 'https://www.alaricyoga.co.uk/pranayama/',
+  },
 ]
 
 const breadcrumbs = buildBreadcrumbs([
