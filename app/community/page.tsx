@@ -63,6 +63,14 @@ const partners: Partner[] = [
     logoFit: 'cover',
     externalUrl: 'https://www.alaricyoga.co.uk/pranayama/',
   },
+  {
+    slug: 'alis-quiff-barber',
+    name: 'Range and Restore × Ali’s Quiff Barber',
+    headerText: 'Range and Restore × Ali’s Quiff Barber',
+    category: 'Archway. Barbering and Men’s Self-Care',
+    blurb: 'Range and Restore and Ali’s Quiff Barber on Holloway Road look after Archway from the inside out. Sports massage, recovery and remedial therapy on Junction Road, traditional barbering, beard work and full-service grooming a few minutes up the road.',
+    externalUrl: 'https://booksy.com/en-gb/167323_alis-quiff-barber_barber_311817_london',
+  },
 ]
 
 const breadcrumbs = buildBreadcrumbs([
