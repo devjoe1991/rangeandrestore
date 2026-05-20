@@ -9,11 +9,13 @@ interface PartnerCardProps {
   /** If provided, renders a logo image in the card header. */
   logo?: string
   logoAlt?: string
+  /** How the logo image fits its frame. 'contain' (default) for logos, 'cover' for photos. */
+  logoFit?: 'contain' | 'cover'
   /** If provided (and no logo), renders a text tile in the card header. */
   headerText?: string
 }
 
-export function PartnerCard({ name, category, blurb, href, logo, logoAlt, headerText }: PartnerCardProps) {
+export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFit = 'contain', headerText }: PartnerCardProps) {
   return (
     <Link
       href={href}
@@ -21,15 +23,27 @@ export function PartnerCard({ name, category, blurb, href, logo, logoAlt, header
     >
       <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
       {logo ? (
-        <div className="relative w-full aspect-[16/10] bg-page-sage flex items-center justify-center p-6 overflow-hidden">
-          <Image
-            src={logo}
-            alt={logoAlt ?? ''}
-            width={280}
-            height={140}
-            className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-700"
-          />
-        </div>
+        logoFit === 'cover' ? (
+          <div className="relative w-full aspect-[16/10] bg-page-sage overflow-hidden">
+            <Image
+              src={logo}
+              alt={logoAlt ?? ''}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        ) : (
+          <div className="relative w-full aspect-[16/10] bg-page-sage flex items-center justify-center p-6 overflow-hidden">
+            <Image
+              src={logo}
+              alt={logoAlt ?? ''}
+              width={280}
+              height={140}
+              className="max-h-full w-auto object-contain group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        )
       ) : (
         <div className="relative w-full aspect-[16/10] flex items-center justify-center p-6 overflow-hidden bg-[#0f4a2e]">
           <span className="text-white text-center font-black tracking-tight leading-tight text-xl sm:text-2xl group-hover:scale-105 transition-transform duration-700">

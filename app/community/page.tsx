@@ -17,6 +17,7 @@ type Partner = {
   blurb: string
   logo?: string
   logoAlt?: string
+  logoFit?: 'contain' | 'cover'
   externalUrl: string
 }
 
@@ -57,6 +58,9 @@ const partners: Partner[] = [
     headerText: 'Range and Restore × Alaric Yoga',
     category: 'Yoga, Mobility and Pranayama',
     blurb: 'Range and Restore and Alaric Yoga work side by side on movement, recovery and longevity. Senior Iyengar yoga and pranayama with Alaric Newcombe, soft tissue and remedial therapy with Carlos, supporting the same students through their practice.',
+    logo: '/alaric_yoga.jpg',
+    logoAlt: 'Alaric Newcombe of Alaric Yoga',
+    logoFit: 'cover',
     externalUrl: 'https://www.alaricyoga.co.uk/pranayama/',
   },
 ]
@@ -121,6 +125,7 @@ export default function CommunityPage() {
               href={`/community/${p.slug}`}
               logo={p.logo}
               logoAlt={p.logoAlt}
+              logoFit={p.logoFit}
               headerText={p.headerText}
             />
           ))}
