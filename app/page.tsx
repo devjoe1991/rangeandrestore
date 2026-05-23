@@ -268,10 +268,7 @@ export default function HomePage() {
                 href={card.href}
                 className="group relative rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#2ab4b8]/30 hover:bg-white/10 hover:border-[#2ab4b8] transition-all card-lift flex flex-col"
               >
-                <span className="absolute top-3 right-3 inline-block bg-[#7dd94a] text-[#1a2330] text-[0.55rem] font-black tracking-widest uppercase px-2 py-0.5 rounded-full">
-                  Opening Soon
-                </span>
-                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 pr-20 group-hover:text-[#7dd94a] transition-colors">
+                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 group-hover:text-[#7dd94a] transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-[#d4ecea]/70 text-xs leading-relaxed flex-1 mb-4">{card.desc}</p>
