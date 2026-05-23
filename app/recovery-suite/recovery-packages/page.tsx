@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
-import { ComingSoonBadge } from '@/components/ComingSoonBadge'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Sessions in Archway London | Sauna, Compression & Sports Massage',
-  description: 'Standalone recovery, sauna and compression combos, or full recovery sessions paired with sports massage. Recovery Sessions at Range and Restore, Archway North London. Opening soon.',
+  description: 'Standalone recovery, sauna and compression combos, or full recovery sessions paired with sports massage. Recovery Sessions at Range and Restore, Archway North London. Now open.',
   path: '/recovery-suite/recovery-packages',
 })
 
@@ -155,11 +155,19 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
         <p className={`text-xs font-semibold mb-3 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>{session.total}</p>
       )}
       <p className={`text-sm leading-relaxed mb-5 flex-1 ${session.popular ? 'text-[#1a3d3a]' : 'text-page-muted'}`}>{session.desc}</p>
-      <p className={`text-xs italic mb-4 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>
-        Pricing announced at launch.
-      </p>
       <div className="mt-auto flex items-center justify-between gap-3 flex-wrap">
-        <ComingSoonBadge size="sm" label="Coming Soon" />
+        <a
+          href={BOOKING_URLS.recoverySuite}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-colors ${
+            session.popular
+              ? 'bg-[#122a28] text-white hover:bg-[#1a3d3a]'
+              : 'bg-[#2ab4b8] text-white hover:bg-[#1a3d3a]'
+          }`}
+        >
+          Book Now
+        </a>
         {session.detailHref && (
           <Link
             href={session.detailHref}
@@ -189,7 +197,14 @@ export default function RecoverySessionsPage() {
             Standalone single sessions, recovery combos without massage, or full recovery packages with sports massage. Built around how you want to recover.
           </p>
           <div className="mt-6">
-            <ComingSoonBadge />
+            <a
+              href={BOOKING_URLS.recoverySuite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Book Recovery Session
+            </a>
           </div>
         </div>
       </div>
@@ -297,13 +312,20 @@ export default function RecoverySessionsPage() {
             <FaqAccordion items={faqs} />
           </section>
 
-          {/* Coming Soon CTA */}
+          {/* Book Now CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recovery Sessions opening soon at Range and Restore</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recovery Sessions now open at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The new Recovery Suite is being built right now. Single sessions, recovery combos and full recovery packages launching soon in Archway, North London.
+              The Recovery Suite is open in Archway, North London. Single sessions, recovery combos and full recovery packages available to book now.
             </p>
-            <ComingSoonBadge />
+            <a
+              href={BOOKING_URLS.recoverySuite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+            >
+              Book Recovery Session
+            </a>
           </section>
 
           <div className="border-t pt-8">

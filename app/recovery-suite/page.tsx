@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { RecoverySuiteCard } from '@/components/RecoverySuiteCard'
-import { ComingSoonBadge } from '@/components/ComingSoonBadge'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,16 +69,16 @@ export default function RecoverySuitePage() {
           sizes="100vw"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#7dd94a] font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore &middot; Coming Soon</p>
+          <p className="text-[#7dd94a] font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore &middot; Now Open</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Recovery Suite in Archway, North London</h1>
           <p className="mt-4 text-xl text-[#d4ecea]/90 max-w-2xl">
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
           <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
-            Hybrid infrared sauna, Normatec full body compression, and a full range of single recovery sessions and recovery packages with sports massage. Launching soon.
+            Hybrid infrared sauna, Normatec full body compression, and a full range of single recovery sessions and recovery packages with sports massage. Now open.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 items-center">
-            <ComingSoonBadge />
+            <a href={BOOKING_URLS.recoverySuite} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Recovery Session</a>
             <Link href="#whats-in-the-suite" className="btn btn-outline-white">Explore the suite</Link>
           </div>
         </div>
@@ -196,14 +196,21 @@ export default function RecoverySuitePage() {
         </div>
       </div>
 
-      {/* Coming Soon CTA */}
+      {/* Book Now CTA */}
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">The Recovery Suite is opening soon</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">The Recovery Suite is now open</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            A new dedicated recovery and wellness space is being built right now at Range and Restore in Archway, North London. Sauna, compression and full recovery sessions launching soon.
+            A new dedicated recovery and wellness space at Range and Restore in Archway, North London. Sauna, compression and full recovery sessions available to book now.
           </p>
-          <ComingSoonBadge />
+          <a
+            href={BOOKING_URLS.recoverySuite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+          >
+            Book Recovery Session
+          </a>
         </section>
       </div>
     </>

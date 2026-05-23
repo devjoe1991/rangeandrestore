@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
-import { ComingSoonBadge } from '@/components/ComingSoonBadge'
+import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -87,7 +87,14 @@ export default function CompressionTherapyPage() {
             Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms. Built for recovery between training sessions, after races, or after a long week on your feet.
           </p>
           <div className="mt-6">
-            <ComingSoonBadge />
+            <a
+              href={BOOKING_URLS.recoverySuite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Book Compression Session
+            </a>
           </div>
         </div>
       </div>
@@ -131,7 +138,7 @@ export default function CompressionTherapyPage() {
                 </div>
               ))}
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">Pricing announced at launch.</p>
+            <p className="text-page-muted text-sm mt-3 italic">See the booking page for current session pricing.</p>
           </section>
 
           <section>
@@ -233,13 +240,20 @@ export default function CompressionTherapyPage() {
             <FaqAccordion items={faqs} />
           </section>
 
-          {/* Coming Soon CTA */}
+          {/* Book Now CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Compression sessions opening soon at Range and Restore</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Compression sessions now open at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The new Recovery Suite is being built right now. Sauna, compression and full recovery sessions launching soon in Archway, North London.
+              The Recovery Suite is open in Archway, North London. Sauna, compression and full recovery sessions available to book now.
             </p>
-            <ComingSoonBadge />
+            <a
+              href={BOOKING_URLS.recoverySuite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+            >
+              Book Compression Session
+            </a>
           </section>
 
           <div className="border-t pt-8">
