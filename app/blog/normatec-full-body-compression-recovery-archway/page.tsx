@@ -7,7 +7,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Faster Recovery with Normatec Compression in Archway',
-  description: 'Hyperice Normatec 3 Full Body pneumatic compression is now in our Recovery Suite in Archway, North London. How Normatec full-body compression recovery works, who it helps, and how to register your interest before launch.',
+  description: 'Hyperice Normatec 3 Full Body pneumatic compression is now in our Recovery Suite in Archway, North London. How Normatec full-body compression recovery works, who it helps, and how to book a session.',
   path: '/blog/normatec-full-body-compression-recovery-archway',
   author: true,
 })
@@ -233,7 +233,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </ul>
 
           <p>
-            We will be running three session lengths once launch goes live: 30 minutes legs only, 30 minutes full body, and 45 minutes full body at a slower pace. The 45-minute full-body session is the one we expect runners to book after marathons and big training blocks. Pricing is announced at launch. The full session menu lives on the <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">compression therapy service page</Link> and you can also see how it bundles with sauna and massage on the <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> page.
+            We run three session lengths: 30 minutes legs only, 30 minutes full body, and 45 minutes full body at a slower pace. The 45-minute full-body session is the one runners book after marathons and big training blocks. The full session menu lives on the <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">compression therapy service page</Link> and you can also see how it bundles with sauna and massage on the <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> page.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Come in and have a look</h2>
@@ -243,7 +243,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </p>
 
           <p>
-            The Recovery Suite is in pre-launch right now. The fastest way to be told when sessions open is to register your interest with us. We will let early registrants know first, and we will be running an introductory pricing window for the first cohort of compression and sauna bookings. <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium">Contact the clinic</Link> if you want to be on that list.
+            The Recovery Suite is now open at 130 Junction Road, Archway. Sessions are bookable online, and you can <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium">contact the clinic</Link> if you want to chat through which session suits before you book.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Frequently asked questions</h2>
@@ -253,7 +253,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Recovery is local now</h2>
 
           <p>
-            If you live or train in North London and you have ever wished a Normatec session was around the corner instead of a tube journey away, that is the bit that has changed. The Hyperice Normatec 3 Full Body is here, ready to go, and waiting on a few final pieces before we open sessions to the public. Register your interest, come in for a look, and we will be in touch the moment the diary opens.
+            If you live or train in North London and you have ever wished a Normatec session was around the corner instead of a tube journey away, that is the bit that has changed. The Hyperice Normatec 3 Full Body is here, set up, and bookable now. Book online, or pop in for a look first if you want to see the kit before you commit.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find Normatec compression near you in North London</h2>
