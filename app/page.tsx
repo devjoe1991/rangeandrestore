@@ -70,20 +70,18 @@ const services = [
     problem: 'Sore, stressed and not sleeping well?',
     solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Recovery, sleep and circulation in one session.',
     href: '/recovery-suite/infrared-sauna',
-    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    bookingHref: BOOKING_URLS.recoverySuite,
     image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
     imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
-    comingSoon: true,
   },
   {
     title: 'Normatec Compression Therapy',
     problem: 'Heavy legs after long runs, rides or shifts?',
     solution: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired muscles fast.',
     href: '/recovery-suite/compression-therapy',
-    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    bookingHref: BOOKING_URLS.recoverySuite,
     image: '/normatec-full-body-compression-recovery-archway-north-london.png',
     imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
-    comingSoon: true,
   },
 ]
 
@@ -226,11 +224,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2.2 RECOVERY SUITE COMING SOON BANNER ───────────── */}
+      {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            <span className="font-black">Coming Soon:</span> Our new Advanced Recovery Suite. Sauna, compression and recovery sessions.
+            <span className="font-black">Now Open:</span> Our new Advanced Recovery Suite. Sauna, compression and recovery sessions.
           </span>
         </div>
       </div>
@@ -240,10 +238,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 id="recovery-suite-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
-              Coming Soon to Range and Restore. Our New Advanced Recovery Suite
+              Now Open at Range and Restore. Our New Advanced Recovery Suite
             </h2>
             <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
-              A new dedicated recovery and wellness space is opening at the clinic. Hybrid infrared and traditional sauna, Normatec full-body compression recovery, and recovery-focused wellness and sports recovery sessions. Launching soon at Range and Restore, Archway.
+              A new dedicated recovery and wellness space is now open at the clinic. Hybrid infrared and traditional sauna, Normatec full-body compression recovery, and recovery-focused wellness and sports recovery sessions. Available now at Range and Restore, Archway.
             </p>
           </div>
 
@@ -545,10 +543,9 @@ export default function HomePage() {
 /* ── Sub-components ──────────────────────────────────────── */
 
 function ServiceCard({ s }: { s: typeof services[0] }) {
-  const comingSoon = 'comingSoon' in s && s.comingSoon
   const image = 'image' in s ? s.image : undefined
   const imageAlt = 'imageAlt' in s ? s.imageAlt : undefined
-  const ctaLabel = comingSoon ? 'Register Your Interest' : 'Book now'
+  const ctaLabel = 'Book now'
   const ctaHref = s.bookingHref
   const isTel = ctaHref.startsWith('tel:')
 
@@ -568,11 +565,6 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-          {comingSoon && (
-            <span className="absolute top-3 right-3 bg-[#7dd94a] text-[#1a2330] text-[0.55rem] font-black tracking-widest uppercase px-2 py-0.5 rounded-full">
-              Opening Soon
-            </span>
-          )}
         </Link>
       )}
 

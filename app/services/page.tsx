@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
-import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
+import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Services in Archway N19 | Range and Restore',
@@ -70,22 +70,20 @@ const services = [
   {
     title: 'Infrared Sauna (Recovery Suite)',
     href: '/recovery-suite/infrared-sauna',
-    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation. Pairs with sports massage for cyclists, runners and desk workers across North London.',
-    duration: 'Opening soon · Pricing announced at launch',
+    duration: 'Solo and two-person sessions available',
     image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
     imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
-    comingSoon: true,
   },
   {
     title: 'Normatec Compression Therapy (Recovery Suite)',
     href: '/recovery-suite/compression-therapy',
-    bookingHref: `tel:${BUSINESS.phoneTel}`,
+    bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS, flushes tired legs after long runs, rides or long shifts on your feet.',
-    duration: 'Opening soon · Pricing announced at launch',
+    duration: 'Legs-only and full body sessions available',
     image: '/normatec-full-body-compression-recovery-archway-north-london.png',
     imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
-    comingSoon: true,
   },
 ]
 
@@ -145,10 +143,9 @@ export default function ServicesPage() {
 
         <div className="grid grid-cols-1 gap-6">
           {services.map((service) => {
-            const comingSoon = 'comingSoon' in service && service.comingSoon
             const image = 'image' in service ? service.image : undefined
             const imageAlt = 'imageAlt' in service ? service.imageAlt : undefined
-            const ctaLabel = comingSoon ? 'Register Your Interest' : 'Book Now'
+            const ctaLabel = 'Book Now'
             const isTel = service.bookingHref.startsWith('tel:')
 
             return (
@@ -163,11 +160,6 @@ export default function ServicesPage() {
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
                       sizes="(max-width: 1024px) 100vw, 1024px"
                     />
-                    {comingSoon && (
-                      <span className="absolute top-4 right-4 bg-[#7dd94a] text-[#1a2330] text-xs font-black tracking-widest uppercase px-3 py-1 rounded-full">
-                        Opening Soon
-                      </span>
-                    )}
                   </Link>
                 )}
                 <div className="p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
