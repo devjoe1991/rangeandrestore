@@ -240,7 +240,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
           </ul>
 
           <p>
-            All three live in the same building. The <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> page lists how the bundles work. The full Recovery Suite is in pre-launch right now and bookings open to early registrants first.
+            All three live in the same building. The <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> page lists how the bundles work. The Recovery Suite is now open and sessions are bookable online.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Common cycling injuries we see at the clinic</h2>

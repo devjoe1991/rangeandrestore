@@ -21,7 +21,7 @@ const posts = [
     title: 'Faster Recovery with Normatec Compression, Now in Archway',
     slug: 'normatec-full-body-compression-recovery-archway',
     date: '13 May 2026',
-    excerpt: 'Hyperice Normatec 3 Full Body pneumatic compression has joined the Recovery Suite at Range and Restore in Archway. How it works, who it helps, and how to register your interest before launch.',
+    excerpt: 'Hyperice Normatec 3 Full Body pneumatic compression has joined the Recovery Suite at Range and Restore in Archway. How it works, who it helps, and how to book a session.',
     image: '/normatec-full-body-compression-recovery-archway-north-london.png',
   },
   {

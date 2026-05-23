@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: 'Can I combine it with sports massage on the same visit?',
-    a: "Yes, and a lot of clients do. The usual order is compression first to flush the legs, then hands-on sports massage to release the areas that need direct work. We'll bundle that into our Recovery Packages once launch goes live.",
+    a: "Yes, and a lot of clients do. The usual order is compression first to flush the legs, then hands-on sports massage to release the areas that need direct work. The bundled version is on our Recovery Packages page.",
   },
   {
     q: 'Is Normatec compression the same as lymphatic drainage massage?',
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'How long is each session?',
-    a: "Sessions are either 30 minutes for legs only, 30 minutes for full body, or 45 minutes for full body at a slower pace. Carlos will help you pick what suits you depending on what you're recovering from. Pricing is announced at launch.",
+    a: "Sessions are either 30 minutes for legs only, 30 minutes for full body, or 45 minutes for full body at a slower pace. Carlos will help you pick what suits you depending on what you're recovering from. Current pricing is on the booking page.",
   },
 ]
 
@@ -268,17 +268,19 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Register your interest in Normatec compression at Range and Restore</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book Normatec compression at Range and Restore</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            The Recovery Suite is launching soon at 130 Junction Road, Archway. Get on the early list and we will let you know the moment compression sessions open, plus introductory pricing for the first cohort. In the meantime, sports massage is already bookable and gift cards are live.
+            The Recovery Suite is now open at 130 Junction Road, Archway. Compression sessions are bookable online, sports massage is bookable separately, and gift cards are live.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
-            <Link
-              href="/contact"
+            <a
+              href={BOOKING_URLS.recoverySuite}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
             >
-              Register Your Interest
-            </Link>
+              Book Compression Session
+            </a>
             <a
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
