@@ -71,6 +71,14 @@ const partners: Partner[] = [
     blurb: 'Range and Restore and Ali’s Quiff Barber on Holloway Road look after Archway from the inside out. Sports massage, recovery and remedial therapy on Junction Road, traditional barbering, beard work and full-service grooming a few minutes up the road.',
     externalUrl: 'https://booksy.com/en-gb/167323_alis-quiff-barber_barber_311817_london',
   },
+  {
+    slug: 'nc-osteopathy',
+    name: 'Range and Restore × NC Osteopathy',
+    headerText: 'Range and Restore × NC Osteopathy',
+    category: 'North London. Osteopathy and Whole-Person Care',
+    blurb: 'Range and Restore and NC Osteopathy work together on whole-person care in North London. Osteopathy and Mummy MOT with Nagma Chaudhry M.Ost, sports massage and recovery with Carlos. Two complementary disciplines, honest referrals both ways.',
+    externalUrl: 'https://ncosteopathy.co.uk',
+  },
 ]
 
 const breadcrumbs = buildBreadcrumbs([

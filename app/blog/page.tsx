@@ -11,12 +11,6 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
-    title: 'Range and Restore × NC Osteopathy: Sports Massage and Osteopathy in North London',
-    slug: 'nc-osteopathy-collaboration-archway',
-    date: '27 May 2026',
-    excerpt: 'A new North London collaboration. Range and Restore Sports Massage in Archway and NC Osteopathy, led by Nagma Chaudhry, are working together to give the local community joined-up care — when to see an osteopath, when to book a sports massage, and how the two disciplines fit together.',
-  },
-  {
     title: 'Sports Massage and Recovery for Cyclists in Archway, North London',
     slug: 'sports-massage-cycling-recovery-archway',
     date: '14 May 2026',
