@@ -117,24 +117,21 @@ export default function RecoverySuitePage() {
             title="Infrared Sauna"
             summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Solo or shared sessions to support muscle recovery, circulation and proper time to switch off."
             href="/recovery-suite/infrared-sauna"
-            // TODO: replace with real photo of the sauna
-            image="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?w=1200&q=75"
+            image="/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp"
             imageAlt="Vidalux 2 person hybrid infrared sauna at Range and Restore Archway"
           />
           <RecoverySuiteCard
             title="Compression Therapy"
             summary="Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms. Ideal after a long run, a leg session or a long week on your feet."
             href="/recovery-suite/compression-therapy"
-            // TODO: replace with real photo of the Normatec setup
-            image="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=75"
+            image="/recovery-suite/normatec-compression-therapy-archway.jpg"
             imageAlt="Normatec 3 full body compression therapy setup at Range and Restore Archway"
           />
           <RecoverySuiteCard
             title="Recovery Sessions & Packages"
             summary="Standalone sauna, compression or combined recovery sessions, plus full recovery packages with sports massage. Pick the level that suits you."
             href="/recovery-suite/recovery-packages"
-            // TODO: replace with real photo or composite shot
-            image="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&q=75"
+            image="/recovery-suite/recovery-suite-room-archway.jpg"
             imageAlt="Recovery sessions and packages combining sauna compression and sports massage in Archway"
           />
         </div>
