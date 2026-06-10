@@ -39,23 +39,6 @@ export default function TeamPage() {
       {/* Team intro cards */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          <Link href="/about" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src={CARLOS_PHOTO}
-                alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
-              />
-            </div>
-            <div className="p-5">
-              <p className="text-xl font-black text-page">Carlos Bonvicine</p>
-              <p className="text-[#2ab4b8] text-xs font-bold mt-1">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
-              <p className="text-page-muted text-xs font-medium mt-1">Certified MLD · Cupping Therapy</p>
-              <p className="text-page font-bold text-sm mt-3">Read Carlos&rsquo;s full profile →</p>
-            </div>
-          </Link>
           <a href="#darael-beckles" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
@@ -73,6 +56,23 @@ export default function TeamPage() {
               <p className="text-page font-bold text-sm mt-3">Read Darael&rsquo;s full profile ↓</p>
             </div>
           </a>
+          <Link href="/about" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <Image
+                src={CARLOS_PHOTO}
+                alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
+              />
+            </div>
+            <div className="p-5">
+              <p className="text-xl font-black text-page">Carlos Bonvicine</p>
+              <p className="text-[#2ab4b8] text-xs font-bold mt-1">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
+              <p className="text-page-muted text-xs font-medium mt-1">Certified MLD · Cupping Therapy</p>
+              <p className="text-page font-bold text-sm mt-3">Read Carlos&rsquo;s full profile →</p>
+            </div>
+          </Link>
         </div>
       </div>
 
