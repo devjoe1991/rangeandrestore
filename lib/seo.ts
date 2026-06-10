@@ -114,6 +114,31 @@ export const personSchema = {
   ],
 }
 
+export const daraelPersonSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Darael Beckles',
+  jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+  description: 'Darael Beckles is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and graduate of the North London School of Sports Massage (NLSSM), with a background in Sports & Exercise Science, based at Range and Restore in Archway, North London.',
+  url: `${BASE_URL}/team`,
+  image: `${BASE_URL}/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg`,
+  worksFor: {
+    '@type': 'LocalBusiness',
+    name: 'Range and Restore Sports Massage',
+    url: BASE_URL,
+  },
+  alumniOf: { '@type': 'EducationalOrganization', name: 'North London School of Sports Massage (NLSSM)' },
+  memberOf: { '@type': 'Organization', name: 'Sports Massage Association' },
+  knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Deep Tissue Massage', 'Injury Rehabilitation', 'Sports & Exercise Science', 'Postural Assessment'],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Qualification', name: 'BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapy (NLSSM)' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/rangeandrestore',
+    'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
+  ],
+}
+
 export const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'MedicalBusiness', 'HealthAndBeautyBusiness'],
@@ -163,14 +188,24 @@ export const businessSchema = {
     bestRating: '5',
     worstRating: '1',
   },
-  employee: {
-    '@type': 'Person',
-    name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & Certified MLD Practitioner',
-    description: 'Carlos Bonvicine is a soft tissue and clinical massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner based in Archway, North London.',
-    url: `${BASE_URL}/about`,
-    knowsAbout: ['Sports Massage', 'Deep Tissue Massage', 'Manual Lymphatic Drainage', 'Soft Tissue Therapy', 'Injury Rehabilitation', 'Clinical Massage'],
-  },
+  employee: [
+    {
+      '@type': 'Person',
+      name: 'Carlos Bonvicine',
+      jobTitle: 'Soft Tissue Therapist & Certified MLD Practitioner',
+      description: 'Carlos Bonvicine is a soft tissue and clinical massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner based in Archway, North London.',
+      url: `${BASE_URL}/about`,
+      knowsAbout: ['Sports Massage', 'Deep Tissue Massage', 'Manual Lymphatic Drainage', 'Soft Tissue Therapy', 'Injury Rehabilitation', 'Clinical Massage'],
+    },
+    {
+      '@type': 'Person',
+      name: 'Darael Beckles',
+      jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+      description: 'Darael Beckles is a BTEC Level 5 sports massage and soft tissue remedial therapist (NLSSM graduate, SMRT, MSMA) based in Archway, North London.',
+      url: `${BASE_URL}/team`,
+      knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Deep Tissue Massage', 'Injury Rehabilitation', 'Sports & Exercise Science'],
+    },
+  ],
   hasMap: 'https://maps.google.com/?q=Range+and+Restore+Sports+Massage+130+Junction+Road+London+N19+5LB',
   sameAs: [
     'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
