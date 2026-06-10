@@ -146,6 +146,7 @@ export function Footer() {
             <ul className="space-y-1 text-sm text-[#1a3d3a]/90 font-medium">
               {[
                 ['About Carlos',           '/about'],
+                ['Meet the Team',          '/team'],
                 ['Recovery Suite',         '/recovery-suite'],
                 ['Gallery',                '/gallery'],
                 ['Gift Cards',             '/gift-cards'],

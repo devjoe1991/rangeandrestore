@@ -71,7 +71,7 @@ const services = [
     solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £35.',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
-    image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+    image: '/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp',
     imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
   },
   {
@@ -80,7 +80,7 @@ const services = [
     solution: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired muscles fast.',
     href: '/recovery-suite/compression-therapy',
     bookingHref: BOOKING_URLS.recoverySuite,
-    image: '/normatec-full-body-compression-recovery-archway-north-london.png',
+    image: '/recovery-suite/normatec-compression-therapy-archway.jpg',
     imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
   },
 ]
@@ -99,7 +99,7 @@ const blogPosts = [
     title:    'Faster Recovery with Normatec Compression, Now in Archway',
     href:     '/blog/normatec-full-body-compression-recovery-archway',
     date:     '13 May 2026',
-    img:      '/normatec-full-body-compression-recovery-archway-north-london.png',
+    img:      '/recovery-suite/normatec-compression-therapy-archway.jpg',
     imgAlt:   'Hyperice Normatec 3 Full Body pneumatic compression now in the Recovery Suite at Range and Restore, Archway, North London',
     category: 'Recovery Suite',
     readTime: '8 min read',
@@ -438,6 +438,57 @@ export default function HomePage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. MEET THE TEAM ─────────────────────────────────── */}
+      <section className="section bg-page-sage" aria-labelledby="team-heading">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <span className="eyebrow block mb-2">Meet the Team</span>
+            <h2 id="team-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight">
+              Two therapists. One assessment-led approach.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            <Link href="/about" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
+                  alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
+                />
+              </div>
+              <div className="p-5">
+                <p className="text-xl font-black text-page">Carlos Bonvicine</p>
+                <p className="text-[#2ab4b8] text-xs font-bold mt-1">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
+                <p className="text-page-muted text-xs font-medium mt-1">Certified MLD · Cupping Therapy</p>
+                <p className="text-page font-bold text-sm mt-3">Meet Carlos →</p>
+              </div>
+            </Link>
+            <Link href="/team" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg"
+                  alt="Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
+                />
+              </div>
+              <div className="p-5">
+                <p className="text-xl font-black text-page">Darael Beckles</p>
+                <p className="text-[#2ab4b8] text-xs font-bold mt-1">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
+                <p className="text-page-muted text-xs font-medium mt-1">NLSSM Graduate · SMRT, MSMA</p>
+                <p className="text-page font-bold text-sm mt-3">Meet Darael →</p>
+              </div>
+            </Link>
+          </div>
+          <div className="mt-7 text-center">
+            <Link href="/team" className="btn btn-primary text-sm">Meet the full team</Link>
           </div>
         </div>
       </section>
