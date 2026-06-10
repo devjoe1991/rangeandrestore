@@ -443,13 +443,10 @@ export default function HomePage() {
       </section>
 
       {/* ── 5. MEET THE TEAM ─────────────────────────────────── */}
-      <section className="section bg-page-sage" aria-labelledby="team-heading">
+      <section className="section bg-page-sage" aria-label="Meet the Team">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="eyebrow block mb-2">Meet the Team</span>
-            <h2 id="team-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight">
-              Two therapists. One assessment-led approach.
-            </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
             <Link href="/about" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
