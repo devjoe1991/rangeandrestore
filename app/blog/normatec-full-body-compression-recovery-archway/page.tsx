@@ -7,7 +7,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Faster Recovery with Normatec Compression in Archway',
-  description: 'Hyperice Normatec 3 Full Body pneumatic compression is now in our Recovery Suite in Archway, North London. How Normatec full-body compression recovery works, who it helps, and how to book a session.',
+  description: 'Hyperice Normatec 3 full body compression is now in our Archway Recovery Suite. How it works, who it helps and how to book your session.',
   path: '/blog/normatec-full-body-compression-recovery-archway',
   author: true,
 })
@@ -268,9 +268,9 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book Normatec compression at Range and Restore</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Use the Normatec at Range and Restore</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            The Recovery Suite is now open at 130 Junction Road, Archway. Compression sessions are bookable online, sports massage is bookable separately, and gift cards are live.
+            The Recovery Suite is now open at 130 Junction Road, Archway. The Normatec is part of the private Recovery Suite experience — sessions from £35, bookable online. Sports massage is bookable separately, and gift cards are live.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a
@@ -279,7 +279,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
             >
-              Book Compression Session
+              Book Recovery Suite Session
             </a>
             <a
               href={BOOKING_URLS.sportsDeepTissue}

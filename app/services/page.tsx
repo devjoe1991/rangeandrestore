@@ -72,7 +72,7 @@ const services = [
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation. Pairs with sports massage for cyclists, runners and desk workers across North London.',
-    duration: 'Solo and two-person sessions available',
+    duration: '45 min – £35  ·  60 min – £45  ·  private sessions',
     image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
     imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
   },
@@ -81,9 +81,16 @@ const services = [
     href: '/recovery-suite/compression-therapy',
     bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS, flushes tired legs after long runs, rides or long shifts on your feet.',
-    duration: 'Legs-only and full body sessions available',
+    duration: 'Part of the private Recovery Suite experience',
     image: '/normatec-full-body-compression-recovery-archway-north-london.png',
     imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
+  },
+  {
+    title: 'Sports Massage + Sauna Recovery Packages (Recovery Suite)',
+    href: '/recovery-suite/recovery-packages',
+    bookingHref: BOOKING_URLS.recoverySuite,
+    description: 'Combine hands-on sports massage with private time in the Recovery Suite, booked as one appointment at one price. 30 minute massage plus 45 minute sauna recovery, or 60 minute massage plus 30 minute sauna recovery.',
+    duration: '75 min – £85  ·  90 min – £110',
   },
 ]
 

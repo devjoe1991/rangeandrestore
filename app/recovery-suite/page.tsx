@@ -4,11 +4,11 @@ import Image from 'next/image'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { RecoverySuiteCard } from '@/components/RecoverySuiteCard'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Suite – Infrared Sauna & Compression Therapy in Archway London',
-  description: 'A new recovery and wellness suite at Range and Restore, Archway. Hybrid infrared sauna and Normatec full body compression therapy. Book solo sessions or pair with sports massage.',
+  description: 'Recovery and wellness suite at Range and Restore, Archway. Hybrid infrared sauna and Normatec compression. Private sessions from £35.',
   path: '/recovery-suite',
 })
 
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: 'Can I bring a guest into the sauna?',
-    a: 'Yes. The sauna fits two people comfortably, so you\'re welcome to bring a partner, training mate or friend along. There\'s a separate two person booking option.',
+    a: 'Yes. The sauna fits two people comfortably and every session is private, so you\'re welcome to bring a partner, training mate or friend along. Just mention it when you book.',
   },
   {
     q: 'How do I book a combined session like sauna and massage together?',
@@ -56,6 +56,7 @@ export default function RecoverySuitePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       {/* Hero */}
       <div className="relative bg-[#1a3d3a] py-16 lg:py-24 overflow-hidden">
@@ -75,7 +76,7 @@ export default function RecoverySuitePage() {
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
           <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
-            Hybrid infrared sauna, Normatec full body compression, and a full range of single recovery sessions and recovery packages with sports massage. Now open.
+            Hybrid infrared sauna and Normatec full body compression in one private suite. Sessions from £35, and recovery packages with sports massage from £85. Now open.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 items-center">
             <a href={BOOKING_URLS.recoverySuite} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Recovery Session</a>
@@ -129,7 +130,7 @@ export default function RecoverySuitePage() {
           />
           <RecoverySuiteCard
             title="Recovery Sessions & Packages"
-            summary="Standalone sauna, compression or combined recovery sessions, plus full recovery packages with sports massage. Pick the level that suits you."
+            summary="Private sauna Recovery Suite sessions from £35, plus combined sports massage and sauna recovery packages from £85. Pick the level that suits you."
             href="/recovery-suite/recovery-packages"
             image="/recovery-suite/recovery-suite-room-archway.jpg"
             imageAlt="Recovery sessions and packages combining sauna compression and sports massage in Archway"
@@ -148,8 +149,8 @@ export default function RecoverySuitePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { step: '01', title: 'Standalone recovery', desc: 'Sauna, compression, or both together. Quick to fit in around training or a busy week, no massage needed.' },
-              { step: '02', title: 'Recovery with massage', desc: 'Add sports massage to your sauna or compression session. The full sequence in one visit.' },
+              { step: '01', title: 'Standalone recovery', desc: 'A private 45 or 60 minute Recovery Suite session from £35. Quick to fit in around training or a busy week, no massage needed.' },
+              { step: '02', title: 'Recovery with massage', desc: 'Sports massage plus sauna recovery in one booking, from £85. The full sequence in one visit.' },
               { step: '03', title: 'Become a member', desc: 'Recovery memberships for athletes and regulars. Coming soon.' },
             ].map((item) => (
               <div key={item.step} className="bg-page-sage rounded-2xl p-6">

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Infrared Sauna in Archway London',
-  description: 'Two person Vidalux hybrid sauna with full spectrum infrared and traditional heat at Range and Restore, Archway N19. Book a solo session or pair with sports massage.',
+  description: 'Vidalux hybrid sauna with full spectrum infrared and traditional heat in Archway N19. Private sessions from £35, or pair with sports massage from £85.',
   path: '/recovery-suite/infrared-sauna',
 })
 
@@ -36,6 +36,10 @@ const serviceSchema = {
     { '@type': 'Place', name: 'Kentish Town, London NW5' },
   ],
   serviceType: 'Infrared Sauna',
+  offers: [
+    { '@type': 'Offer', price: '35.00', priceCurrency: 'GBP', name: 'Private Infrared & Traditional Sauna Recovery Suite Experience – 45 Minutes' },
+    { '@type': 'Offer', price: '45.00', priceCurrency: 'GBP', name: 'Private Infrared & Traditional Sauna Recovery Suite Experience – 60 Minutes' },
+  ],
 }
 
 const productSchema = {
@@ -54,11 +58,11 @@ const faqs = [
   },
   {
     q: 'How long is a typical session?',
-    a: 'Most clients book 30 or 45 minutes. 30 is plenty if it\'s your first time or you\'re fitting it in around training. 45 gives you more time to settle in, especially if you\'re using it as a switch-off rather than a quick recovery session.',
+    a: 'Sessions are 45 minutes (£35) or 60 minutes (£45). 45 is plenty if it\'s your first time or you\'re fitting it in around training. 60 gives you more time to settle in, especially if you\'re using it as a switch-off rather than a quick recovery session.',
   },
   {
     q: 'Can I bring someone with me?',
-    a: 'Yes. The cabin is built for two people. Book the two person option at checkout and you can share the session with a partner, friend or training mate.',
+    a: 'Yes. The cabin is built for two people and every session is private, so you\'re welcome to share your session with a partner, friend or training mate. Just mention it when you book.',
   },
   {
     q: 'What should I wear?',
@@ -76,6 +80,7 @@ export default function InfraredSaunaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -126,11 +131,10 @@ export default function InfraredSaunaPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Choose your session</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – Solo', desc: 'A focused recovery session for one. Ideal if you\'re fitting it in around training, work or a busy week.' },
-                { duration: '45 Minutes – Solo', desc: 'A longer session for proper switch-off time. Recommended for evenings or rest days when you want to settle in.' },
-                { duration: '30 or 45 Min – Two Person', desc: 'Bring a partner, friend or training mate. The cabin comfortably fits two and pricing reflects shared use.' },
+                { duration: '45 Minutes – £35', desc: 'A focused private recovery session. Ideal if you\'re fitting it in around training, work or a busy week.' },
+                { duration: '60 Minutes – £45', desc: 'A longer session for proper switch-off time. Recommended for evenings or rest days when you want to settle in.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>
@@ -138,7 +142,7 @@ export default function InfraredSaunaPage() {
                 </div>
               ))}
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">See the booking page for current session pricing.</p>
+            <p className="text-page-muted text-sm mt-3 italic">Every session is private, with the Recovery Suite to yourself. Prices are current launch-offer pricing, also shown on the booking page.</p>
           </section>
 
           <section>
@@ -189,7 +193,7 @@ export default function InfraredSaunaPage() {
                 'Carlos will run you through the controls and answer any questions',
                 'Take your time during the session, you can step out and back in if you need to',
                 'Cool down and rehydrate properly before you leave',
-                'Optional: combine with a Normatec compression session or a sports massage in the same visit',
+                'Optional: book a package that pairs your sauna session with a sports massage in the same visit',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
                   <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
@@ -230,7 +234,7 @@ export default function InfraredSaunaPage() {
               </Link>
               <Link href="/recovery-suite/recovery-packages" className="bg-card border-2 border-[#1a3d3a] rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Recovery Packages</p>
-                <p className="text-page-muted text-sm">Save when you combine sauna, compression and massage as one visit.</p>
+                <p className="text-page-muted text-sm">Save when you combine sports massage and sauna recovery as one visit. Packages from £85.</p>
               </Link>
             </div>
           </section>
@@ -245,7 +249,7 @@ export default function InfraredSaunaPage() {
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-[#1a2330] mb-4">Sauna sessions now open at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Sauna, compression and full recovery sessions available to book now.
+              The Recovery Suite is open in Archway, North London. Private sauna sessions from £35 and sports massage packages from £85, available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
