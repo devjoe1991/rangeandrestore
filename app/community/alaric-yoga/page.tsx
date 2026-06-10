@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Alaric Yoga and Range and Restore | Iyengar Yoga and Soft Tissue Therapy in Archway N19',
-  description: 'Range and Restore Sports Massage in Archway (130 Junction Road, N19) works alongside Senior Iyengar Yoga teacher Alaric Newcombe of Alaric Yoga. Mobility, recovery and soft tissue support for yoga students across N19, Tufnell Park, Holloway, Highgate and North London.',
+  description: 'Range and Restore in Archway works alongside Senior Iyengar Yoga teacher Alaric Newcombe. Mobility, recovery and soft tissue support for yoga students.',
   path: '/community/alaric-yoga',
 })
 

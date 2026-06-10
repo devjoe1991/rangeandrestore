@@ -53,6 +53,7 @@ export default function ContactPage() {
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#1a3d3a]/70" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

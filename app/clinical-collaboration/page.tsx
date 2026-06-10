@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Clinical Collaboration – Archway Massage & Ultrasound',
-  description: 'Range and Restore Sports Massage operates alongside Reliable Scan, a private diagnostic ultrasound clinic in Archway. Coordinated assessment and treatment in one location.',
+  description: 'Range and Restore works alongside Reliable Scan, a private diagnostic ultrasound clinic in Archway. Coordinated assessment and treatment in one location.',
   path: '/clinical-collaboration',
 })
 

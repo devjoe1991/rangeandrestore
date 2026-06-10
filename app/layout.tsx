@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   verification: {
     google: 'v6gvLdaIjWXEPWw_kZ7bHkPrruqxtzdGeZZ2-ZuboYE',
   },
+  applicationName: 'Range and Restore Sports Massage',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#1a3d3a',
 }
 
 export default function RootLayout({

@@ -7,7 +7,7 @@ import type { GalleryImage } from './GalleryClient'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Gallery – Range and Restore Sports Massage Archway',
-  description: 'See inside Range and Restore Sports Massage in Archway, North London. Real clinic photos, treatment sessions and the professional environment behind every appointment with Carlos Bonvicine.',
+  description: 'See inside Range and Restore Sports Massage in Archway: real clinic photos, treatment sessions and the environment behind every appointment.',
   path: '/gallery',
 })
 
@@ -37,7 +37,9 @@ const LOCAL_GALLERY_IMAGES: GalleryImage[] = [
 
 async function getPhotos(): Promise<GalleryImage[]> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://rangeandrestore.co.uk')
     const res = await fetch(`${baseUrl}/api/photos`, { next: { revalidate: 3600 } })
     const data = await res.json()
     // Filter out photo index 2 (photo 3), then append Google photos after local ones

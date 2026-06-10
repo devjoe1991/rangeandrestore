@@ -4,7 +4,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL, personSchema } from '@/lib/s
 
 export const metadata: Metadata = buildMetadata({
   title: 'Press, Media & Interview Enquiries | Archway, North London',
-  description: 'Press, media, podcast and interview enquiries for Range and Restore. Carlos Bonvicine, sports massage and Manual Lymphatic Drainage expert in Archway, North London, available for quotes, interviews and on-camera appearances.',
+  description: 'Press, podcast and interview enquiries for Range and Restore. Carlos Bonvicine, sports massage and MLD expert in Archway, available for quotes and interviews.',
   path: '/press',
   author: true,
 })

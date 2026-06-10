@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Reliable Scan and Range and Restore | Same Building, 130 Junction Road, Archway',
-  description: 'Range and Restore and Reliable Scan share the same healthcare hub at 130 Junction Road, Archway. Private diagnostic ultrasound and specialist sports and recovery therapy under one roof in North London.',
+  description: 'Range and Restore and Reliable Scan share the same hub at 130 Junction Road, Archway. Diagnostic ultrasound and sports therapy under one roof.',
   path: '/community/reliable-scan',
 })
 

@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sol Centre and Range and Restore | Archway Local Partners',
-  description: 'How Range and Restore and Sol Centre work hand in hand on health and wellbeing in Archway. A community-focused yoga and sauna studio on Fairbridge Road and a recovery clinic on Junction Road, sharing knowledge and experiences with the same North London locals.',
+  description: 'How Range and Restore and Sol Centre, a yoga and sauna studio on Fairbridge Road, work hand in hand on health and wellbeing for Archway locals.',
   path: '/community/sol-centre',
 })
 

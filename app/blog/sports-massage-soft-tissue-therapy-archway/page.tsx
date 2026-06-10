@@ -6,7 +6,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Archway London | Injury Recovery & Performance Therapy',
-  description: 'Discover how sports massage and soft tissue remedial therapy in Archway, North London help with recovery, injury prevention, mobility and performance for runners, cyclists and active individuals.',
+  description: 'How sports massage and soft tissue therapy in Archway, North London help runners, cyclists and active people with recovery, injury prevention and mobility.',
   path: '/blog/sports-massage-soft-tissue-therapy-archway',
   author: true,
 })

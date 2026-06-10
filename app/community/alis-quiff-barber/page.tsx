@@ -4,7 +4,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Ali’s Quiff Barber and Range and Restore | Men’s Self-Care in Archway N19',
-  description: 'Ali’s Quiff Barber on Holloway Road (746, Archway N19 3JF) and Range and Restore Sports Massage on Junction Road work side by side on men’s self-care in Archway. Traditional barbering, beard work, hot towels and head massage paired with sports massage, recovery and remedial therapy.',
+  description: 'Ali’s Quiff Barber on Holloway Road and Range and Restore on Junction Road work side by side on men’s self-care in Archway: barbering, massage and recovery.',
   path: '/community/alis-quiff-barber',
 })
 

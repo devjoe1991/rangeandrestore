@@ -7,7 +7,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Cyclists in Archway, North London | Cycling Recovery Guide',
-  description: 'Sports massage for cyclists in Archway, North London. A complete cycling recovery guide covering cyclist knee pain, IT band syndrome, hip flexor tightness, lower back pain and post-ride recovery, plus how to stack sports massage, infrared sauna and Normatec compression at the Recovery Suite in N19.',
+  description: 'Sports massage for cyclists in Archway: knee pain, IT band syndrome, hip flexor tightness, lower back pain and post-ride recovery in N19.',
   path: '/blog/sports-massage-cycling-recovery-archway',
   author: true,
 })

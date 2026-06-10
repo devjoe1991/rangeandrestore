@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Archway, North London | A Local Guide',
-  description: 'A North London local guide to sports massage in Archway. Where to book, what to expect, who it suits, and how clients across N19, Tufnell Park, Holloway, Highgate and Finsbury Park use it for recovery, mobility and pain relief.',
+  description: 'A local guide to sports massage in Archway: where to book, what to expect, and how clients across N19 and North London use it for recovery and pain relief.',
   path: '/blog/sports-massage-archway-local-guide',
   author: true,
 })
