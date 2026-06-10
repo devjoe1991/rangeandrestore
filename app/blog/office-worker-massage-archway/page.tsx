@@ -6,7 +6,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Office Workers in Archway | Desk Pain Relief',
-  description: 'Sports massage and soft tissue remedial therapy for office workers, commuters, and long-hour desk workers in Archway, North London. Target neck, back, hip and shoulder tension.',
+  description: 'Sports massage and soft tissue therapy for office workers and desk-bound commuters in Archway, North London. Target neck, back, hip and shoulder tension.',
   path: '/blog/office-worker-massage-archway',
   author: true,
 })

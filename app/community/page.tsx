@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Our Archway Community | Local Partners in North London',
-  description: 'The local businesses we work with in Archway and North London. Cafés, studios and independent shops in our community that we genuinely rate and send our clients to.',
+  description: 'The local businesses we work with in Archway and North London. Cafés, studios and independent shops we genuinely rate and send our clients to.',
   path: '/community',
 })
 

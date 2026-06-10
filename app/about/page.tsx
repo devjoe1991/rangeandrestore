@@ -7,7 +7,7 @@ import { RELIABLE_SCAN_URL } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Carlos Bonvicine | Sports Massage Therapist Archway',
-  description: 'Range and Restore is led by Carlos Bonvicine, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner in Archway, North London. Five-star rated, assessment-led, and built around your results.',
+  description: 'Carlos Bonvicine, BTEC Level 5 sports massage therapist and certified MLD practitioner in Archway, North London. Five-star rated, assessment-led.',
   path: '/about',
 })
 

@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Areas Served – Sports Massage Near You in North London',
-  description: 'Range and Restore Sports Massage in Archway serves Tufnell Park, Holloway, Islington, Finsbury Park, Crouch End, Highgate, Kentish Town and North London. Book your local session.',
+  description: 'Sports massage in Archway serving Tufnell Park, Holloway, Islington, Finsbury Park, Crouch End, Highgate and Kentish Town. Book your local session.',
   path: '/areas-served',
 })
 

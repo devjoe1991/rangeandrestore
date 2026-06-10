@@ -4,7 +4,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'NC Osteopathy and Range and Restore | Osteopathy and Sports Massage in North London',
-  description: 'How Range and Restore Sports Massage in Archway and NC Osteopathy, led by Nagma Chaudhry M.Ost, work together on whole-person care in North London. Osteopathy, Mummy MOT, sports massage and recovery, with honest referrals both ways.',
+  description: 'How Range and Restore and NC Osteopathy, led by Nagma Chaudhry M.Ost, work together on whole-person care in North London, with honest referrals both ways.',
   path: '/community/nc-osteopathy',
 })
 

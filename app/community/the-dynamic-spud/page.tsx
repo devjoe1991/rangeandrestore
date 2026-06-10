@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'The Dynamic Spud and Range and Restore | Archway Local Partners',
-  description: 'How Range and Restore and The Dynamic Spud look after each other in Archway. Honest referrals, mutual support, two small businesses rooted in the same North London community.',
+  description: 'How Range and Restore and The Dynamic Spud look after each other in Archway: honest referrals and mutual support between two local businesses.',
   path: '/community/the-dynamic-spud',
 })
 

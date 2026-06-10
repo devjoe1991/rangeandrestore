@@ -157,6 +157,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${BASE_URL}/blog/office-worker-massage-archway`,
+      lastModified: new Date('2026-04-20'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/normatec-full-body-compression-recovery-archway`,
+      lastModified: new Date('2026-05-13'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/sports-massage-cycling-recovery-archway`,
+      lastModified: new Date('2026-05-14'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/faqs`,
       lastModified,
       changeFrequency: 'monthly',
@@ -223,22 +241,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/community/alaric-yoga`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/community/alis-quiff-barber`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/community/nc-osteopathy`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/socials`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.5,
-    },
-    {
-      url: `${BASE_URL}/privacy-policy`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms-and-conditions`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
     },
   ]
 

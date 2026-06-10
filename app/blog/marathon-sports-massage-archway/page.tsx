@@ -6,7 +6,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Marathon Massage in Archway | Pre & Post London Marathon Recovery',
-  description: 'Marathon preparation and recovery massage in Archway, North London. Pre-marathon and post-marathon sports massage from a therapist with 4 years of hands-on marathon event experience.',
+  description: 'Pre and post marathon sports massage in Archway, North London, from a therapist with four years of hands-on marathon event experience.',
   path: '/blog/marathon-sports-massage-archway',
   author: true,
 })
@@ -46,7 +46,9 @@ type PhotoData = { src: string; width: number; height: number }
 
 async function getMarathonPhotos(): Promise<PhotoData[]> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://rangeandrestore.co.uk')
     const res = await fetch(`${baseUrl}/api/photos`, { next: { revalidate: 3600 } })
     const data = await res.json()
     return (data.photos ?? []).slice(0, 6)
