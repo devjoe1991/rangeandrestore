@@ -241,6 +241,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${BASE_URL}/community/glow-by-d`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/community/alaric-yoga`,
       lastModified,
       changeFrequency: 'monthly',

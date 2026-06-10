@@ -53,6 +53,14 @@ const partners: Partner[] = [
     externalUrl: 'https://reliablescanltd.com',
   },
   {
+    slug: 'glow-by-d',
+    name: 'Range and Restore × Glow By D',
+    headerText: 'Range and Restore × Glow By D',
+    category: 'Archway. Same Building, 130 Junction Road',
+    blurb: 'Range and Restore and Glow By D share the same building at 130 Junction Road. Luxury skincare, advanced facials and beauty in one room, sports massage and recovery next door. Look after Archway inside and out, at one address.',
+    externalUrl: 'https://glowbyd.co.uk',
+  },
+  {
     slug: 'alaric-yoga',
     name: 'Range and Restore × Alaric Yoga',
     headerText: 'Range and Restore × Alaric Yoga',
