@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     ANNOUNCEMENT TEMPLATE - FLEXIBLE REUSE
+     ============================================================
+     MERGE FIELDS TO SET IN MAILCHIMP BEFORE EACH SEND:
+       *|ANNOUNCE_EYEBROW|*  - small uppercase label above the title
+                               e.g. "New at the clinic" / "Clinic update" / "Now open"
+       *|ANNOUNCE_TITLE|*    - main H1 headline
+                               e.g. "The Recovery Suite is now open."
+       *|ANNOUNCE_BODY|*     - one or two short paragraphs of body copy
+                               (plain text; use full stops, no HTML tags)
+       *|ANNOUNCE_CTA_LABEL|* - button label
+                               e.g. "Book Now" / "Find Out More"
+       *|ANNOUNCE_CTA_URL|*  - button destination URL
+                               e.g. https://rangeandrestoresportsmassage.janeapp.co.uk/#/list
+
+     DEFAULT COPY (shown below if merge fields are not set):
+       Eyebrow: "Clinic update"
+       Title:   "Something new at 130 Junction Road."
+       Body:    Two paragraphs introducing a generic update.
+       CTA:     "See What's New" -> https://rangeandrestore.co.uk
+
+     HEADER TAG (top-right of header band): edit the text in the
+     <!-- HEADER TAG --> comment below to match each send.
+     ============================================================ -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>*|IF:ANNOUNCE_TITLE|**|ANNOUNCE_TITLE|**|ELSE:|*News from Range and Restore*|END:IF|*</title>
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+  <style>
+    body,table,td,a{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+    table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
+    img{-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display:block;}
+    body{margin:0;padding:0;width:100%!important;height:100%!important;background:#FCFBF9;}
+    a{color:#2ab4b8;}
+    .btn-pill:hover{opacity:.92!important;}
+    @media only screen and (max-width:600px){
+      .container{width:100%!important;}
+      .px{padding-left:24px!important;padding-right:24px!important;}
+      .stack{display:block!important;width:100%!important;padding:0 0 16px 0!important;}
+      .h1{font-size:28px!important;line-height:34px!important;}
+      .hero-pad{padding:36px 24px!important;}
+    }
+    @media (prefers-color-scheme:dark){
+      .bg-page{background:#0d1a18!important;}
+      .card{background:#1a2826!important;}
+      .text{color:#e8f3f1!important;}
+      .muted{color:#9fb5b0!important;}
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#FCFBF9;">
+  <!-- PREVIEW TEXT: update this line to match the announcement content before sending -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#FCFBF9;">*|IF:ANNOUNCE_EYEBROW|**|ANNOUNCE_EYEBROW|* - *|END:IF|**|IF:ANNOUNCE_TITLE|**|ANNOUNCE_TITLE|**|ELSE:|*News from Range and Restore Sports Massage, Archway.*|END:IF|*&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;</div>
+  <table role="presentation" class="bg-page" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FCFBF9;">
+    <tr><td align="center" style="padding:24px 12px;">
+      <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;font-family:'DM Sans',Arial,Helvetica,sans-serif;">
+
+        <!-- HEADER -->
+        <tr>
+          <td style="background:#1a3d3a;border-radius:20px 20px 0 0;padding:20px 32px;" class="px">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td align="left" valign="middle">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+                    <td style="background:#FCFBF9;border-radius:9999px;padding:8px 16px;">
+                      <a href="https://rangeandrestore.co.uk" target="_blank" style="text-decoration:none;">
+                        <img src="https://rangeandrestore.co.uk/rangeandrestorelogo.png" width="132" alt="Range and Restore Sports Massage" style="max-width:132px;height:auto;display:block;">
+                      </a>
+                    </td>
+                  </tr></table>
+                </td>
+                <!-- HEADER TAG: change this text to match the send, e.g. "Now open" / "Clinic update" -->
+                <td align="right" valign="middle" style="font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#7dd94a;">
+                  *|IF:ANNOUNCE_EYEBROW|**|ANNOUNCE_EYEBROW|**|ELSE:|*Clinic update*|END:IF|*
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- HERO -->
+        <tr>
+          <td class="hero-pad" style="background:#122a28;padding:48px 40px;text-align:center;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#2ab4b8;padding-bottom:14px;">*|IF:ANNOUNCE_EYEBROW|**|ANNOUNCE_EYEBROW|**|ELSE:|*Clinic update*|END:IF|*</div>
+            <h1 class="h1" style="margin:0;font-size:32px;line-height:38px;font-weight:800;color:#ffffff;">*|IF:ANNOUNCE_TITLE|**|ANNOUNCE_TITLE|**|ELSE:|*Something new at 130 Junction Road.*|END:IF|*</h1>
+            <p class="muted" style="margin:18px 0 0;font-size:16px;line-height:1.6;color:#cfe3df;">*|IF:FNAME|*Hi *|FNAME|*,*|ELSE:|*Hi there,*|END:IF|* a quick note from Range and Restore with an update worth knowing about.</p>
+          </td>
+        </tr>
+
+        <!-- HERO IMAGE: swap this src for the most relevant image for your announcement -->
+        <!-- Options:
+             Clinic exterior:  https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg
+             Recovery Suite:   https://rangeandrestore.co.uk/recovery-suite/recovery-suite-room-archway.jpg
+             Massage:          https://rangeandrestore.co.uk/sports-massage-soft-tissue-therapy-archway-north-london.jpeg
+             Treatment room:   https://rangeandrestore.co.uk/Gallery/IMG_1828.jpeg
+        -->
+        <tr>
+          <td style="padding:0;background:#0d1a18;">
+            <img src="https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg" width="600" alt="Range and Restore Sports Massage, 130 Junction Road, Archway" style="width:100%;max-width:600px;height:auto;display:block;">
+          </td>
+        </tr>
+
+        <!-- MAIN BODY COPY -->
+        <tr>
+          <td class="card px" style="background:#ffffff;padding:36px 40px 32px;">
+            <!-- DEFAULT BODY (shown when *|ANNOUNCE_BODY|* is not set) -->
+            *|IF:ANNOUNCE_BODY|*
+            <p class="text" style="margin:0;font-size:16px;line-height:1.7;color:#1a2330;">*|ANNOUNCE_BODY|*</p>
+            *|ELSE:|*
+            <p class="text" style="margin:0 0 16px;font-size:16px;line-height:1.7;color:#1a2330;">There is something new at the clinic we wanted to let you know about directly. We keep updates like this to clients who have already been in, because you know what the place is about and what a difference a well-placed session makes.</p>
+            <p class="text" style="margin:0;font-size:16px;line-height:1.7;color:#1a2330;">Head to the site for the full detail, or reply to this email if you have questions. Carlos reads every reply personally.</p>
+            *|END:IF|*
+          </td>
+        </tr>
+
+        <!-- DIVIDER -->
+        <tr><td style="background:#ffffff;padding:0 40px;"><div style="border-top:1px solid #E9E5DE;"></div></td></tr>
+
+        <!-- TRUST BAR -->
+        <tr>
+          <td style="background:#F2EDE4;padding:24px 40px;text-align:center;" class="px">
+            <p style="margin:0;font-size:13px;font-weight:700;letter-spacing:.08em;color:#1a3d3a;text-transform:uppercase;">BTEC L5 Certified &middot; 47+ five-star reviews &middot; 130 Junction Road, Archway &middot; 2 min from Archway tube</p>
+          </td>
+        </tr>
+
+        <!-- PRIMARY CTA -->
+        <tr>
+          <td class="card px" style="background:#ffffff;padding:34px 40px 44px;text-align:center;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#1a3d3a" style="border-radius:9999px;">
+              <a class="btn-pill" href="*|IF:ANNOUNCE_CTA_URL|**|ANNOUNCE_CTA_URL|**|ELSE:|*https://rangeandrestore.co.uk*|END:IF|*" target="_blank" style="display:inline-block;padding:16px 40px;font-size:16px;font-weight:800;color:#ffffff;text-decoration:none;border-radius:9999px;">*|IF:ANNOUNCE_CTA_LABEL|**|ANNOUNCE_CTA_LABEL|**|ELSE:|*See What's New*|END:IF|*</a>
+            </td></tr></table>
+          </td>
+        </tr>
+
+        <!-- OPTIONAL SECONDARY BLOCK: delete if not needed for a given send -->
+        <!-- SECONDARY INFO CARD (e.g. address reminder, new hours, extra context)
+        <tr>
+          <td class="card px" style="background:#F2EDE4;border-top:1px solid #E9E5DE;padding:28px 40px;">
+            <h3 style="margin:0 0 10px;font-size:16px;font-weight:800;color:#1a3d3a;">Where to find us</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#4f5866;">130 Junction Road, Archway, London N19 5LB. Two minutes from Archway tube on the Northern line. <a href="https://rangeandrestore.co.uk" style="color:#2ab4b8;">rangeandrestore.co.uk</a></p>
+          </td>
+        </tr>
+        -->
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="background:#1a3d3a;border-radius:0 0 20px 20px;padding:32px 40px;text-align:center;" class="px">
+            <p style="margin:0 0 6px;font-size:14px;font-weight:700;color:#ffffff;">Range and Restore Sports Massage</p>
+            <p style="margin:0 0 14px;font-size:12px;line-height:1.6;color:#9fb5b0;">130 Junction Road, Archway, London N19 5LB<br>
+              <a href="tel:+447890716154" style="color:#7dd94a;text-decoration:none;">07890 716154</a> &middot; <a href="mailto:carlos@rangeandrestore.co.uk" style="color:#7dd94a;text-decoration:none;">carlos@rangeandrestore.co.uk</a></p>
+            <p style="margin:0 0 16px;font-size:11px;letter-spacing:.06em;color:#7dd94a;text-transform:uppercase;font-weight:700;">BTEC L5 Certified &middot; Rated 5&#9733; by 47+ clients</p>
+            <p style="margin:0;font-size:11px;line-height:1.6;color:#7e9590;"><a href="*|UNSUB|*" style="color:#9fb5b0;text-decoration:underline;">Unsubscribe</a> &middot; <a href="*|UPDATE_PROFILE|*" style="color:#9fb5b0;text-decoration:underline;">Update preferences</a></p>
+          </td>
+        </tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>
