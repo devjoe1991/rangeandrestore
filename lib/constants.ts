@@ -8,10 +8,9 @@ export const BOOKING_URLS = {
   sportsDeepTissue: `${BOOKING_BASE}/#/discipline/2/treatment/7`,
   backNeckMot: `${BOOKING_BASE}/#/discipline/3/treatment/13`,
   relaxation: `${BOOKING_BASE}/#/discipline/4/treatment/19`,
-  mld: `${BOOKING_BASE}/#/discipline/5/treatment/2`,
+  mld: `${BOOKING_BASE}/#/discipline/5/treatment/25`,
   twoHourRelief: `${BOOKING_BASE}/#/discipline/7/treatment/32`,
-  // TODO: replace with Jane discipline/treatment IDs for the new cupping service once available
-  cuppingSportsDeepTissue: `${BOOKING_BASE}/#/list`,
+  cuppingSportsDeepTissue: `${BOOKING_BASE}/#/discipline/9/treatment/36`,
   recoverySuite: `${BOOKING_BASE}/#/recovery-suite`,
   saunaSolo: `${BOOKING_BASE}/#/recovery-suite`,
   saunaShared: `${BOOKING_BASE}/#/recovery-suite`,

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Recovery Sessions in Archway London | Sauna, Compression & Sports Massage',
-  description: 'Standalone recovery, sauna and compression combos, or full recovery sessions paired with sports massage. Recovery Sessions at Range and Restore, Archway North London. Now open.',
+  title: 'Recovery Sessions in Archway London | Private Sauna from £35 & Massage Packages',
+  description: 'Private sauna Recovery Suite sessions from £35 and combined sports massage and sauna packages from £85 at Range and Restore, Archway.',
   path: '/recovery-suite/recovery-packages',
 })
 
@@ -39,81 +39,67 @@ const parentServiceSchema = {
     '@type': 'OfferCatalog',
     name: 'Recovery Sessions',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sauna Session' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Compression Session' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sauna + Compression Recovery Session' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sauna + Sports Massage Package' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Compression + Sports Massage Package' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Full Recovery Session (Sauna + Compression + Sports Massage)' } },
+      { '@type': 'Offer', price: '35.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Private Infrared & Traditional Sauna Recovery Suite Experience – 45 Minutes' } },
+      { '@type': 'Offer', price: '45.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Private Infrared & Traditional Sauna Recovery Suite Experience – 60 Minutes' } },
+      { '@type': 'Offer', price: '85.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (30 Minutes) + Infrared & Traditional Sauna Recovery Suite Experience (45 Minutes)' } },
+      { '@type': 'Offer', price: '110.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Infrared & Traditional Sauna Recovery Suite Experience (30 Minutes)' } },
     ],
   },
 }
 
-const singleSessions = [
+const saunaSessions = [
   {
-    name: 'Sauna Session',
-    sequence: '30 or 45 min · solo or two person',
-    desc: 'A focused infrared and traditional hybrid sauna session. The simplest entry point into the Recovery Suite.',
+    name: 'Private Sauna Recovery Suite Experience – 45 Minutes',
+    sequence: '45 min · private use of the Recovery Suite',
+    price: '£35',
+    desc: 'A focused infrared and traditional hybrid sauna session with the suite to yourself. The simplest entry point into the Recovery Suite.',
     detailHref: '/recovery-suite/infrared-sauna',
   },
   {
-    name: 'Compression Session',
-    sequence: '30 or 45 min · legs only or full body',
-    desc: 'Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms.',
-    detailHref: '/recovery-suite/compression-therapy',
-  },
-]
-
-const recoveryCombos = [
-  {
-    name: 'Sauna + Compression',
-    sequence: '30 min sauna → 30 min Normatec',
-    total: 'Around 60 minutes total',
-    desc: 'A complete recovery session without the massage. Ideal between standalone massage sessions or for clients who want a quiet hour to reset.',
+    name: 'Private Sauna Recovery Suite Experience – 60 Minutes',
+    sequence: '60 min · private use of the Recovery Suite',
+    price: '£45',
+    desc: 'The full-hour version. More time to settle in, switch between traditional and infrared heat, and properly switch off.',
+    detailHref: '/recovery-suite/infrared-sauna',
     popular: true,
   },
 ]
 
 const recoveryWithMassage = [
   {
-    name: 'Sauna + Sports Massage',
-    sequence: '30 min sauna → 60 min massage',
-    total: 'Around 90 minutes total',
-    desc: 'Heat the muscles first, then hands-on work. A solid combo for general recovery, tightness or stress that has built up over the week.',
+    name: 'Sports Massage (30 min) + Sauna Recovery (45 min)',
+    sequence: '30 min sports massage + 45 min sauna recovery',
+    total: '75 minutes total',
+    price: '£85',
+    desc: 'Targeted hands-on work on the area that needs it, then a full 45 minutes in the Recovery Suite. Ideal for a focused problem area plus proper recovery time.',
     popular: false,
   },
   {
-    name: 'Compression + Sports Massage',
-    sequence: '30 min Normatec → 60 min massage',
-    total: 'Around 90 minutes total',
-    desc: 'Flush the legs first, then targeted soft tissue work. A favourite for runners and anyone after a hard leg session.',
-    popular: false,
-  },
-  {
-    name: 'Full Recovery Session',
-    sequence: '30 min sauna → 30 min Normatec → 60 min massage',
-    total: 'Around 2 hours total',
-    desc: 'The full sequence. Heat, compression, hands-on work, all in one visit. Ideal after races, big training blocks, busy weeks or long flights.',
+    name: 'Sports Massage (60 min) + Sauna Recovery (30 min)',
+    sequence: '60 min sports massage + 30 min sauna recovery',
+    total: '90 minutes total',
+    price: '£110',
+    desc: 'A full-hour sports massage followed by heat in the Recovery Suite. The deeper option after races, big training blocks or busy weeks.',
     popular: true,
   },
 ]
 
 const faqs = [
   {
-    q: 'Can I book just a sauna or just a Normatec session on its own?',
-    a: 'Yes. Single sessions are a core part of the Recovery Suite. Book a sauna or compression session on its own without committing to a longer combined visit. They\'re the easiest entry point into the suite.',
+    q: 'Can I book just a sauna session on its own?',
+    a: 'Yes. The private sauna sessions are a core part of the Recovery Suite. Book a 45 minute session for £35 or a 60 minute session for £45 without committing to a longer combined visit. They\'re the easiest entry point into the suite.',
   },
   {
     q: 'Do I have to add a massage to use the Recovery Suite?',
-    a: 'No. Plenty of people will use the suite for recovery only, either a single modality or the Sauna + Compression combo. The massage packages are there for clients who want to combine recovery with hands-on therapy.',
+    a: 'No. Plenty of people use the suite for recovery only. The massage packages are there for clients who want to combine recovery with hands-on therapy in one visit.',
   },
   {
-    q: 'Why combine sessions instead of booking them separately?',
-    a: 'Two reasons. First, sequencing matters. Heat first, then compression, then hands-on work tends to feel better than the other way round, and combo bookings keep that order. Second, packages are priced as one session, which works out cheaper than booking each modality on its own.',
+    q: 'Why book a package instead of booking massage and sauna separately?',
+    a: 'Two reasons. First, the whole visit runs as one appointment, so the sequencing and timing are handled for you. Second, packages are priced as one session, which works out cheaper than booking each part on its own.',
   },
   {
     q: 'How much total time should I block out?',
-    a: 'Each session shows the rough total. Add 10 to 15 minutes either side for arrival, settling in and the cool-down before you head off. The Full Recovery Session is around two hours door to door.',
+    a: 'Each session shows the total. Add 10 to 15 minutes either side for arrival, settling in and the cool-down before you head off. The 90 minute package is around two hours door to door.',
   },
   {
     q: 'Can I customise a session or package?',
@@ -121,7 +107,7 @@ const faqs = [
   },
   {
     q: 'Do massage bundle clients get a discount on packages?',
-    a: 'Bundles cover the massage element. If you\'re a bundle client, you can add sauna or compression to your existing massage at standalone pricing. Speak to Carlos at the clinic and he\'ll sort it for you.',
+    a: 'Bundles cover the massage element. If you\'re a bundle client, you can add a sauna session to your existing massage at standalone pricing. Speak to Carlos at the clinic and he\'ll sort it for you.',
   },
 ]
 
@@ -129,6 +115,7 @@ interface SessionCard {
   name: string
   sequence: string
   total?: string
+  price?: string
   desc: string
   popular?: boolean
   detailHref?: string
@@ -150,6 +137,9 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
       <h3 className={`font-black text-lg leading-tight tracking-tight mb-2 ${session.popular ? 'text-[#122a28]' : 'text-page'}`}>
         {session.name}
       </h3>
+      {session.price && (
+        <p className={`text-2xl font-black mb-1 ${session.popular ? 'text-[#122a28]' : 'text-page'}`}>{session.price}</p>
+      )}
       <p className={`text-sm font-bold mb-1 ${session.popular ? 'text-[#1a3d3a]' : 'text-[#2ab4b8]'}`}>{session.sequence}</p>
       {session.total && (
         <p className={`text-xs font-semibold mb-3 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>{session.total}</p>
@@ -186,6 +176,7 @@ export default function RecoverySessionsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(parentServiceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -194,7 +185,7 @@ export default function RecoverySessionsPage() {
             Recovery Sessions in Archway, North London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Standalone single sessions, recovery combos without massage, or full recovery packages with sports massage. Built around how you want to recover.
+            Private sauna Recovery Suite sessions from £35, or combined sports massage and sauna recovery packages from £85. Built around how you want to recover.
           </p>
           <div className="mt-6">
             <a
@@ -214,51 +205,37 @@ export default function RecoverySessionsPage() {
 
           {/* Intro */}
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Three ways to use the Recovery Suite</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Two ways to use the Recovery Suite</h2>
             <p className="text-page-muted mb-3">
-              The Recovery Suite is built around three levels of session, so you can pick whatever fits the day. A simple single session if you just want a quick reset. A combined recovery session without massage if you want a complete recovery experience on its own. Or a full recovery package paired with sports massage if you want everything in one visit.
+              The Recovery Suite is built around two levels of session, so you can pick whatever fits the day. A private sauna session if you just want a quiet reset with the suite to yourself, or a combined package that pairs sports massage with sauna recovery in one visit.
             </p>
             <p className="text-page-muted">
-              Single sessions and combos are first-class options, not just stepping stones to the bigger packages. Some clients will only ever use the standalone recovery side, others will combine it with massage. Both work.
+              Every session is private. You get the whole suite to yourself, including the hybrid infrared and traditional sauna and the Hyperice Normatec 3 Full Body recovery system.
             </p>
           </section>
 
-          {/* Section 1: Single Sessions */}
+          {/* Section 1: Private Sauna Sessions */}
           <section>
             <span className="eyebrow block mb-2">Section 01</span>
-            <h2 className="text-2xl font-bold text-page mb-3">Single Sessions</h2>
+            <h2 className="text-2xl font-bold text-page mb-3">Private Sauna Sessions</h2>
             <p className="text-page-muted mb-6">
-              The simplest way in. A single piece of kit, a single decision. Ideal for new clients dipping into the Recovery Suite or regulars who just want a quick session between training.
+              The simplest way in. Private use of the Recovery Suite and its infrared and traditional hybrid sauna. Ideal for new clients dipping into the suite or regulars who want a session between training.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {singleSessions.map((session) => (
-                <SessionCard key={session.name} session={session} />
+              {saunaSessions.map((session) => (
+                <SessionCard key={session.name} session={session} popularLabel="Most Popular" />
               ))}
             </div>
           </section>
 
-          {/* Section 2: Recovery Combos */}
+          {/* Section 2: Sports Massage + Sauna Recovery */}
           <section>
             <span className="eyebrow block mb-2">Section 02</span>
-            <h2 className="text-2xl font-bold text-page mb-3">Recovery Combos</h2>
+            <h2 className="text-2xl font-bold text-page mb-3">Sports Massage + Sauna Recovery Packages</h2>
             <p className="text-page-muted mb-6">
-              A complete recovery session without the massage. Ideal for between-massage maintenance, post-event recovery, or anyone who wants the full Recovery Suite experience on its own.
+              The deeper recovery. Combine the suite with the hands-on sports and soft tissue therapy Range and Restore is known for, booked as one appointment at one price.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {recoveryCombos.map((session) => (
-                <SessionCard key={session.name} session={session} popularLabel="Most Popular Recovery Session" />
-              ))}
-            </div>
-          </section>
-
-          {/* Section 3: Recovery + Sports Massage */}
-          <section>
-            <span className="eyebrow block mb-2">Section 03</span>
-            <h2 className="text-2xl font-bold text-page mb-3">Recovery + Sports Massage</h2>
-            <p className="text-page-muted mb-6">
-              The deeper recovery. Combine the suite with the hands-on sports and soft tissue therapy Range and Restore is known for. Sequencing is built in: heat first, then compression, then massage.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {recoveryWithMassage.map((session) => (
                 <SessionCard key={session.name} session={session} popularLabel="Best Value" />
               ))}
@@ -267,12 +244,12 @@ export default function RecoverySessionsPage() {
 
           {/* Why combine */}
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Why book a combined session?</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Why book a combined package?</h2>
             <p className="text-page-muted mb-3">
-              Sequencing makes a difference. Going from heat into compression into hands-on work means each step builds on the last. Your tissues are warm, circulation is up, and by the time the massage starts your body is in a much better state to receive it.
+              Massage and heat work better together. Hands-on work releases the tissue, then time in the sauna keeps circulation up and gives your body proper time to settle before you head back out. The whole visit runs as one appointment, so the sequencing and timing are handled for you.
             </p>
             <p className="text-page-muted">
-              Packaging also keeps the maths simple. Each combo will be priced as one session, which costs less than booking the parts separately and means you only block out one slot in your diary.
+              Packaging also keeps the maths simple. Each package is priced as one session, which costs less than booking the parts separately and means you only block out one slot in your diary.
             </p>
           </section>
 
@@ -282,9 +259,9 @@ export default function RecoverySessionsPage() {
             <ul className="space-y-2">
               {[
                 'Arrive 10 minutes early so we can get you settled in',
-                'Sauna first if your session includes it. Towels and water provided',
-                'Compression next if your session includes it, sat or laid back with the boots and attachments fitted',
-                'Hands-on sports massage to finish if your session includes it',
+                'The suite is private to you for your session. Towels and chilled water provided',
+                'Hands-on sports massage if your package includes it',
+                'Sauna time in the hybrid infrared and traditional cabin, with the Normatec recovery system available in the suite',
                 'Cool down, rehydrate and chat to Carlos about anything you noticed during the session',
                 'Pay one price at checkout, no need to manage multiple bookings',
               ].map((step) => (
@@ -300,7 +277,7 @@ export default function RecoverySessionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Already on a massage bundle?</h2>
             <p className="text-page-muted">
-              Bundle clients can add sauna or compression to any standalone massage at clinic pricing. Just speak to Carlos at the start of your next appointment and he&apos;ll add it on for you. See the
+              Bundle clients can add a sauna session to any standalone massage at clinic pricing. Just speak to Carlos at the start of your next appointment and he&apos;ll add it on for you. See the
               {' '}<Link href="/services/massage-bundles" className="text-[#2ab4b8] underline">Massage Bundles page</Link>{' '}
               for current bundle options.
             </p>
@@ -316,7 +293,7 @@ export default function RecoverySessionsPage() {
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recovery Sessions now open at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Single sessions, recovery combos and full recovery packages available to book now.
+              The Recovery Suite is open in Archway, North London. Private sauna sessions from £35 and sports massage packages from £85, available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}

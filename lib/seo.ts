@@ -65,6 +65,18 @@ export function buildBreadcrumbs(items: { name: string; path: string }[]) {
   }
 }
 
+export function buildFaqSchema(faqs: { q: string; a: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  }
+}
+
 export const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -129,7 +141,7 @@ export const businessSchema = {
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '20:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday','Sunday'], opens: '09:00', closes: '17:00' },
   ],
-  priceRange: '£50-£170',
+  priceRange: '£35-£170',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card',
   areaServed: [
@@ -234,6 +246,28 @@ export const businessSchema = {
       priceCurrency: 'GBP',
       priceSpecification: [
         { '@type': 'PriceSpecification', price: '170', priceCurrency: 'GBP', description: '120 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: 'Private Infrared & Traditional Sauna Recovery Suite Experience',
+      description: 'Private use of the Recovery Suite with hybrid full spectrum infrared and traditional sauna and Hyperice Normatec 3 Full Body recovery system.',
+      url: `${BASE_URL}/recovery-suite/infrared-sauna`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '35', priceCurrency: 'GBP', description: '45 minutes' },
+        { '@type': 'PriceSpecification', price: '45', priceCurrency: 'GBP', description: '60 minutes' },
+      ],
+    },
+    {
+      '@type': 'Offer',
+      name: 'Sports Massage + Sauna Recovery Suite Package',
+      description: 'Combined sports massage and private infrared and traditional sauna Recovery Suite experience in one appointment.',
+      url: `${BASE_URL}/recovery-suite/recovery-packages`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '85', priceCurrency: 'GBP', description: '30 minute sports massage + 45 minute sauna recovery (75 minutes total)' },
+        { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '60 minute sports massage + 30 minute sauna recovery (90 minutes total)' },
       ],
     },
   ],

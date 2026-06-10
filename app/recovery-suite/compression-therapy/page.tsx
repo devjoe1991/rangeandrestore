@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Normatec Compression Therapy in Archway London',
-  description: 'Hyperice Normatec 3 Full Body pneumatic compression at Range and Restore, Archway N19. Recovery boots, hip and arm attachments. Book solo or as part of a recovery package.',
+  description: 'Hyperice Normatec 3 full body compression at Range and Restore, Archway N19, included as part of the private Recovery Suite experience.',
   path: '/recovery-suite/compression-therapy',
 })
 
@@ -57,8 +57,8 @@ const faqs = [
     a: 'No. Pneumatic compression supports circulation and recovery, but it isn\'t the same as Manual Lymphatic Drainage. MLD is a hands-on technique used for post-surgery recovery, lymphoedema and clinical cases. If you need MLD, that\'s a separate service with Carlos. The Normatec is a recovery tool, not a clinical lymphatic treatment.',
   },
   {
-    q: 'How long is a session?',
-    a: 'Most sessions are 30 minutes for legs only or 30 to 45 minutes for full body. Carlos will help you pick what suits you depending on what you\'re recovering from.',
+    q: 'How do I book time on the Normatec?',
+    a: 'The Normatec is part of the private Recovery Suite experience. Book a 45 or 60 minute Recovery Suite session and you have the suite, including the sauna and the Normatec system, to yourself. Carlos will help you fit compression into your session depending on what you\'re recovering from.',
   },
   {
     q: 'Do I need to undress?',
@@ -76,6 +76,7 @@ export default function CompressionTherapyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -93,7 +94,7 @@ export default function CompressionTherapyPage() {
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Book Compression Session
+              Book Recovery Suite Session
             </a>
           </div>
         </div>
@@ -125,12 +126,14 @@ export default function CompressionTherapyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Choose your session</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <h2 className="text-2xl font-bold text-page mb-4">How to book it</h2>
+            <p className="text-page-muted mb-4">
+              The Normatec features as part of the private Recovery Suite experience rather than as a separately booked session. Book a Recovery Suite session and the suite, including the sauna and the Normatec system, is yours for the visit.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – Legs', desc: 'Targeted recovery for the lower body. Ideal after running, leg sessions or long days on your feet.' },
-                { duration: '30 Minutes – Full Body', desc: 'Legs plus hips and arms in one session. Best for upper-body training days or full-body recovery.' },
-                { duration: '45 Minutes – Full Body', desc: 'Longer session covering all attachments at a slower pace. Best after races, big training blocks or full-on weeks.' },
+                { duration: 'Private Recovery Suite Session', desc: '45 minutes for £35 or 60 minutes for £45. Private use of the suite, including the hybrid sauna and the Normatec recovery system.' },
+                { duration: 'Sports Massage + Sauna Recovery Package', desc: '75 minutes for £85 or 90 minutes for £110. Hands-on treatment followed by recovery time in the suite.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>
@@ -138,7 +141,7 @@ export default function CompressionTherapyPage() {
                 </div>
               ))}
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">See the booking page for current session pricing.</p>
+            <p className="text-page-muted text-sm mt-3 italic">Prices are current launch-offer pricing, also shown on the booking page.</p>
           </section>
 
           <section>
@@ -184,7 +187,7 @@ export default function CompressionTherapyPage() {
                 'Sit back or lie down, the system runs through its programme',
                 'You can adjust pressure or pause at any point',
                 'Most people find it genuinely relaxing, plenty of clients close their eyes for the session',
-                'Optional: combine with a sauna session or a sports massage in the same visit',
+                'Optional: pair your Recovery Suite session with a sports massage in the same visit',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
                   <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
@@ -221,15 +224,15 @@ export default function CompressionTherapyPage() {
 
           {/* Pair with */}
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Pair your compression session with</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Pair your recovery session with</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href="/services/sports-deep-tissue-massage" className="bg-card border-2 border-[#1a3d3a] rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Sports &amp; Deep Tissue Massage</p>
-                <p className="text-page-muted text-sm">Compression first to flush, then hands-on work to release tighter areas. A solid combo for runners.</p>
+                <p className="text-page-muted text-sm">Hands-on work to release tighter areas, then recovery time in the suite. A solid combo for runners.</p>
               </Link>
               <Link href="/recovery-suite/recovery-packages" className="bg-card border-2 border-[#1a3d3a] rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Recovery Packages</p>
-                <p className="text-page-muted text-sm">Save when you combine compression, sauna and massage as one visit.</p>
+                <p className="text-page-muted text-sm">Save when you combine sports massage and Recovery Suite time as one visit. Packages from £85.</p>
               </Link>
             </div>
           </section>
@@ -242,9 +245,9 @@ export default function CompressionTherapyPage() {
 
           {/* Book Now CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Compression sessions now open at Range and Restore</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Normatec recovery now open at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Sauna, compression and full recovery sessions available to book now.
+              The Recovery Suite is open in Archway, North London. Private sessions from £35 and sports massage packages from £85, available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
@@ -252,7 +255,7 @@ export default function CompressionTherapyPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
             >
-              Book Compression Session
+              Book Recovery Suite Session
             </a>
           </section>
 

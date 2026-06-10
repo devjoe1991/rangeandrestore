@@ -68,7 +68,7 @@ const services = [
   {
     title: 'Infrared Sauna',
     problem: 'Sore, stressed and not sleeping well?',
-    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Recovery, sleep and circulation in one session.',
+    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £35.',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
@@ -212,8 +212,9 @@ export default function HomePage() {
       </section>
 
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-label="Treatments">
+      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 id="treatments-heading" className="sr-only">Sports Massage Treatments and Recovery in Archway</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
             {services.map((s) => <ServiceCard key={s.href} s={s} />)}
           </div>
@@ -228,7 +229,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            <span className="font-black">Now Open:</span> Our new Advanced Recovery Suite. Sauna, compression and recovery sessions.
+            <span className="font-black">Now Open:</span> Our new Advanced Recovery Suite. Private sauna sessions from £35.
           </span>
         </div>
       </div>
@@ -259,7 +260,7 @@ export default function HomePage() {
               },
               {
                 title: 'Recovery Sessions & Packages',
-                desc: 'Standalone sauna, compression or combined recovery sessions, plus full recovery packages with sports massage.',
+                desc: 'Private sauna sessions from £35, plus combined sports massage and sauna recovery packages from £85.',
                 href: '/recovery-suite/recovery-packages',
               },
             ].map((card) => (
