@@ -16,6 +16,7 @@ const breadcrumbs = buildBreadcrumbs([{ name: 'Meet the Team', path: '/team' }])
 const CARLOS_PHOTO = 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no'
 const DARAEL_PHOTO = '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg'
 const MATEJA_PORTRAIT = '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
+const MATEJA_BANNER = '/mateja-bracko-mounti-range-and-restore-sports-massage-banner-archway-london.jpeg'
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#2ab4b8' }} aria-hidden="true">
@@ -330,6 +331,16 @@ export default function TeamPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden aspect-[3/4] relative w-full">
+              <Image
+                src={MATEJA_BANNER}
+                alt="Mateja Bracko-Mounti standing beside the Range and Restore Sports Massage banner at the clinic in Archway, North London"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
