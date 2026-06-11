@@ -142,7 +142,7 @@ const bundles = [
 
 const teamMembers = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
-  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
+  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
   { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
 ]
 
