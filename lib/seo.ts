@@ -143,8 +143,8 @@ export const matejaPersonSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Mateja Bracko-Mounti',
-  jobTitle: 'Sports Massage & Soft Tissue Remedial Therapist',
-  description: 'Mateja Bracko-Mounti is a Sports Massage and Soft Tissue Remedial Therapist with over 18 years of experience in therapeutic settings, completing her BTEC Level 5 Diploma in Soft Tissue Therapy with the London School of Sports Massage (LSSM), and qualified in reflexology, pregnancy massage, Indian head massage, natural lift facial massage and the Emmett Technique, based at Range and Restore in Archway, North London.',
+  jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+  description: 'Mateja Bracko-Mounti is a BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist (SMRT, MSMA) with over 18 years of experience in therapeutic settings, trained with the London School of Sports Massage (LSSM) and qualified in reflexology, pregnancy massage, Indian head massage, natural lift facial massage and the Emmett Technique, based at Range and Restore in Archway, North London.',
   url: `${BASE_URL}/team`,
   image: `${BASE_URL}/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg`,
   worksFor: {
@@ -153,8 +153,10 @@ export const matejaPersonSchema = {
     url: BASE_URL,
   },
   alumniOf: { '@type': 'EducationalOrganization', name: 'London School of Sports Massage (LSSM)' },
+  memberOf: { '@type': 'Organization', name: 'Sports Massage Association' },
   knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Reflexology', 'Pregnancy Massage', 'Indian Head Massage', 'Facial Massage', 'Emmett Technique', 'Injury Recovery', 'Mobility'],
   hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Qualification', name: 'BTEC Level 5 Diploma in Soft Tissue Therapy (LSSM)' },
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Reflexology' },
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Pregnancy Massage' },
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Indian Head Massage' },
@@ -236,8 +238,8 @@ export const businessSchema = {
     {
       '@type': 'Person',
       name: 'Mateja Bracko-Mounti',
-      jobTitle: 'Sports Massage & Soft Tissue Remedial Therapist',
-      description: 'Mateja Bracko-Mounti is a sports massage and soft tissue remedial therapist with over 18 years of experience, studying BTEC Level 5 Soft Tissue Therapy with the LSSM and qualified in reflexology, pregnancy massage, Indian head massage and the Emmett Technique, based in Archway, North London.',
+      jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+      description: 'Mateja Bracko-Mounti is a BTEC Level 5 qualified sports massage and soft tissue remedial therapist (SMRT, MSMA) with over 18 years of experience, trained with the LSSM and qualified in reflexology, pregnancy massage, Indian head massage and the Emmett Technique, based in Archway, North London.',
       url: `${BASE_URL}/team`,
       knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Reflexology', 'Pregnancy Massage', 'Indian Head Massage', 'Emmett Technique'],
     },
