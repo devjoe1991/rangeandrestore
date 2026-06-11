@@ -121,7 +121,7 @@ export const daraelPersonSchema = {
   jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
   description: 'Darael Beckles is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and graduate of the North London School of Sports Massage (NLSSM), with a background in Sports & Exercise Science, based at Range and Restore in Archway, North London.',
   url: `${BASE_URL}/team`,
-  image: `${BASE_URL}/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg`,
+  image: `${BASE_URL}/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg`,
   worksFor: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',

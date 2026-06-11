@@ -14,8 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const breadcrumbs = buildBreadcrumbs([{ name: 'Meet the Team', path: '/team' }])
 
 const CARLOS_PHOTO = 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no'
-const DARAEL_PORTRAIT = '/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg'
-const DARAEL_BANNER = '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg'
+const DARAEL_PHOTO = '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg'
 const MATEJA_PORTRAIT = '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
 
 const CheckIcon = () => (
@@ -26,7 +25,7 @@ const CheckIcon = () => (
 
 const introCards = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: CARLOS_PHOTO, alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', anchor: '#carlos-bonvicine' },
-  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: DARAEL_PORTRAIT, alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#darael-beckles' },
+  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: DARAEL_PHOTO, alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#darael-beckles' },
   { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: MATEJA_PORTRAIT, alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#mateja-bracko-mounti' },
 ]
 
@@ -179,8 +178,8 @@ export default function TeamPage() {
             <div>
               <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
                 <Image
-                  src={DARAEL_PORTRAIT}
-                  alt="Darael Beckles, BTEC Level 5 sports massage and soft tissue therapist at Range and Restore, Archway, North London"
+                  src={DARAEL_PHOTO}
+                  alt="Darael Beckles, BTEC Level 5 sports massage and soft tissue therapist, standing at the Range and Restore clinic in Archway, North London"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -227,16 +226,6 @@ export default function TeamPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="rounded-2xl overflow-hidden aspect-[3/4] relative w-full">
-                <Image
-                  src={DARAEL_BANNER}
-                  alt="Darael Beckles standing beside his Range and Restore sports massage banner at the Archway clinic"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-
               <div className="bg-card border-2 border-page rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-page mb-4">How Darael Works</h3>
                 <ul className="space-y-3">
