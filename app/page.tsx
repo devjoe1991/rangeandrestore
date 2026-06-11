@@ -140,6 +140,12 @@ const bundles = [
   { name: 'Advanced Recovery & Performance Plan', label: '10 × 90 min', originalPrice: '£1250', price: '£950', perSession: '£95/session', saving: 'Saving £300', valid: '10 months' },
 ]
 
+const teamMembers = [
+  { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
+  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
+  { name: 'Mateja Bracko-Mounti', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: "18+ Years' Experience · Studying BTEC L5 (LSSM)", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
+]
+
 export default function HomePage() {
   const previewFaqs = faqs.slice(0, 3)
 
@@ -448,41 +454,15 @@ export default function HomePage() {
           <div className="text-center mb-8">
             <span className="eyebrow block mb-2">Meet the Team</span>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-            <Link href="/about" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <Image
-                  src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
-                  alt="Carlos Bonvicine, sports massage therapist at Range and Restore, Archway"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
-                />
-              </div>
-              <div className="p-5">
-                <p className="text-xl font-black text-page">Carlos Bonvicine</p>
-                <p className="text-[#2ab4b8] text-xs font-bold mt-1">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
-                <p className="text-page-muted text-xs font-medium mt-1">Certified MLD · Cupping Therapy</p>
-                <p className="text-page font-bold text-sm mt-3">Meet Carlos →</p>
-              </div>
-            </Link>
-            <Link href="/team" className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <Image
-                  src="/darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg"
-                  alt="Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
-                />
-              </div>
-              <div className="p-5">
-                <p className="text-xl font-black text-page">Darael Beckles</p>
-                <p className="text-[#2ab4b8] text-xs font-bold mt-1">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
-                <p className="text-page-muted text-xs font-medium mt-1">NLSSM Graduate · SMRT, MSMA</p>
-                <p className="text-page font-bold text-sm mt-3">Meet Darael →</p>
-              </div>
-            </Link>
+          {/* Mobile swipe */}
+          <div className="sm:hidden -mx-4 px-4">
+            <div className="swipe-row">
+              {teamMembers.map((m) => <TeamCard key={m.href} m={m} mobile />)}
+            </div>
+          </div>
+          {/* Desktop grid */}
+          <div className="hidden sm:grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {teamMembers.map((m) => <TeamCard key={m.href} m={m} />)}
           </div>
           <div className="mt-7 text-center">
             <Link href="/team" className="btn btn-primary text-sm">Meet the full team</Link>
@@ -647,6 +627,29 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
         </div>
       </div>
     </div>
+  )
+}
+
+function TeamCard({ m, mobile }: { m: typeof teamMembers[0]; mobile?: boolean }) {
+  const width = mobile ? 'w-[260px]' : 'w-full'
+  return (
+    <Link href={m.href} className={`${width} group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block`}>
+      <div className="relative aspect-[4/5] overflow-hidden">
+        <Image
+          src={m.img}
+          alt={m.alt}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 640px) 260px, (max-width: 1024px) 33vw, 320px"
+        />
+      </div>
+      <div className="p-5">
+        <p className="text-xl font-black text-page">{m.name}</p>
+        <p className="text-[#2ab4b8] text-xs font-bold mt-1">{m.title}</p>
+        <p className="text-page-muted text-xs font-medium mt-1">{m.creds}</p>
+        <p className="text-page font-bold text-sm mt-3">{m.cta} →</p>
+      </div>
+    </Link>
   )
 }
 
