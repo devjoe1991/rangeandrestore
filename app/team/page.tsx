@@ -268,19 +268,25 @@ export default function TeamPage() {
             <p className="text-page-muted font-medium mb-6 text-sm">BTEC Level 5 Soft Tissue Therapy (LSSM) · SMRT, MSMA · 18+ Years&rsquo; Experience</p>
             <div className="space-y-4 text-page-muted text-lg">
               <p>
-                Mateja is a BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist (SMRT, MSMA), trained with the London School of Sports Massage (LSSM), one of the UK&rsquo;s leading training providers for clinical and remedial therapists.
+                Mateja is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist who graduated from the London School of Sports Massage (LSSM), one of the UK&rsquo;s leading training providers for advanced clinical and remedial therapists.
               </p>
               <p>
-                With over 18 years of experience working with clients in therapeutic settings, Mateja brings a calm, caring, and professional approach to every treatment. She is passionate about helping clients reduce pain, improve mobility, recover from injury, and enhance their overall wellbeing through personalised, hands-on therapy.
+                With over 18 years of experience working in therapeutic settings, Mateja combines extensive hands-on experience with advanced clinical training to help clients reduce pain, improve mobility, recover from injury, and enhance their overall wellbeing.
               </p>
               <p>
-                Alongside her advanced soft tissue therapy training, Mateja holds qualifications in Reflexology, Pregnancy Massage, Indian Head Massage, Natural Lift Facial Massage, and the Emmett Technique. Her broad range of skills allows her to tailor treatments to the individual needs of each client, whether they are seeking relief from muscular tension, support during pregnancy, improved movement, stress reduction, or general wellness.
+                Drawing on a wide range of treatment approaches, including Sports Massage, Soft Tissue Therapy, Reflexology, Lymphatic Drainage techniques, Indian Head Massage, Natural Lift Facial Massage, and the Emmett Technique, Mateja tailors every treatment to the individual needs of her clients. Whether you&rsquo;re dealing with muscular tension, reduced mobility, stress-related discomfort, recovery from physical activity, or simply looking to improve your overall wellbeing, her treatments are designed to help you achieve lasting results.
               </p>
               <p>
-                Mateja believes that no two clients are the same. She takes the time to understand each person&rsquo;s goals and concerns, creating treatment plans that are both effective and personalised. Her friendly and supportive nature helps clients feel comfortable, confident, and well cared for throughout their treatment journey.
+                Known for her calm, caring, and professional approach, Mateja takes the time to understand each client&rsquo;s goals, concerns, and lifestyle. Her focus is not only on relieving symptoms but also on helping clients move better, feel stronger, and enjoy a better quality of life.
               </p>
               <p>
-                Whether you&rsquo;re looking to address a specific issue, support your recovery, or simply invest in your health and wellbeing, Mateja is committed to helping you move better, feel better, and live stronger.
+                Clients appreciate her friendly and supportive nature, as well as her ability to create a welcoming environment where they feel comfortable, listened to, and genuinely cared for throughout their treatment journey.
+              </p>
+              <p>
+                Whether you&rsquo;re recovering from injury, struggling with everyday aches and pains, looking to improve mobility, or simply wanting to invest in your health and wellbeing, Mateja is committed to helping you move better, feel better, and live stronger.
+              </p>
+              <p>
+                Book a session with Mateja today and experience the benefits of personalised treatment tailored to your individual needs and goals.
               </p>
             </div>
 
@@ -290,7 +296,7 @@ export default function TeamPage() {
                 "Over 18 Years' Experience in Therapeutic Settings",
                 'SMRT — Soft Tissue Remedial Therapist',
                 'MSMA — Member of the Sports Massage Association',
-                'Qualified in Reflexology & Pregnancy Massage',
+                'Qualified in Reflexology & Lymphatic Drainage Techniques',
                 'Indian Head Massage, Natural Lift Facial Massage & Emmett Technique',
               ].map((qual) => (
                 <div key={qual} className="flex items-start gap-2 text-page">
