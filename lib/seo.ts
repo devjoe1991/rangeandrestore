@@ -139,6 +139,36 @@ export const daraelPersonSchema = {
   ],
 }
 
+export const matejaPersonSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mateja Bracko-Mounti',
+  jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+  description: 'Mateja Bracko-Mounti is a BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist (SMRT, MSMA) with over 18 years of experience in therapeutic settings, trained with the London School of Sports Massage (LSSM) and qualified in reflexology, pregnancy massage, Indian head massage, natural lift facial massage and the Emmett Technique, based at Range and Restore in Archway, North London.',
+  url: `${BASE_URL}/team`,
+  image: `${BASE_URL}/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg`,
+  worksFor: {
+    '@type': 'LocalBusiness',
+    name: 'Range and Restore Sports Massage',
+    url: BASE_URL,
+  },
+  alumniOf: { '@type': 'EducationalOrganization', name: 'London School of Sports Massage (LSSM)' },
+  memberOf: { '@type': 'Organization', name: 'Sports Massage Association' },
+  knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Reflexology', 'Pregnancy Massage', 'Indian Head Massage', 'Facial Massage', 'Emmett Technique', 'Injury Recovery', 'Mobility'],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Qualification', name: 'BTEC Level 5 Diploma in Soft Tissue Therapy (LSSM)' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Reflexology' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Pregnancy Massage' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Indian Head Massage' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Natural Lift Facial Massage' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Certification', name: 'Emmett Technique' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/rangeandrestore',
+    'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
+  ],
+}
+
 export const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'MedicalBusiness', 'HealthAndBeautyBusiness'],
@@ -192,8 +222,8 @@ export const businessSchema = {
     {
       '@type': 'Person',
       name: 'Carlos Bonvicine',
-      jobTitle: 'Soft Tissue Therapist & Certified MLD Practitioner',
-      description: 'Carlos Bonvicine is a soft tissue and clinical massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner based in Archway, North London.',
+      jobTitle: 'Founder & Lead Therapist',
+      description: 'Carlos Bonvicine is the founder and lead therapist of Range and Restore Sports Massage — a BTEC Level 5 soft tissue and clinical massage therapist and certified Manual Lymphatic Drainage (MLD) practitioner based in Archway, North London.',
       url: `${BASE_URL}/about`,
       knowsAbout: ['Sports Massage', 'Deep Tissue Massage', 'Manual Lymphatic Drainage', 'Soft Tissue Therapy', 'Injury Rehabilitation', 'Clinical Massage'],
     },
@@ -204,6 +234,14 @@ export const businessSchema = {
       description: 'Darael Beckles is a BTEC Level 5 sports massage and soft tissue remedial therapist (NLSSM graduate, SMRT, MSMA) based in Archway, North London.',
       url: `${BASE_URL}/team`,
       knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Deep Tissue Massage', 'Injury Rehabilitation', 'Sports & Exercise Science'],
+    },
+    {
+      '@type': 'Person',
+      name: 'Mateja Bracko-Mounti',
+      jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+      description: 'Mateja Bracko-Mounti is a BTEC Level 5 qualified sports massage and soft tissue remedial therapist (SMRT, MSMA) with over 18 years of experience, trained with the LSSM and qualified in reflexology, pregnancy massage, Indian head massage and the Emmett Technique, based in Archway, North London.',
+      url: `${BASE_URL}/team`,
+      knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Reflexology', 'Pregnancy Massage', 'Indian Head Massage', 'Emmett Technique'],
     },
   ],
   hasMap: 'https://maps.google.com/?q=Range+and+Restore+Sports+Massage+130+Junction+Road+London+N19+5LB',
