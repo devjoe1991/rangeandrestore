@@ -27,7 +27,7 @@ const CheckIcon = () => (
 const introCards = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: CARLOS_PHOTO, alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', anchor: '#carlos-bonvicine' },
   { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: DARAEL_PORTRAIT, alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#darael-beckles' },
-  { name: 'Mateja Bracko-Mounti', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: "18+ Years' Experience · Studying BTEC L5 (LSSM)", img: MATEJA_PORTRAIT, alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#mateja-bracko-mounti' },
+  { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: MATEJA_PORTRAIT, alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#mateja-bracko-mounti' },
 ]
 
 export default function TeamPage() {
@@ -275,11 +275,11 @@ export default function TeamPage() {
               />
             </div>
             <h2 className="text-3xl font-bold text-page mb-2">Mateja Bracko-Mounti</h2>
-            <p className="text-[#2ab4b8] font-semibold mb-1">Sports Massage and Soft Tissue Remedial Therapist</p>
-            <p className="text-page-muted font-medium mb-6 text-sm">Studying BTEC Level 5 Soft Tissue Therapy (LSSM) · 18+ Years&rsquo; Experience</p>
+            <p className="text-[#2ab4b8] font-semibold mb-1">BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist</p>
+            <p className="text-page-muted font-medium mb-6 text-sm">BTEC Level 5 Soft Tissue Therapy (LSSM) · SMRT, MSMA · 18+ Years&rsquo; Experience</p>
             <div className="space-y-4 text-page-muted text-lg">
               <p>
-                Mateja is a Sports Massage and Soft Tissue Remedial Therapist currently completing her BTEC Level 5 Diploma in Soft Tissue Therapy with the London School of Sports Massage (LSSM), one of the UK&rsquo;s leading training providers for clinical and remedial therapists.
+                Mateja is a BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist (SMRT, MSMA), trained with the London School of Sports Massage (LSSM), one of the UK&rsquo;s leading training providers for clinical and remedial therapists.
               </p>
               <p>
                 With over 18 years of experience working with clients in therapeutic settings, Mateja brings a calm, caring, and professional approach to every treatment. She is passionate about helping clients reduce pain, improve mobility, recover from injury, and enhance their overall wellbeing through personalised, hands-on therapy.
@@ -297,8 +297,10 @@ export default function TeamPage() {
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                'Studying BTEC Level 5 Diploma in Soft Tissue Therapy (LSSM)',
+                'BTEC Level 5 Diploma in Soft Tissue Therapy (LSSM)',
                 "Over 18 Years' Experience in Therapeutic Settings",
+                'SMRT — Soft Tissue Remedial Therapist',
+                'MSMA — Member of the Sports Massage Association',
                 'Qualified in Reflexology & Pregnancy Massage',
                 'Indian Head Massage, Natural Lift Facial Massage & Emmett Technique',
               ].map((qual) => (
