@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackConversion } from '@/lib/gtag'
 
 const TREATMENTS = [
   'Sports & Deep Tissue Massage',
@@ -48,6 +49,7 @@ export function ContactForm() {
         throw new Error(body.error || 'Submission failed')
       }
 
+      trackConversion('contact')
       setState('success')
       form.reset()
     } catch (err) {
