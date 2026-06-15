@@ -6,12 +6,12 @@ import { GADS_ID, trackConversion } from '@/lib/gtag'
 
 /**
  * Loads the Google tag (gtag.js) for Google Ads and wires up conversion
- * tracking for the two actions that happen via links anywhere on the site:
- * Jane App booking clicks and phone (tel:) taps.
+ * tracking for the three lead actions that happen via links anywhere on the
+ * site: Jane App booking clicks (book), phone tel: taps (phone), and email
+ * mailto: clicks (contact).
  *
  * A single delegated click listener on the document catches these for every
  * page — current and future — without having to touch each link or button.
- * Contact-form submissions are tracked separately in ContactForm.tsx.
  *
  * Renders nothing and loads no script until NEXT_PUBLIC_GADS_ID is set.
  */
@@ -26,6 +26,8 @@ export function Analytics() {
       const href = anchor.getAttribute('href') ?? ''
       if (href.startsWith('tel:')) {
         trackConversion('phone')
+      } else if (href.startsWith('mailto:')) {
+        trackConversion('contact')
       } else if (href.includes('janeapp.co.uk')) {
         trackConversion('book')
       }

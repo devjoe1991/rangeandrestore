@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BUSINESS, BOOKING_URLS } from '@/lib/constants'
-import { ContactForm } from './ContactForm'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Contact – Sports Massage Archway N19',
@@ -65,11 +64,40 @@ export default function ContactPage() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact info */}
+          {/* Contact actions */}
           <div>
-            <h2 className="text-2xl font-bold text-page mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-bold text-page mb-3">Get in Touch</h2>
+            <p className="text-page-muted mb-8">
+              The quickest way to book is online or by phone. Prefer to ask a question first?
+              Call or email Carlos directly — he&apos;ll get straight back to you.
+            </p>
 
-            <div className="space-y-6">
+            {/* Primary actions */}
+            <div className="space-y-3">
+              <a
+                href={BOOKING_URLS.general}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary w-full text-base"
+              >
+                Book Online
+              </a>
+              <a
+                href={`tel:${BUSINESS.phoneTel}`}
+                className="btn btn-primary w-full text-base"
+              >
+                Call {BUSINESS.phone}
+              </a>
+              <a
+                href={`mailto:${BUSINESS.email}`}
+                className="btn w-full text-base border-2 border-[#2ab4b8] text-[#2ab4b8] hover:bg-[#2ab4b8] hover:text-white transition-colors"
+              >
+                Email Carlos
+              </a>
+            </div>
+
+            {/* Details */}
+            <div className="mt-10 space-y-6">
               <div>
                 <h3 className="font-semibold text-page mb-1">Address</h3>
                 <address className="not-italic text-page-muted">
@@ -78,28 +106,15 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <h3 className="font-semibold text-page mb-1">Phone</h3>
-                <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] inline-flex items-center">
-                  {BUSINESS.phone}
-                </a>
+                <h3 className="font-semibold text-page mb-1">Opening Hours</h3>
+                <p className="text-page-muted">Monday–Friday: 08:00–20:00</p>
+                <p className="text-page-muted">Saturday–Sunday: 09:00–17:00</p>
               </div>
 
               <div>
                 <h3 className="font-semibold text-page mb-1">Email</h3>
                 <a href={`mailto:${BUSINESS.email}`} className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.email}
-                </a>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-page mb-2">Book Online</h3>
-                <a
-                  href={BOOKING_URLS.general}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  Book Your Session
                 </a>
               </div>
             </div>
@@ -113,9 +128,12 @@ export default function ContactPage() {
                 A short walk from Archway tube (Northern Line). Easy to reach from Tufnell Park, Islington and across North London. Street parking is available nearby.
               </p>
             </div>
+          </div>
 
+          {/* Location & map */}
+          <div>
             {/* Building exterior photo */}
-            <div className="mt-6 rounded-xl overflow-hidden relative aspect-[16/7]">
+            <div className="rounded-xl overflow-hidden relative aspect-[16/9]">
               <Image
                 src="/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg"
                 alt="Exterior of Range and Restore Sports Massage clinic at 130 Junction Road, Archway, London N19 5LB — near Archway tube station, Northern Line"
@@ -131,7 +149,7 @@ export default function ContactPage() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.420517744654!2d-0.1374028!3d51.560524099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761bee259e36a3%3A0x91aa9e204602d18b!2sRange%20and%20Restore%20Sports%20Massage!5e0!3m2!1sen!2suk!4v1774130167749!5m2!1sen!2suk"
                 width="100%"
-                height="320"
+                height="420"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -139,12 +157,6 @@ export default function ContactPage() {
                 title="Range and Restore Sports Massage location"
               />
             </div>
-          </div>
-
-          {/* Contact form */}
-          <div>
-            <h2 className="text-2xl font-bold text-page mb-6">Send a Message</h2>
-            <ContactForm />
           </div>
         </div>
       </div>
