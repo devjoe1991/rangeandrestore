@@ -3,6 +3,7 @@ import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { Analytics } from '@/components/Analytics'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={dmSans.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <Analytics />
         <a href="#main-content" className="skip-link">Skip to content</a>
         <Header />
         <main id="main-content">{children}</main>
