@@ -87,6 +87,14 @@ const partners: Partner[] = [
     blurb: 'Range and Restore and NC Osteopathy work together on whole-person care in North London. Osteopathy and Mummy MOT with Nagma Chaudhry M.Ost, sports massage and recovery with Carlos. Two complementary disciplines, honest referrals both ways.',
     externalUrl: 'https://ncosteopathy.co.uk',
   },
+  {
+    slug: 'private-gp-surgery',
+    name: 'Range and Restore × Private GP Surgery',
+    headerText: 'Range and Restore × Private GP Surgery',
+    category: 'North London. Private GP and Whole-Person Care',
+    blurb: 'Range and Restore and Private GP Surgery bring you joined-up care across North London. CQC-regulated private GP appointments, online and home visits with Dr Ali Mahmood M.D., sports massage and recovery with Carlos. Honest referrals both ways.',
+    externalUrl: 'https://privategpsurgery.co.uk',
+  },
 ]
 
 const breadcrumbs = buildBreadcrumbs([
