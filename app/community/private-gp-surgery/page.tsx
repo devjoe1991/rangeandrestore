@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
@@ -73,10 +74,14 @@ export default function PrivateGpSurgeryPartnerPage() {
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-[#0f4a2e] mb-10 p-12 flex items-center justify-center text-center">
-          <span className="text-white text-2xl sm:text-3xl font-bold tracking-tight">
-            Range and Restore <span className="text-[#7dd94a]">×</span> Private GP Surgery
-          </span>
+        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+          <Image
+            src="/private-gp-surgery-archway-north-london.webp"
+            alt="Private GP Surgery logo, CQC-regulated private GP service led by Dr M. Ali Mahmood"
+            width={400}
+            height={400}
+            className="max-h-44 w-auto object-contain"
+          />
         </div>
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">

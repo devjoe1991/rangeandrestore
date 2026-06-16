@@ -93,6 +93,8 @@ const partners: Partner[] = [
     headerText: 'Range and Restore × Private GP Surgery',
     category: 'North London. Private GP and Whole-Person Care',
     blurb: 'Range and Restore and Private GP Surgery bring you joined-up care across North London. CQC-regulated private GP appointments, online and home visits with Dr Ali Mahmood M.D., sports massage and recovery with Carlos. Honest referrals both ways.',
+    logo: '/private-gp-surgery-archway-north-london.webp',
+    logoAlt: 'Private GP Surgery logo',
     externalUrl: 'https://privategpsurgery.co.uk',
   },
 ]
