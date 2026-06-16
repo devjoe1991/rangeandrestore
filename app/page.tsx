@@ -158,10 +158,10 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            New client offer: 10% off your first session. Ideal for back pain, neck tension and sports recovery.
+            👔 Treat Dad this weekend: 60-min Sports or Deep Tissue Massage just £75 (usually £85).
           </span>
           <a
-            href={BOOKING_URLS.general}
+            href={BOOKING_URLS.sportsDeepTissue}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#2ab4b8] transition-all whitespace-nowrap"
