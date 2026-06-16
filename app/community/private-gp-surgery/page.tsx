@@ -92,6 +92,18 @@ export default function PrivateGpSurgeryPartnerPage() {
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Dr Ali Mahmood and Private GP Surgery</h2>
+
+          <figure className="my-6">
+            <Image
+              src="/dr-ali-mahmood-private-gp-surgery-archway-north-london.webp"
+              alt="Dr M. Ali Mahmood M.D., General Practitioner at Private GP Surgery, at his desk with a stethoscope"
+              width={600}
+              height={450}
+              className="rounded-[20px] border-2 border-[#1a3d3a] w-full h-auto"
+            />
+            <figcaption className="text-sm text-page-muted mt-2 text-center">Dr M. Ali Mahmood, M.D., General Practitioner at Private GP Surgery.</figcaption>
+          </figure>
+
           <p>
             Private GP Surgery is a CQC-regulated private GP service operated by Medical Health Limited. It is led by Dr M. Ali Mahmood, M.D., an experienced General Practitioner with over 20 years in healthcare. He holds full GMC registration with a licence to practise, MRCGP membership, and is listed on the GP Register and Performers List. He is also Mental Health Act Section 12 approved, which means he can support patients struggling with mental health problems. Dr Ali believes private care should feel straightforward and reassuring. He takes time over every appointment and goes into the detail for a proper assessment and follow-up, rather than rushing patients through.
           </p>
