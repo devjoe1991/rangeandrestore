@@ -44,6 +44,7 @@ const NAME_MAP = {
   'community-roundup': 'R&R — Community Roundup',
   'service-recovery-suite': 'R&R — Recovery Suite',
   'service-sports-pain': 'R&R — Sports & Pain Relief',
+  'service-community-tuesday-clinic': 'R&R — Community Tuesday Clinic',
   'event-marathon': 'R&R — Marathon / Event Recovery',
   'gift-cards-bundles': 'R&R — Gift Cards & Bundles',
   'announcement': 'R&R — Announcement (flexible)',
