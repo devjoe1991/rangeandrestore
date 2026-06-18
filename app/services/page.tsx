@@ -12,6 +12,13 @@ export const metadata: Metadata = buildMetadata({
 
 const services = [
   {
+    title: 'Community Tuesday Clinic',
+    href: '/services/community-tuesday-clinic',
+    bookingHref: BOOKING_URLS.communityTuesday,
+    description: 'The same expert sports and soft tissue treatment, made more accessible to the local community. A community-focused clinic for back pain, neck pain, sports injuries, muscle tension, mobility and wellbeing — every Tuesday.',
+    duration: '60 min – £60  ·  90 min – £85  ·  Every Tuesday',
+  },
+  {
     title: 'Back & Neck Pain MOT',
     href: '/services/back-neck-pain-mot',
     bookingHref: BOOKING_URLS.backNeckMot,
@@ -38,13 +45,6 @@ const services = [
     bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
     description: 'Integrated cupping therapy combined with sports and deep tissue massage — targets deep muscle tension, fascial restrictions, and long-standing adhesions.',
     duration: '30 min – £60  ·  60 min – £85  ·  90 min – £125',
-  },
-  {
-    title: 'Community Tuesday Clinic',
-    href: '/services/community-tuesday-clinic',
-    bookingHref: BOOKING_URLS.communityTuesday,
-    description: 'The same expert sports and soft tissue treatment, made more accessible to the local community. A community-focused clinic for back pain, neck pain, sports injuries, muscle tension, mobility and wellbeing — every Tuesday.',
-    duration: '60 min – £60  ·  90 min – £85  ·  Every Tuesday',
   },
   {
     title: '2-Hour Pain Relief Massage',
