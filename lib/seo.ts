@@ -277,6 +277,19 @@ export const businessSchema = {
     },
     {
       '@type': 'Offer',
+      name: 'Community Tuesday Clinic',
+      description: 'A community-focused clinic offering the same expert sports and soft tissue remedial treatment at more accessible pricing, every Tuesday. For back pain, neck pain, sports injuries, muscle tension, mobility and wellbeing.',
+      url: `${BASE_URL}/services/community-tuesday-clinic`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '60', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '85', priceCurrency: 'GBP', description: '90 minutes' },
+      ],
+      availabilityStarts: '2026-06-23',
+      availableAtOrFrom: { '@type': 'Place', name: 'Range and Restore Sports Massage, Archway' },
+    },
+    {
+      '@type': 'Offer',
       name: 'Advanced Clinical Massage',
       description: 'Assessment-led clinical massage for chronic pain, sciatica, RSI, tension headaches and complex postural conditions.',
       url: `${BASE_URL}/services/advanced-clinical-massage`,
