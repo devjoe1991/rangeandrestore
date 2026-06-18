@@ -83,7 +83,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What can the Community Tuesday Clinic help with?',
-      acceptedAnswer: { '@type': 'Answer', text: 'It is suited to back pain, neck pain, sports injuries, muscle tension, mobility issues and general wellbeing. Depending on your needs, treatment may include sports massage, deep tissue massage, soft tissue remedial therapy, assisted stretching, myofascial release and cupping therapy.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'It is suited to back pain, neck pain, sports injuries, muscle tension, mobility issues and general wellbeing. Depending on your needs, treatment may include sports massage, deep tissue massage, soft tissue remedial therapy, assisted stretching, myofascial release, cupping therapy and manual lymphatic drainage (MLD).' },
     },
   ],
 }
@@ -174,6 +174,7 @@ export default function CommunityTuesdayClinicPage() {
                 'Assisted stretching and mobilisation',
                 'Myofascial release',
                 'Cupping therapy',
+                'Manual lymphatic drainage (MLD)',
               ].map((tech) => (
                 <li key={tech} className="flex items-center gap-3 text-page-muted">
                   <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
