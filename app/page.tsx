@@ -231,6 +231,58 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2.1 COMMUNITY TUESDAY CLINIC ─────────────────────── */}
+      <section className="section bg-page" aria-labelledby="community-tuesday-heading">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage overflow-hidden">
+            <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+            <div className="p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+              <div className="flex-1">
+                <span className="eyebrow block mb-2">New · Community Initiative</span>
+                <h2 id="community-tuesday-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-2">
+                  Community Tuesday Clinic
+                </h2>
+                <p className="text-page font-bold text-base sm:text-lg mb-3">
+                  The same expert treatment. More accessible pricing. Available every Tuesday.
+                </p>
+                <p className="text-page-muted text-sm font-medium leading-relaxed">
+                  A community-focused clinic helping more people across Archway and North London access expert treatment for back pain, neck pain, sports injuries, muscle tension, mobility and wellbeing.
+                </p>
+              </div>
+
+              <div className="flex-shrink-0 lg:w-64">
+                <div className="flex gap-3 mb-4">
+                  <div className="flex-1 bg-card rounded-xl border border-[#1a3d3a]/15 p-4 text-center">
+                    <p className="text-[#2ab4b8] text-[0.65rem] font-black uppercase tracking-widest mb-1">60 min</p>
+                    <p className="text-2xl font-black text-page leading-none">£60</p>
+                  </div>
+                  <div className="flex-1 bg-card rounded-xl border border-[#1a3d3a]/15 p-4 text-center">
+                    <p className="text-[#2ab4b8] text-[0.65rem] font-black uppercase tracking-widest mb-1">90 min</p>
+                    <p className="text-2xl font-black text-page leading-none">£85</p>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href={BOOKING_URLS.communityTuesday}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary text-sm w-full"
+                  >
+                    Book a Tuesday session
+                  </a>
+                  <Link
+                    href="/services/community-tuesday-clinic"
+                    className="text-page text-sm font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2"
+                  >
+                    Learn more
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">

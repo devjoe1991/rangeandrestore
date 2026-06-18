@@ -40,6 +40,13 @@ const services = [
     duration: '30 min – £60  ·  60 min – £85  ·  90 min – £125',
   },
   {
+    title: 'Community Tuesday Clinic',
+    href: '/services/community-tuesday-clinic',
+    bookingHref: BOOKING_URLS.communityTuesday,
+    description: 'The same expert sports and soft tissue treatment, made more accessible to the local community. A community-focused clinic for back pain, neck pain, sports injuries, muscle tension, mobility and wellbeing — every Tuesday.',
+    duration: '60 min – £60  ·  90 min – £85  ·  Every Tuesday',
+  },
+  {
     title: '2-Hour Pain Relief Massage',
     href: '/services/2-hour-pain-relief-massage',
     bookingHref: BOOKING_URLS.twoHourRelief,
