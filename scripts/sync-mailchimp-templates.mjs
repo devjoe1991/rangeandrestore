@@ -45,6 +45,7 @@ const NAME_MAP = {
   'service-recovery-suite': 'R&R — Recovery Suite',
   'service-sports-pain': 'R&R — Sports & Pain Relief',
   'service-community-tuesday-clinic': 'R&R — Community Tuesday Clinic',
+  'team-introduction': 'R&R — Meet the Team',
   'event-marathon': 'R&R — Marathon / Event Recovery',
   'gift-cards-bundles': 'R&R — Gift Cards & Bundles',
   'announcement': 'R&R — Announcement (flexible)',

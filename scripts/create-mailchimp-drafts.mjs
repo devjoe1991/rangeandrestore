@@ -67,6 +67,7 @@ const CAMPAIGNS = {
   'R&R — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
   'R&R — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
   'R&R — Gallery Showcase': { subject: 'A look inside Range and Restore', preview: 'The clinic, the Recovery Suite, and what to expect.', send: 'Evergreen' },
+  'R&R — Meet the Team': { subject: 'Meet the team behind Range and Restore', preview: 'Carlos, Darael and Mateja. The qualified hands looking after you in Archway.', send: 'Evergreen / one-off introduction' },
   // Seasonal / holiday / event (dated)
   'R&R — Summer Bank Holiday': { subject: 'Before the bank holiday weekend', preview: 'Book in before we close for the long weekend.', send: 'approx 24 Aug 2026 (BH Mon 31 Aug)' },
   'R&R — Halloween': { subject: 'Do not let tight muscles haunt you', preview: 'An autumn nudge from the clinic.', send: 'approx 28 Oct 2026 (Halloween 31 Oct)' },
