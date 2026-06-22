@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
@@ -82,10 +83,14 @@ export default function AlisQuiffBarberPartnerPage() {
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-[#0f4a2e] mb-10 p-12 flex items-center justify-center text-center">
-          <span className="text-white text-2xl sm:text-3xl font-bold tracking-tight">
-            Range and Restore <span className="text-[#7dd94a]">×</span> Ali’s Quiff Barber
-          </span>
+        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+          <Image
+            src="/alis-quiff-barber-shop-holloway-road-archway.jpg"
+            alt="Ali’s Quiff Barber Shop logo, Holloway Road"
+            width={400}
+            height={400}
+            className="max-h-44 w-auto object-contain"
+          />
         </div>
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">

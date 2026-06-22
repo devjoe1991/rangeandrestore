@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
@@ -56,6 +57,16 @@ export default function GlowByDPartnerPage() {
       </div>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+
+        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+          <Image
+            src="/glow-by-d-skincare-beauty-clinic-archway.png"
+            alt="Glow By D skincare and beauty clinic logo, Archway"
+            width={400}
+            height={400}
+            className="max-h-44 w-auto object-contain"
+          />
+        </div>
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
 
