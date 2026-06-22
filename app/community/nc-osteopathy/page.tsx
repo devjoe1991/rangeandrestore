@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
@@ -73,10 +74,14 @@ export default function NcOsteopathyPartnerPage() {
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-[#0f4a2e] mb-10 p-12 flex items-center justify-center text-center">
-          <span className="text-white text-2xl sm:text-3xl font-bold tracking-tight">
-            Range and Restore <span className="text-[#7dd94a]">×</span> NC Osteopathy
-          </span>
+        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+          <Image
+            src="/nc-osteopathy-logo-north-london.webp"
+            alt="NC Osteopathy logo, North London"
+            width={300}
+            height={300}
+            className="max-h-44 w-auto object-contain"
+          />
         </div>
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
@@ -87,6 +92,18 @@ export default function NcOsteopathyPartnerPage() {
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Nagma Chaudhry and NC Osteopathy</h2>
+          <figure className="not-prose my-6">
+            <Image
+              src="/nagma-chaudhry-osteopath-nc-osteopathy-north-london.webp"
+              alt="Nagma Chaudhry M.Ost, Clinic Director and Principal Osteopath at NC Osteopathy, North London"
+              width={1920}
+              height={1280}
+              className="rounded-[20px] border-2 border-[#1a3d3a] w-full h-auto"
+            />
+            <figcaption className="text-sm text-page-muted mt-3 text-center">
+              Nagma Chaudhry M.Ost, Clinic Director and Principal Osteopath at NC Osteopathy
+            </figcaption>
+          </figure>
           <p>
             NC Osteopathy is led by Nagma Chaudhry M.Ost, DO, Clinic Director and Principal Osteopath. Nagma graduated from the European School of Osteopathy and has treated patients across a wide range of specialist settings &mdash; babies and children, women&apos;s health and sports clinics &mdash; alongside time in the NHS and other areas of healthcare, from acute to surgical scenarios. Her treatments integrate cranial, visceral and structural osteopathic techniques with therapeutic massage and myofascial release. She is also a certified Mummy MOT&reg; practitioner, with a particular focus on pregnant women and postnatal assessment and recovery. Nagma is a member of the Institute of Osteopathy and registered with the General Osteopathic Council (GOsC).
           </p>

@@ -58,6 +58,8 @@ const partners: Partner[] = [
     headerText: 'Range and Restore × Glow By D',
     category: 'Archway. Same Building, 130 Junction Road',
     blurb: 'Range and Restore and Glow By D share the same building at 130 Junction Road. Luxury skincare, advanced facials and beauty in one room, sports massage and recovery next door. Look after Archway inside and out, at one address.',
+    logo: '/glow-by-d-skincare-beauty-clinic-archway.png',
+    logoAlt: 'Glow By D skincare and beauty clinic logo, Archway',
     externalUrl: 'https://glowbyd.co.uk',
   },
   {
@@ -77,6 +79,8 @@ const partners: Partner[] = [
     headerText: 'Range and Restore × Ali’s Quiff Barber',
     category: 'Archway. Barbering and Men’s Self-Care',
     blurb: 'Range and Restore and Ali’s Quiff Barber on Holloway Road look after Archway from the inside out. Sports massage, recovery and remedial therapy on Junction Road, traditional barbering, beard work and full-service grooming a few minutes up the road.',
+    logo: '/alis-quiff-barber-shop-holloway-road-archway.jpg',
+    logoAlt: 'Ali’s Quiff Barber Shop logo, Holloway Road',
     externalUrl: 'https://booksy.com/en-gb/167323_alis-quiff-barber_barber_311817_london',
   },
   {
@@ -85,6 +89,8 @@ const partners: Partner[] = [
     headerText: 'Range and Restore × NC Osteopathy',
     category: 'North London. Osteopathy and Whole-Person Care',
     blurb: 'Range and Restore and NC Osteopathy work together on whole-person care in North London. Osteopathy and Mummy MOT with Nagma Chaudhry M.Ost, sports massage and recovery with Carlos. Two complementary disciplines, honest referrals both ways.',
+    logo: '/nc-osteopathy-logo-north-london.webp',
+    logoAlt: 'NC Osteopathy logo, North London',
     externalUrl: 'https://ncosteopathy.co.uk',
   },
   {
