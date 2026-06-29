@@ -158,7 +158,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            👔 Treat Dad this weekend: 60-min Sports or Deep Tissue Massage just £75 (usually £85).
+            ☀️ Summer Offer: Enjoy 20% off your first session — feel your best this summer.
           </span>
           <a
             href={BOOKING_URLS.sportsDeepTissue}
