@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: 'How do I book time on the Normatec?',
-    a: 'The Normatec is part of the private Recovery Suite experience. Book a 45 or 60 minute Recovery Suite session and you have the suite, including the sauna and the Normatec system, to yourself. Carlos will help you fit compression into your session depending on what you\'re recovering from.',
+    a: 'The Normatec is part of the private Recovery Suite experience. Book a 60 minute Recovery Suite session and you have the suite, including the Infrared Hybrid Sauna and the Normatec system, to yourself. Carlos will help you fit compression into your session depending on what you\'re recovering from.',
   },
   {
     q: 'Do I need to undress?',
@@ -132,7 +132,7 @@ export default function CompressionTherapyPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: 'Private Recovery Suite Session', desc: '45 minutes for £35 or 60 minutes for £45. Private use of the suite, including the hybrid sauna and the Normatec recovery system.' },
+                { duration: 'Private Recovery Suite Session', desc: '60 minutes for £15 this July (usually £35). Private use of the suite, including the Infrared Hybrid Sauna and the Normatec recovery system.' },
                 { duration: 'Sports Massage + Sauna Recovery Package', desc: '75 minutes for £85 or 90 minutes for £110. Hands-on treatment followed by recovery time in the suite.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
@@ -247,7 +247,7 @@ export default function CompressionTherapyPage() {
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-[#1a2330] mb-4">Normatec recovery now open at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Private sessions from £35 and sports massage packages from £85, available to book now.
+              The Recovery Suite is open in Archway, North London. A private 60 minute Recovery Suite session is £15 this July (usually £35), and sports massage packages start from £85. Available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
@@ -263,7 +263,7 @@ export default function CompressionTherapyPage() {
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
-                → Infrared &amp; Traditional Hybrid Sauna
+                → Infrared Hybrid Sauna
               </Link>
               <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Manual Lymphatic Drainage (MLD)

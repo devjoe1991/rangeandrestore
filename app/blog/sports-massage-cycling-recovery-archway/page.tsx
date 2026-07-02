@@ -356,7 +356,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
               &rarr; Recovery Suite: Sauna, Compression and Recovery Packages
             </Link>
             <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
-              &rarr; Vidalux Hybrid Infrared Sauna
+              &rarr; Infrared Hybrid Sauna
             </Link>
             <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Normatec Compression Therapy

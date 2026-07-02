@@ -75,11 +75,11 @@ const services = [
     duration: 'From £350',
   },
   {
-    title: 'Infrared Sauna (Recovery Suite)',
+    title: 'Infrared Hybrid Sauna (Recovery Suite)',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation. Pairs with sports massage for cyclists, runners and desk workers across North London.',
-    duration: '45 min – £35  ·  60 min – £45  ·  private sessions',
+    duration: '60 min – £15 (usually £35)  ·  private session',
     image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
     imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
   },
@@ -150,7 +150,7 @@ export default function ServicesPage() {
         <div className="mb-8 rounded-2xl border-2 border-[#1a3d3a] bg-page-sage p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
           <div>
             <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-xs mb-1">New at the Clinic</p>
-            <p className="text-page font-bold leading-snug">Recovery Suite now open. Infrared sauna, Normatec compression and recovery packages alongside your massage.</p>
+            <p className="text-page font-bold leading-snug">Recovery Suite now open. Infrared Hybrid Sauna, Normatec compression and recovery packages alongside your massage.</p>
           </div>
           <Link href="/recovery-suite" className="btn btn-primary text-sm whitespace-nowrap">Explore Recovery Suite</Link>
         </div>

@@ -196,7 +196,7 @@ export const businessSchema = {
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '20:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday','Sunday'], opens: '09:00', closes: '17:00' },
   ],
-  priceRange: '£35-£170',
+  priceRange: '£15-£170',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card',
   areaServed: [
@@ -336,19 +336,18 @@ export const businessSchema = {
     },
     {
       '@type': 'Offer',
-      name: 'Private Infrared & Traditional Sauna Recovery Suite Experience',
-      description: 'Private use of the Recovery Suite with hybrid full spectrum infrared and traditional sauna and Hyperice Normatec 3 Full Body recovery system.',
+      name: 'Infrared Hybrid Sauna',
+      description: 'Private use of the Recovery Suite with the Infrared Hybrid Sauna (full spectrum infrared and traditional heat) and Hyperice Normatec 3 Full Body recovery system. July launch offer: 60 minutes for £15 (usually £35).',
       url: `${BASE_URL}/recovery-suite/infrared-sauna`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '35', priceCurrency: 'GBP', description: '45 minutes' },
-        { '@type': 'PriceSpecification', price: '45', priceCurrency: 'GBP', description: '60 minutes' },
+        { '@type': 'PriceSpecification', price: '15', priceCurrency: 'GBP', description: '60 minutes (July launch offer, usually £35)' },
       ],
     },
     {
       '@type': 'Offer',
       name: 'Sports Massage + Sauna Recovery Suite Package',
-      description: 'Combined sports massage and private infrared and traditional sauna Recovery Suite experience in one appointment.',
+      description: 'Combined sports massage and private Infrared Hybrid Sauna Recovery Suite experience in one appointment.',
       url: `${BASE_URL}/recovery-suite/recovery-packages`,
       priceCurrency: 'GBP',
       priceSpecification: [

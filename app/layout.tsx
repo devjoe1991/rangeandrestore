@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Analytics } from '@/components/Analytics'
+import { ConsentBanner } from '@/components/ConsentBanner'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <ConsentBanner />
       </body>
     </html>
   )
