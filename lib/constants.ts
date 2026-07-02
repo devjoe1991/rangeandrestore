@@ -54,7 +54,7 @@ export const NAV_ITEMS = [
     label: 'Recovery',
     href: '/recovery-suite',
     children: [
-      { label: 'Infrared Sauna', href: '/recovery-suite/infrared-sauna' },
+      { label: 'Infrared Hybrid Sauna', href: '/recovery-suite/infrared-sauna' },
       { label: 'Compression Therapy', href: '/recovery-suite/compression-therapy' },
       { label: 'Recovery Packages', href: '/recovery-suite/recovery-packages' },
     ],

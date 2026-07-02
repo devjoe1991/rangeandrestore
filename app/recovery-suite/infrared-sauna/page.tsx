@@ -5,21 +5,21 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Infrared Sauna in Archway London',
-  description: 'Vidalux hybrid sauna with full spectrum infrared and traditional heat in Archway N19. Private sessions from £35, or pair with sports massage from £85.',
+  title: 'Infrared Sauna in Archway, North London | Recovery & Pain Relief',
+  description: 'Private infrared sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and better mobility. Full spectrum infrared and traditional heat. July offer: a private 60 minute session £15 (usually £35).',
   path: '/recovery-suite/infrared-sauna',
 })
 
 const breadcrumbs = buildBreadcrumbs([
   { name: 'Recovery Suite', path: '/recovery-suite' },
-  { name: 'Infrared Sauna', path: '/recovery-suite/infrared-sauna' },
+  { name: 'Infrared Hybrid Sauna', path: '/recovery-suite/infrared-sauna' },
 ])
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Infrared & Traditional Hybrid Sauna',
-  description: 'Two person Vidalux hybrid sauna with full spectrum infrared and traditional heat at Range and Restore, Archway N19.',
+  name: 'Infrared Hybrid Sauna',
+  description: 'Private infrared sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and improved mobility. Two person Vidalux hybrid cabin with full spectrum infrared and traditional heat at Range and Restore, Archway N19.',
   provider: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',
@@ -37,8 +37,7 @@ const serviceSchema = {
   ],
   serviceType: 'Infrared Sauna',
   offers: [
-    { '@type': 'Offer', price: '35.00', priceCurrency: 'GBP', name: 'Private Infrared & Traditional Sauna Recovery Suite Experience – 45 Minutes' },
-    { '@type': 'Offer', price: '45.00', priceCurrency: 'GBP', name: 'Private Infrared & Traditional Sauna Recovery Suite Experience – 60 Minutes' },
+    { '@type': 'Offer', price: '15.00', priceCurrency: 'GBP', name: 'Infrared Hybrid Sauna – 60 Minutes (July launch offer, usually £35)', availabilityEnds: '2026-07-31' },
   ],
 }
 
@@ -58,7 +57,7 @@ const faqs = [
   },
   {
     q: 'How long is a typical session?',
-    a: 'Sessions are 45 minutes (£35) or 60 minutes (£45). 45 is plenty if it\'s your first time or you\'re fitting it in around training. 60 gives you more time to settle in, especially if you\'re using it as a switch-off rather than a quick recovery session.',
+    a: 'A session is a private 60 minutes, currently £15 as part of our July launch offer (usually £35). That gives you plenty of time to settle in, switch between traditional and infrared heat, and properly switch off.',
   },
   {
     q: 'Can I bring someone with me?',
@@ -84,12 +83,12 @@ export default function InfraredSaunaPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Infrared Sauna · Archway London</p>
+          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Infrared Sauna · Archway · North London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            Infrared &amp; Traditional Hybrid Sauna in Archway, North London
+            Infrared Sauna in Archway, North London for Recovery, Pain Relief &amp; Mobility
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            A premium two person Vidalux hybrid cabin offering both traditional sauna heat and full spectrum infrared. Recovery, circulation, proper switch-off time, all in one quiet space.
+            Ease muscle soreness, reduce stiffness and support pain relief and mobility in our private Infrared Hybrid Sauna in Archway, North London. A two person Vidalux cabin with full spectrum infrared and traditional heat, built for recovery and proper switch-off time.
           </p>
           <div className="mt-6">
             <a
@@ -130,31 +129,60 @@ export default function InfraredSaunaPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Choose your session</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { duration: '45 Minutes – £35', desc: 'A focused private recovery session. Ideal if you\'re fitting it in around training, work or a busy week.' },
-                { duration: '60 Minutes – £45', desc: 'A longer session for proper switch-off time. Recommended for evenings or rest days when you want to settle in.' },
-              ].map((option) => (
-                <div key={option.duration} className="bg-page-sage rounded-xl p-5">
-                  <p className="font-bold text-page text-lg mb-2">{option.duration}</p>
-                  <p className="text-page-muted text-sm">{option.desc}</p>
-                </div>
-              ))}
+            <h2 className="text-2xl font-bold text-page mb-4">July launch offer</h2>
+
+            <div className="bg-[#7dd94a] rounded-2xl p-6 sm:p-8">
+              <p className="text-[#1a2330] text-xs font-black uppercase tracking-widest mb-2">July Launch Offer · Infrared Hybrid Sauna</p>
+              <p className="text-[#1a2330] text-3xl sm:text-4xl font-black leading-none mb-2">
+                Only £15 <span className="text-lg sm:text-xl font-bold italic">(usually £35)</span>
+              </p>
+              <p className="text-[#1a3d3a] font-semibold mb-5">
+                60 minutes of private Full Spectrum Infrared Sauna therapy in the Recovery Suite. Relax. Recover. Recharge.
+              </p>
+
+              <p className="text-[#1a2330] text-sm font-black uppercase tracking-wide mb-2">Your session includes</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
+                {[
+                  '60-minute private infrared sauna session',
+                  'Private, air-conditioned treatment room',
+                  'Fresh towels',
+                  'Chilled drinking water',
+                  'Bluetooth speaker for your own music or podcast',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-[#1a3d3a] text-sm font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1a2330] flex-shrink-0 mt-1.5" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-[#1a3d3a] text-sm font-semibold mb-5">
+                Save over 55% this July. Available until 31 July only, subject to availability. Book today for £15 before the standard £35 price returns.
+              </p>
+
+              <a
+                href={BOOKING_URLS.recoverySuite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+              >
+                Book Sauna Session
+              </a>
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">Every session is private, with the Recovery Suite to yourself. Prices are current launch-offer pricing, also shown on the booking page.</p>
+
+            <p className="text-page-muted text-sm mt-3 italic">Every session is private, with the Recovery Suite to yourself. Prices shown are our current July launch-offer pricing, also shown on the booking page.</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">What people use it for</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Muscle recovery, pain relief and better mobility</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 'Muscle recovery between training sessions',
+                'Easing aches, stiffness and supporting mobility',
+                'Pain relief and tension release',
                 'Improved circulation',
                 'Better perceived sleep quality',
-                'Time to relax and switch off properly',
-                'A regular wellness habit close to home',
-                'Support alongside cold exposure or other recovery practices',
+                'Time to relax and properly switch off',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
@@ -247,9 +275,9 @@ export default function InfraredSaunaPage() {
 
           {/* Book Now CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Sauna sessions now open at Range and Restore</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Infrared sauna recovery, now open in Archway, North London</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Private sauna sessions from £35 and sports massage packages from £85, available to book now.
+              The Recovery Suite is open in Archway, North London. A private 60 minute Infrared Hybrid Sauna is £15 this July (usually £35), and sports massage packages start from £85. Available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}

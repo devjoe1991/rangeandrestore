@@ -114,7 +114,7 @@ export function Footer() {
               <p className="text-[#1a2330] font-extrabold text-sm md:font-bold mb-3 tracking-tight">Recovery Suite</p>
               <ul className="space-y-1 text-sm text-[#1a3d3a]/90 font-medium">
                 {[
-                  ['Infrared Sauna',        '/recovery-suite/infrared-sauna'],
+                  ['Infrared Hybrid Sauna', '/recovery-suite/infrared-sauna'],
                   ['Compression Therapy',   '/recovery-suite/compression-therapy'],
                   ['Recovery Packages',     '/recovery-suite/recovery-packages'],
                 ].map(([label, href]) => (

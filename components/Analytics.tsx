@@ -2,18 +2,27 @@
 
 import Script from 'next/script'
 import { useEffect } from 'react'
-import { GADS_ID, trackConversion } from '@/lib/gtag'
+import { GA4_ID, GADS_ID, trackConversion } from '@/lib/gtag'
+import { CONSENT_STORAGE_KEY } from '@/lib/consent'
+import { BOOKING_BASE } from '@/lib/constants'
+
+/** Bare hostname of the Jane booking site, for GA4 cross-domain linking. */
+const JANE_DOMAIN = new URL(BOOKING_BASE).hostname
 
 /**
- * Loads the Google tag (gtag.js) for Google Ads and wires up conversion
- * tracking for the three lead actions that happen via links anywhere on the
- * site: Jane App booking clicks (book), phone tel: taps (phone), and email
- * mailto: clicks (contact).
+ * Loads the Google tag (gtag.js) for GA4 + Google Ads and wires up:
+ *   - Google Consent Mode v2 — every signal denied until the visitor accepts
+ *     in the banner (see components/ConsentBanner.tsx and lib/consent.ts). A
+ *     returning visitor's saved choice is read from localStorage and applied
+ *     inline the moment the tag loads, so there's no flash of the wrong state.
+ *   - GA4 with cross-domain linking to the Jane booking site, so a visit that
+ *     starts here and completes a booking on Jane is one attributed session.
+ *   - Google Ads conversion tracking for the three on-site lead actions
+ *     (book / phone / contact) via a single delegated click listener that
+ *     covers every current and future page.
  *
- * A single delegated click listener on the document catches these for every
- * page — current and future — without having to touch each link or button.
- *
- * Renders nothing and loads no script until NEXT_PUBLIC_GADS_ID is set.
+ * Renders nothing and loads no script unless NEXT_PUBLIC_GA4_ID or
+ * NEXT_PUBLIC_GADS_ID is set, so the site behaves identically until configured.
  */
 export function Analytics() {
   useEffect(() => {
@@ -38,22 +47,44 @@ export function Analytics() {
     return () => document.removeEventListener('click', handleClick, true)
   }, [])
 
-  if (!GADS_ID) return null
+  if (!GA4_ID && !GADS_ID) return null
+
+  const loaderId = GA4_ID || GADS_ID
 
   return (
     <>
       <Script
-        id="gads-loader"
+        id="gtag-loader"
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GADS_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${loaderId}`}
       />
-      <Script id="gads-init" strategy="afterInteractive">
+      <Script id="gtag-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
+
+          // Consent Mode v2 — default everything to the visitor's saved choice
+          // (denied on a first visit), before any tag config runs.
+          var rrConsent = 'denied';
+          try {
+            if (window.localStorage.getItem('${CONSENT_STORAGE_KEY}') === 'granted') {
+              rrConsent = 'granted';
+            }
+          } catch (e) {}
+          gtag('consent', 'default', {
+            ad_storage: rrConsent,
+            analytics_storage: rrConsent,
+            ad_user_data: rrConsent,
+            ad_personalization: rrConsent,
+            wait_for_update: 500
+          });
+          gtag('set', 'ads_data_redaction', true);
+          gtag('set', 'url_passthrough', true);
+
           gtag('js', new Date());
-          gtag('config', '${GADS_ID}');
+          ${GA4_ID ? `gtag('config', '${GA4_ID}', { linker: { domains: ['${JANE_DOMAIN}'] } });` : ''}
+          ${GADS_ID ? `gtag('config', '${GADS_ID}');` : ''}
         `}
       </Script>
     </>

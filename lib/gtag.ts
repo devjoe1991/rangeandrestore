@@ -15,6 +15,13 @@
 
 export const GADS_ID = process.env.NEXT_PUBLIC_GADS_ID
 
+/**
+ * GA4 "Google tag" Measurement ID (G-XXXXXXXXXX). Use the SAME id entered in
+ * Jane so the site → Jane booking journey is stitched into one cross-domain
+ * GA4 session. Blank = GA4 stays off on this site.
+ */
+export const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID
+
 export const CONVERSION_LABELS = {
   book: process.env.NEXT_PUBLIC_GADS_LABEL_BOOK,
   phone: process.env.NEXT_PUBLIC_GADS_LABEL_PHONE,

@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Range and Restore Sports Massage',
     short_name: 'Range & Restore',
     description:
-      'Sports massage, clinical massage and the Recovery Suite (infrared sauna and Normatec compression) in Archway, North London.',
+      'Sports massage, clinical massage and the Recovery Suite (Infrared Hybrid Sauna and Normatec compression) in Archway, North London.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

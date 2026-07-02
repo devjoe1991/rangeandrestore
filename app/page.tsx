@@ -66,9 +66,9 @@ const services = [
     bookingHref: BOOKING_URLS.relaxation,
   },
   {
-    title: 'Infrared Sauna',
+    title: 'Infrared Hybrid Sauna',
     problem: 'Sore, stressed and not sleeping well?',
-    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £35.',
+    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private 60 minute session £15 this July (usually £35).',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     image: '/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp',
@@ -287,7 +287,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            <span className="font-black">Now Open:</span> Our new Advanced Recovery Suite. Private sauna sessions from £35.
+            <span className="font-black">July Offer:</span> 60-minute Infrared Hybrid Sauna £15 (usually £35). Available until 31 July.
           </span>
         </div>
       </div>
@@ -307,8 +307,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-7">
             {[
               {
-                title: 'Infrared Sauna',
-                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat.',
+                title: 'Infrared Hybrid Sauna',
+                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat. £15 this July (usually £35).',
                 href: '/recovery-suite/infrared-sauna',
               },
               {
@@ -318,7 +318,7 @@ export default function HomePage() {
               },
               {
                 title: 'Recovery Sessions & Packages',
-                desc: 'Private sauna sessions from £35, plus combined sports massage and sauna recovery packages from £85.',
+                desc: 'Private Infrared Hybrid Sauna sessions £15 this July (usually £35), plus combined sports massage and sauna recovery packages from £85.',
                 href: '/recovery-suite/recovery-packages',
               },
             ].map((card) => (
