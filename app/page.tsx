@@ -141,7 +141,7 @@ const bundles = [
 ]
 
 const teamMembers = [
-  { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
+  { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: '/carlos-bonvicine-sports-massage-archway-hero.jpg', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
   { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
   { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
 ]
@@ -164,7 +164,7 @@ export default function HomePage() {
             href={BOOKING_URLS.sportsDeepTissue}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#2ab4b8] transition-all whitespace-nowrap"
+            className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#0f767a] transition-all whitespace-nowrap"
           >
             Book now
           </a>
@@ -174,11 +174,12 @@ export default function HomePage() {
       {/* ── 1. HERO ──────────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ minHeight: '400px' }} aria-label="Hero">
         <Image
-          src="https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no"
+          src="/carlos-bonvicine-sports-massage-archway-hero.jpg"
           alt="Carlos Bonvicine, sports massage therapist and founder of Range and Restore, Archway, North London"
           fill
           className="object-cover object-[center_10%]"
           priority
+          fetchPriority="high"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#1a3d3a]/60" />
@@ -204,13 +205,13 @@ export default function HomePage() {
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-[#2ab4b8]/60 hover:bg-white/25 hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-[#0f767a]/60 hover:bg-white/25 hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
           </div>
 
-          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-[#2ab4b8]/60">
+          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-[#0f767a]/60">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
             Archway · North London · N19 5LB
           </span>
@@ -235,7 +236,7 @@ export default function HomePage() {
       <section className="section bg-page" aria-labelledby="community-tuesday-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage overflow-hidden">
-            <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+            <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
             <div className="p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
               <div className="flex-1">
                 <span className="eyebrow block mb-2">New · Community Initiative</span>
@@ -253,11 +254,11 @@ export default function HomePage() {
               <div className="flex-shrink-0 lg:w-64">
                 <div className="flex gap-3 mb-4">
                   <div className="flex-1 bg-card rounded-xl border border-[#1a3d3a]/15 p-4 text-center">
-                    <p className="text-[#2ab4b8] text-[0.65rem] font-black uppercase tracking-widest mb-1">60 min</p>
+                    <p className="text-[#0f767a] text-[0.65rem] font-black uppercase tracking-widest mb-1">60 min</p>
                     <p className="text-2xl font-black text-page leading-none">£60</p>
                   </div>
                   <div className="flex-1 bg-card rounded-xl border border-[#1a3d3a]/15 p-4 text-center">
-                    <p className="text-[#2ab4b8] text-[0.65rem] font-black uppercase tracking-widest mb-1">90 min</p>
+                    <p className="text-[#0f767a] text-[0.65rem] font-black uppercase tracking-widest mb-1">90 min</p>
                     <p className="text-2xl font-black text-page leading-none">£85</p>
                   </div>
                 </div>
@@ -272,9 +273,10 @@ export default function HomePage() {
                   </a>
                   <Link
                     href="/services/community-tuesday-clinic"
-                    className="text-page text-sm font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2"
+                    aria-label="Learn more about the Community Tuesday Clinic"
+                    className="text-page text-sm font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2"
                   >
-                    Learn more
+                    Learn more<span className="sr-only"> about the Community Tuesday Clinic</span>
                   </Link>
                 </div>
               </div>
@@ -325,7 +327,7 @@ export default function HomePage() {
               <Link
                 key={card.href}
                 href={card.href}
-                className="group relative rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#2ab4b8]/30 hover:bg-white/10 hover:border-[#2ab4b8] transition-all card-lift flex flex-col"
+                className="group relative rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#0f767a]/30 hover:bg-white/10 hover:border-[#0f767a] transition-all card-lift flex flex-col"
               >
                 <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 group-hover:text-[#7dd94a] transition-colors">
                   {card.title}
@@ -354,7 +356,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-black text-[#1a2330] tracking-tight mb-1">Give the gift of movement</h2>
             <p className="text-[#1a3d3a] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
           </div>
-          <Link href="/gift-cards" className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all shadow-sm">
+          <Link href="/gift-cards" className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all shadow-sm">
             Buy a Gift Card
           </Link>
         </div>
@@ -387,10 +389,10 @@ export default function HomePage() {
                 <p className={`text-[0.7rem] sm:text-xs font-black leading-tight mb-1.5 min-h-[2.5em] ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
                   {b.name}
                 </p>
-                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#1a3d3a]/80' : 'text-[#1a3d3a]/60'}`}>
+                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#122a28]/90' : 'text-[#1a3d3a]/80'}`}>
                   {b.label}
                 </p>
-                <p className={`text-[0.65rem] font-bold mb-1 opacity-50 line-through ${b.popular ? 'text-[#1a3d3a]' : 'text-[#1a3d3a]'}`}>
+                <p className={`text-[0.65rem] font-bold mb-1 line-through ${b.popular ? 'text-[#122a28]/80' : 'text-[#1a3d3a]/70'}`}>
                   {b.originalPrice}
                 </p>
                 <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
@@ -406,7 +408,7 @@ export default function HomePage() {
                     {b.saving}
                   </span>
                 </div>
-                <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-[#1a3d3a]/70' : 'text-[#1a3d3a]/50'}`}>
+                <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-[#122a28]/90' : 'text-[#1a3d3a]/80'}`}>
                   Valid {b.valid}
                 </p>
                 <a
@@ -447,7 +449,7 @@ export default function HomePage() {
               '5-Star Rated on Google Reviews'
             ].map((item) => (
               <div key={item} className="flex items-start gap-4 bg-card p-5 rounded-xl border-2 border-page card-lift">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0" style={{ color: '#2ab4b8' }} aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0" style={{ color: '#0f767a' }} aria-hidden="true">
                   <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                 </svg>
                 <span className="text-sm font-bold text-page leading-snug">{item}</span>
@@ -471,7 +473,7 @@ export default function HomePage() {
                 Every session at Range and Restore begins with a proper assessment. Carlos takes the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
               </p>
 
-              <Link href="/about" className="btn bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all text-sm shadow-sm">Meet Carlos →</Link>
+              <Link href="/about" className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm">Meet Carlos →</Link>
             </div>
 
             {/* Carlos card */}
@@ -479,7 +481,7 @@ export default function HomePage() {
               <div>
                 <p className="text-3xl font-extrabold tracking-tight leading-none mb-1 text-[#1a3d3a]">Carlos Bonvicine</p>
                 <p className="text-[#1a3d3a]/90 text-sm font-bold">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
-                <p className="text-[#1a3d3a]/70 text-xs font-bold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
+                <p className="text-[#1a3d3a]/80 text-xs font-bold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
               </div>
               <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium">
                 &ldquo;My goal is simple. Help you feel better and move better, using evidence-based soft tissue therapy tailored exactly to you.&rdquo;
@@ -489,7 +491,7 @@ export default function HomePage() {
                 <p className="text-[#1a2330]/90 text-sm mt-1 font-bold">130 Junction Road, Archway<br />London N19 5LB</p>
                 <p className="text-sm mt-2">
                   <a href={`tel:${BUSINESS.phoneTel}`}
-                    className="text-[#1a3d3a] hover:text-[#2ab4b8] transition-colors font-bold inline-flex items-center gap-1.5 min-h-[44px]">
+                    className="text-[#1a3d3a] hover:text-[#0f767a] transition-colors font-bold inline-flex items-center gap-1.5 min-h-[44px]">
                     <PhoneIcon /> {BUSINESS.phone}
                   </a>
                 </p>
@@ -528,7 +530,7 @@ export default function HomePage() {
                 Expert advice &amp; insights
               </h2>
             </div>
-            <Link href="/blog" className="text-[#1a3d3a] text-sm font-bold hover:text-[#2ab4b8] transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
+            <Link href="/blog" className="text-[#1a3d3a] text-sm font-bold hover:text-[#0f767a] transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
               All posts →
             </Link>
           </div>
@@ -594,15 +596,15 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-4xl font-black text-[#1a2330] tracking-tight mb-3">
             Ready to feel better?
           </h2>
-          <p className="text-[#1a3d3a]/80 mb-7 text-base font-semibold">
+          <p className="text-[#1a3d3a]/90 mb-7 text-base font-semibold">
             Back pain, injury or tension holding you back? Book online or call Carlos directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all" />
+            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
@@ -628,7 +630,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
       className="group card-lift rounded-[20px] overflow-hidden flex flex-col cursor-pointer bg-card shadow-sm h-full"
     >
       {/* Top accent bar */}
-      <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+      <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
 
       {image && (
         <Link href={s.href} className="block relative aspect-[16/9] overflow-hidden">
@@ -661,9 +663,10 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
         <div className="flex items-center gap-2 pt-3 border-t border-[#1a3d3a]/10">
           <Link
             href={s.href}
-            className="text-page text-xs font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center flex-1 underline underline-offset-2"
+            aria-label={`Learn more about ${s.title}`}
+            className="text-page text-xs font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center flex-1 underline underline-offset-2"
           >
-            Learn more
+            Learn more<span className="sr-only"> about {s.title}</span>
           </Link>
           <a
             href={ctaHref}
@@ -692,7 +695,7 @@ function TeamCard({ m }: { m: typeof teamMembers[0] }) {
       </div>
       <div className="p-5">
         <p className="text-lg font-black text-page leading-tight min-h-[2.75rem]">{m.name}</p>
-        <p className="text-[#2ab4b8] text-xs font-bold mt-1 leading-snug min-h-[2.25rem]">{m.title}</p>
+        <p className="text-[#0f767a] text-xs font-bold mt-1 leading-snug min-h-[2.25rem]">{m.title}</p>
         <p className="text-page-muted text-xs font-medium mt-1 leading-snug">{m.creds}</p>
       </div>
     </Link>

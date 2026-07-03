@@ -47,7 +47,7 @@ export default function AchillesTendinitisPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Achilles Tendinitis – How Sports Massage Helps Recovery
           </h1>
@@ -62,7 +62,7 @@ export default function AchillesTendinitisPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Achilles tendinitis is one of the most common overuse injuries affecting <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium">runners</Link>, cyclists, and active individuals. Left unmanaged, it can progress from a nagging discomfort to a serious injury that keeps you off your feet for months. At Range and Restore in Archway, North London, sports massage and targeted <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">soft tissue therapy</Link> offer an effective, non-invasive approach to supporting recovery and preventing recurrence.
+            Achilles tendinitis is one of the most common overuse injuries affecting <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, cyclists, and active individuals. Left unmanaged, it can progress from a nagging discomfort to a serious injury that keeps you off your feet for months. At Range and Restore in Archway, North London, sports massage and targeted <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">soft tissue therapy</Link> offer an effective, non-invasive approach to supporting recovery and preventing recurrence.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is Achilles tendinitis?</h2>
@@ -124,7 +124,7 @@ export default function AchillesTendinitisPage() {
           </p>
 
           <p>
-            Between sessions, relative rest — reducing running volume without necessarily stopping entirely — combined with appropriate loading exercises (typically eccentric calf work, prescribed by a physiotherapist or sports rehab specialist) is usually recommended. Maintaining good <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydration</Link> also supports tendon recovery. At Range and Restore in Archway, advice on what to do between sessions is always part of the treatment.
+            Between sessions, relative rest — reducing running volume without necessarily stopping entirely — combined with appropriate loading exercises (typically eccentric calf work, prescribed by a physiotherapist or sports rehab specialist) is usually recommended. Maintaining good <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydration</Link> also supports tendon recovery. At Range and Restore in Archway, advice on what to do between sessions is always part of the treatment.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek additional help</h2>
@@ -134,7 +134,7 @@ export default function AchillesTendinitisPage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to rule out more serious pathology, this can be arranged within the same building.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to rule out more serious pathology, this can be arranged within the same building.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find Achilles tendinitis treatment near you in North London</h2>
@@ -182,17 +182,17 @@ export default function AchillesTendinitisPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

@@ -15,7 +15,7 @@ export function RecoverySuiteCard({ title, summary, href, image, imageAlt }: Rec
       href={href}
       className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm border-2 border-[#1a3d3a] no-underline"
     >
-      <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+      <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
       <div className="relative w-full aspect-[16/10] overflow-hidden">
         <Image
           src={image}
@@ -26,7 +26,7 @@ export function RecoverySuiteCard({ title, summary, href, image, imageAlt }: Rec
         />
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-black text-page text-lg leading-tight tracking-tight mb-2 group-hover:text-[#2ab4b8] transition-colors">
+        <h3 className="font-black text-page text-lg leading-tight tracking-tight mb-2 group-hover:text-[#0f767a] transition-colors">
           {title}
         </h3>
         <p className="text-page-muted text-sm leading-relaxed flex-1 mb-4">{summary}</p>

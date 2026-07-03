@@ -75,7 +75,7 @@ export default function ArchwayN19Page() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Archway · London N19</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Archway · London N19</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage in Archway (N19)
           </h1>
@@ -88,7 +88,7 @@ export default function ArchwayN19Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is the Archway local clinic for sports and remedial massage. The studio is at 130 Junction Road — between Archway tube and Tufnell Park — and is led by <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner.
+            Range and Restore is the Archway local clinic for sports and remedial massage. The studio is at 130 Junction Road — between Archway tube and Tufnell Park — and is led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N19</h2>
@@ -103,12 +103,12 @@ export default function ArchwayN19Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What treatments people in Archway book most</h2>
           <p>
-            Across the N19 postcode, the most-requested services are <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue massage</Link> for cyclists, runners and gym-goers; the <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">Back & Neck Pain MOT</Link> for desk workers and hospital staff with postural pain; and <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium">advanced clinical massage</Link> for chronic conditions that haven&apos;t responded to general massage elsewhere. Every session begins with an assessment so the treatment is matched to your presentation that day, not delivered as a generic protocol.
+            Across the N19 postcode, the most-requested services are <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> for cyclists, runners and gym-goers; the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back & Neck Pain MOT</Link> for desk workers and hospital staff with postural pain; and <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> for chronic conditions that haven&apos;t responded to general massage elsewhere. Every session begins with an assessment so the treatment is matched to your presentation that day, not delivered as a generic protocol.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Wider area: Upper Holloway and beyond</h2>
           <p>
-            The N19 postcode also covers Upper Holloway, the streets running down towards Tufnell Park, and parts of the Whittington Park area. If you live further out, the clinic is also a short trip from <Link href="/areas-served/tufnell-park-n7" className="text-[#2ab4b8] hover:text-page font-medium">Tufnell Park</Link> (15 minutes&apos; walk), <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium">Holloway, Highgate and Kentish Town</Link>.
+            The N19 postcode also covers Upper Holloway, the streets running down towards Tufnell Park, and parts of the Whittington Park area. If you live further out, the clinic is also a short trip from <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium">Tufnell Park</Link> (15 minutes&apos; walk), <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">Holloway, Highgate and Kentish Town</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>

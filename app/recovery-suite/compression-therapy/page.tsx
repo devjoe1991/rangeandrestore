@@ -80,7 +80,7 @@ export default function CompressionTherapyPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Compression Therapy · Archway London</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Compression Therapy · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Normatec Full Body Compression Therapy in Archway, North London
           </h1>
@@ -116,7 +116,7 @@ export default function CompressionTherapyPage() {
                 'Pairing recovery with regular sports massage',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -156,7 +156,7 @@ export default function CompressionTherapyPage() {
                 'A simple recovery routine you can fit into your week',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -190,7 +190,7 @@ export default function CompressionTherapyPage() {
                 'Optional: pair your Recovery Suite session with a sports massage in the same visit',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
                   {step}
                 </li>
               ))}
@@ -210,14 +210,14 @@ export default function CompressionTherapyPage() {
                 'Severe heart conditions or recent cardiac events',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
                   {item}
                 </li>
               ))}
             </ul>
             <p className="text-page-muted mt-4 italic">
               Note: Normatec compression isn&apos;t the same as Manual Lymphatic Drainage. If you&apos;re recovering from surgery or managing lymphoedema, see Carlos&apos;s
-              {' '}<Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] underline">MLD page</Link>{' '}
+              {' '}<Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] underline">MLD page</Link>{' '}
               for the right service.
             </p>
           </section>
@@ -262,10 +262,10 @@ export default function CompressionTherapyPage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Infrared Hybrid Sauna
               </Link>
-              <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Manual Lymphatic Drainage (MLD)
               </Link>
             </div>

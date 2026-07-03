@@ -46,7 +46,7 @@ export default function GlowByDPartnerPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; 130 Junction Road, Archway</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; 130 Junction Road, Archway</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Glow By D and Range and Restore
           </h1>
@@ -90,7 +90,7 @@ export default function GlowByDPartnerPage() {
             <li><strong className="text-page">Hair restoration:</strong> Dermapen hair restoration and rejuvenation for thinning hair.</li>
           </ul>
           <p>
-            The full menu and pricing live on the <a href={`${PARTNER_URL}/pricelist`} target="_blank" rel="noopener" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8]">Glow By D pricelist</a>.
+            The full menu and pricing live on the <a href={`${PARTNER_URL}/pricelist`} target="_blank" rel="noopener" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a]">Glow By D pricelist</a>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why a shared building matters</h2>
@@ -141,16 +141,16 @@ export default function GlowByDPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; The Recovery Suite at Range and Restore
             </Link>
-            <Link href="/services/relaxation-restorative-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Relaxation Massage at Range and Restore
             </Link>
-            <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

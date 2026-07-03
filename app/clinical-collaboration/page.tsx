@@ -42,7 +42,7 @@ export default function ClinicalCollaborationPage() {
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Clinical Collaboration</h1>
-          <p className="mt-4 text-xl text-page-muted">Range and Restore &amp; <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a> – Assessment and Treatment Under One Roof</p>
+          <p className="mt-4 text-xl text-page-muted">Range and Restore &amp; <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a> – Assessment and Treatment Under One Roof</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function ClinicalCollaborationPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">A Unique Clinical Setting</h2>
             <p className="text-page-muted text-lg mb-4">
-              Range and Restore Sports Massage is based at 130 Junction Road, Archway, within the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a> — a private diagnostic ultrasound clinic led by GMC-registered doctors.
+              Range and Restore Sports Massage is based at 130 Junction Road, Archway, within the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a> — a private diagnostic ultrasound clinic led by GMC-registered doctors.
             </p>
             <p className="text-page-muted mb-4">
               This co-location creates a genuine opportunity for coordinated care between sports massage therapy and diagnostic imaging — something rarely available in a community setting. For clients who require both assessment and treatment, everything can be arranged within the same building, with clear communication between practitioners.
@@ -59,9 +59,9 @@ export default function ClinicalCollaborationPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">About <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a></h2>
+            <h2 className="text-2xl font-bold text-page mb-4">About <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a></h2>
             <p className="text-page-muted mb-4">
-              <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a> is a private diagnostic ultrasound clinic providing musculoskeletal (MSK) ultrasound imaging, pregnancy scans, and other diagnostic services. The clinic is led by GMC-registered doctors with specialist training in diagnostic imaging.
+              <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a> is a private diagnostic ultrasound clinic providing musculoskeletal (MSK) ultrasound imaging, pregnancy scans, and other diagnostic services. The clinic is led by GMC-registered doctors with specialist training in diagnostic imaging.
             </p>
             <p className="text-page-muted mb-4">
               MSK ultrasound is particularly useful for assessing soft tissue injuries that are difficult to diagnose from symptoms alone — including tendon tears, bursitis, muscle tears, joint effusions, and nerve compression. It provides real-time, dynamic imaging that can directly inform treatment decisions.
@@ -73,7 +73,7 @@ export default function ClinicalCollaborationPage() {
             <div className="space-y-4">
               <div className="bg-page-sage rounded-xl p-6">
                 <h3 className="font-bold text-page mb-2">Assessment-led referral</h3>
-                <p className="text-page-muted text-sm">If Carlos identifies during a massage assessment that imaging may be useful to clarify a diagnosis or rule out more serious pathology — for example, in cases of suspected tendon tear or persistent unexplained pain — he can discuss a referral to <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a>.</p>
+                <p className="text-page-muted text-sm">If Carlos identifies during a massage assessment that imaging may be useful to clarify a diagnosis or rule out more serious pathology — for example, in cases of suspected tendon tear or persistent unexplained pain — he can discuss a referral to <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>.</p>
               </div>
               <div className="bg-page-sage rounded-xl p-6">
                 <h3 className="font-bold text-page mb-2">Coordinated care</h3>
@@ -88,7 +88,7 @@ export default function ClinicalCollaborationPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Who is this relevant for?</h2>
-            <p className="text-page-muted mb-4">Clinical collaboration between Range and Restore and <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold">Reliable Scan</a> may be particularly relevant for:</p>
+            <p className="text-page-muted mb-4">Clinical collaboration between Range and Restore and <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a> may be particularly relevant for:</p>
             <ul className="space-y-2">
               {[
                 'Clients with persistent or unexplained soft tissue pain that has not responded to treatment',
@@ -98,7 +98,7 @@ export default function ClinicalCollaborationPage() {
                 'Anyone who has been advised to get an MSK scan by their GP or physiotherapist',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}

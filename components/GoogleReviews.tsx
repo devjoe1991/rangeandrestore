@@ -74,18 +74,47 @@ export function GoogleReviews() {
     scrollRef.current.scrollLeft = scrollLeft - walk
   }
 
+  const sectionRef = useRef<HTMLElement>(null)
+
+  // Defer the reviews fetch until the section is near the viewport so it never
+  // competes with the initial page load / LCP.
   useEffect(() => {
-    fetch('/api/reviews')
-      .then((r) => r.json())
-      .then((d) => {
-        setReviews(d.reviews ?? [])
-        setRating(d.rating ?? null)
-      })
-      .catch(() => {})
+    const el = sectionRef.current
+    if (!el) return
+
+    let done = false
+    const load = () => {
+      if (done) return
+      done = true
+      fetch('/api/reviews')
+        .then((r) => r.json())
+        .then((d) => {
+          setReviews(d.reviews ?? [])
+          setRating(d.rating ?? null)
+        })
+        .catch(() => {})
+    }
+
+    if (typeof IntersectionObserver === 'undefined') {
+      load()
+      return
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          load()
+          io.disconnect()
+        }
+      },
+      { rootMargin: '400px' },
+    )
+    io.observe(el)
+    return () => io.disconnect()
   }, [])
 
   return (
-    <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
+    <section ref={sectionRef} className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
         <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#1a2330] tracking-tight uppercase leading-none mb-8">
@@ -117,7 +146,7 @@ export function GoogleReviews() {
 
         <p className="text-[#1a3d3a]/90 text-sm sm:text-base font-bold mb-10">
           Based on verified reviews on{' '}
-          <a href={PLACE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-black hover:text-[#2ab4b8] transition-colors">
+          <a href={PLACE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-black hover:text-[#0f767a] transition-colors">
             Google
           </a>.
         </p>

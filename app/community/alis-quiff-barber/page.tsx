@@ -71,7 +71,7 @@ export default function AlisQuiffBarberPartnerPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; Archway &middot; Barbering and Men’s Self-Care</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; Archway &middot; Barbering and Men’s Self-Care</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Ali’s Quiff Barber and Range and Restore
           </h1>
@@ -122,22 +122,22 @@ export default function AlisQuiffBarberPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How Range and Restore supports men’s wellbeing</h2>
           <p>
-            For men juggling work, training, family life and everything else, the body picks up the slack. Tight shoulders, stiff lower backs, headaches from screen time, niggles from the gym, restless nights and a general low-grade tension that builds up over the week. Range and Restore offers assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium">advanced clinical massage</Link>, <Link href="/services/advanced-cupping-sports-deep-tissue" className="text-[#2ab4b8] hover:text-page font-medium">advanced cupping with deep tissue</Link>, the <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">Back and Neck Pain MOT</Link>, <Link href="/services/2-hour-pain-relief-massage" className="text-[#2ab4b8] hover:text-page font-medium">2-hour pain-relief sessions</Link>, <Link href="/services/relaxation-restorative-massage" className="text-[#2ab4b8] hover:text-page font-medium">relaxation and restorative massage</Link> and certified <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">Manual Lymphatic Drainage (MLD)</Link>. Every session begins with a proper assessment, so treatment is matched to what each client turns up with that day, rather than a generic protocol. The <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium">recovery suite</Link> (sauna and pneumatic compression) is also available to extend recovery between sessions.
+            For men juggling work, training, family life and everything else, the body picks up the slack. Tight shoulders, stiff lower backs, headaches from screen time, niggles from the gym, restless nights and a general low-grade tension that builds up over the week. Range and Restore offers assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link>, <Link href="/services/advanced-cupping-sports-deep-tissue" className="text-[#0f767a] hover:text-page font-medium">advanced cupping with deep tissue</Link>, the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back and Neck Pain MOT</Link>, <Link href="/services/2-hour-pain-relief-massage" className="text-[#0f767a] hover:text-page font-medium">2-hour pain-relief sessions</Link>, <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium">relaxation and restorative massage</Link> and certified <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">Manual Lymphatic Drainage (MLD)</Link>. Every session begins with a proper assessment, so treatment is matched to what each client turns up with that day, rather than a generic protocol. The <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">recovery suite</Link> (sauna and pneumatic compression) is also available to extend recovery between sessions.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">A natural Archway pairing: barber then bodywork</h2>
           <p>
-            A solid rhythm for men in Archway looks something like this. Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#2ab4b8] hover:text-page font-medium">Ali’s Quiff Barber</a> at 746 Holloway Road for a haircut, beard trim, hot towels and head massage. Walk fifteen minutes down to <Link href="/areas-served/archway-n19" className="text-[#2ab4b8] hover:text-page font-medium">130 Junction Road, N19 5LB</Link> for a sports massage, Back and Neck MOT or recovery session. Done in a single Archway afternoon. You leave the area looking better, moving better and feeling better, and it’s all within the N19 postcode.
+            A solid rhythm for men in Archway looks something like this. Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">Ali’s Quiff Barber</a> at 746 Holloway Road for a haircut, beard trim, hot towels and head massage. Walk fifteen minutes down to <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">130 Junction Road, N19 5LB</Link> for a sports massage, Back and Neck MOT or recovery session. Done in a single Archway afternoon. You leave the area looking better, moving better and feeling better, and it’s all within the N19 postcode.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Service areas: where Range and Restore covers</h2>
           <p>
-            The Range and Restore clinic at <Link href="/areas-served/archway-n19" className="text-[#2ab4b8] hover:text-page font-medium">130 Junction Road, Archway, London N19 5LB</Link> sits at the centre of a tight cluster of North London postcodes, which makes it easy to pair a grooming session at Ali’s on Holloway Road with sports massage, recovery or remedial work on the same day. Clients regularly come in from <strong>Archway (N19)</strong>, <strong>Upper Holloway (N19)</strong>, <Link href="/areas-served/tufnell-park-n7" className="text-[#2ab4b8] hover:text-page font-medium"><strong>Tufnell Park (N7 / N19)</strong></Link>, <strong>Holloway (N7)</strong>, <strong>Highgate (N6)</strong>, <strong>Crouch End (N8)</strong>, <strong>Hornsey (N8)</strong>, <strong>Kentish Town (NW5)</strong>, <strong>Dartmouth Park (NW5)</strong>, <strong>Gospel Oak (NW5)</strong>, <strong>Camden (NW1)</strong>, <strong>Hampstead (NW3)</strong>, <strong>Belsize Park (NW3)</strong>, <strong>Finsbury Park (N4)</strong>, <strong>Stroud Green (N4)</strong> and the wider <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium">North London service area</Link>. The clinic is three minutes’ walk from Archway tube (Northern Line) and on multiple bus routes.
+            The Range and Restore clinic at <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">130 Junction Road, Archway, London N19 5LB</Link> sits at the centre of a tight cluster of North London postcodes, which makes it easy to pair a grooming session at Ali’s on Holloway Road with sports massage, recovery or remedial work on the same day. Clients regularly come in from <strong>Archway (N19)</strong>, <strong>Upper Holloway (N19)</strong>, <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium"><strong>Tufnell Park (N7 / N19)</strong></Link>, <strong>Holloway (N7)</strong>, <strong>Highgate (N6)</strong>, <strong>Crouch End (N8)</strong>, <strong>Hornsey (N8)</strong>, <strong>Kentish Town (NW5)</strong>, <strong>Dartmouth Park (NW5)</strong>, <strong>Gospel Oak (NW5)</strong>, <strong>Camden (NW1)</strong>, <strong>Hampstead (NW3)</strong>, <strong>Belsize Park (NW3)</strong>, <strong>Finsbury Park (N4)</strong>, <strong>Stroud Green (N4)</strong> and the wider <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">North London service area</Link>. The clinic is three minutes’ walk from Archway tube (Northern Line) and on multiple bus routes.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Invest in yourself, inside and out</h2>
           <p>
-            Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#2ab4b8] hover:text-page font-medium">Ali’s Quiff Barber</a> (746 Holloway Road, Archway N19 3JF) for a haircut, beard trim and the full grooming experience. Then <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium">book in with Range and Restore</Link> for a sports massage, remedial therapy or recovery session at 130 Junction Road, N19 5LB. Two local businesses, one neighbourhood, one easy way to actually look after yourself.
+            Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">Ali’s Quiff Barber</a> (746 Holloway Road, Archway N19 3JF) for a haircut, beard trim and the full grooming experience. Then <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">book in with Range and Restore</Link> for a sports massage, remedial therapy or recovery session at 130 Junction Road, N19 5LB. Two local businesses, one neighbourhood, one easy way to actually look after yourself.
           </p>
         </div>
 
@@ -167,25 +167,25 @@ export default function AlisQuiffBarberPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports and deep tissue remedial therapy
             </Link>
-            <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Back and Neck Pain MOT
             </Link>
-            <Link href="/services/relaxation-restorative-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Relaxation and restorative massage
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery suite: sauna and compression
             </Link>
-            <Link href="/areas-served/archway-n19" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports massage in Archway N19
             </Link>
-            <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

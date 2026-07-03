@@ -47,7 +47,7 @@ export default function SportsMassageForRunnersPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage Helps Runners Before and After Races
           </h1>
@@ -66,7 +66,7 @@ export default function SportsMassageForRunnersPage() {
           </p>
 
           <p>
-            Running places enormous repetitive demand on the muscles, tendons, and connective tissues of the legs, hips, and lower back. Over time — particularly during peak training periods — this accumulation of stress can lead to tightness, imbalances, and injury. At <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Range and Restore Sports Massage in Archway, North London</Link>, sports massage for runners addresses these issues directly, keeping your body functioning at its best throughout the training cycle.
+            Running places enormous repetitive demand on the muscles, tendons, and connective tissues of the legs, hips, and lower back. Over time — particularly during peak training periods — this accumulation of stress can lead to tightness, imbalances, and injury. At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore Sports Massage in Archway, North London</Link>, sports massage for runners addresses these issues directly, keeping your body functioning at its best throughout the training cycle.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Before the race: preparation massage</h2>
@@ -116,7 +116,7 @@ export default function SportsMassageForRunnersPage() {
 
           <ul className="space-y-2 list-disc list-inside">
             <li>IT band tightness and iliotibial band syndrome (ITBS)</li>
-            <li><Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#2ab4b8] hover:text-page font-medium">Calf and Achilles tension</Link></li>
+            <li><Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Calf and Achilles tension</Link></li>
             <li>Hamstring tightness and strain</li>
             <li>Hip flexor restriction</li>
             <li>Plantar fasciitis</li>
@@ -126,7 +126,7 @@ export default function SportsMassageForRunnersPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What to expect from a runner&apos;s session in Archway</h2>
 
           <p>
-            Every session at Range and Restore in Archway begins with a brief assessment. For runners, this typically involves looking at your training history, recent mileage, any areas of concern, and your upcoming race schedule. This helps to shape a <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports massage treatment</Link> that is genuinely relevant to where you are in your training cycle, rather than a generic approach.
+            Every session at Range and Restore in Archway begins with a brief assessment. For runners, this typically involves looking at your training history, recent mileage, any areas of concern, and your upcoming race schedule. This helps to shape a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports massage treatment</Link> that is genuinely relevant to where you are in your training cycle, rather than a generic approach.
           </p>
 
           <p>
@@ -134,7 +134,7 @@ export default function SportsMassageForRunnersPage() {
           </p>
 
           <p>
-            Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydrated before and after your session</Link> will also help your muscles respond better to treatment and recover faster between runs.
+            Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated before and after your session</Link> will also help your muscles respond better to treatment and recover faster between runs.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage for runners near you in North London</h2>
@@ -181,13 +181,13 @@ export default function SportsMassageForRunnersPage() {
 
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+          <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
             → Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
           </Link>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

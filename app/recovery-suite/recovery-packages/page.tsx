@@ -136,7 +136,7 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
       {session.priceNote && (
         <p className={`text-xs font-bold mb-1 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>{session.priceNote}</p>
       )}
-      <p className={`text-sm font-bold mb-1 ${session.popular ? 'text-[#1a3d3a]' : 'text-[#2ab4b8]'}`}>{session.sequence}</p>
+      <p className={`text-sm font-bold mb-1 ${session.popular ? 'text-[#1a3d3a]' : 'text-[#0f767a]'}`}>{session.sequence}</p>
       {session.total && (
         <p className={`text-xs font-semibold mb-3 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>{session.total}</p>
       )}
@@ -149,7 +149,7 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
           className={`inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-colors ${
             session.popular
               ? 'bg-[#122a28] text-white hover:bg-[#1a3d3a]'
-              : 'bg-[#2ab4b8] text-white hover:bg-[#1a3d3a]'
+              : 'bg-[#0f767a] text-white hover:bg-[#1a3d3a]'
           }`}
         >
           Book Now
@@ -157,7 +157,7 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
         {session.detailHref && (
           <Link
             href={session.detailHref}
-            className={`text-xs font-black uppercase tracking-wide inline-flex items-center gap-1 ${session.popular ? 'text-[#122a28] hover:text-white' : 'text-[#2ab4b8] hover:text-page'}`}
+            className={`text-xs font-black uppercase tracking-wide inline-flex items-center gap-1 ${session.popular ? 'text-[#122a28] hover:text-white' : 'text-[#0f767a] hover:text-page'}`}
           >
             Read more <span aria-hidden="true">→</span>
           </Link>
@@ -176,7 +176,7 @@ export default function RecoverySessionsPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Recovery Sessions &middot; Archway London</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Recovery Sessions &middot; Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Recovery Sessions in Archway, North London
           </h1>
@@ -262,7 +262,7 @@ export default function RecoverySessionsPage() {
                 'Pay one price at checkout, no need to manage multiple bookings',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
                   {step}
                 </li>
               ))}
@@ -274,7 +274,7 @@ export default function RecoverySessionsPage() {
             <h2 className="text-2xl font-bold text-page mb-4">Already on a massage bundle?</h2>
             <p className="text-page-muted">
               Bundle clients can add a sauna session to any standalone massage at clinic pricing. Just speak to Carlos at the start of your next appointment and he&apos;ll add it on for you. See the
-              {' '}<Link href="/services/massage-bundles" className="text-[#2ab4b8] underline">Massage Bundles page</Link>{' '}
+              {' '}<Link href="/services/massage-bundles" className="text-[#0f767a] underline">Massage Bundles page</Link>{' '}
               for current bundle options.
             </p>
           </section>
@@ -304,10 +304,10 @@ export default function RecoverySessionsPage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 &rarr; Infrared Hybrid Sauna
               </Link>
-              <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 &rarr; Normatec Compression Therapy
               </Link>
             </div>

@@ -4,7 +4,7 @@
   --color-brand-green:        #1a3d3a;
   --color-brand-green-dark:   #122a28;
   --color-brand-green-mid:    #2a7a3a;
-  --color-brand-teal:         #2ab4b8;
+  --color-brand-teal:         #0f767a;
   --color-brand-teal-dark:    #1a9aa0;
   --color-brand-green-light:  #7dd94a;
   --color-brand-green-lime:   #B7D968;
@@ -16,7 +16,7 @@
   /* Shadow system */
   --shadow-card: 0 4px 24px rgba(26,61,58,0.07), 0 1px 4px rgba(26,61,58,0.05);
   --shadow-card-hover: 0 16px 48px rgba(26,61,58,0.14), 0 4px 12px rgba(26,61,58,0.09);
-  --shadow-glow-green: 0 0 0 2px #2ab4b8, 0 8px 32px rgba(26,61,58,0.2);
+  --shadow-glow-green: 0 0 0 2px #0f767a, 0 8px 32px rgba(26,61,58,0.2);
 }
 
 /* ── Light mode tokens ─────────────────────────────────────── */
@@ -86,7 +86,7 @@ input, select, textarea {
   color: var(--page-text);
   border-color: var(--input-border);
 }
-:focus-visible { outline: 2px solid #2ab4b8; outline-offset: 3px; border-radius: 3px; }
+:focus-visible { outline: 2px solid #0f767a; outline-offset: 3px; border-radius: 3px; }
 
 /* Brand selection highlight */
 ::selection { background: #7dd94a; color: #1a2330; }
@@ -102,9 +102,9 @@ input, select, textarea {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #2ab4b8;
+  color: #0f767a;
   padding-bottom: 0.35em;
-  border-bottom: 2px solid #2ab4b8;
+  border-bottom: 2px solid #0f767a;
 }
 
 /* ── Buttons ──────────────────────────────────────────────── */
@@ -134,7 +134,7 @@ input, select, textarea {
 }
 .btn-primary:hover {
   background: rgba(255, 255, 255, 0.95);
-  border-color: #2ab4b8;
+  border-color: #0f767a;
   color: #1a2330;
   box-shadow: 0 8px 24px rgba(42, 180, 184, 0.15);
   transform: translateY(-1px);
@@ -218,7 +218,7 @@ input, select, textarea {
 }
 
 /* Green / teal accent utilities */
-.text-teal { color: #2ab4b8; }
+.text-teal { color: #0f767a; }
 .bg-teal    { background-color: #1a3d3a; }
 
 /* ── Book now button (service cards) ─────────────────────── */
@@ -232,7 +232,7 @@ input, select, textarea {
 }
 .book-now-btn:hover {
   background: rgba(255, 255, 255, 1);
-  border-color: #2ab4b8;
+  border-color: #0f767a;
   color: #1a2330;
   box-shadow: 0 4px 12px rgba(42, 180, 184, 0.2);
   transform: translateY(-1px);
@@ -270,7 +270,7 @@ input, select, textarea {
 /* ── Custom Scrollbar (Mobile Visibility) ─────────────────── */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #2ab4b8 transparent;
+  scrollbar-color: #0f767a transparent;
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -283,7 +283,7 @@ input, select, textarea {
   background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #2ab4b8;
+  background: #0f767a;
   border-radius: 10px;
   height: 30px; /* Force a consistent thumb length */
 }

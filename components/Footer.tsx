@@ -21,7 +21,7 @@ export function Footer() {
               />
             </div>
             <address className="not-italic text-sm space-y-2 text-[#1a2330]/90 font-medium">
-              <p className="text-[#1a3d3a]/70 text-xs font-bold uppercase tracking-widest mb-3">
+              <p className="text-[#1a3d3a]/80 text-xs font-bold uppercase tracking-widest mb-3">
                 Sports Massage · Archway · London
               </p>
               <p>{BUSINESS.address}</p>
@@ -39,7 +39,7 @@ export function Footer() {
               </p>
               <p>
                 <a href={`tel:${BUSINESS.phoneTel}`}
-                  className="hover:text-[#2ab4b8] transition-colors inline-flex items-center gap-1.5 min-h-[44px] font-bold">
+                  className="hover:text-[#0f767a] transition-colors inline-flex items-center gap-1.5 min-h-[44px] font-bold">
                   <PhoneIcon /> {BUSINESS.phone}
                 </a>
               </p>
@@ -57,7 +57,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google Reviews"
-                className="text-[#1a3d3a]/70 hover:text-[#2ab4b8] transition-colors"
+                className="text-[#1a3d3a]/70 hover:text-[#0f767a] transition-colors"
               >
                 <GoogleIcon />
               </a>
@@ -66,7 +66,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-[#1a3d3a]/70 hover:text-[#2ab4b8] transition-colors"
+                className="text-[#1a3d3a]/70 hover:text-[#0f767a] transition-colors"
               >
                 <FacebookIcon />
               </a>
@@ -75,14 +75,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-[#1a3d3a]/70 hover:text-[#2ab4b8] transition-colors"
+                className="text-[#1a3d3a]/70 hover:text-[#0f767a] transition-colors"
               >
                 <InstagramIcon />
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
                 aria-label="Email us"
-                className="text-[#1a3d3a]/70 hover:text-[#2ab4b8] transition-colors"
+                className="text-[#1a3d3a]/70 hover:text-[#0f767a] transition-colors"
               >
                 <EmailIcon />
               </a>
@@ -103,7 +103,7 @@ export function Footer() {
                 ['Regular treatment at a better price', '/services/massage-bundles'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:text-[#2ab4b8] transition-colors min-h-[36px] flex items-center gap-2">
+                  <Link href={href} className="hover:text-[#0f767a] transition-colors min-h-[36px] flex items-center gap-2">
                     <span className="text-[#2a7a3a] font-bold text-xs">→</span>
                     {label}
                   </Link>
@@ -119,7 +119,7 @@ export function Footer() {
                   ['Recovery Packages',     '/recovery-suite/recovery-packages'],
                 ].map(([label, href]) => (
                   <li key={href}>
-                    <Link href={href} className="hover:text-[#2ab4b8] transition-colors min-h-[36px] flex items-center gap-2">
+                    <Link href={href} className="hover:text-[#0f767a] transition-colors min-h-[36px] flex items-center gap-2">
                       <span className="text-[#2a7a3a] font-bold text-xs">→</span>
                       {label}
                     </Link>
@@ -159,7 +159,7 @@ export function Footer() {
                 ['Clinical Collaboration', '/clinical-collaboration'],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link href={href} className="hover:text-[#2ab4b8] transition-colors min-h-[36px] flex items-center">
+                  <Link href={href} className="hover:text-[#0f767a] transition-colors min-h-[36px] flex items-center">
                     {label}
                   </Link>
                 </li>
@@ -169,11 +169,11 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#1a3d3a]/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#1a3d3a]/70 font-semibold">
+        <div className="mt-10 pt-6 border-t border-[#1a3d3a]/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#1a3d3a]/80 font-semibold">
           <p>© {new Date().getFullYear()} Range and Restore Sports Massage. All rights reserved.</p>
           <div className="flex gap-5">
-            <Link href="/privacy-policy"      className="hover:text-[#2ab4b8] transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-[#2ab4b8] transition-colors min-h-[36px] flex items-center">Terms &amp; Conditions</Link>
+            <Link href="/privacy-policy"      className="hover:text-[#0f767a] transition-colors min-h-[36px] flex items-center">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-[#0f767a] transition-colors min-h-[36px] flex items-center">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

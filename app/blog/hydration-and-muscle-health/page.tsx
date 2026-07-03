@@ -47,7 +47,7 @@ export default function HydrationMuscleHealthPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Hydration and Muscle Health – What Every Client Should Know
           </h1>
@@ -62,7 +62,7 @@ export default function HydrationMuscleHealthPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Most people know that drinking water is important. But fewer people understand just how directly hydration affects the health, function, and recovery of your muscles — and what that means for your <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">massage treatment</Link>.
+            Most people know that drinking water is important. But fewer people understand just how directly hydration affects the health, function, and recovery of your muscles — and what that means for your <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">massage treatment</Link>.
           </p>
 
           <p>
@@ -104,7 +104,7 @@ export default function HydrationMuscleHealthPage() {
           </p>
 
           <p>
-            For <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium">runners</Link>, cyclists, and active individuals, hydration is one of the simplest and most overlooked performance and injury prevention tools available. Conditions like <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#2ab4b8] hover:text-page font-medium">Achilles tendinitis</Link> and calf strains can be aggravated by chronic dehydration, making recovery longer and treatment less effective.
+            For <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, cyclists, and active individuals, hydration is one of the simplest and most overlooked performance and injury prevention tools available. Conditions like <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles tendinitis</Link> and calf strains can be aggravated by chronic dehydration, making recovery longer and treatment less effective.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Practical hydration guidelines</h2>
@@ -127,7 +127,7 @@ export default function HydrationMuscleHealthPage() {
           </p>
 
           <p>
-            If you have questions about what to do before or after your appointment, feel free to ask during your session. Every client is different, and personalised advice is always part of the treatment at <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Range and Restore in Archway, North London</Link>.
+            If you have questions about what to do before or after your appointment, feel free to ask during your session. Every client is different, and personalised advice is always part of the treatment at <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore in Archway, North London</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage and recovery advice near you in North London</h2>
@@ -175,17 +175,17 @@ export default function HydrationMuscleHealthPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

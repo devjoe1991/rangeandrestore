@@ -61,7 +61,7 @@ export function Header() {
                     {item.children.map((child) => (
                       <Link key={child.href} href={child.href}
                         className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-[#1a3d3a]/80 hover:bg-[#1a3d3a]/5 hover:text-[#1a3d3a] rounded-xl transition-colors font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2ab4b8] flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0f767a] flex-shrink-0" />
                         {child.label}
                       </Link>
                     ))}
@@ -76,11 +76,11 @@ export function Header() {
             <SearchTrigger className="text-[#1a3d3a]/80 hover:text-[#1a3d3a]" />
             <a href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call us on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-11 h-11 rounded-full bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all flex-shrink-0">
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all flex-shrink-0">
               <PhoneIcon />
             </a>
             <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full font-bold text-sm px-5 min-h-[44px] bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] hover:shadow-lg hover:-translate-y-[1px] transition-all whitespace-nowrap">
+              className="inline-flex items-center justify-center gap-2 rounded-full font-bold text-sm px-5 min-h-[44px] bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all whitespace-nowrap">
               Book Now
             </a>
           </div>
@@ -96,11 +96,11 @@ export function Header() {
         </Link>
         <SearchTrigger className="text-[#1a3d3a]/80 w-10 h-10 justify-center flex-shrink-0" />
         <a href={`tel:${BUSINESS.phoneTel}`} aria-label={`Call us on ${BUSINESS.phone}`}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white transition-all flex-shrink-0">
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white transition-all flex-shrink-0">
           <PhoneIcon />
         </a>
         <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white transition-all whitespace-nowrap">
+          className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white transition-all whitespace-nowrap">
           Book Now
         </a>
         <button onClick={() => setMobileOpen(!mobileOpen)}
@@ -129,7 +129,7 @@ export function Header() {
                   {item.children.map((child) => (
                     <Link key={child.href} href={child.href} onClick={() => setMobileOpen(false)}
                       className="flex items-center gap-2 text-sm text-[#7dd94a]/80 hover:text-white py-2.5 transition-colors min-h-[44px] font-medium">
-                      <span className="w-1 h-1 rounded-full bg-[#2ab4b8]" />
+                      <span className="w-1 h-1 rounded-full bg-[#0f767a]" />
                       {child.label}
                     </Link>
                   ))}
@@ -142,7 +142,7 @@ export function Header() {
         <div className="px-6 pb-10 pt-4 border-t border-white/10 flex flex-col gap-3">
           <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
-            className="inline-flex items-center justify-center rounded-full font-bold text-base py-4 bg-white/10 backdrop-blur-md border border-[#2ab4b8]/60 text-white hover:bg-white hover:text-[#1a2330] transition-colors w-full">
+            className="inline-flex items-center justify-center rounded-full font-bold text-base py-4 bg-white/10 backdrop-blur-md border border-[#0f767a]/60 text-white hover:bg-white hover:text-[#1a2330] transition-colors w-full">
             Book Your Session
           </a>
           <a href={`tel:${BUSINESS.phoneTel}`}

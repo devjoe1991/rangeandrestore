@@ -98,11 +98,11 @@ export default function AreasServedPage() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Based at 130 Junction Road, Archway, London N19 5LB, Range and Restore is led by <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Carlos Bonvicine</Link> — a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner. The clinic is a short walk from Archway tube station on the Northern Line, with bus routes connecting to all surrounding areas.
+            Based at 130 Junction Road, Archway, London N19 5LB, Range and Restore is led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link> — a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner. The clinic is a short walk from Archway tube station on the Northern Line, with bus routes connecting to all surrounding areas.
           </p>
 
           <p>
-            Whether you need <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium">advanced clinical massage</Link> for chronic conditions, <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">back and neck pain treatment</Link>, or <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">manual lymphatic drainage</Link>, the same assessment-led approach is available to clients across North London.
+            Whether you need <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> for chronic conditions, <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">back and neck pain treatment</Link>, or <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">manual lymphatic drainage</Link>, the same assessment-led approach is available to clients across North London.
           </p>
         </div>
 
@@ -110,12 +110,12 @@ export default function AreasServedPage() {
           {areas.map((area) => {
             const inner = (
               <>
-                <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+                <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
                 <div className="p-6">
                   <h2 className="text-xl font-bold text-page mb-2">{area.name}</h2>
                   <p className="text-page-muted text-sm">{area.description}</p>
                   {area.href && (
-                    <p className="mt-3 text-[#2ab4b8] font-semibold text-sm">View {area.name.split(',')[0]} page &rarr;</p>
+                    <p className="mt-3 text-[#0f767a] font-semibold text-sm">View {area.name.split(',')[0]} page &rarr;</p>
                   )}
                 </div>
               </>
@@ -162,16 +162,16 @@ export default function AreasServedPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Explore our services</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Advanced Clinical Massage
             </Link>
-            <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Back &amp; Neck Pain MOT
             </Link>
-            <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Contact &amp; Directions
             </Link>
           </div>

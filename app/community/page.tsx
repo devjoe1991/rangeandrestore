@@ -138,7 +138,7 @@ export default function CommunityPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Archway &middot; North London</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Archway &middot; North London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Our Archway Community
           </h1>
@@ -149,7 +149,7 @@ export default function CommunityPage() {
             Our hub on Junction Road is a place you can be one hundred percent confident in. Somewhere your body can rest, restore and recover properly. Local business owners talk about us, recommend us, and collaborate with us. We&apos;ve become a staple in the Archway and North London community, a household name deep rooted in the local bars, cafés, restaurants and studios that make this part of the city what it is.
           </p>
           <p className="text-lg text-page-muted font-medium">
-            If you&apos;re a local independent, please reach out. <Link href="/press" className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] font-semibold">Press, podcast and media enquiries have their own page</Link>.
+            If you&apos;re a local independent, please reach out. <Link href="/press" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Press, podcast and media enquiries have their own page</Link>.
           </p>
         </div>
       </div>

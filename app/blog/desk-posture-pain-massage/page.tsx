@@ -47,7 +47,7 @@ export default function DeskPosturePainMassagePage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Say Goodbye to Desk Posture Pain
           </h1>
@@ -66,7 +66,7 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            The good news is that desk-related postural pain responds exceptionally well to targeted <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">massage therapy and soft tissue treatment</Link>. At Range and Restore in Archway, North London, we see this every week — and help clients reverse it. Understanding why it develops in the first place makes it easier to address — and to prevent from returning.
+            The good news is that desk-related postural pain responds exceptionally well to targeted <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">massage therapy and soft tissue treatment</Link>. At Range and Restore in Archway, North London, we see this every week — and help clients reverse it. Understanding why it develops in the first place makes it easier to address — and to prevent from returning.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why sitting causes so much pain</h2>
@@ -128,7 +128,7 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            Alongside treatment, simple workplace adjustments — monitor height, chair position, regular movement breaks — make a significant difference to the rate of progress and the longevity of results. Keeping your body well <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">hydrated throughout the day</Link> also helps your muscles stay supple and responsive. Practical advice on these changes is always part of the conversation at Range and Restore in Archway.
+            Alongside treatment, simple workplace adjustments — monitor height, chair position, regular movement breaks — make a significant difference to the rate of progress and the longevity of results. Keeping your body well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated throughout the day</Link> also helps your muscles stay supple and responsive. Practical advice on these changes is always part of the conversation at Range and Restore in Archway.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">You don&apos;t have to accept the pain</h2>
@@ -186,17 +186,17 @@ export default function DeskPosturePainMassagePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Back &amp; Neck Pain MOT – Soft Tissue Remedial Massage Therapy
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Advanced Clinical Massage
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

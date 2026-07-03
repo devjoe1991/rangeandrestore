@@ -47,7 +47,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Local Guide</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Local Guide</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage in Archway, North London: A Local Guide
           </h1>
@@ -89,7 +89,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books sports massage in Archway</h2>
 
           <p>
-            Over the last few years at <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Range and Restore</Link>, the clients walking through the door have fallen into a few patterns:
+            Over the last few years at <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore</Link>, the clients walking through the door have fallen into a few patterns:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -97,7 +97,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
             <li><strong>Gym-goers and lifters</strong> from the gyms scattered around Archway, Tufnell Park and Holloway, dealing with the usual: tight shoulders, lower back tightness, sore quads after leg day.</li>
             <li><strong>Desk workers and commuters</strong> across Islington, Crouch End and Finsbury Park. Neck, shoulders, mid-back, sciatic-style discomfort from too much sitting and not enough moving.</li>
             <li><strong>Cyclists</strong> riding into work along the canal or up to Highgate, with tight hips and stiff lower backs from long hours in the saddle.</li>
-            <li><strong>Post-surgery and post-injury clients</strong> referred by physios or self-referring for recovery support, including <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">Manual Lymphatic Drainage</Link>.</li>
+            <li><strong>Post-surgery and post-injury clients</strong> referred by physios or self-referring for recovery support, including <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">Manual Lymphatic Drainage</Link>.</li>
             <li><strong>People who just feel rough</strong> and want someone to actually look at what&apos;s going on, not just push through a generic routine.</li>
           </ul>
 
@@ -140,8 +140,8 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <ul className="space-y-2 list-disc list-inside">
             <li>A runner from Tufnell Park training for the London Marathon, in monthly through the build-up and weekly in the final block. Calf and hamstring focus.</li>
             <li>A teacher from Crouch End with a stiff lower back from years of sitting and lifting. Once a fortnight, gradually lengthening to once a month as the back settled.</li>
-            <li>A desk worker from Holloway with chronic neck tension and tension headaches. Combination of sports massage and <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium">advanced clinical work</Link>, weekly to start, then monthly.</li>
-            <li>A post-surgery client from Highgate doing a course of <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">MLD</Link> for swelling and bruising in the weeks after their op.</li>
+            <li>A desk worker from Holloway with chronic neck tension and tension headaches. Combination of sports massage and <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical work</Link>, weekly to start, then monthly.</li>
+            <li>A post-surgery client from Highgate doing a course of <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">MLD</Link> for swelling and bruising in the weeks after their op.</li>
             <li>A weekend cyclist from Finsbury Park with tight hip flexors and a grumbly knee. 90-minute sessions, every six weeks.</li>
           </ul>
 
@@ -172,16 +172,16 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">More than just massage: the new Recovery Suite</h2>
 
           <p>
-            The clinic has just expanded. Alongside the hands-on sports massage and soft tissue work, there&apos;s now a full <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Suite</Link> in the same building. Two new pieces of recovery kit have been added to the room:
+            The clinic has just expanded. Alongside the hands-on sports massage and soft tissue work, there&apos;s now a full <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> in the same building. Two new pieces of recovery kit have been added to the room:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li>A <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium">two person Vidalux hybrid infrared sauna</Link>, with both traditional sauna heat and full spectrum infrared.</li>
-            <li><Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">Hyperice Normatec 3 Full Body</Link> pneumatic compression for the legs, hips and arms.</li>
+            <li>A <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">two person Vidalux hybrid infrared sauna</Link>, with both traditional sauna heat and full spectrum infrared.</li>
+            <li><Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">Hyperice Normatec 3 Full Body</Link> pneumatic compression for the legs, hips and arms.</li>
           </ul>
 
           <p>
-            That means for runners, gym-goers and anyone who takes recovery seriously, you can pair sports massage with sauna and compression in a single visit. The <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> bundle them together at a lower price than booking the parts separately. It&apos;s a proper recovery and wellness offering close to home, which is the bit most North London locals have been missing without going into the West End or Shoreditch.
+            That means for runners, gym-goers and anyone who takes recovery seriously, you can pair sports massage with sauna and compression in a single visit. The <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> bundle them together at a lower price than booking the parts separately. It&apos;s a proper recovery and wellness offering close to home, which is the bit most North London locals have been missing without going into the West End or Shoreditch.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Common questions from local clients</h2>
@@ -208,7 +208,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
 
           <p className="font-semibold text-page">Can I book online?</p>
           <p>
-            Yes. The clinic uses Jane App, so you can pick a time, see availability and book without needing to call. If you&apos;d rather have a chat first, the number&apos;s on the <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium">contact page</Link>.
+            Yes. The clinic uses Jane App, so you can pick a time, see availability and book without needing to call. If you&apos;d rather have a chat first, the number&apos;s on the <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">contact page</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">If you&apos;re local and you&apos;ve been putting it off</h2>
@@ -218,7 +218,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           </p>
 
           <p>
-            If you&apos;ve searched for &ldquo;sports massage near me&rdquo;, &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage therapist&rdquo; and ended up here, take it as a sign. Have a look at the <Link href="/services" className="text-[#2ab4b8] hover:text-page font-medium">services page</Link>, pick what fits, and get booked in. Your back will thank you.
+            If you&apos;ve searched for &ldquo;sports massage near me&rdquo;, &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage therapist&rdquo; and ended up here, take it as a sign. Have a look at the <Link href="/services" className="text-[#0f767a] hover:text-page font-medium">services page</Link>, pick what fits, and get booked in. Your back will thank you.
           </p>
         </div>
 
@@ -256,23 +256,23 @@ export default function SportsMassageArchwayLocalGuidePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery Suite: Sauna, Compression and Recovery Packages
             </Link>
-            <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Areas Served Across North London
             </Link>
-            <Link href="/blog/marathon-sports-massage-archway" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Marathon Massage in Archway: Pre and Post Race Recovery
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>

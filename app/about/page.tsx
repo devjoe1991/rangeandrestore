@@ -27,7 +27,7 @@ export default function AboutPage() {
               <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               Rated 5 Stars on Google
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-badge-teal text-page font-semibold px-3 py-1.5 rounded-full border border-[#2ab4b8]/30">BTEC Level 5 Qualified</span>
+            <span className="inline-flex items-center gap-1.5 bg-badge-teal text-page font-semibold px-3 py-1.5 rounded-full border border-[#0f767a]/30">BTEC Level 5 Qualified</span>
             <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Certified MLD Practitioner</span>
             <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Archway, N19</span>
           </div>
@@ -49,7 +49,7 @@ export default function AboutPage() {
               />
             </div>
             <h2 className="text-3xl font-bold text-page mb-2">Carlos Bonvicine</h2>
-            <p className="text-[#2ab4b8] font-semibold mb-1">BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist</p>
+            <p className="text-[#0f767a] font-semibold mb-1">BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist</p>
             <p className="text-page-muted font-medium mb-6 text-sm">Certified MLD Practitioner · Cupping Therapy · Fully Insured</p>
             <div className="space-y-4 text-page-muted text-lg">
               <p>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                   href={RELIABLE_SCAN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2ab4b8] underline decoration-[#2ab4b8]/40 hover:decoration-[#2ab4b8] transition-colors font-semibold"
+                  className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold"
                 >
                   Reliable Scan
                 </a>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 'Certified Cupping Therapy Practitioner',
               ].map((qual) => (
                 <div key={qual} className="flex items-start gap-2 text-page">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#2ab4b8' }} aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#0f767a' }} aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   <span className="font-medium text-sm leading-snug">{qual}</span>
@@ -107,7 +107,7 @@ export default function AboutPage() {
                   { title: 'Aftercare Advice', desc: 'You leave with practical advice and, where needed, movement and exercise recommendations.' },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-3">
-                    <span className="text-[#2ab4b8] font-bold text-xl leading-none mt-0.5">→</span>
+                    <span className="text-[#0f767a] font-bold text-xl leading-none mt-0.5">→</span>
                     <div>
                       <p className="font-semibold text-page">{item.title}</p>
                       <p className="text-page-muted text-sm">{item.desc}</p>

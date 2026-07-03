@@ -48,7 +48,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Range and Restore</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage and Soft Tissue Therapy Help You Perform, Recover and Stay Pain-Free
           </h1>
@@ -79,7 +79,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </p>
 
           <p>
-            At <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Range and Restore Sports Massage in Archway</Link>, North London, every treatment is built around one question: what does your body actually need right now? Not a script. Not a routine. A focused, assessment-led session designed to get you moving better and feeling stronger.
+            At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore Sports Massage in Archway</Link>, North London, every treatment is built around one question: what does your body actually need right now? Not a script. Not a routine. A focused, assessment-led session designed to get you moving better and feeling stronger.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who benefits from sports massage and soft tissue therapy?</h2>
@@ -103,7 +103,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage vs. soft tissue remedial therapy — what is the difference?</h2>
 
           <p>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">Sports massage</Link> targets performance: reducing muscle tension, improving recovery time, and preparing the body for the demands of training and competition. It is hands-on, direct, and focused on the muscles you use most.
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports massage</Link> targets performance: reducing muscle tension, improving recovery time, and preparing the body for the demands of training and competition. It is hands-on, direct, and focused on the muscles you use most.
           </p>
 
           <p>
@@ -180,7 +180,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Not training? You still need this.</h2>
 
           <p>
-            Some of the most dramatic results at Range and Restore come from clients who would never call themselves athletes. Desk workers with <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">back pain that has been building for years</Link>. Parents carrying toddlers and tension in equal measure. People who have just accepted that their body hurts — until they discover it does not have to.
+            Some of the most dramatic results at Range and Restore come from clients who would never call themselves athletes. Desk workers with <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">back pain that has been building for years</Link>. Parents carrying toddlers and tension in equal measure. People who have just accepted that their body hurts — until they discover it does not have to.
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -201,7 +201,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li><Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">Deep tissue massage</Link> — sustained pressure to release chronic tension in deeper muscle layers</li>
+            <li><Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Deep tissue massage</Link> — sustained pressure to release chronic tension in deeper muscle layers</li>
             <li>Sports-specific soft tissue techniques — targeted work for the demands of your sport</li>
             <li>Myofascial release — addressing restrictions in the fascial network that limit movement</li>
             <li>Trigger point therapy — deactivating focal points of pain and referral</li>
@@ -217,7 +217,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </p>
 
           <p>
-            Carlos Bonvicine is a Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist with advanced training in <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium">clinical massage</Link> and <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">manual lymphatic drainage</Link>. Every session begins with an assessment — understanding your history, your goals, and what your body is telling us — so treatment is always targeted and effective.
+            Carlos Bonvicine is a Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist with advanced training in <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">clinical massage</Link> and <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">manual lymphatic drainage</Link>. Every session begins with an assessment — understanding your history, your goals, and what your body is telling us — so treatment is always targeted and effective.
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -271,13 +271,13 @@ export default function SportsMassageSoftTissueTherapyPage() {
 
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related service</h3>
-          <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+          <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
             &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
           </Link>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>
