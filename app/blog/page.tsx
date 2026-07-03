@@ -11,6 +11,20 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'The Benefits of Sports Massage: What It Actually Does',
+    slug: 'sports-massage-benefits',
+    date: '3 July 2026',
+    excerpt: 'What does a sports massage actually do for you? The real benefits — easing muscle tension and pain, faster recovery, better mobility, injury prevention and stress relief — and who it helps (not just athletes). Archway, North London.',
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'How Much Does a Sports Massage Cost?',
+    slug: 'sports-massage-cost-prices',
+    date: '3 July 2026',
+    excerpt: 'How much is a sports massage in London? A clear guide to prices, what affects the cost, and how to pay less with the Community Tuesday Clinic and massage bundles. Archway, North London.',
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
     title: 'Muscle Knots and Trigger Points: How Massage Helps',
     slug: 'muscle-knots-trigger-point-massage-archway',
     date: '3 July 2026',
