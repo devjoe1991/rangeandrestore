@@ -127,6 +127,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/lower-back-pain-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/neck-pain-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/tension-headache-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/frozen-shoulder-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/plantar-fasciitis-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/hip-pain-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/blog/sports-recovery-archway`,
       lastModified: new Date('2026-07-03'),
       changeFrequency: 'monthly',
