@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Marathon Massage in Archway | Pre & Post London Marathon Recovery',
@@ -42,6 +42,35 @@ const articleSchema = {
   keywords: 'marathon massage Archway, London Marathon massage, pre marathon massage, post marathon recovery massage, marathon sports massage North London, marathon injury prevention massage',
 }
 
+// Problem-based FAQs — mirror the question-shaped searches people make around
+// marathon massage so the page is eligible for People Also Ask / FAQ rich
+// results and AI answers. Answers are grounded in the article content; keep the
+// two in sync when editing.
+const faqs = [
+  {
+    q: 'Should I get a sports massage before or after a marathon?',
+    a: 'Both have their place. A pre-marathon massage 3 to 7 days before race day releases the tension built up through months of training and restores range of motion so you arrive at the start line feeling loose rather than worked over. A post-marathon recovery massage within 24 to 72 hours of finishing helps flush metabolic waste, reduce soreness, and get you back to training faster. Which one you book depends on where you are in your marathon cycle.',
+  },
+  {
+    q: 'How long before race day should I book my marathon massage?',
+    a: 'The sweet spot is 3 to 7 days before the marathon. That gives your body time to absorb the treatment and settle, so you feel loose and ready on the day rather than sore and fatigued. A pre-marathon massage is not about going deep and stripping the muscles down — it is targeted preparation that releases training tension without destabilising the muscles.',
+  },
+  {
+    q: 'Will a massage the day before a marathon help or hurt?',
+    a: 'Leaving it that late is not ideal. A deep session too close to race day can leave you sore and flat when you need to be sharp, which is why the recommended window is 3 to 7 days out — enough time for your body to absorb the treatment and settle. If race day is nearly here, any pre-race work should be light and targeted rather than a deep, muscle-stripping session.',
+  },
+  {
+    q: 'Why do my legs feel so dead and sore after a marathon?',
+    a: 'After 26.2 miles your muscles are dealing with significant trauma — micro-tears in the muscle fibres, metabolic waste products pooling in overworked tissue, inflammation, and the cumulative impact of sustained eccentric loading over 3 to 5 hours of running. The calves, hamstrings, and hip flexors tighten and shorten under that load, which is why the legs feel dead and stiff. Resting alone will not fully clear it.',
+  },
+  {
+    q: 'How soon after a marathon should I get a recovery massage?',
+    a: 'A post-marathon recovery massage within 24 to 72 hours of finishing works best. In that window it accelerates the recovery your body is already trying to complete — flushing metabolic waste, reducing the severity and duration of delayed onset muscle soreness (DOMS), catching early signs of strain before they become chronic, and restoring normal muscle function and range of motion faster than rest alone.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 type PhotoData = { src: string; width: number; height: number }
 
 async function getMarathonPhotos(): Promise<PhotoData[]> {
@@ -64,6 +93,7 @@ export default async function MarathonSportsMassageArchwayPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -264,6 +294,19 @@ export default async function MarathonSportsMassageArchwayPage() {
             The clinic serves runners across N19, N7, N6, N4, N8, N1, NW1 and NW5, including Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. If you train on Hampstead Heath, Parkland Walk, Highgate Wood or Regent&apos;s Park, Range and Restore is the local fit for your pre-race build and post-race recovery.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">Marathon massage: common questions</h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">The marathon is not just 26.2 miles. It is everything you do before and after.</h2>

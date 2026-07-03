@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Runners Archway | Race Recovery',
@@ -39,11 +39,41 @@ const articleSchema = {
   keywords: 'sports massage runners, pre-race massage, post-race recovery massage, marathon training massage, running injury prevention, sports massage Archway London',
 }
 
+// Problem-based FAQs — mirror everyday runner search wording so the page is
+// eligible for People Also Ask / FAQ rich results and AI answers on the exact
+// queries people search when they have this problem. Answers are grounded in the
+// article content; keep the two in sync when editing.
+const faqs = [
+  {
+    q: 'Why are my legs so sore after running?',
+    a: 'Sore legs after running come from the repetitive demand running places on the muscles, tendons and connective tissues of the legs, hips and lower back. This is often felt as delayed onset muscle soreness (DOMS) from micro-tears in the muscle fibres and accumulated metabolic waste. A post-run recovery massage helps flush out those byproducts, reduce inflammation and significantly cut down DOMS, so your muscles recover faster between runs.',
+  },
+  {
+    q: 'Should runners get sports massage?',
+    a: 'Yes. Sports massage is one of the most effective tools you can add to a running programme, whether you are preparing for your first 5K or training for a full marathon. It supports performance, reduces injury risk and improves recovery. Regular maintenance massage through your training cycle also catches tightness and imbalances early, before they turn into the kind of overuse injuries that keep you off your feet.',
+  },
+  {
+    q: 'Is it better to get a massage before or after a run?',
+    a: 'Both have a role, and the timing changes what the massage does. A pre-race massage 2 to 5 days before race day stimulates circulation and eases residual tightness to help you feel ready, and any massage within 24 hours of a race should be kept light and stimulating. A post-race massage within 24 to 72 hours is deeper and more targeted, focusing on flushing metabolic byproducts, reducing inflammation and helping you recover.',
+  },
+  {
+    q: 'Why do I get tight calves and hamstrings from running?',
+    a: 'The cumulative effect of running, particularly when mileage is high, gradually tightens the muscles, compresses the joints and creates postural imbalances. The calves, hamstrings, quads, IT band and glutes take the brunt of this repetitive load. Monthly or fortnightly maintenance massage targets these areas with deep tissue work and assisted stretching to restore range of motion and resolve tightness before it becomes a problem.',
+  },
+  {
+    q: 'Can sports massage help with common running injuries?',
+    a: 'Yes. Maintenance massage through your training cycle addresses many common running-related issues, including IT band tightness and iliotibial band syndrome (ITBS), calf and Achilles tension, hamstring tightness and strain, hip flexor restriction, plantar fasciitis, and lower back and glute tension from your running gait. Identifying and resolving these early is what stops them developing into injuries that interrupt your training.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function SportsMassageForRunnersPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -147,6 +177,19 @@ export default function SportsMassageForRunnersPage() {
             That includes runners training on Hampstead Heath, Parkland Walk, Highgate Wood, Alexandra Palace, Regent&apos;s Park and the canal paths, from Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. Range and Restore is the North London option for race prep, post-race recovery and ongoing maintenance work.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">Sports massage for runners: common questions</h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Race stronger, recover faster</h2>

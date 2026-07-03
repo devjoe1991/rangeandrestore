@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Achilles Tendinitis: Does Sports Massage Help?',
@@ -39,11 +39,41 @@ const articleSchema = {
   keywords: 'Achilles tendinitis massage, Achilles tendon recovery, sports massage Archway, calf pain treatment, running injury massage London, soft tissue therapy Achilles',
 }
 
+// Problem-based FAQs — mirror the question-shaped headings above so the page is
+// eligible for People Also Ask / FAQ rich results and AI answers on the exact
+// queries people search when they have this problem. Answers are grounded in the
+// article content; keep the two in sync when editing.
+const faqs = [
+  {
+    q: 'Does sports massage help Achilles tendinitis?',
+    a: 'Yes. Sports massage and soft tissue therapy support Achilles tendinitis recovery by releasing the tight calf muscles (gastrocnemius and soleus) that place excessive tension on the tendon, improving circulation to the slow-healing tendon, and addressing the wider movement patterns driving the overload. The acutely inflamed tendon itself is not worked directly.',
+  },
+  {
+    q: 'Should you massage an inflamed Achilles tendon directly?',
+    a: 'No. Direct work on an acutely inflamed Achilles tendon should be avoided. Effective treatment works the surrounding calf and lower-leg muscles and fascia, which is where much of the excess tension on the tendon comes from.',
+  },
+  {
+    q: 'How many sports massage sessions does Achilles tendinitis need?',
+    a: "It varies with severity and how long you've had it. Mild to moderate cases caught early often respond well within 3–6 sessions, while longer-standing or severe cases may need ongoing management over several months alongside loading exercises.",
+  },
+  {
+    q: 'What causes Achilles tendinitis?',
+    a: 'Common causes include a sudden increase in training load or mileage, inadequate recovery between sessions, tight calf muscles, weak hip and glute muscles that alter running mechanics, poor footwear or a change of running surface, and returning to activity too quickly after a period of rest.',
+  },
+  {
+    q: 'When should I see a doctor instead of booking a massage?',
+    a: 'If your pain is severe, has suddenly worsened, or you suspect a partial or complete Achilles rupture, see a sports medicine physician or physiotherapist first. Range and Restore works alongside Reliable Scan, a private diagnostic ultrasound clinic in the same building in Archway, if imaging is needed.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function AchillesTendinitisPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -147,6 +177,21 @@ export default function AchillesTendinitisPage() {
             That covers Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Stroud Green, Muswell Hill, Islington, Camden, Kentish Town, Belsize Park and the wider North London catchment. Range and Restore is the local option for runners and active clients across all of those postcodes who do not want to trek into central London for proper hands-on Achilles treatment.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">
+            Achilles tendinitis: common questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Don&apos;t let Achilles pain hold you back</h2>

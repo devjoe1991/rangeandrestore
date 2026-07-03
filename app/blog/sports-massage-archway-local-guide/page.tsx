@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Archway, North London | A Local Guide',
@@ -39,11 +39,40 @@ const articleSchema = {
   keywords: 'sports massage Archway, sports massage North London, deep tissue sports massage therapist Archway, sports massage near me N19, Tufnell Park sports massage, Holloway sports massage, Highgate sports massage, Finsbury Park sports massage, Crouch End sports massage',
 }
 
+// Problem-based FAQs — everyday British search wording, answers grounded strictly
+// in this article so the page is eligible for People Also Ask / FAQ rich results.
+// Keep the visible Q&A block below in sync with these strings.
+const faqs = [
+  {
+    q: "What is a sports massage and who is it for?",
+    a: "Sports massage isn't spa massage. It's an assessment-led, hands-on treatment built around how your body actually moves. The session starts with a few questions and a quick look at your posture and range of movement, then targets the muscles, fascia and soft tissue causing problems. It suits everyone from runners and lifters to desk workers and commuters across Archway and North London, because the principles are the same whatever your body's doing.",
+  },
+  {
+    q: "Does a sports massage hurt?",
+    a: "Sometimes a session is firm, but it shouldn't be unbearable. The depth of pressure is matched to your body and your goals, and your therapist checks in throughout to keep it effective without being miserable. The next 24 hours can feel like you've done a hard workout. That's normal and it passes.",
+  },
+  {
+    q: "How often should I get a sports massage?",
+    a: "It depends on what you're dealing with. For an acute issue, weekly to start then easing off tends to work well. For general maintenance, once a month is plenty. During a heavy training cycle, fortnightly suits most people. You'll work out the right rhythm together at your first session.",
+  },
+  {
+    q: "Do I need a referral to book a sports massage in Archway?",
+    a: "No. You can book directly, either online through Jane App or by giving the clinic a call first. If you're working with a physio or a GP and want your therapist to coordinate with them, that's easy to arrange.",
+  },
+  {
+    q: "What should I wear for a sports massage?",
+    a: "Whatever's comfortable. Loose kit works fine, and most people change down to underwear or shorts. Towels are provided and you'll always be properly covered during the session.",
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function SportsMassageArchwayLocalGuidePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -184,33 +213,6 @@ export default function SportsMassageArchwayLocalGuidePage() {
             That means for runners, gym-goers and anyone who takes recovery seriously, you can pair sports massage with sauna and compression in a single visit. The <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> bundle them together at a lower price than booking the parts separately. It&apos;s a proper recovery and wellness offering close to home, which is the bit most North London locals have been missing without going into the West End or Shoreditch.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Common questions from local clients</h2>
-
-          <p className="font-semibold text-page">How often should I come?</p>
-          <p>
-            Depends on what you&apos;re dealing with. Acute issue? Weekly to start, then ease off. General maintenance? Once a month is plenty. Heavy training cycle? Fortnightly. We&apos;ll work it out together at the first session.
-          </p>
-
-          <p className="font-semibold text-page">Do I need a referral?</p>
-          <p>
-            No. You can book directly. If you&apos;re working with a physio or a GP and want me to coordinate with them, that&apos;s easy to arrange.
-          </p>
-
-          <p className="font-semibold text-page">Will it hurt?</p>
-          <p>
-            Sometimes a session is firm. It shouldn&apos;t be unbearable. I work to a level that&apos;s effective without being miserable, and I check in throughout. The next 24 hours can feel like you&apos;ve done a hard workout. That&apos;s normal and it passes.
-          </p>
-
-          <p className="font-semibold text-page">What should I wear?</p>
-          <p>
-            Whatever&apos;s comfortable. Loose kit works fine. Most people change down to underwear or shorts. Towels are provided and you&apos;ll always be properly covered during the session.
-          </p>
-
-          <p className="font-semibold text-page">Can I book online?</p>
-          <p>
-            Yes. The clinic uses Jane App, so you can pick a time, see availability and book without needing to call. If you&apos;d rather have a chat first, the number&apos;s on the <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">contact page</Link>.
-          </p>
-
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">If you&apos;re local and you&apos;ve been putting it off</h2>
 
           <p>
@@ -221,6 +223,19 @@ export default function SportsMassageArchwayLocalGuidePage() {
             If you&apos;ve searched for &ldquo;sports massage near me&rdquo;, &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage therapist&rdquo; and ended up here, take it as a sign. Have a look at the <Link href="/services" className="text-[#0f767a] hover:text-page font-medium">services page</Link>, pick what fits, and get booked in. Your back will thank you.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">Sports massage in Archway: common questions</h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Sports massage in Archway, two minutes from the tube</h2>

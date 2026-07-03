@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Office Workers in Archway | Desk Pain Relief',
@@ -50,11 +50,40 @@ const articleSchema = {
   keywords: 'office worker massage Archway, desk job massage North London, commuter massage London, sports massage office workers, remedial massage N19, soft tissue therapy Archway, desk pain relief London',
 }
 
+// Problem-based FAQs — everyday British search wording that mirrors what desk
+// workers type when they have the ache. Answers are grounded strictly in the
+// article content above; keep the two in sync when editing.
+const faqs = [
+  {
+    q: "Can massage help back and neck pain from a desk job?",
+    a: "Yes. Sports massage and soft tissue remedial therapy release the muscle tension that builds up in the neck, shoulders, back, hips and chest from sitting at a desk, improve your posture by balancing tight and weakened areas, and reduce the daily pain and discomfort that accumulates over the working week. The aim is to address the root cause of the pattern, not just the symptoms at the surface.",
+  },
+  {
+    q: "Why does sitting at a desk all day give me back pain?",
+    a: "The body is not designed for sustained static postures. When you sit for hours leaning slightly toward a monitor, the hip flexors shorten from continuous hip flexion and the glutes become inhibited, which leaves the lower back to do their work. Over time that creates a self-reinforcing pattern where tight muscles pull joints out of alignment and weak muscles fail to hold them in place.",
+  },
+  {
+    q: "How do I get rid of a stiff neck from working at a computer?",
+    a: "Working at a computer tends to push the neck forward, loading the upper traps and the muscles at the base of the skull, which is where a lot of tension and even tension headaches come from. Trigger point therapy releases the specific knotted areas that refer pain into the head and shoulders, while deep tissue work and assisted stretching help unwind the forward head posture behind a stiff neck.",
+  },
+  {
+    q: "Can working from home give you bad posture?",
+    a: "It can. Long hours at a desk, rounded shoulders rolling inward toward the keyboard, and evenings of late-night email on a laptop at the kitchen table all compound the same pattern — a rounding mid-back, tight chest and forward-drifting neck. Assessment-led treatment works to improve posture and alignment by releasing the tight areas and restoring mobility through the thoracic spine, hips and shoulders.",
+  },
+  {
+    q: "How often should I get a massage if I sit at a desk all day?",
+    a: "For office workers with a daily commute on top, regular treatment roughly every three to four weeks through busy periods keeps the tension from embedding, catches problem areas before they become injuries, and keeps you moving freely through the working day. Staying well hydrated alongside treatment helps the tissue stay supple and responsive.",
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function OfficeWorkerMassageArchwayPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -231,6 +260,19 @@ export default function OfficeWorkerMassageArchwayPage() {
             That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Office workers and commuters across all those postcodes use Range and Restore as the proper local option for posture, back and neck work, instead of generic spa or chain bookings.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">Desk-job aches: common questions</h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to undo the damage of desk work?</h2>

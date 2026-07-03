@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Archway London | Injury Recovery & Performance Therapy',
@@ -40,11 +40,41 @@ const articleSchema = {
   keywords: 'sports massage Archway, soft tissue therapy London, sports massage North London, injury recovery massage, running recovery massage, cyclist massage London, deep tissue massage Archway',
 }
 
+// Problem-based FAQs — mirror the question-shaped headings above so the page is
+// eligible for People Also Ask / FAQ rich results and AI answers on the exact
+// queries people search. Answers are grounded in the article content; keep the
+// two in sync when editing.
+const faqs = [
+  {
+    q: 'What is soft tissue remedial therapy?',
+    a: 'Soft tissue remedial therapy is hands-on treatment that looks beyond the area that hurts to work out why it hurts. Rather than just treating the symptom, it assesses the whole picture and treats the root cause — a painful shoulder might actually start in the thoracic spine, or a tight IT band might come from weak glutes. At Range and Restore in Archway it is combined with sports massage in a single, assessment-led session.',
+  },
+  {
+    q: 'What is the difference between sports massage and soft tissue remedial therapy?',
+    a: 'Sports massage targets performance — reducing muscle tension, improving recovery time and preparing the body for the demands of training and competition, with direct hands-on work on the muscles you use most. Soft tissue remedial therapy goes deeper, identifying why an area hurts and treating the root cause rather than just the symptom. At Range and Restore both approaches are combined into one treatment, so you get immediate relief alongside longer-term correction.',
+  },
+  {
+    q: 'Do I need to be an athlete or injured to have sports massage?',
+    a: 'No. Despite the name, you do not need to be an athlete and you do not need to be injured. Sports massage and soft tissue therapy work for anyone whose body is under load, whether from training or from daily life — runners, cyclists and gym-goers, but also office workers carrying tension in the neck and shoulders, and anyone living with persistent pain or restricted movement. If something hurts, feels tight or stops you doing what you want to do, it is for you.',
+  },
+  {
+    q: 'Can soft tissue therapy help with back pain and everyday tension?',
+    a: 'Yes. Some of the most dramatic results come from clients who would never call themselves athletes. It can help with persistent back pain from prolonged sitting, neck and shoulder tension that no amount of stretching resolves, stress-driven tightness through the jaw, chest and upper back, and reduced mobility that makes everyday movement harder than it should be. If your body is under stress — from a barbell or a keyboard — soft tissue therapy can help.',
+  },
+  {
+    q: 'How is it different from a relaxing spa massage?',
+    a: 'Range and Restore is not a spa. It is a clinical sports massage practice in Archway built on assessment, expertise and results. Every session begins with an assessment — understanding your history, your goals and what your body is telling us — so treatment is always targeted at the cause of the problem rather than simply relaxing you for an hour.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function SportsMassageSoftTissueTherapyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -237,6 +267,21 @@ export default function SportsMassageSoftTissueTherapyPage() {
             That includes runners, cyclists, gym-goers, lifters, office workers, commuters and post-surgery clients from Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. If you live, work or train in North London and you want assessment-led sports massage and soft tissue remedial therapy, Range and Restore is the clinic.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">
+            Soft tissue therapy: common questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to move better and feel stronger?</h2>
