@@ -11,6 +11,20 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Muscle Knots and Trigger Points: How Massage Helps',
+    slug: 'muscle-knots-trigger-point-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Knots in your shoulders or tight, tender spots that keep coming back? How trigger point therapy, deep tissue and myofascial release get rid of muscle knots — and stop them returning. Archway, North London.',
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'Stress Relief Massage: Ease Tension and Switch Off',
+    slug: 'stress-relief-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Stressed, wound up or struggling to switch off? How a stress-relief massage calms the nervous system, releases the tension you hold in your neck and shoulders, and helps you actually relax. Archway, North London.',
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
     title: 'Lower Back Pain: How Massage Can Help',
     slug: 'lower-back-pain-massage-archway',
     date: '3 July 2026',
