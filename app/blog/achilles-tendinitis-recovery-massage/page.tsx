@@ -4,8 +4,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Achilles Tendinitis: Does Sports Massage Help?',
-  description: 'How sports massage helps Achilles tendinitis — what to expect, technique, recovery timeline, when to combine with rest or strengthening.',
+  title: 'Does Massage Help Achilles Tendinitis? A Therapist Explains',
+  description: "Does massage help Achilles tendinitis? Yes — here's how sports massage eases the tight calf muscles behind the pain, whether it's safe, how long it takes to heal, and when to see a doctor. Archway, North London.",
   path: '/blog/achilles-tendinitis-recovery-massage',
   author: true,
 })
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-02-01',
-  dateModified: '2026-03-26',
+  dateModified: '2026-07-03',
   url: 'https://rangeandrestore.co.uk/blog/achilles-tendinitis-recovery-massage',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/achilles-tendinitis-recovery-massage',
   keywords: 'Achilles tendinitis massage, Achilles tendon recovery, sports massage Archway, calf pain treatment, running injury massage London, soft tissue therapy Achilles',
@@ -63,6 +63,22 @@ const faqs = [
   {
     q: 'When should I see a doctor instead of booking a massage?',
     a: 'If your pain is severe, has suddenly worsened, or you suspect a partial or complete Achilles rupture, see a sports medicine physician or physiotherapist first. Range and Restore works alongside Reliable Scan, a private diagnostic ultrasound clinic in the same building in Archway, if imaging is needed.',
+  },
+  {
+    q: 'Can massage make Achilles tendinitis worse?',
+    a: "Done properly, no. A trained therapist avoids heavy, direct pressure on the acutely inflamed tendon and works the surrounding calf and lower-leg muscles instead. Aggressive prodding of an angry tendon can aggravate it, which is exactly why assessment-led treatment and the right level of pressure matter.",
+  },
+  {
+    q: 'Can you massage your Achilles tendon at home?',
+    a: "You can gently self-massage and stretch the calf muscles (gastrocnemius and soleus) above the tendon — with your hands, a massage ball or a foam roller — which helps reduce the tension pulling on the Achilles. Avoid digging directly into the sore tendon itself, especially when it is inflamed.",
+  },
+  {
+    q: 'How long does Achilles tendinitis take to heal?',
+    a: "It depends on severity and how early it is caught. Mild cases managed well can settle within a few weeks; longer-standing or degenerative cases (tendinopathy) often take a few months and need consistent loading exercises alongside hands-on treatment. Tendons heal slowly because they have a relatively poor blood supply.",
+  },
+  {
+    q: 'Is it Achilles tendinitis or tendinopathy?',
+    a: "\"Tendinitis\" implies active inflammation and tends to describe recent, acute cases; \"tendinopathy\" describes the longer-standing degenerative changes seen in persistent cases. The hands-on approach is similar — release the calf, manage load, and build tendon capacity with exercise — but longer-standing cases usually take more time.",
   },
 ]
 
@@ -157,6 +173,24 @@ export default function AchillesTendinitisPage() {
             Between sessions, relative rest — reducing running volume without necessarily stopping entirely — combined with appropriate loading exercises (typically eccentric calf work, prescribed by a physiotherapist or sports rehab specialist) is usually recommended. Maintaining good <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydration</Link> also supports tendon recovery. At Range and Restore in Archway, advice on what to do between sessions is always part of the treatment.
           </p>
 
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Can massage make Achilles tendinitis worse?</h2>
+
+          <p>
+            This is one of the most common worries — and the answer is that, done properly, massage should not make Achilles tendinitis worse. The key is technique. A trained therapist avoids heavy, direct pressure on the acutely inflamed tendon and instead works the surrounding calf and lower-leg muscles, where much of the excess tension comes from. Aggressive prodding of an angry tendon can aggravate it, which is exactly why assessment-led treatment and the right level of pressure matter.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Can you massage your Achilles at home?</h2>
+
+          <p>
+            Between sessions, gentle self-care can help. You can massage and stretch the calf muscles above the tendon — with your hands, a <Link href="/blog/muscle-knots-trigger-point-massage-archway" className="text-[#0f767a] hover:text-page font-medium">massage ball or foam roller</Link> — to reduce the tension pulling on the Achilles. What you should not do is dig directly into the sore tendon itself, particularly when it is inflamed. Pair this with the loading exercises your therapist or physio recommends, and keep your <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydration</Link> up.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">How long does Achilles tendinitis take to heal?</h2>
+
+          <p>
+            There is no single answer, because it depends on how severe the problem is and how early you catch it. A mild, recently developed case that is managed well — reducing the aggravating load, releasing the calf, and doing the right exercises — can settle within a few weeks. Longer-standing or degenerative cases (often called Achilles tendinopathy) commonly take a few months of consistent work. Tendons are slow healers because they have a relatively poor blood supply, so patience and consistency beat rushing back. The same principles apply to related lower-leg problems like <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium">shin splints</Link> and <Link href="/blog/plantar-fasciitis-massage-archway" className="text-[#0f767a] hover:text-page font-medium">plantar fasciitis</Link>.
+          </p>
+
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek additional help</h2>
 
           <p>
@@ -232,6 +266,12 @@ export default function AchillesTendinitisPage() {
             </Link>
             <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Sports Massage Helps Runners Before and After Races
+            </Link>
+            <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Shin Splints: How Sports Massage Helps
+            </Link>
+            <Link href="/blog/plantar-fasciitis-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Plantar Fasciitis and Heel Pain: How Massage Helps
             </Link>
           </div>
         </div>
