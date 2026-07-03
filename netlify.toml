@@ -150,16 +150,12 @@
   to = "/services/massage-bundles"
   status = 301
 
-# Trailing-slash duplicate of legal pages
-[[redirects]]
-  from = "/terms-and-conditions/"
-  to = "/terms-and-conditions"
-  status = 301
-
-[[redirects]]
-  from = "/privacy-policy/"
-  to = "/privacy-policy"
-  status = 301
+# NOTE: Netlify matches redirect `from` paths with and without a trailing slash,
+# so explicit `/privacy-policy/` -> `/privacy-policy` rules also match
+# `/privacy-policy` and 301-redirect it to itself, causing ERR_TOO_MANY_REDIRECTS
+# (this broke the privacy-policy and terms pages, including Next.js RSC prefetch
+# requests). Netlify already normalises trailing slashes, so these rules were both
+# redundant and harmful and have been removed.
 
 # Legacy blog category query-string URL
 [[redirects]]

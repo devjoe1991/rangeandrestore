@@ -24,10 +24,35 @@ function buildSrc(width: number) {
 export function FacebookFeed() {
   const wrapRef = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState<number | null>(null)
+  // Defer loading the (~600KB) Facebook plugin until the feed is near the
+  // viewport, so it never competes with the initial page load / LCP.
+  const [inView, setInView] = useState(false)
 
   useEffect(() => {
     const el = wrapRef.current
-    if (!el) return
+    if (!el || inView) return
+
+    if (typeof IntersectionObserver === 'undefined') {
+      setInView(true)
+      return
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setInView(true)
+          io.disconnect()
+        }
+      },
+      { rootMargin: '400px' },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [inView])
+
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el || !inView) return
 
     const measure = () => {
       const w = Math.round(el.clientWidth)
@@ -39,7 +64,7 @@ export function FacebookFeed() {
     const ro = new ResizeObserver(measure)
     ro.observe(el)
     return () => ro.disconnect()
-  }, [])
+  }, [inView])
 
   return (
     <section className="section bg-page-alt" aria-labelledby="social-heading">
@@ -49,7 +74,7 @@ export function FacebookFeed() {
           <h2 id="social-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight">
             Follow us on Facebook
           </h2>
-          <p className="mt-2 text-page-muted opacity-70 text-sm max-w-md mx-auto">
+          <p className="mt-2 text-page-muted text-sm max-w-md mx-auto">
             Treatment tips, clinic news and updates from Range and Restore in Archway, North London.
           </p>
         </div>
@@ -60,9 +85,10 @@ export function FacebookFeed() {
             className="rounded-2xl overflow-hidden shadow-md w-full max-w-[500px] bg-white"
             style={{ height: 600 }}
           >
-            {width !== null && (
+            {inView && width !== null && (
               <iframe
                 key={width}
+                loading="lazy"
                 src={buildSrc(width)}
                 width={width}
                 height={600}

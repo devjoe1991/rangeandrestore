@@ -68,10 +68,10 @@ export default function SocialsPage() {
               className="group rounded-[20px] overflow-hidden bg-card shadow-sm card-lift flex flex-col"
               style={{ border: '2px solid #1a3d3a' }}
             >
-              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
               <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#1a3d3a]/10 text-[#1a3d3a] group-hover:bg-[#2ab4b8] group-hover:text-white transition-colors">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#1a3d3a]/10 text-[#1a3d3a] group-hover:bg-[#0f767a] group-hover:text-white transition-colors">
                     <Icon />
                   </span>
                   <div>
@@ -80,7 +80,7 @@ export default function SocialsPage() {
                   </div>
                 </div>
                 <p className="text-page-muted text-sm leading-relaxed flex-1">{description}</p>
-                <span className="text-[#1a3d3a] text-xs font-black uppercase tracking-wide min-h-[24px] flex items-center gap-2 group-hover:text-[#2ab4b8] transition-colors">
+                <span className="text-[#1a3d3a] text-xs font-black uppercase tracking-wide min-h-[24px] flex items-center gap-2 group-hover:text-[#0f767a] transition-colors">
                   Visit {name} <span aria-hidden="true">→</span>
                 </span>
               </div>
@@ -102,10 +102,10 @@ export default function SocialsPage() {
             See what we share online, then come in for an assessment-led treatment with Carlos.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all" />
+            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
             <Link
               href="/contact"
-              className="btn bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all"
+              className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all"
             >
               Contact the clinic
             </Link>

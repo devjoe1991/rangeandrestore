@@ -62,7 +62,7 @@ export default function PrivateGpSurgeryPartnerPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; North London &middot; Private GP</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; North London &middot; Private GP</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Private GP Surgery and Range and Restore
           </h1>
@@ -88,7 +88,7 @@ export default function PrivateGpSurgeryPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">A collaboration built on the same values</h2>
           <p>
-            No single pair of hands fixes everything, and that isn&apos;t a weakness in any one service, it&apos;s just how bodies work. Some things are muscular and respond beautifully to hands-on soft tissue work and recovery. Some are medical, and need the diagnostic eye of a registered doctor who can assess, prescribe, refer and investigate. The best outcome for a client is usually the right practitioner at the right moment, with someone trusted to hand you over to when you need it. That&apos;s the whole reason Range and Restore Sports Massage and <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#2ab4b8] hover:text-page font-medium">Private GP Surgery</a> now work together.
+            No single pair of hands fixes everything, and that isn&apos;t a weakness in any one service, it&apos;s just how bodies work. Some things are muscular and respond beautifully to hands-on soft tissue work and recovery. Some are medical, and need the diagnostic eye of a registered doctor who can assess, prescribe, refer and investigate. The best outcome for a client is usually the right practitioner at the right moment, with someone trusted to hand you over to when you need it. That&apos;s the whole reason Range and Restore Sports Massage and <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">Private GP Surgery</a> now work together.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Dr Ali Mahmood and Private GP Surgery</h2>
@@ -118,7 +118,7 @@ export default function PrivateGpSurgeryPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we work together</h2>
           <p>
-            Range and Restore and Private GP Surgery aren&apos;t competing for the same client. We sit either side of the same goal. A private GP brings a registered, diagnostic, whole-body approach, including prescribing, referrals, investigations and mental health support. Sports massage and soft tissue therapy bring hands-on release, improved range of movement, and recovery that keeps the body moving well between treatments. Put them side by side and the gaps close. Someone arrives at Range and Restore with stubborn pain; most of the time assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue massage</Link> handles it, but when the picture suggests something medical, we can point them straight to Dr Ali. And it works the other way too. A patient he has assessed and cleared can come to us for ongoing soft tissue work and recovery, so the gains hold.
+            Range and Restore and Private GP Surgery aren&apos;t competing for the same client. We sit either side of the same goal. A private GP brings a registered, diagnostic, whole-body approach, including prescribing, referrals, investigations and mental health support. Sports massage and soft tissue therapy bring hands-on release, improved range of movement, and recovery that keeps the body moving well between treatments. Put them side by side and the gaps close. Someone arrives at Range and Restore with stubborn pain; most of the time assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> handles it, but when the picture suggests something medical, we can point them straight to Dr Ali. And it works the other way too. A patient he has assessed and cleared can come to us for ongoing soft tissue work and recovery, so the gains hold.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a GP, when to book a sports massage</h2>
@@ -128,7 +128,7 @@ export default function PrivateGpSurgeryPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How the Recovery Suite fits in</h2>
           <p>
-            Alongside hands-on sports massage, Range and Restore runs a full <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Suite</Link> at 130 Junction Road, a Vidalux two-person hybrid <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium">infrared sauna</Link> and the Hyperice Normatec 3 Full Body <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">compression system</Link>. For a patient working through something with Dr Ali, those tools are a natural complement. The infrared sauna helps relax tight tissue and brings an over-wound nervous system back into a parasympathetic state, which sits well alongside the stress and mental health side of general practice. Gentle <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">Manual Lymphatic Drainage</Link> can support the body during recovery too, once cleared. None of it replaces what a GP does. It gives his patients somewhere local to keep the progress moving between appointments.
+            Alongside hands-on sports massage, Range and Restore runs a full <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> at 130 Junction Road, a Vidalux two-person hybrid <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">infrared sauna</Link> and the Hyperice Normatec 3 Full Body <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">compression system</Link>. For a patient working through something with Dr Ali, those tools are a natural complement. The infrared sauna helps relax tight tissue and brings an over-wound nervous system back into a parasympathetic state, which sits well alongside the stress and mental health side of general practice. Gentle <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">Manual Lymphatic Drainage</Link> can support the body during recovery too, once cleared. None of it replaces what a GP does. It gives his patients somewhere local to keep the progress moving between appointments.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Honest referrals, both ways</h2>
@@ -163,19 +163,19 @@ export default function PrivateGpSurgeryPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports and deep tissue remedial therapy
             </Link>
-            <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Manual Lymphatic Drainage
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery suite: sauna and compression
             </Link>
-            <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

@@ -124,19 +124,19 @@ export default function BlogPage() {
                   />
                 </Link>
               ) : (
-                <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+                <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
               )}
               <div className="p-6 flex flex-col flex-grow">
                 <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
                 <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-[#2ab4b8] transition-colors">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-[#0f767a] transition-colors">
                     {post.title}
                   </Link>
                 </h2>
                 <p className="text-page-muted mb-4">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-[#2ab4b8] font-semibold hover:text-page transition-colors min-h-[44px]"
+                  className="inline-flex items-center text-[#0f767a] font-semibold hover:text-page transition-colors min-h-[44px]"
                 >
                   Read more →
                 </Link>

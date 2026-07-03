@@ -84,7 +84,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Recovery Suite</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Recovery Suite</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Faster Recovery with Normatec Compression, Now in Archway
           </h1>
@@ -116,7 +116,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
 
           <p className="text-xl font-medium text-page">
-            For years, Normatec compression boots were the recovery kit you only saw in elite training rooms, Premier League physio rooms, and the back of Team GB tents at the finish line. That has changed. The same system the pros use is now installed in our <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Suite</Link> in Archway, ready for anyone who lives, works or trains around N19, Tufnell Park, Holloway, Highgate, Finsbury Park, Crouch End, Islington and Kentish Town.
+            For years, Normatec compression boots were the recovery kit you only saw in elite training rooms, Premier League physio rooms, and the back of Team GB tents at the finish line. That has changed. The same system the pros use is now installed in our <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> in Archway, ready for anyone who lives, works or trains around N19, Tufnell Park, Holloway, Highgate, Finsbury Park, Crouch End, Islington and Kentish Town.
           </p>
 
           <p>
@@ -181,7 +181,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </ul>
 
           <p>
-            A safety note before we move on. Pneumatic compression is not suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, severe heart conditions and open wounds in the treated area. If any of that applies, check with your GP first and have a look at the full contraindications list on the <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">compression therapy service page</Link> before you book.
+            A safety note before we move on. Pneumatic compression is not suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, severe heart conditions and open wounds in the treated area. If any of that applies, check with your GP first and have a look at the full contraindications list on the <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">compression therapy service page</Link> before you book.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How it benefits you</h2>
@@ -196,7 +196,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
             <li><strong>Improved circulation</strong> through the legs, hips and arms while the system is running.</li>
             <li><strong>Reduced swelling and puffiness</strong> after long flights, long days standing, or hard training.</li>
             <li><strong>A proper 30 minutes off your feet.</strong> Phone down, eyes closed, recovery mode. That bit on its own matters more than people give it credit for.</li>
-            <li><strong>Stack-ability.</strong> Normatec works well alongside <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> and our hybrid <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium">infrared sauna</Link>, which is why all three live in the same Recovery Suite.</li>
+            <li><strong>Stack-ability.</strong> Normatec works well alongside <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> and our hybrid <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">infrared sauna</Link>, which is why all three live in the same Recovery Suite.</li>
           </ul>
 
           <p>
@@ -210,11 +210,11 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </p>
 
           <p>
-            North London locals deserve a proper recovery setup that is not an hour each way on the tube. So we put one in. The Hyperice Normatec 3 Full Body now sits inside our new Recovery Suite at 130 Junction Road, two minutes from Archway tube on the Northern Line, alongside the <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium">Vidalux two-person hybrid infrared sauna</Link> and the existing hands-on services with <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Carlos</Link>.
+            North London locals deserve a proper recovery setup that is not an hour each way on the tube. So we put one in. The Hyperice Normatec 3 Full Body now sits inside our new Recovery Suite at 130 Junction Road, two minutes from Archway tube on the Northern Line, alongside the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">Vidalux two-person hybrid infrared sauna</Link> and the existing hands-on services with <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos</Link>.
           </p>
 
           <p>
-            For runners training on Hampstead Heath, Parkland Walk and Highgate Wood, that is a proper local recovery option. For people coming out of the gyms across Archway, Tufnell Park and Holloway, it is a 30-minute walk-in. For anyone in <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium">our wider catchment</Link> across N19, N7, N6, N4, N8 and N1, it is a short hop on the bus or the tube.
+            For runners training on Hampstead Heath, Parkland Walk and Highgate Wood, that is a proper local recovery option. For people coming out of the gyms across Archway, Tufnell Park and Holloway, it is a 30-minute walk-in. For anyone in <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">our wider catchment</Link> across N19, N7, N6, N4, N8 and N1, it is a short hop on the bus or the tube.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What a session looks like</h2>
@@ -233,7 +233,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </ul>
 
           <p>
-            We run three session lengths: 30 minutes legs only, 30 minutes full body, and 45 minutes full body at a slower pace. The 45-minute full-body session is the one runners book after marathons and big training blocks. The full session menu lives on the <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">compression therapy service page</Link> and you can also see how it bundles with sauna and massage on the <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> page.
+            We run three session lengths: 30 minutes legs only, 30 minutes full body, and 45 minutes full body at a slower pace. The 45-minute full-body session is the one runners book after marathons and big training blocks. The full session menu lives on the <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">compression therapy service page</Link> and you can also see how it bundles with sauna and massage on the <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> page.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Come in and have a look</h2>
@@ -243,7 +243,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </p>
 
           <p>
-            The Recovery Suite is now open at 130 Junction Road, Archway. Sessions are bookable online, and you can <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium">contact the clinic</Link> if you want to chat through which session suits before you book.
+            The Recovery Suite is now open at 130 Junction Road, Archway. Sessions are bookable online, and you can <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">contact the clinic</Link> if you want to chat through which session suits before you book.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Frequently asked questions</h2>
@@ -303,32 +303,32 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Normatec Compression Therapy: full service details
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery Suite: Sauna, Compression and Recovery Packages
             </Link>
-            <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Infrared Hybrid Sauna
             </Link>
-            <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery Packages: compression, sauna and massage bundled
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports &amp; Deep Tissue Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/marathon-sports-massage-archway" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Marathon Massage in Archway: Pre and Post Race Recovery
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>

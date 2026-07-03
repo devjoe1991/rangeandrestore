@@ -149,7 +149,7 @@ export default function ServicesPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="mb-8 rounded-2xl border-2 border-[#1a3d3a] bg-page-sage p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
           <div>
-            <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-xs mb-1">New at the Clinic</p>
+            <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-xs mb-1">New at the Clinic</p>
             <p className="text-page font-bold leading-snug">Recovery Suite now open. Infrared Hybrid Sauna, Normatec compression and recovery packages alongside your massage.</p>
           </div>
           <Link href="/recovery-suite" className="btn btn-primary text-sm whitespace-nowrap">Explore Recovery Suite</Link>
@@ -164,7 +164,7 @@ export default function ServicesPage() {
 
             return (
               <div key={service.href} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-                <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+                <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
                 {image && (
                   <Link href={service.href} className="block relative aspect-[16/9] lg:aspect-[21/9] overflow-hidden">
                     <Image
@@ -179,11 +179,11 @@ export default function ServicesPage() {
                 <div className="p-6 lg:p-8 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">
                     <h2 className="text-2xl font-bold text-page mb-2">
-                      <Link href={service.href} className="hover:text-[#2ab4b8] transition-colors">
+                      <Link href={service.href} className="hover:text-[#0f767a] transition-colors">
                         {service.title}
                       </Link>
                     </h2>
-                    <p className="text-[#2ab4b8] font-medium text-sm mb-3">{service.duration}</p>
+                    <p className="text-[#0f767a] font-medium text-sm mb-3">{service.duration}</p>
                     <p className="text-page-muted">{service.description}</p>
                   </div>
                   <div className="flex flex-row lg:flex-col gap-3 lg:items-end flex-shrink-0">
@@ -196,7 +196,7 @@ export default function ServicesPage() {
                     </a>
                     <Link
                       href={service.href}
-                      className="text-page text-sm font-bold hover:text-[#2ab4b8] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2 px-4"
+                      className="text-page text-sm font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2 px-4"
                     >
                       Learn More
                     </Link>

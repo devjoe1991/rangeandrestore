@@ -87,7 +87,7 @@ export default function MassageBundlesPage() {
         <div className="space-y-10">
           {bundles.map((bundle) => (
             <div key={bundle.title} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-              <div style={{ height: '4px', background: '#2ab4b8', width: '100%' }} />
+              <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
               <div className="p-6 lg:p-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -95,7 +95,7 @@ export default function MassageBundlesPage() {
                     <span className="inline-block bg-page-sage text-page text-sm font-semibold px-3 py-1 rounded-full">{bundle.saving}</span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-4">
-                    <span className="text-4xl font-bold text-[#2ab4b8]">{bundle.price}</span>
+                    <span className="text-4xl font-bold text-[#0f767a]">{bundle.price}</span>
                     <span className="text-page-muted opacity-80 text-sm">{bundle.validity}</span>
                   </div>
                   <p className="text-page-muted mb-3">{bundle.description}</p>
@@ -137,19 +137,19 @@ export default function MassageBundlesPage() {
           <h3 className="text-lg font-bold text-page mb-3">Bundle Terms</h3>
           <ul className="space-y-2 text-page-muted text-sm">
             <li className="flex items-start gap-2">
-              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
+              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
               Bundles are valid for the specified period from the date of first use.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
+              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
               Sessions are non-transferable and non-refundable once purchased.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
+              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
               Bundles are for personal use only and cannot be shared between clients.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#2ab4b8] font-bold mt-0.5">•</span>
+              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
               Sessions must be booked in advance and are subject to availability.
             </li>
           </ul>

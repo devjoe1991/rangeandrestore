@@ -100,7 +100,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Cycling</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Cycling</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage and Recovery for Cyclists in Archway, North London
           </h1>
@@ -206,7 +206,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
           </p>
 
           <p>
-            The treatments themselves run from <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> (<a href={BOOKING_URLS.sportsDeepTissue} target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] hover:text-page font-medium underline">book online</a>) through to <Link href="/services/advanced-cupping-sports-deep-tissue" className="text-[#2ab4b8] hover:text-page font-medium">Advanced Cupping Therapy with Sports Massage</Link>, which works particularly well on the fascial tightness cyclists build up in the lumbar area and quads. For cyclists managing long-standing tightness across hips, lower back and neck at the same time, the <Link href="/services/2-hour-pain-relief-massage" className="text-[#2ab4b8] hover:text-page font-medium">2-Hour Pain Relief Massage</Link> (<a href={BOOKING_URLS.twoHourRelief} target="_blank" rel="noopener noreferrer" className="text-[#2ab4b8] hover:text-page font-medium underline">book online</a>) gives the time to work all of it in one session.
+            The treatments themselves run from <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> (<a href={BOOKING_URLS.sportsDeepTissue} target="_blank" rel="noopener noreferrer" className="text-[#0f767a] hover:text-page font-medium underline">book online</a>) through to <Link href="/services/advanced-cupping-sports-deep-tissue" className="text-[#0f767a] hover:text-page font-medium">Advanced Cupping Therapy with Sports Massage</Link>, which works particularly well on the fascial tightness cyclists build up in the lumbar area and quads. For cyclists managing long-standing tightness across hips, lower back and neck at the same time, the <Link href="/services/2-hour-pain-relief-massage" className="text-[#0f767a] hover:text-page font-medium">2-Hour Pain Relief Massage</Link> (<a href={BOOKING_URLS.twoHourRelief} target="_blank" rel="noopener noreferrer" className="text-[#0f767a] hover:text-page font-medium underline">book online</a>) gives the time to work all of it in one session.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What a cyclist&apos;s session at the clinic looks like</h2>
@@ -234,13 +234,13 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li><strong>Normatec compression first</strong> to flush the legs. Thirty minutes in the boots after a long ride moves fluid up and out of the quads, calves and hip flexors, which makes the rest of the work more productive. See the <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">Normatec compression page</Link> for the full setup.</li>
+            <li><strong>Normatec compression first</strong> to flush the legs. Thirty minutes in the boots after a long ride moves fluid up and out of the quads, calves and hip flexors, which makes the rest of the work more productive. See the <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">Normatec compression page</Link> for the full setup.</li>
             <li><strong>Sports massage second</strong> to release the specific tight spots that compression cannot reach. Glutes, lumbar fascia, neck and pec minor are the cyclist-specific bits.</li>
-            <li><strong>Infrared sauna last</strong> to wind the nervous system down. After a long ride the system is wound up, and a 30 to 45 minute sauna session in the <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium">Vidalux hybrid sauna</Link> brings the heart rate back down and sets up better sleep that night.</li>
+            <li><strong>Infrared sauna last</strong> to wind the nervous system down. After a long ride the system is wound up, and a 30 to 45 minute sauna session in the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">Vidalux hybrid sauna</Link> brings the heart rate back down and sets up better sleep that night.</li>
           </ul>
 
           <p>
-            All three live in the same building. The <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium">Recovery Packages</Link> page lists how the bundles work. The Recovery Suite is now open and sessions are bookable online.
+            All three live in the same building. The <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> page lists how the bundles work. The Recovery Suite is now open and sessions are bookable online.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Common cycling injuries we see at the clinic</h2>
@@ -271,7 +271,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
 
           <ul className="space-y-2 list-disc list-inside">
             <li><strong>Sleep.</strong> Seven to nine hours, consistently. The body does most of its repair work overnight and undertrained cyclists are usually undersept ones.</li>
-            <li><strong>Hydration.</strong> Muscle tissue is around 75% water. Tight, twitchy legs are often dehydrated legs. See <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium">our guide to hydration and muscle health</Link> for the long version.</li>
+            <li><strong>Hydration.</strong> Muscle tissue is around 75% water. Tight, twitchy legs are often dehydrated legs. See <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">our guide to hydration and muscle health</Link> for the long version.</li>
             <li><strong>Off-bike mobility.</strong> Ten minutes a day of hip flexor, glute and thoracic work clears most of the postural load cycling builds up. Done in the kitchen, no kit needed.</li>
             <li><strong>Strength work, twice a week.</strong> Even one short session of squats, deadlifts or hip hinges keeps the glutes firing and protects the lower back. You ride better for it.</li>
             <li><strong>Knowing when to back off.</strong> If the legs feel flat for a week, that is information. Easy week, recovery session, decent sleep, then back into it.</li>
@@ -285,7 +285,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
           </p>
 
           <p>
-            The clinic at 130 Junction Road sits at the centre of all of that, two minutes from Archway tube on the Northern Line, easy to roll up to from any of the routes above. For cyclists across <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium">N19, N7, N6, N4, N8 and N1</Link>, recovery is now a short ride or a quick tube away, not a trek across town.
+            The clinic at 130 Junction Road sits at the centre of all of that, two minutes from Archway tube on the Northern Line, easy to roll up to from any of the routes above. For cyclists across <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">N19, N7, N6, N4, N8 and N1</Link>, recovery is now a short ride or a quick tube away, not a trek across town.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find a sports massage for cyclists near you in North London</h2>
@@ -349,32 +349,32 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports &amp; Deep Tissue Massage
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery Suite: Sauna, Compression and Recovery Packages
             </Link>
-            <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Infrared Hybrid Sauna
             </Link>
-            <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Normatec Compression Therapy
             </Link>
-            <Link href="/recovery-suite/recovery-packages" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery Packages: compression, sauna and massage bundled
             </Link>
-            <Link href="/blog/marathon-sports-massage-archway" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Marathon Massage in Archway: Pre and Post Race Recovery
             </Link>
-            <Link href="/blog/sports-massage-archway-local-guide" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/blog/sports-massage-archway-local-guide" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports Massage in Archway: A Local Guide
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#2ab4b8] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>

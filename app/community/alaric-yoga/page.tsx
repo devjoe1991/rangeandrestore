@@ -64,7 +64,7 @@ export default function AlaricYogaPartnerPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; North London &middot; Iyengar Yoga and Pranayama</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; North London &middot; Iyengar Yoga and Pranayama</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Alaric Yoga and Range and Restore
           </h1>
@@ -123,17 +123,17 @@ export default function AlaricYogaPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How Range and Restore supports yoga practitioners</h2>
           <p>
-            For Iyengar yoga students, regular asana, pranayama and mobility work places real demand on the body. Hips, hamstrings, shoulders, thoracic spine and the deep stabilisers around the pelvis and lumbar spine all need attention over time. Range and Restore offers assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium">advanced clinical massage</Link>, <Link href="/services/advanced-cupping-sports-deep-tissue" className="text-[#2ab4b8] hover:text-page font-medium">advanced cupping with deep tissue</Link>, the <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">Back and Neck Pain MOT</Link>, <Link href="/services/2-hour-pain-relief-massage" className="text-[#2ab4b8] hover:text-page font-medium">2-hour pain-relief sessions</Link> and certified <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium">Manual Lymphatic Drainage (MLD)</Link>. Every session starts with a proper assessment, so treatment is matched to what each yoga student turns up with that day, whether that&apos;s tight hips before a long Iyengar class, stiff shoulders after sustained inversion work, a flared SI joint or a recovering hamstring strain. The <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium">recovery suite</Link> (sauna and pneumatic compression) is also available to extend recovery between sessions.
+            For Iyengar yoga students, regular asana, pranayama and mobility work places real demand on the body. Hips, hamstrings, shoulders, thoracic spine and the deep stabilisers around the pelvis and lumbar spine all need attention over time. Range and Restore offers assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link>, <Link href="/services/advanced-cupping-sports-deep-tissue" className="text-[#0f767a] hover:text-page font-medium">advanced cupping with deep tissue</Link>, the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back and Neck Pain MOT</Link>, <Link href="/services/2-hour-pain-relief-massage" className="text-[#0f767a] hover:text-page font-medium">2-hour pain-relief sessions</Link> and certified <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">Manual Lymphatic Drainage (MLD)</Link>. Every session starts with a proper assessment, so treatment is matched to what each yoga student turns up with that day, whether that&apos;s tight hips before a long Iyengar class, stiff shoulders after sustained inversion work, a flared SI joint or a recovering hamstring strain. The <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">recovery suite</Link> (sauna and pneumatic compression) is also available to extend recovery between sessions.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Service areas: where Range and Restore covers</h2>
           <p>
-            The Range and Restore clinic at <Link href="/areas-served/archway-n19" className="text-[#2ab4b8] hover:text-page font-medium">130 Junction Road, Archway, London N19 5LB</Link> sits in the middle of a tight cluster of North London postcodes, which makes it easy for yoga students travelling to or from class. Clients regularly come in from <strong>Archway (N19)</strong>, <strong>Upper Holloway (N19)</strong>, <Link href="/areas-served/tufnell-park-n7" className="text-[#2ab4b8] hover:text-page font-medium"><strong>Tufnell Park (N7 / N19)</strong></Link>, <strong>Holloway (N7)</strong>, <strong>Highgate (N6)</strong>, <strong>Crouch End (N8)</strong>, <strong>Hornsey (N8)</strong>, <strong>Kentish Town (NW5)</strong>, <strong>Dartmouth Park (NW5)</strong>, <strong>Gospel Oak (NW5)</strong>, <strong>Camden (NW1)</strong>, <strong>Hampstead (NW3)</strong>, <strong>Belsize Park (NW3)</strong>, <strong>Finsbury Park (N4)</strong>, <strong>Stroud Green (N4)</strong> and the wider <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium">North London service area</Link>. The clinic is three minutes&apos; walk from Archway tube (Northern Line) and on multiple bus routes, so it&apos;s easy to combine an Iyengar yoga class with a sports massage or remedial session on the same day.
+            The Range and Restore clinic at <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">130 Junction Road, Archway, London N19 5LB</Link> sits in the middle of a tight cluster of North London postcodes, which makes it easy for yoga students travelling to or from class. Clients regularly come in from <strong>Archway (N19)</strong>, <strong>Upper Holloway (N19)</strong>, <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium"><strong>Tufnell Park (N7 / N19)</strong></Link>, <strong>Holloway (N7)</strong>, <strong>Highgate (N6)</strong>, <strong>Crouch End (N8)</strong>, <strong>Hornsey (N8)</strong>, <strong>Kentish Town (NW5)</strong>, <strong>Dartmouth Park (NW5)</strong>, <strong>Gospel Oak (NW5)</strong>, <strong>Camden (NW1)</strong>, <strong>Hampstead (NW3)</strong>, <strong>Belsize Park (NW3)</strong>, <strong>Finsbury Park (N4)</strong>, <strong>Stroud Green (N4)</strong> and the wider <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">North London service area</Link>. The clinic is three minutes&apos; walk from Archway tube (Northern Line) and on multiple bus routes, so it&apos;s easy to combine an Iyengar yoga class with a sports massage or remedial session on the same day.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Book a session alongside your yoga practice</h2>
           <p>
-            Alaric Newcombe teaches Iyengar yoga and pranayama through <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#2ab4b8] hover:text-page font-medium">Alaric Yoga</a>. Yoga students looking for soft tissue support, injury rehab, mobility work or general musculoskeletal care alongside their practice can <Link href="/contact" className="text-[#2ab4b8] hover:text-page font-medium">book directly with Range and Restore</Link>. Same-week appointments are usually available at 130 Junction Road, N19.
+            Alaric Newcombe teaches Iyengar yoga and pranayama through <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">Alaric Yoga</a>. Yoga students looking for soft tissue support, injury rehab, mobility work or general musculoskeletal care alongside their practice can <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">book directly with Range and Restore</Link>. Same-week appointments are usually available at 130 Junction Road, N19.
           </p>
         </div>
 
@@ -163,28 +163,28 @@ export default function AlaricYogaPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports and deep tissue remedial therapy
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Advanced clinical massage
             </Link>
-            <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Back and Neck Pain MOT
             </Link>
-            <Link href="/recovery-suite" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Recovery suite: sauna and compression
             </Link>
-            <Link href="/areas-served/archway-n19" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports massage in Archway N19
             </Link>
-            <Link href="/areas-served/tufnell-park-n7" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sports massage in Tufnell Park N7
             </Link>
-            <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

@@ -46,7 +46,7 @@ export default function RelaxationRestorativeMassagePage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Relaxation Massage · Archway London</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Relaxation Massage · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Relaxation Massage in Archway, North London
           </h1>
@@ -73,7 +73,7 @@ export default function RelaxationRestorativeMassagePage() {
                 'Anyone who wants to relax, reset, and restore balance',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -109,7 +109,7 @@ export default function RelaxationRestorativeMassagePage() {
                 'Improved overall wellbeing and relaxation',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#2ab4b8] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -128,7 +128,7 @@ export default function RelaxationRestorativeMassagePage() {
                 'Optional use of professional massage waxes and balms selected to suit your preference and comfort',
               ].map((tech) => (
                 <li key={tech} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#2ab4b8] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
                   {tech}
                 </li>
               ))}
@@ -146,10 +146,10 @@ export default function RelaxationRestorativeMassagePage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/hydration-and-muscle-health" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Hydration and Muscle Health – What Every Client Should Know
               </Link>
-              <Link href="/blog/desk-posture-pain-massage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Say Goodbye to Desk Posture Pain
               </Link>
             </div>

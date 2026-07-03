@@ -75,7 +75,7 @@ export default function TufnellParkN7Page() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Tufnell Park · London N7</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Tufnell Park · London N7</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage for Tufnell Park (N7)
           </h1>
@@ -88,7 +88,7 @@ export default function TufnellParkN7Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is the closest specialist sports massage clinic to Tufnell Park. We&apos;re at 130 Junction Road, a 10-minute walk north from Tufnell Park station and a few minutes&apos; ride on the 4 or 134 bus. Sessions are led by <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist.
+            Range and Restore is the closest specialist sports massage clinic to Tufnell Park. We&apos;re at 130 Junction Road, a 10-minute walk north from Tufnell Park station and a few minutes&apos; ride on the 4 or 134 bus. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why Tufnell Park clients book sports massage</h2>
@@ -96,7 +96,7 @@ export default function TufnellParkN7Page() {
             Tufnell Park sits at the intersection of two cycling worlds — the road cyclists heading up to Highgate and out to Hampstead Heath, and the commuter cyclists riding the C50 corridor into the City. Add to that the runners using the Heath, Waterlow Park and the Parkland Walk, and Tufnell Park residents are some of the most active in north London. That activity comes with a predictable set of soft tissue issues: IT band tightness, hip flexor pain, cyclist&apos;s lower back, plantar issues in runners and chronic shoulder tightness in commuter cyclists who spend the working day at a desk.
           </p>
           <p>
-            The other group we see regularly from N7 are young professionals working hybrid schedules. Two or three days of desk-bound posture, two days of higher activity (gym, climbing, running) — a pattern that puts unusual stress on the neck, shoulders and lower back, and which responds well to a structured course of <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue massage</Link> alongside the <Link href="/services/back-neck-pain-mot" className="text-[#2ab4b8] hover:text-page font-medium">Back & Neck Pain MOT</Link>.
+            The other group we see regularly from N7 are young professionals working hybrid schedules. Two or three days of desk-bound posture, two days of higher activity (gym, climbing, running) — a pattern that puts unusual stress on the neck, shoulders and lower back, and which responds well to a structured course of <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> alongside the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back & Neck Pain MOT</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Walking and transport from Tufnell Park</h2>
@@ -106,12 +106,12 @@ export default function TufnellParkN7Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by N7 clients</h2>
           <p>
-            For cyclists, the standard recommendation is a 60- or 90-minute <Link href="/services/sports-deep-tissue-massage" className="text-[#2ab4b8] hover:text-page font-medium">sports and deep tissue session</Link> covering the posterior chain, hip flexors and quads. Our <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#2ab4b8] hover:text-page font-medium">cycling recovery guide</Link> covers this in detail. Runners typically book around long runs and races, often combining sports massage with the <Link href="/recovery-suite/infrared-sauna" className="text-[#2ab4b8] hover:text-page font-medium">infrared sauna</Link> or <Link href="/recovery-suite/compression-therapy" className="text-[#2ab4b8] hover:text-page font-medium">Normatec compression boots</Link> in the Recovery Suite. For postural pain from desk work, the Back & Neck Pain MOT is usually the right starting point.
+            For cyclists, the standard recommendation is a 60- or 90-minute <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue session</Link> covering the posterior chain, hip flexors and quads. Our <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">cycling recovery guide</Link> covers this in detail. Runners typically book around long runs and races, often combining sports massage with the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">infrared sauna</Link> or <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">Normatec compression boots</Link> in the Recovery Suite. For postural pain from desk work, the Back & Neck Pain MOT is usually the right starting point.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Tufnell Park, Dartmouth Park and the wider catchment</h2>
           <p>
-            This page is the home for clients across Tufnell Park itself, the Dartmouth Park streets (which straddle N7 and NW5), and the residential roads running off Fortess Road. If you&apos;re further north, we also serve <Link href="/areas-served" className="text-[#2ab4b8] hover:text-page font-medium">Kentish Town, Gospel Oak and Hampstead</Link>; further east the clinic catches <Link href="/areas-served/archway-n19" className="text-[#2ab4b8] hover:text-page font-medium">Archway</Link> and Upper Holloway.
+            This page is the home for clients across Tufnell Park itself, the Dartmouth Park streets (which straddle N7 and NW5), and the residential roads running off Fortess Road. If you&apos;re further north, we also serve <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">Kentish Town, Gospel Oak and Hampstead</Link>; further east the clinic catches <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">Archway</Link> and Upper Holloway.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>

@@ -90,7 +90,7 @@ export default function ContactPage() {
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
-                className="btn w-full text-base border-2 border-[#2ab4b8] text-[#2ab4b8] hover:bg-[#2ab4b8] hover:text-white transition-colors"
+                className="btn w-full text-base border-2 border-[#0f767a] text-[#0f767a] hover:bg-[#0f767a] hover:text-white transition-colors"
               >
                 Email Carlos
               </a>
@@ -113,7 +113,7 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-semibold text-page mb-1">Email</h3>
-                <a href={`mailto:${BUSINESS.email}`} className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] inline-flex items-center">
+                <a href={`mailto:${BUSINESS.email}`} className="text-[#0f767a] hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.email}
                 </a>
               </div>

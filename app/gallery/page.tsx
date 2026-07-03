@@ -99,7 +99,7 @@ export default async function GalleryPage() {
           <BookingButton label="Book Your Session" />
           <Link
             href="/about"
-            className="btn bg-white/60 backdrop-blur-sm border border-[#2ab4b8]/50 text-[#1a2330] hover:bg-white hover:border-[#2ab4b8] transition-all text-sm shadow-sm"
+            className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm"
           >
             Meet Carlos →
           </Link>

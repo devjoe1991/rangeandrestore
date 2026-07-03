@@ -42,7 +42,7 @@ export default function ReliableScanPartnerPage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#2ab4b8] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; 130 Junction Road, Archway</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; 130 Junction Road, Archway</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Reliable Scan and Range and Restore
           </h1>
@@ -130,16 +130,16 @@ export default function ReliableScanPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/clinical-collaboration" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/clinical-collaboration" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How clinical collaboration works at 130 Junction Road
             </Link>
-            <Link href="/services/manual-lymphatic-drainage" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Manual Lymphatic Drainage at Range and Restore
             </Link>
-            <Link href="/about" className="text-[#2ab4b8] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

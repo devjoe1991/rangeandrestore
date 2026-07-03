@@ -44,7 +44,7 @@ export function ConsentBanner() {
           and advertising cookies stay off until you accept.{' '}
           <Link
             href="/privacy-policy"
-            className="font-medium text-[#2ab4b8] hover:underline"
+            className="font-medium text-[#0f767a] hover:underline"
           >
             Privacy policy
           </Link>
@@ -53,14 +53,14 @@ export function ConsentBanner() {
           <button
             type="button"
             onClick={() => choose('denied')}
-            className="btn flex-1 md:flex-none border-2 border-[#2ab4b8] text-[#2ab4b8] transition-colors hover:bg-[#2ab4b8] hover:text-white"
+            className="btn flex-1 md:flex-none border-2 border-[#0f767a] text-[#0f767a] transition-colors hover:bg-[#0f767a] hover:text-white"
           >
             Reject
           </button>
           <button
             type="button"
             onClick={() => choose('granted')}
-            className="btn flex-1 md:flex-none border-[#2ab4b8] bg-[#2ab4b8] text-white transition-colors hover:bg-[#1a9aa0]"
+            className="btn flex-1 md:flex-none border-[#0f767a] bg-[#0f767a] text-white transition-colors hover:bg-[#1a9aa0]"
           >
             Accept
           </button>
