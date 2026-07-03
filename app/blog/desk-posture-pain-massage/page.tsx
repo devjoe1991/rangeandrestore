@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Desk Posture Pain Relief | Massage Therapy Archway',
@@ -39,11 +39,41 @@ const articleSchema = {
   keywords: 'desk posture pain massage, neck pain massage London, back pain office worker, postural correction Archway, shoulder tension massage, remedial massage North London',
 }
 
+// Problem-based FAQs — mirror the everyday searches people type when they have
+// desk-related postural pain, so the page is eligible for People Also Ask / FAQ
+// rich results and AI answers. Answers are grounded in the article content;
+// keep the two in sync when editing.
+const faqs = [
+  {
+    q: 'Can massage fix bad posture from sitting at a desk?',
+    a: 'Desk-related postural pain responds exceptionally well to targeted massage and soft tissue treatment. Rather than just relaxing the upper back, an assessment-led approach identifies your specific pattern of tightness, weakness and restriction and addresses the root cause. It is not inevitable or permanent, and with the right treatment plus simple adjustments to how you work and move, the vast majority of clients experience significant and lasting improvement.',
+  },
+  {
+    q: 'Why does sitting at a desk all day give me back pain?',
+    a: "The body isn't designed for sustained static postures. Prolonged sitting tightens the hip flexors and pulls the pelvis into anterior tilt, increasing lumbar load, while the deep core and glutes become inhibited and stop supporting the spine. Treatment addressing the quadratus lumborum, iliopsoas and lumbar erectors, combined with hip mobility work, creates lasting relief for lower back pain from prolonged sitting.",
+  },
+  {
+    q: 'How do I get rid of a stiff neck from looking at screens all day?',
+    a: 'As the head migrates forward toward the screen, the neck extensors become overloaded and the upper trapezius and levator scapulae tighten, causing persistent neck pain and stiffness that is often worse at the end of the working day. Deep tissue massage, trigger point therapy and myofascial release applied to the neck, upper trapezius, levator scapulae and suboccipital muscles directly address this and can produce immediate, significant relief from neck pain and headaches.',
+  },
+  {
+    q: 'What helps with knots and tightness between the shoulder blades?',
+    a: 'Upper back tightness between the shoulder blades develops as the shoulders roll forward and the thoracic spine rounds, leaving the mid-back muscles weakened and elongated and the mid-back stiff and compressed. Soft tissue work on the thoracic erectors and rhomboids, combined with assisted mobility techniques, helps restore the natural movement of the thoracic spine and reduces the compensatory strain on the neck and lower back.',
+  },
+  {
+    q: 'How many massage sessions will I need for desk posture pain?',
+    a: 'For most desk workers with established postural pain, an initial block of treatment — typically 4 to 6 sessions, fortnightly or monthly — produces meaningful and lasting improvement. After that, monthly maintenance sessions are usually enough to stop the pattern re-establishing itself. Simple workplace adjustments such as monitor height, chair position and regular movement breaks make a significant difference to the rate of progress and the longevity of results.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function DeskPosturePainMassagePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -151,6 +181,19 @@ export default function DeskPosturePainMassagePage() {
             That includes home workers and office commuters across Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Islington, Camden, Kentish Town, Hampstead, Belsize Park and Stroud Green. If you sit at a desk all day in North London and your body is telling you about it, Range and Restore is the place to fix it without trekking into the West End or the City.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">Desk &amp; posture pain: common questions</h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to fix your posture?</h2>

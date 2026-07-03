@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Hydration and Muscle Health | Recovery Guide',
@@ -39,11 +39,40 @@ const articleSchema = {
   keywords: 'hydration muscle health, muscle recovery hydration, massage preparation, dehydration injury risk, sports massage recovery, hydration tips athletes',
 }
 
+// Problem-based FAQs — everyday British search wording, answers grounded in the
+// article content so the page is eligible for People Also Ask / FAQ rich results
+// and AI answers on the exact queries people search. Keep the two in sync when editing.
+const faqs = [
+  {
+    q: 'Can dehydration cause muscle cramps?',
+    a: 'Yes. When you are dehydrated, muscles become stiffer and more prone to cramping, and they take significantly longer to recover. Water makes up roughly 75% of muscle tissue, so when fluid levels drop the muscles work harder than they should, fatigue sets in earlier, and the risk of strain and cramping increases.',
+  },
+  {
+    q: 'Why do my muscles feel tight and stiff?',
+    a: 'Muscle fibres are surrounded by connective tissue — fascia, tendons and ligaments — which all have a high water content. When you are well hydrated this tissue slides and moves freely; when you are dehydrated it becomes denser, more adhesive and more restricted. This is one of the main reasons people feel stiff in the morning or after sitting for long periods.',
+  },
+  {
+    q: 'Why should I drink water after a massage?',
+    a: 'During a massage, metabolic byproducts that have built up in tight or overworked muscles — including lactic acid and other cellular waste — are mobilised and pushed into the circulatory system. Staying well hydrated before and after your session helps your kidneys and lymphatic system process and eliminate these substances efficiently, reducing post-massage soreness and speeding up recovery.',
+  },
+  {
+    q: 'How much water should I drink before a massage?',
+    a: 'Aim to drink around 500ml of water in the two hours before your massage appointment, and continue drinking water throughout the rest of the day after your session. Arriving well hydrated means the tissue responds better to treatment, techniques can penetrate more effectively, and the results tend to last longer.',
+  },
+  {
+    q: 'How much water should I drink each day?',
+    a: 'The general recommendation of eight glasses a day is a rough starting point, but individual needs vary with body size, activity level, climate and diet. A more useful indicator is the colour of your urine — pale yellow is the target, dark yellow or amber suggests dehydration, and clear indicates over-hydration. Foods with a high water content such as cucumbers, watermelon, oranges and leafy greens also contribute to your total daily hydration.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
+
 export default function HydrationMuscleHealthPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -140,6 +169,19 @@ export default function HydrationMuscleHealthPage() {
             That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Whether you are a runner, cyclist, gym-goer, desk worker or post-surgery client, Range and Restore is the North London option for assessment-led sports massage, soft tissue therapy and ongoing recovery support.
           </p>
         </div>
+
+        {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
+        <section aria-labelledby="faq-heading" className="mt-12 border-t border-page pt-8">
+          <h2 id="faq-heading" className="text-2xl font-bold text-page mb-6">Hydration &amp; muscle health: common questions</h2>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="text-lg font-bold text-page mb-2">{f.q}</h3>
+                <p className="text-page-muted leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Hydrate well, recover better</h2>
