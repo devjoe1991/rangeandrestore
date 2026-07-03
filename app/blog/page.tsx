@@ -11,6 +11,34 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Sciatica and Trapped Nerve Pain: Can Massage Help?',
+    slug: 'sciatica-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Sciatica, a trapped nerve or shooting pain down your leg? How assessment-led clinical massage releases the glutes, piriformis and lower-back muscles that irritate the sciatic nerve — and when to seek medical help — in Archway, North London.',
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
+    title: 'Shin Splints: How Sports Massage Helps',
+    slug: 'shin-splints-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Shin pain when you run? How sports massage eases the tight calves and lower-leg tension behind shin splints, the load mistakes that cause them, and the red flags that mean you should rule out a stress fracture. Archway, North London.',
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'Tight and Pulled Hamstrings: Sports Massage for Recovery',
+    slug: 'tight-hamstring-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Always tight at the back of the legs, or nursing a pulled hamstring? How sports massage releases hamstring tension, why your hips and glutes are usually involved, and how to tell a tight hamstring from a strain. Archway, North London.',
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'Tennis Elbow and RSI: Can Soft Tissue Therapy Help?',
+    slug: 'tennis-elbow-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Elbow or forearm pain from gripping, typing or a mouse — not just tennis? How soft tissue therapy releases the forearm and addresses the neck, shoulder and desk habits behind tennis elbow and RSI, in Archway, North London.',
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
     title: 'Sports Massage and Recovery for Cyclists in Archway, North London',
     slug: 'sports-massage-cycling-recovery-archway',
     date: '14 May 2026',
