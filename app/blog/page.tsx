@@ -11,6 +11,48 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Lower Back Pain: How Massage Can Help',
+    slug: 'lower-back-pain-massage-archway',
+    date: '3 July 2026',
+    excerpt: "Bad back or lower back pain that won't shift? How assessment-led sports and clinical massage releases the tight lower-back, glute and hip muscles behind most back pain — and when to get it checked. Archway, North London.",
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'Neck Pain and Stiff Neck: How Massage Helps',
+    slug: 'neck-pain-massage-archway',
+    date: '3 July 2026',
+    excerpt: "Stiff neck, cricked neck or 'text neck' from screens? How massage releases the neck and shoulder tension behind most neck pain, and the posture habits that cause it. Archway, North London.",
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
+    title: 'Tension Headaches: Can Massage Help?',
+    slug: 'tension-headache-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Headaches from a tight neck and shoulders? How massage can ease the muscle tension behind tension-type headaches — and the red flags that mean you should see a doctor. Archway, North London.',
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'Frozen Shoulder and Shoulder Pain: Can Massage Help?',
+    slug: 'frozen-shoulder-massage-archway',
+    date: '3 July 2026',
+    excerpt: "Stiff, painful shoulder or a frozen shoulder? What massage can and can't do for shoulder pain, how it eases the surrounding tension, and when you need medical care. Archway, North London.",
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
+    title: 'Plantar Fasciitis and Heel Pain: How Massage Helps',
+    slug: 'plantar-fasciitis-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Heel pain with those first painful steps in the morning? How sports massage eases the tight calves and foot tension behind plantar fasciitis. Archway, North London.',
+    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
+  },
+  {
+    title: 'Hip Pain and Tight Hips: How Massage Helps',
+    slug: 'hip-pain-massage-archway',
+    date: '3 July 2026',
+    excerpt: 'Tight or aching hips from sitting, cycling or training? How sports massage releases the hip flexors, glutes and deep rotators behind tight hips. Archway, North London.',
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
     title: 'Sports Recovery in Archway: Your Complete Recovery Stack',
     slug: 'sports-recovery-archway',
     date: '3 July 2026',
