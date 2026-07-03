@@ -11,6 +11,13 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Sports Recovery in Archway: Your Complete Recovery Stack',
+    slug: 'sports-recovery-archway',
+    date: '3 July 2026',
+    excerpt: 'Recovery is where hard training turns into results. How to stack sports massage, Normatec compression and infrared sauna between sessions and around race day, all in one place in Archway, North London.',
+    image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+  },
+  {
     title: 'Sciatica and Trapped Nerve Pain: Can Massage Help?',
     slug: 'sciatica-massage-archway',
     date: '3 July 2026',
