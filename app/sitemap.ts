@@ -127,6 +127,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/sciatica-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/shin-splints-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/tight-hamstring-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/tennis-elbow-massage-archway`,
+      lastModified: new Date('2026-07-03'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/blog/sports-massage-soft-tissue-therapy-archway`,
       lastModified: new Date('2026-03-26'),
       changeFrequency: 'monthly',
