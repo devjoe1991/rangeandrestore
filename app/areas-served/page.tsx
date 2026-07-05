@@ -25,34 +25,42 @@ const areas: { name: string; description: string; href?: string }[] = [
   {
     name: 'Holloway, N7',
     description: 'Holloway is one of our closest service areas. Whether you are dealing with a sports injury, desk-related tension, or need post-event recovery, the clinic is a quick trip from anywhere in N7.',
+    href: '/areas-served/holloway-n7',
   },
   {
     name: 'Islington, N1',
     description: 'Easily accessible via bus or a short drive from Islington. Many of our clients travel from N1 for assessment-led treatment that addresses the root cause of pain, not just the symptoms.',
+    href: '/areas-served/islington-n1',
   },
   {
     name: 'Finsbury Park, N4',
     description: 'A direct bus route connects Finsbury Park to Archway. Runners, cyclists, and gym-goers from N4 regularly visit the clinic for injury prevention, recovery, and performance support.',
+    href: '/areas-served/finsbury-park-n4',
   },
   {
     name: 'Crouch End, N8',
     description: 'Crouch End residents are a short bus ride from the clinic. Range and Restore works with many active clients from N8 dealing with running injuries, chronic tension, and postural issues.',
+    href: '/areas-served/crouch-end-n8',
   },
   {
     name: 'Highgate, N6',
     description: 'Highgate is within easy reach of the clinic, with Archway just down the hill. Clients from N6 benefit from the same assessment-led, results-focused approach as every session at Range and Restore.',
+    href: '/areas-served/highgate-n6',
   },
   {
     name: 'Stroud Green, N4',
     description: 'Just east of the clinic, Stroud Green residents can access Range and Restore quickly by bus or bike. Soft tissue therapy and sports massage are available for all conditions and activity levels.',
+    href: '/areas-served/stroud-green-n4',
   },
   {
     name: 'Upper Holloway, N19',
     description: 'Upper Holloway is one of the closest areas to the clinic. If you live in the N19 area and need sports massage, deep tissue therapy, or manual lymphatic drainage, the clinic is on your doorstep.',
+    href: '/areas-served/upper-holloway-n19',
   },
   {
     name: 'Kentish Town, NW5',
     description: 'A short journey from Kentish Town by bus or overground. Clients from NW5 come to Range and Restore for everything from marathon preparation to chronic back pain treatment.',
+    href: '/areas-served/kentish-town-nw5',
   },
 ]
 
