@@ -63,6 +63,14 @@ const partners: Partner[] = [
     externalUrl: 'https://glowbyd.co.uk',
   },
   {
+    slug: 'mode-personal-training',
+    name: 'Range and Restore × MODE Personal Training',
+    headerText: 'Range and Restore × MODE Personal Training',
+    category: 'North London. Personal Training and Strength',
+    blurb: 'Range and Restore and MODE Personal Training look after the same North London community from two sides. Tailored strength training, boxing and coaching across MODE’s East Finchley, Crouch Hill and Archway studios, sports massage and recovery on Junction Road. Honest referrals both ways.',
+    externalUrl: 'https://www.modepersonaltraining.com/',
+  },
+  {
     slug: 'alaric-yoga',
     name: 'Range and Restore × Alaric Yoga',
     headerText: 'Range and Restore × Alaric Yoga',
