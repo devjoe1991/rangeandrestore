@@ -50,7 +50,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Do Range and Restore and Bikeztube Cycles work together?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The two shops sit a few doors apart on Junction Road in Archway and refer honestly both ways. Bikeztube looks after the bike, Range and Restore looks after the cyclist. There is no formal scheme, just two local independents supporting the same North London cycling community.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The two shops sit a few doors apart on Junction Road in Archway and refer honestly both ways. Bikeztube looks after the bike, Range and Restore looks after the cyclist. There is no formal scheme, just two local independents looking after the same North London cycling community.' },
     },
   ],
 }
@@ -90,7 +90,7 @@ export default function BikeztubeCyclesPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Bikeztube Cycles</h2>
           <p>
-            Bikeztube Cycles is the family-run bike shop at 118 Junction Road, between Archway and Tufnell Park tube. The family have been mechanics since the 1940s, when the story started in a motorcycle garage, and over the years the passion shifted to bicycles. Walk in and the first thing you notice is the wall of vintage and modern frames waiting to become custom builds.
+            Bikeztube Cycles is the family-run bike shop at 118 Junction Road, between Archway and Tufnell Park tube. The family have been mechanics since the 1940s, starting out in a motorcycle garage, and over the years the work shifted to bicycles. Walk in and the first thing you notice is the wall of vintage and modern frames waiting to become custom builds.
           </p>
           <p>
             The workshop is primarily about service and repair, and it handles everything. Geared bikes, folding bikes, e-bikes, Bromptons, internal hub gears, kids bikes, single speeds. A full clean and service starts from £89. The mechanics are also serious wheel builders, hundreds of builds deep, working with components from Sapim, DT Swiss, Mavic, Halo, Miche and Shimano, and they repair carbon fibre frames that other shops would write off. If you want a bespoke bike built from scratch, sprayed and specced to your taste, this is where Archway goes.
@@ -98,21 +98,21 @@ export default function BikeztubeCyclesPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we work together</h2>
           <p>
-            Cyclists on Junction Road have both halves of the job covered on one street. The bike goes into Bikeztube, the legs come to us. A normal week for a North London cyclist looks like this: a long ride out on Sunday, the bike dropped at 118 for a gear tune on Monday, a sports massage at 130 on Wednesday to sort the tight hips and heavy quads. We are both small, both independent, both serving the same Archway community. The people who care enough to keep their bike running properly tend to be the same people who need to look after the body riding it.
+            Cyclists on Junction Road have both halves of the job covered on one street. The bike goes into Bikeztube, the legs come to us. A normal week for a North London cyclist looks like this: a long ride out on Sunday, the bike dropped at 118 for a gear tune on Monday, a sports massage at 130 on Wednesday to sort the tight hips and heavy quads. We&apos;re both small. We&apos;re both independent. We&apos;re both serving the same Archway community. The people who care enough to keep their bike running properly tend to be the same people who need to look after the body riding it.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Cyclist wellbeing, the other half of the service</h2>
           <p>
-            Cycling is kind on the joints and hard on the soft tissue. Tight hip flexors, a stiff lower back, quads and calves that stay heavy for days after a big weekend in the saddle. That is exactly what our <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> is built for, and the <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> at 130 Junction Road adds Normatec full leg <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">compression</Link> and an infrared sauna for the days between rides. We wrote a full guide to <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">sports massage for cycling recovery</Link> if you want the detail. Bikeztube keeps the bike rolling smoothly. We keep the engine that pedals it moving just as well.
+            Cycling is kind on the joints and hard on the soft tissue. Tight hip flexors, a stiff lower back, quads and calves that stay heavy for days after a big weekend in the saddle. That&apos;s exactly what our <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> is built for, and the <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> at 130 Junction Road adds Normatec full leg <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">compression</Link> and an infrared sauna for the days between rides. We wrote a full guide to <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">sports massage for cycling recovery</Link> if you want the detail. Bikeztube keeps the bike rolling smoothly. We keep the engine that pedals it moving just as well.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How we look out for each other</h2>
           <p>
-            Honest referrals, both ways. When clients ask Carlos where to take a bike that is skipping gears or overdue a service, Bikeztube at 118 is the answer, a one minute walk from our door. When a cyclist rolls into Bikeztube nursing a stiff back or legs that have not recovered from the weekend, the team point them up the road to us. There is no formal scheme. No vouchers, no commission, no marketing dance. Just two shops on the same street looking after Archway&apos;s cyclists and their bikes.
+            Honest referrals, both ways. When clients ask Carlos where to take a bike that is skipping gears or overdue a service, Bikeztube at 118 is the answer, a one minute walk from our door. When a cyclist rolls into Bikeztube nursing a stiff back or legs that haven&apos;t recovered from the weekend, the team point them up the road to us. There&apos;s no formal scheme. No vouchers, no commission, no marketing dance. Just two shops on the same street looking after Archway&apos;s cyclists and their bikes.
           </p>
 
           <p>
-            That is what cyclist wellbeing means on Junction Road. The bike and the body, sorted a few doors apart.
+            That&apos;s what cyclist wellbeing means on Junction Road. The bike and the body, sorted a few doors apart.
           </p>
         </div>
 
