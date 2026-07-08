@@ -18,6 +18,7 @@ type Partner = {
   logo?: string
   logoAlt?: string
   logoFit?: 'contain' | 'cover'
+  logoBg?: string
   externalUrl: string
 }
 
@@ -94,6 +95,17 @@ const partners: Partner[] = [
     externalUrl: 'https://ncosteopathy.co.uk',
   },
   {
+    slug: 'bikeztube-cycles',
+    name: 'Range and Restore × Bikeztube Cycles',
+    headerText: 'Range and Restore × Bikeztube Cycles',
+    category: 'Archway. Bikes and Cyclist Wellbeing',
+    blurb: 'Range and Restore and Bikeztube Cycles look after Archway’s cyclists on Junction Road. Bike servicing, wheel building and custom builds at 118, sports massage and leg recovery at 130. The bike and the body, sorted on one street.',
+    logo: '/bikeztube-cycles-bike-shop-junction-road-archway.png',
+    logoAlt: 'Bikeztube Cycles and Repairs logo, bike shop on Junction Road, Archway',
+    logoBg: 'bg-[#F2EDE4]',
+    externalUrl: 'https://bikeztube.co.uk',
+  },
+  {
     slug: 'private-gp-surgery',
     name: 'Range and Restore × Private GP Surgery',
     headerText: 'Range and Restore × Private GP Surgery',
@@ -166,6 +178,7 @@ export default function CommunityPage() {
               logo={p.logo}
               logoAlt={p.logoAlt}
               logoFit={p.logoFit}
+              logoBg={p.logoBg}
               headerText={p.headerText}
             />
           ))}

@@ -11,11 +11,13 @@ interface PartnerCardProps {
   logoAlt?: string
   /** How the logo image fits its frame. 'contain' (default) for logos, 'cover' for photos. */
   logoFit?: 'contain' | 'cover'
+  /** Background class for the logo frame. Defaults to bg-page-sage; use a fixed light class for dark logos that vanish in dark mode. */
+  logoBg?: string
   /** If provided (and no logo), renders a text tile in the card header. */
   headerText?: string
 }
 
-export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFit = 'contain', headerText }: PartnerCardProps) {
+export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFit = 'contain', logoBg = 'bg-page-sage', headerText }: PartnerCardProps) {
   return (
     <Link
       href={href}
@@ -34,7 +36,7 @@ export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFi
             />
           </div>
         ) : (
-          <div className="relative w-full aspect-[16/10] bg-page-sage flex items-center justify-center p-6 overflow-hidden">
+          <div className={`relative w-full aspect-[16/10] ${logoBg} flex items-center justify-center p-6 overflow-hidden`}>
             <Image
               src={logo}
               alt={logoAlt ?? ''}
