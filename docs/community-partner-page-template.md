@@ -25,6 +25,7 @@ These apply to every word on the page.
 - **Real people, real places.** Name the owner. Name the street. Name the postcode. Name the tube stop. Name the day of the week. Specificity is the voice.
 - **One continuous thought per section.** Each section is a small paragraph, not a benefits list. Bullet points are for the index page, not the partnership story.
 - **Editorial outbound link.** The link to the partner site must NOT be `rel="nofollow"`. That is the entire point of the page.
+- **No partner pricing.** Never quote the partner's prices ("services from £89"). It's a collaboration page, not a menu, and their prices change without us knowing. Describe what they do, let their site handle the numbers.
 
 ---
 
