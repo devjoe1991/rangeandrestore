@@ -86,6 +86,17 @@ export default function ClinicalCollaborationPage() {
             </div>
           </section>
 
+          <section className="rounded-2xl border-2 border-[#1a3d3a] bg-page-sage p-6 sm:p-8">
+            <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-xs mb-2">Now bookable as one package</p>
+            <h2 className="text-2xl font-bold text-page mb-3">MSK Injury Assessment, Diagnostic Ultrasound &amp; Clinical Massage</h2>
+            <p className="text-page-muted mb-4">
+              This collaboration is now available as a single bookable service: a diagnostic MSK ultrasound with Reliable Scan followed by a 60-minute clinical massage guided by the findings. £165 total — £75 paid online to Range and Restore, £90 paid directly to Reliable Scan.
+            </p>
+            <Link href="/services/msk-ultrasound-clinical-massage" className="btn btn-primary text-sm">
+              See the Scan + Massage Package
+            </Link>
+          </section>
+
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Who is this relevant for?</h2>
             <p className="text-page-muted mb-4">Clinical collaboration between Range and Restore and <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a> may be particularly relevant for:</p>

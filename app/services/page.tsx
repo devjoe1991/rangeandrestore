@@ -12,6 +12,13 @@ export const metadata: Metadata = buildMetadata({
 
 const services = [
   {
+    title: 'MSK Injury Assessment, Diagnostic Ultrasound & Clinical Massage',
+    href: '/services/msk-ultrasound-clinical-massage',
+    bookingHref: BOOKING_URLS.mskUltrasoundMassage,
+    description: 'New. A diagnostic MSK ultrasound with our partner Reliable Scan, then a 60-minute clinical massage guided by the findings. Diagnosis, written report and treatment under one roof at 130 Junction Road.',
+    duration: 'Approx. 90 min – £165 total (£75 online + £90 to Reliable Scan)',
+  },
+  {
     title: 'Community Tuesday Clinic',
     href: '/services/community-tuesday-clinic',
     bookingHref: BOOKING_URLS.communityTuesday,

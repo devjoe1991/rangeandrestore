@@ -18,6 +18,13 @@ export const metadata: Metadata = buildMetadata({
 
 const services = [
   {
+    title: 'MSK Scan + Clinical Massage',
+    problem: 'Pain that keeps coming back, and still no clear diagnosis?',
+    solution: 'Diagnostic MSK ultrasound with Reliable Scan, then a 60-minute clinical massage guided by the findings. Scan, written report and treatment under one roof.',
+    href: '/services/msk-ultrasound-clinical-massage',
+    bookingHref: BOOKING_URLS.mskUltrasoundMassage,
+  },
+  {
     title: 'Back & Neck Pain MOT',
     problem: 'Desk-related back pain or a stiff neck?',
     solution: 'Full postural assessment and focused treatment targeting the exact muscles driving your pain.',
@@ -159,16 +166,14 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            ☀️ Summer Offer: Enjoy 20% off your first session — feel your best this summer.
+            Suffered an injury recently? Get scanned, diagnosed and treated in one bundle with our trusted local partner Reliable Scan.
           </span>
-          <a
-            href={BOOKING_URLS.sportsDeepTissue}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/services/msk-ultrasound-clinical-massage"
             className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#0f767a] transition-all whitespace-nowrap"
           >
-            Book now
-          </a>
+            Book today
+          </Link>
         </div>
       </div>
 

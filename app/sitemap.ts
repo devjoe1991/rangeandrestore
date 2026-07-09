@@ -43,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/services/msk-ultrasound-clinical-massage`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/services/sports-deep-tissue-massage`,
       lastModified,
       changeFrequency: 'monthly',

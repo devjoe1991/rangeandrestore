@@ -254,6 +254,17 @@ export const businessSchema = {
   makesOffer: [
     {
       '@type': 'Offer',
+      name: 'MSK Injury Assessment, Diagnostic Ultrasound & Clinical Massage',
+      description: 'Diagnostic MSK ultrasound (one body area, clinical consultation, written report and images) by partner clinic Reliable Scan, followed by a 60-minute clinical massage guided by the findings. £75 paid online to Range and Restore, £90 paid directly to Reliable Scan. £165 total, approx. 90 minutes.',
+      url: `${BASE_URL}/services/msk-ultrasound-clinical-massage`,
+      priceCurrency: 'GBP',
+      priceSpecification: [
+        { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60-minute Clinical Massage, paid online to Range and Restore when booking' },
+        { '@type': 'PriceSpecification', price: '90', priceCurrency: 'GBP', description: 'Diagnostic MSK ultrasound, consultation, report and images, paid directly to Reliable Scan' },
+      ],
+    },
+    {
+      '@type': 'Offer',
       name: 'Sports & Deep Tissue Massage',
       description: 'Targeted sports and deep tissue massage for injury recovery, muscle tension and performance support. 30, 60 or 90 minutes.',
       url: `${BASE_URL}/services/sports-deep-tissue-massage`,

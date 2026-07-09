@@ -133,6 +133,9 @@ export default function ReliableScanPartnerPage() {
             <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &larr; Back to Our Archway Community
             </Link>
+            <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Book the MSK Ultrasound + Clinical Massage package
+            </Link>
             <Link href="/clinical-collaboration" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How clinical collaboration works at 130 Junction Road
             </Link>

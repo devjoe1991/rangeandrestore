@@ -11,6 +11,7 @@ export const BOOKING_URLS = {
   mld: `${BOOKING_BASE}/#/discipline/5/treatment/25`,
   twoHourRelief: `${BOOKING_BASE}/#/discipline/7/treatment/32`,
   cuppingSportsDeepTissue: `${BOOKING_BASE}/#/discipline/9/treatment/36`,
+  mskUltrasoundMassage: `${BOOKING_BASE}/#/discipline/13/treatment/71`,
   communityTuesday: `${BOOKING_BASE}/#/community-tuesday-clinic`,
   recoverySuite: `${BOOKING_BASE}/#/recovery-suite`,
   saunaSolo: `${BOOKING_BASE}/#/recovery-suite`,
@@ -41,6 +42,7 @@ export const NAV_ITEMS = [
     label: 'Services',
     href: '/services',
     children: [
+      { label: 'MSK Scan + Clinical Massage', href: '/services/msk-ultrasound-clinical-massage' },
       { label: 'Back & Neck Pain MOT', href: '/services/back-neck-pain-mot' },
       { label: 'Advanced Clinical Massage', href: '/services/advanced-clinical-massage' },
       { label: 'Sports & Deep Tissue Massage', href: '/services/sports-deep-tissue-massage' },
