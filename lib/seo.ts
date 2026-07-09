@@ -175,6 +175,7 @@ export const businessSchema = {
   '@id': `${BASE_URL}/#business`,
   name: 'Range and Restore Sports Massage',
   description: 'Assessment-led sports massage, deep tissue therapy, advanced clinical massage and certified Manual Lymphatic Drainage (MLD) in Archway, North London. Serving N19, Tufnell Park, Islington, Holloway, Finsbury Park and surrounding areas.',
+  award: 'New Sports Massage Clinic of the Year 2026/27, London & South East England Prestige Awards',
   url: BASE_URL,
   telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',

@@ -147,6 +147,7 @@ export function Footer() {
               {[
                 ['About Carlos',           '/about'],
                 ['Meet the Team',          '/team'],
+                ['Awards & Recognition',   '/awards'],
                 ['Recovery Suite',         '/recovery-suite'],
                 ['Gallery',                '/gallery'],
                 ['Gift Cards',             '/gift-cards'],

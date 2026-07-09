@@ -49,6 +49,7 @@ const NAME_MAP = {
   'event-marathon': 'R&R — Marathon / Event Recovery',
   'gift-cards-bundles': 'R&R — Gift Cards & Bundles',
   'announcement': 'R&R — Announcement (flexible)',
+  'award-prestige-2026': 'R&R — Award / Prestige 2026',
   'gallery-showcase': 'R&R — Gallery Showcase',
   // Seasonal / holiday / event (batch 2)
   'seasonal-christmas': 'R&R — Christmas',

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
+import { AwardStrip } from '@/components/AwardStrip'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
@@ -217,6 +218,9 @@ export default function HomePage() {
           </span>
         </div>
       </section>
+
+      {/* ── 1.5 AWARD STRIP ──────────────────────────────────── */}
+      <AwardStrip />
 
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
       <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
