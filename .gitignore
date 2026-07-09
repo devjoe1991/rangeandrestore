@@ -42,3 +42,6 @@ next-env.d.ts
 
 # MCP config — contains API keys, never commit
 .mcp.json
+
+# local-only working notes — never commit
+docs/gbp-*.md
