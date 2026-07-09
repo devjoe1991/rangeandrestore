@@ -314,6 +314,9 @@ export default function MskUltrasoundClinicalMassagePage() {
               <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 → Advanced Clinical Massage
               </Link>
+              <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+                → Do I Need a Scan for My Injury? MSK Ultrasound, Explained
+              </Link>
               <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
                 → How to Recover Faster Between Training and Events
               </Link>

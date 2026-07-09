@@ -11,6 +11,13 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Do I Need a Scan for My Injury? MSK Ultrasound, Explained',
+    slug: 'msk-ultrasound-scan-massage-archway',
+    date: '9 July 2026',
+    excerpt: "Pain that isn't improving, or an injury you can't explain? When a diagnostic MSK ultrasound is worth having, what it can show, and how the new scan + clinical massage package works under one roof. Archway, North London.",
+    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
+  },
+  {
     title: 'The Benefits of Sports Massage: What It Actually Does',
     slug: 'sports-massage-benefits',
     date: '3 July 2026',

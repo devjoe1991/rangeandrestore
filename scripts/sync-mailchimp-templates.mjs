@@ -43,6 +43,7 @@ const NAME_MAP = {
   'collab-reliable-scan': 'R&R — Community × Reliable Scan',
   'community-roundup': 'R&R — Community Roundup',
   'service-recovery-suite': 'R&R — Recovery Suite',
+  'service-msk-ultrasound-massage': 'R&R — MSK Scan + Clinical Massage',
   'service-sports-pain': 'R&R — Sports & Pain Relief',
   'service-community-tuesday-clinic': 'R&R — Community Tuesday Clinic',
   'team-introduction': 'R&R — Meet the Team',
