@@ -45,3 +45,7 @@ next-env.d.ts
 
 # local-only working notes — never commit
 docs/gbp-*.md
+
+# Blender auto-backups next to the sauna room source
+*.blend1
+*.blend2

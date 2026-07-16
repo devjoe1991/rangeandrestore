@@ -14,6 +14,7 @@ export const BOOKING_URLS = {
   mskUltrasoundMassage: `${BOOKING_BASE}/#/discipline/13/treatment/71`,
   communityTuesday: `${BOOKING_BASE}/#/community-tuesday-clinic`,
   recoverySuite: `${BOOKING_BASE}/#/recovery-suite`,
+  infraredHybridSauna: `${BOOKING_BASE}/#/infrared-hybrid-sauna`,
   saunaSolo: `${BOOKING_BASE}/#/recovery-suite`,
   saunaShared: `${BOOKING_BASE}/#/recovery-suite`,
   compressionLegs: `${BOOKING_BASE}/#/recovery-suite`,
