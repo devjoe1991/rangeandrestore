@@ -5,6 +5,7 @@ import { BookingButton } from '@/components/BookingButton'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
+import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
@@ -250,8 +251,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 2.05 VIRTUAL SAUNA ROOM ──────────────────────────── */}
+      <SaunaRoomStrip />
+
       {/* ── 2.1 COMMUNITY TUESDAY CLINIC ─────────────────────── */}
-      <section className="section bg-page" aria-labelledby="community-tuesday-heading">
+      {/* Tight top padding: this pairs with the sauna card directly above it. */}
+      <section
+        className="bg-page pb-[clamp(3.5rem,6vw,5.5rem)] pt-3"
+        aria-labelledby="community-tuesday-heading"
+      >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage overflow-hidden">
             <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />

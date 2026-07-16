@@ -15,6 +15,7 @@ import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing'
 import * as THREE from 'three'
 import { BOOKING_URLS } from '@/lib/constants'
 import {
+  DEFAULT_FOV,
   DOOR_OPEN_ANGLE,
   DOOR_OPEN_END,
   DOOR_OPEN_START,
@@ -26,6 +27,7 @@ import {
   SPAWN,
   SWITCH_POSITION,
   SWITCH_REACH,
+  clampFov,
   clampToRoom,
   easeInOut,
 } from './roomBounds'
@@ -183,6 +185,13 @@ function CameraRig({
 
   useFrame((_, delta) => {
     if (!active) return
+
+    // Ease the field of view toward whatever the wheel or a pinch asked for.
+    const perspective = camera as THREE.PerspectiveCamera
+    if (Math.abs(perspective.fov - input.fov) > 0.01) {
+      perspective.fov += (input.fov - perspective.fov) * Math.min(delta * 12, 1)
+      perspective.updateProjectionMatrix()
+    }
 
     if (applyLook && (input.yawDelta !== 0 || input.pitchDelta !== 0)) {
       euler.current.setFromQuaternion(camera.quaternion)
@@ -557,6 +566,22 @@ export default function SaunaRoomScene() {
     }
   }, [stage, isTouch, switchNear, nearHotspotId, flick, toggleHotspot, input])
 
+  // Mouse wheel zooms. This works while the pointer is locked, and is registered
+  // non-passively so the page itself never scrolls out from under the tour.
+  useEffect(() => {
+    if (stage !== 'exploring' || isTouch) return
+    const shell = shellRef.current
+    if (!shell) return
+
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      input.fov = clampFov(input.fov + e.deltaY * 0.05)
+    }
+
+    shell.addEventListener('wheel', onWheel, { passive: false })
+    return () => shell.removeEventListener('wheel', onWheel)
+  }, [stage, isTouch, input])
+
   // Stable callbacks: an inline arrow here makes drei re-subscribe every render,
   // which fires a spurious unlock and silently drops you out of the experience.
   const handleLock = useCallback(() => setLocked(true), [])
@@ -585,7 +610,7 @@ export default function SaunaRoomScene() {
     <div ref={shellRef} className="relative h-full w-full overflow-hidden bg-neutral-950">
       <Canvas
         shadows
-        camera={{ fov: 68, near: 0.05, far: 40, position: [0.55, 1.62, -1.5] }}
+        camera={{ fov: DEFAULT_FOV, near: 0.05, far: 40, position: [0.55, 1.62, -1.5] }}
         dpr={[1, isTouch ? 1.5 : 1.75]}
         gl={{ antialias: true }}
         onCreated={({ gl }) => {
@@ -672,7 +697,9 @@ export default function SaunaRoomScene() {
             Enter the virtual experience
           </button>
           <p className="text-xs text-white/55">
-            {isTouch ? 'Hold the left side to walk · drag to look' : 'W A S D to move · mouse to look'}
+            {isTouch
+              ? 'Hold the left side to walk · drag to look · pinch to zoom'
+              : 'W A S D to move · mouse to look · scroll to zoom'}
           </p>
         </div>
       )}

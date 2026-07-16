@@ -51,6 +51,18 @@ export const MIN_PITCH = -Math.PI / 2 + 0.12
 export const MAX_PITCH = Math.PI / 2 - 0.12
 
 /**
+ * Zoom is a field-of-view change, as though you were leaning in to look closer.
+ * Wide enough to take the small room in, tight enough to read the sauna controls.
+ */
+export const DEFAULT_FOV = 68
+export const MIN_FOV = 28
+export const MAX_FOV = 76
+
+export function clampFov(fov: number): number {
+  return Math.min(Math.max(fov, MIN_FOV), MAX_FOV)
+}
+
+/**
  * Clamps a proposed position to the walkable floor.
  * Walls are a simple box clamp. The cabin pushes the visitor out along whichever
  * axis they were least far into it, so brushing its side slides rather than sticks.
