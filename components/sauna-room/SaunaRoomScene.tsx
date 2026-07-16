@@ -396,20 +396,51 @@ function HotspotDot({
   )
 }
 
-/** The tip content, pinned in screen space at a fixed, readable size. */
-function HotspotPanel({ spot, onClose }: { spot: Hotspot; onClose: () => void }) {
+/**
+ * The tip content, pinned in screen space at a fixed, readable size — never
+ * scaled by distance, which would balloon it as you walk up to a dot.
+ *
+ * There is no close button: the same control that opened the tip closes it, and
+ * walking away closes it too, so the dot behaves as a toggle rather than a thing
+ * you have to dismiss.
+ *
+ * On touch it takes the shape of an iOS notification banner: a compact, heavily
+ * blurred rounded rectangle sitting above the walk controls.
+ */
+function HotspotPanel({ spot, isTouch }: { spot: Hotspot; isTouch: boolean }) {
+  if (isTouch) {
+    return (
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center px-3 pb-16">
+        <div className="fade-up w-full max-w-sm rounded-[20px] bg-white/75 px-3.5 py-3 shadow-[0_10px_34px_rgba(0,0,0,0.32)] ring-1 ring-black/5 backdrop-blur-xl">
+          <div className="flex items-start gap-3">
+            <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-[9px] bg-[#1a3d3a] text-[10px] font-bold tracking-tight text-white">
+              R&amp;R
+            </span>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="truncate text-[13px] font-semibold text-neutral-900">
+                  {spot.title}
+                </span>
+                <span className="shrink-0 text-[10px] text-neutral-400">tap to close</span>
+              </div>
+              <p className="mt-0.5 line-clamp-4 text-[12px] leading-snug text-neutral-700">
+                {spot.body}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center px-4 pb-14">
-      <div className="pointer-events-auto w-full max-w-md rounded-2xl bg-white/95 p-4 text-left shadow-2xl backdrop-blur-sm sm:p-5">
+      <div className="w-full max-w-md rounded-2xl bg-white/95 p-4 text-left shadow-2xl backdrop-blur-sm sm:p-5">
         <div className="mb-1.5 text-base font-semibold text-neutral-900">{spot.title}</div>
         <p className="text-sm leading-relaxed text-neutral-600">{spot.body}</p>
-        <button
-          type="button"
-          onClick={onClose}
-          className="mt-3 rounded-full bg-neutral-900 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-neutral-700"
-        >
-          Close
-        </button>
+        <p className="mt-3 text-[11px] font-medium uppercase tracking-wide text-neutral-400">
+          Press E to close
+        </p>
       </div>
     </div>
   )
@@ -521,11 +552,21 @@ export default function SaunaRoomScene() {
     setOpenHotspotId((current) => (current === id ? '' : id))
   }, [])
 
-  /** A tap on touch acts on whatever is in reach; the switch wins over a dot. */
-  const handleTouchInteract = useCallback(() => {
-    if (switchNear) flick()
+  /**
+   * One interact action shared by the E key and a touch tap.
+   * Closing an open tip comes first, so the same press always undoes the last
+   * one — otherwise stepping toward the switch would leave a tip stuck open.
+   */
+  const interact = useCallback(() => {
+    if (openHotspotId) setOpenHotspotId('')
+    else if (switchNear) flick()
     else if (nearHotspotId) toggleHotspot(nearHotspotId)
-  }, [switchNear, nearHotspotId, flick, toggleHotspot])
+  }, [openHotspotId, switchNear, nearHotspotId, flick, toggleHotspot])
+
+  // Walking away from a dot closes its tip, so it never trails you round the room.
+  useEffect(() => {
+    if (openHotspotId && nearHotspotId !== openHotspotId) setOpenHotspotId('')
+  }, [openHotspotId, nearHotspotId])
 
   // Keyboard: held keys drive the shared input each frame.
   useEffect(() => {
@@ -538,11 +579,7 @@ export default function SaunaRoomScene() {
     }
     const down = (e: KeyboardEvent) => {
       keys.current[e.code] = true
-      // The switch wins if you are standing in reach of both.
-      if (e.code === 'KeyE') {
-        if (switchNear) flick()
-        else if (nearHotspotId) toggleHotspot(nearHotspotId)
-      }
+      if (e.code === 'KeyE') interact()
       sync()
     }
     const up = (e: KeyboardEvent) => {
@@ -564,7 +601,7 @@ export default function SaunaRoomScene() {
       window.removeEventListener('blur', clear)
       clear()
     }
-  }, [stage, isTouch, switchNear, nearHotspotId, flick, toggleHotspot, input])
+  }, [stage, isTouch, interact, input])
 
   // Mouse wheel zooms. This works while the pointer is locked, and is registered
   // non-passively so the page itself never scrolls out from under the tour.
@@ -652,8 +689,8 @@ export default function SaunaRoomScene() {
       {stage === 'exploring' && isTouch && (
         <TouchLayer
           input={input}
-          canInteract={switchNear || Boolean(nearHotspotId)}
-          onTapInteract={handleTouchInteract}
+          canInteract={switchNear || Boolean(nearHotspotId) || Boolean(openHotspotId)}
+          onTapInteract={interact}
         />
       )}
 
@@ -726,7 +763,7 @@ export default function SaunaRoomScene() {
               {switchNear ? ' to flick the lights' : ' to read more'}
             </div>
           )}
-          {openSpot && <HotspotPanel spot={openSpot} onClose={() => setOpenHotspotId('')} />}
+          {openSpot && <HotspotPanel spot={openSpot} isTouch={isTouch} />}
         </>
       )}
     </div>
