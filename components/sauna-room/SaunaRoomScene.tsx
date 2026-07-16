@@ -733,10 +733,16 @@ export default function SaunaRoomScene() {
           >
             Enter the virtual experience
           </button>
+          {/*
+            Driven by CSS rather than the isTouch hook: the hook starts false and
+            only corrects after hydration, so the server-rendered gate would ship
+            "W A S D" to phones and visibly swap it a moment later.
+          */}
           <p className="text-xs text-white/55">
-            {isTouch
-              ? 'Hold the left side to walk · drag to look · pinch to zoom'
-              : 'W A S D to move · mouse to look · scroll to zoom'}
+            <span className="hint-pointer">W A S D to move · mouse to look · scroll to zoom</span>
+            <span className="hint-touch">
+              Hold the left side to walk · drag to look · pinch to zoom
+            </span>
           </p>
         </div>
       )}

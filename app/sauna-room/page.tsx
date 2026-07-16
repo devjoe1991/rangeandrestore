@@ -158,9 +158,19 @@ export default function SaunaRoomPage() {
           <SaunaRoomScene />
         </div>
 
+        {/*
+          Which controls to name is decided in CSS, not JavaScript. This is a
+          server component, and a phone should never be shown keyboard controls
+          even for the moment before hydration.
+        */}
         <p className="mt-4 text-sm text-neutral-500">
-          Works on desktop with W, A, S, D and your mouse, and on a phone with touch controls. The
-          room is modelled to scale from the real suite, and we are still adding detail.
+          <span className="hint-pointer">
+            Move with W, A, S, D and look around with your mouse.
+          </span>
+          <span className="hint-touch">
+            Hold the left of the screen to walk, drag to look around, and pinch to zoom.
+          </span>{' '}
+          The room is modelled to scale from the real suite, and we are still adding detail.
         </p>
 
         {/* The pitch, as scannable points. */}
