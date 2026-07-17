@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
@@ -114,6 +115,39 @@ export default function MassageBundlesPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+          <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
+          <div className="p-6 lg:p-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+            <div className="flex-1">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <h2 className="text-2xl font-bold text-page">MSK Injury Assessment, Diagnostic Ultrasound &amp; Clinical Massage</h2>
+                <span className="inline-block bg-page-sage text-page text-sm font-semibold px-3 py-1 rounded-full">New Partner Package</span>
+              </div>
+              <div className="flex items-baseline gap-3 mb-4">
+                <span className="text-4xl font-bold text-[#0f767a]">£165</span>
+                <span className="text-page-muted opacity-80 text-sm">£75 online + £90 paid directly to Reliable Scan</span>
+              </div>
+              <p className="text-page-muted mb-3">
+                Not sure what&apos;s actually causing your pain? Start with a diagnostic MSK ultrasound with our partner Reliable Scan, then have your 60-minute Clinical Massage guided by the findings — scan, written report and treatment all under one roof at 130 Junction Road.
+              </p>
+              <p className="text-page-muted text-sm italic">Ideal for: Persistent pain, recent sports injuries, and anyone who wants a clear diagnosis before committing to a treatment plan or bundle.</p>
+            </div>
+            <div className="flex-shrink-0 flex flex-col gap-3">
+              <a
+                href={BOOKING_URLS.mskUltrasoundMassage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary px-6 py-3 text-base whitespace-nowrap text-center"
+              >
+                Book Now
+              </a>
+              <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium text-sm text-center min-h-[44px] flex items-center justify-center">
+                Learn more →
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 lg:p-10 text-center">
