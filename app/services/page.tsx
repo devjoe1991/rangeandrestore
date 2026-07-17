@@ -87,8 +87,9 @@ const services = [
     bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation. Pairs with sports massage for cyclists, runners and desk workers across North London.',
     duration: '60 min – £15 (usually £35)  ·  private session',
-    image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
-    imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
+    image: '/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
+    imageAlt: 'Infrared Hybrid Sauna glowing red beside the recliner in the private Recovery Suite at Range and Restore, Archway, North London',
+    imageAspect: 'aspect-[1600/1132]',
   },
   {
     title: 'Normatec Compression Therapy (Recovery Suite)',
@@ -96,8 +97,9 @@ const services = [
     bookingHref: BOOKING_URLS.recoverySuite,
     description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS, flushes tired legs after long runs, rides or long shifts on your feet.',
     duration: 'Part of the private Recovery Suite experience',
-    image: '/normatec-full-body-compression-recovery-archway-north-london.png',
-    imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
+    image: '/normatec-3-full-body-compression-session-recovery-suite-archway-north-london.jpg',
+    imageAlt: 'Client on the treatment table wearing the Hyperice Normatec 3 Full Body compression system at Range and Restore, Archway, North London',
+    imageAspect: 'aspect-[16/9]',
   },
   {
     title: 'Sports Massage + Sauna Recovery Packages (Recovery Suite)',
@@ -166,6 +168,7 @@ export default function ServicesPage() {
           {services.map((service) => {
             const image = 'image' in service ? service.image : undefined
             const imageAlt = 'imageAlt' in service ? service.imageAlt : undefined
+            const imageAspect = 'imageAspect' in service ? service.imageAspect : 'aspect-[16/9] lg:aspect-[21/9]'
             const ctaLabel = 'Book Now'
             const isTel = service.bookingHref.startsWith('tel:')
 
@@ -173,7 +176,7 @@ export default function ServicesPage() {
               <div key={service.href} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
                 <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
                 {image && (
-                  <Link href={service.href} className="block relative aspect-[16/9] lg:aspect-[21/9] overflow-hidden">
+                  <Link href={service.href} className={`block relative ${imageAspect} overflow-hidden`}>
                     <Image
                       src={image}
                       alt={imageAlt || service.title}
