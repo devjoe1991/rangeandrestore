@@ -71,7 +71,7 @@ export function Footer() {
                 <FacebookIcon />
               </a>
               <a
-                href="https://www.instagram.com/rangeandrestore?igsh=MWdiN2M4MjR5eWlvdQ=="
+                href="https://www.instagram.com/rangeandrestore/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
