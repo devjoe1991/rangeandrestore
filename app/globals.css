@@ -203,6 +203,20 @@ input, select, textarea {
 }
 .fade-up { animation: fadeUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 
+/* ── Control hints (virtual sauna room) ───────────────────── */
+/*
+  Picks the right control wording from the input device itself. This is CSS and
+  not a JS check on purpose: the pages are server rendered, so a JS check would
+  ship keyboard controls to a phone and visibly swap them after hydration.
+*/
+.hint-pointer { display: inline; }
+.hint-touch   { display: none; }
+
+@media (pointer: coarse) {
+  .hint-pointer { display: none; }
+  .hint-touch   { display: inline; }
+}
+
 /* ── Button styles ────────────────────────────────────────── */
 .btn-outline-dark {
   background: transparent;
