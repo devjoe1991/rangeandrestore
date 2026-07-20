@@ -118,9 +118,8 @@ const recoveryServices = [
     schemaName: 'Infrared Hybrid Sauna (Recovery Suite)',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
-    badge: 'July Offer',
-    price: '£15',
-    detail: 'usually £35 · 60 min private',
+    price: 'From £19',
+    detail: '45 or 60 min private',
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation.',
     image: '/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp',
     imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
@@ -130,20 +129,20 @@ const recoveryServices = [
     schemaName: 'Normatec Compression Therapy (Recovery Suite)',
     href: '/recovery-suite/compression-therapy',
     bookingHref: BOOKING_URLS.recoverySuite,
-    price: 'Recovery Suite session',
-    detail: '',
+    price: 'From £19',
+    detail: 'in a Recovery Suite session',
     description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired legs after long runs, rides or shifts.',
     image: '/recovery-suite/normatec-compression-therapy-archway.jpg',
     imageAlt: 'Client on the treatment table wearing the Hyperice Normatec 3 Full Body compression system at Range and Restore, Archway, North London',
   },
   {
-    title: 'Massage + Sauna Packages',
-    schemaName: 'Sports Massage + Sauna Recovery Packages (Recovery Suite)',
+    title: 'Massage + Recovery Packages',
+    schemaName: 'Sports Massage + Recovery Packages (Recovery Suite)',
     href: '/recovery-suite/recovery-packages',
     bookingHref: BOOKING_URLS.recoverySuite,
     price: 'From £85',
     detail: '75 or 90 min',
-    description: 'Hands-on sports massage plus private Recovery Suite time, booked as one appointment. 30 min massage + 45 min sauna, or 60 + 30.',
+    description: 'Hands-on sports massage plus private Recovery Suite time, booked as one appointment. Finish with the sauna or Normatec compression. Restore+ memberships also available.',
     image: '/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
     imageAlt: 'Infrared Hybrid Sauna glowing red beside the recliner in the private Recovery Suite at Range and Restore, Archway, North London',
   },
@@ -229,7 +228,7 @@ export default function ServicesPage() {
               Recover properly, under the same roof
             </h2>
             <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
-              A private recovery and wellness space alongside the treatment rooms. <span className="font-bold text-white">July offer: 60-minute Infrared Hybrid Sauna £15 (usually £35), until 31 July.</span>
+              A private recovery and wellness space alongside the treatment rooms. <span className="font-bold text-white">Infrared Hybrid Sauna from £19, recovery packages from £85, plus Restore+ monthly memberships.</span>
             </p>
           </div>
 
@@ -368,11 +367,6 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 640px) 50vw, 33vw"
         />
-        {s.badge && (
-          <span className="absolute top-3 left-3 bg-[#7dd94a] text-[#1a2330] text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full shadow-sm">
-            {s.badge}
-          </span>
-        )}
       </Link>
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         <h3 className="font-black text-white text-sm sm:text-base leading-tight tracking-tight mb-1.5">

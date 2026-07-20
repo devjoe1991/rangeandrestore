@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: 'How do I book time on the Normatec?',
-    a: 'The Normatec is part of the private Recovery Suite experience. Book a 60 minute Recovery Suite session and you have the suite, including the Infrared Hybrid Sauna and the Normatec system, to yourself. Carlos will help you fit compression into your session depending on what you\'re recovering from.',
+    a: 'The Normatec is part of the private Recovery Suite experience. Book a private Recovery Suite session and you have the suite, including the Infrared Hybrid Sauna and the Normatec system, to yourself. You can also book the Sports Massage + Normatec Compression package (90 minutes, £110) to combine a full sports massage with compression in one visit. Carlos will help you fit compression into your session depending on what you\'re recovering from.',
   },
   {
     q: 'Do I need to undress?',
@@ -132,8 +132,8 @@ export default function CompressionTherapyPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: 'Private Recovery Suite Session', desc: '60 minutes for £15 this July (usually £35). Private use of the suite, including the Infrared Hybrid Sauna and the Normatec recovery system.' },
-                { duration: 'Sports Massage + Sauna Recovery Package', desc: '75 minutes for £85 or 90 minutes for £110. Hands-on treatment followed by recovery time in the suite.' },
+                { duration: 'Private Recovery Suite Session', desc: '45 minutes for £19 or 60 minutes for £29. Private use of the suite, including the Infrared Hybrid Sauna and the Normatec recovery system.' },
+                { duration: 'Sports Massage + Normatec Compression', desc: '90 minutes for £110. A full 60-minute sports massage followed by 30 minutes on the Normatec system.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>
@@ -141,7 +141,7 @@ export default function CompressionTherapyPage() {
                 </div>
               ))}
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">Prices are current launch-offer pricing, also shown on the booking page.</p>
+            <p className="text-page-muted text-sm mt-3 italic">Prices are also shown on the booking page.</p>
           </section>
 
           <section>
@@ -245,9 +245,9 @@ export default function CompressionTherapyPage() {
 
           {/* Book Now CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Normatec recovery now open at Range and Restore</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Normatec recovery at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. A private 60 minute Recovery Suite session is £15 this July (usually £35), and sports massage packages start from £85. Available to book now.
+              The Recovery Suite is open in Archway, North London. Private Recovery Suite sessions from £19, and a Sports Massage + Normatec Compression package for £110. Available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}

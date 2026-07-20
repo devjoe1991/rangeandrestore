@@ -77,7 +77,7 @@ const services = [
   {
     title: 'Infrared Hybrid Sauna',
     problem: 'Sore, stressed and not sleeping well?',
-    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private 60 minute session £15 this July (usually £35).',
+    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £19, plus Restore+ monthly memberships.',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     image: '/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp',
@@ -154,7 +154,7 @@ const blogPosts = [
 const bundles = [
   { name: 'Pain Relief & Mobility Plan', label: '5 × 60 min', originalPrice: '£425', price: '£350', perSession: '£70/session', saving: 'Saving £75', valid: '6 months' },
   { name: 'Pain Relief & Mobility Plan', label: '10 × 60 min', originalPrice: '£850', price: '£650', perSession: '£65/session', saving: 'Saving £200', valid: '12 months', popular: true },
-  { name: 'Advanced Recovery & Performance Plan', label: '5 × 90 min', originalPrice: '£625', price: '£500', perSession: '£100/session', saving: 'Saving £125', valid: '6 months' },
+  { name: 'Advanced Recovery & Performance Plan', label: '5 × 90 min', originalPrice: '£625', price: '£500', perSession: '£100/session', saving: 'Saving £125', valid: '8 months' },
   { name: 'Advanced Recovery & Performance Plan', label: '10 × 90 min', originalPrice: '£1250', price: '£950', perSession: '£95/session', saving: 'Saving £300', valid: '10 months' },
 ]
 
@@ -315,7 +315,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            <span className="font-black">July Offer:</span> 60-minute Infrared Hybrid Sauna £15 (usually £35). Available until 31 July.
+            <span className="font-black">Recovery Suite:</span> private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; performance memberships.
           </span>
         </div>
       </div>
@@ -336,7 +336,7 @@ export default function HomePage() {
             {[
               {
                 title: 'Infrared Hybrid Sauna',
-                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat. £15 this July (usually £35).',
+                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat. Private sessions from £19.',
                 href: '/recovery-suite/infrared-sauna',
               },
               {
@@ -345,8 +345,8 @@ export default function HomePage() {
                 href: '/recovery-suite/compression-therapy',
               },
               {
-                title: 'Recovery Sessions & Packages',
-                desc: 'Private Infrared Hybrid Sauna sessions £15 this July (usually £35), plus combined sports massage and sauna recovery packages from £85.',
+                title: 'Recovery Sessions & Memberships',
+                desc: 'Private sauna sessions from £19, sports massage recovery packages from £85, plus Restore+ monthly memberships.',
                 href: '/recovery-suite/recovery-packages',
               },
             ].map((card) => (

@@ -270,7 +270,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-4">Use the Normatec at Range and Restore</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            The Recovery Suite is now open at 130 Junction Road, Archway. The Normatec is part of the private Recovery Suite experience — a private 60 minute session is £15 this July (usually £35), bookable online. Sports massage is bookable separately, and gift cards are live.
+            The Recovery Suite is now open at 130 Junction Road, Archway. The Normatec is part of the private Recovery Suite experience — private sessions start from £19, bookable online, and there&rsquo;s a Sports Massage + Normatec Compression package for £110. Sports massage is bookable separately, and gift cards are live.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a

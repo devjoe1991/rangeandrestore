@@ -29,7 +29,7 @@ const bundles = [
   {
     title: 'Advanced Recovery & Performance Plan – 5 × 90-Minute Sessions',
     price: '£500',
-    validity: 'Expires after 6 months',
+    validity: 'Expires after 8 months',
     saving: 'Save £125',
     description: 'This 5-session advanced plan is designed for clients who need deeper, more focused treatment to address pain, improve mobility, and accelerate recovery. Each 90-minute session allows for a thorough assessment and extended hands-on work, combining sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, and assisted stretching.',
     ideal: 'Ideal for: Athletes and runners, clients with multiple areas of concern, and those who prefer a more thorough, in-depth session each time.',

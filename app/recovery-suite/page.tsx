@@ -8,7 +8,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Suite – Infrared Hybrid Sauna & Compression Therapy in Archway London',
-  description: 'Recovery and wellness suite at Range and Restore, Archway. Infrared Hybrid Sauna and Normatec compression. July launch offer: private 60 minute sauna £15 (usually £35).',
+  description: 'Recovery and wellness suite at Range and Restore, Archway. Infrared Hybrid Sauna and Normatec compression. Private sauna sessions from £19, recovery packages from £85, plus Restore+ memberships.',
   path: '/recovery-suite',
 })
 
@@ -76,7 +76,7 @@ export default function RecoverySuitePage() {
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
           <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
-            Infrared Hybrid Sauna and Normatec full body compression in one private suite. Private 60 minute sauna sessions £15 this July (usually £35), and recovery packages with sports massage from £85. Now open.
+            Infrared Hybrid Sauna and Normatec full body compression in one private suite. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, recovery packages with sports massage from £85, and Restore+ monthly memberships. Now open.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 items-center">
             <a href={BOOKING_URLS.recoverySuite} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Recovery Session</a>
@@ -116,7 +116,7 @@ export default function RecoverySuitePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <RecoverySuiteCard
             title="Infrared Hybrid Sauna"
-            summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Solo or shared sessions to support muscle recovery, circulation and proper time to switch off. £15 this July (usually £35)."
+            summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Solo or shared sessions to support muscle recovery, circulation and proper time to switch off. Private sessions from £19."
             href="/recovery-suite/infrared-sauna"
             image="/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp"
             imageAlt="Vidalux 2 person hybrid infrared sauna at Range and Restore Archway"
@@ -130,7 +130,7 @@ export default function RecoverySuitePage() {
           />
           <RecoverySuiteCard
             title="Recovery Sessions & Packages"
-            summary="Private Infrared Hybrid Sauna sessions £15 this July (usually £35), plus combined sports massage and sauna recovery packages from £85. Pick the level that suits you."
+            summary="Private Infrared Hybrid Sauna sessions from £19, combined sports massage recovery packages from £85, plus Restore+ monthly memberships. Pick the level that suits you."
             href="/recovery-suite/recovery-packages"
             image="/recovery-suite/recovery-suite-room-archway.jpg"
             imageAlt="Recovery sessions and packages combining sauna compression and sports massage in Archway"
@@ -149,9 +149,9 @@ export default function RecoverySuitePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { step: '01', title: 'Standalone recovery', desc: 'A private 60 minute Infrared Hybrid Sauna session, £15 this July (usually £35). Quick to fit in around training or a busy week, no massage needed.' },
-              { step: '02', title: 'Recovery with massage', desc: 'Sports massage plus sauna recovery in one booking, from £85. The full sequence in one visit.' },
-              { step: '03', title: 'Become a member', desc: 'Recovery memberships for athletes and regulars. Coming soon.' },
+              { step: '01', title: 'Standalone recovery', desc: 'A private Infrared & Traditional Hybrid Sauna session from £19. Quick to fit in around training or a busy week, no massage needed.' },
+              { step: '02', title: 'Recovery with massage', desc: 'Sports massage plus sauna or Normatec recovery in one booking, from £85. The full sequence in one visit.' },
+              { step: '03', title: 'Become a member', desc: 'Restore+ sauna and performance memberships, from £49 a month. Set up personally — call or email to join.' },
             ].map((item) => (
               <div key={item.step} className="bg-page-sage rounded-2xl p-6">
                 <p className="text-[#0f767a] font-black text-sm tracking-widest mb-3">{item.step}</p>

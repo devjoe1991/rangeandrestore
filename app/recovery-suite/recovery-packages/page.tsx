@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
-import { BOOKING_URLS } from '@/lib/constants'
+import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Recovery Sessions in Archway London | Infrared Hybrid Sauna £15 & Massage Packages',
-  description: 'Private Infrared Hybrid Sauna sessions £15 this July (usually £35) and combined sports massage and sauna packages from £85 at Range and Restore, Archway.',
+  title: 'Recovery Sessions in Archway London | Infrared Sauna, Massage Packages & Memberships',
+  description: 'Pay as you go Infrared & Traditional Hybrid Sauna from £19, sports massage and recovery packages from £85, plus Restore+ sauna and performance memberships at Range and Restore, Archway.',
   path: '/recovery-suite/recovery-packages',
 })
 
@@ -19,7 +19,7 @@ const parentServiceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Recovery Sessions',
-  description: 'Standalone single sessions, recovery combos and full recovery packages with sports massage at Range and Restore, Archway, North London.',
+  description: 'Pay as you go Infrared & Traditional Hybrid Sauna sessions, sports massage recovery packages and Restore+ memberships at Range and Restore, Archway, North London.',
   provider: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',
@@ -39,51 +39,138 @@ const parentServiceSchema = {
     '@type': 'OfferCatalog',
     name: 'Recovery Sessions',
     itemListElement: [
-      { '@type': 'Offer', price: '15.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared Hybrid Sauna – 60 Minutes (July launch offer, usually £35)' } },
+      { '@type': 'Offer', price: '19.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared & Traditional Hybrid Sauna – 45 Minutes' } },
+      { '@type': 'Offer', price: '29.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes' } },
       { '@type': 'Offer', price: '85.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (30 Minutes) + Infrared Hybrid Sauna (45 Minutes)' } },
-      { '@type': 'Offer', price: '110.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Infrared Hybrid Sauna (30 Minutes)' } },
+      { '@type': 'Offer', price: '90.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Infrared Hybrid Sauna (30 Minutes)' } },
+      { '@type': 'Offer', price: '110.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Normatec Compression Therapy (30 Minutes)' } },
     ],
   },
 }
 
 const saunaSessions = [
   {
-    name: 'Infrared Hybrid Sauna – 60 Minutes',
-    sequence: '60 min · private use of the Recovery Suite',
-    price: '£15',
-    priceNote: 'July launch offer · usually £35',
-    desc: 'A private full-hour infrared and traditional hybrid sauna session with the suite to yourself. Time to settle in, switch between traditional and infrared heat, and properly switch off. The simplest entry point into the Recovery Suite.',
+    name: 'Infrared & Traditional Hybrid Sauna – 45 Minutes',
+    sequence: '45 min · private use of the Recovery Suite',
+    price: '£19',
+    desc: 'A private 45 minutes in the Full Spectrum Infrared Hybrid Sauna, with the suite to yourself. The easiest way to fit recovery in around training or a busy week.',
     detailHref: '/recovery-suite/infrared-sauna',
+  },
+  {
+    name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes',
+    sequence: '60 min · private use of the Recovery Suite',
+    price: '£29',
+    desc: 'A full hour to settle in, switch between traditional and infrared heat, and properly switch off. Our most popular standalone sauna session.',
+    detailHref: '/recovery-suite/infrared-sauna',
+    popular: true,
   },
 ]
 
-const recoveryWithMassage = [
+const massageRecovery = [
   {
-    name: 'Sports Massage (30 min) + Sauna Recovery (45 min)',
-    sequence: '30 min sports massage + 45 min sauna recovery',
+    name: 'Sports Massage + Sauna Recovery',
+    sequence: '30 min sports massage + 45 min sauna',
     total: '75 minutes total',
     price: '£85',
-    desc: 'Targeted hands-on work on the area that needs it, then a full 45 minutes in the Recovery Suite. Ideal for a focused problem area plus proper recovery time.',
-    popular: false,
+    desc: 'Targeted hands-on work on the area that needs it, then a full 45 minutes in the sauna. Ideal for a focused problem area plus proper recovery time.',
   },
   {
-    name: 'Sports Massage (60 min) + Sauna Recovery (30 min)',
-    sequence: '60 min sports massage + 30 min sauna recovery',
+    name: 'Sports Massage + Sauna Recovery',
+    sequence: '60 min sports massage + 30 min sauna',
     total: '90 minutes total',
-    price: '£110',
+    price: '£90',
     desc: 'A full-hour sports massage followed by heat in the Recovery Suite. The deeper option after races, big training blocks or busy weeks.',
     popular: true,
   },
+  {
+    name: 'Sports Massage + Normatec Compression',
+    sequence: '60 min sports massage + 30 min Normatec',
+    total: '90 minutes total',
+    price: '£110',
+    desc: 'A full-hour sports massage followed by 30 minutes on the Hyperice Normatec 3 Full Body system. Hands-on release, then pneumatic compression to flush the legs.',
+  },
+]
+
+const saunaMemberships = [
+  {
+    name: 'Restore+ Infrared Sauna Essential',
+    price: '£49',
+    period: '/month',
+    detail: '4 × 45-minute Infrared & Traditional Hybrid Sauna sessions',
+    desc: 'Ideal for reducing muscle tension, easing aches and pains, improving recovery and making time for your wellbeing.',
+  },
+  {
+    name: 'Restore+ Infrared Sauna Plus',
+    price: '£79',
+    period: '/month',
+    detail: '8 × 45-minute Infrared & Traditional Hybrid Sauna sessions',
+    desc: 'Perfect for regular recovery, helping reduce stiffness, improving circulation and keeping your body feeling its best.',
+    popular: true,
+  },
+  {
+    name: 'Restore+ Infrared Sauna Unlimited',
+    price: '£119',
+    period: '/month',
+    detail: 'Unlimited 45-minute Infrared & Traditional Hybrid Sauna sessions',
+    desc: 'The ultimate recovery membership for those who want unlimited access to relax, recover and recharge whenever you need.',
+  },
+]
+
+const performanceMemberships = [
+  {
+    name: 'Restore+ Performance (60 Minutes)',
+    price: '£69',
+    period: '/month',
+    usual: 'Usually £85',
+    detail: '1 × 60-minute Sports Massage',
+    saving: 'Save £16/month',
+  },
+  {
+    name: 'Restore+ Performance (60 Minutes)',
+    price: '£130',
+    period: '/month',
+    usual: 'Usually £170',
+    detail: '2 × 60-minute Sports Massage',
+    saving: 'Save £40/month',
+  },
+  {
+    name: 'Restore+ Performance (90 Minutes)',
+    price: '£99',
+    period: '/month',
+    usual: 'Usually £125',
+    detail: '1 × 90-minute Premium Treatment',
+    saving: 'Save £26/month',
+  },
+  {
+    name: 'Restore+ Performance (90 Minutes)',
+    price: '£179',
+    period: '/month',
+    usual: 'Usually £250',
+    detail: '2 × 90-minute Premium Treatments',
+    saving: 'Save £71/month',
+    popular: true,
+  },
+]
+
+const performanceChoices = [
+  '90-minute Sports Massage',
+  '90-minute Advanced Clinical Massage',
+  '60-minute Sports Massage + 30-minute Infrared & Traditional Hybrid Sauna',
+  '60-minute Sports Massage + 30-minute Normatec Compression Therapy',
 ]
 
 const faqs = [
   {
     q: 'Can I book just a sauna session on its own?',
-    a: 'Yes. The private Infrared Hybrid Sauna is a core part of the Recovery Suite. Book a 60 minute session for £15 this July (usually £35) without committing to a longer combined visit. It\'s the easiest entry point into the suite.',
+    a: 'Yes. The private Infrared & Traditional Hybrid Sauna is a core part of the Recovery Suite. Book a 45-minute session for £19 or a 60-minute session for £29 without committing to a longer combined visit. It\'s the easiest entry point into the suite.',
   },
   {
-    q: 'Do I have to add a massage to use the Recovery Suite?',
-    a: 'No. Plenty of people use the suite for recovery only. The massage packages are there for clients who want to combine recovery with hands-on therapy in one visit.',
+    q: 'What\'s the difference between the massage and sauna package and the massage and Normatec package?',
+    a: 'Both start with a full 60-minute sports massage. The £90 package finishes with 30 minutes in the Infrared Hybrid Sauna, while the £110 package finishes with 30 minutes on the Hyperice Normatec 3 Full Body compression system. Choose the sauna for heat-based recovery, or the Normatec if you want your legs flushed after a long run, ride or leg session.',
+  },
+  {
+    q: 'How do the Restore+ memberships work?',
+    a: 'Restore+ memberships are monthly plans. The Infrared Sauna memberships give you a set number of 45-minute sauna sessions each month (or unlimited on the top tier), and the Performance memberships give you one or two premium treatments a month at a saving on the usual price. Memberships are set up personally rather than bought online, so give us a call or drop us an email to join.',
   },
   {
     q: 'Why book a package instead of booking massage and sauna separately?',
@@ -91,15 +178,11 @@ const faqs = [
   },
   {
     q: 'How much total time should I block out?',
-    a: 'Each session shows the total. Add 10 to 15 minutes either side for arrival, settling in and the cool-down before you head off. The 90 minute package is around two hours door to door.',
+    a: 'Each session shows the total. Add 10 to 15 minutes either side for arrival, settling in and the cool-down before you head off. The 90 minute packages are around two hours door to door.',
   },
   {
     q: 'Can I customise a session or package?',
-    a: 'Yes. If a particular combination doesn\'t fit, give Carlos a call and he\'ll set it up manually. The listed sessions just exist to make booking easy for the most common combinations.',
-  },
-  {
-    q: 'Do massage bundle clients get a discount on packages?',
-    a: 'Bundles cover the massage element. If you\'re a bundle client, you can add a sauna session to your existing massage at standalone pricing. Speak to Carlos at the clinic and he\'ll sort it for you.',
+    a: 'Yes. If a particular combination doesn\'t fit, give us a call and we\'ll set it up manually. The listed sessions just exist to make booking easy for the most common combinations.',
   },
 ]
 
@@ -167,6 +250,54 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
   )
 }
 
+interface Membership {
+  name: string
+  price: string
+  period: string
+  usual?: string
+  detail: string
+  desc?: string
+  saving?: string
+  popular?: boolean
+}
+
+function MembershipCard({ m, popularLabel = 'Most Popular' }: { m: Membership; popularLabel?: string }) {
+  return (
+    <div
+      className={`relative rounded-2xl p-6 flex flex-col card-lift border-2 ${
+        m.popular ? 'bg-[#7dd94a] border-[#122a28]/15' : 'bg-card border-[#1a3d3a]'
+      }`}
+    >
+      {m.popular && (
+        <span className="absolute -top-3 left-6 bg-[#122a28] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+          {popularLabel}
+        </span>
+      )}
+      <h3 className={`font-black text-lg leading-tight tracking-tight mb-2 ${m.popular ? 'text-[#122a28]' : 'text-page'}`}>
+        {m.name}
+      </h3>
+      <p className={`mb-1 ${m.popular ? 'text-[#122a28]' : 'text-page'}`}>
+        <span className="text-3xl font-black">{m.price}</span>
+        <span className="text-sm font-bold">{m.period}</span>
+      </p>
+      {m.usual && (
+        <p className={`text-xs font-bold mb-2 line-through ${m.popular ? 'text-[#1a3d3a]/70' : 'text-page-muted'}`}>{m.usual}</p>
+      )}
+      <p className={`text-sm font-bold mb-2 ${m.popular ? 'text-[#1a3d3a]' : 'text-[#0f767a]'}`}>{m.detail}</p>
+      {m.desc && (
+        <p className={`text-sm leading-relaxed mb-3 flex-1 ${m.popular ? 'text-[#1a3d3a]' : 'text-page-muted'}`}>{m.desc}</p>
+      )}
+      {m.saving && (
+        <span className={`self-start text-[0.65rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-md mt-auto ${
+          m.popular ? 'bg-[#122a28] text-[#7dd94a]' : 'bg-[#7dd94a] text-[#1a2330]'
+        }`}>
+          {m.saving}
+        </span>
+      )}
+    </div>
+  )
+}
+
 export default function RecoverySessionsPage() {
   return (
     <>
@@ -181,7 +312,7 @@ export default function RecoverySessionsPage() {
             Recovery Sessions in Archway, North London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Private Infrared Hybrid Sauna sessions £15 this July (usually £35), or combined sports massage and sauna recovery packages from £85. Built around how you want to recover.
+            Pay as you go Infrared &amp; Traditional Hybrid Sauna from £19, sports massage recovery packages from £85, and Restore+ monthly memberships. Built around how you want to recover.
           </p>
           <div className="mt-6">
             <a
@@ -201,40 +332,102 @@ export default function RecoverySessionsPage() {
 
           {/* Intro */}
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Two ways to use the Recovery Suite</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Two ways to recover</h2>
             <p className="text-page-muted mb-3">
-              The Recovery Suite is built around two levels of session, so you can pick whatever fits the day. A private sauna session if you just want a quiet reset with the suite to yourself, or a combined package that pairs sports massage with sauna recovery in one visit.
+              Use the Recovery Suite pay as you go, or join a Restore+ membership if recovery is part of your routine. Every session is private, with the whole suite to yourself, including the hybrid infrared and traditional sauna and the Hyperice Normatec 3 Full Body recovery system.
             </p>
             <p className="text-page-muted">
-              Every session is private. You get the whole suite to yourself, including the hybrid infrared and traditional sauna and the Hyperice Normatec 3 Full Body recovery system.
+              Pay as you go covers standalone sauna sessions and combined sports massage packages. Restore+ memberships give you regular sauna access or premium treatments every month at a saving.
+            </p>
+          </section>
+
+          {/* PAYG heading */}
+          <section>
+            <span className="eyebrow block mb-2">Pay As You Go</span>
+            <h2 className="text-2xl font-bold text-page mb-3">Single sessions and recovery packages</h2>
+            <p className="text-page-muted">
+              No commitment. Book a private sauna session on its own, or combine sports massage with sauna or Normatec compression in one appointment.
             </p>
           </section>
 
           {/* Section 1: Private Sauna Sessions */}
           <section>
-            <span className="eyebrow block mb-2">Section 01</span>
-            <h2 className="text-2xl font-bold text-page mb-3">Private Infrared Hybrid Sauna</h2>
+            <h3 className="text-xl font-bold text-page mb-3">Infrared &amp; Traditional Hybrid Sauna</h3>
             <p className="text-page-muted mb-6">
-              The simplest way in. Private use of the Recovery Suite and its Infrared Hybrid Sauna, combining full spectrum infrared and traditional heat. Ideal for new clients dipping into the suite or regulars who want a session between training. Currently £15 for a private 60 minutes as part of our July launch offer.
+              The simplest way in. Private use of the Recovery Suite and its Full Spectrum Infrared Hybrid Sauna, combining full spectrum infrared and traditional heat. Ideal for new clients dipping into the suite or regulars who want a session between training.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {saunaSessions.map((session) => (
-                <SessionCard key={session.name} session={session} popularLabel="Most Popular" />
+                <SessionCard key={session.price} session={session} popularLabel="Most Popular" />
               ))}
             </div>
           </section>
 
-          {/* Section 2: Sports Massage + Sauna Recovery */}
+          {/* Section 2: Massage + Recovery packages */}
           <section>
-            <span className="eyebrow block mb-2">Section 02</span>
-            <h2 className="text-2xl font-bold text-page mb-3">Sports Massage + Sauna Recovery Packages</h2>
+            <h3 className="text-xl font-bold text-page mb-3">Massage + Recovery Packages</h3>
             <p className="text-page-muted mb-6">
-              The deeper recovery. Combine the suite with the hands-on sports and soft tissue therapy Range and Restore is known for, booked as one appointment at one price.
+              The deeper recovery. Combine the suite with the hands-on sports and soft tissue therapy Range and Restore is known for, booked as one appointment at one price. Finish with heat in the sauna or compression on the Normatec.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {recoveryWithMassage.map((session) => (
-                <SessionCard key={session.name} session={session} popularLabel="Best Value" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {massageRecovery.map((session) => (
+                <SessionCard key={session.price} session={session} popularLabel="Best Value" />
               ))}
+            </div>
+          </section>
+
+          {/* Restore+ Infrared Sauna Memberships */}
+          <section>
+            <span className="eyebrow block mb-2">Restore+ Memberships</span>
+            <h2 className="text-2xl font-bold text-page mb-3">Restore+ Infrared Sauna Memberships</h2>
+            <p className="text-page-muted mb-6">
+              Monthly sauna access for anyone who wants recovery to be a habit rather than a one-off. Every session is a private 45 minutes in the Infrared &amp; Traditional Hybrid Sauna.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              {saunaMemberships.map((m) => (
+                <MembershipCard key={m.name} m={m} />
+              ))}
+            </div>
+          </section>
+
+          {/* Restore+ Performance Memberships */}
+          <section>
+            <h2 className="text-2xl font-bold text-page mb-3">Restore+ Performance Memberships</h2>
+            <p className="text-page-muted mb-6">
+              Regular hands-on treatment every month, at a saving on the usual price. Designed to reduce pain, improve mobility, speed up recovery and keep you performing at your best.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+              {performanceMemberships.map((m, i) => (
+                <MembershipCard key={`${m.name}-${i}`} m={m} popularLabel="Best Value" />
+              ))}
+            </div>
+            <div className="bg-page-sage rounded-2xl p-6">
+              <p className="font-bold text-page mb-3">Each 90-minute premium treatment can be tailored. Choose from:</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {performanceChoices.map((choice) => (
+                  <li key={choice} className="flex items-start gap-3 text-page-muted text-sm">
+                    <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0 mt-1.5" aria-hidden="true" />
+                    {choice}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* Membership join note */}
+          <section className="bg-card border-2 border-[#1a3d3a] rounded-2xl p-6 sm:p-8">
+            <h2 className="text-xl font-bold text-page mb-3">How to join a membership</h2>
+            <p className="text-page-muted mb-5">
+              To join a Restore+ membership, please call or email us. Memberships are set up personally and are not currently available to purchase online.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call {BUSINESS.phone}</a>
+              <a
+                href={`mailto:${BUSINESS.email}`}
+                className="text-page text-sm font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center underline underline-offset-2"
+              >
+                Email {BUSINESS.email}
+              </a>
             </div>
           </section>
 
@@ -242,7 +435,7 @@ export default function RecoverySessionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Why book a combined package?</h2>
             <p className="text-page-muted mb-3">
-              Massage and heat work better together. Hands-on work releases the tissue, then time in the sauna keeps circulation up and gives your body proper time to settle before you head back out. The whole visit runs as one appointment, so the sequencing and timing are handled for you.
+              Massage and recovery work better together. Hands-on work releases the tissue, then time in the sauna or on the Normatec keeps circulation up and gives your body proper time to settle before you head back out. The whole visit runs as one appointment, so the sequencing and timing are handled for you.
             </p>
             <p className="text-page-muted">
               Packaging also keeps the maths simple. Each package is priced as one session, which costs less than booking the parts separately and means you only block out one slot in your diary.
@@ -255,10 +448,10 @@ export default function RecoverySessionsPage() {
             <ul className="space-y-2">
               {[
                 'Arrive 10 minutes early so we can get you settled in',
-                'The suite is private to you for your session. Towels and chilled water provided',
+                'The suite is private to you for your session. Fresh towels, chilled water and a Bluetooth speaker provided',
                 'Hands-on sports massage if your package includes it',
-                'Sauna time in the hybrid infrared and traditional cabin, with the Normatec recovery system available in the suite',
-                'Cool down, rehydrate and chat to Carlos about anything you noticed during the session',
+                'Sauna time in the hybrid infrared and traditional cabin, or compression on the Normatec recovery system',
+                'Cool down, rehydrate and chat to your therapist about anything you noticed during the session',
                 'Pay one price at checkout, no need to manage multiple bookings',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
@@ -273,7 +466,7 @@ export default function RecoverySessionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Already on a massage bundle?</h2>
             <p className="text-page-muted">
-              Bundle clients can add a sauna session to any standalone massage at clinic pricing. Just speak to Carlos at the start of your next appointment and he&apos;ll add it on for you. See the
+              Bundle clients can add a sauna session to any standalone massage at pay as you go pricing. Just speak to your therapist at the start of your next appointment and they&apos;ll add it on for you. See the
               {' '}<Link href="/services/massage-bundles" className="text-[#0f767a] underline">Massage Bundles page</Link>{' '}
               for current bundle options.
             </p>
@@ -287,9 +480,9 @@ export default function RecoverySessionsPage() {
 
           {/* Book Now CTA */}
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recovery Sessions now open at Range and Restore</h2>
+            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recovery Sessions at Range and Restore</h2>
             <p className="text-[#1a3d3a] font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. A private 60 minute Infrared Hybrid Sauna is £15 this July (usually £35), and sports massage packages start from £85. Available to book now.
+              The Recovery Suite is open in Archway, North London. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, and sports massage recovery packages from £85. Available to book now, with Restore+ memberships available on request.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
