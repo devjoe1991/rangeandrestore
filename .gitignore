@@ -49,3 +49,6 @@ docs/gbp-*.md
 # Blender auto-backups next to the sauna room source
 *.blend1
 *.blend2
+
+# Canva project working notes
+content/canva_plan.md
