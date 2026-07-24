@@ -1,0 +1,938 @@
+{
+  "$comment": "Design data for the Canva pipeline. Captions and hashtags live in content-pack.md — this file only carries what gets rendered ONTO the image. Post IDs match content-pack.md. Photo paths are relative to public/.",
+  "formats": {
+    "square": {
+      "width": 1080,
+      "height": 1080
+    },
+    "feed": {
+      "width": 1080,
+      "height": 1350
+    },
+    "story": {
+      "width": 1080,
+      "height": 1920
+    }
+  },
+  "posts": [
+    {
+      "id": "A1",
+      "slug": "sauna-19",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "THE RECOVERY SUITE",
+      "headline": "Private infrared sauna. ==45 minutes, all yours.==",
+      "price": "£19",
+      "priceUnit": "45 minutes",
+      "sub": "Private means the whole Recovery Suite to yourself. No sharing, no queue.",
+      "cta": "BOOK ONLINE · ARCHWAY N19",
+      "photo": "sauna-room/hero-portrait.jpg"
+    },
+    {
+      "id": "A2",
+      "slug": "3d-sauna-tour",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "3D ROOM TOUR",
+      "headline": "See our sauna room ==in 3D before you book==",
+      "photo": "sauna-room/hero-portrait.jpg",
+      "sub": "Walk around the actual room on our website. Phone or laptop, takes a minute.",
+      "cta": "RANGEANDRESTORE.CO.UK/SAUNA-ROOM"
+    },
+    {
+      "id": "A3",
+      "slug": "hybrid-explained",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Infrared and traditional sauna ==in one cabin==",
+      "slides": [
+        {
+          "heading": "Traditional",
+          "body": "Heats the air around you. Higher air temperature, that classic heavy sauna heat."
+        },
+        {
+          "heading": "Infrared",
+          "body": "Heats you directly. Lower air temperature, easier to sit in for longer, sweat comes on gently."
+        },
+        {
+          "heading": "Ours does both",
+          "body": "You choose, session by session. £19 for 45 minutes, £29 for 60."
+        }
+      ],
+      "cta": "BOOK ONLINE · ARCHWAY N19",
+      "sub": "You set it however you want, session by session. £19 for 45 min, £29 for 60."
+    },
+    {
+      "id": "A4",
+      "slug": "massage-first-sauna-after",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "RECOVERY PACKAGES",
+      "headline": "Sports massage first, ==then the sauna==",
+      "photo": "sauna-room/hero-portrait.jpg",
+      "sub": "Hands-on work on what's tight, then 30–45 minutes of heat. £85 or £90.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "A5",
+      "slug": "made-for-two",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "THE SAUNA ROOM",
+      "headline": "Our sauna room ==fits two people==",
+      "photo": "sauna-room/hero-portrait.jpg",
+      "sub": "Come alone and have it to yourself, or bring someone. £19 for 45 minutes.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "A6",
+      "slug": "sauna-after-gym",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "AFTER TRAINING",
+      "headline": "Finished training? ==45 minutes in the sauna==",
+      "price": "£19",
+      "priceUnit": "45 minutes, private",
+      "sub": "Private cabin, your own music, three minutes off Junction Road.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "A7",
+      "slug": "sauna-winter",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "SEASONAL",
+      "headline": "Cold outside? ==Our sauna runs all winter==",
+      "photo": "sauna-room/hero-portrait.jpg",
+      "sub": "45 private minutes when the last thing you want is another hour outdoors.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "B1",
+      "slug": "what-is-normatec",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Normatec compression: ==what the boots do==",
+      "slides": [
+        {
+          "heading": "Pneumatic compression",
+          "body": "Sleeves that inflate in sequence from your feet upward, then release."
+        },
+        {
+          "heading": "Normatec 3 Full Body",
+          "body": "The Hyperice system — legs, hips and arms, not just calves."
+        },
+        {
+          "heading": "30 minutes",
+          "body": "You lie down. It does the work. The most passive recovery we offer."
+        },
+        {
+          "heading": "£110",
+          "body": "60-minute sports massage + 30 minutes Normatec, booked as one appointment."
+        }
+      ],
+      "cta": "BOOK ONLINE · ARCHWAY N19",
+      "sub": "Sleeves inflate in sequence from your feet up. 30 minutes, you just lie there."
+    },
+    {
+      "id": "B2",
+      "slug": "normatec-vs-sauna",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Sauna or Normatec? ==Here's how to choose==",
+      "slides": [
+        {
+          "heading": "Sauna — £90",
+          "body": "Whole-body, heat-based. Pick this if you want to properly switch off, or you’re stiff all over."
+        },
+        {
+          "heading": "Normatec — £110",
+          "body": "Targeted at the legs. Pick this after a long run or ride when your legs feel heavy."
+        },
+        {
+          "heading": "Both start the same",
+          "body": "A full 60-minute sports massage. Only the finish differs."
+        }
+      ],
+      "cta": "BOOK ONLINE · ARCHWAY N19",
+      "sub": "Both packages start with a full 60-minute sports massage. Only the finish differs."
+    },
+    {
+      "id": "B3",
+      "slug": "heavy-legs",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "COMPRESSION THERAPY",
+      "headline": "Heavy legs after a long run? ==Try compression==",
+      "photo": "normatec-3-full-body-compression-session-recovery-suite-archway-north-london.jpg",
+      "sub": "30 minutes on the Normatec 3, after a 60-minute sports massage. £110 all in.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "B4",
+      "slug": "race-recovery",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "AFTER THE RACE",
+      "headline": "Just raced? ==Book recovery within a few days==",
+      "price": "£110",
+      "priceUnit": "60 min massage + 30 min Normatec",
+      "sub": "60-minute sports massage plus 30 minutes of leg compression.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "C1",
+      "slug": "three-packages",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Three recovery packages, ==one appointment==",
+      "slides": [
+        {
+          "heading": "£85 · 75 minutes",
+          "body": "30-minute sports massage, then 45 minutes in the sauna."
+        },
+        {
+          "heading": "£90 · 90 minutes",
+          "body": "Full 60-minute sports massage, then 30 minutes in the sauna."
+        },
+        {
+          "heading": "£110 · 90 minutes",
+          "body": "Full 60-minute sports massage, then 30 minutes on the Normatec 3 Full Body system."
+        }
+      ],
+      "cta": "BOOK ONLINE · ARCHWAY N19",
+      "sub": "Massage plus sauna or compression, priced as one session. We handle the timing."
+    },
+    {
+      "id": "C2",
+      "slug": "restore-plus-sauna",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Monthly sauna membership ==from £49==",
+      "slides": [
+        {
+          "heading": "Essential — £49/mo",
+          "body": "4 × 45-minute private hybrid sauna sessions."
+        },
+        {
+          "heading": "Plus — £79/mo",
+          "body": "8 × 45-minute private hybrid sauna sessions."
+        },
+        {
+          "heading": "Unlimited — £119/mo",
+          "body": "Unlimited 45-minute sessions. Members get first pick of the diary."
+        }
+      ],
+      "cta": "CALL 07890 716154 TO JOIN",
+      "sub": "4, 8 or unlimited 45-minute private sessions each month."
+    },
+    {
+      "id": "C3",
+      "slug": "restore-plus-performance",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Monthly massage membership ==from £69==",
+      "slides": [
+        {
+          "heading": "£69/mo — save £16",
+          "body": "1 × 60-minute sports massage. Usually £85."
+        },
+        {
+          "heading": "£130/mo — save £40",
+          "body": "2 × 60-minute sports massage. Usually £170."
+        },
+        {
+          "heading": "£99/mo — save £26",
+          "body": "1 × 90-minute premium treatment. Usually £125."
+        },
+        {
+          "heading": "£179/mo — save £71",
+          "body": "2 × 90-minute premium treatments. Usually £250."
+        }
+      ],
+      "cta": "CALL 07890 716154 TO JOIN",
+      "sub": "One or two treatments a month, at a saving on the usual price."
+    },
+    {
+      "id": "C4",
+      "slug": "bundles",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "MASSAGE BUNDLES",
+      "headline": "Buy 5 massage sessions ==and save==",
+      "price": "From £350",
+      "priceUnit": "5 × 60 minutes",
+      "sub": "5 or 10 session bundles for 60 or 90 minute treatments.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "C5",
+      "slug": "gift-cards",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "GIFT CARDS",
+      "headline": "Gift card for ==massage or sauna==",
+      "price": "Any value",
+      "priceUnit": "sent by email",
+      "sub": "Any value, sent by email. Works on anything we do.",
+      "cta": "BUY ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "D1",
+      "slug": "sciatica",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Leg pain ==isn't always sciatica==",
+      "slides": [
+        {
+          "heading": "True sciatica",
+          "body": "The sciatic nerve being irritated — pain travelling from the lower back into the buttock and down the leg."
+        },
+        {
+          "heading": "Or referred pain",
+          "body": "A lot of “sciatica” is referred pain from the glutes and deep hip muscles, mimicking the same route."
+        },
+        {
+          "heading": "The distinction matters",
+          "body": "The two respond to different work. It feels identical to you. It isn’t identical to treat."
+        },
+        {
+          "heading": "Worth mentioning",
+          "body": "Pins and needles, numbness, whether it’s worse sitting or standing, whether it goes past the knee."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "Glute and deep hip muscles refer pain down almost exactly the same route."
+    },
+    {
+      "id": "D2",
+      "slug": "sciatica-sitting",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "SCIATICA",
+      "headline": "Leg pain worse ==when you sit down?==",
+      "price": "From £50",
+      "priceUnit": "30 minutes",
+      "sub": "Whether it's worse sitting or standing changes where we look.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "D3",
+      "slug": "lower-back-pain",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Lower back pain ==often starts at the hips==",
+      "slides": [
+        {
+          "heading": "Hips",
+          "body": "Tight hip flexors from sitting pull on the pelvis, and the lower back picks up the slack."
+        },
+        {
+          "heading": "Glutes",
+          "body": "If they aren’t doing their job, the lower back does it instead."
+        },
+        {
+          "heading": "Hamstrings",
+          "body": "Tight hamstrings tilt the pelvis and change how the spine loads."
+        },
+        {
+          "heading": "So we don’t just rub the sore bit",
+          "body": "We assess hips, glutes and hamstrings as part of any lower back session."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "Tight hip flexors and quiet glutes leave the lower back doing the work."
+    },
+    {
+      "id": "D4",
+      "slug": "back-neck-mot",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "ASSESSMENT + TREATMENT",
+      "headline": "Back or neck pain for months? ==Get it assessed==",
+      "photo": "sports-massage-soft-tissue-therapy-archway-north-london.jpeg",
+      "sub": "The Back & Neck Pain MOT: proper assessment first, then treatment.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "D5",
+      "slug": "tension-headaches",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Tension headaches ==often start in your neck==",
+      "slides": [
+        {
+          "heading": "Where they begin",
+          "body": "Tension headaches often start as tightness at the base of the skull and up into the jaw."
+        },
+        {
+          "heading": "The common pattern",
+          "body": "Long screen hours, shoulders creeping up, head drifting forward toward the monitor."
+        },
+        {
+          "heading": "Worth treating the neck",
+          "body": "Not just taking something for the head."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "Tightness at the base of the skull after long screen hours."
+    },
+    {
+      "id": "D6",
+      "slug": "desk-posture",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "What sitting at a desk ==does to your body==",
+      "slides": [
+        {
+          "heading": "Hip flexors shorten",
+          "body": "Hours in the same seated position, every working day."
+        },
+        {
+          "heading": "Glutes switch off",
+          "body": "They stop contributing, and something else covers for them."
+        },
+        {
+          "heading": "Upper back rounds",
+          "body": "Shoulders drift forward toward the keyboard."
+        },
+        {
+          "heading": "Neck takes the strain",
+          "body": "Holding your head where the screen is, not where it wants to be."
+        },
+        {
+          "heading": "None of it is dramatic",
+          "body": "All of it adds up. Then you pick up a bag and it goes."
+        }
+      ],
+      "cta": "FROM £50 · BOOK ONLINE",
+      "sub": "Hip flexors shorten, glutes switch off, the neck takes the strain."
+    },
+    {
+      "id": "D7",
+      "slug": "muscle-knots",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "What a muscle knot ==actually is==",
+      "slides": [
+        {
+          "heading": "A tight, sensitive band",
+          "body": "Within a muscle. Press it and it often refers pain somewhere else entirely."
+        },
+        {
+          "heading": "That’s why",
+          "body": "A knot in your shoulder can be felt down your arm, and one in your glute down your leg."
+        },
+        {
+          "heading": "Trigger point work is slow",
+          "body": "Specific and deliberate. It isn’t the same as hard pressure everywhere."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "A tight band that refers pain elsewhere — which is why we treat elsewhere."
+    },
+    {
+      "id": "D8",
+      "slug": "frozen-shoulder",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "FROZEN SHOULDER",
+      "headline": "Struggling to reach ==behind your back?==",
+      "price": "From £75",
+      "priceUnit": "60 minutes",
+      "sub": "Frozen shoulder goes through stages, and each one needs different work.",
+      "cta": "60 MIN £75 · BOOK ONLINE"
+    },
+    {
+      "id": "D9",
+      "slug": "plantar-fasciitis",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Heel pain on your ==first steps of the day?==",
+      "slides": [
+        {
+          "heading": "The classic pattern",
+          "body": "Sharp heel pain on the first few steps out of bed, easing as you move about."
+        },
+        {
+          "heading": "The foot is where you feel it",
+          "body": "The calf is very often where the problem actually is."
+        },
+        {
+          "heading": "So we treat all three",
+          "body": "Calf, achilles and foot together, rather than just working the sore heel."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "Classic plantar fasciitis. The foot hurts, but the calf is often the cause."
+    },
+    {
+      "id": "D10",
+      "slug": "tight-hamstrings",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "HAMSTRINGS",
+      "headline": "Stretching your hamstrings ==isn't working?==",
+      "price": "From £50",
+      "priceUnit": "30 minutes",
+      "sub": "They may not be short. They may be covering for glutes that aren't firing.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "D11",
+      "slug": "hip-pain",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "HIP PAIN",
+      "headline": "Hip pain is often ==felt somewhere else==",
+      "photo": "Gallery/IMG_1387.JPG",
+      "sub": "Groin, outer thigh, lower back, or a deep ache you can't point at.",
+      "cta": "60 MIN £75 · BOOK ONLINE"
+    },
+    {
+      "id": "D12",
+      "slug": "tennis-elbow",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "TENNIS ELBOW",
+      "headline": "Tennis elbow from ==a keyboard, not a racket==",
+      "price": "From £50",
+      "priceUnit": "30 minutes",
+      "sub": "Any repetitive grip does it. Mouse, tools, lifting a toddler.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "D13",
+      "slug": "shin-splints",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "SHIN SPLINTS",
+      "headline": "Shin splints usually mean ==too much, too soon==",
+      "price": "£75",
+      "priceUnit": "60 minutes",
+      "sub": "Deal with it at uncomfortable, not at can't-run.",
+      "cta": "60 MIN £75 · BOOK ONLINE"
+    },
+    {
+      "id": "D14",
+      "slug": "achilles",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "ACHILLES",
+      "headline": "Stiff achilles ==first thing in the morning?==",
+      "price": "£75",
+      "priceUnit": "60 minutes",
+      "sub": "Eases when you're warm, aches again at night. Don't ignore it.",
+      "cta": "60 MIN £75 · BOOK ONLINE"
+    },
+    {
+      "id": "D15",
+      "slug": "stress-relief",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "RELAXATION & MLD",
+      "headline": "Massage that ==isn't deep tissue==",
+      "photo": "Gallery/IMG_1387.JPG",
+      "sub": "Relaxation and lymphatic drainage: lighter, slower, completely different.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "D16",
+      "slug": "hydration",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Why we tell you ==to drink water==",
+      "slides": [
+        {
+          "heading": "You’ll hear it everywhere",
+          "body": "The usual explanation — flushing out toxins — isn’t really how it works."
+        },
+        {
+          "heading": "The honest version",
+          "body": "Hydrated muscle tissue is more pliable and cramps less readily."
+        },
+        {
+          "heading": "So drink the water",
+          "body": "Just for the actual reason. Turning up dehydrated makes the work harder."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "Not to flush toxins. Hydrated muscle is more pliable and cramps less."
+    },
+    {
+      "id": "E1",
+      "slug": "runners",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "The four areas ==runners get tight==",
+      "slides": [
+        {
+          "heading": "Calves",
+          "body": "The obvious one. Taking load every step, every mile."
+        },
+        {
+          "heading": "Glutes & hips",
+          "body": "The ones almost nobody stretches — and behind a lot of “knee” problems."
+        },
+        {
+          "heading": "Hamstrings",
+          "body": "Usually tight because they’re covering for the glutes, not because they’re short."
+        },
+        {
+          "heading": "Outside of the thigh",
+          "body": "Where complaints surface, though the cause is usually further up."
+        }
+      ],
+      "cta": "60 MIN £75 · BOOK ONLINE",
+      "sub": "Calves, glutes and hips, hamstrings, and the outside of the thigh."
+    },
+    {
+      "id": "E2",
+      "slug": "marathon-build",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "MARATHON BUILD",
+      "headline": "Don't book your first massage ==in race week==",
+      "price": "From £75",
+      "priceUnit": "60 minutes",
+      "sub": "Deep work on untested legs days before 26.2 miles is not the moment.",
+      "cta": "FROM £75 · BOOK ONLINE"
+    },
+    {
+      "id": "E3",
+      "slug": "cyclists",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "CYCLING RECOVERY",
+      "headline": "Cycling in North London? ==Your hips need this==",
+      "photo": "cycling-recovery-sports-massage-archway-north-london.jpg",
+      "sub": "Hours in one position, quads doing everything, upper back locked up.",
+      "cta": "60 MIN £75 · BOOK ONLINE"
+    },
+    {
+      "id": "E4",
+      "slug": "gym-recovery",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "STRENGTH TRAINING",
+      "headline": "Lifting heavy? ==Recovery matters as much==",
+      "price": "£110",
+      "priceUnit": "60 min massage + 30 min Normatec",
+      "sub": "Mobility limited by tight tissue doesn't improve by adding sets.",
+      "cta": "FROM £75 · BOOK ONLINE"
+    },
+    {
+      "id": "F1",
+      "slug": "archway-n19",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "FIND US",
+      "headline": "Sports massage clinic ==on Junction Road, Archway==",
+      "photo": "range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg",
+      "sub": "A few minutes from Archway tube. Massage, sauna and compression therapy.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F2",
+      "slug": "tufnell-park",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "TUFNELL PARK & DARTMOUTH PARK",
+      "headline": "Sports massage ==one stop from Tufnell Park==",
+      "price": "From £50",
+      "priceUnit": "sports massage",
+      "sub": "Or a walk down Fortess Road. Heath runners welcome.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F3",
+      "slug": "kentish-town",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "KENTISH TOWN NW5",
+      "headline": "Sports massage ==10 minutes from Kentish Town==",
+      "price": "From £50",
+      "priceUnit": "sports massage",
+      "sub": "Straight up Fortess Road onto Junction Road.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F4",
+      "slug": "holloway-n7",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "HOLLOWAY N7",
+      "headline": "Sports massage ==straight up Holloway Road==",
+      "price": "From £50",
+      "priceUnit": "sports massage",
+      "sub": "Easy from Hornsey Road, Caledonian Road and the Emirates end of N7.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F5",
+      "slug": "finsbury-park",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "FINSBURY PARK N4",
+      "headline": "Sports massage, ==direct bus from Finsbury Park==",
+      "price": "From £50",
+      "priceUnit": "sports massage",
+      "sub": "No changes, no Northern line detour through town.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F6",
+      "slug": "crouch-end-stroud-green",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "CROUCH END N8 & STROUD GREEN",
+      "headline": "Sports massage for ==Crouch End and Stroud Green==",
+      "price": "From £50",
+      "priceUnit": "sports massage",
+      "sub": "Down Crouch Hill, or across from Hornsey and Ferme Park.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F7",
+      "slug": "highgate",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "HIGHGATE N6",
+      "headline": "Sports massage at ==the bottom of Highgate Hill==",
+      "photo": "cycling-recovery-sports-massage-archway-north-london.jpg",
+      "sub": "If you've run or ridden up it, you already know why people book after.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F8",
+      "slug": "islington",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "ISLINGTON N1",
+      "headline": "Sports massage for Islington, ==up Holloway Road==",
+      "price": "From £50",
+      "priceUnit": "sports massage",
+      "sub": "From Highbury Corner or Highbury Fields, it's a short trip.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "F9",
+      "slug": "near-me",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Looking for ==sports massage near you?==",
+      "slides": [
+        {
+          "heading": "If you’re anywhere here",
+          "body": "Archway N19 · Upper Holloway · Holloway N7 · Tufnell Park · Kentish Town NW5"
+        },
+        {
+          "heading": "…we’re probably nearest",
+          "body": "Highgate N6 · Crouch End N8 · Stroud Green N4 · Finsbury Park N4 · Islington N1"
+        },
+        {
+          "heading": "130 Junction Road",
+          "body": "A few minutes from Archway tube. From £50."
+        }
+      ],
+      "cta": "FROM £50 · BOOK ONLINE",
+      "sub": "We cover Archway, Holloway, Tufnell Park, Kentish Town, Highgate and more."
+    },
+    {
+      "id": "G2",
+      "slug": "meet-carlos",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "FOUNDER & LEAD THERAPIST",
+      "headline": "Meet Carlos, ==founder and lead therapist==",
+      "photo": "carlos-bonvicine-sports-massage-archway-hero.jpg",
+      "sub": "BTEC Level 5. Additional qualifications in lymphatic drainage and cupping.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "G3",
+      "slug": "meet-darael",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "SPORTS & SOFT TISSUE THERAPIST",
+      "headline": "Meet Darael, ==sports and soft tissue therapist==",
+      "photo": "darael-beckles-sports-massage-therapist-range-and-restore-archway-north-london.jpeg",
+      "sub": "NLSSM graduate. SMRT, MSMA. Book through Jane.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "G4",
+      "slug": "meet-mateja",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "18+ YEARS' EXPERIENCE",
+      "headline": "Meet Mateja, ==18 years of experience==",
+      "photo": "mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg",
+      "sub": "BTEC Level 5, LSSM trained, SMRT and MSMA registered.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "G5",
+      "slug": "treatment-room",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "THE CLINIC",
+      "headline": "A look ==inside the clinic==",
+      "photo": "Gallery/IMG_1831.jpeg",
+      "sub": "Two private treatment rooms, plus the Recovery Suite at the quiet back.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    },
+    {
+      "id": "G6",
+      "slug": "cupping",
+      "template": "T1",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "CUPPING + SPORTS MASSAGE",
+      "headline": "Cupping therapy ==with sports massage==",
+      "photo": "Gallery/IMG_1309.jpeg",
+      "sub": "Suction lifts tissue where hands press down. Yes, it can leave marks.",
+      "cta": "FROM £60 · BOOK ONLINE"
+    },
+    {
+      "id": "G8",
+      "slug": "community-tuesday",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "EVERY TUESDAY",
+      "headline": "Community Tuesday: ==same treatment, lower price==",
+      "price": "£60 / £85",
+      "priceUnit": "60 min / 90 min",
+      "sub": "Every Tuesday. 60 minutes £60, 90 minutes £85. Spaces are limited.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
+    },
+    {
+      "id": "G9",
+      "slug": "msk-ultrasound",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "Ultrasound scan, ==then treatment based on it==",
+      "slides": [
+        {
+          "heading": "A diagnostic scan first",
+          "body": "MSK ultrasound with our partner Reliable Scan, in the same building."
+        },
+        {
+          "heading": "Then treatment",
+          "body": "A 60-minute clinical massage guided by what the scan actually showed."
+        },
+        {
+          "heading": "£165 total, paid in two parts",
+          "body": "£75 booked online with us. £90 paid direct to Reliable Scan."
+        }
+      ],
+      "cta": "£165 TOTAL · BOOK ONLINE",
+      "sub": "With Reliable Scan in the same building. £75 to us, £90 direct to them."
+    },
+    {
+      "id": "G10",
+      "slug": "two-hour-pain-relief",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "2-HOUR PAIN RELIEF",
+      "headline": "Two full hours ==of treatment==",
+      "price": "£170",
+      "priceUnit": "120 minutes",
+      "sub": "For when there isn't one problem area, there are five.",
+      "cta": "£170 · BOOK ONLINE"
+    },
+    {
+      "id": "G12",
+      "slug": "first-visit",
+      "template": "T3",
+      "format": "square",
+      "folder": "04-posts-carousel",
+      "headline": "What happens at ==your first sports massage==",
+      "slides": [
+        {
+          "heading": "1. We talk",
+          "body": "What’s wrong, how long it’s been going on, what makes it worse."
+        },
+        {
+          "heading": "2. We assess",
+          "body": "How you actually move — that tells us more than pressing on the sore bit."
+        },
+        {
+          "heading": "3. Treatment",
+          "body": "Based on what we found. You can talk throughout. “That’s too much” is a complete sentence."
+        },
+        {
+          "heading": "4. What to do next",
+          "body": "Something to work on between now and next time."
+        }
+      ],
+      "cta": "FROM £50 · BOOK ONLINE",
+      "sub": "Talk, assess how you move, treat what we found, then what to do next."
+    },
+    {
+      "id": "G13",
+      "slug": "deep-tissue-myth",
+      "template": "T2",
+      "format": "square",
+      "folder": "03-posts-feed",
+      "eyebrow": "MASSAGE MYTHS",
+      "headline": "Deep tissue massage ==shouldn't be agony==",
+      "price": "From £50",
+      "priceUnit": "30 minutes",
+      "sub": "Tense against the pressure and nothing releases. Tell your therapist.",
+      "cta": "FROM £50 · BOOK ONLINE"
+    }
+  ]
+}

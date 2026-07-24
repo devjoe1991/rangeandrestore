@@ -52,3 +52,11 @@ docs/gbp-*.md
 
 # Canva project working notes
 content/canva_plan.md
+
+# Canva Connect API — OAuth tokens, never commit
+.canva-tokens.json
+# Cached Canva folder/design IDs — machine-local
+.canva-state.json
+
+# Canva render output (regenerate with: node scripts/canva/canva.mjs render)
+scripts/canva/out/
