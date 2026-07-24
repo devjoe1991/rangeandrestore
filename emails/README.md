@@ -25,6 +25,8 @@ Preview and test-send yourself from the Mailchimp UI.
 - `service-recovery-suite.html` — Sauna + Normatec spotlight (photo strip + FAQ)
 - `service-sports-pain.html` — Sports & deep-tissue / pain relief (photo strip + FAQ)
 - `service-community-tuesday-clinic.html` — Community Tuesday Clinic (60 min £60 / 90 min £85, every Tuesday; community-focused, not a discount)
+- `service-restore-memberships.html` — Restore+ Memberships (sauna £49/£79/£119 + performance £69/£130/£99/£179 price tiles; CTA is call/email, memberships are NOT bookable online)
+- `service-massage-bundles.html` — Massage Bundles (5/10 × 60 min £350/£650, 5/10 × 90 min £500/£950; save + per-session + validity; CTA to Jane `#packages`)
 - `event-marathon.html` — Marathon prep & recovery (reusable each season)
 - `gift-cards-bundles.html` — Gift cards + bundles
 - `announcement.html` — Flexible "Now open" style, merge-field slots

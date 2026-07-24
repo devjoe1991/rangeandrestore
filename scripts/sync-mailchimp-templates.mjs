@@ -46,6 +46,8 @@ const NAME_MAP = {
   'service-msk-ultrasound-massage': 'R&R — MSK Scan + Clinical Massage',
   'service-sports-pain': 'R&R — Sports & Pain Relief',
   'service-community-tuesday-clinic': 'R&R — Community Tuesday Clinic',
+  'service-restore-memberships': 'R&R — Restore+ Memberships',
+  'service-massage-bundles': 'R&R — Massage Bundles',
   'team-introduction': 'R&R — Meet the Team',
   'event-marathon': 'R&R — Marathon / Event Recovery',
   'gift-cards-bundles': 'R&R — Gift Cards & Bundles',

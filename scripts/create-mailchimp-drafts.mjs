@@ -63,6 +63,8 @@ const CAMPAIGNS = {
   // Service / conversion (evergreen)
   'R&R — Recovery Suite': { subject: 'Recover faster with the Recovery Suite', preview: 'Infrared sauna and Normatec compression in Archway.', send: 'Evergreen' },
   'R&R — Sports & Pain Relief': { subject: 'Get to the root of your pain', preview: 'Assessment-led sports and deep-tissue massage.', send: 'Evergreen' },
+  'R&R — Restore+ Memberships': { subject: 'Introducing Restore+ Memberships', preview: 'Feel better, recover faster and save more with regular treatment.', send: 'Evergreen' },
+  'R&R — Massage Bundles': { subject: 'Commit to your recovery, save as you go', preview: 'Massage bundles with bigger savings on regular sessions.', send: 'Evergreen' },
   'R&R — Marathon / Event Recovery': { subject: 'Marathon prep and recovery', preview: 'Pre-race preparation and post-race recovery.', send: 'Race season' },
   'R&R — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
   'R&R — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
