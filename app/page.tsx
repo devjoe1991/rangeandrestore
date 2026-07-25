@@ -20,6 +20,7 @@ export const metadata: Metadata = buildMetadata({
 const services = [
   {
     title: 'MSK Scan + Clinical Massage',
+    price: '£165 total',
     problem: 'Pain that keeps coming back, and still no clear diagnosis?',
     solution: 'Diagnostic MSK ultrasound with Reliable Scan, then a 60-minute clinical massage guided by the findings. Scan, written report and treatment under one roof.',
     href: '/services/msk-ultrasound-clinical-massage',
@@ -27,6 +28,7 @@ const services = [
   },
   {
     title: 'Back & Neck Pain MOT',
+    price: 'From £50',
     problem: 'Desk-related back pain or a stiff neck?',
     solution: 'Full postural assessment and focused treatment targeting the exact muscles driving your pain.',
     href: '/services/back-neck-pain-mot',
@@ -34,6 +36,7 @@ const services = [
   },
   {
     title: 'Advanced Clinical Massage',
+    price: 'From £50',
     problem: 'Chronic pain, sciatica or persistent tension?',
     solution: 'Assessment-led clinical massage identifies the root cause — effective for back pain, nerve pain, RSI and postural conditions.',
     href: '/services/advanced-clinical-massage',
@@ -41,6 +44,7 @@ const services = [
   },
   {
     title: 'Sports & Deep Tissue Massage',
+    price: 'From £50',
     problem: 'Training pain or a sports injury that won\'t clear up?',
     solution: 'Targeted deep tissue therapy releases tension, restores movement and gets you back to full training faster.',
     href: '/services/sports-deep-tissue-massage',
@@ -48,6 +52,7 @@ const services = [
   },
   {
     title: 'Cupping + Sports / Deep Tissue Massage',
+    price: 'From £60',
     problem: 'Deep-seated tightness or fascial restriction holding you back?',
     solution: 'Integrated cupping plus sports and deep tissue therapy decompresses fascia, releases adhesions and accelerates recovery.',
     href: '/services/advanced-cupping-sports-deep-tissue',
@@ -55,6 +60,7 @@ const services = [
   },
   {
     title: '2-Hour Pain Relief Massage',
+    price: '£170',
     problem: 'Multiple problem areas that need proper attention?',
     solution: 'An extended session gives Carlos the time to work through every area properly for deeper, lasting results.',
     href: '/services/2-hour-pain-relief-massage',
@@ -62,6 +68,7 @@ const services = [
   },
   {
     title: 'Manual Lymphatic Drainage',
+    price: 'From £50',
     problem: 'Recovering from surgery or dealing with swelling?',
     solution: 'Certified MLD reduces swelling, clears bruising and accelerates post-surgical recovery safely.',
     href: '/services/manual-lymphatic-drainage',
@@ -69,6 +76,7 @@ const services = [
   },
   {
     title: 'Relaxation Massage',
+    price: 'From £50',
     problem: 'Burnt out or struggling to switch off?',
     solution: 'Gentle, pressure-adjusted treatment that calms your nervous system and leaves you genuinely restored.',
     href: '/services/relaxation-restorative-massage',
@@ -76,6 +84,7 @@ const services = [
   },
   {
     title: 'Infrared Hybrid Sauna',
+    price: 'From £19',
     problem: 'Sore, stressed and not sleeping well?',
     solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £19, plus Restore+ monthly memberships.',
     href: '/recovery-suite/infrared-sauna',
@@ -85,6 +94,7 @@ const services = [
   },
   {
     title: 'Normatec Compression Therapy',
+    price: 'From £19',
     problem: 'Heavy legs after long runs, rides or shifts?',
     solution: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired muscles fast.',
     href: '/recovery-suite/compression-therapy',
@@ -671,8 +681,9 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
       )}
 
       <div className="p-4 sm:p-5 flex flex-col flex-1">
-        <div className="mb-2">
+        <div className="mb-2 flex items-start justify-between gap-2">
           <h3 className="font-black text-page text-sm sm:text-base leading-tight tracking-tight">{s.title}</h3>
+          <span className="shrink-0 text-[#0f767a] text-xs font-black whitespace-nowrap mt-0.5">{s.price}</span>
         </div>
 
         {/* Problem pill */}
