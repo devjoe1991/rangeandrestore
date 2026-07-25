@@ -139,6 +139,20 @@ export default function AboutPage() {
                 Learn about clinical collaboration →
               </Link>
             </div>
+
+            {/* Giving back, compact card */}
+            <div className="bg-page-sage rounded-2xl p-8">
+              <h3 className="text-xl font-bold text-page mb-2">Supporting Our Community</h3>
+              <p className="text-page-muted mb-4 text-sm font-medium">
+                Carlos volunteers at Whittington Health Charity fundraising events at the hospital up the hill, treating NHS staff, patients and visitors. He has also worked the TCS London Marathon for three years running, giving post-race massage to runners raising money for Phab.
+              </p>
+              <Link
+                href="/giving-back"
+                className="inline-flex items-center gap-2 text-[#0f767a] font-bold hover:text-page transition-colors min-h-[44px]"
+              >
+                The charities we support →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

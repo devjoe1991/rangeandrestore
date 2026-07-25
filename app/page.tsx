@@ -6,6 +6,7 @@ import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
+import { GivingBackStrip } from '@/components/GivingBackStrip'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
@@ -320,6 +321,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── 2.15 GIVING BACK ─────────────────────────────────── */}
+      <GivingBackStrip />
 
       {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">

@@ -139,7 +139,10 @@ export default function PressPage() {
             Carlos&apos;s work goes beyond the treatment room. The clinic supports and collaborates with a range of local groups and services across Archway, Tufnell Park, Holloway, Islington, Finsbury Park, Highgate, Crouch End, Kentish Town and the wider North London area.
           </p>
           <ul className="list-disc pl-6 space-y-2 text-page-muted">
-            <li><strong className="text-page">Local charities.</strong> Honest support for community fundraising, charity events and grassroots causes across N19 and the wider North London area.</li>
+            <li><strong className="text-page">Local charities.</strong> We support{' '}
+              <Link href="/giving-back" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Whittington Health Charity and Phab</Link>
+              , donating sports massage treatments and gift vouchers as prizes for fundraising raffles. Carlos volunteers at Whittington Hospital events and at the London Marathon.
+            </li>
             <li><strong className="text-page">Mental health support services.</strong> Soft tissue therapy and recovery work alongside mental health, with referrals in both directions where the work overlaps.</li>
             <li><strong className="text-page">Wellbeing services.</strong> Collaboration with local wellbeing practitioners and clinics around shared clients, education and an honest, joined-up approach to health.</li>
             <li><strong className="text-page">Yoga and Pilates studios.</strong> Carlos works closely with independent yoga and Pilates studios across Archway and North London, supporting their members with recovery and injury work between classes.</li>
@@ -242,6 +245,9 @@ export default function PressPage() {
           <div className="space-y-2">
             <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Our Archway community and local partners
+            </Link>
+            <Link href="/giving-back" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; The charities we support
             </Link>
             <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; About Carlos and Range and Restore
