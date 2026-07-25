@@ -2,8 +2,7 @@ import Image from 'next/image'
 import type { ReactNode } from 'react'
 
 /**
- * A photo in a charity block carousel. Add entries only once the file exists
- * in /public/giving-back/, otherwise the page ships a 404 image.
+ * A photo in a charity block carousel.
  */
 export type CharityPhoto = {
   /** Path under /public, e.g. '/giving-back/....jpg' */
@@ -35,9 +34,14 @@ interface CharityBlockProps {
 
 /**
  * One charity on /giving-back: overview prose, a swipe carousel of photos, and
- * two outbound buttons (donate, Instagram). The carousel reuses the site's
- * .swipe-row pattern from globals.css, which is pure CSS, so this stays a
- * server component with no client JS.
+ * two outbound buttons (donate, Instagram). Deliberately unboxed so it reads as
+ * page content rather than a card.
+ *
+ * The carousel reuses the site's .swipe-row pattern from globals.css, following
+ * the homepage Meet the Team row: fixed-pixel slide widths (percentages break
+ * flex sizing inside an overflow-x container) and a negative-margin bleed that
+ * matches the parent container's padding so the row runs to the container edge.
+ * Pure CSS, so this stays a server component with no client JS.
  */
 export function CharityBlock({
   id,
@@ -51,70 +55,63 @@ export function CharityBlock({
   children,
 }: CharityBlockProps) {
   return (
-    <section
-      id={id}
-      aria-labelledby={`${id}-heading`}
-      className="rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage overflow-hidden scroll-mt-24"
-    >
-      <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
+    <section id={id} aria-labelledby={`${id}-heading`} className="scroll-mt-24">
+      <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
+        {eyebrow}
+      </p>
+      <h2 id={`${id}-heading`} className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-4">
+        {name}
+      </h2>
 
-      <div className="p-6 sm:p-8 lg:p-10">
-        <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
-          {eyebrow}
-        </p>
-        <h2 id={`${id}-heading`} className="text-2xl sm:text-3xl font-bold text-page mb-4">
-          {name}
-        </h2>
+      <div className="prose prose-lg max-w-none text-page-muted space-y-6">
+        {children}
+      </div>
 
-        <div className="prose prose-lg max-w-none text-page-muted space-y-6">
-          {children}
-        </div>
-
-        {photos.length > 0 && (
-          /* Bleed the row to the card edges. Offsets mirror the p-6/sm:p-8/lg:p-10 above. */
-          <div className="mt-8 -mx-6 px-6 sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10">
-            <div
-              className="swipe-row"
-              role="group"
-              aria-label={`${name} photos, scroll sideways to see more`}
-              tabIndex={0}
-            >
-              {photos.map((photo) => (
-                <figure key={photo.src} className="w-[80%] max-w-[420px] sm:w-[380px]">
-                  <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-card">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      className={`object-cover ${photo.objectPosition ?? 'object-center'}`}
-                      sizes="(max-width: 640px) 80vw, 380px"
-                    />
-                  </div>
-                </figure>
-              ))}
-            </div>
+      {photos.length > 0 && (
+        /* Bleed to the container edge. Offsets mirror the body container's
+           px-4 sm:px-6 lg:px-8, same as the homepage carousels. */
+        <div className="mt-8 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+          <div
+            className="swipe-row"
+            role="group"
+            aria-label={`${name} photos, scroll sideways to see more`}
+            tabIndex={0}
+          >
+            {photos.map((photo) => (
+              <figure key={photo.src} className="w-[300px]">
+                <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-card">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className={`object-cover ${photo.objectPosition ?? 'object-center'}`}
+                    sizes="300px"
+                  />
+                </div>
+              </figure>
+            ))}
           </div>
-        )}
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href={donateUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline min-h-[44px]"
-          >
-            Donate to {shortName} <span aria-hidden="true">&rarr;</span>
-          </a>
-          <a
-            href={instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${name} on Instagram`}
-            className="inline-flex items-center gap-2 bg-white text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a] min-h-[44px]"
-          >
-            <InstagramIcon /> {instagramHandle}
-          </a>
         </div>
+      )}
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        <a
+          href={donateUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline min-h-[44px]"
+        >
+          Donate to {shortName} <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a
+          href={instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${name} on Instagram`}
+          className="inline-flex items-center gap-2 bg-card text-page hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a] min-h-[44px]"
+        >
+          <InstagramIcon /> {instagramHandle}
+        </a>
       </div>
     </section>
   )

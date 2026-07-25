@@ -222,7 +222,7 @@ export default function GivingBackPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
         {/* ── Charity blocks ─────────────────────── */}
-        <div className="space-y-10">
+        <div className="space-y-12 [&>section+section]:border-t [&>section+section]:border-page [&>section+section]:pt-12">
 
           <CharityBlock
             id="whittington-health-charity"
