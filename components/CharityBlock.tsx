@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import type { ReactNode } from 'react'
+import { CharityPhotoCarousel } from './CharityPhotoCarousel'
 
 /**
  * A photo in a charity block carousel.
@@ -67,32 +67,7 @@ export function CharityBlock({
         {children}
       </div>
 
-      {photos.length > 0 && (
-        /* Bleed to the container edge. Offsets mirror the body container's
-           px-4 sm:px-6 lg:px-8, same as the homepage carousels. */
-        <div className="mt-8 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-          <div
-            className="swipe-row"
-            role="group"
-            aria-label={`${name} photos, scroll sideways to see more`}
-            tabIndex={0}
-          >
-            {photos.map((photo) => (
-              <figure key={photo.src} className="w-[300px]">
-                <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-card">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className={`object-cover ${photo.objectPosition ?? 'object-center'}`}
-                    sizes="300px"
-                  />
-                </div>
-              </figure>
-            ))}
-          </div>
-        </div>
-      )}
+      <CharityPhotoCarousel photos={photos} label={name} />
 
       <div className="mt-8 flex flex-wrap gap-3">
         <a
