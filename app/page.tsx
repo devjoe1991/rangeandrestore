@@ -77,7 +77,7 @@ const services = [
   },
   {
     title: 'Relaxation Massage',
-    price: 'From £50',
+    price: 'From £75',
     problem: 'Burnt out or struggling to switch off?',
     solution: 'Gentle, pressure-adjusted treatment that calms your nervous system and leaves you genuinely restored.',
     href: '/services/relaxation-restorative-massage',
