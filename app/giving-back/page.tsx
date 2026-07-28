@@ -72,14 +72,63 @@ const whittingtonPhotos: CharityPhoto[] = [
 
 const phabPhotos: CharityPhoto[] = [
   {
+    src: '/giving-back/carlos-bonvicine-phab-meet-and-greet-tcs-london-marathon-range-and-restore.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore in Phab kit at the Phab meet and greet point on the TCS London Marathon course',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-massage-couch-phab-recovery-tent-tcs-london-marathon.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore beside a made up massage couch in the Phab recovery tent at the TCS London Marathon',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/phab-volunteer-massage-team-tcs-london-marathon-recovery-tent-range-and-restore.jpg',
+    alt: 'The Phab volunteer massage team, including Carlos Bonvicine of Range and Restore, in the recovery tent at the TCS London Marathon',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-post-race-back-massage-phab-runner-tcs-london-marathon.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore giving a post-race back massage to a Phab runner in the recovery tent at the TCS London Marathon',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-post-race-leg-massage-phab-runner-tcs-london-marathon.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore working on a Phab runner leg after the race in the Phab recovery tent at the TCS London Marathon',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-post-race-shoulder-massage-phab-runner-tcs-london-marathon.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore treating a Phab runner shoulder and arm after the race at the TCS London Marathon',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/phab-runner-tcs-london-marathon-finisher-medal-post-race-massage-range-and-restore.jpg',
+    alt: 'A Phab runner holding their TCS London Marathon finisher medal during post-race sports massage from Range and Restore',
+    orientation: 'portrait',
+  },
+  {
     src: '/giving-back/carlos-bonvicine-phab-runner-tcs-london-marathon-post-race-sports-massage.jpg',
     alt: 'Carlos Bonvicine of Range and Restore with a Phab runner and their finisher medal in the Phab recovery tent at the TCS London Marathon',
-    objectPosition: 'object-top',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-phab-runner-finisher-medal-tcs-london-marathon-recovery-tent.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore with a Phab runner wearing their TCS London Marathon finisher medal in the recovery tent',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-phab-vest-runner-post-race-recovery-tcs-london-marathon.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore with a runner in a Phab vest after the race at the TCS London Marathon',
+    orientation: 'portrait',
+  },
+  {
+    src: '/giving-back/carlos-bonvicine-phab-runner-post-race-sports-massage-recovery-tent-tcs-london-marathon.jpg',
+    alt: 'Carlos Bonvicine of Range and Restore with a Phab runner and their finisher medal after post-race sports massage at the TCS London Marathon',
+    orientation: 'portrait',
   },
   {
     src: '/giving-back/carlos-bonvicine-phab-charity-runner-london-marathon-recovery-tent.jpg',
     alt: 'Carlos Bonvicine of Range and Restore with a Phab runner after post-race sports massage in the Phab recovery tent at the TCS London Marathon',
-    objectPosition: 'object-top',
+    orientation: 'portrait',
   },
   {
     src: '/giving-back/carlos-bonvicine-phab-kids-runner-tcs-london-marathon-post-race-massage.jpg',
@@ -206,7 +255,7 @@ export default function GivingBackPage() {
 
       {/* ── Hero band ─────────────────────── */}
       <div className="bg-page-sage py-12 lg:py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
             Supporting Our Community &middot; Archway &middot; North London
           </p>
@@ -219,7 +268,7 @@ export default function GivingBackPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 
         {/* ── Charity blocks ─────────────────────── */}
         <div className="space-y-12 [&>section+section]:border-t [&>section+section]:border-page [&>section+section]:pt-12">
@@ -280,11 +329,13 @@ export default function GivingBackPage() {
         </div>
 
         {/* ── FAQs ─────────────────────── */}
-        <h2 className="text-2xl font-bold text-page mt-12 mb-4">Giving back FAQs</h2>
-        <FaqAccordion items={faqs} />
+        <div className="max-w-3xl">
+          <h2 className="text-2xl font-bold text-page mt-12 mb-4">Giving back FAQs</h2>
+          <FaqAccordion items={faqs} />
+        </div>
 
         {/* ── Related ─────────────────────── */}
-        <div className="mt-10 border-t border-page pt-8">
+        <div className="max-w-3xl mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">

@@ -65,8 +65,18 @@ export function CharityPhotoCarousel({ photos, label }: { photos: CharityPhoto[]
         onMouseMove={handleMouseMove}
       >
         {photos.map((photo) => (
-          <figure key={photo.src} className="w-[80vw] sm:w-[340px] lg:w-[360px] flex-shrink-0">
-            <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-card">
+          /* Uniform row height, natural aspect per photo. The set mixes 4:3
+             landscape with 9:16 portrait, so forcing one ratio would crop the
+             portraits to a horizontal band and cut heads off. Fixing the height
+             and letting aspect-ratio set the width keeps the row tidy and every
+             photo intact. */
+          <figure
+            key={photo.src}
+            className={`h-[280px] sm:h-[340px] lg:h-[380px] flex-shrink-0 ${
+              photo.orientation === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]'
+            }`}
+          >
+            <div className="relative w-full h-full rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-card">
               <Image
                 src={photo.src}
                 alt={photo.alt}
@@ -74,7 +84,7 @@ export function CharityPhotoCarousel({ photos, label }: { photos: CharityPhoto[]
                 draggable={false}
                 onDragStart={(e) => e.preventDefault()}
                 className={`object-cover pointer-events-none select-none ${photo.objectPosition ?? 'object-center'}`}
-                sizes="(max-width: 640px) 80vw, 360px"
+                sizes={photo.orientation === 'portrait' ? '285px' : '507px'}
               />
             </div>
           </figure>

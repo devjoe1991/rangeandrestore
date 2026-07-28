@@ -9,7 +9,9 @@ export type CharityPhoto = {
   src: string
   /** Long descriptive alt: subject, event, then location. Stay at event level. */
   alt: string
-  /** Optional object-position class. Portrait photos usually want 'object-top'. */
+  /** Sets the slide's aspect ratio. Defaults to landscape. */
+  orientation?: 'portrait' | 'landscape'
+  /** Optional object-position class, e.g. 'object-top' when a crop clips faces. */
   objectPosition?: string
 }
 
@@ -56,15 +58,19 @@ export function CharityBlock({
 }: CharityBlockProps) {
   return (
     <section id={id} aria-labelledby={`${id}-heading`} className="scroll-mt-24">
-      <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
-        {eyebrow}
-      </p>
-      <h2 id={`${id}-heading`} className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-4">
-        {name}
-      </h2>
+      {/* Text stays at a readable measure even though the page runs full width.
+          The carousel below deliberately spans the whole container. */}
+      <div className="max-w-3xl">
+        <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
+          {eyebrow}
+        </p>
+        <h2 id={`${id}-heading`} className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-4">
+          {name}
+        </h2>
 
-      <div className="prose prose-lg max-w-none text-page-muted space-y-6">
-        {children}
+        <div className="prose prose-lg max-w-none text-page-muted space-y-6">
+          {children}
+        </div>
       </div>
 
       <CharityPhotoCarousel photos={photos} label={name} />
