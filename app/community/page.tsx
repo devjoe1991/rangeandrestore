@@ -160,6 +160,11 @@ export default function CommunityPage() {
           <p className="text-lg text-page-muted font-medium mb-4">
             Our hub on Junction Road is a place you can be one hundred percent confident in. Somewhere your body can rest, restore and recover properly. Local business owners talk about us, recommend us, and collaborate with us. We&apos;ve become a staple in the Archway and North London community, a household name deep rooted in the local bars, cafés, restaurants and studios that make this part of the city what it is.
           </p>
+          <p className="text-lg text-page-muted font-medium mb-4">
+            We also back two charities beyond the high street.{' '}
+            <Link href="/giving-back" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Whittington Health Charity and Phab</Link>
+            , with donated treatments, gift vouchers and Carlos&apos;s time at their events.
+          </p>
           <p className="text-lg text-page-muted font-medium">
             If you&apos;re a local independent, please reach out. <Link href="/press" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Press, podcast and media enquiries have their own page</Link>.
           </p>

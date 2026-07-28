@@ -6,6 +6,7 @@ import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
+import { GivingBackStrip } from '@/components/GivingBackStrip'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
@@ -76,7 +77,7 @@ const services = [
   },
   {
     title: 'Relaxation Massage',
-    price: 'From £50',
+    price: 'From £75',
     problem: 'Burnt out or struggling to switch off?',
     solution: 'Gentle, pressure-adjusted treatment that calms your nervous system and leaves you genuinely restored.',
     href: '/services/relaxation-restorative-massage',
@@ -320,6 +321,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── 2.15 GIVING BACK ─────────────────────────────────── */}
+      <GivingBackStrip />
 
       {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">

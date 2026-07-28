@@ -32,6 +32,7 @@ const SEARCH_INDEX: SearchItem[] = [
   { title: 'Gift Cards', description: 'Buy a massage gift for someone you care about', href: '/gift-cards', group: 'Pages', keywords: ['gift', 'voucher', 'present', 'birthday', 'christmas'] },
   { title: 'FAQs', description: 'Common questions about massage therapy', href: '/faqs', group: 'Pages', keywords: ['faq', 'questions', 'how', 'what', 'first time', 'hurt', 'wear'] },
   { title: 'Clinical Collaboration', description: 'Range and Restore alongside Reliable Scan Archway', href: '/clinical-collaboration', group: 'Pages', keywords: ['ultrasound', 'scan', 'reliable', 'collaboration', 'diagnostic'] },
+  { title: 'Giving Back', description: 'The charities we support: Whittington Health Charity and Phab', href: '/giving-back', group: 'Pages', keywords: ['charity', 'charities', 'giving', 'giving back', 'donate', 'donation', 'whittington', 'nhs', 'hospital', 'phab', 'fundraising', 'raffle', 'volunteer', 'community', 'marathon', 'london marathon'] },
   { title: 'Wellness Hub', description: 'Articles on massage, injury and recovery', href: '/blog', group: 'Pages', keywords: ['blog', 'articles', 'wellness', 'advice', 'tips'] },
 ]
 
