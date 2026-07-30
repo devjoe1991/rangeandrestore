@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import fs from 'fs'
+import path from 'path'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import Link from 'next/link'
@@ -11,49 +13,59 @@ export const metadata: Metadata = buildMetadata({
   path: '/gallery',
 })
 
-export const revalidate = 3600 // refresh photos every hour
+const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
 
-const LOCAL_GALLERY_IMAGES: GalleryImage[] = [
-  { src: '/Gallery/IMG_1828.jpeg', alt: 'Sports massage treatment session at Range and Restore clinic, Archway, North London', caption: 'Range and Restore — treatment session' },
-  { src: '/Gallery/IMG_1831.jpeg', alt: 'Professional massage therapy room at Range and Restore, 130 Junction Road, Archway', caption: 'Range and Restore — clinic interior' },
-  { src: '/Gallery/IMG_1552.jpeg', alt: 'Deep tissue massage being performed at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — deep tissue massage' },
-  { src: '/Gallery/IMG_1311.jpeg', alt: 'Sports massage therapist Carlos Bonvicine at work in Archway clinic', caption: 'Range and Restore — Carlos at work' },
-  { src: '/Gallery/IMG_1309.jpeg', alt: 'Assessment-led soft tissue treatment at Range and Restore, Archway London', caption: 'Range and Restore — soft tissue treatment' },
-  { src: '/Gallery/IMG_1275.jpeg', alt: 'Remedial massage therapy session at Range and Restore Sports Massage clinic', caption: 'Range and Restore — remedial massage' },
-  { src: '/Gallery/IMG_1262.jpeg', alt: 'Professional treatment room and massage table at Range and Restore, Archway', caption: 'Range and Restore — treatment room' },
-  { src: '/Gallery/IMG_1132.jpeg', alt: 'Sports massage for injury recovery at Range and Restore, North London', caption: 'Range and Restore — injury recovery massage' },
-  { src: '/Gallery/IMG_1112.jpeg', alt: 'Hands-on sports massage therapy at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — hands-on therapy' },
-  { src: '/Gallery/IMG_1393.JPG', alt: 'Clinical massage environment at Range and Restore, 130 Junction Road, Archway N19', caption: 'Range and Restore — clinical setting' },
-  { src: '/Gallery/IMG_1387.JPG', alt: 'Full-body massage treatment at Range and Restore Sports Massage clinic, Archway', caption: 'Range and Restore — full-body treatment' },
-  { src: '/Gallery/IMG_1382.JPG', alt: 'Sports and deep tissue massage at Range and Restore, Archway, London N19', caption: 'Range and Restore — sports massage' },
-  { src: '/Gallery/IMG_1381.JPG', alt: 'Relaxation massage session at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — relaxation session' },
-  { src: '/Gallery/IMG_1380.JPG', alt: 'Post-event sports massage recovery at Range and Restore, North London', caption: 'Range and Restore — recovery massage' },
-  { src: '/Gallery/IMG_1371.JPG', alt: 'Personalised massage therapy at Range and Restore clinic, Archway London', caption: 'Range and Restore — personalised therapy' },
-  { src: '/Gallery/FullSizeRender.jpeg', alt: 'Range and Restore Sports Massage clinic at 130 Junction Road, Archway, London N19 5LB', caption: 'Range and Restore — Archway clinic' },
-  { src: '/Gallery/FullSizeRender (1).jpeg', alt: 'Inside Range and Restore Sports Massage, Archway — professional clinic environment', caption: 'Range and Restore — clinic environment' },
-  { src: '/Gallery/FullSizeRender (2).jpeg', alt: 'Range and Restore Sports Massage treatment area, Archway, North London', caption: 'Range and Restore — treatment area' },
-  { src: '/Gallery/incollage_save.jpg', alt: 'Range and Restore Sports Massage — therapy sessions at Archway clinic', caption: 'Range and Restore — therapy sessions' },
+// Hand-written alt text and captions for known photos, in display order.
+// Any new image dropped into public/Gallery is picked up automatically at
+// build time and appended after these with default alt text — add an entry
+// here when a photo deserves its own wording.
+const CURATED: Array<{ file: string; alt: string; caption: string }> = [
+  { file: 'IMG_1828.jpeg', alt: 'Sports massage treatment session at Range and Restore clinic, Archway, North London', caption: 'Range and Restore — treatment session' },
+  { file: 'IMG_1831.jpeg', alt: 'Professional massage therapy room at Range and Restore, 130 Junction Road, Archway', caption: 'Range and Restore — clinic interior' },
+  { file: 'IMG_1552.jpeg', alt: 'Deep tissue massage being performed at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — deep tissue massage' },
+  { file: 'IMG_1311.jpeg', alt: 'Sports massage therapist Carlos Bonvicine at work in Archway clinic', caption: 'Range and Restore — Carlos at work' },
+  { file: 'IMG_1309.jpeg', alt: 'Assessment-led soft tissue treatment at Range and Restore, Archway London', caption: 'Range and Restore — soft tissue treatment' },
+  { file: 'IMG_1275.jpeg', alt: 'Remedial massage therapy session at Range and Restore Sports Massage clinic', caption: 'Range and Restore — remedial massage' },
+  { file: 'IMG_1262.jpeg', alt: 'Professional treatment room and massage table at Range and Restore, Archway', caption: 'Range and Restore — treatment room' },
+  { file: 'IMG_1132.jpeg', alt: 'Sports massage for injury recovery at Range and Restore, North London', caption: 'Range and Restore — injury recovery massage' },
+  { file: 'IMG_1112.jpeg', alt: 'Hands-on sports massage therapy at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — hands-on therapy' },
+  { file: 'IMG_1393.JPG', alt: 'Clinical massage environment at Range and Restore, 130 Junction Road, Archway N19', caption: 'Range and Restore — clinical setting' },
+  { file: 'IMG_1387.JPG', alt: 'Full-body massage treatment at Range and Restore Sports Massage clinic, Archway', caption: 'Range and Restore — full-body treatment' },
+  { file: 'IMG_1382.JPG', alt: 'Sports and deep tissue massage at Range and Restore, Archway, London N19', caption: 'Range and Restore — sports massage' },
+  { file: 'IMG_1381.JPG', alt: 'Relaxation massage session at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — relaxation session' },
+  { file: 'IMG_1380.JPG', alt: 'Post-event sports massage recovery at Range and Restore, North London', caption: 'Range and Restore — recovery massage' },
+  { file: 'IMG_1371.JPG', alt: 'Personalised massage therapy at Range and Restore clinic, Archway London', caption: 'Range and Restore — personalised therapy' },
+  { file: 'FullSizeRender.jpeg', alt: 'Range and Restore Sports Massage clinic at 130 Junction Road, Archway, London N19 5LB', caption: 'Range and Restore — Archway clinic' },
+  { file: 'FullSizeRender (1).jpeg', alt: 'Inside Range and Restore Sports Massage, Archway — professional clinic environment', caption: 'Range and Restore — clinic environment' },
+  { file: 'FullSizeRender (2).jpeg', alt: 'Range and Restore Sports Massage treatment area, Archway, North London', caption: 'Range and Restore — treatment area' },
+  { file: 'WhatsApp Image 2026-05-17 at 18.09.48.jpeg', alt: 'Treatment room with massage couch and certifications at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — inside the clinic' },
+  { file: 'incollage_save.jpg', alt: 'Range and Restore Sports Massage — therapy sessions at Archway clinic', caption: 'Range and Restore — therapy sessions' },
 ]
 
-async function getPhotos(): Promise<GalleryImage[]> {
+function getGalleryImages(): GalleryImage[] {
+  const dir = path.join(process.cwd(), 'public', 'Gallery')
+  let files: string[] = []
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ??
-      (process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://rangeandrestore.co.uk')
-    const res = await fetch(`${baseUrl}/api/photos`, { next: { revalidate: 3600 } })
-    const data = await res.json()
-    // Filter out photo index 2 (photo 3), then append Google photos after local ones
-    const googlePhotos: GalleryImage[] = (data.photos ?? [])
-      .filter((_: { src: string }, i: number) => i !== 2)
-      .map((p: { src: string }, i: number) => ({
-        src: p.src,
-        alt: `Range and Restore Sports Massage clinic photo ${i + 1} — Archway, North London`,
-        caption: `Range and Restore — photo ${i + 1}`,
-      }))
-    return [...LOCAL_GALLERY_IMAGES, ...googlePhotos]
+    files = fs.readdirSync(dir).filter((f) => IMAGE_EXTENSIONS.has(path.extname(f).toLowerCase()))
   } catch {
-    return LOCAL_GALLERY_IMAGES
+    files = []
   }
+  const available = new Set(files)
+  const curatedNames = new Set(CURATED.map((c) => c.file))
+  const curated = CURATED.filter((c) => available.has(c.file))
+  const extras = files
+    .filter((f) => !curatedNames.has(f))
+    .sort()
+    .map((f, i) => ({
+      file: f,
+      alt: `Range and Restore Sports Massage clinic photo ${i + 1} — Archway, North London`,
+      caption: 'Range and Restore — Archway clinic',
+    }))
+  return [...curated, ...extras].map(({ file, alt, caption }) => ({
+    src: `/Gallery/${file}`,
+    alt,
+    caption,
+  }))
 }
 
 const breadcrumbs = buildBreadcrumbs([{ name: 'Gallery', path: '/gallery' }])
@@ -71,8 +83,8 @@ const gallerySchema = {
   },
 }
 
-export default async function GalleryPage() {
-  const images = await getPhotos()
+export default function GalleryPage() {
+  const images = getGalleryImages()
 
   return (
     <>

@@ -11,8 +11,6 @@ export const metadata: Metadata = buildMetadata({
   author: true,
 })
 
-export const revalidate = 3600
-
 const breadcrumbs = buildBreadcrumbs([
   { name: 'Blog', path: '/blog' },
   { name: 'Marathon Massage Archway', path: '/blog/marathon-sports-massage-archway' },
@@ -71,24 +69,16 @@ const faqs = [
 
 const faqSchema = buildFaqSchema(faqs)
 
-type PhotoData = { src: string; width: number; height: number }
+const MARATHON_PHOTOS = [
+  { src: '/giving-back/carlos-bonvicine-post-race-leg-massage-phab-runner-tcs-london-marathon.jpg', alt: 'Carlos Bonvicine giving a post-race leg massage to a Phab runner at the TCS London Marathon' },
+  { src: '/giving-back/carlos-bonvicine-post-race-shoulder-massage-phab-runner-tcs-london-marathon.jpg', alt: 'Post-race shoulder massage for a Phab runner at the TCS London Marathon recovery tent' },
+  { src: '/giving-back/carlos-bonvicine-phab-runner-tcs-london-marathon-post-race-sports-massage.jpg', alt: 'Carlos Bonvicine treating a Phab runner with post-race sports massage at the TCS London Marathon' },
+  { src: '/giving-back/carlos-bonvicine-phab-runner-finisher-medal-tcs-london-marathon-recovery-tent.jpg', alt: 'Phab runner with finisher medal receiving recovery massage at the TCS London Marathon' },
+  { src: '/giving-back/carlos-bonvicine-massage-couch-phab-recovery-tent-tcs-london-marathon.jpg', alt: 'Massage couch set up in the Phab recovery tent at the TCS London Marathon' },
+  { src: '/giving-back/phab-volunteer-massage-team-tcs-london-marathon-recovery-tent-range-and-restore.jpg', alt: 'Phab volunteer massage team including Range and Restore at the TCS London Marathon recovery tent' },
+]
 
-async function getMarathonPhotos(): Promise<PhotoData[]> {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL ??
-      (process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://rangeandrestore.co.uk')
-    const res = await fetch(`${baseUrl}/api/photos`, { next: { revalidate: 3600 } })
-    const data = await res.json()
-    return (data.photos ?? []).slice(0, 6)
-  } catch {
-    return []
-  }
-}
-
-export default async function MarathonSportsMassageArchwayPage() {
-  const photos = await getMarathonPhotos()
-
+export default function MarathonSportsMassageArchwayPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -240,27 +230,25 @@ export default async function MarathonSportsMassageArchwayPage() {
           </p>
         </div>
 
-        {photos.length > 0 && (
-          <div className="mt-10 mb-10">
-            <h2 className="text-2xl font-bold text-page mb-4">Carlos at work — marathon events and clinic sessions</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {photos.map((photo, i) => (
-                <div key={i} className="aspect-square rounded-xl overflow-hidden relative">
-                  <Image
-                    src={photo.src}
-                    alt={`Range and Restore Sports Massage — marathon event and clinic photo ${i + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 50vw, 33vw"
-                  />
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-page-muted opacity-70 mt-3">
-              Photos from the Range and Restore Google Business listing — marathon events and clinic sessions in Archway, North London.
-            </p>
+        <div className="mt-10 mb-10">
+          <h2 className="text-2xl font-bold text-page mb-4">Carlos at work — TCS London Marathon recovery tent</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {MARATHON_PHOTOS.map((photo, i) => (
+              <div key={i} className="aspect-square rounded-xl overflow-hidden relative">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+              </div>
+            ))}
           </div>
-        )}
+          <p className="text-sm text-page-muted opacity-70 mt-3">
+            Post-race massage with the Phab charity recovery tent at the TCS London Marathon — Range and Restore, Archway, North London.
+          </p>
+        </div>
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Local marathon support in Archway, North London</h2>

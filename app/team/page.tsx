@@ -203,7 +203,8 @@ export default function TeamPage() {
                   Her calm, friendly and professional approach helps clients feel relaxed, supported and confident throughout their appointment, creating a comfortable environment where recovery can begin.
                 </p>
                 <p>
-                  Alongside sports massage and soft tissue therapy, Alison has a particular interest in Pregnancy Massage, providing safe, supportive treatments to help relieve the muscular and joint aches that commonly develop throughout pregnancy. She also offers Abdominal Massage, which may help relieve symptoms associated with IBS, bloating, stress and anxiety, muscle tension and abdominal discomfort.
+                  Alongside sports massage and soft tissue therapy, Alison has a particular interest in{' '}
+                  <Link href="/services/pregnancy-massage" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Pregnancy Massage</Link>, providing safe, supportive treatments to help relieve the muscular and joint aches that commonly develop throughout pregnancy. She also offers Abdominal Massage, which may help relieve symptoms associated with IBS, bloating, stress and anxiety, muscle tension and abdominal discomfort.
                 </p>
                 <p>
                   Recovery doesn&rsquo;t end when your appointment finishes. Where appropriate, Alison will provide practical advice, rehabilitation exercises and self-care recommendations to help you maintain the benefits of your treatment and reduce the likelihood of symptoms returning.
@@ -358,7 +359,8 @@ export default function TeamPage() {
                 With over 18 years of experience working in therapeutic settings, Mateja combines extensive hands-on experience with advanced clinical training to help clients reduce pain, improve mobility, recover from injury, and enhance their overall wellbeing.
               </p>
               <p>
-                Drawing on a wide range of treatment approaches, including Sports Massage, Soft Tissue Therapy, Reflexology, Lymphatic Drainage techniques, Indian Head Massage, Natural Lift Facial Massage, and the Emmett Technique, Mateja tailors every treatment to the individual needs of her clients. Whether you&rsquo;re dealing with muscular tension, reduced mobility, stress-related discomfort, recovery from physical activity, or simply looking to improve your overall wellbeing, her treatments are designed to help you achieve lasting results.
+                Drawing on a wide range of treatment approaches, including Sports Massage, Soft Tissue Therapy,{' '}
+                <Link href="/services/reflexology" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reflexology</Link>, Lymphatic Drainage techniques, Indian Head Massage, Natural Lift Facial Massage, and the Emmett Technique, Mateja tailors every treatment to the individual needs of her clients. Whether you&rsquo;re dealing with muscular tension, reduced mobility, stress-related discomfort, recovery from physical activity, or simply looking to improve your overall wellbeing, her treatments are designed to help you achieve lasting results.
               </p>
               <p>
                 Known for her calm, caring, and professional approach, Mateja takes the time to understand each client&rsquo;s goals, concerns, and lifestyle. Her focus is not only on relieving symptoms but also on helping clients move better, feel stronger, and enjoy a better quality of life.

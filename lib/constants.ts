@@ -12,6 +12,8 @@ export const BOOKING_URLS = {
   twoHourRelief: `${BOOKING_BASE}/#/discipline/7/treatment/32`,
   cuppingSportsDeepTissue: `${BOOKING_BASE}/#/discipline/9/treatment/36`,
   mskUltrasoundMassage: `${BOOKING_BASE}/#/discipline/13/treatment/71`,
+  pregnancyMassage: `${BOOKING_BASE}/#/discipline/14/treatment/72`,
+  reflexology: `${BOOKING_BASE}/#/discipline/15/treatment/49`,
   communityTuesday: `${BOOKING_BASE}/#/community-tuesday-clinic`,
   recoverySuite: `${BOOKING_BASE}/#/recovery-suite`,
   infraredHybridSauna: `${BOOKING_BASE}/#/infrared-hybrid-sauna`,
@@ -52,6 +54,8 @@ export const NAV_ITEMS = [
       { label: '2-Hour Pain Relief', href: '/services/2-hour-pain-relief-massage' },
       { label: 'Manual Lymphatic Drainage', href: '/services/manual-lymphatic-drainage' },
       { label: 'Relaxation Massage', href: '/services/relaxation-restorative-massage' },
+      { label: 'Pregnancy Massage', href: '/services/pregnancy-massage' },
+      { label: 'Reflexology', href: '/services/reflexology' },
     ],
   },
   {
