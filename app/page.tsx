@@ -171,6 +171,7 @@ const bundles = [
 
 const teamMembers = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: '/carlos-bonvicine-sports-massage-archway-hero.jpg', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
+  { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: '/alison-isherwood-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#alison-isherwood', cta: 'Meet Alison' },
   { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
   { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
 ]
@@ -329,7 +330,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            <span className="font-black">Recovery Suite:</span> private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; performance memberships.
+            <span className="font-black">Recovery Suite:</span> private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; treatment memberships.
           </span>
         </div>
       </div>

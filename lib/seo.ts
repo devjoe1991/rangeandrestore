@@ -169,6 +169,30 @@ export const matejaPersonSchema = {
   ],
 }
 
+export const alisonPersonSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Alison Isherwood',
+  jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+  description: 'Alison Isherwood is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and graduate of the London School of Sports Massage (LSSM), with specialist interests in pregnancy massage and abdominal massage, based at Range and Restore in Archway, North London.',
+  url: `${BASE_URL}/team`,
+  image: `${BASE_URL}/alison-isherwood-range-and-restore-sports-massage-banner-archway-london.jpeg`,
+  worksFor: {
+    '@type': 'LocalBusiness',
+    name: 'Range and Restore Sports Massage',
+    url: BASE_URL,
+  },
+  alumniOf: { '@type': 'EducationalOrganization', name: 'London School of Sports Massage (LSSM)' },
+  knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Deep Tissue Massage', 'Pregnancy Massage', 'Abdominal Massage', 'Injury Recovery', 'Mobility'],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Professional Qualification', name: 'BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapy (LSSM)' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/rangeandrestore',
+    'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
+  ],
+}
+
 export const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'MedicalBusiness', 'HealthAndBeautyBusiness'],
@@ -243,6 +267,14 @@ export const businessSchema = {
       description: 'Mateja Bracko-Mounti is a BTEC Level 5 qualified sports massage and soft tissue remedial therapist (SMRT, MSMA) with over 18 years of experience, trained with the LSSM and qualified in reflexology, pregnancy massage, Indian head massage and the Emmett Technique, based in Archway, North London.',
       url: `${BASE_URL}/team`,
       knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Reflexology', 'Pregnancy Massage', 'Indian Head Massage', 'Emmett Technique'],
+    },
+    {
+      '@type': 'Person',
+      name: 'Alison Isherwood',
+      jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+      description: 'Alison Isherwood is a BTEC Level 5 sports massage and soft tissue remedial therapist and LSSM graduate with specialist interests in pregnancy massage and abdominal massage, based in Archway, North London.',
+      url: `${BASE_URL}/team`,
+      knowsAbout: ['Sports Massage', 'Soft Tissue Therapy', 'Pregnancy Massage', 'Abdominal Massage'],
     },
   ],
   hasMap: 'https://maps.google.com/?q=Range+and+Restore+Sports+Massage+130+Junction+Road+London+N19+5LB',
@@ -392,15 +424,14 @@ export const businessSchema = {
     },
     {
       '@type': 'Offer',
-      name: 'Restore+ Performance Memberships',
-      description: 'Monthly sports massage and premium treatment memberships at a saving on the usual price. Set up personally, not bookable online.',
+      name: 'Restore+ Signature Treatment Memberships',
+      description: 'Monthly Signature Treatment memberships at a saving on the usual price. Essential (1 × 60-minute treatment), Plus (1 × 90-minute treatment) and Elite (2 × 90-minute treatments). Set up personally, not bookable online.',
       url: `${BASE_URL}/recovery-suite/recovery-packages`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'UnitPriceSpecification', price: '69', priceCurrency: 'GBP', unitText: 'MON', description: '1 × 60-minute Sports Massage per month (usually £85)' },
-        { '@type': 'UnitPriceSpecification', price: '130', priceCurrency: 'GBP', unitText: 'MON', description: '2 × 60-minute Sports Massage per month (usually £170)' },
-        { '@type': 'UnitPriceSpecification', price: '99', priceCurrency: 'GBP', unitText: 'MON', description: '1 × 90-minute Premium Treatment per month (usually £125)' },
-        { '@type': 'UnitPriceSpecification', price: '179', priceCurrency: 'GBP', unitText: 'MON', description: '2 × 90-minute Premium Treatments per month (usually £250)' },
+        { '@type': 'UnitPriceSpecification', price: '70', priceCurrency: 'GBP', unitText: 'MON', description: 'Essential — 1 × 60-minute Signature Treatment per month' },
+        { '@type': 'UnitPriceSpecification', price: '100', priceCurrency: 'GBP', unitText: 'MON', description: 'Plus — 1 × 90-minute Signature Treatment per month' },
+        { '@type': 'UnitPriceSpecification', price: '179', priceCurrency: 'GBP', unitText: 'MON', description: 'Elite — 2 × 90-minute Signature Treatments per month' },
       ],
     },
   ],

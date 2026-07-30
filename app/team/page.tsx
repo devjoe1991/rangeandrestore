@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, personSchema, daraelPersonSchema, matejaPersonSchema, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, personSchema, daraelPersonSchema, matejaPersonSchema, alisonPersonSchema, buildBreadcrumbs } from '@/lib/seo'
 import { RELIABLE_SCAN_URL } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Meet the Team | Sports Massage Therapists Archway',
-  description: 'Meet the Range and Restore team — founder Carlos Bonvicine, Darael Beckles and Mateja Bracko-Mounti, sports massage and soft tissue therapists in Archway, North London.',
+  description: 'Meet the Range and Restore team — founder Carlos Bonvicine, Alison Isherwood, Darael Beckles and Mateja Bracko-Mounti, sports massage and soft tissue therapists in Archway, North London.',
   path: '/team',
 })
 
@@ -17,6 +17,7 @@ const CARLOS_PHOTO = 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w
 const DARAEL_PHOTO = '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg'
 const MATEJA_PORTRAIT = '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
 const MATEJA_BANNER = '/mateja-bracko-mounti-range-and-restore-sports-massage-banner-archway-london.jpeg'
+const ALISON_PHOTO = '/alison-isherwood-range-and-restore-sports-massage-banner-archway-london.jpeg'
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#0f767a' }} aria-hidden="true">
@@ -26,6 +27,7 @@ const CheckIcon = () => (
 
 const introCards = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: CARLOS_PHOTO, alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', anchor: '#carlos-bonvicine' },
+  { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: ALISON_PHOTO, alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#alison-isherwood' },
   { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: DARAEL_PHOTO, alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#darael-beckles' },
   { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: MATEJA_PORTRAIT, alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#mateja-bracko-mounti' },
 ]
@@ -34,6 +36,7 @@ export default function TeamPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(alisonPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(daraelPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(matejaPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
@@ -54,7 +57,7 @@ export default function TeamPage() {
 
       {/* Team intro cards */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {introCards.map((m) => (
             <a key={m.anchor} href={m.anchor} className="group bg-card rounded-2xl overflow-hidden border-2 border-page card-lift block">
               <div className="relative aspect-[4/5] overflow-hidden">
@@ -172,8 +175,87 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* Alison full profile */}
+      <section id="alison-isherwood" className="bg-page-sage">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
+                <Image
+                  src={ALISON_PHOTO}
+                  alt="Alison Isherwood, BTEC Level 5 sports massage and soft tissue therapist, standing beside the Range and Restore Sports Massage banner in Archway, North London"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <h2 className="text-3xl font-bold text-page mb-2">Alison Isherwood</h2>
+              <p className="text-[#0f767a] font-semibold mb-1">BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist</p>
+              <p className="text-page-muted font-medium mb-6 text-sm">LSSM Graduate · Pregnancy &amp; Abdominal Massage</p>
+              <div className="space-y-4 text-page-muted text-lg">
+                <p>
+                  Alison is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist, graduating from the London School of Sports Massage (LSSM), one of the UK&rsquo;s leading providers of advanced clinical and remedial massage training.
+                </p>
+                <p>
+                  Alison believes the best results come from truly listening to her clients. She understands that everybody is different, which is why no two appointments are ever the same. Whether you&rsquo;re recovering from an injury, struggling with back, neck or shoulder pain, feeling stiff after training, or simply looking to move more comfortably, Alison provides personalised, hands-on treatment designed around your needs and goals.
+                </p>
+                <p>
+                  Her calm, friendly and professional approach helps clients feel relaxed, supported and confident throughout their appointment, creating a comfortable environment where recovery can begin.
+                </p>
+                <p>
+                  Alongside sports massage and soft tissue therapy, Alison has a particular interest in Pregnancy Massage, providing safe, supportive treatments to help relieve the muscular and joint aches that commonly develop throughout pregnancy. She also offers Abdominal Massage, which may help relieve symptoms associated with IBS, bloating, stress and anxiety, muscle tension and abdominal discomfort.
+                </p>
+                <p>
+                  Recovery doesn&rsquo;t end when your appointment finishes. Where appropriate, Alison will provide practical advice, rehabilitation exercises and self-care recommendations to help you maintain the benefits of your treatment and reduce the likelihood of symptoms returning.
+                </p>
+              </div>
+
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapy (LSSM)',
+                  'Graduate of the London School of Sports Massage',
+                  'Specialist Interest in Pregnancy Massage',
+                  'Abdominal Massage',
+                ].map((qual) => (
+                  <div key={qual} className="flex items-start gap-2 text-page">
+                    <CheckIcon />
+                    <span className="font-medium text-sm leading-snug">{qual}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10">
+                <BookingButton label="Book Your Session with Alison" />
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-card border-2 border-page rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-page mb-4">How Alison Works</h3>
+                <ul className="space-y-3">
+                  {[
+                    { title: 'Listen', desc: 'Your appointment starts with a conversation about your symptoms, lifestyle, medical history and what you’d like to achieve.' },
+                    { title: 'Assess', desc: 'Where appropriate, a thorough assessment helps identify what’s contributing to your pain, movement restrictions or discomfort.' },
+                    { title: 'Treat', desc: 'A personalised treatment using a range of advanced soft tissue therapy techniques, designed to reduce pain, improve movement and support your recovery.' },
+                    { title: 'Reassess', desc: 'Progress is reassessed throughout your appointment, so you can see and feel the difference before you leave.' },
+                  ].map((item) => (
+                    <li key={item.title} className="flex gap-3">
+                      <span className="text-[#0f767a] font-bold text-xl leading-none mt-0.5">→</span>
+                      <div>
+                        <p className="font-semibold text-page">{item.title}</p>
+                        <p className="text-page-muted text-sm">{item.desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Darael full profile */}
-      <section id="darael-beckles" className="bg-page-sage">
+      <section id="darael-beckles">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -227,7 +309,7 @@ export default function TeamPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-card border-2 border-page rounded-2xl p-8">
+              <div className="bg-page-sage rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-page mb-4">How Darael Works</h3>
                 <ul className="space-y-3">
                   {[
@@ -252,7 +334,8 @@ export default function TeamPage() {
       </section>
 
       {/* Mateja full profile */}
-      <section id="mateja-bracko-mounti" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <section id="mateja-bracko-mounti" className="bg-page-sage">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
@@ -313,7 +396,7 @@ export default function TeamPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-page-sage rounded-2xl p-8">
+            <div className="bg-card border-2 border-page rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-page mb-4">How Mateja Works</h3>
               <ul className="space-y-3">
                 {[
@@ -343,6 +426,7 @@ export default function TeamPage() {
               />
             </div>
           </div>
+        </div>
         </div>
       </section>
 

@@ -151,7 +151,7 @@ export default function RecoverySuitePage() {
             {[
               { step: '01', title: 'Standalone recovery', desc: 'A private Infrared & Traditional Hybrid Sauna session from £19. Quick to fit in around training or a busy week, no massage needed.' },
               { step: '02', title: 'Recovery with massage', desc: 'Sports massage plus sauna or Normatec recovery in one booking, from £85. The full sequence in one visit.' },
-              { step: '03', title: 'Become a member', desc: 'Restore+ sauna and performance memberships, from £49 a month. Set up personally — call or email to join.' },
+              { step: '03', title: 'Become a member', desc: 'Restore+ sauna and Signature Treatment memberships, from £49 a month. Set up personally — call or email to join.' },
             ].map((item) => (
               <div key={item.step} className="bg-page-sage rounded-2xl p-6">
                 <p className="text-[#0f767a] font-black text-sm tracking-widest mb-3">{item.step}</p>

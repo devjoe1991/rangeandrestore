@@ -6,7 +6,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Sessions in Archway London | Infrared Sauna, Massage Packages & Memberships',
-  description: 'Pay as you go Infrared & Traditional Hybrid Sauna from £19, sports massage and recovery packages from £85, plus Restore+ sauna and performance memberships at Range and Restore, Archway.',
+  description: 'Pay as you go Infrared & Traditional Hybrid Sauna from £19, sports massage and recovery packages from £85, plus Restore+ sauna and Signature Treatment memberships at Range and Restore, Archway.',
   path: '/recovery-suite/recovery-packages',
 })
 
@@ -97,14 +97,14 @@ const saunaMemberships = [
     price: '£49',
     period: '/month',
     detail: '4 × 45-minute Infrared & Traditional Hybrid Sauna sessions',
-    desc: 'Ideal for reducing muscle tension, easing aches and pains, improving recovery and making time for your wellbeing.',
+    desc: 'Ideal for reducing muscle tension, easing aches and pains, improving recovery and supporting your overall wellbeing.',
   },
   {
     name: 'Restore+ Infrared Sauna Plus',
     price: '£79',
     period: '/month',
     detail: '8 × 45-minute Infrared & Traditional Hybrid Sauna sessions',
-    desc: 'Perfect for regular recovery, helping reduce stiffness, improving circulation and keeping your body feeling its best.',
+    desc: 'Perfect for regular recovery, improving circulation and helping your body perform at its best.',
     popular: true,
   },
   {
@@ -116,47 +116,29 @@ const saunaMemberships = [
   },
 ]
 
-const performanceMemberships = [
+const signatureMemberships = [
   {
-    name: 'Restore+ Performance (60 Minutes)',
-    price: '£69',
+    name: 'Restore+ Signature Treatment Essential',
+    price: '£70',
     period: '/month',
-    usual: 'Usually £85',
-    detail: '1 × 60-minute Sports Massage',
-    saving: 'Save £16/month',
+    detail: '1 × 60-minute Signature Treatment every month',
+    desc: 'Ideal for regular maintenance, reducing pain and stiffness, improving mobility and preventing small problems becoming bigger ones.',
   },
   {
-    name: 'Restore+ Performance (60 Minutes)',
-    price: '£130',
+    name: 'Restore+ Signature Treatment Plus',
+    price: '£100',
     period: '/month',
-    usual: 'Usually £170',
-    detail: '2 × 60-minute Sports Massage',
-    saving: 'Save £40/month',
-  },
-  {
-    name: 'Restore+ Performance (90 Minutes)',
-    price: '£99',
-    period: '/month',
-    usual: 'Usually £125',
-    detail: '1 × 90-minute Premium Treatment',
-    saving: 'Save £26/month',
-  },
-  {
-    name: 'Restore+ Performance (90 Minutes)',
-    price: '£179',
-    period: '/month',
-    usual: 'Usually £250',
-    detail: '2 × 90-minute Premium Treatments',
-    saving: 'Save £71/month',
+    detail: '1 × 90-minute Signature Treatment every month',
+    desc: 'Perfect for persistent aches and pains, active lifestyles, more comprehensive treatment and faster recovery.',
     popular: true,
   },
-]
-
-const performanceChoices = [
-  '90-minute Sports Massage',
-  '90-minute Advanced Clinical Massage',
-  '60-minute Sports Massage + 30-minute Infrared & Traditional Hybrid Sauna',
-  '60-minute Sports Massage + 30-minute Normatec Compression Therapy',
+  {
+    name: 'Restore+ Signature Treatment Elite',
+    price: '£179',
+    period: '/month',
+    detail: '2 × 90-minute Signature Treatments every month',
+    desc: 'The ultimate membership for long-term pain management, peak physical performance, consistent recovery and feeling and moving your best.',
+  },
 ]
 
 const faqs = [
@@ -170,7 +152,7 @@ const faqs = [
   },
   {
     q: 'How do the Restore+ memberships work?',
-    a: 'Restore+ memberships are monthly plans. The Infrared Sauna memberships give you a set number of 45-minute sauna sessions each month (or unlimited on the top tier), and the Performance memberships give you one or two premium treatments a month at a saving on the usual price. Memberships are set up personally rather than bought online, so give us a call or drop us an email to join.',
+    a: 'Restore+ memberships are monthly plans. The Infrared Sauna memberships give you a set number of 45-minute sauna sessions each month (or unlimited on the top tier), and the Signature Treatment memberships give you one or two Signature Treatments a month at a saving on the usual price. Memberships are set up personally rather than bought online, so give us a call or drop us an email to join.',
   },
   {
     q: 'Why book a package instead of booking massage and sauna separately?',
@@ -337,7 +319,7 @@ export default function RecoverySessionsPage() {
               Use the Recovery Suite pay as you go, or join a Restore+ membership if recovery is part of your routine. Every session is private, with the whole suite to yourself, including the hybrid infrared and traditional sauna and the Hyperice Normatec 3 Full Body recovery system.
             </p>
             <p className="text-page-muted">
-              Pay as you go covers standalone sauna sessions and combined sports massage packages. Restore+ memberships give you regular sauna access or premium treatments every month at a saving.
+              Pay as you go covers standalone sauna sessions and combined sports massage packages. Restore+ memberships give you regular sauna access or Signature Treatments every month at a saving.
             </p>
           </section>
 
@@ -390,27 +372,22 @@ export default function RecoverySessionsPage() {
             </div>
           </section>
 
-          {/* Restore+ Performance Memberships */}
+          {/* Restore+ Signature Treatment Memberships */}
           <section>
-            <h2 className="text-2xl font-bold text-page mb-3">Restore+ Performance Memberships</h2>
+            <h2 className="text-2xl font-bold text-page mb-3">Restore+ Signature Treatment Memberships</h2>
             <p className="text-page-muted mb-6">
               Regular hands-on treatment every month, at a saving on the usual price. Designed to reduce pain, improve mobility, speed up recovery and keep you performing at your best.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
-              {performanceMemberships.map((m, i) => (
-                <MembershipCard key={`${m.name}-${i}`} m={m} popularLabel="Best Value" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-6">
+              {signatureMemberships.map((m) => (
+                <MembershipCard key={m.name} m={m} />
               ))}
             </div>
             <div className="bg-page-sage rounded-2xl p-6">
-              <p className="font-bold text-page mb-3">Each 90-minute premium treatment can be tailored. Choose from:</p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {performanceChoices.map((choice) => (
-                  <li key={choice} className="flex items-start gap-3 text-page-muted text-sm">
-                    <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0 mt-1.5" aria-hidden="true" />
-                    {choice}
-                  </li>
-                ))}
-              </ul>
+              <p className="font-bold text-page mb-2">What is a Signature Treatment?</p>
+              <p className="text-page-muted text-sm">
+                Every Signature Treatment is tailored entirely to you. Rather than choosing a specific massage technique, you book the appointment length, and your Sports &amp; Soft Tissue Remedial Therapist will listen, assess and personalise your treatment using the most appropriate combination of advanced massage and soft tissue techniques to relieve pain, improve movement and support your recovery.
+              </p>
             </div>
           </section>
 
