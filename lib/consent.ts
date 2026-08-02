@@ -1,10 +1,10 @@
 /**
- * Google Consent Mode v2 helper.
+ * Consent helper — Google Consent Mode v2 plus the Meta Pixel's own gate.
  *
- * Tracking (GA4 + Google Ads) loads with every consent signal set to "denied"
- * by default — see components/Analytics.tsx. Nothing that needs a cookie fires
- * until the visitor makes a choice in the consent banner, which honours the
- * promise in our privacy policy and UK PECR.
+ * Tracking (GA4 + Google Ads + Meta Pixel) loads with every consent signal set
+ * to "denied"/"revoke" by default — see components/Analytics.tsx. Nothing that
+ * needs a cookie fires until the visitor makes a choice in the consent banner,
+ * which honours the promise in our privacy policy and UK PECR.
  *
  * The storage key below is also read inline by the Analytics init script so a
  * returning visitor's choice is applied the instant the tag loads — keep the
@@ -50,4 +50,12 @@ export function setConsent(choice: ConsentChoice) {
     CONSENT_SIGNALS.map((signal) => [signal, choice]),
   )
   window.gtag?.('consent', 'update', update)
+
+  // Meta keeps its own consent gate, so the same choice has to be pushed twice.
+  window.fbq?.('consent', choice === 'granted' ? 'grant' : 'revoke')
+
+  // Events fired while revoked are dropped outright, not queued, so the initial
+  // PageView is already gone by the time someone accepts — re-send it, or the
+  // visit never lands in any retargeting audience.
+  if (choice === 'granted') window.fbq?.('track', 'PageView')
 }

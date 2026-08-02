@@ -52,6 +52,7 @@ const NAME_MAP = {
   'event-marathon': 'R&R — Marathon / Event Recovery',
   'gift-cards-bundles': 'R&R — Gift Cards & Bundles',
   'announcement': 'R&R — Announcement (flexible)',
+  'announcement-carlos-annual-leave': 'R&R — Carlos Annual Leave (Aug 2026)',
   'award-prestige-2026': 'R&R — Award / Prestige 2026',
   'gallery-showcase': 'R&R — Gallery Showcase',
   // Seasonal / holiday / event (batch 2)

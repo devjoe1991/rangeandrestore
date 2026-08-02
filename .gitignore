@@ -45,6 +45,8 @@ next-env.d.ts
 
 # local-only working notes — never commit
 docs/gbp-*.md
+docs/google-ads-local-campaign.md
+docs/meta-ads-campaign.md
 
 # Blender auto-backups next to the sauna room source
 *.blend1

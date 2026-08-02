@@ -3,6 +3,7 @@
 import { useState, useSyncExternalStore } from 'react'
 import Link from 'next/link'
 import { GA4_ID, GADS_ID } from '@/lib/gtag'
+import { META_PIXEL_ID } from '@/lib/meta-pixel'
 import { getStoredConsent, setConsent } from '@/lib/consent'
 
 // The banner never needs to react to outside changes after mount, so the
@@ -13,9 +14,10 @@ const noopSubscribe = () => () => {}
 
 /**
  * Cookie-consent banner. Shows once, on the first visit, and only when tracking
- * is configured (NEXT_PUBLIC_GA4_ID or NEXT_PUBLIC_GADS_ID). "Accept" flips
- * Google Consent Mode to granted; "Reject" leaves everything denied. Rejecting
- * is a single click, exactly as easy as accepting (UK PECR / ICO guidance).
+ * is configured (NEXT_PUBLIC_GA4_ID, NEXT_PUBLIC_GADS_ID or
+ * NEXT_PUBLIC_META_PIXEL_ID). "Accept" flips Google Consent Mode to granted and
+ * grants the Meta Pixel; "Reject" leaves both denied. Rejecting is a single
+ * click, exactly as easy as accepting (UK PECR / ICO guidance).
  */
 export function ConsentBanner() {
   const hasChosen = useSyncExternalStore(
@@ -25,7 +27,8 @@ export function ConsentBanner() {
   )
   const [dismissed, setDismissed] = useState(false)
 
-  if ((!GA4_ID && !GADS_ID) || hasChosen || dismissed) return null
+  if ((!GA4_ID && !GADS_ID && !META_PIXEL_ID) || hasChosen || dismissed)
+    return null
 
   function choose(choice: 'granted' | 'denied') {
     setConsent(choice)

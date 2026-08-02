@@ -68,6 +68,7 @@ const CAMPAIGNS = {
   'R&R — Marathon / Event Recovery': { subject: 'Marathon prep and recovery', preview: 'Pre-race preparation and post-race recovery.', send: 'Race season' },
   'R&R — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
   'R&R — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
+  'R&R — Carlos Annual Leave (Aug 2026)': { subject: 'I am away from 14 August, the clinic is open as normal', preview: 'Back in the clinic on 24 August. Alison, Darael and Mateja are covering, seven days a week.', send: 'approx 10 Aug 2026 (leave starts Fri 14 Aug)' },
   'R&R — Award / Prestige 2026': { subject: 'We have been named Clinic of the Year', preview: 'Recognised at the 2026/27 London and South East England Prestige Awards.', send: 'On award announcement' },
   'R&R — Gallery Showcase': { subject: 'A look inside Range and Restore', preview: 'The clinic, the Recovery Suite, and what to expect.', send: 'Evergreen' },
   'R&R — Meet the Team': { subject: 'Meet the team behind Range and Restore', preview: 'Carlos, Darael and Mateja. The qualified hands looking after you in Archway.', send: 'Evergreen / one-off introduction' },
