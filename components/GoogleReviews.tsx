@@ -2,6 +2,8 @@
 
 import { useEffect, useState, useRef } from 'react'
 
+import { SwipeCarousel } from '@/components/SwipeCarousel'
+
 interface Review {
   author_name: string
   rating: number
@@ -35,9 +37,11 @@ function ReviewCard({ review }: { review: Review }) {
           </svg>
         ))}
       </div>
-      <div 
-        className="overflow-y-auto flex-1 pr-2 pb-1 custom-scrollbar" 
-        onMouseDown={(e) => e.stopPropagation()} // Prevent horizontal drag when clicking scrollbar
+      <div
+        className="overflow-y-auto flex-1 pr-2 pb-1 custom-scrollbar"
+        /* Keep the carousel's drag logic out of this scroller, so grabbing the
+           scrollbar or flicking a long review vertically never pans the row. */
+        onPointerDown={(e) => e.stopPropagation()}
       >
         <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium whitespace-pre-wrap">{review.text}</p>
       </div>
@@ -50,30 +54,6 @@ const PLACE_URL = "https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9"
 export function GoogleReviews() {
   const [reviews, setReviews] = useState<Review[]>([])
   const [rating, setRating] = useState<number | null>(null)
-  
-  const scrollRef = useRef<HTMLDivElement>(null)
-  const [isDown, setIsDown] = useState(false)
-  const [startX, setStartX] = useState(0)
-  const [scrollLeft, setScrollLeft] = useState(0)
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollRef.current) return
-    setIsDown(true)
-    setStartX(e.pageX - scrollRef.current.offsetLeft)
-    setScrollLeft(scrollRef.current.scrollLeft)
-  }
-
-  const handleMouseLeave = () => setIsDown(false)
-  const handleMouseUp = () => setIsDown(false)
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDown || !scrollRef.current) return
-    e.preventDefault() // prevent text selection while dragging
-    const x = e.pageX - scrollRef.current.offsetLeft
-    const walk = (x - startX) * 1.5 // Scroll speed multiplier
-    scrollRef.current.scrollLeft = scrollLeft - walk
-  }
-
   const sectionRef = useRef<HTMLElement>(null)
 
   // Defer the reviews fetch until the section is near the viewport so it never
@@ -152,19 +132,14 @@ export function GoogleReviews() {
         </p>
 
         {reviews.length > 0 && (
-          <div 
-            ref={scrollRef}
-            className={`w-full swipe-row py-2 ${isDown ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-          >
-            {reviews.map((review, i) => (
-              <div key={i} className="w-[85vw] sm:w-[320px] lg:w-[350px] h-[240px] flex-shrink-0">
-                <ReviewCard review={review} />
-              </div>
-            ))}
+          <div className="w-full text-left">
+            <SwipeCarousel label="What our clients say on Google" count={reviews.length} itemNoun="reviews">
+              {reviews.map((review, i) => (
+                <div key={i} className="w-[85vw] sm:w-[320px] lg:w-[350px] h-[240px] flex-shrink-0">
+                  <ReviewCard review={review} />
+                </div>
+              ))}
+            </SwipeCarousel>
           </div>
         )}
 

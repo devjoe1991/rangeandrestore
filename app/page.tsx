@@ -7,6 +7,7 @@ import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
 import { GivingBackStrip } from '@/components/GivingBackStrip'
+import { SwipeCarousel } from '@/components/SwipeCarousel'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
@@ -26,6 +27,8 @@ const services = [
     solution: 'Diagnostic MSK ultrasound with Reliable Scan, then a 60-minute clinical massage guided by the findings. Scan, written report and treatment under one roof.',
     href: '/services/msk-ultrasound-clinical-massage',
     bookingHref: BOOKING_URLS.mskUltrasoundMassage,
+    image: '/msk-ultrasound-clinical-massage-treatment-room-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Treatment room at Range and Restore, Archway, where MSK ultrasound scans and clinical massage take place, 130 Junction Road, North London',
   },
   {
     title: 'Back & Neck Pain MOT',
@@ -34,6 +37,8 @@ const services = [
     solution: 'Full postural assessment and focused treatment targeting the exact muscles driving your pain.',
     href: '/services/back-neck-pain-mot',
     bookingHref: BOOKING_URLS.backNeckMot,
+    image: '/back-neck-pain-mot-neck-massage-treatment-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Therapist supporting the head during neck and upper trapezius treatment as part of the Back and Neck Pain MOT at Range and Restore, Archway, North London',
   },
   {
     title: 'Advanced Clinical Massage',
@@ -42,6 +47,8 @@ const services = [
     solution: 'Assessment-led clinical massage identifies the root cause — effective for back pain, nerve pain, RSI and postural conditions.',
     href: '/services/advanced-clinical-massage',
     bookingHref: BOOKING_URLS.advancedClinical,
+    image: '/advanced-clinical-massage-assessment-treatment-room-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Carlos Bonvicine leading an assessment-led clinical massage session with the team in the treatment room at Range and Restore, Archway, North London',
   },
   {
     title: 'Sports & Deep Tissue Massage',
@@ -50,6 +57,8 @@ const services = [
     solution: 'Targeted deep tissue therapy releases tension, restores movement and gets you back to full training faster.',
     href: '/services/sports-deep-tissue-massage',
     bookingHref: BOOKING_URLS.sportsDeepTissue,
+    image: '/sports-deep-tissue-massage-back-shoulder-treatment-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Therapist working deep tissue techniques through the back and shoulder during a sports massage at Range and Restore, Archway, North London',
   },
   {
     title: 'Cupping + Sports / Deep Tissue Massage',
@@ -58,6 +67,8 @@ const services = [
     solution: 'Integrated cupping plus sports and deep tissue therapy decompresses fascia, releases adhesions and accelerates recovery.',
     href: '/services/advanced-cupping-sports-deep-tissue',
     bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
+    image: '/cupping-therapy-sports-deep-tissue-massage-back-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Cupping therapy set along the spine during a sports and deep tissue massage at Range and Restore, Archway, North London',
   },
   {
     title: '2-Hour Pain Relief Massage',
@@ -66,6 +77,8 @@ const services = [
     solution: 'An extended session gives Carlos the time to work through every area properly for deeper, lasting results.',
     href: '/services/2-hour-pain-relief-massage',
     bookingHref: BOOKING_URLS.twoHourRelief,
+    image: '/2-hour-pain-relief-massage-neck-shoulder-treatment-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Carlos Bonvicine working through the neck and shoulder during an extended pain relief massage at Range and Restore, Archway, North London',
   },
   {
     title: 'Manual Lymphatic Drainage',
@@ -74,6 +87,8 @@ const services = [
     solution: 'Certified MLD reduces swelling, clears bruising and accelerates post-surgical recovery safely.',
     href: '/services/manual-lymphatic-drainage',
     bookingHref: BOOKING_URLS.mld,
+    image: '/manual-lymphatic-drainage-massage-therapist-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Range and Restore therapist treating a client during a manual lymphatic drainage session in Archway, North London',
   },
   {
     title: 'Relaxation Massage',
@@ -82,6 +97,8 @@ const services = [
     solution: 'Gentle, pressure-adjusted treatment that calms your nervous system and leaves you genuinely restored.',
     href: '/services/relaxation-restorative-massage',
     bookingHref: BOOKING_URLS.relaxation,
+    image: '/relaxation-restorative-massage-treatment-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Therapist delivering a calm, pressure-adjusted relaxation and restorative massage at Range and Restore, Archway, North London',
   },
   {
     title: 'Infrared Hybrid Sauna',
@@ -90,8 +107,8 @@ const services = [
     solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £19, plus Restore+ monthly memberships.',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
-    image: '/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp',
-    imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
+    image: '/recovery-suite/infrared-sauna-red-light-recovery-suite-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Range and Restore therapist opening the Vidalux two person hybrid infrared sauna, heaters glowing red, in the Recovery Suite at Archway, North London',
   },
   {
     title: 'Normatec Compression Therapy',
@@ -253,9 +270,10 @@ export default function HomePage() {
       <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="treatments-heading" className="sr-only">Sports Massage Treatments and Recovery in Archway</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
+          <SwipeCarousel label="Sports massage treatments and recovery" count={services.length} itemNoun="treatments">
             {services.map((s) => <ServiceCard key={s.href} s={s} />)}
-          </div>
+            <ViewAllServicesCard />
+          </SwipeCarousel>
 
           <div className="mt-8 text-center">
             <Link href="/services" className="btn btn-primary text-sm">View all services</Link>
@@ -659,67 +677,121 @@ export default function HomePage() {
 
 /* ── Sub-components ──────────────────────────────────────── */
 
+/* Photo card: the image fills the card, copy sits over a scrim in the middle
+   and the price is pinned bottom-right. Same fixed width and 4:5 ratio for
+   every card, so titles and CTAs line up exactly as you swipe.
+
+   Services without a photo yet fall back to the brand gradient — add `image`
+   and `imageAlt` to the entry in `services` above and it swaps in. */
 function ServiceCard({ s }: { s: typeof services[0] }) {
   const image = 'image' in s ? s.image : undefined
   const imageAlt = 'imageAlt' in s ? s.imageAlt : undefined
-  const ctaLabel = 'Book now'
   const ctaHref = s.bookingHref
   const isTel = ctaHref.startsWith('tel:')
 
   return (
-    <div
-      className="group card-lift rounded-[20px] overflow-hidden flex flex-col cursor-pointer bg-card shadow-sm h-full"
-    >
-      {/* Top accent bar */}
-      <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
-
-      {image && (
-        <Link href={s.href} className="block relative aspect-[16/9] overflow-hidden">
-          <Image
-            src={image}
-            alt={imageAlt || s.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-        </Link>
+    <article className="group card-lift relative isolate rounded-[20px] overflow-hidden bg-[#1a3d3a] w-[min(80vw,320px)] sm:w-[300px] lg:w-[330px] aspect-square">
+      {image ? (
+        <Image
+          src={image}
+          alt={imageAlt || ''}
+          fill
+          /* draggable={false} stops a native image drag stealing the pointer
+             mid-swipe. No onDragStart handler here — this is a server
+             component; the carousel row cancels dragstart for the whole row. */
+          draggable={false}
+          className="object-cover select-none group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 640px) 80vw, (max-width: 1024px) 300px, 330px"
+        />
+      ) : (
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-[#1a3d3a] via-[#155e5c] to-[#0f767a]" />
       )}
 
-      <div className="p-4 sm:p-5 flex flex-col flex-1">
-        <div className="mb-2 flex items-start justify-between gap-2">
-          <h3 className="font-black text-page text-sm sm:text-base leading-tight tracking-tight">{s.title}</h3>
-          <span className="shrink-0 text-[#0f767a] text-xs font-black whitespace-nowrap mt-0.5">{s.price}</span>
+      {/* Scrim — keeps the copy legible over any photo */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        /* Weighted to the bottom for depth, but dark enough through the middle
+           to keep the centred copy legible over any photo. */
+        style={{ background: 'linear-gradient(to top, rgba(8,28,26,0.92) 0%, rgba(8,28,26,0.78) 30%, rgba(8,28,26,0.62) 55%, rgba(8,28,26,0.44) 80%, rgba(8,28,26,0.32) 100%)' }}
+      />
+
+      {/* Stretched link: the whole card routes to the service page. Sits under
+          the copy layer, which is pointer-events-none so nothing blocks it. */}
+      <Link
+        href={s.href}
+        aria-label={`${s.title}, ${s.price}`}
+        className="absolute inset-0 z-10 rounded-[20px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
+      />
+
+      {/* Copy block: centred in the middle of the card, and every row is a
+          fixed height so the title, problem line and CTAs sit at the same y on
+          every card as you swipe — one-line and two-line titles included.
+          pb reserves room for the price pinned bottom-right. */}
+      <div className="absolute inset-0 z-20 px-4 sm:px-5 pt-4 sm:pt-5 pb-12 sm:pb-14 pointer-events-none flex flex-col items-center justify-center text-center">
+        <div className="flex items-end justify-center min-h-[2.9rem] sm:min-h-[3.2rem]">
+          <h3 className="font-black text-white text-lg sm:text-xl leading-tight tracking-tight line-clamp-2">
+            {s.title}
+          </h3>
         </div>
 
-        {/* Problem pill */}
-        <div
-          className="rounded-xl px-3 py-2 mb-3 border"
-          style={{ background: 'rgba(42,180,184,0.06)', borderColor: 'rgba(42,180,184,0.2)' }}
-        >
-          <p className="text-page text-xs font-bold leading-snug line-clamp-2">{s.problem}</p>
+        <div className="mt-1.5 flex items-start justify-center min-h-[2.1rem]">
+          <p className="text-white/80 text-xs font-semibold leading-snug line-clamp-2">{s.problem}</p>
         </div>
 
-        <p className="text-page-muted text-xs leading-relaxed flex-1 mb-4">{s.solution}</p>
+        <div className="mt-3 flex items-center justify-center gap-3">
+          <span className="text-white text-sm font-black inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-[gap] duration-300">
+            Learn more
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
 
-        {/* CTA row */}
-        <div className="flex items-center gap-2 pt-3 border-t border-[#1a3d3a]/10">
-          <Link
-            href={s.href}
-            aria-label={`Learn more about ${s.title}`}
-            className="text-page text-xs font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center flex-1 underline underline-offset-2"
-          >
-            Learn more<span className="sr-only"> about {s.title}</span>
-          </Link>
+          {/* Above the stretched link so Book now still reaches Jane */}
           <a
             href={ctaHref}
             {...(isTel ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
-            className="book-now-btn text-xs font-black px-3 sm:px-4 py-2 rounded-full min-h-[40px] flex items-center whitespace-nowrap"
+            aria-label={`Book ${s.title}`}
+            className="pointer-events-auto relative z-30 bg-white text-[#0f4f4d] text-xs font-black px-4 py-2 rounded-full whitespace-nowrap hover:bg-[#0f767a] hover:text-white transition-colors"
           >
-            {ctaLabel}
+            Book now
           </a>
         </div>
       </div>
-    </div>
+
+      {/* Price: pinned to the bottom-right corner of every card */}
+      <span className="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 z-20 pointer-events-none inline-flex items-center gap-1.5 text-white/85 text-xs font-black uppercase tracking-wider">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z" />
+          <circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none" />
+        </svg>
+        {s.price}
+      </span>
+    </article>
+  )
+}
+
+/* Last card in the services carousel — the end of the row is where someone
+   who has swiped through everything is looking for the full list. */
+function ViewAllServicesCard() {
+  return (
+    <Link
+      href="/services"
+      className="group card-lift relative rounded-[20px] overflow-hidden flex flex-col items-center justify-center text-center gap-3 p-6 w-[min(80vw,320px)] sm:w-[300px] lg:w-[330px] aspect-square bg-gradient-to-br from-[#0f767a] to-[#1a3d3a]"
+    >
+      <span
+        aria-hidden="true"
+        className="w-14 h-14 rounded-full flex items-center justify-center text-[#0f4f4d] bg-white group-hover:scale-110 transition-transform duration-300"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </span>
+      <h3 className="font-black text-white text-lg sm:text-xl leading-tight tracking-tight">View all services</h3>
+      <p className="text-white/80 text-xs font-semibold leading-relaxed">
+        Every treatment, price and duration in one place — including bundles and memberships.
+      </p>
+    </Link>
   )
 }
 
