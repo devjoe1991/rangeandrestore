@@ -26,11 +26,15 @@ export function SwipeCarousel({
   label,
   count,
   itemNoun = 'items',
+  action,
 }: {
   children: React.ReactNode
   label: string
   count: number
   itemNoun?: string
+  /* Optional control (e.g. a "View all" link) rendered inline in the footer
+     row, just before the arrows, so the row carries no extra vertical space. */
+  action?: React.ReactNode
 }) {
   const rowRef = useRef<HTMLDivElement>(null)
   const [isDragging, setIsDragging] = useState(false)
@@ -131,6 +135,8 @@ export function SwipeCarousel({
       </div>
 
       <div className="mt-3 flex items-center justify-end gap-4">
+        {action}
+
         {/* Pointer-only controls: touch users already have the gesture, and
             every card is reachable by keyboard through its own links. */}
         <div className="hidden md:flex items-center gap-2">

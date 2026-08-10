@@ -61,7 +61,8 @@ const services = [
     imageAlt: 'Therapist working deep tissue techniques through the back and shoulder during a sports massage at Range and Restore, Archway, North London',
   },
   {
-    title: 'Cupping + Sports / Deep Tissue Massage',
+    /* Matches the wording on /services, and keeps the card title to one line. */
+    title: 'Cupping + Deep Tissue Massage',
     price: 'From £60',
     problem: 'Deep-seated tightness or fascial restriction holding you back?',
     solution: 'Integrated cupping plus sports and deep tissue therapy decompresses fascia, releases adhesions and accelerates recovery.',
@@ -270,14 +271,15 @@ export default function HomePage() {
       <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 id="treatments-heading" className="sr-only">Sports Massage Treatments and Recovery in Archway</h2>
-          <SwipeCarousel label="Sports massage treatments and recovery" count={services.length} itemNoun="treatments">
+          <SwipeCarousel
+            label="Sports massage treatments and recovery"
+            count={services.length}
+            itemNoun="treatments"
+            action={<Link href="/services" className="btn btn-primary text-sm">View all services</Link>}
+          >
             {services.map((s) => <ServiceCard key={s.href} s={s} />)}
             <ViewAllServicesCard />
           </SwipeCarousel>
-
-          <div className="mt-8 text-center">
-            <Link href="/services" className="btn btn-primary text-sm">View all services</Link>
-          </div>
         </div>
       </section>
 
@@ -729,8 +731,13 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
           every card as you swipe — one-line and two-line titles included.
           pb reserves room for the price pinned bottom-right. */}
       <div className="absolute inset-0 z-20 px-4 sm:px-5 pt-4 sm:pt-5 pb-12 sm:pb-14 pointer-events-none flex flex-col items-center justify-center text-center">
-        <div className="flex items-end justify-center min-h-[2.9rem] sm:min-h-[3.2rem]">
-          <h3 className="font-black text-white text-lg sm:text-xl leading-tight tracking-tight line-clamp-2">
+        {/* Sized down from text-lg so even the longest title ("Cupping +
+            Sports / Deep Tissue Massage") stays on a single line at the
+            narrowest card width. */}
+        <div className="flex items-end justify-center min-h-[1.6rem] sm:min-h-[1.8rem]">
+          {/* truncate, not just nowrap: if a longer title is ever added it
+              ellipses inside the card rather than overflowing it. */}
+          <h3 className="font-black text-white text-[13px] sm:text-[15px] leading-tight tracking-tight truncate">
             {s.title}
           </h3>
         </div>
