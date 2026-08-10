@@ -14,8 +14,9 @@
  *  - Copy the reviewer's name and the review body only. Leave out Carlos's
  *    replies.
  *  - `relative_time_description` mirrors Google's own wording ("a week ago",
- *    "3 months ago"). It is a snapshot, so refresh this file when you refresh
- *    the reviews, or it will drift.
+ *    "3 months ago"). The cards no longer display it, so it will drift
+ *    harmlessly; it is kept because the live Google response carries it and
+ *    the ordering below relies on it.
  *  - Keep it to roughly 5-8 of the strongest reviews. The carousel scrolls,
  *    but nobody swipes through thirty.
  *

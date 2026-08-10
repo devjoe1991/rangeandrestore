@@ -497,7 +497,7 @@ export default function HomePage() {
       <GoogleReviews />
 
       {/* ── 3.5 WHY CHOOSE RANGE & RESTORE ─────────────────────── */}
-      <section className="section pb-8 bg-page-sage">
+      <section className="section section-flush-t bg-page-sage">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center text-page">
           <h2 className="text-3xl font-extrabold tracking-tight mb-8">Why Choose Range &amp; Restore?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">

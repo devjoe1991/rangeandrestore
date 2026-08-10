@@ -95,6 +95,13 @@ input, select, textarea {
 .section    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
 .section-sm { padding-block: clamp(2rem,   4vw, 3.5rem); }
 
+/* Tighten the seam where two same-coloured sections meet, so their stacked
+   padding does not read as dead space. Declared after .section (and, like the
+   rest of this file, unlayered) so it wins — a Tailwind pb-* utility here does
+   not, because Tailwind's utilities sit in @layer and unlayered CSS beats it. */
+.section-flush-t { padding-block-start: clamp(1rem, 2vw, 1.75rem); }
+.section-flush-b { padding-block-end:   clamp(1rem, 2vw, 1.75rem); }
+
 /* ── Eyebrow ──────────────────────────────────────────────── */
 .eyebrow {
   display: inline-block;

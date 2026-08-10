@@ -25,10 +25,9 @@ function ReviewCard({ review }: { review: Review }) {
         <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ backgroundColor: '#1a3d3a', color: '#fff' }}>
           {initials(review.author_name)}
         </div>
-        <div>
-          <p className="font-bold text-[#1a2330] text-sm">{review.author_name}</p>
-          <p className="text-[#1a3d3a]/60 text-xs font-semibold">{review.relative_time_description}</p>
-        </div>
+        {/* Name only. `relative_time_description` still comes back from Google
+            and is kept on the type, but showing it dates the reviews. */}
+        <p className="font-bold text-[#1a2330] text-sm">{review.author_name}</p>
       </div>
       <div className="flex gap-0.5 flex-shrink-0">
         {[1,2,3,4,5].map((i) => (
@@ -94,7 +93,7 @@ export function GoogleReviews() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
+    <section ref={sectionRef} className="section section-flush-b" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
         <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#1a2330] tracking-tight uppercase leading-none mb-8">
