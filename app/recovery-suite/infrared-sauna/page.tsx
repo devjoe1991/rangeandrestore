@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'Is the sauna safe if I have a health condition?',
-    a: 'Heat exposure isn\'t suitable for everyone. If you\'re pregnant, have a heart condition, low or high blood pressure, are on medication that affects how you regulate heat, or you\'re unsure for any reason, please check with your GP first and let Carlos know before you book.',
+    a: 'Heat exposure isn\'t suitable for everyone. If you\'re pregnant, have a heart condition, low or high blood pressure, are on medication that affects how you regulate heat, or you\'re unsure for any reason, please check with your GP first and let your therapist know before you book.',
   },
 ]
 
@@ -227,7 +227,7 @@ export default function InfraredSaunaPage() {
               {[
                 'Arrive 5 minutes early to settle in',
                 'Towels and water are provided',
-                'Carlos will run you through the controls and answer any questions',
+                'Your therapist will run you through the controls and answer any questions',
                 'Take your time during the session, you can step out and back in if you need to',
                 'Cool down and rehydrate properly before you leave',
                 'Optional: book a package that pairs your sauna session with a sports massage in the same visit',
@@ -258,7 +258,7 @@ export default function InfraredSaunaPage() {
                 </li>
               ))}
             </ul>
-            <p className="text-page-muted mt-4 italic">If in doubt, ask Carlos before booking. We&apos;d rather have a quick chat first than risk a session that doesn&apos;t suit you.</p>
+            <p className="text-page-muted mt-4 italic">If in doubt, ask us before booking. We&apos;d rather have a quick chat first than risk a session that doesn&apos;t suit you.</p>
           </section>
 
           {/* Pair with */}

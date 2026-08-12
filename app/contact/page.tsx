@@ -69,7 +69,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-page mb-3">Get in Touch</h2>
             <p className="text-page-muted mb-8">
               The quickest way to book is online or by phone. Prefer to ask a question first?
-              Call or email Carlos directly — he&apos;ll get straight back to you.
+              Call or email Range and Restore directly — we&apos;ll get straight back to you.
             </p>
 
             {/* Primary actions */}
@@ -92,7 +92,7 @@ export default function ContactPage() {
                 href={`mailto:${BUSINESS.email}`}
                 className="btn w-full text-base border-2 border-[#0f767a] text-[#0f767a] hover:bg-[#0f767a] hover:text-white transition-colors"
               >
-                Email Carlos
+                Email Range and Restore
               </a>
             </div>
 

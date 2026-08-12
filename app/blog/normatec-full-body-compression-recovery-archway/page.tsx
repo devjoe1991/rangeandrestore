@@ -60,11 +60,11 @@ const faqs = [
   },
   {
     q: 'Is Normatec compression the same as lymphatic drainage massage?',
-    a: "No. Pneumatic compression supports circulation and recovery, but it isn't the same as Manual Lymphatic Drainage. MLD is a specific hands-on technique used for post-surgery recovery, lymphoedema and clinical cases. If you need MLD, that's a separate service with Carlos.",
+    a: "No. Pneumatic compression supports circulation and recovery, but it isn't the same as Manual Lymphatic Drainage. MLD is a specific hands-on technique used for post-surgery recovery, lymphoedema and clinical cases. If you need MLD, that's a separate service with our certified MLD therapist.",
   },
   {
     q: 'Is it safe for everyone?',
-    a: "Pneumatic compression isn't suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, severe heart conditions, or open wounds in the area being treated. If anything on that list applies, check with your GP first and let Carlos know before you book. The full contraindications list is on the compression therapy service page.",
+    a: "Pneumatic compression isn't suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, severe heart conditions, or open wounds in the area being treated. If anything on that list applies, check with your GP first and let your therapist know before you book. The full contraindications list is on the compression therapy service page.",
   },
   {
     q: 'Do I need to undress?',
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'How long is each session?',
-    a: "Sessions are either 30 minutes for legs only, 30 minutes for full body, or 45 minutes for full body at a slower pace. Carlos will help you pick what suits you depending on what you're recovering from. Current pricing is on the booking page.",
+    a: "Sessions are either 30 minutes for legs only, 30 minutes for full body, or 45 minutes for full body at a slower pace. Your therapist will help you pick what suits you depending on what you're recovering from. Current pricing is on the booking page.",
   },
 ]
 
@@ -144,7 +144,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </p>
 
           <p>
-            Pressure is fully adjustable across seven compression levels, from a light flush at around 40 mmHg up to a deep squeeze at 110 mmHg. There is also a feature called ZoneBoost, which adds extra time and targeted pressure in any specific zone where you need more attention. So if your right calf has had a beating that week, that chamber gets more love. Both controls are managed by Carlos during your session.
+            Pressure is fully adjustable across seven compression levels, from a light flush at around 40 mmHg up to a deep squeeze at 110 mmHg. There is also a feature called ZoneBoost, which adds extra time and targeted pressure in any specific zone where you need more attention. So if your right calf has had a beating that week, that chamber gets more love. Both controls are managed by your therapist during your session.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is in the Full-Body setup</h2>
@@ -161,7 +161,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </ul>
 
           <p>
-            The Bluetooth and app side of things matters less in the clinic, where Carlos sets your programme for you, but it is part of why this is the system we picked. It means programmes are repeatable session to session, so once we find the settings that suit you, we can run them again next time without guesswork.
+            The Bluetooth and app side of things matters less in the clinic, where your therapist sets your programme for you, but it is part of why this is the system we picked. It means programmes are repeatable session to session, so once we find the settings that suit you, we can run them again next time without guesswork.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who benefits most from Normatec compression</h2>
@@ -210,7 +210,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           </p>
 
           <p>
-            North London locals deserve a proper recovery setup that is not an hour each way on the tube. So we put one in. The Hyperice Normatec 3 Full Body now sits inside our new Recovery Suite at 130 Junction Road, two minutes from Archway tube on the Northern Line, alongside the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">Vidalux two-person hybrid infrared sauna</Link> and the existing hands-on services with <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos</Link>.
+            North London locals deserve a proper recovery setup that is not an hour each way on the tube. So we put one in. The Hyperice Normatec 3 Full Body now sits inside our new Recovery Suite at 130 Junction Road, two minutes from Archway tube on the Northern Line, alongside the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">Vidalux two-person hybrid infrared sauna</Link> and the existing hands-on services from <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">our team of therapists</Link>.
           </p>
 
           <p>
@@ -225,7 +225,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
 
           <ul className="space-y-2 list-disc list-inside">
             <li>You arrive in loose, comfortable kit. Leggings, joggers, shorts and a t-shirt all work fine.</li>
-            <li>Carlos fits the attachments, talks you through the programme options and sets the pressure level.</li>
+            <li>Your therapist fits the attachments, talks you through the programme options and sets the pressure level.</li>
             <li>You sit back or lie down. The system runs through the inflation wave from feet to hips and, on full-body sessions, from hands to shoulders.</li>
             <li>You can adjust the pressure or pause the session at any point. If something does not feel right, we change it.</li>
             <li>Most people find it genuinely relaxing. Eyes closed, phone off, 30 minutes of proper recovery.</li>

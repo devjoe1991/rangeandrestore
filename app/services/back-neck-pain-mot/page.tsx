@@ -6,7 +6,7 @@ import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Back & Neck Pain MOT | Archway N19 Clinic',
-  description: 'Assessment + treatment for chronic back and neck pain in Archway. BTEC L5 therapist. 90-min session covers posture, mobility, soft tissue work.',
+  description: 'Assessment + treatment for chronic back and neck pain in Archway. BTEC L5 qualified therapists. 90-min session covers posture, mobility, soft tissue work.',
   path: '/services/back-neck-pain-mot',
 })
 
@@ -65,7 +65,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is the Back & Neck Pain MOT safe if I have a disc issue or sciatica?',
-      acceptedAnswer: { '@type': 'Answer', text: 'In most cases yes — soft tissue work can ease the muscular component of disc-related pain or sciatica. Carlos screens for red flags during the assessment and adapts the treatment accordingly. If your condition needs medical investigation first, he will tell you.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'In most cases yes — soft tissue work can ease the muscular component of disc-related pain or sciatica. Your therapist screens for red flags during the assessment and adapts the treatment accordingly. If your condition needs medical investigation first, they will tell you.' },
     },
   ],
 }

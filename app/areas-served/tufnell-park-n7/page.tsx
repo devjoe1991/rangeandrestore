@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Tufnell Park N7 | 10-min Walk',
-  description: 'Sports and cycling-recovery massage for Tufnell Park (N7). Clinic 10 minutes from Tufnell Park tube. BTEC L5 therapist. Book online — same-week slots.',
+  description: 'Sports and cycling-recovery massage for Tufnell Park (N7). Clinic 10 minutes from Tufnell Park tube. A team of BTEC L5 therapists. Book online — same-week slots.',
   path: '/areas-served/tufnell-park-n7',
 })
 
@@ -88,7 +88,7 @@ export default function TufnellParkN7Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is the closest specialist sports massage clinic to Tufnell Park. We&apos;re at 130 Junction Road, a 10-minute walk north from Tufnell Park station and a few minutes&apos; ride on the 4 or 134 bus. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist.
+            Range and Restore is the closest specialist sports massage clinic to Tufnell Park. We&apos;re at 130 Junction Road, a 10-minute walk north from Tufnell Park station and a few minutes&apos; ride on the 4 or 134 bus. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why Tufnell Park clients book sports massage</h2>

@@ -106,7 +106,7 @@ export default function GalleryPage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Gallery</h1>
           <p className="mt-3 text-xl text-page-muted">Inside Range and Restore Sports Massage, Archway</p>
           <p className="mt-4 text-page-muted opacity-80 max-w-2xl">
-            Real clinic photos from Range and Restore in Archway, North London — treatment sessions, the professional clinic environment, and the hands-on, assessment-led approach Carlos brings to every appointment.
+            Real clinic photos from Range and Restore in Archway, North London — treatment sessions, the professional clinic environment, and the hands-on, assessment-led approach our therapists bring to every appointment.
           </p>
         </div>
       </div>
@@ -119,10 +119,10 @@ export default function GalleryPage() {
         <div className="mt-12 pt-10 border-t border-page flex flex-col sm:flex-row gap-4 items-start">
           <BookingButton label="Book Your Session" />
           <Link
-            href="/about"
+            href="/team"
             className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm"
           >
-            Meet Carlos →
+            Meet the Team →
           </Link>
         </div>
       </div>

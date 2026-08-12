@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "Why do sports massage prices vary?",
-    a: "The main factor is session length — a 30-minute treatment costs less than a 90-minute one. Beyond that, the therapist's qualifications and experience, the clinic's location (central London tends to be dearer) and any add-ons such as cupping all affect the price. At Range and Restore, Carlos holds a BTEC Level 5 qualification in soft tissue therapy.",
+    a: "The main factor is session length — a 30-minute treatment costs less than a 90-minute one. Beyond that, the therapist's qualifications and experience, the clinic's location (central London tends to be dearer) and any add-ons such as cupping all affect the price. At Range and Restore, every therapist holds a BTEC Level 5 qualification in soft tissue therapy.",
   },
   {
     q: "Is a sports massage worth the money?",
@@ -134,7 +134,7 @@ export default function SportsMassageCostPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">The therapist&rsquo;s qualifications and experience</h3>
           <p>
-            You&rsquo;re paying for a trained pair of hands, not just the room. A properly qualified soft tissue therapist can assess what&rsquo;s actually going on and treat the cause rather than just rubbing where it hurts. At Range and Restore, Carlos holds a BTEC Level 5 qualification in soft tissue therapy, which is reflected in an assessment-led approach and advice on what to do between sessions.
+            You&rsquo;re paying for a trained pair of hands, not just the room. A properly qualified soft tissue therapist can assess what&rsquo;s actually going on and treat the cause rather than just rubbing where it hurts. At Range and Restore, every therapist holds a BTEC Level 5 qualification in soft tissue therapy, which is reflected in an assessment-led approach and advice on what to do between sessions.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Location</h3>

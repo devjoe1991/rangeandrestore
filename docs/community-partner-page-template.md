@@ -96,7 +96,9 @@ This is the backlink. Make it prominent. Make the anchor text descriptive (their
 Three or four internal links:
 
 - "Back to Our Archway Community" pointing to `/community`
-- "About Carlos and Range and Restore" pointing to `/about`
+- "Meet the Range and Restore Team" pointing to `/team`
+
+**Voice note:** describe the Range and Restore side of the partnership as the clinic/team ("sports massage and recovery with our team at Range and Restore"), not as Carlos personally. Carlos is named only as **Founder & Lead Therapist**, or in genuine first-person anecdotes about the relationship (e.g. "when clients ask Carlos where to eat after a session").
 - One or two contextual links that make sense for this partner. (For a café, maybe areas served. For a yoga studio, maybe the recovery suite. For a clinic, maybe MLD or clinical massage.)
 
 ---

@@ -154,7 +154,7 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">What to expect</h2>
             <p className="text-page-muted">
-              Cupping can leave temporary circular marks on the skin where the cups have drawn blood to the surface. These are not bruises and are not painful — they typically fade within a few days to two weeks and are a normal part of the treatment. Carlos will talk you through what to expect before your first session and tailor the pressure and duration to your tolerance and goals.
+              Cupping can leave temporary circular marks on the skin where the cups have drawn blood to the surface. These are not bruises and are not painful — they typically fade within a few days to two weeks and are a normal part of the treatment. Your therapist will talk you through what to expect before your first session and tailor the pressure and duration to your tolerance and goals.
             </p>
           </section>
 

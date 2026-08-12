@@ -75,7 +75,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <SearchTrigger className="text-[#1a3d3a]/80 hover:text-[#1a3d3a]" />
             <a href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call us on ${BUSINESS.phone}`}
+              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
               className="flex items-center justify-center w-11 h-11 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all flex-shrink-0">
               <PhoneIcon />
             </a>
@@ -95,7 +95,7 @@ export function Header() {
           </span>
         </Link>
         <SearchTrigger className="text-[#1a3d3a]/80 w-10 h-10 justify-center flex-shrink-0" />
-        <a href={`tel:${BUSINESS.phoneTel}`} aria-label={`Call us on ${BUSINESS.phone}`}
+        <a href={`tel:${BUSINESS.phoneTel}`} aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
           className="flex items-center justify-center w-10 h-10 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white transition-all flex-shrink-0">
           <PhoneIcon />
         </a>

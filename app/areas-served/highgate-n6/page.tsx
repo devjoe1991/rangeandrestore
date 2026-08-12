@@ -88,7 +88,7 @@ export default function HighgateN6Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Highgate sits at the top of the hill and Range and Restore is at the bottom of it &mdash; the clinic at 130 Junction Road is a short trip down Highgate Hill to Archway. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist. With Hampstead Heath, Highgate Wood and some of London&apos;s most iconic cycling climbs on the doorstep, N6 is one of our most active catchment areas.
+            Highgate sits at the top of the hill and Range and Restore is at the bottom of it &mdash; the clinic at 130 Junction Road is a short trip down Highgate Hill to Archway. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>. With Hampstead Heath, Highgate Wood and some of London&apos;s most iconic cycling climbs on the doorstep, N6 is one of our most active catchment areas.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N6</h2>

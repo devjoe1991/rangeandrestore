@@ -76,7 +76,7 @@ export default function AlisQuiffBarberPartnerPage() {
             Ali’s Quiff Barber and Range and Restore
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Traditional barbering, beard work and full-service grooming with Ali at Ali’s Quiff Barber on Holloway Road (746, N19 3JF). Sports massage, recovery and remedial therapy with Carlos Bonvicine at Range and Restore on Junction Road. Two Archway businesses looking after men inside and out.
+            Traditional barbering, beard work and full-service grooming with Ali at Ali’s Quiff Barber on Holloway Road (746, N19 3JF). Sports massage, recovery and remedial therapy with our team at Range and Restore on Junction Road. Two Archway businesses looking after men inside and out.
           </p>
         </div>
       </div>

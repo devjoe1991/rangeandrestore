@@ -60,12 +60,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How many sessions will I need?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For chronic conditions, most clients see meaningful change within 3-6 sessions spaced 1-2 weeks apart, then move to monthly maintenance. After your first assessment Carlos will give you a realistic plan rather than open-ended bookings.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'For chronic conditions, most clients see meaningful change within 3-6 sessions spaced 1-2 weeks apart, then move to monthly maintenance. After your first assessment your therapist will give you a realistic plan rather than open-ended bookings.' },
     },
     {
       '@type': 'Question',
       name: 'Do I need a referral from a doctor or physio?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No referral is needed. If you are working with a physio or consultant, Carlos is happy to coordinate so the treatments complement rather than overlap.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No referral is needed. If you are working with a physio or consultant, our therapists are happy to coordinate so the treatments complement rather than overlap.' },
     },
   ],
 }

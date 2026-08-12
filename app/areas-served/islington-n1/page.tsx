@@ -88,7 +88,7 @@ export default function IslingtonN1Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is an easy trip north from Islington &mdash; a direct bus up Holloway Road, or a short hop on the Northern Line. The clinic is at 130 Junction Road, Archway, and is led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner. Many N1 clients travel up specifically for treatment that addresses the cause of their pain, not just the symptoms.
+            Range and Restore is an easy trip north from Islington &mdash; a direct bus up Holloway Road, or a short hop on the Northern Line. The clinic is at 130 Junction Road, Archway, and is staffed by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a certified MLD practitioner. Many N1 clients travel up specifically for treatment that addresses the cause of their pain, not just the symptoms.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N1</h2>

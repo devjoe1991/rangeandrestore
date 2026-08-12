@@ -88,7 +88,7 @@ export default function KentishTownNW5Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Kentish Town connects straight to Archway via Fortess Road and Tufnell Park, which makes Range and Restore an easy trip for NW5. The clinic is at 130 Junction Road, and sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist. With Hampstead Heath, Gospel Oak and a strong gym scene close by, NW5 is one of our most active neighbouring areas.
+            Kentish Town connects straight to Archway via Fortess Road and Tufnell Park, which makes Range and Restore an easy trip for NW5. The clinic is at 130 Junction Road, and treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>. With Hampstead Heath, Gospel Oak and a strong gym scene close by, NW5 is one of our most active neighbouring areas.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from NW5</h2>

@@ -67,7 +67,7 @@ export default function PrivateGpSurgeryPartnerPage() {
             Private GP Surgery and Range and Restore
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            CQC-regulated private GP care with Dr M. Ali Mahmood M.D. at Private GP Surgery. Sports massage, recovery and remedial therapy with Carlos Bonvicine at Range and Restore on Junction Road. Two North London services, two complementary disciplines, one joined-up approach to your health.
+            CQC-regulated private GP care with Dr M. Ali Mahmood M.D. at Private GP Surgery. Sports massage, recovery and remedial therapy with our team at Range and Restore on Junction Road. Two North London services, two complementary disciplines, one joined-up approach to your health.
           </p>
         </div>
       </div>

@@ -88,7 +88,7 @@ export default function FinsburyParkN4Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is a short trip from Finsbury Park &mdash; the 210 bus runs straight to Archway, where the clinic sits at 130 Junction Road. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist. With the park, the running track and one of north London&apos;s biggest parkruns on the doorstep, N4 is one of our busiest areas for runners.
+            Range and Restore is a short trip from Finsbury Park &mdash; the 210 bus runs straight to Archway, where the clinic sits at 130 Junction Road. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>. With the park, the running track and one of north London&apos;s biggest parkruns on the doorstep, N4 is one of our busiest areas for runners.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N4</h2>

@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'Do you treat bike crash injuries and road rash recovery?',
-    a: 'For soft tissue work after a crash, once the acute phase has passed and you have been cleared by your GP or A&E, yes. Bruising, fascial tightness, asymmetries from guarding, and the lingering tension that builds up after a fall are all things sports massage and Manual Lymphatic Drainage handle well. If you are still in the acute phase or unsure, message the clinic first and Carlos will tell you whether it is the right time.',
+    a: 'For soft tissue work after a crash, once the acute phase has passed and you have been cleared by your GP or A&E, yes. Bruising, fascial tightness, asymmetries from guarding, and the lingering tension that builds up after a fall are all things sports massage and Manual Lymphatic Drainage handle well. If you are still in the acute phase or unsure, message the clinic first and your therapist will tell you whether it is the right time.',
   },
   {
     q: 'Is the clinic bike-friendly?',
@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: 'I have knee pain when I cycle. Will sports massage help, or do I need a physio?',
-    a: 'Start with assessment-led sports massage. A lot of cycling knee pain is referred from the hip, glute, quad or IT band rather than a structural knee problem, and that responds well to soft tissue work plus a look at your position on the bike. If the assessment suggests something more clinical is going on, Carlos will tell you and point you towards the right next step.',
+    a: 'Start with assessment-led sports massage. A lot of cycling knee pain is referred from the hip, glute, quad or IT band rather than a structural knee problem, and that responds well to soft tissue work plus a look at your position on the bike. If the assessment suggests something more clinical is going on, your therapist will tell you and point you towards the right next step.',
   },
 ]
 

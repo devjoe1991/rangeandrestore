@@ -35,7 +35,7 @@ const collectionSchema = {
 const faqs = [
   {
     q: 'Do I need to be an existing client to use the Recovery Suite?',
-    a: 'No. The sauna and compression therapy are open to anyone. You don\'t need to have had a sports massage with Carlos to book a recovery session.',
+    a: 'No. The sauna and compression therapy are open to anyone. You don\'t need to have had a sports massage with us to book a recovery session.',
   },
   {
     q: 'Can I bring a guest into the sauna?',
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'How do I book a combined session like sauna and massage together?',
-    a: 'Recovery packages are bookable as a single appointment, so you don\'t need to chain bookings together. Pick the package that suits and Carlos will run the full session in one visit.',
+    a: 'Recovery packages are bookable as a single appointment, so you don\'t need to chain bookings together. Pick the package that suits and your therapist will run the full session in one visit.',
   },
   {
     q: 'What should I bring with me?',
@@ -96,7 +96,7 @@ export default function RecoverySuitePage() {
             The treatment room at 130 Junction Road has been redesigned into a premium recovery and wellness space. Warm lighting, natural materials, plants and considered details, built around how you actually want to feel when you walk in.
           </p>
           <p className="text-page-muted font-medium">
-            Sitting alongside the hands-on sports and soft tissue work Carlos already offers, the new Recovery Suite brings two pieces of premium recovery kit into one place. A two person hybrid infrared sauna for heat-based recovery, and a Normatec 3 Full Body compression system for the legs, hips and arms. Use them on their own, or pair them with massage for a complete session.
+            Sitting alongside the hands-on sports and soft tissue work our team already offers, the new Recovery Suite brings two pieces of premium recovery kit into one place. A two person hybrid infrared sauna for heat-based recovery, and a Normatec 3 Full Body compression system for the legs, hips and arms. Use them on their own, or pair them with massage for a complete session.
           </p>
         </div>
       </div>
@@ -173,7 +173,7 @@ export default function RecoverySuitePage() {
             'Desk workers managing tightness and stiffness',
             'Anyone recovering from a race, event or hard training block',
             'Clients post-massage who want to extend the benefits',
-            'Post-surgery and MLD clients (please check with Carlos first)',
+            'Post-surgery and MLD clients (please check with your therapist first)',
             'Anyone wanting a wellness habit close to home',
           ].map((item) => (
             <li key={item} className="flex items-start gap-3 text-page-muted">

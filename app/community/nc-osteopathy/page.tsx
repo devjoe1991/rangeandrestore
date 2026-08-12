@@ -67,7 +67,7 @@ export default function NcOsteopathyPartnerPage() {
             NC Osteopathy and Range and Restore
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Osteopathy and whole-person care with Nagma Chaudhry M.Ost at NC Osteopathy. Sports massage, recovery and remedial therapy with Carlos Bonvicine at Range and Restore on Junction Road. Two North London clinics, two complementary disciplines, one joined-up approach to your body.
+            Osteopathy and whole-person care with Nagma Chaudhry M.Ost at NC Osteopathy. Sports massage, recovery and remedial therapy with our team at Range and Restore on Junction Road. Two North London clinics, two complementary disciplines, one joined-up approach to your body.
           </p>
         </div>
       </div>

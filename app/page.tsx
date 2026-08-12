@@ -13,9 +13,9 @@ import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage Archway N19 | BTEC L5 Therapist',
+  title: 'Sports Massage Archway N19 | BTEC L5 Therapists',
   description:
-    'BTEC Level 5 sports massage in Archway N19. 47 five-star reviews. Pain relief, injury recovery, mobility. Book online — same-week slots from £50.',
+    'Sports massage clinic in Archway N19 with a team of BTEC Level 5 therapists. 47 five-star reviews. Pain relief, injury recovery, mobility. Book online — same-week slots from £50.',
   path: '/',
 })
 
@@ -75,7 +75,7 @@ const services = [
     title: '2-Hour Pain Relief Massage',
     price: '£170',
     problem: 'Multiple problem areas that need proper attention?',
-    solution: 'An extended session gives Carlos the time to work through every area properly for deeper, lasting results.',
+    solution: 'An extended session gives your therapist the time to work through every area properly for deeper, lasting results.',
     href: '/services/2-hour-pain-relief-massage',
     bookingHref: BOOKING_URLS.twoHourRelief,
     image: '/2-hour-pain-relief-massage-neck-shoulder-treatment-range-and-restore-archway-north-london.jpg',
@@ -241,7 +241,7 @@ export default function HomePage() {
           </p>
           <p className="text-white/90 text-sm sm:text-base mb-6 max-w-xl leading-relaxed font-semibold">
             Archway, North London.<br />
-            Led by Carlos Bonvicine, <span className="font-black text-white">BTEC Level 5</span> qualified therapist.
+            A team of <span className="font-black text-white">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
           </p>
 
 
@@ -250,7 +250,7 @@ export default function HomePage() {
             <BookingButton label="Book Your Session" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call us on ${BUSINESS.phone}`}
+              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-[#0f767a]/60 hover:bg-white/25 hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
@@ -520,7 +520,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. ABOUT CARLOS ──────────────────────────────────── */}
+      {/* ── 4. ABOUT THE PRACTICE ────────────────────────────── */}
       <section className="section bg-page" aria-labelledby="about-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -531,22 +531,23 @@ export default function HomePage() {
                 Treatment that starts with listening
               </h2>
               <p className="text-page-muted mb-6 font-medium">
-                Every session at Range and Restore begins with a proper assessment. Carlos takes the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
+                Every session at Range and Restore begins with a proper assessment. Our therapists take the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
               </p>
 
-              <Link href="/about" className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm">Meet Carlos →</Link>
+              <Link href="/team" className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm">Meet the Team →</Link>
             </div>
 
-            {/* Carlos card */}
+            {/* Clinic card */}
             <div className="bg-[#F2EDE4] text-[#1a2330] rounded-3xl p-8 flex flex-col gap-5 border border-[#1a3d3a]/10">
               <div>
-                <p className="text-3xl font-extrabold tracking-tight leading-none mb-1 text-[#1a3d3a]">Carlos Bonvicine</p>
-                <p className="text-[#1a3d3a]/90 text-sm font-bold">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist</p>
+                <p className="text-3xl font-extrabold tracking-tight leading-none mb-1 text-[#1a3d3a]">Range and Restore</p>
+                <p className="text-[#1a3d3a]/90 text-sm font-bold">A team of BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapists</p>
                 <p className="text-[#1a3d3a]/80 text-xs font-bold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
               </div>
               <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium">
-                &ldquo;My goal is simple. Help you feel better and move better, using evidence-based soft tissue therapy tailored exactly to you.&rdquo;
+                &ldquo;Our goal is simple. Help you feel better and move better, using evidence-based soft tissue therapy tailored exactly to you.&rdquo;
               </p>
+              <p className="text-[#1a3d3a]/80 text-xs font-bold -mt-2">Carlos Bonvicine, Founder &amp; Lead Therapist</p>
               <div className="border-t border-[#1a3d3a]/15 pt-4">
                 <p className="text-xs text-[#1a3d3a] uppercase tracking-widest font-extrabold">Based at</p>
                 <p className="text-[#1a2330]/90 text-sm mt-1 font-bold">130 Junction Road, Archway<br />London N19 5LB</p>
@@ -658,13 +659,13 @@ export default function HomePage() {
             Ready to feel better?
           </h2>
           <p className="text-[#1a3d3a]/90 mb-7 text-base font-semibold">
-            Back pain, injury or tension holding you back? Book online or call Carlos directly.
+            Back pain, injury or tension holding you back? Book online or call Range and Restore directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
             <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call us on ${BUSINESS.phone}`}
+              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />

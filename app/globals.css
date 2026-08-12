@@ -309,3 +309,51 @@ input, select, textarea {
   height: 30px; /* Force a consistent thumb length */
 }
 
+
+/* ── Floating WhatsApp CTA ────────────────────────────────── */
+/*
+  Mounted once in the root layout, so it rides on every page. Kept at z-40 so
+  the z-50 cookie banner still wins on a first visit — consent must stay
+  clickable. `bottom` is set inline by the component so it can pick up
+  env(safe-area-inset-bottom) on notched phones.
+*/
+.wa-fab {
+  position: fixed;
+  right: 1rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(18, 140, 70, 0.38);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.wa-fab:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 26px rgba(18, 140, 70, 0.48);
+}
+.wa-fab:active { transform: scale(0.94); }
+.wa-fab:focus-visible {
+  outline: 3px solid #0f767a;
+  outline-offset: 3px;
+}
+
+.wa-glyph { display: flex; }
+
+/* The badge itself spins on tap — the visual half of the haptic feedback. */
+@keyframes waSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.wa-glyph-spin { animation: waSpin 600ms cubic-bezier(0.34, 1.36, 0.64, 1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab { transition: none; }
+  .wa-fab:hover, .wa-fab:active { transform: none; }
+  .wa-glyph-spin { animation: none; }
+}

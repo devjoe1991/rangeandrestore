@@ -54,11 +54,11 @@ const faqs = [
   },
   {
     q: 'Is this the same as lymphatic drainage massage?',
-    a: 'No. Pneumatic compression supports circulation and recovery, but it isn\'t the same as Manual Lymphatic Drainage. MLD is a hands-on technique used for post-surgery recovery, lymphoedema and clinical cases. If you need MLD, that\'s a separate service with Carlos. The Normatec is a recovery tool, not a clinical lymphatic treatment.',
+    a: 'No. Pneumatic compression supports circulation and recovery, but it isn\'t the same as Manual Lymphatic Drainage. MLD is a hands-on technique used for post-surgery recovery, lymphoedema and clinical cases. If you need MLD, that\'s a separate service with our certified MLD therapist. The Normatec is a recovery tool, not a clinical lymphatic treatment.',
   },
   {
     q: 'How do I book time on the Normatec?',
-    a: 'The Normatec is part of the private Recovery Suite experience. Book a private Recovery Suite session and you have the suite, including the Infrared Hybrid Sauna and the Normatec system, to yourself. You can also book the Sports Massage + Normatec Compression package (90 minutes, £110) to combine a full sports massage with compression in one visit. Carlos will help you fit compression into your session depending on what you\'re recovering from.',
+    a: 'The Normatec is part of the private Recovery Suite experience. Book a private Recovery Suite session and you have the suite, including the Infrared Hybrid Sauna and the Normatec system, to yourself. You can also book the Sports Massage + Normatec Compression package (90 minutes, £110) to combine a full sports massage with compression in one visit. Your therapist will help you fit compression into your session depending on what you\'re recovering from.',
   },
   {
     q: 'Do I need to undress?',
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: 'Is it safe for everyone?',
-    a: 'Pneumatic compression isn\'t suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, or open wounds in the area being treated. If anything on that list applies, please check with your GP first and let Carlos know before you book.',
+    a: 'Pneumatic compression isn\'t suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, or open wounds in the area being treated. If anything on that list applies, please check with your GP first and let your therapist know before you book.',
   },
 ]
 
@@ -111,7 +111,7 @@ export default function CompressionTherapyPage() {
                 'A runner recovering from a long run, race or training block',
                 'A gym-goer the day after heavy leg work',
                 'On your feet all day for work and looking for proper recovery time',
-                'Recovering from minor injuries (with approval from Carlos)',
+                'Recovering from minor injuries (with approval from your therapist)',
                 'Looking to reduce that heavy, fatigued feeling in your legs',
                 'Pairing recovery with regular sports massage',
               ].map((item) => (
@@ -183,7 +183,7 @@ export default function CompressionTherapyPage() {
             <ul className="space-y-2">
               {[
                 'Wear loose, comfortable kit. Leggings, joggers, shorts and a t-shirt all work',
-                'Carlos fits the attachments and walks you through the controls',
+                'Your therapist fits the attachments and walks you through the controls',
                 'Sit back or lie down, the system runs through its programme',
                 'You can adjust pressure or pause at any point',
                 'Most people find it genuinely relaxing, plenty of clients close their eyes for the session',
@@ -216,7 +216,7 @@ export default function CompressionTherapyPage() {
               ))}
             </ul>
             <p className="text-page-muted mt-4 italic">
-              Note: Normatec compression isn&apos;t the same as Manual Lymphatic Drainage. If you&apos;re recovering from surgery or managing lymphoedema, see Carlos&apos;s
+              Note: Normatec compression isn&apos;t the same as Manual Lymphatic Drainage. If you&apos;re recovering from surgery or managing lymphoedema, see our
               {' '}<Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] underline">MLD page</Link>{' '}
               for the right service.
             </p>

@@ -5,12 +5,13 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Analytics } from '@/components/Analytics'
 import { ConsentBanner } from '@/components/ConsentBanner'
+import { WhatsAppButton } from '@/components/WhatsAppButton'
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: 'Range and Restore | Sports Massage Archway London',
-  description: 'Expert sports massage, deep tissue and soft tissue remedial therapy in Archway, North London. Book your session with Carlos Bonvicine today.',
+  description: 'Expert sports massage, deep tissue and soft tissue remedial therapy in Archway, North London. A team of BTEC Level 5 qualified therapists at Range and Restore. Book your session today.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://rangeandrestore.co.uk'),
   verification: {
     google: 'v6gvLdaIjWXEPWw_kZ7bHkPrruqxtzdGeZZ2-ZuboYE',
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <WhatsAppButton />
         <ConsentBanner />
       </body>
     </html>

@@ -26,7 +26,8 @@ const SEARCH_INDEX: SearchItem[] = [
   { title: 'Achilles Tendinitis Recovery', description: 'How sports massage helps Achilles injuries', href: '/blog/achilles-tendinitis-recovery-massage', group: 'Blog', keywords: ['achilles', 'tendinitis', 'tendon', 'ankle', 'heel', 'injury'] },
   { title: 'Desk Posture Pain', description: 'Fixing neck, shoulder and back pain from desk work', href: '/blog/desk-posture-pain-massage', group: 'Blog', keywords: ['desk', 'posture', 'office', 'neck', 'back', 'shoulder', 'sitting'] },
   // Pages
-  { title: 'About Carlos Bonvicine', description: 'Meet the therapist behind Range and Restore', href: '/about', group: 'Pages', keywords: ['carlos', 'about', 'therapist', 'biography', 'qualifications', 'mld', 'certified'] },
+  { title: 'Meet the Team', description: 'The BTEC Level 5 therapists at Range and Restore', href: '/team', group: 'Pages', keywords: ['team', 'therapists', 'staff', 'meet', 'carlos', 'alison', 'isherwood', 'darael', 'beckles', 'mateja', 'bracko-mounti', 'who', 'practitioners'] },
+  { title: 'About Carlos Bonvicine', description: 'Founder and lead therapist at Range and Restore', href: '/about', group: 'Pages', keywords: ['carlos', 'about', 'founder', 'lead therapist', 'owner', 'biography', 'qualifications', 'mld', 'certified'] },
   { title: 'Contact', description: 'Get in touch, find us in Archway N19', href: '/contact', group: 'Pages', keywords: ['contact', 'phone', 'email', 'address', 'archway', 'n19', 'location', 'find us', 'directions'] },
   { title: 'Gallery', description: 'Photos from the clinic in Archway', href: '/gallery', group: 'Pages', keywords: ['gallery', 'photos', 'clinic', 'images'] },
   { title: 'Gift Cards', description: 'Buy a massage gift for someone you care about', href: '/gift-cards', group: 'Pages', keywords: ['gift', 'voucher', 'present', 'birthday', 'christmas'] },

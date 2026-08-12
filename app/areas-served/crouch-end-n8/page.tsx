@@ -88,7 +88,7 @@ export default function CrouchEndN8Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Crouch End is famous for having no tube station of its own &mdash; which is exactly why our Archway clinic is so handy. The 41 bus runs from Crouch End Broadway straight to Archway, where Range and Restore sits at 130 Junction Road, right by the Northern Line. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist.
+            Crouch End is famous for having no tube station of its own &mdash; which is exactly why our Archway clinic is so handy. The 41 bus runs from Crouch End Broadway straight to Archway, where Range and Restore sits at 130 Junction Road, right by the Northern Line. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N8</h2>

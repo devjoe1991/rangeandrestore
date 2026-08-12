@@ -55,7 +55,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How often should I book sports massage?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For an active injury or acute pain, weekly or fortnightly sessions are usually recommended for 3-4 weeks, then spaced out as you improve. For training maintenance or chronic tension, monthly sessions are typical. Carlos will advise after your first assessment.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'For an active injury or acute pain, weekly or fortnightly sessions are usually recommended for 3-4 weeks, then spaced out as you improve. For training maintenance or chronic tension, monthly sessions are typical. Your therapist will advise after your first assessment.' },
     },
     {
       '@type': 'Question',

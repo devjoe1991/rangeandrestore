@@ -99,7 +99,7 @@ export default function SocialsPage() {
             Ready to book a session?
           </h2>
           <p className="text-[#1a3d3a]/80 mb-7 text-base font-semibold">
-            See what we share online, then come in for an assessment-led treatment with Carlos.
+            See what we share online, then come in for an assessment-led treatment with one of our therapists.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
             <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />

@@ -69,7 +69,7 @@ export default function AlaricYogaPartnerPage() {
             Alaric Yoga and Range and Restore
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Senior Iyengar Yoga and pranayama with Alaric Newcombe, sports and soft tissue remedial therapy with Carlos Bonvicine at Range and Restore in Archway (130 Junction Road, N19). One yoga teacher and one clinical therapist, working together on mobility, recovery and long-term physical wellbeing for students across North London.
+            Senior Iyengar Yoga and pranayama with Alaric Newcombe, sports and soft tissue remedial therapy with our team at Range and Restore in Archway (130 Junction Road, N19). One yoga teacher and a clinic of soft tissue therapists, working together on mobility, recovery and long-term physical wellbeing for students across North London.
           </p>
         </div>
       </div>

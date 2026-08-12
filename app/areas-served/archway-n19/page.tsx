@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Archway N19 | 3-min Walk from Tube',
-  description: 'Sports and clinical massage in Archway N19. 130 Junction Road — 3 minutes from Archway tube. BTEC L5 therapist Carlos Bonvicine. Book online.',
+  description: 'Sports and clinical massage in Archway N19. 130 Junction Road — 3 minutes from Archway tube. A team of BTEC L5 qualified therapists. Book online.',
   path: '/areas-served/archway-n19',
 })
 
@@ -88,7 +88,7 @@ export default function ArchwayN19Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is the Archway local clinic for sports and remedial massage. The studio is at 130 Junction Road — between Archway tube and Tufnell Park — and is led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner.
+            Range and Restore is the Archway local clinic for sports and remedial massage. The studio is at 130 Junction Road — between Archway tube and Tufnell Park — and is staffed by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a certified MLD practitioner.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N19</h2>

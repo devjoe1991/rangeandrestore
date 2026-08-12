@@ -39,7 +39,7 @@ export default function FAQsPage() {
             Whether you are new to massage, managing an injury, or just curious about booking, find your answer here.
           </p>
           <p className="mt-3 text-base text-page-muted opacity-80 max-w-xl">
-            Not sure which treatment is right for you? Call Carlos on <a href="tel:+447890716154" className="font-semibold text-page hover:underline">07890 716154</a>. He is happy to talk it through before you book.
+            Not sure which treatment is right for you? Call Range and Restore on <a href="tel:+447890716154" className="font-semibold text-page hover:underline">07890 716154</a>. We are happy to talk it through before you book.
           </p>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function FAQsPage() {
         <div className="mt-10 bg-[#1a3d3a] rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-extrabold text-white tracking-tight mb-2">Still have questions?</h2>
           <p className="text-[#d4ecea]/80 mb-6 text-sm">
-            Get in touch and Carlos will be happy to help before you book.
+            Get in touch and our team will be happy to help before you book.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <BookingButton label="Book Your Session" />

@@ -10,7 +10,7 @@ import { BookingButton } from '@/components/BookingButton'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Services in Archway N19 | Range and Restore',
-  description: 'Sports, deep tissue, cupping, MLD and relaxation massage in Archway. BTEC L5 therapist Carlos Bonvicine. 5★ rated. From £50 · book online.',
+  description: 'Sports, deep tissue, cupping, MLD and relaxation massage in Archway. A team of BTEC L5 qualified therapists at Range and Restore. 5★ rated. From £50 · book online.',
   path: '/services',
 })
 
@@ -277,7 +277,7 @@ export default function ServicesPage() {
               Not sure which treatment you need?
             </h2>
             <p className="text-page-muted text-sm font-medium leading-relaxed flex-1 mb-5">
-              Tell Carlos what&apos;s going on — where it hurts, how long it&apos;s been there, what you&apos;ve tried — and he&apos;ll point you to the right session before you book.
+              Tell us what&apos;s going on — where it hurts, how long it&apos;s been there, what you&apos;ve tried — and we&apos;ll point you to the right session before you book.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call {BUSINESS.phone}</a>
@@ -312,13 +312,13 @@ export default function ServicesPage() {
             Ready to feel better?
           </h2>
           <p className="text-[#1a3d3a]/90 mb-7 text-base font-semibold">
-            Back pain, injury or tension holding you back? Book online or call Carlos directly.
+            Back pain, injury or tension holding you back? Book online or call Range and Restore directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
             <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call us on ${BUSINESS.phone}`}
+              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />

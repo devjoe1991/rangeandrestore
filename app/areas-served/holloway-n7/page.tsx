@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Holloway N7 | Straight Up Holloway Road',
-  description: 'Sports and deep tissue massage for Holloway (N7). Clinic a short trip up Holloway Road to Archway. BTEC L5 therapist. Book online — same-week slots.',
+  description: 'Sports and deep tissue massage for Holloway (N7). Clinic a short trip up Holloway Road to Archway. A team of BTEC L5 therapists. Book online — same-week slots.',
   path: '/areas-served/holloway-n7',
 })
 
@@ -88,7 +88,7 @@ export default function HollowayN7Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Holloway is one of our closest catchment areas &mdash; Holloway Road runs directly up to Archway, where it becomes Junction Road and passes the clinic at number 130. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner.
+            Holloway is one of our closest catchment areas &mdash; Holloway Road runs directly up to Archway, where it becomes Junction Road and passes the clinic at number 130. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a certified MLD practitioner.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N7</h2>

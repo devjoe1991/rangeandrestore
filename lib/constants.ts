@@ -31,12 +31,30 @@ export const BOOKING_URLS = {
 
 export const BUSINESS = {
   name: 'Range and Restore Sports Massage',
-  therapist: 'Carlos Bonvicine',
+  founder: 'Carlos Bonvicine',
+  founderTitle: 'Founder & Lead Therapist',
   address: '130 Junction Road, Archway, London N19 5LB',
   phone: '07890 716154',
   phoneTel: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
 } as const
+
+/**
+ * WhatsApp click-to-chat. `wa.me` wants the number in full international form
+ * with no "+" or spaces, so it's derived from phoneTel rather than duplicated.
+ * The message is pre-filled but deliberately left open at the end — the two
+ * blank fields are what the client completes before sending.
+ */
+export const WHATSAPP_NUMBER = BUSINESS.phoneTel.replace(/[^0-9]/g, '')
+
+export const WHATSAPP_MESSAGE =
+  "Hi, I'd like to make a booking at Range and Restore. Do you have availability for:\n\nTreatment: \nPreferred date/time: "
+
+// encodeURIComponent leaves apostrophes alone, which is legal in a query but
+// renders as a &#x27; entity in the markup. Encoding it keeps the href clean.
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE,
+).replace(/'/g, '%27')}`
 
 export const NAV_ITEMS = [
   { label: 'About', href: '/about' },

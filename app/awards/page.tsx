@@ -262,7 +262,7 @@ export default function AwardsPage() {
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-3">Book the award-winning clinic</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Come and feel the difference for yourself. Book online in a couple of minutes, or call Carlos directly on {BUSINESS.phone}.
+            Come and feel the difference for yourself. Book online in a couple of minutes, or call Range and Restore directly on {BUSINESS.phone}.
           </p>
           <a
             href={BOOKING_URLS.general}

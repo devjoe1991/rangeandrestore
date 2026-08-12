@@ -88,7 +88,7 @@ export default function UpperHollowayN19Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            If you live in Upper Holloway, Range and Restore is quite literally your local sports massage clinic &mdash; same postcode, same road. We&apos;re at 130 Junction Road, which runs through the middle of N19, so for most Upper Holloway addresses it&apos;s a short walk to the door. Sessions are led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified MLD practitioner.
+            If you live in Upper Holloway, Range and Restore is quite literally your local sports massage clinic &mdash; same postcode, same road. We&apos;re at 130 Junction Road, which runs through the middle of N19, so for most Upper Holloway addresses it&apos;s a short walk to the door. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a certified MLD practitioner.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N19</h2>

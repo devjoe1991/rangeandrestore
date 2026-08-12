@@ -88,7 +88,7 @@ export default function StroudGreenN4Page() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Stroud Green sits right on the Parkland Walk &mdash; the old railway line turned traffic-free green route &mdash; which makes Range and Restore a natural stop for the area&apos;s runners and cyclists. The clinic is at 130 Junction Road, Archway, a short trip from anywhere in N4, and is led by <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist.
+            Stroud Green sits right on the Parkland Walk &mdash; the old railway line turned traffic-free green route &mdash; which makes Range and Restore a natural stop for the area&apos;s runners and cyclists. The clinic is at 130 Junction Road, Archway, a short trip from anywhere in N4, and is staffed by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N4</h2>

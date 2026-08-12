@@ -73,7 +73,7 @@ export default function ClinicalCollaborationPage() {
             <div className="space-y-4">
               <div className="bg-page-sage rounded-xl p-6">
                 <h3 className="font-bold text-page mb-2">Assessment-led referral</h3>
-                <p className="text-page-muted text-sm">If Carlos identifies during a massage assessment that imaging may be useful to clarify a diagnosis or rule out more serious pathology — for example, in cases of suspected tendon tear or persistent unexplained pain — he can discuss a referral to <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>.</p>
+                <p className="text-page-muted text-sm">If your therapist identifies during a massage assessment that imaging may be useful to clarify a diagnosis or rule out more serious pathology — for example, in cases of suspected tendon tear or persistent unexplained pain — they can discuss a referral to <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>.</p>
               </div>
               <div className="bg-page-sage rounded-xl p-6">
                 <h3 className="font-bold text-page mb-2">Coordinated care</h3>
@@ -124,7 +124,7 @@ export default function ClinicalCollaborationPage() {
               Every treatment at Range and Restore begins with a thorough assessment. If imaging is identified as clinically appropriate, the team at <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#7dd94a] underline decoration-[#7dd94a]/40 hover:text-white transition-colors font-semibold">Reliable Scan</a> is on hand in the same building.
             </p>
             <p className="text-[#d4ecea] mb-6">
-              Book your initial session with Carlos and take the first step towards a clear diagnosis and effective, targeted treatment.
+              Book your initial session with one of our therapists and take the first step towards a clear diagnosis and effective, targeted treatment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <BookingButton label="Book Your Session" />

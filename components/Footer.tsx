@@ -145,8 +145,8 @@ export function Footer() {
             <p className="text-[#1a2330] font-extrabold text-lg md:text-sm md:font-bold mb-4 tracking-tight">Quick Links</p>
             <ul className="space-y-1 text-sm text-[#1a3d3a]/90 font-medium">
               {[
-                ['About Carlos',           '/about'],
                 ['Meet the Team',          '/team'],
+                ['About Carlos',           '/about'],
                 ['Awards & Recognition',   '/awards'],
                 ['Recovery Suite',         '/recovery-suite'],
                 ['Gallery',                '/gallery'],

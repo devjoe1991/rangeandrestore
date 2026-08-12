@@ -247,7 +247,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </p>
 
           <p>
-            Carlos Bonvicine is a Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist with advanced training in <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">clinical massage</Link> and <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">manual lymphatic drainage</Link>. Every session begins with an assessment — understanding your history, your goals, and what your body is telling us — so treatment is always targeted and effective.
+            Range and Restore is a team of BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapists, led by founder Carlos Bonvicine, with advanced training in <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">clinical massage</Link> and <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">manual lymphatic drainage</Link>. Every session begins with an assessment — understanding your history, your goals, and what your body is telling us — so treatment is always targeted and effective.
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
