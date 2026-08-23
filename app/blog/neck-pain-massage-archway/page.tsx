@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Neck Pain and Stiff Neck: How Massage Helps',
-  description: 'Most stiff or aching necks are muscular — driven by screens, posture and stress. How massage helps neck pain, text neck and tension headaches in Archway, North London.',
+  description: 'Most stiff necks are muscular, driven by screens, posture and stress. How massage helps neck pain, text neck and tension headaches. Archway, North London.',
   path: '/blog/neck-pain-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Neck Pain and a Stiff Neck – How Massage Helps',
   description: 'Neck pain, stiff neck and text neck treatment through massage and soft tissue therapy in Archway, North London. Release the neck, upper trapezius and shoulders and address the postural drivers.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/back-neck-pain-mot-neck-massage-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/neck-pain-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/neck-pain-massage-archway',
   keywords: 'neck pain massage, stiff neck treatment, text neck, sports massage Archway, neck tension headaches, back and neck pain MOT, soft tissue therapy North London',
@@ -145,7 +145,7 @@ export default function NeckPainMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Neck tension and headaches</h2>
 
           <p>
-            Neck pain and headaches frequently travel together. Tight muscles at the base of the skull and across the upper neck and shoulders are a well-recognised driver of tension-type headaches — the dull, band-like pressure many people feel around the head after a long day at a screen. When the headache is coming from this muscular tension, releasing the neck and shoulders often eases the head as well, which is why the two are usually treated together rather than in isolation.
+            Neck pain and headaches frequently travel together. Tight muscles at the base of the skull and across the upper neck and shoulders are a well-recognised driver of tension-type headaches — the dull, band-like pressure many people feel around the head after a long day at a screen. When the headache is coming from this muscular tension, releasing the neck and shoulders often eases the head as well, which is why the two are usually treated together rather than in isolation. There is more on this in our piece on <Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tension headaches and massage</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How many sessions will I need?</h2>
@@ -165,7 +165,7 @@ export default function NeckPainMassagePage() {
           </p>
 
           <p>
-            Range and Restore is happy to coordinate with your GP or physiotherapist, and works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway, if imaging is ever needed.
+            Range and Restore is happy to coordinate with your GP or physiotherapist, and works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway, if a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> is ever needed.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find neck pain treatment near you in North London</h2>
@@ -231,8 +231,14 @@ export default function NeckPainMassagePage() {
             <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Desk Posture Drives Neck and Shoulder Pain
             </Link>
+            <Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Tension Headaches: How Massage Can Help
+            </Link>
             <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Massage for Office Workers in Archway
+            </Link>
+            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Back &amp; Neck Pain MOT
             </Link>
           </div>
         </div>

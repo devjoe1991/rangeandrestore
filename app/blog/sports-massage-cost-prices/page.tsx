@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'How Much Does a Sports Massage Cost? Prices Explained',
-  description: "How much does a sports massage cost? In London it's typically around £50–£110 depending on session length. Here are Range and Restore's prices in Archway, what affects the cost, and ways to pay less.",
+  description: "How much does a sports massage cost? Typically £50–£110 in London. Our full price list, what affects the cost and ways to pay less. Archway, North London.",
   path: '/blog/sports-massage-cost-prices',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'How Much Does a Sports Massage Cost?',
   description: 'How much does a sports massage cost in London? A clear breakdown of sports massage prices, what affects the cost, and cheaper options at Range and Restore in Archway, North London.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/sports-massage-cost-prices',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/sports-massage-cost-prices',
   keywords: 'sports massage cost, sports massage prices, how much is a sports massage, sports massage price London, deep tissue massage cost Archway, sports massage N19',
@@ -46,7 +46,7 @@ const articleSchema = {
 const faqs = [
   {
     q: "How much does a sports massage cost?",
-    a: "In London a sports massage typically costs somewhere in the region of £50–£110, depending mainly on the length of the session. At Range and Restore in Archway it's £50 for 30 minutes, £75 for 60 minutes and £110 for 90 minutes. Prices can change, so check the booking page for the latest.",
+    a: "In London a sports massage typically costs £50–£110, depending mainly on the length of the session. At Range and Restore in Archway it's £50 for 30 minutes, £75 for 60 minutes and £110 for 90 minutes. Prices can change, so check the booking page for the latest.",
   },
   {
     q: "How much is a 60-minute sports massage?",
@@ -92,7 +92,7 @@ export default function SportsMassageCostPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            In London a sports massage typically costs somewhere in the region of £50–£110, depending mainly on the length of the session. At Range and Restore in Archway, North London, a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> is £50 for 30 minutes, £75 for 60 minutes and £110 for 90 minutes. Prices can change, so it&rsquo;s always worth checking the booking page for the latest.
+            In London a sports massage typically costs £50–£110, depending mainly on the length of the session. At Range and Restore in Archway, North London, a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> is £50 for 30 minutes, £75 for 60 minutes and £110 for 90 minutes. Prices can change, so it&rsquo;s always worth checking the booking page for the latest.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How much does a sports massage cost?</h2>
@@ -176,6 +176,10 @@ export default function SportsMassageCostPage() {
 
           <p>
             If you only have a minor, one-off ache that&rsquo;s already settling, you may not need a full 90-minute treatment — a shorter 30-minute session, or waiting to see if it clears on its own, might be the sensible call. A good therapist will tell you that rather than upselling. If you want to understand what a session actually does for you, our guide to the <Link href="/blog/sports-massage-benefits" className="text-[#0f767a] hover:text-page font-medium">benefits of sports massage</Link> goes into more detail.
+          </p>
+
+          <p>
+            One caveat before you spend anything: if your pain is severe or getting worse, follows a fall or other injury, or comes with numbness, weakness, night pain or unexplained swelling, see your GP or a physio first. Massage is not the right first step for everything, and we will say so if that is the case.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage prices near you in North London</h2>

@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Plantar Fasciitis and Heel Pain: How Massage Helps',
-  description: 'How sports massage helps plantar fasciitis and heel pain — releasing tight calves and foot muscles, addressing lower-leg mechanics, and when to see a physio.',
+  description: 'How sports massage helps plantar fasciitis and heel pain: tight calves, foot muscles, lower-leg mechanics, and when to see a physio. Archway, North London.',
   path: '/blog/plantar-fasciitis-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Plantar Fasciitis and Heel Pain – How Sports Massage Helps',
   description: 'Plantar fasciitis and heel pain treatment through sports massage and soft tissue therapy in Archway, North London. Release tight calves and foot muscles overloading the plantar fascia.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/plantar-fasciitis-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/plantar-fasciitis-massage-archway',
   keywords: 'plantar fasciitis massage, heel pain treatment, sports massage Archway, calf pain treatment, foot pain massage London, soft tissue therapy plantar fascia',
@@ -96,7 +96,7 @@ export default function PlantarFasciitisPage() {
           </p>
 
           <p>
-            Plantar fasciitis is one of the most common causes of heel pain, affecting <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, people who stand all day, and active individuals alike. At Range and Restore in Archway, North London, sports massage and targeted <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">soft tissue therapy</Link> offer a considered, hands-on way to reduce the tension feeding the problem and support recovery.
+            Plantar fasciitis is one of the most common causes of heel pain, affecting <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, people who stand all day and anyone who has recently upped their training. At Range and Restore in Archway, North London, <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> is a practical, hands-on way to reduce the tension feeding the problem and support recovery. It often overlaps with <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles tendinitis</Link>, which shares the same tight-calf driver.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is plantar fasciitis?</h2>
@@ -168,7 +168,7 @@ export default function PlantarFasciitisPage() {
           </p>
 
           <p>
-            Range and Restore is happy to coordinate with your physiotherapist so treatment complements your rehab rather than duplicating it. The clinic also operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to rule out other causes of heel pain, this can be arranged within the same building.
+            Range and Restore is happy to coordinate with your physiotherapist so treatment complements your rehab rather than duplicating it. The clinic also operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> is needed to rule out other causes of heel pain, this can be arranged within the same building.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find plantar fasciitis treatment near you in North London</h2>

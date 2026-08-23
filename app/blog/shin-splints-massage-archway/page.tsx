@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Shin Splints: How Sports Massage Helps',
-  description: 'How sports massage helps shin splints (medial tibial stress syndrome) in runners — releasing tight calves, managing load, when to rule out a stress fracture.',
+  description: 'How sports massage helps shin splints in runners: releasing tight calves, managing training load and when to rule out a stress fracture. Archway, North London.',
   path: '/blog/shin-splints-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Shin Splints – How Sports Massage Supports Recovery',
   description: 'Shin splints (medial tibial stress syndrome) treatment through sports massage and soft tissue therapy in Archway, North London. Ease shin pain and return to running well.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/sports-massage-treatment-room-couch-range-and-restore-archway-north-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -198,9 +198,9 @@ export default function ShinSplintsPage() {
         </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Don&apos;t let shin pain derail your training</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Shin pain every time you run?</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Professional sports massage and soft tissue therapy targeting the tight calves and loading behind your shin splints in Archway, North London.
+            Assessment-led sports massage and soft tissue therapy for the tight calves and training load behind your shin splints, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a

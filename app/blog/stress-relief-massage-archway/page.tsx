@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Stress Relief Massage: Ease Tension and Switch Off',
-  description: 'How a stress relief and relaxation massage calms the nervous system, releases held tension in the neck, shoulders and jaw, and helps you switch off.',
+  description: 'How a relaxation massage calms the nervous system, eases held tension in the neck, shoulders and jaw, and helps you switch off. Archway, North London.',
   path: '/blog/stress-relief-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Stress Relief Massage – Easing Tension and Switching Off',
   description: 'How stress and burnout show up as physical tension, and how a relaxation massage in Archway, North London helps calm the nervous system and switch off.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/relaxation-restorative-massage-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/stress-relief-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/stress-relief-massage-archway',
   keywords: 'stress relief massage, de-stress massage, relaxation massage Archway, massage for stress London, unwind massage North London, tension relief massage N19',
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     q: "How often should I get a massage for stress?",
-    a: "There is no fixed rule. If stress is a constant in your life, many people find a regular rhythm — such as monthly, or fortnightly during a particularly demanding period — helps them stay on top of the tension before it builds up. If you are simply after an occasional reset, a single session as and when you need it is perfectly reasonable. We will happily suggest a sensible pattern for you.",
+    a: "There is no fixed rule. If stress is a constant in your life, many people find a regular rhythm — such as monthly, or fortnightly during a particularly demanding period — helps them stay on top of the tension before it builds up. If you are simply after an occasional reset, a single session as and when you need it is perfectly reasonable. Our therapists will suggest a sensible pattern for you.",
   },
 ]
 
@@ -160,7 +160,7 @@ export default function StressReliefMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek other support</h2>
 
           <p>
-            It is worth being clear about what massage is and is not. A relaxation massage supports your wellbeing and can be a real help in managing everyday stress — but it is not a treatment for a mental-health condition. If low mood, anxiety or stress is persistent, severe, or getting in the way of daily life, please speak to your GP or a mental-health professional. Massage can sit comfortably alongside that kind of support, but it is not a substitute for it.
+            It is worth being clear about what massage is and is not. A relaxation massage supports your wellbeing and can be a real help in managing everyday stress — but it is not a treatment for a mental-health condition. If low mood, anxiety or stress is persistent, severe, or getting in the way of daily life, please speak to your GP or a mental-health professional. Massage can sit comfortably alongside that kind of support, but it is not a substitute for it. The same goes for physical symptoms: headaches that are sudden or severe, jaw pain with clicking or locking, or neck pain with numbness, weakness or pins and needles down an arm should be checked by your GP or a physio rather than treated with massage alone.
           </p>
 
           <p>
@@ -229,6 +229,9 @@ export default function StressReliefMassagePage() {
           <div className="space-y-2">
             <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Relaxation &amp; Restorative Massage
+            </Link>
+            <Link href="/blog/mind-body-connection-massage-mental-wellbeing-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; The Mind-Body Connection: How Easing Pain Supports Mental Wellbeing
             </Link>
             <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Desk Posture and Pain: How Massage Helps

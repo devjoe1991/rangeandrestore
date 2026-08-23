@@ -4,8 +4,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Hydration and Muscle Health | Recovery Guide',
-  description: 'Water makes up 75% of muscle tissue. Learn why hydration is essential for muscle function, injury prevention and getting more from your massage treatment.',
+  title: 'Hydration and Muscle Health | Why Water Matters',
+  description: 'Water makes up around 75% of muscle. Why hydration matters for cramp, stiffness, recovery and getting more from your massage. Archway, North London.',
   path: '/blog/hydration-and-muscle-health',
   author: true,
 })
@@ -19,8 +19,8 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Hydration and Muscle Health – What Every Client Should Know',
-  description: 'Water makes up 75% of muscle tissue. Learn why hydration is essential for muscle function, injury prevention and getting more from your massage treatment.',
-  image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=75',
+  description: 'Water makes up around 75% of muscle tissue. Why hydration matters for muscle function, cramp, stiffness and recovery, what to drink before and after a massage, and when cramps or dehydration need a GP. From Range and Restore in Archway, North London.',
+  image: 'https://rangeandrestore.co.uk/hydration-wellness.png',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,10 +33,10 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-02-08',
-  dateModified: '2026-03-26',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/hydration-and-muscle-health',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/hydration-and-muscle-health',
-  keywords: 'hydration muscle health, muscle recovery hydration, massage preparation, dehydration injury risk, sports massage recovery, hydration tips athletes',
+  keywords: 'hydration muscle health, muscle recovery hydration, massage preparation, dehydration muscle cramps, drink water after massage, sports massage recovery, hydration tips athletes',
 }
 
 // Problem-based FAQs — everyday British search wording, answers grounded in the
@@ -45,23 +45,23 @@ const articleSchema = {
 const faqs = [
   {
     q: 'Can dehydration cause muscle cramps?',
-    a: 'Yes. When you are dehydrated, muscles become stiffer and more prone to cramping, and they take significantly longer to recover. Water makes up roughly 75% of muscle tissue, so when fluid levels drop the muscles work harder than they should, fatigue sets in earlier, and the risk of strain and cramping increases.',
+    a: 'Yes, it is one of the common contributors. When you are dehydrated, muscles become stiffer and more prone to cramp, and they take longer to recover. Water makes up roughly 75% of muscle tissue, so when fluid levels drop the muscles work harder than they should, fatigue sets in earlier and the risk of strain and cramp goes up. Cramps that keep happening despite drinking enough, or that come with weakness or numbness, should be checked by your GP.',
   },
   {
     q: 'Why do my muscles feel tight and stiff?',
-    a: 'Muscle fibres are surrounded by connective tissue — fascia, tendons and ligaments — which all have a high water content. When you are well hydrated this tissue slides and moves freely; when you are dehydrated it becomes denser, more adhesive and more restricted. This is one of the main reasons people feel stiff in the morning or after sitting for long periods.',
+    a: 'Muscle fibres are surrounded by connective tissue such as fascia, tendons and ligaments, all of which have a high water content. When you are well hydrated this tissue slides and moves freely; when you are dehydrated it becomes denser and more restricted. That is one of several reasons people feel stiff in the morning or after sitting for long periods. Lack of movement, poor sleep and stress play a part too.',
   },
   {
     q: 'Why should I drink water after a massage?',
-    a: 'During a massage, metabolic byproducts that have built up in tight or overworked muscles — including lactic acid and other cellular waste — are mobilised and pushed into the circulatory system. Staying well hydrated before and after your session helps your kidneys and lymphatic system process and eliminate these substances efficiently, reducing post-massage soreness and speeding up recovery.',
+    a: 'Not for the reason you may have been told. Massage does not flush toxins or lactic acid out of your muscles; the body clears lactate on its own within an hour or so of exercise. The practical reasons are simpler: you lose a little fluid lying under a blanket for an hour, a firm session is a mild physical stress the body has to recover from, and well-hydrated tissue tends to feel less sore the following day. So the advice stands, for better reasons.',
   },
   {
     q: 'How much water should I drink before a massage?',
-    a: 'Aim to drink around 500ml of water in the two hours before your massage appointment, and continue drinking water throughout the rest of the day after your session. Arriving well hydrated means the tissue responds better to treatment, techniques can penetrate more effectively, and the results tend to last longer.',
+    a: 'Aim for around 500ml of water in the two hours before your appointment, then keep drinking normally through the rest of the day. Arriving well hydrated means the tissue is easier to work, the session is more comfortable and the results tend to last longer. There is no need to force litres down beforehand.',
   },
   {
     q: 'How much water should I drink each day?',
-    a: 'The general recommendation of eight glasses a day is a rough starting point, but individual needs vary with body size, activity level, climate and diet. A more useful indicator is the colour of your urine — pale yellow is the target, dark yellow or amber suggests dehydration, and clear indicates over-hydration. Foods with a high water content such as cucumbers, watermelon, oranges and leafy greens also contribute to your total daily hydration.',
+    a: 'The usual guide of six to eight glasses a day is a rough starting point, but needs vary with body size, activity, weather and diet. A more useful check is the colour of your urine: pale yellow is the target, dark yellow or amber suggests you need more, and consistently clear usually means you are drinking more than you need. Foods with a high water content such as cucumber, melon, oranges and leafy greens count towards your total.',
   },
 ]
 
@@ -91,82 +91,80 @@ export default function HydrationMuscleHealthPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Most people know that drinking water is important. But fewer people understand just how directly hydration affects the health, function, and recovery of your muscles — and what that means for your <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">massage treatment</Link>.
+            Water makes up around 75% of muscle tissue, so hydration has a direct effect on how your muscles feel, work and recover. Well-hydrated muscle is more pliable and less prone to cramp; dehydrated muscle is stiffer, tires sooner and takes longer to recover. It also affects how much you get out of a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">massage</Link>, which is why our therapists at Range and Restore in Archway ask about it.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why does hydration matter for muscle tissue?</h2>
+
+          <p>
+            Muscle fibres are surrounded and supported by connective tissue: fascia, tendons and ligaments, all of which have a high water content. When you are properly hydrated this tissue slides and moves freely. When you are not, it becomes denser and more restricted. That is one of several reasons people feel stiff in the morning or after sitting for long periods, alongside lack of movement, poor sleep and stress.
           </p>
 
           <p>
-            Water makes up approximately 75% of muscle tissue. When you&apos;re well hydrated, muscles are more pliable, circulation is efficient, and your body can flush out metabolic waste more effectively. When you&apos;re dehydrated, muscles become stiffer, more prone to cramping, and take significantly longer to recover.
+            From a treatment point of view, hydrated tissue is easier to work. The muscles respond better, the session is more comfortable and the change tends to last longer. Working on dehydrated tissue is a bit like kneading dry clay: harder to shift, less comfortable for you and less likely to hold.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why hydration matters for muscle tissue</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why should I drink water after a massage?</h2>
 
           <p>
-            Muscle fibres are surrounded and supported by connective tissue — fascia, tendons, and ligaments — all of which have a high water content. When you&apos;re adequately hydrated, this connective tissue slides and moves freely. When you&apos;re dehydrated, the tissue becomes denser, more adhesive, and more restricted. This is one of the main reasons people feel stiff in the morning, or after sitting for long periods.
-          </p>
-
-          <p>
-            From a massage therapy perspective, hydrated tissue responds far better to treatment. The muscles are more receptive, techniques can penetrate more effectively, and the therapeutic effects tend to last longer. Conversely, working on dehydrated tissue can feel like trying to knead dry clay — harder to shift, more uncomfortable for the client, and less likely to produce lasting change.
-          </p>
-
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Hydration and post-massage recovery</h2>
-
-          <p>
-            One of the most common pieces of advice given after a massage is to drink plenty of water. This isn&apos;t just a courtesy recommendation — there&apos;s a physiological reason behind it.
+            You will almost always be told to drink plenty of water after a massage. The old explanation, that massage &ldquo;flushes out toxins&rdquo; or pushes lactic acid out of the muscles, does not stand up. The body clears lactate on its own within an hour or so of exercise, and massage does not squeeze waste out of tissue.
           </p>
 
           <p>
-            During a massage session, metabolic byproducts that have accumulated in tight or overworked muscles — including lactic acid and other cellular waste — are mobilised and pushed into the circulatory system. Your body then needs to process and eliminate these substances. Staying well hydrated before and after your session helps your kidneys and lymphatic system do this efficiently, reducing post-massage soreness and speeding up recovery.
+            The real reasons are more ordinary. You lose a little fluid lying under a blanket in a warm room for an hour. A firm session is a mild physical stress that the body has to recover from, and recovery goes better when you are hydrated. And people who arrive and leave well hydrated tend to report less next-day soreness and feel the benefit for longer. So the advice stands, just for better reasons.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Does dehydration increase injury risk?</h2>
+
+          <p>
+            Mild, ongoing dehydration is more common than most people realise. Plenty of people go through the day slightly short of fluid without noticing, particularly if they drink a lot of coffee or alcohol, work in heated or air-conditioned offices, or train regularly without replacing what they sweat out.
           </p>
 
           <p>
-            Clients who come to sessions well hydrated consistently report less post-treatment soreness, better results from the session itself, and faster overall recovery between appointments.
-          </p>
-
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Dehydration and injury risk</h2>
-
-          <p>
-            Chronic mild dehydration is more common than most people realise. Many people move through their day in a slightly dehydrated state without noticing — particularly those who drink large amounts of coffee or alcohol, work in heated or air-conditioned environments, or exercise regularly without replacing fluids adequately.
+            In that state muscles are working harder than they should, fatigue arrives earlier and cramp and strains are more likely. Tendons and ligaments, which have a lower water content than muscle even when fully hydrated, have less margin when fluid levels drop.
           </p>
 
           <p>
-            In this state, muscles are working harder than they should, fatigue sets in earlier, and the risk of strain, cramping, and soft tissue injury increases. Tendons and ligaments — which have a lower water content than muscle even when fully hydrated — become particularly vulnerable when fluid levels drop.
+            For <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, cyclists and anyone training hard, hydration is one of the simplest and most overlooked recovery tools there is. If you are already nursing something like <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles tendinitis</Link> or a <Link href="/blog/tight-hamstring-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tight hamstring</Link>, turning up to training under-fuelled and under-watered does not help it settle.
           </p>
 
-          <p>
-            For <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, cyclists, and active individuals, hydration is one of the simplest and most overlooked performance and injury prevention tools available. Conditions like <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles tendinitis</Link> and calf strains can be aggravated by chronic dehydration, making recovery longer and treatment less effective.
-          </p>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">How much should I drink?</h2>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Practical hydration guidelines</h2>
-
-          <p>The general recommendation of eight glasses of water per day is a rough starting point, but individual needs vary based on body size, activity level, climate, and diet. A more useful indicator is the colour of your urine — pale yellow is the target. Dark yellow or amber suggests dehydration, and clear indicates over-hydration.</p>
+          <p>The usual guide of six to eight glasses a day is a rough starting point, but needs vary with body size, activity, weather and diet. A more useful check is the colour of your urine: pale yellow is the target. Dark yellow or amber suggests you need more; consistently clear usually means you are drinking more than you need.</p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li>Drink a glass of water first thing in the morning, before coffee or tea</li>
-            <li>Aim to be well hydrated going into any exercise or physical activity — not playing catch-up during it</li>
-            <li>Drink 500ml of water in the two hours before a massage appointment</li>
-            <li>Continue drinking water throughout the rest of the day after your session</li>
-            <li>If you exercise, replace fluids during and after activity based on how much you sweat</li>
-            <li>Foods with high water content — cucumbers, watermelon, oranges, leafy greens — contribute to total daily hydration</li>
+            <li>Have a glass of water first thing in the morning, before coffee or tea</li>
+            <li>Go into any exercise already hydrated rather than playing catch-up during it</li>
+            <li>Drink around 500ml of water in the two hours before a massage appointment</li>
+            <li>Keep drinking normally through the rest of the day after your session</li>
+            <li>If you train, replace fluids during and after based on how much you sweat</li>
+            <li>Foods with a high water content such as cucumber, melon, oranges and leafy greens count towards your total</li>
           </ul>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">When are cramps or dehydration a GP matter?</h2>
+
+          <p>
+            Most cramp and stiffness is nothing more than tired, under-watered muscle. See your GP if cramps keep happening despite drinking enough, come with weakness, numbness or pins and needles, or wake you most nights. Pain, swelling, heat or redness in one calf that was not brought on by exercise needs same-day advice from your GP, NHS 111 or A&amp;E, because it can be a sign of a clot rather than a muscle problem. Dizziness, confusion, very dark urine or passing very little urine despite drinking are signs of significant dehydration and also need medical attention. If you have a kidney or heart condition, or have been told to limit fluids, ask your GP how much you should be drinking rather than following general advice.
+          </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">The bottom line</h2>
 
           <p>
-            Hydration isn&apos;t a supplement or a biohack — it&apos;s a fundamental requirement for healthy muscle function, injury prevention, and effective recovery. Making it a consistent habit, rather than something you scramble to fix the morning of a massage, will have a noticeable impact on how your muscles feel, how well your treatment works, and how quickly you recover between sessions.
+            Hydration is not a supplement or a hack; it is a basic requirement for muscles that work well, recover properly and are less likely to get hurt. Making it a habit, rather than something you try to fix on the morning of a massage, will show in how your muscles feel, how well your treatment works and how quickly you recover between sessions.
           </p>
 
           <p>
-            If you have questions about what to do before or after your appointment, feel free to ask during your session. Every client is different, and personalised advice is always part of the treatment at <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore in Archway, North London</Link>.
+            If you are not sure what to do before or after an appointment, ask during your session. Practical advice on recovery is part of every treatment at <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore in Archway, North London</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage and recovery advice near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage and recovery advice near you in North London</h2>
 
           <p>
-            If you have been searching &ldquo;sports massage near me&rdquo;, &ldquo;recovery advice North London&rdquo;, &ldquo;muscle recovery clinic Archway&rdquo;, &ldquo;sports massage N19&rdquo;, &ldquo;deep tissue massage London&rdquo; or &ldquo;hydration and muscle recovery&rdquo;, this is the local guide. Range and Restore is at 130 Junction Road, two minutes from Archway tube on the Northern Line, and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
+            If you have been searching &ldquo;sports massage near me&rdquo;, &ldquo;recovery advice North London&rdquo;, &ldquo;muscle recovery clinic Archway&rdquo;, &ldquo;sports massage N19&rdquo;, &ldquo;deep tissue massage London&rdquo; or &ldquo;hydration and muscle recovery&rdquo;, Range and Restore is the local option. The clinic is at 130 Junction Road, two minutes from Archway tube on the Northern Line, and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
           </p>
 
           <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Whether you are a runner, cyclist, gym-goer, desk worker or post-surgery client, Range and Restore is the North London option for assessment-led sports massage, soft tissue therapy and ongoing recovery support.
+            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Runners, cyclists, gym-goers, desk workers and post-surgery clients all come to us for assessment-led sports massage, soft tissue therapy and ongoing recovery support.
           </p>
         </div>
 
@@ -222,6 +220,9 @@ export default function HydrationMuscleHealthPage() {
             </Link>
             <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Sports Massage Helps Runners Before and After Races
+            </Link>
+            <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Sports Recovery in Archway: Massage, Compression and Sauna
             </Link>
           </div>
         </div>

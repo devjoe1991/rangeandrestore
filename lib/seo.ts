@@ -176,7 +176,7 @@ export const alisonPersonSchema = {
   jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
   description: 'Alison Isherwood is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and graduate of the London School of Sports Massage (LSSM), with specialist interests in pregnancy massage and abdominal massage, based at Range and Restore in Archway, North London.',
   url: `${BASE_URL}/team`,
-  image: `${BASE_URL}/alison-isherwood-range-and-restore-sports-massage-banner-archway-london.jpeg`,
+  image: `${BASE_URL}/alison-isherwood-btec-level-5-sports-massage-soft-tissue-therapist-archway.jpeg`,
   worksFor: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',

@@ -4,8 +4,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage in Archway, North London | A Local Guide',
-  description: 'A local guide to sports massage in Archway: where to book, what to expect, and how clients across N19 and North London use it for recovery and pain relief.',
+  title: 'Sports Massage in Archway, North London: A Local Guide',
+  description: 'A local guide to sports massage in Archway: what it is, who it suits, what to look for in a therapist, and how people across N19 and North London use it.',
   path: '/blog/sports-massage-archway-local-guide',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Sports Massage in Archway, North London: A Local Guide for Runners, Desk Workers and Anyone Who Lives Round Here',
   description: 'A practical local guide to sports massage in Archway and the surrounding North London area. What to look for, who it helps, and where Range and Restore fits into the local recovery and wellness scene.',
-  image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg',
+  image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -76,7 +76,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Local Guide</p>
+          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage in Archway, North London: A Local Guide
           </h1>
@@ -118,7 +118,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books sports massage in Archway</h2>
 
           <p>
-            Over the last few years at <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore</Link>, the clients walking through the door have fallen into a few patterns:
+            At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore</Link>, the clients walking through the door tend to fall into a few patterns:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -142,7 +142,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
 
           <p className="font-semibold text-page">Proper qualifications</p>
           <p>
-            Sports massage isn&apos;t regulated in the same way as physio, but the qualifications still tell you something. BTEC Level 5 in Sports Massage and Soft Tissue Remedial Therapy is the higher end of what you&apos;ll find in private practice in the UK. It signals that the therapist has been trained in assessment, anatomy, pathology and remedial techniques, not just the basics of pressing on tight bits.
+            Sports massage isn&apos;t regulated in the same way as physio, but the qualifications still tell you something. BTEC Level 5 in Sports Massage and Soft Tissue Remedial Therapy is the higher end of what you&apos;ll find in private practice in the UK. It signals that the therapist has been trained in assessment, anatomy, pathology and remedial techniques, not just the basics of pressing on tight bits. Every therapist at Range and Restore holds it.
           </p>
 
           <p className="font-semibold text-page">Assessment before treatment</p>
@@ -188,9 +188,9 @@ export default function SportsMassageArchwayLocalGuidePage() {
             <li>Tufnell Park (one stop south on the Northern Line, or a 15 minute walk)</li>
             <li>Highgate (one stop north, or a walk down through Highgate Wood)</li>
             <li>Holloway and Upper Holloway (a few minutes by bus or 10 to 15 minute walk)</li>
-            <li>Finsbury Park (Piccadilly Line via Manor House and a short bus, or 25 minute walk)</li>
+            <li>Finsbury Park (210 bus direct to Archway, or a 25 minute walk)</li>
             <li>Crouch End (10 minute bus from Highgate or Archway)</li>
-            <li>Islington (Northern Line direct or a 10 minute bus)</li>
+            <li>Islington (43 or 271 bus up Holloway Road)</li>
             <li>Kentish Town (one stop south of Tufnell Park, or a 20 minute walk)</li>
           </ul>
 
@@ -201,7 +201,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">More than just massage: the new Recovery Suite</h2>
 
           <p>
-            The clinic has just expanded. Alongside the hands-on sports massage and soft tissue work, there&apos;s now a full <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> in the same building. Two new pieces of recovery kit have been added to the room:
+            The clinic has expanded. Alongside the hands-on sports massage and soft tissue work, there&apos;s now a full <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> in the same building. Two new pieces of recovery kit have been added to the room:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -210,7 +210,13 @@ export default function SportsMassageArchwayLocalGuidePage() {
           </ul>
 
           <p>
-            That means for runners, gym-goers and anyone who takes recovery seriously, you can pair sports massage with sauna and compression in a single visit. The <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> bundle them together at a lower price than booking the parts separately. It&apos;s a proper recovery and wellness offering close to home, which is the bit most North London locals have been missing without going into the West End or Shoreditch.
+            That means for runners, gym-goers and anyone who takes recovery seriously, you can pair sports massage with sauna and compression in a single visit. The <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> combine them in one booking. It&apos;s a proper recovery set-up close to home, which is the bit most North London locals have been missing without going into the West End or Shoreditch.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">When sports massage isn&apos;t the right first step</h2>
+
+          <p>
+            Most aches, niggles and tightness are exactly what sports massage is for. A few things are not. If your pain followed a fall or a sudden injury, is severe or getting worse, wakes you at night, or comes with numbness, weakness, unexplained swelling or a fever, see your GP or a physio first. Back pain with any change to bladder or bowel control needs urgent medical help, not a massage. Your therapist will tell you if that is the case, and a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">If you&apos;re local and you&apos;ve been putting it off</h2>
@@ -220,7 +226,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           </p>
 
           <p>
-            If you&apos;ve searched for &ldquo;sports massage near me&rdquo;, &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage therapist&rdquo; and ended up here, take it as a sign. Have a look at the <Link href="/services" className="text-[#0f767a] hover:text-page font-medium">services page</Link>, pick what fits, and get booked in. Your back will thank you.
+            If you&apos;ve searched for &ldquo;sports massage near me&rdquo;, &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage therapist&rdquo; and ended up here, have a look at the <Link href="/services" className="text-[#0f767a] hover:text-page font-medium">services page</Link>, pick what fits, and get booked in.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Lower Back Pain: How Massage Can Help',
-  description: 'How sports and clinical massage help lower back pain — what causes a bad back, how treatment eases it, how many sessions you need, and when to see a doctor.',
+  description: 'How sports and clinical massage help a bad back: what causes lower back pain, how treatment eases it, how many sessions and when to see a GP. Archway, North London.',
   path: '/blog/lower-back-pain-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Lower Back Pain – How Sports and Clinical Massage Help',
   description: 'Lower back pain relief through sports and clinical massage in Archway, North London. Assessment-led treatment for muscular and mechanical back pain.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/advanced-clinical-massage-assessment-treatment-room-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/lower-back-pain-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/lower-back-pain-massage-archway',
   keywords: 'lower back pain massage, bad back treatment, sports massage Archway, clinical massage back pain, back and neck pain MOT, soft tissue therapy back pain North London',
@@ -92,7 +92,7 @@ export default function LowerBackPainPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Most lower back pain is muscular and mechanical rather than a sign of serious damage. Sports and clinical massage help by releasing the tight muscles of the lower back, glutes and hips that pull on the spine, and by addressing the posture and movement patterns behind the problem. Assessment matters, and some back pain needs medical review — but for the common &ldquo;bad back&rdquo;, hands-on treatment is a genuinely effective option. Range and Restore in Archway, North London, offers a dedicated <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link> for exactly this.
+            Most lower back pain is muscular and mechanical rather than a sign of serious damage. Sports and clinical massage help by releasing the tight muscles of the lower back, glutes and hips that pull on the spine, and by addressing the posture and movement patterns behind the problem. Assessment matters, and some back pain needs medical review — but for the common &ldquo;bad back&rdquo;, hands-on treatment can help a great deal. Range and Restore in Archway, North London, offers a dedicated <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link> for exactly this.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What causes lower back pain?</h2>
@@ -156,11 +156,11 @@ export default function LowerBackPainPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor or physio</h2>
 
           <p>
-            Massage is a highly effective option for muscular and mechanical back pain, but it is not the right first step for everything. Seek urgent medical help if you develop numbness around the groin or inner thighs, weakness in a leg, or any change in bladder or bowel control, or if your back pain followed a significant fall, accident or other trauma. These are red flags that need prompt assessment rather than a massage.
+            Massage can help a great deal with muscular and mechanical back pain, but it is not the right first step for everything. Seek urgent medical help if you develop numbness around the groin or inner thighs, weakness in a leg, or any change in bladder or bowel control, or if your back pain followed a significant fall, accident or other trauma. These are red flags that need prompt assessment rather than a massage.
           </p>
 
           <p>
-            You should also see your GP or a physiotherapist if your pain is severe, steadily worsening, or simply not improving over a few weeks. Massage works best alongside that kind of care, not instead of it.
+            You should also see your GP or a physiotherapist if your pain is severe, steadily worsening, wakes you at night, comes with fever or unexplained weight loss, or is simply not improving over a few weeks. Massage works best alongside that kind of care, not instead of it.
           </p>
 
           <p>
@@ -227,6 +227,9 @@ export default function LowerBackPainPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
+            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Back &amp; Neck Pain MOT
+            </Link>
             <Link href="/blog/sciatica-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Sciatica – How Massage Can Help Ease Nerve Pain
             </Link>

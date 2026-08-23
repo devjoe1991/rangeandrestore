@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Muscle Knots and Trigger Points: How Massage Helps',
-  description: 'What muscle knots and trigger points are, why they keep coming back, and how trigger point therapy, deep tissue and myofascial release release them in Archway, North London.',
+  description: 'What muscle knots and trigger points are, why they keep coming back, and how trigger point therapy and deep tissue massage ease them. Archway, North London.',
   path: '/blog/muscle-knots-trigger-point-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Muscle Knots and Trigger Points – How Massage Releases Them',
   description: 'Muscle knots and trigger points explained: what causes them, how trigger point therapy, deep tissue and myofascial release help, and when to see a doctor. Archway, North London.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/muscle-knots-trigger-point-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/muscle-knots-trigger-point-massage-archway',
   keywords: 'muscle knots, trigger point therapy, shoulder knots, myofascial release, deep tissue massage Archway, trigger point massage London, N19 sports massage',
@@ -123,7 +123,7 @@ export default function MuscleKnotsTriggerPointPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage releases knots</h2>
 
           <p>
-            Hands-on soft tissue therapy is one of the most direct and effective ways to release trigger points. Rather than relying on a single technique, an assessment-led session blends several approaches depending on where your knots are and what is driving them.
+            Hands-on soft tissue therapy is one of the most direct ways to release trigger points. Rather than relying on a single technique, an assessment-led session blends several approaches depending on where your knots are and what is driving them.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Trigger point therapy</h3>
@@ -144,7 +144,7 @@ export default function MuscleKnotsTriggerPointPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why do my knots keep coming back?</h2>
 
           <p>
-            This is the most common frustration people bring to the clinic: the knot eases after treatment, only to return within days or weeks. The reason is usually that the treatment released the symptom, but the cause — the posture, workload or stress loading that muscle — carried on unchanged.
+            This is the most common frustration people bring to our therapists: the knot eases after treatment, only to return within days or weeks. The reason is usually that the treatment released the symptom, but the cause — the posture, workload or stress loading that muscle — carried on unchanged.
           </p>
 
           <p>
@@ -164,7 +164,7 @@ export default function MuscleKnotsTriggerPointPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor or physio</h2>
 
           <p>
-            Trigger points are a common, treatable soft tissue problem, but not all aches are muscular. If your pain is severe, came on suddenly without an obvious cause, is accompanied by numbness, tingling, weakness or pins and needles down an arm or leg, or is not improving at all, it is worth having it assessed by your GP or a physiotherapist before booking massage. The same applies to pain following a significant injury or fall.
+            Trigger points are a common, treatable soft tissue problem, but not all aches are muscular. If your pain is severe, came on suddenly without an obvious cause, is accompanied by numbness, tingling, weakness or pins and needles down an arm or leg, wakes you at night, comes with unexplained swelling or fever, or is not improving at all, have it assessed by your GP or a physiotherapist before booking massage. The same applies to pain following a significant injury or fall.
           </p>
 
           <p>

@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sciatica and Trapped Nerve Pain: Can Massage Help?',
-  description: 'Can massage help sciatica and trapped nerve pain? How soft tissue therapy releases the glutes and lower back that irritate the sciatic nerve — assessment-led treatment in Archway, North London.',
+  description: 'Can massage help sciatica? How soft tissue therapy eases the tight glutes and lower back that irritate the nerve, and when to see a GP. Archway, North London.',
   path: '/blog/sciatica-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Sciatica and Trapped Nerve Pain – How Massage Can Help',
   description: 'How massage and soft tissue therapy can help sciatica and trapped nerve pain by releasing the glutes, piriformis and lower back in Archway, North London. Assessment-led treatment.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/advanced-clinical-massage-assessment-treatment-room-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -123,7 +123,7 @@ export default function SciaticaMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps sciatica</h2>
 
           <p>
-            Massage cannot reposition a disc or reverse nerve-root compression — those are medical issues. What it can do, and do well, is address the muscular tension that is either causing or amplifying the irritation of the sciatic nerve. Where the problem is muscular, releasing that tension often brings real and lasting relief.
+            Massage cannot reposition a disc or reverse nerve-root compression — those are medical issues. What it can do, and do well, is address the muscular tension that is either causing or amplifying the irritation of the sciatic nerve. Where the problem is muscular, releasing that tension often brings meaningful relief.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Releasing the glutes and piriformis</h3>
@@ -162,7 +162,7 @@ export default function SciaticaMassagePage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required, or if we feel your symptoms need medical input, we can help coordinate with Reliable Scan, a physiotherapist or your GP so you get the right care rather than the wrong treatment.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required, or if our therapists feel your symptoms need medical input, we can help coordinate with Reliable Scan, a physiotherapist or your GP so you get the right care rather than the wrong treatment. Our guide to <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">MSK ultrasound scans</Link> explains when imaging is worth having.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sciatica treatment near you in North London</h2>

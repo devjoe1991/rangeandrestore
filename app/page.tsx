@@ -125,6 +125,15 @@ const services = [
 
 const blogPosts = [
   {
+    title:    'The Mind-Body Connection: How Easing Pain Supports Mental Wellbeing',
+    href:     '/blog/mind-body-connection-massage-mental-wellbeing-archway',
+    date:     '23 Aug 2026',
+    img:      '/seated-side-stretch-mobility-mind-body-connection-range-and-restore-archway-north-london.jpg',
+    imgAlt:   'Seated side stretch showing comfortable range of movement — how easing pain and improving mobility supports mental wellbeing, Range and Restore, Archway',
+    category: 'Wellbeing',
+    readTime: '9 min read',
+  },
+  {
     title:    'Do I Need a Scan for My Injury? MSK Ultrasound, Explained',
     href:     '/blog/msk-ultrasound-scan-massage-archway',
     date:     '9 Jul 2026',
@@ -169,15 +178,6 @@ const blogPosts = [
     category: 'Performance',
     readTime: '7 min read',
   },
-  {
-    title:    'Hydration and Muscle Health – What Every Client Should Know',
-    href:     '/blog/hydration-and-muscle-health',
-    date:     '8 Feb 2026',
-    img:      '/hydration-wellness.png',
-    imgAlt:   'Water and hydration for muscle recovery',
-    category: 'Recovery',
-    readTime: '4 min read',
-  },
 ]
 
 const bundles = [
@@ -189,7 +189,7 @@ const bundles = [
 
 const teamMembers = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: '/carlos-bonvicine-sports-massage-archway-hero.jpg', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
-  { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: '/alison-isherwood-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#alison-isherwood', cta: 'Meet Alison' },
+  { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: '/alison-isherwood-range-and-restore-sports-massage-banner-archway-north-london.jpeg', alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#alison-isherwood', cta: 'Meet Alison' },
   { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
   { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
 ]

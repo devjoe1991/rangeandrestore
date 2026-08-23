@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Do I Need a Scan for My Injury? MSK Ultrasound Explained',
-  description: "Pain that isn't improving, or an injury you can't explain? When a diagnostic MSK ultrasound is worth having, what it can show, and how scan + clinical massage now works under one roof in Archway, North London.",
+  description: "When a diagnostic MSK ultrasound is worth having, what it can show, and how scan plus clinical massage works under one roof in Archway, North London.",
   path: '/blog/msk-ultrasound-scan-massage-archway',
   author: true,
 })
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-09',
-  dateModified: '2026-07-09',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/msk-ultrasound-scan-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/msk-ultrasound-scan-massage-archway',
   keywords: 'MSK ultrasound Archway, diagnostic ultrasound scan London, sports injury scan near me, muscle tear ultrasound, ultrasound before massage, private ultrasound scan North London, injury assessment Archway N19',
@@ -185,7 +185,7 @@ export default function MskUltrasoundScanMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to get an MSK ultrasound and massage near you in North London</h2>
 
           <p>
-            If you&apos;ve been searching &ldquo;MSK ultrasound near me&rdquo;, &ldquo;private ultrasound scan North London&rdquo;, &ldquo;sports injury scan Archway&rdquo;, &ldquo;muscle tear scan London&rdquo; or &ldquo;injury assessment N19&rdquo;, this package was built for exactly that. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line, and Reliable Scan is open seven days a week with same-day appointments often available.
+            If you&apos;ve been searching &ldquo;MSK ultrasound near me&rdquo;, &ldquo;private ultrasound scan North London&rdquo;, &ldquo;sports injury scan Archway&rdquo;, &ldquo;muscle tear scan London&rdquo; or &ldquo;injury assessment N19&rdquo;, this package was built for exactly that. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5. Reliable Scan is open seven days a week, 10am to 10pm, with same-day appointments often available.
           </p>
 
           <p>

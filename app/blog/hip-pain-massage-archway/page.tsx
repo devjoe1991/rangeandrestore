@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Hip Pain and Tight Hips: How Massage Helps',
-  description: 'How sports massage helps tight or aching hips — releasing the hip flexors, glutes and deep rotators, addressing sitting posture, and when hip pain needs medical review.',
+  description: 'How sports massage helps tight or aching hips: hip flexors, glutes and deep rotators, sitting posture, and when hip pain needs a GP. Archway, North London.',
   path: '/blog/hip-pain-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Hip Pain and Tight Hips – How Sports Massage Helps',
   description: 'Tight and aching hips treated through sports massage and soft tissue therapy in Archway, North London. Release the hip flexors, glutes and deep rotators driving your discomfort.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/sports-massage-treatment-room-couch-range-and-restore-archway-north-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/hip-pain-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/hip-pain-massage-archway',
   keywords: 'hip pain massage, tight hips massage, hip flexor release, glute massage, piriformis massage, sports massage Archway, deep tissue massage hips London',
@@ -117,11 +117,11 @@ export default function HipPainMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Tight hips vs hip joint pain</h2>
 
           <p>
-            It is worth drawing an honest distinction here. The great majority of hip complaints people bring to a clinic are muscular — tightness and tension in the soft tissue around the hip — and this kind of problem tends to respond well to sports massage and soft tissue therapy.
+            The great majority of hip complaints people bring to a clinic are muscular — tightness and tension in the soft tissue around the hip — and this kind of problem tends to respond well to sports massage and soft tissue therapy.
           </p>
 
           <p>
-            Pain coming from the hip joint itself is a different matter. Deep pain felt in the groin or in the joint, pain that wakes you at night, discomfort that follows a fall or trauma, or a hip that catches, locks or gives way can point to joint pathology rather than muscular tightness. That does not mean massage has no role, but it does mean the problem should be assessed medically first so that treatment is appropriate. A good therapist will recognise the difference and refer you on when that is the sensible step.
+            Pain coming from the hip joint itself is a different matter. Deep pain felt in the groin or in the joint, pain that wakes you at night, discomfort that follows a fall or trauma, or a hip that catches, locks or gives way can point to joint pathology rather than muscular tightness. That does not mean massage has no role, but it does mean the problem should be assessed medically first so that treatment is appropriate. Our therapists will recognise the difference and refer you on when that is the sensible step.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps</h2>
@@ -142,7 +142,7 @@ export default function HipPainMassagePage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Addressing the surrounding muscles</h3>
           <p>
-            Tight hips rarely exist in isolation. The lower back, the outer thigh, and the <Link href="/blog/tight-hamstring-massage-archway" className="text-[#0f767a] hover:text-page font-medium">hamstrings</Link> all interact with the hip, and restrictions in any of them can keep it feeling tight. Treatment looks at the whole area so that the hip is not simply released only to be pulled tight again by everything around it.
+            Tight hips rarely exist in isolation. The <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">lower back</Link>, the outer thigh, and the <Link href="/blog/tight-hamstring-massage-archway" className="text-[#0f767a] hover:text-page font-medium">hamstrings</Link> all interact with the hip, and restrictions in any of them can keep it feeling tight. Treatment looks at the whole area so that the hip is not simply released only to be pulled tight again by everything around it.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Restoring movement and improving circulation</h3>
@@ -167,7 +167,7 @@ export default function HipPainMassagePage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic clinic at 130 Junction Road, Archway. If imaging is needed to rule out joint pathology, this can be arranged within the same building, and treatment can be coordinated with your GP or physiotherapist so that everyone is working from the same picture.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic clinic at 130 Junction Road, Archway. If a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> is needed to rule out joint pathology, this can be arranged within the same building, and treatment can be coordinated with your GP or physiotherapist so that everyone is working from the same picture.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find hip pain treatment near you in North London</h2>

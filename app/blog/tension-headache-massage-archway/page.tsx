@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Tension Headaches: Can Massage Help?',
-  description: 'How massage helps tension headaches driven by tight neck, shoulder and jaw muscles — what to expect, technique, when to see a doctor. Advanced Clinical Massage in Archway.',
+  description: 'How massage helps tension headaches driven by tight neck, shoulder and jaw muscles, what to expect and when to see a GP. Clinical massage in Archway, North London.',
   path: '/blog/tension-headache-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Tension Headaches – How Massage Can Help',
   description: 'How massage helps tension-type headaches driven by tight neck, upper-trapezius and jaw muscles in Archway, North London — plus when to seek medical advice.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/advanced-clinical-massage-assessment-treatment-room-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/tension-headache-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/tension-headache-massage-archway',
   keywords: 'tension headache massage, neck tension headache, massage for headaches Archway, upper trapezius trigger points, suboccipital release, advanced clinical massage London',
@@ -118,7 +118,7 @@ export default function TensionHeadachePage() {
           </ul>
 
           <p>
-            This pattern is especially common in <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium">office workers</Link> and anyone spending long hours at a laptop. The underlying issue is often not the head itself, but the neck, shoulders and jaw muscles that surround it — which have become so tight and overloaded that they refer pain upwards.
+            This pattern is especially common in <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium">office workers</Link> and anyone spending long hours at a laptop. The underlying issue is often not the head itself, but the neck, shoulders and jaw muscles that surround it, which have become so tight and overloaded that they refer pain upwards. If a <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">stiff, aching neck</Link> is the bigger complaint, we cover that separately.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps tension headaches</h2>
@@ -164,7 +164,7 @@ export default function TensionHeadachePage() {
           </p>
 
           <p>
-            If your headaches are frequent, changing in pattern, or not clearly linked to neck and shoulder tension, please have them reviewed medically first. Range and Restore is happy to work alongside your GP, and operates in the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic clinic at 130 Junction Road, Archway, should imaging be needed.
+            If your headaches are frequent, changing in pattern, or not clearly linked to neck and shoulder tension, please have them reviewed medically first. Range and Restore is happy to work alongside your GP, and operates in the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway, should a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> be needed.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find headache and neck-tension massage near you in North London</h2>
@@ -228,10 +228,16 @@ export default function TensionHeadachePage() {
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
-              &rarr; Say Goodbye to Desk Posture Pain
+              &rarr; Desk Posture, Neck &amp; Shoulder Pain: How Massage Helps
+            </Link>
+            <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Neck Pain and a Stiff Neck: How Massage Helps
             </Link>
             <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; How Sports Massage Helps Office Workers in Archway
+            </Link>
+            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Advanced Clinical Massage
             </Link>
           </div>
         </div>

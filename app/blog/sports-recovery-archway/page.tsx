@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     'The complete sports recovery stack in Archway, North London — sports massage, Normatec compression and infrared sauna in one place. How to recover faster between sessions and around race day.',
   path: '/blog/sports-recovery-archway',
-  image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+  image: '/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
   author: true,
 })
 
@@ -23,7 +23,7 @@ const articleSchema = {
   headline: 'Sports Recovery in Archway – Sports Massage, Compression and Sauna',
   description:
     'A North London guide to recovering from hard training: how sports massage, Normatec compression and infrared sauna work together, and how to build recovery into your training week and around race day.',
-  image: 'https://rangeandrestore.co.uk/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+  image: 'https://rangeandrestore.co.uk/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',

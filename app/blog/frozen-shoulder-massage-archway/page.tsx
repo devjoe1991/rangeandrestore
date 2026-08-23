@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Frozen Shoulder and Shoulder Pain: Can Massage Help?',
-  description: 'Can massage help frozen shoulder and shoulder pain? What massage can and cannot do, the difference between true frozen shoulder and muscular tension, and when to see a doctor or physio in Archway, North London.',
+  description: 'Can massage help frozen shoulder? What it can and cannot do, how it differs from muscular shoulder tension, and when to see a GP or physio. Archway, North London.',
   path: '/blog/frozen-shoulder-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Frozen Shoulder and Shoulder Pain – How Massage Helps',
   description: 'How massage helps shoulder pain and the muscular tension around a frozen shoulder, what it can and cannot do, and when to seek medical or physiotherapy care in Archway, North London.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/sports-deep-tissue-massage-back-shoulder-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/frozen-shoulder-massage-archway',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/frozen-shoulder-massage-archway',
   keywords: 'frozen shoulder massage, shoulder pain massage Archway, adhesive capsulitis, shoulder tension treatment, stiff shoulder North London, advanced clinical massage shoulder',
@@ -163,7 +163,7 @@ export default function FrozenShoulderMassagePage() {
           </p>
 
           <p>
-            Range and Restore works alongside your wider care rather than instead of it, and we will happily coordinate with your GP or physiotherapist. The clinic also operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to help clarify what is going on in the shoulder, it can be arranged within the same building.
+            Range and Restore works alongside your wider care rather than instead of it, and we will happily coordinate with your GP or physiotherapist. The clinic also operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> would help clarify what is going on in the shoulder, it can be arranged within the same building.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find shoulder pain treatment near you in North London</h2>
@@ -229,8 +229,14 @@ export default function FrozenShoulderMassagePage() {
             <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Desk Posture, Neck &amp; Shoulder Pain: How Massage Helps
             </Link>
+            <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Neck Pain and a Stiff Neck: How Massage Helps
+            </Link>
             <Link href="/blog/tennis-elbow-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
-              &rarr; Tennis Elbow: How Massage Helps in Archway
+              &rarr; Tennis Elbow and RSI: Can Soft Tissue Therapy Help?
+            </Link>
+            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              &rarr; Advanced Clinical Massage
             </Link>
           </div>
         </div>

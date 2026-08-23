@@ -22,7 +22,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Faster Recovery with Normatec Compression, Now in Archway',
   description: 'A complete guide to Normatec Full-Body Compression Recovery and the Hyperice Normatec 3 Full Body system. How pneumatic compression works, who it helps, and why we brought one to Archway, North London.',
-  image: 'https://rangeandrestore.co.uk/normatec-full-body-compression-recovery-archway-north-london.png',
+  image: 'https://rangeandrestore.co.uk/recovery-suite/normatec-compression-therapy-archway.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -104,7 +104,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 border-2 border-[#1a3d3a]">
           <Image
-            src="/normatec-full-body-compression-recovery-archway-north-london.png"
+            src="/recovery-suite/normatec-compression-therapy-archway.jpg"
             alt="Hyperice Normatec 3 Full Body pneumatic compression recovery system at Range and Restore in Archway, North London"
             fill
             priority

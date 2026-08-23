@@ -312,7 +312,7 @@ export default function OfficeWorkerMassageArchwayPage() {
               &rarr; Back &amp; Neck Pain MOT &ndash; Soft Tissue Remedial Massage Therapy
             </Link>
             <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
-              &rarr; Say Goodbye to Desk Posture Pain
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps
             </Link>
             <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
               &rarr; Hydration and Muscle Health &ndash; What Every Client Should Know

@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'The Benefits of Sports Massage: What It Actually Does',
-  description: "What are the benefits of sports massage? It eases muscle tension and pain, aids recovery, improves mobility and flexibility, supports injury prevention and rehab, and helps you relax — and it's not just for athletes. Archway, North London.",
+  description: "What sports massage actually does: eases muscle tension and pain, aids recovery, improves mobility, supports injury prevention. Archway, North London.",
   path: '/blog/sports-massage-benefits',
   author: true,
 })
@@ -19,8 +19,8 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'The Benefits of Sports Massage',
-  description: 'The benefits of sports massage explained by a soft tissue therapist in Archway, North London — easing muscle tension and pain, aiding recovery, improving mobility, supporting injury prevention and helping you relax.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  description: 'The benefits of sports massage explained by the soft tissue therapists at Range and Restore in Archway, North London — easing muscle tension and pain, aiding recovery, improving mobility, supporting injury prevention and helping you relax.',
+  image: 'https://rangeandrestore.co.uk/sports-deep-tissue-massage-back-shoulder-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -33,7 +33,7 @@ const articleSchema = {
     url: 'https://rangeandrestore.co.uk',
   },
   datePublished: '2026-07-03',
-  dateModified: '2026-07-03',
+  dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/sports-massage-benefits',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/sports-massage-benefits',
   keywords: 'sports massage benefits, deep tissue massage benefits, benefits of sports massage, sports massage Archway, deep tissue massage North London, soft tissue therapy N19',
@@ -96,7 +96,7 @@ export default function SportsMassageBenefitsPage() {
           </p>
 
           <p>
-            Sports massage works on the muscles, tendons and fascia — the soft tissues that do the work of moving and holding you upright. Below is an honest look at what it can genuinely do, grounded in well-established soft tissue therapy, without the hype.
+            Sports massage works on the muscles, tendons and fascia — the soft tissues that do the work of moving and holding you upright. Below is what it can genuinely do, grounded in well-established soft tissue therapy, without the hype.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Relieves muscle tension and knots</h2>
@@ -111,7 +111,7 @@ export default function SportsMassageBenefitsPage() {
             A great deal of everyday pain is muscular in origin. Tight, overloaded muscles in the lower back, neck, shoulders and hips are a common source of the nagging aches that build up over a working week. By releasing that tension and addressing the surrounding tissue, sports massage can meaningfully reduce this kind of discomfort — <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">lower back pain</Link> and stiff, hunched shoulders being two of the most frequent reasons people book. It is not a cure-all, and persistent or unexplained pain always deserves proper assessment, but for the muscular tension behind a lot of day-to-day aches it is genuinely effective.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Speeds up recovery and reduces DOMS</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Aids recovery and eases DOMS</h2>
 
           <p>
             After hard training or an unfamiliar effort, muscles often feel sore and stiff a day or two later — delayed onset muscle soreness, or DOMS. Sports massage supports recovery by increasing local circulation, helping to reduce that soreness and stiffness and leaving muscles feeling readier for the next session. It is a mainstay of <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">sports recovery</Link> for exactly this reason. It will not manufacture fitness you have not earned, but it can make the recovery side of training more comfortable and consistent.
@@ -132,7 +132,7 @@ export default function SportsMassageBenefitsPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Supports relaxation, stress and sleep</h2>
 
           <p>
-            Firm as it is, sports massage is also genuinely relaxing for most people. Physical tension and mental stress tend to travel together — a clenched jaw and hitched shoulders are the body's version of a stressful week. Releasing that muscular tension, combined with the simple act of lying still and being worked on for an hour, helps down-regulate the nervous system, which many clients say leaves them calmer and sleeping better afterwards. That sense of winding down is a real benefit in its own right, not just a side effect.
+            Firm as it is, sports massage is also genuinely relaxing for most people. Physical tension and mental stress tend to travel together — a clenched jaw and hitched shoulders are the body&rsquo;s version of a stressful week. Releasing that muscular tension, combined with the simple act of lying still and being worked on for an hour, helps down-regulate the nervous system, which many clients say leaves them calmer and sleeping better afterwards. That sense of winding down is a real benefit in its own right, not just a side effect.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who is sports massage for?</h2>
@@ -151,6 +151,12 @@ export default function SportsMassageBenefitsPage() {
 
           <p>
             People often ask which one they need, and in practice the two overlap almost entirely. Deep tissue massage describes firmer pressure that reaches the deeper layers of muscle and fascia to release stubborn tension. Sports massage is a broader, assessment-led approach that draws on deep tissue work alongside trigger point release, myofascial techniques and mobility work, tailored to your activity and problem areas. At Range and Restore they are delivered within the same treatment, so you do not need to choose between them — the session is shaped around what your body actually needs on the day.
+          </p>
+
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a GP or physio first</h2>
+
+          <p>
+            Sports massage suits most muscular aches, but some pain needs a proper medical look before anyone works on it. See your GP, a physio or A&amp;E first if your pain is severe or getting worse, follows a fall or other injury, comes with numbness, pins and needles or weakness in a limb, wakes you at night, or arrives with unexplained swelling or fever. Our therapists will tell you if something falls outside what massage can help with, and a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage near you in North London</h2>

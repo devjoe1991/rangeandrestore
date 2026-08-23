@@ -5,7 +5,7 @@ import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Tight and Pulled Hamstrings: Sports Massage for Recovery',
-  description: 'How sports massage helps tight and pulled hamstrings — why they get tight, tight vs strained, what to expect, recovery timeline, and when to see a physio.',
+  description: 'How sports massage helps tight and pulled hamstrings: why they get tight, tight vs strained, recovery timelines and when to see a physio. Archway, North London.',
   path: '/blog/tight-hamstring-massage-archway',
   author: true,
 })
@@ -20,7 +20,7 @@ const articleSchema = {
   '@type': 'BlogPosting',
   headline: 'Tight and Pulled Hamstrings – How Sports Massage Helps',
   description: 'Sports massage for tight and pulled hamstrings in Archway, North London. Release muscle tension, improve circulation and address the hips and pelvic mechanics that overload the hamstrings.',
-  image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=75',
+  image: 'https://rangeandrestore.co.uk/sports-deep-tissue-massage-back-shoulder-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
@@ -163,7 +163,7 @@ export default function TightHamstringPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor or physio</h2>
 
           <p>
-            Sports massage is a highly effective part of managing tight and recovering hamstrings, but it is not the right first step for an acute injury. If you felt a sudden sharp pain or a &ldquo;pop&rdquo;, have significant weakness, cannot bear weight comfortably, or develop bruising over the back of the thigh, you should be assessed by a physiotherapist or doctor before booking massage. Severe (grade 3) strains in particular need proper medical assessment.
+            Sports massage is a useful part of managing tight and recovering hamstrings, but it is not the right first step for an acute injury. If you felt a sudden sharp pain or a &ldquo;pop&rdquo;, have significant weakness, cannot bear weight comfortably, or develop bruising over the back of the thigh, you should be assessed by a physiotherapist or doctor before booking massage. Severe (grade 3) strains in particular need proper medical assessment.
           </p>
 
           <p>
@@ -197,9 +197,9 @@ export default function TightHamstringPage() {
         </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Don&apos;t let tight hamstrings hold you back</h2>
+          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Hamstrings always tight?</h2>
           <p className="text-[#1a3d3a] font-semibold mb-6">
-            Professional sports and deep tissue massage targeting the root cause of your hamstring tightness in Archway, North London.
+            Assessment-led sports and deep tissue massage that works on the cause of your hamstring tightness, not just the symptom, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a

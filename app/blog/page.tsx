@@ -11,116 +11,108 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'The Mind-Body Connection: How Reducing Pain and Improving Movement Can Support Your Mental Wellbeing',
+    slug: 'mind-body-connection-massage-mental-wellbeing-archway',
+    date: '23 August 2026',
+    excerpt: 'Persistent pain, tight muscles and stiff movement wear down sleep, mood and stress levels. How sports massage and soft tissue therapy reduce that physical burden — and why feeling better in your body supports how you feel mentally. Archway, North London.',
+    image: '/seated-side-stretch-mobility-mind-body-connection-range-and-restore-archway-north-london.jpg',
+  },
+  {
     title: 'Do I Need a Scan for My Injury? MSK Ultrasound, Explained',
     slug: 'msk-ultrasound-scan-massage-archway',
     date: '9 July 2026',
     excerpt: "Pain that isn't improving, or an injury you can't explain? When a diagnostic MSK ultrasound is worth having, what it can show, and how the new scan + clinical massage package works under one roof. Archway, North London.",
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'The Benefits of Sports Massage: What It Actually Does',
     slug: 'sports-massage-benefits',
     date: '3 July 2026',
     excerpt: 'What does a sports massage actually do for you? The real benefits — easing muscle tension and pain, faster recovery, better mobility, injury prevention and stress relief — and who it helps (not just athletes). Archway, North London.',
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'How Much Does a Sports Massage Cost?',
     slug: 'sports-massage-cost-prices',
     date: '3 July 2026',
     excerpt: 'How much is a sports massage in London? A clear guide to prices, what affects the cost, and how to pay less with the Community Tuesday Clinic and massage bundles. Archway, North London.',
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Muscle Knots and Trigger Points: How Massage Helps',
     slug: 'muscle-knots-trigger-point-massage-archway',
     date: '3 July 2026',
     excerpt: 'Knots in your shoulders or tight, tender spots that keep coming back? How trigger point therapy, deep tissue and myofascial release get rid of muscle knots — and stop them returning. Archway, North London.',
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'Stress Relief Massage: Ease Tension and Switch Off',
     slug: 'stress-relief-massage-archway',
     date: '3 July 2026',
     excerpt: 'Stressed, wound up or struggling to switch off? How a stress-relief massage calms the nervous system, releases the tension you hold in your neck and shoulders, and helps you actually relax. Archway, North London.',
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Lower Back Pain: How Massage Can Help',
     slug: 'lower-back-pain-massage-archway',
     date: '3 July 2026',
     excerpt: "Bad back or lower back pain that won't shift? How assessment-led sports and clinical massage releases the tight lower-back, glute and hip muscles behind most back pain — and when to get it checked. Archway, North London.",
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'Neck Pain and Stiff Neck: How Massage Helps',
     slug: 'neck-pain-massage-archway',
     date: '3 July 2026',
     excerpt: "Stiff neck, cricked neck or 'text neck' from screens? How massage releases the neck and shoulder tension behind most neck pain, and the posture habits that cause it. Archway, North London.",
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Tension Headaches: Can Massage Help?',
     slug: 'tension-headache-massage-archway',
     date: '3 July 2026',
     excerpt: 'Headaches from a tight neck and shoulders? How massage can ease the muscle tension behind tension-type headaches — and the red flags that mean you should see a doctor. Archway, North London.',
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'Frozen Shoulder and Shoulder Pain: Can Massage Help?',
     slug: 'frozen-shoulder-massage-archway',
     date: '3 July 2026',
     excerpt: "Stiff, painful shoulder or a frozen shoulder? What massage can and can't do for shoulder pain, how it eases the surrounding tension, and when you need medical care. Archway, North London.",
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Plantar Fasciitis and Heel Pain: How Massage Helps',
     slug: 'plantar-fasciitis-massage-archway',
     date: '3 July 2026',
     excerpt: 'Heel pain with those first painful steps in the morning? How sports massage eases the tight calves and foot tension behind plantar fasciitis. Archway, North London.',
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'Hip Pain and Tight Hips: How Massage Helps',
     slug: 'hip-pain-massage-archway',
     date: '3 July 2026',
     excerpt: 'Tight or aching hips from sitting, cycling or training? How sports massage releases the hip flexors, glutes and deep rotators behind tight hips. Archway, North London.',
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Sports Recovery in Archway: Your Complete Recovery Stack',
     slug: 'sports-recovery-archway',
     date: '3 July 2026',
     excerpt: 'Recovery is where hard training turns into results. How to stack sports massage, Normatec compression and infrared sauna between sessions and around race day, all in one place in Archway, North London.',
-    image: '/vidalux-infrared-sauna-recovery-suite-archway-north-london.jpg',
+    image: '/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
   },
   {
     title: 'Sciatica and Trapped Nerve Pain: Can Massage Help?',
     slug: 'sciatica-massage-archway',
     date: '3 July 2026',
     excerpt: 'Sciatica, a trapped nerve or shooting pain down your leg? How assessment-led clinical massage releases the glutes, piriformis and lower-back muscles that irritate the sciatic nerve — and when to seek medical help — in Archway, North London.',
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Shin Splints: How Sports Massage Helps',
     slug: 'shin-splints-massage-archway',
     date: '3 July 2026',
     excerpt: 'Shin pain when you run? How sports massage eases the tight calves and lower-leg tension behind shin splints, the load mistakes that cause them, and the red flags that mean you should rule out a stress fracture. Archway, North London.',
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'Tight and Pulled Hamstrings: Sports Massage for Recovery',
     slug: 'tight-hamstring-massage-archway',
     date: '3 July 2026',
     excerpt: 'Always tight at the back of the legs, or nursing a pulled hamstring? How sports massage releases hamstring tension, why your hips and glutes are usually involved, and how to tell a tight hamstring from a strain. Archway, North London.',
-    image: '/sports-massage-soft-tissue-therapy-archway-north-london.jpeg',
   },
   {
     title: 'Tennis Elbow and RSI: Can Soft Tissue Therapy Help?',
     slug: 'tennis-elbow-massage-archway',
     date: '3 July 2026',
     excerpt: 'Elbow or forearm pain from gripping, typing or a mouse — not just tennis? How soft tissue therapy releases the forearm and addresses the neck, shoulder and desk habits behind tennis elbow and RSI, in Archway, North London.',
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'Sports Massage and Recovery for Cyclists in Archway, North London',
@@ -134,14 +126,13 @@ const posts = [
     slug: 'normatec-full-body-compression-recovery-archway',
     date: '13 May 2026',
     excerpt: 'Hyperice Normatec 3 Full Body pneumatic compression has joined the Recovery Suite at Range and Restore in Archway. How it works, who it helps, and how to book a session.',
-    image: '/normatec-full-body-compression-recovery-archway-north-london.png',
+    image: '/recovery-suite/normatec-compression-therapy-archway.jpg',
   },
   {
     title: 'Sports Massage in Archway, North London: A Local Guide',
     slug: 'sports-massage-archway-local-guide',
     date: '9 May 2026',
     excerpt: 'A North London local guide to sports massage in Archway. Where to book, who it suits, what to look for in a therapist, and how clients across N19, Tufnell Park, Holloway, Highgate and Finsbury Park are using it.',
-    image: '/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   },
   {
     title: 'How Sports Massage Helps Office Workers in Archway, North London',
@@ -161,7 +152,7 @@ const posts = [
     title: 'Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free',
     slug: 'sports-massage-soft-tissue-therapy-archway',
     date: '26 March 2026',
-    excerpt: 'From runners and cyclists to desk workers and weekend warriors — discover how sports massage and soft tissue remedial therapy in Archway help you move better, recover faster, and stay pain-free.',
+    excerpt: 'How sports massage and soft tissue remedial therapy help runners, cyclists, gym-goers and desk workers recover, move better and stay pain-free. Assessment-led treatment in Archway, North London.',
   },
   {
     title: 'Hydration and Muscle Health – What Every Client Should Know',
@@ -182,12 +173,16 @@ const posts = [
     excerpt: 'Achilles tendinitis is a common injury among runners and active people. Discover how targeted sports massage and soft tissue therapy can support your recovery.',
   },
   {
-    title: 'Say Goodbye to Desk Posture Pain',
+    title: 'Stiff Neck and Bad Back From Desk Work? How Massage Helps',
     slug: 'desk-posture-pain-massage',
     date: '1 February 2026',
-    excerpt: "Spending 8+ hours a day at a desk? Chronic neck, shoulder, and back pain are your body's signal. Learn how massage therapy reverses postural damage and delivers lasting relief.",
+    excerpt: 'Stiff neck, tight shoulders or a bad back from sitting at a desk all day? How assessment-led massage eases desk posture pain, helps stop it coming back, and when to see a GP. Archway, North London.',
   },
 ]
+
+// Posts with their own dedicated cover image are featured first; the rest render as compact guide cards.
+const featuredPosts = posts.filter((p) => p.image)
+const guidePosts = posts.filter((p) => !p.image)
 
 const breadcrumbs = buildBreadcrumbs([{ name: 'Blog', path: '/blog' }])
 
@@ -222,22 +217,19 @@ export default function BlogPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        {/* Featured posts — only posts with their own dedicated cover image */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post) => (
+          {featuredPosts.map((post) => (
             <article key={post.slug} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-              {post.image ? (
-                <Link href={`/blog/${post.slug}`} className="block aspect-[4/3] relative overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </Link>
-              ) : (
-                <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
-              )}
+              <Link href={`/blog/${post.slug}`} className="block aspect-[4/3] relative overflow-hidden">
+                <Image
+                  src={post.image!}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </Link>
               <div className="p-6 flex flex-col flex-grow">
                 <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
                 <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">
@@ -256,6 +248,39 @@ export default function BlogPage() {
             </article>
           ))}
         </div>
+
+        {/* Guides — compact rectangular cards, no cover image */}
+        <section aria-labelledby="guides-heading" className="mt-14 lg:mt-20">
+          <div className="flex items-end justify-between gap-4 mb-6">
+            <h2 id="guides-heading" className="text-2xl lg:text-3xl font-bold text-page">More guides</h2>
+            <p className="text-sm text-page-muted hidden sm:block">Problem-led advice on pain, injuries and recovery</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {guidePosts.map((post) => (
+              <article key={post.slug} className="group card-lift rounded-[16px] overflow-hidden flex bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+                <div className="w-1.5 shrink-0 bg-[#0f767a]" aria-hidden="true" />
+                <div className="p-5 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-[#0f767a] font-semibold uppercase tracking-widest text-[11px]">Wellness guide</span>
+                    <time className="text-[11px] text-page-muted uppercase tracking-wide">{post.date}</time>
+                  </div>
+                  <h3 className="text-lg font-bold text-page mt-2 mb-2 leading-snug">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-[#0f767a] transition-colors">
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="text-page-muted text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-[#0f767a] font-semibold text-sm hover:text-page transition-colors mt-2 min-h-[44px]"
+                  >
+                    Read more →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
     </>
   )

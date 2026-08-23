@@ -17,7 +17,8 @@ const CARLOS_PHOTO = 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w
 const DARAEL_PHOTO = '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg'
 const MATEJA_PORTRAIT = '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
 const MATEJA_BANNER = '/mateja-bracko-mounti-range-and-restore-sports-massage-banner-archway-london.jpeg'
-const ALISON_PHOTO = '/alison-isherwood-range-and-restore-sports-massage-banner-archway-london.jpeg'
+const ALISON_PHOTO = '/alison-isherwood-range-and-restore-sports-massage-banner-archway-north-london.jpeg'
+const ALISON_PROFILE_PHOTO = '/alison-isherwood-btec-level-5-sports-massage-soft-tissue-therapist-archway.jpeg'
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#0f767a' }} aria-hidden="true">
@@ -182,7 +183,7 @@ export default function TeamPage() {
             <div>
               <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
                 <Image
-                  src={ALISON_PHOTO}
+                  src={ALISON_PROFILE_PHOTO}
                   alt="Alison Isherwood, BTEC Level 5 sports massage and soft tissue therapist, standing beside the Range and Restore Sports Massage banner in Archway, North London"
                   fill
                   className="object-cover"
