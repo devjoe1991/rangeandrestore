@@ -206,13 +206,14 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-[#1a2330] text-sm font-bold leading-snug">
-            Suffered an injury recently? Get scanned, diagnosed and treated in one bundle with our trusted local partner Reliable Scan.
+            Injured? Get answers fast.{' '}
+            <span className="block sm:inline">MSK ultrasound scan + treatment, all in one package.</span>
           </span>
           <Link
             href="/services/msk-ultrasound-clinical-massage"
             className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#0f767a] transition-all whitespace-nowrap"
           >
-            Book today
+            Book Now
           </Link>
         </div>
       </div>
