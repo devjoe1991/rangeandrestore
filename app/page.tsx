@@ -219,7 +219,7 @@ export default function HomePage() {
       </div>
 
       {/* ── 1. HERO ──────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ minHeight: '400px' }} aria-label="Hero">
+      <section className="relative overflow-hidden" style={{ minHeight: '560px' }} aria-label="Hero">
         <Image
           src="/carlos-bonvicine-sports-massage-archway-hero.jpg"
           alt="Carlos Bonvicine, sports massage therapist and founder of Range and Restore, Archway, North London"
@@ -231,23 +231,19 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-[#1a3d3a]/60" />
 
-        <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-12 sm:pt-24 sm:pb-16" style={{ minHeight: '460px' }}>
+        <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-8 sm:pt-24 sm:pb-10" style={{ minHeight: '660px' }}>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight mb-4 max-w-3xl uppercase mt-24 sm:mt-32">
-            Move Better.<br />Feel Better.<br />Live Stronger
-          </h1>
-
-          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-2 max-w-2xl leading-relaxed">
+          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed mt-48 sm:mt-64">
             Sports Massage <span className="text-[#7dd94a]">&amp;</span> Soft Tissue Remedial Therapy
           </p>
-          <p className="text-white/90 text-sm sm:text-base mb-6 max-w-xl leading-relaxed font-semibold">
+          <p className="text-white/90 text-sm sm:text-base mb-4 max-w-xl leading-relaxed font-semibold">
             Archway, North London.<br />
             A team of <span className="font-black text-white">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
           </p>
 
 
 
-          <div className="flex flex-row gap-3 justify-center flex-wrap mb-6">
+          <div className="flex flex-row gap-3 justify-center flex-wrap mb-4">
             <BookingButton label="Book Your Session" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
@@ -271,6 +267,12 @@ export default function HomePage() {
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
       <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h1
+            className="font-extrabold text-page tracking-tighter sm:tracking-tight uppercase text-center whitespace-nowrap mb-7"
+            style={{ fontSize: 'clamp(0.8rem, 4.4vw, 3.5rem)' }}
+          >
+            Move Better. Feel Better. Live Stronger.
+          </h1>
           <h2 id="treatments-heading" className="sr-only">Sports Massage Treatments and Recovery in Archway</h2>
           <SwipeCarousel
             label="Sports massage treatments and recovery"

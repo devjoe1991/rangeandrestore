@@ -48,6 +48,7 @@ const NAME_MAP = {
   'service-community-tuesday-clinic': 'R&R — Community Tuesday Clinic',
   'service-restore-memberships': 'R&R — Restore+ Memberships',
   'service-massage-bundles': 'R&R — Massage Bundles',
+  'book-a-session': 'Range and Restore — Book a Session',
   'team-introduction': 'R&R — Meet the Team',
   'event-marathon': 'R&R — Marathon / Event Recovery',
   'gift-cards-bundles': 'R&R — Gift Cards & Bundles',

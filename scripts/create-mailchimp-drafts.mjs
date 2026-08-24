@@ -65,6 +65,7 @@ const CAMPAIGNS = {
   'R&R — Sports & Pain Relief': { subject: 'Get to the root of your pain', preview: 'Assessment-led sports and deep-tissue massage.', send: 'Evergreen' },
   'R&R — Restore+ Memberships': { subject: 'Introducing Restore+ Memberships', preview: 'Feel better, recover faster and save more with regular treatment.', send: 'Evergreen' },
   'R&R — Massage Bundles': { subject: 'Commit to your recovery, save as you go', preview: 'Massage bundles with bigger savings on regular sessions.', send: 'Evergreen' },
+  'Range and Restore — Book a Session': { subject: 'Book Your Session at Range and Restore', preview: 'Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.', send: 'Evergreen' },
   'R&R — Marathon / Event Recovery': { subject: 'Marathon prep and recovery', preview: 'Pre-race preparation and post-race recovery.', send: 'Race season' },
   'R&R — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
   'R&R — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
