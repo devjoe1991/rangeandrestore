@@ -38,10 +38,10 @@ Every image below was opened and checked, not inferred from the filename. Resolu
 
 | File | Px | Notes |
 |---|---|---|
-| `public/darael-beckles-sports-massage-therapist-…jpeg` | 1600×2095 | Portrait crop, already vertical. Good for 4:5. |
-| `public/darael-beckles-range-and-restore-…-banner-…jpeg` | 2048×2731 | Larger banner version of the same. |
-| `public/mateja-bracko-mounti-sports-massage-…jpeg` | 1600×2227 | Portrait crop, vertical. |
-| `public/mateja-bracko-mounti-range-and-restore-…-banner-…jpeg` | 1252×2048 | Banner version — narrow, crops tight at 4:5. Prefer the 1600×2227. |
+| `public/darael-beckles-sports-massage-soft-tissue-therapist-…jpeg` | 1023×1431 | Aug 2026 banner shoot — full-length beside the roll-up banner. |
+| `public/alison-isherwood-sports-massage-soft-tissue-therapist-…jpeg` | 1060×1484 | Aug 2026 banner shoot — full-length beside the roll-up banner. |
+| `public/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-…jpeg` | 1023×1429 | Aug 2026 banner shoot — full-length beside the roll-up banner. |
+| `public/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-…jpeg` | 948×1659 | Aug 2026 banner shoot — Carlos seated beside the roll-up banner. |
 
 ---
 

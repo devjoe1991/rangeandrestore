@@ -96,7 +96,7 @@ export const personSchema = {
   jobTitle: 'Founder & Lead Therapist',
   description: 'Carlos Bonvicine is the founder and lead therapist of Range and Restore Sports Massage in Archway, North London — a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and certified Manual Lymphatic Drainage (MLD) practitioner, leading a team of BTEC Level 5 qualified therapists.',
   url: `${BASE_URL}/about`,
-  image: 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no',
+  image: `${BASE_URL}/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg`,
   worksFor: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',
@@ -121,7 +121,7 @@ export const daraelPersonSchema = {
   jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
   description: 'Darael Beckles is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and graduate of the North London School of Sports Massage (NLSSM), with a background in Sports & Exercise Science, based at Range and Restore in Archway, North London.',
   url: `${BASE_URL}/team`,
-  image: `${BASE_URL}/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg`,
+  image: `${BASE_URL}/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg`,
   worksFor: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',
@@ -146,7 +146,7 @@ export const matejaPersonSchema = {
   jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
   description: 'Mateja Bracko-Mounti is a BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapist (SMRT, MSMA) with over 18 years of experience in therapeutic settings, trained with the London School of Sports Massage (LSSM) and qualified in reflexology, pregnancy massage, Indian head massage, natural lift facial massage and the Emmett Technique, based at Range and Restore in Archway, North London.',
   url: `${BASE_URL}/team`,
-  image: `${BASE_URL}/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg`,
+  image: `${BASE_URL}/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg`,
   worksFor: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',
@@ -176,7 +176,7 @@ export const alisonPersonSchema = {
   jobTitle: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
   description: 'Alison Isherwood is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and graduate of the London School of Sports Massage (LSSM), with specialist interests in pregnancy massage and abdominal massage, based at Range and Restore in Archway, North London.',
   url: `${BASE_URL}/team`,
-  image: `${BASE_URL}/alison-isherwood-btec-level-5-sports-massage-soft-tissue-therapist-archway.jpeg`,
+  image: `${BASE_URL}/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg`,
   worksFor: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',

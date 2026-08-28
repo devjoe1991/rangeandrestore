@@ -13,12 +13,10 @@ export const metadata: Metadata = buildMetadata({
 
 const breadcrumbs = buildBreadcrumbs([{ name: 'Meet the Team', path: '/team' }])
 
-const CARLOS_PHOTO = 'https://lh3.googleusercontent.com/p/AF1QipNb_-WtjX3QYbhg6w0HeOOH05KicwaduJ5_svW0=s800-k-no'
-const DARAEL_PHOTO = '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg'
-const MATEJA_PORTRAIT = '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
-const MATEJA_BANNER = '/mateja-bracko-mounti-range-and-restore-sports-massage-banner-archway-london.jpeg'
-const ALISON_PHOTO = '/alison-isherwood-range-and-restore-sports-massage-banner-archway-north-london.jpeg'
-const ALISON_PROFILE_PHOTO = '/alison-isherwood-btec-level-5-sports-massage-soft-tissue-therapist-archway.jpeg'
+const CARLOS_PHOTO = '/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
+const DARAEL_PHOTO = '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
+const MATEJA_PHOTO = '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg'
+const ALISON_PHOTO = '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
 
 const CheckIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#0f767a' }} aria-hidden="true">
@@ -30,7 +28,7 @@ const introCards = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: CARLOS_PHOTO, alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', anchor: '#carlos-bonvicine' },
   { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: ALISON_PHOTO, alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#alison-isherwood' },
   { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: DARAEL_PHOTO, alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#darael-beckles' },
-  { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: MATEJA_PORTRAIT, alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#mateja-bracko-mounti' },
+  { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: MATEJA_PHOTO, alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', anchor: '#mateja-bracko-mounti' },
 ]
 
 export default function TeamPage() {
@@ -183,7 +181,7 @@ export default function TeamPage() {
             <div>
               <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
                 <Image
-                  src={ALISON_PROFILE_PHOTO}
+                  src={ALISON_PHOTO}
                   alt="Alison Isherwood, BTEC Level 5 sports massage and soft tissue therapist, standing beside the Range and Restore Sports Massage banner in Archway, North London"
                   fill
                   className="object-cover"
@@ -342,7 +340,7 @@ export default function TeamPage() {
           <div>
             <div className="rounded-2xl overflow-hidden mb-8 aspect-[3/4] relative w-full">
               <Image
-                src={MATEJA_PORTRAIT}
+                src={MATEJA_PHOTO}
                 alt="Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London"
                 fill
                 className="object-cover"
@@ -417,16 +415,6 @@ export default function TeamPage() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden aspect-[3/4] relative w-full">
-              <Image
-                src={MATEJA_BANNER}
-                alt="Mateja Bracko-Mounti standing beside the Range and Restore Sports Massage banner at the clinic in Archway, North London"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
             </div>
           </div>
         </div>

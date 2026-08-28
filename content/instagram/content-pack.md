@@ -782,7 +782,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 - **Tags:** `#PrestigeAwards #AwardWinning #SportsMassage #Archway #N19 #NorthLondon #ClinicOfTheYear #RangeAndRestore`
 
 ### G2 — Meet Carlos
-- **Format:** Single · **Template:** T1 · **Photo:** `carlos-bonvicine-sports-massage-archway-hero.jpg`
+- **Format:** Single · **Template:** T1 · **Photo:** `carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-…jpeg`
 - **On-image:** `CARLOS BONVICINE` / `FOUNDER & LEAD THERAPIST`
 - **Caption:**
 > Carlos Bonvicine — founder and lead therapist.
@@ -795,7 +795,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 - **Tags:** `#MeetTheTeam #SportsMassage #Archway #N19 #NorthLondon #SoftTissueTherapy #ClinicalMassage #RangeAndRestore`
 
 ### G3 — Meet Darael
-- **Format:** Single · **Template:** T1 · **Photo:** `darael-beckles-sports-massage-therapist-…jpeg`
+- **Format:** Single · **Template:** T1 · **Photo:** `darael-beckles-sports-massage-soft-tissue-therapist-…jpeg`
 - **On-image:** `DARAEL BECKLES` / `SPORTS & SOFT TISSUE THERAPIST`
 - **Caption:**
 > Darael Beckles — sports massage and soft tissue remedial therapist.
@@ -806,7 +806,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 - **Tags:** `#MeetTheTeam #SportsMassage #SoftTissueTherapy #Archway #N19 #NorthLondon #NLSSM #RangeAndRestore`
 
 ### G4 — Meet Mateja
-- **Format:** Single · **Template:** T1 · **Photo:** `mateja-bracko-mounti-sports-massage-…jpeg` (1600×2227)
+- **Format:** Single · **Template:** T1 · **Photo:** `mateja-bracko-mounti-sports-massage-soft-tissue-therapist-…jpeg` (1023×1429)
 - **On-image:** `MATEJA BRACKO-MOUNTI` / `18+ YEARS' EXPERIENCE`
 - **Caption:**
 > Mateja Bracko-Mounti — BTEC Level 5 sports massage and soft tissue remedial therapist.

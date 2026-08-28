@@ -52,7 +52,7 @@ async function main() {
   let done = 0, skip = 0, fail = 0
   for (const c of drafts) {
     const title = c.settings?.title || ''
-    if (!title.startsWith('R&R — ')) { skip++; continue }
+    if (!title.includes('  [send:')) { skip++; continue }
     // template name is the part before "  [send:"
     const tplName = title.split('  [send:')[0]
     const tplId = tpls[tplName]

@@ -188,10 +188,10 @@ const bundles = [
 ]
 
 const teamMembers = [
-  { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: '/carlos-bonvicine-sports-massage-archway-hero.jpg', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
-  { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: '/alison-isherwood-range-and-restore-sports-massage-banner-archway-north-london.jpeg', alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#alison-isherwood', cta: 'Meet Alison' },
-  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-range-and-restore-sports-massage-banner-archway-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
-  { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
+  { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: '/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
+  { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#alison-isherwood', cta: 'Meet Alison' },
+  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
+  { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
 ]
 
 export default function HomePage() {
@@ -268,8 +268,8 @@ export default function HomePage() {
       <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1
-            className="font-extrabold text-page tracking-tighter sm:tracking-tight uppercase text-center whitespace-nowrap mb-7"
-            style={{ fontSize: 'clamp(0.8rem, 4.4vw, 3.5rem)' }}
+            className="font-extrabold text-page tracking-tighter sm:tracking-tight uppercase text-center whitespace-nowrap mb-7 -mx-2 sm:mx-0"
+            style={{ fontSize: 'clamp(0.8rem, 4.3vw, 3.5rem)' }}
           >
             Move Better. Feel Better. Live Stronger.
           </h1>
