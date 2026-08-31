@@ -11,6 +11,12 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Sciatica Treatment in North London: Why the Painful Spot Is Rarely the Problem',
+    slug: 'sciatica-treatment-north-london',
+    date: '31 August 2026',
+    excerpt: "Sciatic-type pain in your lower back, glute or down the leg that keeps coming back? Why rubbing the sore spot is rarely enough, what actually irritates the sciatic nerve, and how assessment-led sports and remedial massage treats your presentation rather than a template. Archway, Islington and North London.",
+  },
+  {
     title: 'The Mind-Body Connection: How Reducing Pain and Improving Movement Can Support Your Mental Wellbeing',
     slug: 'mind-body-connection-massage-mental-wellbeing-archway',
     date: '23 August 2026',

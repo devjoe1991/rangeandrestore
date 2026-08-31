@@ -145,6 +145,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/sciatica-treatment-north-london`,
+      lastModified: new Date('2026-08-31'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/blog/mind-body-connection-massage-mental-wellbeing-archway`,
       lastModified: new Date('2026-08-23'),
       changeFrequency: 'monthly',
