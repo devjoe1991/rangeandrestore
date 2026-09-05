@@ -145,6 +145,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/pregnancy-massage-before-during-after-archway`,
+      lastModified: new Date('2026-09-05'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/blog/sciatica-treatment-north-london`,
       lastModified: new Date('2026-08-31'),
       changeFrequency: 'monthly',

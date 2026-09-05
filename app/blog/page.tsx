@@ -11,6 +11,12 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Before, During & After Pregnancy: Supporting Your Body Through Every Stage of Motherhood',
+    slug: 'pregnancy-massage-before-during-after-archway',
+    date: '5 September 2026',
+    excerpt: "Pregnancy changes your body — but your need for care doesn't begin at conception or end after birth. How soft tissue therapy supports back, hip and pelvic discomfort before, during and after pregnancy, with Level 5 therapists also trained in pregnancy massage. Archway, Islington and North London.",
+  },
+  {
     title: 'Sciatica Treatment in North London: Why the Painful Spot Is Rarely the Problem',
     slug: 'sciatica-treatment-north-london',
     date: '31 August 2026',
