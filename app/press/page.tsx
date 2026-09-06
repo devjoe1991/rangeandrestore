@@ -43,7 +43,7 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How do journalists and producers contact Range and Restore for press enquiries?',
+      name: 'How do journalists and producers contact Range and Restore?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Press, podcast and media enquiries should be sent through the Range and Restore contact form at /contact. Include the outlet, the angle, your deadline and any preferred interview format. Carlos Bonvicine responds personally to all press requests.',
@@ -51,7 +51,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What subjects can Carlos Bonvicine speak on as an expert?',
+      name: 'What subjects can Carlos speak on as an expert?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Carlos can comment on sports massage, soft tissue therapy, Manual Lymphatic Drainage (MLD), post-surgery and oncology aftercare, pregnancy MLD, marathon and endurance recovery, sauna and compression recovery, desk-posture pain, and the independent business scene on Junction Road in Archway, North London.',

@@ -5,8 +5,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Normatec Compression Therapy in Archway London',
-  description: 'Hyperice Normatec 3 full body compression at Range and Restore, Archway N19, included as part of the private Recovery Suite experience.',
+  title: 'Normatec Compression Therapy London',
+  description: 'Hyperice Normatec 3 full body compression therapy in Archway, North London. Included in a private Recovery Suite session from £19, or paired with a 60 minute sports massage for £110.',
   path: '/recovery-suite/compression-therapy',
 })
 
