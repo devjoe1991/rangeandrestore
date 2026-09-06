@@ -167,6 +167,16 @@
   to = "/services/massage-bundles"
   status = 301
 
+[[redirects]]
+  from = "/relaxation-restorative-massage-therapy"
+  to = "/services/relaxation-restorative-massage"
+  status = 301
+
+[[redirects]]
+  from = "/massage-faqs"
+  to = "/faqs"
+  status = 301
+
 # NOTE: Netlify matches redirect `from` paths with and without a trailing slash,
 # so explicit `/privacy-policy/` -> `/privacy-policy` rules also match
 # `/privacy-policy` and 301-redirect it to itself, causing ERR_TOO_MANY_REDIRECTS
