@@ -4,6 +4,7 @@ import { BookingButton } from '@/components/BookingButton'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS, RELIABLE_SCAN_URL } from '@/lib/constants'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'MSK Scan and Ultrasound North London | Archway N19',
@@ -151,9 +152,9 @@ export default function MskUltrasoundClinicalMassagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Diagnostic Imaging + Clinical Massage &middot; Archway London</p>
+          <p className="eyebrow-sm">Diagnostic Imaging + Clinical Massage &middot; Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             MSK Injury Assessment, Diagnostic Ultrasound &amp; Clinical Massage in Archway, London
           </h1>
@@ -166,14 +167,14 @@ export default function MskUltrasoundClinicalMassagePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="space-y-12">
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Diagnosis first, then treatment</h2>
             <p className="text-page-muted mb-4">
               Most massage starts with an educated assessment of your symptoms. This package starts with actual imaging. A diagnostic musculoskeletal (MSK) ultrasound with{' '}
-              <a href={RELIABLE_SCAN_URL} target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>{' '}
+              <a href={RELIABLE_SCAN_URL} target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>{' '}
               shows what is happening in the muscle, tendon or joint — then your 60-minute Clinical Massage at Range and Restore is planned around both the clinical assessment and the report.
             </p>
             <p className="text-page-muted">
@@ -184,14 +185,14 @@ export default function MskUltrasoundClinicalMassagePage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Transparent pricing — £165 total</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="rounded-xl p-6 bg-card border-2 border-[#1a3d3a]">
-                <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-xs mb-2">Paid online when booking</p>
+              <div className="rounded-xl p-6 bg-card border-2 border-brand-green">
+                <p className="text-brand-teal font-semibold uppercase tracking-widest text-xs mb-2">Paid online when booking</p>
                 <p className="text-3xl font-black text-page mb-1">£75</p>
                 <p className="font-bold text-page mb-2">To Range and Restore</p>
                 <p className="text-page-muted text-sm">Secures your appointment and covers your 60-minute Clinical Massage, tailored to your assessment and scan findings.</p>
               </div>
-              <div className="rounded-xl p-6 bg-card border-2 border-[#1a3d3a]">
-                <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-xs mb-2">Paid at the clinic</p>
+              <div className="rounded-xl p-6 bg-card border-2 border-brand-green">
+                <p className="text-brand-teal font-semibold uppercase tracking-widest text-xs mb-2">Paid at the clinic</p>
                 <p className="text-3xl font-black text-page mb-1">£90</p>
                 <p className="font-bold text-page mb-2">Directly to Reliable Scan</p>
                 <p className="text-page-muted text-sm">Covers the diagnostic MSK ultrasound (one body area), clinical consultation, comprehensive written report and your ultrasound images. Payable before your appointment or on the day of your scan.</p>
@@ -200,10 +201,10 @@ export default function MskUltrasoundClinicalMassagePage() {
             <p className="mt-4 text-page-muted text-sm">
               No hidden extras. £75 online + £90 at the clinic = £165 total, for approximately 90 minutes of assessment, imaging and treatment.
             </p>
-            <div className="mt-4 bg-[#eeeeee] rounded-xl p-5">
+            <div className="mt-4 bg-panel rounded-xl p-5">
               <p className="text-page-muted text-sm">
                 <strong className="text-page">Please note:</strong> part of this service is delivered by our verified local partner. The diagnostic MSK ultrasound, clinical consultation, written report and images are provided, reported and charged by{' '}
-                <a href={RELIABLE_SCAN_URL} target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan Private Ultrasound Clinic</a>, an independent clinic based in the same building. Range and Restore Sports Massage provides the 60-minute Clinical Massage element of the package.
+                <a href={RELIABLE_SCAN_URL} target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan Private Ultrasound Clinic</a>, an independent clinic based in the same building. Range and Restore Sports Massage provides the 60-minute Clinical Massage element of the package.
               </p>
             </div>
           </section>
@@ -216,7 +217,7 @@ export default function MskUltrasoundClinicalMassagePage() {
             <ol className="space-y-4">
               {daySteps.map((step, i) => (
                 <li key={step.title} className="flex items-start gap-4 bg-page-sage rounded-xl p-6">
-                  <span className="flex-shrink-0 w-9 h-9 rounded-full bg-[#0f767a] text-white font-black flex items-center justify-center" aria-hidden="true">
+                  <span className="flex-shrink-0 w-9 h-9 rounded-full bg-brand-teal text-white font-black flex items-center justify-center" aria-hidden="true">
                     {i + 1}
                   </span>
                   <div>
@@ -234,7 +235,7 @@ export default function MskUltrasoundClinicalMassagePage() {
             <ul className="space-y-2">
               {idealFor.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -248,7 +249,7 @@ export default function MskUltrasoundClinicalMassagePage() {
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {scanIdentifies.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -263,7 +264,7 @@ export default function MskUltrasoundClinicalMassagePage() {
             <ul className="space-y-2">
               {massageIncludes.map((tech) => (
                 <li key={tech} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
                   {tech}
                 </li>
               ))}
@@ -279,10 +280,10 @@ export default function MskUltrasoundClinicalMassagePage() {
               <h3 className="font-bold text-page mb-2">Reliable Scan Private Ultrasound Clinic</h3>
               <ul className="text-page-muted text-sm space-y-1">
                 <li>130 Junction Road, Archway, London N19 5LB — same building as Range and Restore</li>
-                <li>Telephone: <a href="tel:+442035764442" className="text-[#0f767a] font-semibold">020 3576 4442</a></li>
-                <li>Mobile: <a href="tel:+447883616916" className="text-[#0f767a] font-semibold">07883 616916</a></li>
-                <li>Email: <a href="mailto:info@reliablescanltd.com" className="text-[#0f767a] font-semibold">info@reliablescanltd.com</a></li>
-                <li>Website: <a href={RELIABLE_SCAN_URL} target="_blank" rel="noopener noreferrer" className="text-[#0f767a] font-semibold underline decoration-[#0f767a]/40">reliablescanltd.com</a></li>
+                <li>Telephone: <a href="tel:+442035764442" className="text-brand-teal font-semibold">020 3576 4442</a></li>
+                <li>Mobile: <a href="tel:+447883616916" className="text-brand-teal font-semibold">07883 616916</a></li>
+                <li>Email: <a href="mailto:info@reliablescanltd.com" className="text-brand-teal font-semibold">info@reliablescanltd.com</a></li>
+                <li>Website: <a href={RELIABLE_SCAN_URL} target="_blank" rel="noopener noreferrer" className="text-brand-teal font-semibold underline decoration-brand-teal/40">reliablescanltd.com</a></li>
               </ul>
             </div>
             <p className="mt-4 text-page-muted text-sm">
@@ -295,9 +296,9 @@ export default function MskUltrasoundClinicalMassagePage() {
             <FaqAccordion items={faqs} />
           </section>
 
-          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Stop guessing. Get a diagnosis and treatment in one visit.</h2>
-            <p className="text-[#1a3d3a] font-semibold mb-6">
+          <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-ink mb-4">Stop guessing. Get a diagnosis and treatment in one visit.</h2>
+            <p className="text-brand-green font-semibold mb-6">
               Diagnostic MSK ultrasound, written report and a 60-minute clinical massage guided by the findings — all at 130 Junction Road, Archway. £75 online secures your appointment.
             </p>
             <BookingButton href={BOOKING_URLS.mskUltrasoundMassage} label="Book Your Assessment" />
@@ -306,19 +307,19 @@ export default function MskUltrasoundClinicalMassagePage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/clinical-collaboration" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.clinicalCollaboration} className="link-inline link-inline-tap">
                 → How clinical collaboration works at 130 Junction Road
               </Link>
-              <Link href="/community/reliable-scan" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.community.reliableScan} className="link-inline link-inline-tap">
                 → About our partner Reliable Scan
               </Link>
-              <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
                 → Advanced Clinical Massage
               </Link>
-              <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline link-inline-tap">
                 → Do I Need a Scan for My Injury? MSK Ultrasound, Explained
               </Link>
-              <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
                 → How to Recover Faster Between Training and Events
               </Link>
             </div>

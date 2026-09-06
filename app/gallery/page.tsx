@@ -6,6 +6,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import Link from 'next/link'
 import { GalleryClient } from './GalleryClient'
 import type { GalleryImage } from './GalleryClient'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Gallery – Range and Restore Sports Massage Archway',
@@ -101,7 +102,7 @@ export default function GalleryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }} />
 
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Gallery</h1>
           <p className="mt-3 text-xl text-page-muted">Inside Range and Restore Sports Massage, Archway</p>
@@ -112,15 +113,15 @@ export default function GalleryPage() {
       </div>
 
       {/* ── Gallery ──────────────────────────────────────────── */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 section-md">
         <GalleryClient images={images} />
 
         {/* ── CTA ──────────────────────────────────────────────── */}
         <div className="mt-12 pt-10 border-t border-page flex flex-col sm:flex-row gap-4 items-start">
           <BookingButton label="Book Your Session" />
           <Link
-            href="/team"
-            className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm"
+            href={ROUTES.team}
+            className="btn bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all text-sm shadow-sm"
           >
             Meet the Team →
           </Link>

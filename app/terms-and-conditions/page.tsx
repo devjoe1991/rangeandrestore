@@ -12,14 +12,14 @@ export const metadata: Metadata = buildMetadata({
 export default function TermsAndConditionsPage() {
   return (
     <>
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Terms and Conditions</h1>
           <p className="mt-4 text-page-muted opacity-80">Last updated: January 2026</p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-8">
           <section>
             <h2 className="text-2xl font-bold text-page">1. About These Terms</h2>
@@ -131,8 +131,8 @@ export default function TermsAndConditionsPage() {
               <strong>Carlos Bonvicine</strong><br />
               Range and Restore Sports Massage<br />
               {BUSINESS.address}<br />
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#0f767a] hover:underline">{BUSINESS.email}</a><br />
-              <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#0f767a] hover:underline">{BUSINESS.phone}</a>
+              <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:underline">{BUSINESS.email}</a><br />
+              <a href={`tel:${BUSINESS.phoneTel}`} className="text-brand-teal hover:underline">{BUSINESS.phone}</a>
             </address>
           </section>
         </div>

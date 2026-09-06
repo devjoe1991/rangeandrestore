@@ -1,26 +1,27 @@
 import Link from 'next/link'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
+import { ROUTES } from '@/lib/routes'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-[#1a3d3a] flex flex-col">
+    <div className="min-h-screen bg-brand-green flex flex-col">
       {/* Hero */}
       <div className="flex-1 flex flex-col items-center justify-center text-center px-4 py-20">
-        <p className="text-[#d4ecea] text-[8rem] sm:text-[12rem] font-black leading-none tracking-tighter opacity-20 select-none">
+        <p className="text-teal-tint text-[8rem] sm:text-[12rem] font-black leading-none tracking-tighter opacity-20 select-none">
           404
         </p>
         <div className="-mt-8 sm:-mt-12 relative z-10">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
             This page does not exist
           </h1>
-          <p className="text-[#d4ecea]/70 text-base max-w-md mx-auto mb-8">
+          <p className="text-teal-tint/70 text-base max-w-md mx-auto mb-8">
             It may have moved or the link is out of date. Here are some helpful places to go instead.
           </p>
         </div>
 
         {/* Treatment links grid */}
         <div className="w-full max-w-2xl mb-10">
-          <p className="text-[#d4ecea]/50 text-xs font-black uppercase tracking-widest mb-5">I need help with...</p>
+          <p className="text-teal-tint/50 text-xs font-black uppercase tracking-widest mb-5">I need help with...</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
             {[
               ['Sports injury or muscle pain',        '/services/sports-deep-tissue-massage'],
@@ -33,9 +34,9 @@ export default function NotFound() {
               <Link
                 key={href}
                 href={href}
-                className="flex items-center gap-2.5 bg-[#1a3532] hover:bg-[#2a9d8f]/15 border border-[#2a9d8f]/25 hover:border-[#d4ecea]/40 rounded-xl px-4 py-3 text-sm text-[#d4ecea]/80 hover:text-white transition-all min-h-[44px]"
+                className="flex items-center gap-2.5 bg-forest-night hover:bg-brand-teal-soft/15 border border-brand-teal-soft/25 hover:border-teal-tint/40 rounded-xl px-4 py-3 text-sm text-teal-tint/80 hover:text-white transition-all min-h-[44px]"
               >
-                <span className="text-[#2a9d8f] text-xs flex-shrink-0">→</span>
+                <span className="text-brand-teal-soft text-xs flex-shrink-0">→</span>
                 {label}
               </Link>
             ))}
@@ -58,7 +59,7 @@ export default function NotFound() {
         </div>
 
         <div className="mt-10">
-          <Link href="/" className="text-[#d4ecea]/40 text-sm hover:text-[#d4ecea] transition-colors">
+          <Link href={ROUTES.home} className="text-teal-tint/40 text-sm hover:text-teal-tint transition-colors">
             ← Back to homepage
           </Link>
         </div>

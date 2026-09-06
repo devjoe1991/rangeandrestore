@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Cupping & Sports Massage Archway N19',
@@ -44,9 +45,9 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Cupping Therapy · Archway London</p>
+          <p className="eyebrow-sm">Cupping Therapy · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Advanced Cupping Therapy &amp; Sports / Deep Tissue Massage in Archway, London
           </h1>
@@ -59,7 +60,7 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="space-y-12">
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">How it works</h2>
@@ -82,7 +83,7 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
                 'Anyone looking for a deeper, results-driven therapeutic treatment',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -121,7 +122,7 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
                 'Relief from postural and desk-related pain',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -144,7 +145,7 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
                 'Assisted stretching and mobilisation',
               ].map((tech) => (
                 <li key={tech} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
                   {tech}
                 </li>
               ))}
@@ -158,9 +159,9 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
             </p>
           </section>
 
-          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready for deeper, results-driven relief?</h2>
-            <p className="text-[#1a3d3a] font-semibold mb-6">
+          <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-ink mb-4">Ready for deeper, results-driven relief?</h2>
+            <p className="text-brand-green font-semibold mb-6">
               Assessment-led cupping and sports massage in Archway, North London. Whether you are training, recovering, or managing chronic tension, this integrated treatment supports your performance and long-term musculoskeletal health.
             </p>
             <BookingButton href={BOOKING_URLS.cuppingSportsDeepTissue} label="Book Today" />
@@ -169,10 +170,10 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/blog/sports-massage-soft-tissue-therapy-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.blog.sportsMassageSoftTissueTherapyArchway} className="link-inline link-inline-tap">
                 → Sports Massage and Soft Tissue Therapy — Perform, Recover and Stay Pain-Free
               </Link>
-              <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
                 → How Sports Massage Helps Runners Before and After Races
               </Link>
             </div>

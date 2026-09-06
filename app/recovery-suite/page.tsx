@@ -5,6 +5,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { RecoverySuiteCard } from '@/components/RecoverySuiteCard'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Suite – Infrared Hybrid Sauna & Compression Therapy in Archway London',
@@ -59,7 +60,7 @@ export default function RecoverySuitePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       {/* Hero */}
-      <div className="relative bg-[#1a3d3a] py-16 lg:py-24 overflow-hidden">
+      <div className="relative bg-brand-green py-16 lg:py-24 overflow-hidden">
         {/* TODO: replace with real photo of the redesigned recovery room */}
         <Image
           src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=75"
@@ -70,12 +71,12 @@ export default function RecoverySuitePage() {
           sizes="100vw"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#7dd94a] font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore &middot; Now Open</p>
+          <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore &middot; Now Open</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Recovery Suite in Archway, North London</h1>
-          <p className="mt-4 text-xl text-[#d4ecea]/90 max-w-2xl">
+          <p className="mt-4 text-xl text-teal-tint/90 max-w-2xl">
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
-          <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
+          <p className="mt-3 text-teal-tint/70 max-w-2xl">
             Infrared Hybrid Sauna and Normatec full body compression in one private suite. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, recovery packages with sports massage from £85, and Restore+ monthly memberships. Now open.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 items-center">
@@ -86,7 +87,7 @@ export default function RecoverySuitePage() {
       </div>
 
       {/* The story */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <span className="eyebrow block mb-2">The Story</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-5">
@@ -102,7 +103,7 @@ export default function RecoverySuitePage() {
       </div>
 
       {/* What's in the suite */}
-      <div id="whats-in-the-suite" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div id="whats-in-the-suite" className="container-page container-full">
         <div className="text-center mb-10">
           <span className="eyebrow block mb-2">What&apos;s in the Suite</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight">
@@ -117,21 +118,21 @@ export default function RecoverySuitePage() {
           <RecoverySuiteCard
             title="Infrared Hybrid Sauna"
             summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Solo or shared sessions to support muscle recovery, circulation and proper time to switch off. Private sessions from £19."
-            href="/recovery-suite/infrared-sauna"
+            href={ROUTES.recoverySuite.infraredSauna}
             image="/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp"
             imageAlt="Vidalux 2 person hybrid infrared sauna at Range and Restore Archway"
           />
           <RecoverySuiteCard
             title="Compression Therapy"
             summary="Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms. Ideal after a long run, a leg session or a long week on your feet."
-            href="/recovery-suite/compression-therapy"
+            href={ROUTES.recoverySuite.compressionTherapy}
             image="/recovery-suite/normatec-compression-therapy-archway.jpg"
             imageAlt="Normatec 3 full body compression therapy setup at Range and Restore Archway"
           />
           <RecoverySuiteCard
             title="Recovery Sessions & Packages"
             summary="Private Infrared Hybrid Sauna sessions from £19, combined sports massage recovery packages from £85, plus Restore+ monthly memberships. Pick the level that suits you."
-            href="/recovery-suite/recovery-packages"
+            href={ROUTES.recoverySuite.recoveryPackages}
             image="/recovery-suite/recovery-suite-room-archway.jpg"
             imageAlt="Recovery sessions and packages combining sauna compression and sports massage in Archway"
           />
@@ -139,7 +140,7 @@ export default function RecoverySuitePage() {
       </div>
 
       {/* How to use it */}
-      <div className="bg-page py-12 lg:py-16">
+      <div className="bg-page section-md">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="eyebrow block mb-2">How To Use It</span>
@@ -154,7 +155,7 @@ export default function RecoverySuitePage() {
               { step: '03', title: 'Become a member', desc: 'Restore+ sauna and Signature Treatment memberships, from £49 a month. Set up personally — call or email to join.' },
             ].map((item) => (
               <div key={item.step} className="bg-page-sage rounded-2xl p-6">
-                <p className="text-[#0f767a] font-black text-sm tracking-widest mb-3">{item.step}</p>
+                <p className="text-brand-teal font-black text-sm tracking-widest mb-3">{item.step}</p>
                 <h3 className="font-bold text-page text-lg mb-2">{item.title}</h3>
                 <p className="text-page-muted text-sm leading-relaxed">{item.desc}</p>
               </div>
@@ -164,7 +165,7 @@ export default function RecoverySuitePage() {
       </div>
 
       {/* Who it's for */}
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 section-md">
         <h2 className="text-2xl font-bold text-page mb-4">Who is the Recovery Suite for?</h2>
         <p className="text-page-muted mb-4">The suite is built for anyone who wants a proper recovery routine close to home. That includes:</p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -177,7 +178,7 @@ export default function RecoverySuitePage() {
             'Anyone wanting a wellness habit close to home',
           ].map((item) => (
             <li key={item} className="flex items-start gap-3 text-page-muted">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                 <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
               </svg>
               {item}
@@ -187,7 +188,7 @@ export default function RecoverySuitePage() {
       </div>
 
       {/* FAQ */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-6">FAQs</h2>
           <FaqAccordion items={faqs} />
@@ -195,17 +196,17 @@ export default function RecoverySuitePage() {
       </div>
 
       {/* Book Now CTA */}
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">The Recovery Suite is now open</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 section-md">
+        <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">The Recovery Suite is now open</h2>
+          <p className="text-brand-green font-semibold mb-6">
             A new dedicated recovery and wellness space at Range and Restore in Archway, North London. Sauna, compression and full recovery sessions available to book now.
           </p>
           <a
             href={BOOKING_URLS.recoverySuite}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ink text-white font-black uppercase tracking-widest text-sm hover:bg-brand-green-dark transition-colors"
           >
             Book Recovery Session
           </a>

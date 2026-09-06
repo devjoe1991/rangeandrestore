@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sol Centre and Range and Restore | Archway Local Partners',
@@ -32,9 +33,9 @@ export default function SolCentrePartnerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(partnerOrgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; Archway</p>
+          <p className="eyebrow-sm">Local Partner &middot; Archway</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sol Centre and Range and Restore
           </h1>
@@ -44,9 +45,9 @@ export default function SolCentrePartnerPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
           <Image
             src="/sol-centre-logo.svg"
             alt="Sol Centre logo"
@@ -78,16 +79,16 @@ export default function SolCentrePartnerPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Visit Sol Centre</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-3">Visit Sol Centre</h2>
+          <p className="text-brand-green font-semibold mb-6">
             The studio is on Fairbridge Road, a short walk from our clinic on Junction Road. Book a class, try the sauna, or drop in for a workshop.
           </p>
           <a
             href={PARTNER_URL}
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+            className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
           >
             Visit sol-centre.co.uk <span aria-hidden="true">→</span>
           </a>
@@ -96,13 +97,13 @@ export default function SolCentrePartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.about} className="link-inline link-inline-tap">
               &rarr; About Carlos and Range and Restore
             </Link>
-            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.recoverySuite.index} className="link-inline link-inline-tap">
               &rarr; Our Recovery Suite: sauna and compression
             </Link>
           </div>

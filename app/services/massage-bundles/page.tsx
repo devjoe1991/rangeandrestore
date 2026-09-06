@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Bundles Archway N19 | Save up to £300',
@@ -72,7 +73,7 @@ export default function MassageBundlesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offersSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">Massage Bundle Offers</h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
@@ -87,7 +88,7 @@ export default function MassageBundlesPage() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="space-y-10">
           {bundles.map((bundle) => (
-            <div key={bundle.title} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+            <div key={bundle.title} className="group card-lift rounded-card overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
               <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
               <div className="p-6 lg:p-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
                 <div className="flex-1">
@@ -96,7 +97,7 @@ export default function MassageBundlesPage() {
                     <span className="inline-block bg-page-sage text-page text-sm font-semibold px-3 py-1 rounded-full">{bundle.saving}</span>
                   </div>
                   <div className="flex items-baseline gap-3 mb-4">
-                    <span className="text-4xl font-bold text-[#0f767a]">{bundle.price}</span>
+                    <span className="text-4xl font-bold text-brand-teal">{bundle.price}</span>
                     <span className="text-page-muted opacity-80 text-sm">{bundle.validity}</span>
                   </div>
                   <p className="text-page-muted mb-3">{bundle.description}</p>
@@ -117,7 +118,7 @@ export default function MassageBundlesPage() {
           ))}
         </div>
 
-        <div className="mt-12 group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+        <div className="mt-12 group card-lift rounded-card overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
           <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
           <div className="p-6 lg:p-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
             <div className="flex-1">
@@ -126,7 +127,7 @@ export default function MassageBundlesPage() {
                 <span className="inline-block bg-page-sage text-page text-sm font-semibold px-3 py-1 rounded-full">New Partner Package</span>
               </div>
               <div className="flex items-baseline gap-3 mb-4">
-                <span className="text-4xl font-bold text-[#0f767a]">£165</span>
+                <span className="text-4xl font-bold text-brand-teal">£165</span>
                 <span className="text-page-muted opacity-80 text-sm">£75 online + £90 paid directly to Reliable Scan</span>
               </div>
               <p className="text-page-muted mb-3">
@@ -143,16 +144,16 @@ export default function MassageBundlesPage() {
               >
                 Book Now
               </a>
-              <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium text-sm text-center min-h-[44px] flex items-center justify-center">
+              <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="text-brand-teal hover:text-page font-medium text-sm text-center min-h-[44px] flex items-center justify-center">
                 Learn more →
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 lg:p-10 text-center">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to commit to your health?</h2>
-          <p className="text-[#1a3d3a] text-lg font-semibold mb-6 max-w-2xl mx-auto">
+        <div className="mt-12 bg-accent rounded-2xl p-8 lg:p-10 text-center">
+          <h2 className="text-2xl font-black text-ink mb-4">Ready to commit to your health?</h2>
+          <p className="text-brand-green text-lg font-semibold mb-6 max-w-2xl mx-auto">
             Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.
           </p>
           <div className="flex justify-center">
@@ -167,23 +168,23 @@ export default function MassageBundlesPage() {
           </div>
         </div>
 
-        <div className="mt-10 bg-[#eeeeee] rounded-xl p-6">
+        <div className="mt-10 bg-panel rounded-xl p-6">
           <h3 className="text-lg font-bold text-page mb-3">Bundle Terms</h3>
           <ul className="space-y-2 text-page-muted text-sm">
             <li className="flex items-start gap-2">
-              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
+              <span className="text-brand-teal font-bold mt-0.5">•</span>
               Bundles are valid for the specified period from the date of first use.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
+              <span className="text-brand-teal font-bold mt-0.5">•</span>
               Sessions are non-transferable and non-refundable once purchased.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
+              <span className="text-brand-teal font-bold mt-0.5">•</span>
               Bundles are for personal use only and cannot be shared between clients.
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-[#0f767a] font-bold mt-0.5">•</span>
+              <span className="text-brand-teal font-bold mt-0.5">•</span>
               Sessions must be booked in advance and are subject to availability.
             </li>
           </ul>

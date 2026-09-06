@@ -20,14 +20,14 @@ function initials(name: string) {
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl p-6 bg-white border border-[#1a3d3a]/10 shadow-sm text-left h-full">
+    <div className="flex flex-col gap-3 rounded-2xl p-6 bg-white border border-brand-green/10 shadow-sm text-left h-full">
       <div className="flex items-center gap-3 flex-shrink-0">
         <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ backgroundColor: '#1a3d3a', color: '#fff' }}>
           {initials(review.author_name)}
         </div>
         {/* Name only. `relative_time_description` still comes back from Google
             and is kept on the type, but showing it dates the reviews. */}
-        <p className="font-bold text-[#1a2330] text-sm">{review.author_name}</p>
+        <p className="font-bold text-ink text-sm">{review.author_name}</p>
       </div>
       <div className="flex gap-0.5 flex-shrink-0">
         {[1,2,3,4,5].map((i) => (
@@ -42,7 +42,7 @@ function ReviewCard({ review }: { review: Review }) {
            scrollbar or flicking a long review vertically never pans the row. */
         onPointerDown={(e) => e.stopPropagation()}
       >
-        <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium whitespace-pre-wrap">{review.text}</p>
+        <p className="text-ink/90 text-sm leading-relaxed font-medium whitespace-pre-wrap">{review.text}</p>
       </div>
     </div>
   )
@@ -96,19 +96,19 @@ export function GoogleReviews() {
     <section ref={sectionRef} className="section section-flush-b" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
-        <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#1a2330] tracking-tight uppercase leading-none mb-8">
+        <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-ink tracking-tight uppercase leading-none mb-8">
           Our customers rate us
         </h2>
 
         <div className="flex items-center justify-center gap-2 sm:gap-4 mb-8">
           {[1,2,3,4,5].map((i) => (
-            <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 sm:w-[5.5rem] sm:h-[5.5rem] text-[#fbbc04]">
+            <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16 sm:w-[5.5rem] sm:h-[5.5rem] text-google-star">
               <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
             </svg>
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-3 sm:gap-5 mb-10 text-[#1a2330]">
+        <div className="flex items-center justify-center gap-3 sm:gap-5 mb-10 text-ink">
           <div className="flex items-center gap-2">
             <svg width="34" height="34" viewBox="0 0 24 24">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -123,9 +123,9 @@ export function GoogleReviews() {
           </span>
         </div>
 
-        <p className="text-[#1a3d3a]/90 text-sm sm:text-base font-bold mb-10">
+        <p className="text-brand-green/90 text-sm sm:text-base font-bold mb-10">
           Based on verified reviews on{' '}
-          <a href={PLACE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-black hover:text-[#0f767a] transition-colors">
+          <a href={PLACE_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 font-black hover:text-brand-teal transition-colors">
             Google
           </a>.
         </p>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Glow By D and Range and Restore | Same Building, 130 Junction Road, Archway',
@@ -44,9 +45,9 @@ export default function GlowByDPartnerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(partnerOrgSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; 130 Junction Road, Archway</p>
+          <p className="eyebrow-sm">Local Partner &middot; 130 Junction Road, Archway</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Glow By D and Range and Restore
           </h1>
@@ -56,9 +57,9 @@ export default function GlowByDPartnerPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
           <Image
             src="/glow-by-d-skincare-beauty-clinic-archway.png"
             alt="Glow By D skincare and beauty clinic logo, Archway"
@@ -90,7 +91,7 @@ export default function GlowByDPartnerPage() {
             <li><strong className="text-page">Hair restoration:</strong> Dermapen hair restoration and rejuvenation for thinning hair.</li>
           </ul>
           <p>
-            The full menu and pricing live on the <a href={`${PARTNER_URL}/pricelist`} target="_blank" rel="noopener" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a]">Glow By D pricelist</a>.
+            The full menu and pricing live on the <a href={`${PARTNER_URL}/pricelist`} target="_blank" rel="noopener" className="text-brand-teal underline decoration-brand-teal/40 hover:decoration-brand-teal">Glow By D pricelist</a>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why a shared building matters</h2>
@@ -115,9 +116,9 @@ export default function GlowByDPartnerPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Visit Glow By D</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-3">Visit Glow By D</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Same building as us. 130 Junction Road, Archway, London N19 5LB. Browse the treatments and pricelist online, or call to book your appointment.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -125,13 +126,13 @@ export default function GlowByDPartnerPage() {
               href={PARTNER_URL}
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+              className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
             >
               Visit glowbyd.co.uk <span aria-hidden="true">→</span>
             </a>
             <a
               href={`tel:${PARTNER_PHONE_TEL}`}
-              className="inline-flex items-center gap-2 bg-white text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a]"
+              className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
             >
               Call {PARTNER_PHONE}
             </a>
@@ -141,16 +142,16 @@ export default function GlowByDPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.recoverySuite.index} className="link-inline link-inline-tap">
               &rarr; The Recovery Suite at Range and Restore
             </Link>
-            <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline link-inline-tap">
               &rarr; Relaxation Massage at Range and Restore
             </Link>
-            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.about} className="link-inline link-inline-tap">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

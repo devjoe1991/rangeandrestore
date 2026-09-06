@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Pregnancy Massage Archway N19 | £85 · 60 Minutes',
@@ -76,9 +77,9 @@ export default function PregnancyMassagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Pregnancy Massage · Archway London</p>
+          <p className="eyebrow-sm">Pregnancy Massage · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Pregnancy Massage in Archway, North London
           </h1>
@@ -94,7 +95,7 @@ export default function PregnancyMassagePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="space-y-12">
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Who is this treatment for?</h2>
@@ -109,7 +110,7 @@ export default function PregnancyMassagePage() {
                 'Or you simply want dedicated time to relax and unwind during pregnancy',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -139,7 +140,7 @@ export default function PregnancyMassagePage() {
               Every treatment uses gentle, pregnancy-appropriate techniques and supported positioning — typically side-lying with cushions, or semi-reclined where appropriate — so you stay comfortable and safe throughout. Pressure is adjusted to your preference, and your therapist checks in with you as the session goes on.
             </p>
             <p className="text-page-muted">
-              If you have any pregnancy complications, or you are in your first trimester, we recommend checking with your midwife or GP before booking. If you&apos;re unsure whether pregnancy massage is right for you, <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">get in touch</Link> and we&apos;ll be happy to advise.
+              If you have any pregnancy complications, or you are in your first trimester, we recommend checking with your midwife or GP before booking. If you&apos;re unsure whether pregnancy massage is right for you, <Link href={ROUTES.contact} className="link-inline">get in touch</Link> and we&apos;ll be happy to advise.
             </p>
           </section>
 
@@ -155,7 +156,7 @@ export default function PregnancyMassagePage() {
                 'Dedicated time for yourself as your body changes',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -168,8 +169,8 @@ export default function PregnancyMassagePage() {
             <h2 className="text-2xl font-bold text-page mb-4">Who will treat me?</h2>
             <p className="text-page-muted">
               Pregnancy massage is available with our team of qualified sports massage and soft tissue therapists, including{' '}
-              <Link href="/team#alison-isherwood" className="text-[#0f767a] hover:text-page font-medium">Alison Isherwood</Link> and{' '}
-              <Link href="/team#mateja-bracko-mounti" className="text-[#0f767a] hover:text-page font-medium">Mateja Bracko-Mounti</Link>, who both hold a specialist interest in pregnancy massage.
+              <Link href={`${ROUTES.team}#alison-isherwood`} className="link-inline">Alison Isherwood</Link> and{' '}
+              <Link href={`${ROUTES.team}#mateja-bracko-mounti`} className="link-inline">Mateja Bracko-Mounti</Link>, who both hold a specialist interest in pregnancy massage.
             </p>
           </section>
 
@@ -177,7 +178,7 @@ export default function PregnancyMassagePage() {
             <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                <div key={faq.q} className="rounded-xl border border-sand bg-white p-5">
                   <h3 className="font-bold text-page mb-2">{faq.q}</h3>
                   <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
                 </div>
@@ -185,9 +186,9 @@ export default function PregnancyMassagePage() {
             </div>
           </section>
 
-          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your pregnancy massage</h2>
-            <p className="text-[#1a3d3a] font-semibold mb-6">
+          <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-ink mb-4">Book your pregnancy massage</h2>
+            <p className="text-brand-green font-semibold mb-6">
               Safe, personalised care to help you move and rest more comfortably through pregnancy. 60 minutes, £85, at 130 Junction Road, Archway.
             </p>
             <BookingButton href={BOOKING_URLS.pregnancyMassage} label="Book Your Session" />
@@ -196,10 +197,10 @@ export default function PregnancyMassagePage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline link-inline-tap">
                 → Manual Lymphatic Drainage (MLD)
               </Link>
-              <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline link-inline-tap">
                 → Relaxation &amp; Restorative Massage
               </Link>
             </div>

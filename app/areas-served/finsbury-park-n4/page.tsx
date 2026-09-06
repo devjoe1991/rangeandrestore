@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Finsbury Park N4 | Runner & Cyclist Recovery',
@@ -73,9 +74,9 @@ export default function FinsburyParkN4Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Finsbury Park · London N4</p>
+          <p className="eyebrow-sm">Finsbury Park · London N4</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage for Finsbury Park (N4)
           </h1>
@@ -85,10 +86,10 @@ export default function FinsburyParkN4Page() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is a short trip from Finsbury Park &mdash; the 210 bus runs straight to Archway, where the clinic sits at 130 Junction Road. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>. With the park, the running track and one of north London&apos;s biggest parkruns on the doorstep, N4 is one of our busiest areas for runners.
+            Range and Restore is a short trip from Finsbury Park &mdash; the 210 bus runs straight to Archway, where the clinic sits at 130 Junction Road. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>. With the park, the running track and one of north London&apos;s biggest parkruns on the doorstep, N4 is one of our busiest areas for runners.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N4</h2>
@@ -103,12 +104,12 @@ export default function FinsburyParkN4Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Finsbury Park clients</h2>
           <p>
-            Runners typically book a 60- or 90-minute <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> to work through the posterior chain &mdash; calves, hamstrings, glutes and lower back &mdash; plus the hip flexors and quads. Our <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners&apos; guide</Link> and <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium">marathon massage guide</Link> cover the detail. After big efforts, many pair massage with the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">infrared sauna</Link> or <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">Normatec compression boots</Link> in the Recovery Suite.
+            Runners typically book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> to work through the posterior chain &mdash; calves, hamstrings, glutes and lower back &mdash; plus the hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> and <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon massage guide</Link> cover the detail. After big efforts, many pair massage with the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> or <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression boots</Link> in the Recovery Suite.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finsbury Park and the wider catchment</h2>
           <p>
-            This page covers Finsbury Park, Manor House and the streets around the park. It sits right next to <Link href="/areas-served/stroud-green-n4" className="text-[#0f767a] hover:text-page font-medium">Stroud Green</Link> and connects along the Parkland Walk towards <Link href="/areas-served/crouch-end-n8" className="text-[#0f767a] hover:text-page font-medium">Crouch End</Link> and <Link href="/areas-served/highgate-n6" className="text-[#0f767a] hover:text-page font-medium">Highgate</Link>. See all the <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">areas we serve</Link>.
+            This page covers Finsbury Park, Manor House and the streets around the park. It sits right next to <Link href={ROUTES.areasServed.stroudGreenN4} className="link-inline">Stroud Green</Link> and connects along the Parkland Walk towards <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link> and <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>. See all the <Link href={ROUTES.areasServed.index} className="link-inline">areas we serve</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>
@@ -138,9 +139,9 @@ export default function FinsburyParkN4Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your session from Finsbury Park</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Finsbury Park</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; a direct 210 bus away.
           </p>
           <BookingButton label="Book Your Session" />

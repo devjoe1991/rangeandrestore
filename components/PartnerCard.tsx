@@ -21,7 +21,7 @@ export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFi
   return (
     <Link
       href={href}
-      className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm border-2 border-[#1a3d3a] no-underline"
+      className="group card-lift rounded-card overflow-hidden flex flex-col bg-card shadow-sm border-2 border-brand-green no-underline"
     >
       <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
       {logo ? (
@@ -47,17 +47,17 @@ export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFi
           </div>
         )
       ) : (
-        <div className="relative w-full aspect-[16/10] flex items-center justify-center p-6 overflow-hidden bg-[#0f4a2e]">
+        <div className="relative w-full aspect-[16/10] flex items-center justify-center p-6 overflow-hidden bg-forest-deep">
           <span className="text-white text-center font-black tracking-tight leading-tight text-xl sm:text-2xl group-hover:scale-105 transition-transform duration-700">
             {headerText}
           </span>
         </div>
       )}
       <div className="p-5 flex flex-col flex-1">
-        <span className="text-[#0f767a] text-xs font-bold uppercase tracking-widest mb-2">
+        <span className="text-brand-teal text-xs font-bold uppercase tracking-widest mb-2">
           {category}
         </span>
-        <h3 className="font-black text-page text-lg leading-tight tracking-tight mb-2 group-hover:text-[#0f767a] transition-colors">
+        <h3 className="font-black text-page text-lg leading-tight tracking-tight mb-2 group-hover:text-brand-teal transition-colors">
           {name}
         </h3>
         <p className="text-page-muted text-sm leading-relaxed flex-1 mb-4">{blurb}</p>

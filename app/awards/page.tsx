@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 const AWARD_BANNER = '/range-and-restore-new-sports-massage-clinic-of-the-year-2026-prestige-awards-winner-archway-london.jpg'
 const AWARD_LOGO = '/prestige-awards-2026-winner-logo.png'
@@ -135,9 +136,9 @@ export default function AwardsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       {/* ── Hero band ─────────────────────── */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
+          <p className="eyebrow-sm">
             Awards and Recognition, Archway, North London
           </p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
@@ -152,10 +153,10 @@ export default function AwardsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
         {/* ── Winner banner ─────────────────────── */}
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-white mb-12">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-white mb-12">
           <Image
             src={AWARD_BANNER}
             alt="Range and Restore Sports Massage, winner of New Sports Massage Clinic of the Year 2026/27 at the London and South East England Prestige Awards, Archway, North London"
@@ -192,7 +193,7 @@ export default function AwardsPage() {
           </ul>
           <p>
             That matters to us, because it means the award reflects the things we care about most. The assessment-led treatment, the{' '}
-            <a href="https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">reviews our clients leave</a>
+            <a href="https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9" target="_blank" rel="noopener noreferrer" className="link-cite">reviews our clients leave</a>
             , and the reputation we have built on Junction Road.
           </p>
 
@@ -204,13 +205,13 @@ export default function AwardsPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Recognised for the work, and the people behind it</h2>
           <p>
             An award like this is never one person. It reflects our{' '}
-            <Link href="/team" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">BTEC Level 5 team</Link>
+            <Link href={ROUTES.team} className="link-cite">BTEC Level 5 team</Link>
             , the clients who trust us with their recovery, and the{' '}
-            <Link href="/community" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">independent businesses across Archway</Link>{' '}
+            <Link href={ROUTES.community.index} className="link-cite">independent businesses across Archway</Link>{' '}
             we work alongside. We are a community-focused clinic, and being recognised while staying rooted in our patch is exactly the way we wanted it.
           </p>
 
-          <div className="not-prose my-10 rounded-[20px] border-2 border-[#1a3d3a] bg-page-sage p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+          <div className="not-prose my-10 rounded-card border-2 border-brand-green bg-page-sage p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
             <Image
               src={AWARD_LOGO}
               alt="London and South East England Prestige Awards 2026/27 winner logo"
@@ -249,7 +250,7 @@ export default function AwardsPage() {
           <h3 className="text-lg font-bold text-page mt-6 mb-2">Where is the award-winning clinic based?</h3>
           <p>
             130 Junction Road, Archway, London N19 5LB, a few minutes from Archway station on the Northern line, serving Archway, Tufnell Park, Holloway, Islington, Finsbury Park and the wider{' '}
-            <Link href="/areas-served" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">North London area</Link>.
+            <Link href={ROUTES.areasServed.index} className="link-cite">North London area</Link>.
           </p>
 
           <h3 className="text-lg font-bold text-page mt-6 mb-2">Does winning the award change your prices or how you work?</h3>
@@ -259,16 +260,16 @@ export default function AwardsPage() {
         </div>
 
         {/* ── Booking CTA ─────────────────────── */}
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Book the award-winning clinic</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-3">Book the award-winning clinic</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Come and feel the difference for yourself. Book online in a couple of minutes, or call Range and Restore directly on {BUSINESS.phone}.
           </p>
           <a
             href={BOOKING_URLS.general}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+            className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
           >
             Book Your Session <span aria-hidden="true">&rarr;</span>
           </a>
@@ -278,19 +279,19 @@ export default function AwardsPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.about} className="link-inline link-inline-tap">
               &rarr; About Carlos and Range and Restore
             </Link>
-            <Link href="/team" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.team} className="link-inline link-inline-tap">
               &rarr; Meet the team behind the award
             </Link>
-            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &rarr; Our Archway community and local partners
             </Link>
-            <Link href="/press" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.press} className="link-inline link-inline-tap">
               &rarr; Press, media and interview enquiries
             </Link>
-            <Link href="/services" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.index} className="link-inline link-inline-tap">
               &rarr; See our sports massage and recovery treatments
             </Link>
           </div>

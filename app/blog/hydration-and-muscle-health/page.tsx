@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Hydration and Muscle Health | Why Water Matters',
@@ -74,9 +75,9 @@ export default function HydrationMuscleHealthPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Hydration and Muscle Health – What Every Client Should Know
           </h1>
@@ -88,10 +89,10 @@ export default function HydrationMuscleHealthPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Water makes up around 75% of muscle tissue, so hydration has a direct effect on how your muscles feel, work and recover. Well-hydrated muscle is more pliable and less prone to cramp; dehydrated muscle is stiffer, tires sooner and takes longer to recover. It also affects how much you get out of a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">massage</Link>, which is why our therapists at Range and Restore in Archway ask about it.
+            Water makes up around 75% of muscle tissue, so hydration has a direct effect on how your muscles feel, work and recover. Well-hydrated muscle is more pliable and less prone to cramp; dehydrated muscle is stiffer, tires sooner and takes longer to recover. It also affects how much you get out of a <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">massage</Link>, which is why our therapists at Range and Restore in Archway ask about it.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why does hydration matter for muscle tissue?</h2>
@@ -125,7 +126,7 @@ export default function HydrationMuscleHealthPage() {
           </p>
 
           <p>
-            For <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, cyclists and anyone training hard, hydration is one of the simplest and most overlooked recovery tools there is. If you are already nursing something like <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles tendinitis</Link> or a <Link href="/blog/tight-hamstring-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tight hamstring</Link>, turning up to training under-fuelled and under-watered does not help it settle.
+            For <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners</Link>, cyclists and anyone training hard, hydration is one of the simplest and most overlooked recovery tools there is. If you are already nursing something like <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline">Achilles tendinitis</Link> or a <Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline">tight hamstring</Link>, turning up to training under-fuelled and under-watered does not help it settle.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How much should I drink?</h2>
@@ -154,7 +155,7 @@ export default function HydrationMuscleHealthPage() {
           </p>
 
           <p>
-            If you are not sure what to do before or after an appointment, ask during your session. Practical advice on recovery is part of every treatment at <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore in Archway, North London</Link>.
+            If you are not sure what to do before or after an appointment, ask during your session. Practical advice on recovery is part of every treatment at <Link href={ROUTES.about} className="link-inline">Range and Restore in Archway, North London</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage and recovery advice near you in North London</h2>
@@ -181,9 +182,9 @@ export default function HydrationMuscleHealthPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Hydrate well, recover better</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Hydrate well, recover better</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Arrive hydrated and get the most from your session. Assessment-led sports massage and soft tissue therapy in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -191,7 +192,7 @@ export default function HydrationMuscleHealthPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -199,13 +200,13 @@ export default function HydrationMuscleHealthPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -215,20 +216,20 @@ export default function HydrationMuscleHealthPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
               &rarr; Sports Recovery in Archway: Massage, Compression and Sauna
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

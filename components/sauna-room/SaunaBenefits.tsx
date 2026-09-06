@@ -120,9 +120,9 @@ export function SaunaBenefits() {
         {BENEFITS.map((benefit) => (
           <div
             key={benefit.title}
-            className="flex aspect-square w-40 shrink-0 snap-start flex-col rounded-2xl border border-[#1a3d3a]/12 bg-white p-4 shadow-sm sm:w-48"
+            className="flex aspect-square w-40 shrink-0 snap-start flex-col rounded-2xl border border-brand-green/12 bg-white p-4 shadow-sm sm:w-48"
           >
-            <span className="text-[#0f767a]">{benefit.icon}</span>
+            <span className="text-brand-teal">{benefit.icon}</span>
             <h3 className="mt-3 text-sm font-semibold text-neutral-900">{benefit.title}</h3>
             <p className="mt-1.5 text-xs leading-relaxed text-neutral-600">{benefit.body}</p>
           </div>

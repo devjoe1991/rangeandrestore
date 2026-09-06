@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'NC Osteopathy and Range and Restore | Osteopathy and Sports Massage in North London',
@@ -57,9 +58,9 @@ export default function NcOsteopathyPartnerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Local Partner &middot; North London &middot; Osteopathy</p>
+          <p className="eyebrow-sm">Local Partner &middot; North London &middot; Osteopathy</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             NC Osteopathy and Range and Restore
           </h1>
@@ -69,9 +70,9 @@ export default function NcOsteopathyPartnerPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
-        <div className="rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
           <Image
             src="/nc-osteopathy-logo-north-london.webp"
             alt="NC Osteopathy logo, North London"
@@ -85,7 +86,7 @@ export default function NcOsteopathyPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">A collaboration built on the same values</h2>
           <p>
-            No single pair of hands fixes everything, and that isn&apos;t a weakness in any one clinic &mdash; it&apos;s just how bodies work. Some things are muscular and respond beautifully to hands-on soft tissue work and recovery. Some are structural, neurological or systemic, and need the diagnostic eye of a registered osteopath. The best outcome for a client is usually the right practitioner at the right moment, with someone trusted to hand you over to when you need it. That&apos;s the whole reason Range and Restore Sports Massage and <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">NC Osteopathy</a> now work together.
+            No single pair of hands fixes everything, and that isn&apos;t a weakness in any one clinic &mdash; it&apos;s just how bodies work. Some things are muscular and respond beautifully to hands-on soft tissue work and recovery. Some are structural, neurological or systemic, and need the diagnostic eye of a registered osteopath. The best outcome for a client is usually the right practitioner at the right moment, with someone trusted to hand you over to when you need it. That&apos;s the whole reason Range and Restore Sports Massage and <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">NC Osteopathy</a> now work together.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About Nagma Chaudhry and NC Osteopathy</h2>
@@ -95,7 +96,7 @@ export default function NcOsteopathyPartnerPage() {
               alt="Nagma Chaudhry M.Ost, Clinic Director and Principal Osteopath at NC Osteopathy, North London"
               width={1920}
               height={1280}
-              className="rounded-[20px] border-2 border-[#1a3d3a] w-full h-auto"
+              className="rounded-card border-2 border-brand-green w-full h-auto"
             />
             <figcaption className="text-sm text-page-muted mt-3 text-center">
               Nagma Chaudhry M.Ost, Clinic Director and Principal Osteopath at NC Osteopathy
@@ -111,7 +112,7 @@ export default function NcOsteopathyPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we work together</h2>
           <p>
-            Range and Restore and NC Osteopathy aren&apos;t competing for the same client. We sit either side of the same goal. Osteopathy brings a registered, diagnostic, whole-system approach. Sports massage and soft tissue therapy bring hands-on release, improved range of movement, and recovery that keeps the body moving well between treatments. Put them side by side and the gaps close. Someone arrives at Range and Restore with stubborn lower back pain; most of the time assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> handles it, but when the picture suggests something more structural, we can point them straight to Nagma. And it works the other way too &mdash; a client Nagma has assessed and treated can come to us for ongoing soft tissue work and recovery, so the gains hold.
+            Range and Restore and NC Osteopathy aren&apos;t competing for the same client. We sit either side of the same goal. Osteopathy brings a registered, diagnostic, whole-system approach. Sports massage and soft tissue therapy bring hands-on release, improved range of movement, and recovery that keeps the body moving well between treatments. Put them side by side and the gaps close. Someone arrives at Range and Restore with stubborn lower back pain; most of the time assessment-led <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> handles it, but when the picture suggests something more structural, we can point them straight to Nagma. And it works the other way too &mdash; a client Nagma has assessed and treated can come to us for ongoing soft tissue work and recovery, so the gains hold.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see an osteopath, when to book a sports massage</h2>
@@ -121,7 +122,7 @@ export default function NcOsteopathyPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How the Recovery Suite fits in</h2>
           <p>
-            Alongside hands-on sports massage, Range and Restore runs a full <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> at 130 Junction Road &mdash; a Vidalux two-person hybrid <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">infrared sauna</Link> and the Hyperice Normatec 3 Full Body <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">compression system</Link>. For a client working through something with Nagma, those tools are a natural complement. The infrared sauna helps relax tight tissue and brings an over-wound nervous system back into a parasympathetic state, which dovetails neatly with the co-regulation side of osteopathic care. For postnatal recovery, gentle <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">Manual Lymphatic Drainage</Link> can support the body alongside osteopathic treatment, once cleared. None of it replaces what Nagma does &mdash; it gives her clients somewhere local to keep the progress moving between appointments.
+            Alongside hands-on sports massage, Range and Restore runs a full <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at 130 Junction Road &mdash; a Vidalux two-person hybrid <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> and the Hyperice Normatec 3 Full Body <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression system</Link>. For a client working through something with Nagma, those tools are a natural complement. The infrared sauna helps relax tight tissue and brings an over-wound nervous system back into a parasympathetic state, which dovetails neatly with the co-regulation side of osteopathic care. For postnatal recovery, gentle <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage</Link> can support the body alongside osteopathic treatment, once cleared. None of it replaces what Nagma does &mdash; it gives her clients somewhere local to keep the progress moving between appointments.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Honest referrals, both ways</h2>
@@ -134,7 +135,7 @@ export default function NcOsteopathyPartnerPage() {
           <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+              <div key={faq.q} className="rounded-xl border border-sand bg-white p-5">
                 <h3 className="font-bold text-page mb-2">{faq.q}</h3>
                 <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
               </div>
@@ -142,15 +143,15 @@ export default function NcOsteopathyPartnerPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Book with Range and Restore or NC Osteopathy</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-3">Book with Range and Restore or NC Osteopathy</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Sports massage, soft tissue therapy and the Recovery Suite at Range and Restore, two minutes from Archway tube. Osteopathy, Mummy MOT&reg; and whole-person care with Nagma Chaudhry at NC Osteopathy. Wherever you start, you get pointed to the right care for North London.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+              href={ROUTES.contact}
+              className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
             >
               Book Range and Restore <span aria-hidden="true">→</span>
             </Link>
@@ -158,7 +159,7 @@ export default function NcOsteopathyPartnerPage() {
               href={PARTNER_URL}
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center gap-2 bg-white text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a]"
+              className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
             >
               Visit NC Osteopathy <span aria-hidden="true">→</span>
             </a>
@@ -168,19 +169,19 @@ export default function NcOsteopathyPartnerPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &larr; Back to Our Archway Community
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports and deep tissue remedial therapy
             </Link>
-            <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline link-inline-tap">
               &rarr; Manual Lymphatic Drainage
             </Link>
-            <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.recoverySuite.index} className="link-inline link-inline-tap">
               &rarr; Recovery suite: sauna and compression
             </Link>
-            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.about} className="link-inline link-inline-tap">
               &rarr; About Carlos and Range and Restore
             </Link>
           </div>

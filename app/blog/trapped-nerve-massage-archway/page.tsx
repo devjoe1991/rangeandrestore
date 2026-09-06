@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Can Massage Help a Trapped Nerve? An Honest Answer',
@@ -87,9 +88,9 @@ export default function TrappedNerveMassageArchwayPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Can Massage Help a Trapped Nerve? An Honest Answer
           </h1>
@@ -101,7 +102,7 @@ export default function TrappedNerveMassageArchwayPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             It is usually the pins and needles that make people phone us, not the pain. Pain you can talk yourself out of. A hand that has gone half numb while you were reading is harder to ignore.
@@ -146,7 +147,7 @@ export default function TrappedNerveMassageArchwayPage() {
           </p>
           <ul className="space-y-2 list-disc list-inside">
             <li><strong className="text-page">The neck.</strong> By far the most common. An irritated nerve in the cervical spine refers into the shoulder blade, the upper arm, the forearm or specific fingers. People arrive convinced the problem is in the shoulder.</li>
-            <li><strong className="text-page">The lower back and pelvis.</strong> Producing sciatic-type symptoms into the buttock and down the leg. We have written separately about <Link href="/blog/sciatica-treatment-north-london" className="text-[#0f767a] hover:text-page font-medium">sciatica and why the painful spot is rarely the problem</Link>.</li>
+            <li><strong className="text-page">The lower back and pelvis.</strong> Producing sciatic-type symptoms into the buttock and down the leg. We have written separately about <Link href={ROUTES.blog.sciaticaTreatmentNorthLondon} className="link-inline">sciatica and why the painful spot is rarely the problem</Link>.</li>
             <li><strong className="text-page">Around the shoulder and collarbone.</strong> Where nerves and blood vessels pass through a narrow space, and posture, breathing pattern and carrying loads on one side all play a part.</li>
             <li><strong className="text-page">The elbow and wrist.</strong> Including the carpal tunnel symptoms that wake people at night with a numb hand they have to shake out.</li>
           </ul>
@@ -192,21 +193,21 @@ export default function TrappedNerveMassageArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How we approach it at Range and Restore</h2>
 
           <p>
-            Range and Restore is a sports and remedial massage clinic at 130 Junction Road in Archway, staffed by a <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>. Level 5 is the level at which therapists are trained to assess and reason clinically rather than deliver a fixed routine, and for nerve-related symptoms that distinction is the whole game.
+            Range and Restore is a sports and remedial massage clinic at 130 Junction Road in Archway, staffed by a <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>. Level 5 is the level at which therapists are trained to assess and reason clinically rather than deliver a fixed routine, and for nerve-related symptoms that distinction is the whole game.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">We assess before we treat</h3>
           <p>
-            The first appointment starts with questions and testing, not with oil. Where exactly do the symptoms travel. What is the quality of them. Is there numbness or weakness, and is it changing. What makes it worse, what settles it, what changed in the weeks beforehand, how are you sleeping. Then your therapist looks at how the neck, shoulder girdle or lower back actually move, which tissues are tender, and which movements reproduce your symptoms. A <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back and Neck Pain MOT</Link> is the natural choice if you want that mapping to be the focus of the session.
+            The first appointment starts with questions and testing, not with oil. Where exactly do the symptoms travel. What is the quality of them. Is there numbness or weakness, and is it changing. What makes it worse, what settles it, what changed in the weeks beforehand, how are you sleeping. Then your therapist looks at how the neck, shoulder girdle or lower back actually move, which tissues are tender, and which movements reproduce your symptoms. A <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back and Neck Pain MOT</Link> is the natural choice if you want that mapping to be the focus of the session.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Then we treat what is treatable, and refer what is not</h3>
           <p>
-            Where the picture is muscular, treatment focuses on the tissue loading the nerve and the movement restrictions feeding it, at a pressure your symptoms tolerate rather than a pressure that proves a point. <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">Advanced clinical massage</Link> is usually the right service for this kind of presentation. You will also leave with the two or three specific things to change between sessions, because desk height, pillow choice and which shoulder you carry a bag on frequently matter more than anything that happens in the room.
+            Where the picture is muscular, treatment focuses on the tissue loading the nerve and the movement restrictions feeding it, at a pressure your symptoms tolerate rather than a pressure that proves a point. <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">Advanced clinical massage</Link> is usually the right service for this kind of presentation. You will also leave with the two or three specific things to change between sessions, because desk height, pillow choice and which shoulder you carry a bag on frequently matter more than anything that happens in the room.
           </p>
 
           <p>
-            Where the picture is not muscular, we say so. Being told plainly that you need a GP, a physiotherapist or a scan is more valuable than six sessions that were never going to work. If imaging would settle the question, the <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">MSK ultrasound and clinical massage appointment</Link> we run alongside Reliable Scan puts a diagnostic scan and hands-on treatment under one roof on the same visit.
+            Where the picture is not muscular, we say so. Being told plainly that you need a GP, a physiotherapist or a scan is more valuable than six sessions that were never going to work. If imaging would settle the question, the <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">MSK ultrasound and clinical massage appointment</Link> we run alongside Reliable Scan puts a diagnostic scan and hands-on treatment under one roof on the same visit.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor instead</h2>
@@ -222,14 +223,14 @@ export default function TrappedNerveMassageArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Trapped nerve treatment in Archway and North London</h2>
 
           <p>
-            We are at 130 Junction Road, Archway, N19 5LB, a two-minute walk from Archway tube on the Northern Line, with clients coming from <Link href="/areas-served/islington-n1" className="text-[#0f767a] hover:text-page font-medium">Islington</Link>, <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium">Tufnell Park</Link>, <Link href="/areas-served/holloway-n7" className="text-[#0f767a] hover:text-page font-medium">Holloway</Link>, <Link href="/areas-served/highgate-n6" className="text-[#0f767a] hover:text-page font-medium">Highgate</Link>, Crouch End, Finsbury Park and Kentish Town.
+            We are at 130 Junction Road, Archway, N19 5LB, a two-minute walk from Archway tube on the Northern Line, with clients coming from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, Crouch End, Finsbury Park and Kentish Town.
           </p>
 
           <p>
             If you are not sure whether what you have is a nerve problem or a muscular one, that is a perfectly good reason to book an assessment. Working out which it is takes one appointment, and it will save you months of treating the wrong thing.
           </p>
 
-          <div className="not-prose mt-10 rounded-2xl border border-[#E9E5DE] bg-page-sage p-6 sm:p-8">
+          <div className="not-prose mt-10 rounded-2xl border border-sand bg-page-sage p-6 sm:p-8">
             <h2 className="text-xl font-bold text-page mb-2">Book an assessment</h2>
             <p className="text-page-muted text-sm leading-relaxed mb-5">
               Nerve-related symptoms in the neck, arm, back or leg, assessed properly before anything is treated. If it needs a doctor rather than a therapist, we will tell you.
@@ -238,7 +239,7 @@ export default function TrappedNerveMassageArchwayPage() {
               href={BOOKING_URLS.general}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] text-sm px-6"
+              className="btn bg-brand-green text-white hover:bg-brand-green-mid text-sm px-6"
             >
               Book Online
             </a>
@@ -247,7 +248,7 @@ export default function TrappedNerveMassageArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-12 mb-3">Common questions</h2>
           <div className="not-prose space-y-5">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+              <div key={faq.q} className="rounded-xl border border-sand bg-white p-5">
                 <h3 className="font-bold text-page mb-2">{faq.q}</h3>
                 <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
               </div>

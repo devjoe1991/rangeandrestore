@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ROUTES } from '@/lib/routes'
 
 /**
  * Homepage strip promoting the virtual sauna tour. The portrait image is a render
@@ -15,7 +16,7 @@ export function SaunaRoomStrip() {
       aria-labelledby="virtual-sauna-heading"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[24px] border-2 border-[#1a3d3a] bg-[#1a3d3a]">
+        <div className="overflow-hidden rounded-panel border-2 border-brand-green bg-brand-green">
           <div className="flex flex-col gap-0 lg:flex-row">
             <div className="relative aspect-[4/5] w-full lg:aspect-auto lg:w-[38%] lg:min-h-[420px]">
               <Image
@@ -28,7 +29,7 @@ export function SaunaRoomStrip() {
             </div>
 
             <div className="flex flex-1 flex-col justify-center p-6 sm:p-8 lg:p-10">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#7dd94a]">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
                 An immersive experience in wellbeing
               </p>
               <h2
@@ -52,13 +53,13 @@ export function SaunaRoomStrip() {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
-                  href="/sauna-room"
-                  className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1a3d3a] transition hover:bg-white/90"
+                  href={ROUTES.saunaRoom}
+                  className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-green transition hover:bg-white/90"
                 >
                   Enter the virtual room
                 </Link>
                 <Link
-                  href="/recovery-suite/infrared-sauna"
+                  href={ROUTES.recoverySuite.infraredSauna}
                   className="rounded-full border border-white/35 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   About the sauna

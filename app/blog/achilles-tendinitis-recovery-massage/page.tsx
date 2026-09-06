@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Does Massage Help Achilles Tendinitis (Tendonitis)? A Therapist Explains',
@@ -99,9 +100,9 @@ export default function AchillesTendinitisPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Achilles Tendinitis – How Sports Massage Helps Recovery
           </h1>
@@ -113,10 +114,10 @@ export default function AchillesTendinitisPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Yes, massage can help Achilles tendinitis, provided it is done the right way. The tendon itself is not the target: the work goes into the tight calf muscles that are pulling on it and the movement patterns further up the leg that overload it, while the sore tendon is left alone. Combined with sensible load management and calf strengthening, that takes tension off the Achilles and gives it a better chance to settle. It is one of the most common overuse injuries we see in <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link> at Range and Restore in Archway, North London, and it is treated with assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports massage and soft tissue therapy</Link>.
+            Yes, massage can help Achilles tendinitis, provided it is done the right way. The tendon itself is not the target: the work goes into the tight calf muscles that are pulling on it and the movement patterns further up the leg that overload it, while the sore tendon is left alone. Combined with sensible load management and calf strengthening, that takes tension off the Achilles and gives it a better chance to settle. It is one of the most common overuse injuries we see in <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners</Link> at Range and Restore in Archway, North London, and it is treated with assessment-led <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports massage and soft tissue therapy</Link>.
           </p>
 
           <p>
@@ -182,7 +183,7 @@ export default function AchillesTendinitisPage() {
           </p>
 
           <p>
-            Between sessions, relative rest (reducing running volume without necessarily stopping altogether) combined with the right loading exercises, typically eccentric calf work prescribed by a physio or sports rehab specialist, is usually recommended. Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated</Link> supports general recovery. At Range and Restore, advice on what to do between sessions is always part of the treatment.
+            Between sessions, relative rest (reducing running volume without necessarily stopping altogether) combined with the right loading exercises, typically eccentric calf work prescribed by a physio or sports rehab specialist, is usually recommended. Staying well <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated</Link> supports general recovery. At Range and Restore, advice on what to do between sessions is always part of the treatment.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Can massage make Achilles tendinitis worse?</h2>
@@ -194,13 +195,13 @@ export default function AchillesTendinitisPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Can you massage your Achilles at home?</h2>
 
           <p>
-            Between sessions, gentle self-care can help. You can massage and stretch the calf muscles above the tendon with your hands, a <Link href="/blog/muscle-knots-trigger-point-massage-archway" className="text-[#0f767a] hover:text-page font-medium">massage ball or a foam roller</Link> to reduce the tension pulling on the Achilles. What you should not do is dig directly into the sore tendon itself, particularly when it is inflamed. Pair this with the loading exercises your therapist or physio recommends.
+            Between sessions, gentle self-care can help. You can massage and stretch the calf muscles above the tendon with your hands, a <Link href={ROUTES.blog.muscleKnotsTriggerPointMassageArchway} className="link-inline">massage ball or a foam roller</Link> to reduce the tension pulling on the Achilles. What you should not do is dig directly into the sore tendon itself, particularly when it is inflamed. Pair this with the loading exercises your therapist or physio recommends.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How long does Achilles tendinitis take to heal?</h2>
 
           <p>
-            There is no single answer, because it depends on how severe the problem is and how early you catch it. A mild, recent case that is managed well, by reducing the aggravating load, releasing the calf and doing the right exercises, can settle within a few weeks. Longer-standing or degenerative cases (often called Achilles tendinopathy) commonly take a few months of consistent work. Tendons heal slowly because they have a relatively poor blood supply, so patience and consistency beat rushing back. The same principles apply to related lower-leg problems such as <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium">shin splints</Link> and <Link href="/blog/plantar-fasciitis-massage-archway" className="text-[#0f767a] hover:text-page font-medium">plantar fasciitis</Link>.
+            There is no single answer, because it depends on how severe the problem is and how early you catch it. A mild, recent case that is managed well, by reducing the aggravating load, releasing the calf and doing the right exercises, can settle within a few weeks. Longer-standing or degenerative cases (often called Achilles tendinopathy) commonly take a few months of consistent work. Tendons heal slowly because they have a relatively poor blood supply, so patience and consistency beat rushing back. The same principles apply to related lower-leg problems such as <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline">shin splints</Link> and <Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline">plantar fasciitis</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When should I see a GP or physio instead?</h2>
@@ -218,7 +219,7 @@ export default function AchillesTendinitisPage() {
           </ul>
 
           <p>
-            Range and Restore works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway. If imaging is needed to rule out a tear or something more serious, a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> can be arranged under the same roof, and our therapists will say so if they think you need one.
+            Range and Restore works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway. If imaging is needed to rule out a tear or something more serious, a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> can be arranged under the same roof, and our therapists will say so if they think you need one.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Achilles tendinitis treatment near you in North London</h2>
@@ -247,9 +248,9 @@ export default function AchillesTendinitisPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Take the tension off your Achilles</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Take the tension off your Achilles</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led sports massage and soft tissue therapy for Achilles tendinitis, working on the cause rather than the sore spot, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -257,7 +258,7 @@ export default function AchillesTendinitisPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -265,13 +266,13 @@ export default function AchillesTendinitisPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -281,23 +282,23 @@ export default function AchillesTendinitisPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline link-inline-tap">
               &rarr; Shin Splints: How Sports Massage Helps
             </Link>
-            <Link href="/blog/plantar-fasciitis-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline link-inline-tap">
               &rarr; Plantar Fasciitis and Heel Pain: How Massage Helps
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

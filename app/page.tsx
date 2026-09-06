@@ -11,6 +11,7 @@ import { SwipeCarousel } from '@/components/SwipeCarousel'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage Archway N19 | BTEC L5 Therapists',
@@ -205,13 +206,13 @@ export default function HomePage() {
       {/* ── OFFER BANNER ─────────────────────────────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
-          <span className="text-[#1a2330] text-sm font-bold leading-snug">
+          <span className="text-ink text-sm font-bold leading-snug">
             Injured? Get answers fast.{' '}
             <span className="block sm:inline">MSK ultrasound scan + treatment, all in one package.</span>
           </span>
           <Link
-            href="/services/msk-ultrasound-clinical-massage"
-            className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] px-3 py-1.5 rounded-full hover:bg-white hover:border-[#0f767a] transition-all whitespace-nowrap"
+            href={ROUTES.services.mskUltrasoundClinicalMassage}
+            className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink px-3 py-1.5 rounded-full hover:bg-white hover:border-brand-teal transition-all whitespace-nowrap"
           >
             Book Now
           </Link>
@@ -229,12 +230,12 @@ export default function HomePage() {
           fetchPriority="high"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#1a3d3a]/60" />
+        <div className="absolute inset-0 bg-brand-green/60" />
 
         <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-8 sm:pt-24 sm:pb-10" style={{ minHeight: '660px' }}>
 
           <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed mt-48 sm:mt-64">
-            Sports Massage <span className="text-[#7dd94a]">&amp;</span> Soft Tissue Remedial Therapy
+            Sports Massage <span className="text-accent">&amp;</span> Soft Tissue Remedial Therapy
           </p>
           <p className="text-white/90 text-sm sm:text-base mb-4 max-w-xl leading-relaxed font-semibold">
             Archway, North London.<br />
@@ -248,13 +249,13 @@ export default function HomePage() {
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-[#0f767a]/60 hover:bg-white/25 hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-brand-teal/60 hover:bg-white/25 hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
           </div>
 
-          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-[#0f767a]/60">
+          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-brand-teal/60">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
             Archway · North London · N19 5LB
           </span>
@@ -278,7 +279,7 @@ export default function HomePage() {
             label="Sports massage treatments and recovery"
             count={services.length}
             itemNoun="treatments"
-            action={<Link href="/services" className="btn btn-primary text-sm">View all services</Link>}
+            action={<Link href={ROUTES.services.index} className="btn btn-primary text-sm">View all services</Link>}
           >
             {services.map((s) => <ServiceCard key={s.href} s={s} />)}
             <ViewAllServicesCard />
@@ -296,7 +297,7 @@ export default function HomePage() {
         aria-labelledby="community-tuesday-heading"
       >
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage overflow-hidden">
+          <div className="rounded-panel border-2 border-brand-green bg-page-sage overflow-hidden">
             <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
             <div className="p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
               <div className="flex-1">
@@ -314,12 +315,12 @@ export default function HomePage() {
 
               <div className="flex-shrink-0 lg:w-64">
                 <div className="flex gap-3 mb-4">
-                  <div className="flex-1 bg-card rounded-xl border border-[#1a3d3a]/15 p-4 text-center">
-                    <p className="text-[#0f767a] text-[0.65rem] font-black uppercase tracking-widest mb-1">60 min</p>
+                  <div className="flex-1 bg-card rounded-xl border border-brand-green/15 p-4 text-center">
+                    <p className="text-brand-teal text-[0.65rem] font-black uppercase tracking-widest mb-1">60 min</p>
                     <p className="text-2xl font-black text-page leading-none">£60</p>
                   </div>
-                  <div className="flex-1 bg-card rounded-xl border border-[#1a3d3a]/15 p-4 text-center">
-                    <p className="text-[#0f767a] text-[0.65rem] font-black uppercase tracking-widest mb-1">90 min</p>
+                  <div className="flex-1 bg-card rounded-xl border border-brand-green/15 p-4 text-center">
+                    <p className="text-brand-teal text-[0.65rem] font-black uppercase tracking-widest mb-1">90 min</p>
                     <p className="text-2xl font-black text-page leading-none">£85</p>
                   </div>
                 </div>
@@ -333,9 +334,9 @@ export default function HomePage() {
                     Book a Tuesday session
                   </a>
                   <Link
-                    href="/services/community-tuesday-clinic"
+                    href={ROUTES.services.communityTuesdayClinic}
                     aria-label="Learn more about the Community Tuesday Clinic"
-                    className="text-page text-sm font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2"
+                    className="text-page text-sm font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2"
                   >
                     Learn more<span className="sr-only"> about the Community Tuesday Clinic</span>
                   </Link>
@@ -352,20 +353,20 @@ export default function HomePage() {
       {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
-          <span className="text-[#1a2330] text-sm font-bold leading-snug">
+          <span className="text-ink text-sm font-bold leading-snug">
             <span className="font-black">Recovery Suite:</span> private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; treatment memberships.
           </span>
         </div>
       </div>
 
       {/* ── 2.25 RECOVERY SUITE ─────────────────────────────── */}
-      <section className="section bg-[#1a3d3a]" aria-labelledby="recovery-suite-heading">
+      <section className="section bg-brand-green" aria-labelledby="recovery-suite-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 id="recovery-suite-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
               Now Open at Range and Restore. Our New Advanced Recovery Suite
             </h2>
-            <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
+            <p className="text-teal-tint/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
               A new dedicated recovery and wellness space is now open at the clinic. Hybrid infrared and traditional sauna, Normatec full-body compression recovery, and recovery-focused wellness and sports recovery sessions. Available now at Range and Restore, Archway.
             </p>
           </div>
@@ -391,13 +392,13 @@ export default function HomePage() {
               <Link
                 key={card.href}
                 href={card.href}
-                className="group relative rounded-[20px] p-5 bg-white/5 backdrop-blur-sm border border-[#0f767a]/30 hover:bg-white/10 hover:border-[#0f767a] transition-all card-lift flex flex-col"
+                className="group relative rounded-card p-5 bg-white/5 backdrop-blur-sm border border-brand-teal/30 hover:bg-white/10 hover:border-brand-teal transition-all card-lift flex flex-col"
               >
-                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 group-hover:text-[#7dd94a] transition-colors">
+                <h3 className="font-black text-white text-base leading-tight tracking-tight mb-2 group-hover:text-accent transition-colors">
                   {card.title}
                 </h3>
-                <p className="text-[#d4ecea]/70 text-xs leading-relaxed flex-1 mb-4">{card.desc}</p>
-                <span className="text-[#7dd94a] text-xs font-black uppercase tracking-wide inline-flex items-center gap-2">
+                <p className="text-teal-tint/70 text-xs leading-relaxed flex-1 mb-4">{card.desc}</p>
+                <span className="text-accent text-xs font-black uppercase tracking-wide inline-flex items-center gap-2">
                   Learn more <span aria-hidden="true">→</span>
                 </span>
               </Link>
@@ -405,7 +406,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Link href="/recovery-suite" className="btn bg-[#7dd94a] text-[#1a2330] hover:bg-white text-sm">
+            <Link href={ROUTES.recoverySuite.index} className="btn bg-accent text-ink hover:bg-white text-sm">
               Explore the Recovery Suite
             </Link>
           </div>
@@ -417,10 +418,10 @@ export default function HomePage() {
       <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] tracking-tight mb-1">Give the gift of movement</h2>
-            <p className="text-[#1a3d3a] text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
+            <h2 className="text-2xl font-black text-ink tracking-tight mb-1">Give the gift of movement</h2>
+            <p className="text-brand-green text-sm font-semibold">Perfect for friends and family recovering from injury or needing relaxation.</p>
           </div>
-          <Link href="/gift-cards" className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all shadow-sm">
+          <Link href={ROUTES.giftCards} className="btn whitespace-nowrap bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all shadow-sm">
             Buy a Gift Card
           </Link>
         </div>
@@ -431,10 +432,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <span className="eyebrow block mb-2" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Better Value</span>
-            <h2 id="bundles-heading" className="text-2xl sm:text-3xl font-extrabold text-[#1a2330] tracking-tight">
+            <h2 id="bundles-heading" className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
               Invest in your long-term wellbeing
             </h2>
-            <p className="text-[#1a3d3a]/80 mt-3 text-sm font-medium max-w-lg mx-auto">
+            <p className="text-brand-green/80 mt-3 text-sm font-medium max-w-lg mx-auto">
               Save more and stay consistent. Bundles keep you on track and give your body the ongoing care it needs.
             </p>
           </div>
@@ -443,36 +444,36 @@ export default function HomePage() {
             {bundles.map((b) => (
               <div key={b.label}
                 className={`rounded-2xl p-5 text-center relative flex flex-col card-lift border-2 ${
-                  b.popular ? 'bg-[#7dd94a] border-[#122a28]/15' : 'bg-white border-[#1a3d3a]/12'
+                  b.popular ? 'bg-accent border-brand-green-dark/15' : 'bg-white border-brand-green/12'
                 }`}>
                 {b.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#122a28] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-green-dark text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
                     Best Value
                   </span>
                 )}
-                <p className={`text-[0.7rem] sm:text-xs font-black leading-tight mb-1.5 min-h-[2.5em] ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
+                <p className={`text-[0.7rem] sm:text-xs font-black leading-tight mb-1.5 min-h-[2.5em] ${b.popular ? 'text-brand-green-dark' : 'text-brand-green'}`}>
                   {b.name}
                 </p>
-                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-[#122a28]/90' : 'text-[#1a3d3a]/80'}`}>
+                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-brand-green-dark/90' : 'text-brand-green/80'}`}>
                   {b.label}
                 </p>
-                <p className={`text-[0.65rem] font-bold mb-1 line-through ${b.popular ? 'text-[#122a28]/80' : 'text-[#1a3d3a]/70'}`}>
+                <p className={`text-[0.65rem] font-bold mb-1 line-through ${b.popular ? 'text-brand-green-dark/80' : 'text-brand-green/70'}`}>
                   {b.originalPrice}
                 </p>
-                <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-[#122a28]' : 'text-[#1a3d3a]'}`}>
+                <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-brand-green-dark' : 'text-brand-green'}`}>
                   {b.price}
                 </p>
-                <p className={`text-xs font-bold mt-0.5 ${b.popular ? 'text-[#1a3d3a]/90' : 'text-[#1a3d3a]/80'}`}>
+                <p className={`text-xs font-bold mt-0.5 ${b.popular ? 'text-brand-green/90' : 'text-brand-green/80'}`}>
                   {b.perSession}
                 </p>
                 <div className="mt-2 mb-3">
                   <span className={`text-[0.65rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-md shadow-sm ${
-                    b.popular ? 'bg-[#122a28] text-[#7dd94a]' : 'bg-[#7dd94a] text-[#1a2330]'
+                    b.popular ? 'bg-brand-green-dark text-accent' : 'bg-accent text-ink'
                   }`}>
                     {b.saving}
                   </span>
                 </div>
-                <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-[#122a28]/90' : 'text-[#1a3d3a]/80'}`}>
+                <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-brand-green-dark/90' : 'text-brand-green/80'}`}>
                   Valid {b.valid}
                 </p>
                 <a
@@ -480,7 +481,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`mt-auto text-xs font-bold py-2 px-3 rounded-full transition-all ${
-                    b.popular ? 'bg-[#122a28] text-white hover:bg-white hover:text-[#122a28]' : 'bg-[#1a3d3a]/10 text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white'
+                    b.popular ? 'bg-brand-green-dark text-white hover:bg-white hover:text-brand-green-dark' : 'bg-brand-green/10 text-brand-green hover:bg-brand-green hover:text-white'
                   }`}
                 >
                   Book now
@@ -490,7 +491,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Link href="/services/massage-bundles" className="btn btn-primary text-sm">See all bundle options</Link>
+            <Link href={ROUTES.services.massageBundles} className="btn btn-primary text-sm">See all bundle options</Link>
           </div>
         </div>
       </section>
@@ -537,26 +538,26 @@ export default function HomePage() {
                 Every session at Range and Restore begins with a proper assessment. Our therapists take the time to understand your posture, movement, and concerns before any treatment begins. No two people are the same, and no two sessions are the same. Serving clients across North London including Islington, Tufnell Park, Finsbury Park and Holloway.
               </p>
 
-              <Link href="/team" className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all text-sm shadow-sm">Meet the Team →</Link>
+              <Link href={ROUTES.team} className="btn bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all text-sm shadow-sm">Meet the Team →</Link>
             </div>
 
             {/* Clinic card */}
-            <div className="bg-[#F2EDE4] text-[#1a2330] rounded-3xl p-8 flex flex-col gap-5 border border-[#1a3d3a]/10">
+            <div className="bg-sand-deep text-ink rounded-3xl p-8 flex flex-col gap-5 border border-brand-green/10">
               <div>
-                <p className="text-3xl font-extrabold tracking-tight leading-none mb-1 text-[#1a3d3a]">Range and Restore</p>
-                <p className="text-[#1a3d3a]/90 text-sm font-bold">A team of BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapists</p>
-                <p className="text-[#1a3d3a]/80 text-xs font-bold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
+                <p className="text-3xl font-extrabold tracking-tight leading-none mb-1 text-brand-green">Range and Restore</p>
+                <p className="text-brand-green/90 text-sm font-bold">A team of BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapists</p>
+                <p className="text-brand-green/80 text-xs font-bold mt-0.5">Certified MLD · Cupping Therapy · Fully Insured</p>
               </div>
-              <p className="text-[#1a2330]/90 text-sm leading-relaxed font-medium">
+              <p className="text-ink/90 text-sm leading-relaxed font-medium">
                 &ldquo;Our goal is simple. Help you feel better and move better, using evidence-based soft tissue therapy tailored exactly to you.&rdquo;
               </p>
-              <p className="text-[#1a3d3a]/80 text-xs font-bold -mt-2">Carlos Bonvicine, Founder &amp; Lead Therapist</p>
-              <div className="border-t border-[#1a3d3a]/15 pt-4">
-                <p className="text-xs text-[#1a3d3a] uppercase tracking-widest font-extrabold">Based at</p>
-                <p className="text-[#1a2330]/90 text-sm mt-1 font-bold">130 Junction Road, Archway<br />London N19 5LB</p>
+              <p className="text-brand-green/80 text-xs font-bold -mt-2">Carlos Bonvicine, Founder &amp; Lead Therapist</p>
+              <div className="border-t border-brand-green/15 pt-4">
+                <p className="text-xs text-brand-green uppercase tracking-widest font-extrabold">Based at</p>
+                <p className="text-ink/90 text-sm mt-1 font-bold">130 Junction Road, Archway<br />London N19 5LB</p>
                 <p className="text-sm mt-2">
                   <a href={`tel:${BUSINESS.phoneTel}`}
-                    className="text-[#1a3d3a] hover:text-[#0f767a] transition-colors font-bold inline-flex items-center gap-1.5 min-h-[44px]">
+                    className="text-brand-green hover:text-brand-teal transition-colors font-bold inline-flex items-center gap-1.5 min-h-[44px]">
                     <PhoneIcon /> {BUSINESS.phone}
                   </a>
                 </p>
@@ -580,22 +581,22 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-7 text-center">
-            <Link href="/team" className="btn btn-primary text-sm">Meet the full team</Link>
+            <Link href={ROUTES.team} className="btn btn-primary text-sm">Meet the full team</Link>
           </div>
         </div>
       </section>
 
       {/* ── 6. BLOG / WELLNESS HUB ───────────────────────────── */}
-      <section className="section bg-[#F2EDE4]" aria-labelledby="blog-heading">
+      <section className="section bg-sand-deep" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-7 gap-4">
             <div>
               <span className="eyebrow block mb-1.5" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Wellness Hub</span>
-              <h2 id="blog-heading" className="text-2xl sm:text-3xl font-extrabold text-[#1a2330] tracking-tight">
+              <h2 id="blog-heading" className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
                 Expert advice &amp; insights
               </h2>
             </div>
-            <Link href="/blog" className="text-[#1a3d3a] text-sm font-bold hover:text-[#0f767a] transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.index} className="text-brand-green text-sm font-bold hover:text-brand-teal transition-colors whitespace-nowrap hidden sm:block min-h-[44px] flex items-center">
               All posts →
             </Link>
           </div>
@@ -615,7 +616,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-6 sm:hidden">
-            <Link href="/blog" className="text-[#1a3d3a] text-sm font-bold min-h-[44px] inline-flex items-center">
+            <Link href={ROUTES.blog.index} className="text-brand-green text-sm font-bold min-h-[44px] inline-flex items-center">
               View all posts →
             </Link>
           </div>
@@ -632,12 +633,12 @@ export default function HomePage() {
             FAQs
           </h2>
 
-          <div className="rounded-2xl border-2 border-[#1a3d3a] overflow-hidden bg-card">
+          <div className="rounded-2xl border-2 border-brand-green overflow-hidden bg-card">
             {previewFaqs.map((faq, i) => (
-              <details key={faq.q} className={`group ${i < previewFaqs.length - 1 ? 'border-b border-[#1a3d3a]/15' : ''}`}>
+              <details key={faq.q} className={`group ${i < previewFaqs.length - 1 ? 'border-b border-brand-green/15' : ''}`}>
                 <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-page text-base leading-snug hover:bg-page-sage transition-colors min-h-[56px]">
                   {faq.q}
-                  <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#1a3d3a]/10 flex items-center justify-center text-[#1a3d3a]">
+                  <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green">
                     <span className="absolute w-3 h-[2px] bg-current rounded-sm"></span>
                     <span className="absolute w-[2px] h-3 bg-current rounded-sm transition-transform duration-300 group-open:rotate-90"></span>
                   </span>
@@ -650,26 +651,26 @@ export default function HomePage() {
           </div>
 
           <div className="mt-6 text-center">
-            <Link href="/faqs" className="btn btn-primary text-sm">See all FAQs</Link>
+            <Link href={ROUTES.faqs} className="btn btn-primary text-sm">See all FAQs</Link>
           </div>
         </div>
       </section>
 
       {/* ── 8. CTA BAR ───────────────────────────────────────── */}
-      <section className="section-sm bg-[#7dd94a]" aria-label="Book a session">
+      <section className="section-sm bg-accent" aria-label="Book a session">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-2xl sm:text-4xl font-black text-[#1a2330] tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-ink tracking-tight mb-3">
             Ready to feel better?
           </h2>
-          <p className="text-[#1a3d3a]/90 mb-7 text-base font-semibold">
+          <p className="text-brand-green/90 mb-7 text-base font-semibold">
             Back pain, injury or tension holding you back? Book online or call Range and Restore directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
+            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
@@ -696,7 +697,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
   const isTel = ctaHref.startsWith('tel:')
 
   return (
-    <article className="group card-lift relative isolate rounded-[20px] overflow-hidden bg-[#1a3d3a] w-[min(80vw,320px)] sm:w-[300px] lg:w-[330px] aspect-square">
+    <article className="group card-lift relative isolate rounded-card overflow-hidden bg-brand-green w-[min(80vw,320px)] sm:w-[300px] lg:w-[330px] aspect-square">
       {image ? (
         <Image
           src={image}
@@ -710,7 +711,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
           sizes="(max-width: 640px) 80vw, (max-width: 1024px) 300px, 330px"
         />
       ) : (
-        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-[#1a3d3a] via-[#155e5c] to-[#0f767a]" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-brand-green via-teal-mid to-brand-teal" />
       )}
 
       {/* Scrim — keeps the copy legible over any photo */}
@@ -727,7 +728,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
       <Link
         href={s.href}
         aria-label={`${s.title}, ${s.price}`}
-        className="absolute inset-0 z-10 rounded-[20px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
+        className="absolute inset-0 z-10 rounded-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white"
       />
 
       {/* Copy block: centred in the middle of the card, and every row is a
@@ -763,7 +764,7 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
             href={ctaHref}
             {...(isTel ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
             aria-label={`Book ${s.title}`}
-            className="pointer-events-auto relative z-30 bg-white text-[#0f4f4d] text-xs font-black px-4 py-2 rounded-full whitespace-nowrap hover:bg-[#0f767a] hover:text-white transition-colors"
+            className="pointer-events-auto relative z-30 bg-white text-brand-teal-deep text-xs font-black px-4 py-2 rounded-full whitespace-nowrap hover:bg-brand-teal hover:text-white transition-colors"
           >
             Book now
           </a>
@@ -787,12 +788,12 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
 function ViewAllServicesCard() {
   return (
     <Link
-      href="/services"
-      className="group card-lift relative rounded-[20px] overflow-hidden flex flex-col items-center justify-center text-center gap-3 p-6 w-[min(80vw,320px)] sm:w-[300px] lg:w-[330px] aspect-square bg-gradient-to-br from-[#0f767a] to-[#1a3d3a]"
+      href={ROUTES.services.index}
+      className="group card-lift relative rounded-card overflow-hidden flex flex-col items-center justify-center text-center gap-3 p-6 w-[min(80vw,320px)] sm:w-[300px] lg:w-[330px] aspect-square bg-gradient-to-br from-brand-teal to-brand-green"
     >
       <span
         aria-hidden="true"
-        className="w-14 h-14 rounded-full flex items-center justify-center text-[#0f4f4d] bg-white group-hover:scale-110 transition-transform duration-300"
+        className="w-14 h-14 rounded-full flex items-center justify-center text-brand-teal-deep bg-white group-hover:scale-110 transition-transform duration-300"
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
           <path d="M5 12h14M13 6l6 6-6 6" />
@@ -820,7 +821,7 @@ function TeamCard({ m }: { m: typeof teamMembers[0] }) {
       </div>
       <div className="p-5">
         <p className="text-lg font-black text-page leading-tight min-h-[2.75rem]">{m.name}</p>
-        <p className="text-[#0f767a] text-xs font-bold mt-1 leading-snug min-h-[2.25rem]">{m.title}</p>
+        <p className="text-brand-teal text-xs font-bold mt-1 leading-snug min-h-[2.25rem]">{m.title}</p>
         <p className="text-page-muted text-xs font-medium mt-1 leading-snug">{m.creds}</p>
       </div>
     </Link>
@@ -830,7 +831,7 @@ function TeamCard({ m }: { m: typeof teamMembers[0] }) {
 function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean; mobile?: boolean }) {
   const width = mobile ? 'w-[280px]' : 'w-full'
   return (
-    <article className={`${width} group rounded-[20px] overflow-hidden flex flex-col card-lift ${dark ? 'bg-[#1e3d22]' : 'bg-card border border-page'}`}>
+    <article className={`${width} group rounded-card overflow-hidden flex flex-col card-lift ${dark ? 'bg-forest-card' : 'bg-card border border-page'}`}>
       <div className="relative w-full h-48 flex-shrink-0 overflow-hidden">
         <Image
           src={p.img}
@@ -841,7 +842,7 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
         />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(26,74,32,0.65) 0%, transparent 55%)' }} />
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-          <span className="bg-[#1a3d3a] text-white text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
+          <span className="bg-brand-green text-white text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full">
             {p.category}
           </span>
           <span className="bg-black/40 backdrop-blur-sm text-white/80 text-[0.6rem] font-semibold px-2.5 py-1 rounded-full">
@@ -849,7 +850,7 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
           </span>
         </div>
         <div className="absolute bottom-3 left-3">
-          <span className="text-[#7dd94a]/80 text-[0.65rem] font-semibold">{p.date}</span>
+          <span className="text-accent/80 text-[0.65rem] font-semibold">{p.date}</span>
         </div>
       </div>
 
@@ -857,14 +858,14 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
         <h3 className={`font-black text-base leading-snug flex-1 mb-4 tracking-tight ${dark ? 'text-white' : 'text-page'}`}>
           <Link
             href={p.href}
-            className={`hover:underline underline-offset-2 decoration-2 ${dark ? 'hover:text-[#7dd94a] decoration-[#7dd94a]' : 'hover:text-[#1a3d3a] decoration-[#1a3d3a]'}`}
+            className={`hover:underline underline-offset-2 decoration-2 ${dark ? 'hover:text-accent decoration-accent' : 'hover:text-brand-green decoration-brand-green'}`}
           >
             {p.title}
           </Link>
         </h3>
         <Link
           href={p.href}
-          className={`text-xs font-black uppercase tracking-wide min-h-[44px] flex items-center gap-2 transition-colors ${dark ? 'text-[#7dd94a] hover:text-white' : 'text-page hover:text-white'}`}
+          className={`text-xs font-black uppercase tracking-wide min-h-[44px] flex items-center gap-2 transition-colors ${dark ? 'text-accent hover:text-white' : 'text-page hover:text-white'}`}
         >
           Read article <span aria-hidden="true">→</span>
         </Link>

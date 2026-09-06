@@ -31,10 +31,10 @@ export function ReviewsStrip() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Rated 5.0 on Google from verified reviews. Read our reviews on Google."
-      className="group block bg-[#F2EDE4] hover:bg-[#EAE2D2] transition-colors"
+      className="group block bg-sand-deep hover:bg-sand-warm transition-colors"
     >
       <div className="mx-auto max-w-7xl px-4">
-        <div className="border-t border-[#1a3d3a]/10 py-3 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-center">
+        <div className="border-t border-brand-green/10 py-3 flex items-center justify-center gap-2 sm:gap-3 flex-wrap text-center">
           <span className="flex gap-0.5 flex-shrink-0" aria-hidden="true">
             {[1, 2, 3, 4, 5].map((i) => (
               <svg key={i} viewBox="0 0 24 24" fill="#fbbc04" className="w-4 h-4 sm:w-[18px] sm:h-[18px]">
@@ -42,14 +42,14 @@ export function ReviewsStrip() {
               </svg>
             ))}
           </span>
-          <span className="text-xs sm:text-sm font-black tracking-tight text-[#1a2330]">
+          <span className="text-xs sm:text-sm font-black tracking-tight text-ink">
             {(rating ?? 5).toFixed(1)} on Google
           </span>
-          <span className="text-[#1a3d3a]/40 font-bold" aria-hidden="true">·</span>
-          <span className="text-xs sm:text-sm font-bold text-[#1a3d3a]">
+          <span className="text-brand-green/40 font-bold" aria-hidden="true">·</span>
+          <span className="text-xs sm:text-sm font-bold text-brand-green">
             {total ?? 47} verified reviews
           </span>
-          <span className="text-[0.7rem] sm:text-xs font-black uppercase tracking-wide text-[#1a3d3a]/50 transition-colors group-hover:text-[#1a3d3a] whitespace-nowrap">
+          <span className="text-[0.7rem] sm:text-xs font-black uppercase tracking-wide text-brand-green/50 transition-colors group-hover:text-brand-green whitespace-nowrap">
             Read them <span aria-hidden="true">&rarr;</span>
           </span>
         </div>

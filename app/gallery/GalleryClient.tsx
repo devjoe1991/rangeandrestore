@@ -47,7 +47,7 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
         {Array.from({ length: PLACEHOLDER_COUNT }).map((_, i) => (
           <div
             key={i}
-            className="aspect-square rounded-lg bg-page-alt dark:bg-[#2a3d1f] animate-pulse"
+            className="aspect-square rounded-lg bg-page-alt dark:bg-surface-moss animate-pulse"
             aria-hidden="true"
           />
         ))}
@@ -77,14 +77,14 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
           {/* Prev / next controls */}
           <button
             onClick={prev}
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center hover:bg-[#0f767a] transition-colors"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center hover:bg-brand-teal transition-colors"
             aria-label="Previous photo"
           >
             <ChevronLeft />
           </button>
           <button
             onClick={next}
-            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center hover:bg-[#0f767a] transition-colors"
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center hover:bg-brand-teal transition-colors"
             aria-label="Next photo"
           >
             <ChevronRight />
@@ -98,9 +98,9 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
           <button
             key={i}
             onClick={() => selectFromGrid(i)}
-            className={`relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0f767a] transition-all ${
+            className={`relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal transition-all ${
               selected === i
-                ? 'ring-2 ring-[#0f767a] ring-offset-2 dark:ring-offset-[#0e1a09] opacity-100'
+                ? 'ring-2 ring-brand-teal ring-offset-2 dark:ring-offset-surface-night opacity-100'
                 : 'opacity-70 hover:opacity-100'
             }`}
             aria-label={`View: ${img.caption}`}

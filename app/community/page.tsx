@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PartnerCard } from '@/components/PartnerCard'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Our Archway Community | Local Partners in North London',
@@ -102,7 +103,7 @@ const partners: Partner[] = [
     blurb: 'Range and Restore and Bikeztube Cycles look after Archway’s cyclists on Junction Road. Bike servicing, wheel building and custom builds at 118, sports massage and leg recovery at 130. The bike and the body, sorted on one street.',
     logo: '/bikeztube-cycles-bike-shop-junction-road-archway.png',
     logoAlt: 'Bikeztube Cycles and Repairs logo, bike shop on Junction Road, Archway',
-    logoBg: 'bg-[#F2EDE4]',
+    logoBg: 'bg-sand-deep',
     externalUrl: 'https://bikeztube.co.uk',
   },
   {
@@ -148,9 +149,9 @@ export default function CommunityPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Archway &middot; North London</p>
+          <p className="eyebrow-sm">Archway &middot; North London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Our Archway Community
           </h1>
@@ -162,16 +163,16 @@ export default function CommunityPage() {
           </p>
           <p className="text-lg text-page-muted font-medium mb-4">
             We also back two charities beyond the high street.{' '}
-            <Link href="/giving-back" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Whittington Health Charity and Phab</Link>
+            <Link href={ROUTES.givingBack} className="link-cite">Whittington Health Charity and Phab</Link>
             , with donated treatments, gift vouchers and Carlos&apos;s time at their events.
           </p>
           <p className="text-lg text-page-muted font-medium">
-            If you&apos;re a local independent, please reach out. <Link href="/press" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Press, podcast and media enquiries have their own page</Link>.
+            If you&apos;re a local independent, please reach out. <Link href={ROUTES.press} className="link-cite">Press, podcast and media enquiries have their own page</Link>.
           </p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 section-md">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
           {partners.map((p) => (
             <PartnerCard
@@ -193,21 +194,21 @@ export default function CommunityPage() {
           More partners are on the way. We’re talking to local yoga studios, wellness spaces and a handful of other independents across the community. If you run a local business and want to chat, the door is open.
         </p>
 
-        <div className="mt-10 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Local independent? Get in touch</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6 max-w-2xl">
+        <div className="mt-10 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-3">Local independent? Get in touch</h2>
+          <p className="text-brand-green font-semibold mb-6 max-w-2xl">
             We collaborate with independents across Archway, Tufnell Park, Holloway, Highgate and North London. Honest referrals, mutual support, real trade going both ways. If you run a local business, we&apos;d love to hear from you.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+              href={ROUTES.contact}
+              className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
             >
               Reach out <span aria-hidden="true">→</span>
             </Link>
             <Link
-              href="/press"
-              className="inline-flex items-center gap-2 bg-white text-[#1a3d3a] hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a]"
+              href={ROUTES.press}
+              className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
             >
               Press &amp; media <span aria-hidden="true">→</span>
             </Link>

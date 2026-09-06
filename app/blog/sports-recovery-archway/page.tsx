@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Recovery in Archway: Massage, Sauna & Compression',
@@ -75,9 +76,9 @@ export default function SportsRecoveryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Recovery in Archway: Your Complete Recovery Stack
           </h1>
@@ -89,10 +90,10 @@ export default function SportsRecoveryPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Whether you run, lift, cycle or train functional fitness, the athletes who progress are the ones who recover as seriously as they train. Hard sessions leave your legs, back and shoulders loaded — and how fast you bounce back decides how much quality training you can string together. The most effective sports recovery stacks three things: <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports massage</Link>, compression and heat. At Range and Restore in Archway, North London, you can book all three in one place, minutes from Archway tube.
+            Whether you run, lift, cycle or train functional fitness, the athletes who progress are the ones who recover as seriously as they train. Hard sessions leave your legs, back and shoulders loaded — and how fast you bounce back decides how much quality training you can string together. The most effective sports recovery stacks three things: <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports massage</Link>, compression and heat. At Range and Restore in Archway, North London, you can book all three in one place, minutes from Archway tube.
           </p>
 
           <p>
@@ -117,26 +118,26 @@ export default function SportsRecoveryPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">The sports recovery stack: massage, compression and heat</h2>
 
           <p>
-            No single tool does everything. The athletes who recover best combine hands-on work, compression and heat — which is exactly what the <Link href="/recovery-suite" className="text-[#0f767a] hover:text-page font-medium">Recovery Suite</Link> at Range and Restore is built for.
+            No single tool does everything. The athletes who recover best combine hands-on work, compression and heat — which is exactly what the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at Range and Restore is built for.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Sports and deep tissue massage</h3>
           <p>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports and deep tissue massage</Link> is the cornerstone. It releases the calves, quads, glutes, lower back, forearms and shoulders that training loads most, eases post-session soreness and restores range of motion so your positions hold up under fatigue. An assessment-led session also catches the tight or overloaded areas that turn into niggles before they cost you training time.
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Sports and deep tissue massage</Link> is the cornerstone. It releases the calves, quads, glutes, lower back, forearms and shoulders that training loads most, eases post-session soreness and restores range of motion so your positions hold up under fatigue. An assessment-led session also catches the tight or overloaded areas that turn into niggles before they cost you training time.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Normatec compression</h3>
           <p>
-            The Recovery Suite runs the <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">Hyperice Normatec 3 Full Body</Link> pneumatic compression system — the same kit you will see in elite recovery zones. It cycles pressure through the legs, hips and arms to flush heavy, tired limbs after long or hard sessions. It is passive and easy: you sit back for around half an hour and let it work. Read more in our guide to <Link href="/blog/normatec-full-body-compression-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">Normatec compression recovery</Link>.
+            The Recovery Suite runs the <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Hyperice Normatec 3 Full Body</Link> pneumatic compression system — the same kit you will see in elite recovery zones. It cycles pressure through the legs, hips and arms to flush heavy, tired limbs after long or hard sessions. It is passive and easy: you sit back for around half an hour and let it work. Read more in our guide to <Link href={ROUTES.blog.normatecFullBodyCompressionRecoveryArchway} className="link-inline">Normatec compression recovery</Link>.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Infrared hybrid sauna</h3>
           <p>
-            The <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">Infrared Hybrid Sauna</Link> — a two-person Vidalux cabin with traditional and full-spectrum infrared heat — is the wind-down piece. Heat promotes relaxation and circulation and helps you switch off and sleep, which is where your body actually rebuilds. It is the perfect way to finish a hard week, and it pairs naturally with a massage or compression session.
+            The <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link> — a two-person Vidalux cabin with traditional and full-spectrum infrared heat — is the wind-down piece. Heat promotes relaxation and circulation and helps you switch off and sleep, which is where your body actually rebuilds. It is the perfect way to finish a hard week, and it pairs naturally with a massage or compression session.
           </p>
 
           <p>
-            Because all three live under one roof, you can stack them. Our <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Packages</Link> combine sports massage with sauna and compression in a single visit — a complete recovery session without trekking across London for the parts separately.
+            Because all three live under one roof, you can stack them. Our <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> combine sports massage with sauna and compression in a single visit — a complete recovery session without trekking across London for the parts separately.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How to build recovery into your training week</h2>
@@ -159,7 +160,7 @@ export default function SportsRecoveryPage() {
             In the final week, keep everything gentle. Book any pre-event massage a few days out rather than the day before, so you feel fresh rather than tender — light flushing work, not deep tissue. A short compression session and an easy sauna in taper week can help you feel loose and calm going in.
           </p>
           <p>
-            Afterwards is when the deeper work earns its place. A sports massage in the days that follow, a Normatec session to flush the legs and a sauna to unwind will get you moving comfortably again far quicker than doing nothing. A <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium">Recovery Package</Link> is an easy way to book the lot.
+            Afterwards is when the deeper work earns its place. A sports massage in the days that follow, a Normatec session to flush the legs and a sauna to unwind will get you moving comfortably again far quicker than doing nothing. A <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Package</Link> is an easy way to book the lot.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to recover near you in North London</h2>
@@ -187,9 +188,9 @@ export default function SportsRecoveryPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recover like you train</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Recover like you train</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Sports massage, Normatec compression and infrared sauna — the complete recovery stack, in one place in Archway, North London. Book a session or a Recovery Package.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -197,7 +198,7 @@ export default function SportsRecoveryPage() {
               href={BOOKING_URLS.recoverySuite}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Book the Recovery Suite
             </a>
@@ -205,13 +206,13 @@ export default function SportsRecoveryPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Book a Sports Massage
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -221,20 +222,20 @@ export default function SportsRecoveryPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline link-inline-tap">
               &rarr; Recovery Packages — massage, sauna &amp; compression
             </Link>
-            <Link href="/blog/normatec-full-body-compression-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.normatecFullBodyCompressionRecoveryArchway} className="link-inline link-inline-tap">
               &rarr; Faster Recovery with Normatec Compression, Now in Archway
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

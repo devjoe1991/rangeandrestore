@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { GA4_ID, GADS_ID } from '@/lib/gtag'
 import { META_PIXEL_ID } from '@/lib/meta-pixel'
 import { getStoredConsent, setConsent } from '@/lib/consent'
+import { ROUTES } from '@/lib/routes'
 
 // The banner never needs to react to outside changes after mount, so the
 // subscribe callback is a no-op. On the server we report "already chosen" so
@@ -46,8 +47,8 @@ export function ConsentBanner() {
           We use cookies to measure how our ads and website perform. Analytics
           and advertising cookies stay off until you accept.{' '}
           <Link
-            href="/privacy-policy"
-            className="font-medium text-[#0f767a] hover:underline"
+            href={ROUTES.privacyPolicy}
+            className="font-medium text-brand-teal hover:underline"
           >
             Privacy policy
           </Link>
@@ -56,14 +57,14 @@ export function ConsentBanner() {
           <button
             type="button"
             onClick={() => choose('denied')}
-            className="btn flex-1 md:flex-none border-2 border-[#0f767a] text-[#0f767a] transition-colors hover:bg-[#0f767a] hover:text-white"
+            className="btn flex-1 md:flex-none border-2 border-brand-teal text-brand-teal transition-colors hover:bg-brand-teal hover:text-white"
           >
             Reject
           </button>
           <button
             type="button"
             onClick={() => choose('granted')}
-            className="btn flex-1 md:flex-none border-[#0f767a] bg-[#0f767a] text-white transition-colors hover:bg-[#1a9aa0]"
+            className="btn flex-1 md:flex-none border-brand-teal bg-brand-teal text-white transition-colors hover:bg-brand-teal-dark"
           >
             Accept
           </button>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'The Benefits of Sports Massage: What It Actually Does',
@@ -75,9 +76,9 @@ export default function SportsMassageBenefitsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             The Benefits of Sports Massage
           </h1>
@@ -89,10 +90,10 @@ export default function SportsMassageBenefitsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            The main benefits of sports massage are easing muscle tension and pain, aiding recovery after exercise, improving mobility and flexibility, supporting injury prevention and rehabilitation, and helping you relax. Despite the name, it is not just for athletes — desk workers and everyday active people gain just as much. At Range and Restore in Archway, North London, <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> is an assessment-led treatment aimed at whatever is actually bothering you.
+            The main benefits of sports massage are easing muscle tension and pain, aiding recovery after exercise, improving mobility and flexibility, supporting injury prevention and rehabilitation, and helping you relax. Despite the name, it is not just for athletes — desk workers and everyday active people gain just as much. At Range and Restore in Archway, North London, <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> is an assessment-led treatment aimed at whatever is actually bothering you.
           </p>
 
           <p>
@@ -102,19 +103,19 @@ export default function SportsMassageBenefitsPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Relieves muscle tension and knots</h2>
 
           <p>
-            Muscles that are overworked, held in one position for hours, or recovering from exercise tend to develop areas of tightness — including the tender, localised spots often called <Link href="/blog/muscle-knots-trigger-point-massage-archway" className="text-[#0f767a] hover:text-page font-medium">muscle knots or trigger points</Link>. Sports massage uses firm, targeted pressure, trigger point release and soft tissue techniques to ease these areas, reduce the sensation of tightness and restore a more comfortable resting length to the muscle. For many people this is the most immediately noticeable benefit — you simply feel looser afterwards.
+            Muscles that are overworked, held in one position for hours, or recovering from exercise tend to develop areas of tightness — including the tender, localised spots often called <Link href={ROUTES.blog.muscleKnotsTriggerPointMassageArchway} className="link-inline">muscle knots or trigger points</Link>. Sports massage uses firm, targeted pressure, trigger point release and soft tissue techniques to ease these areas, reduce the sensation of tightness and restore a more comfortable resting length to the muscle. For many people this is the most immediately noticeable benefit — you simply feel looser afterwards.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Eases pain — back, neck and more</h2>
 
           <p>
-            A great deal of everyday pain is muscular in origin. Tight, overloaded muscles in the lower back, neck, shoulders and hips are a common source of the nagging aches that build up over a working week. By releasing that tension and addressing the surrounding tissue, sports massage can meaningfully reduce this kind of discomfort — <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">lower back pain</Link> and stiff, hunched shoulders being two of the most frequent reasons people book. It is not a cure-all, and persistent or unexplained pain always deserves proper assessment, but for the muscular tension behind a lot of day-to-day aches it is genuinely effective.
+            A great deal of everyday pain is muscular in origin. Tight, overloaded muscles in the lower back, neck, shoulders and hips are a common source of the nagging aches that build up over a working week. By releasing that tension and addressing the surrounding tissue, sports massage can meaningfully reduce this kind of discomfort — <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link> and stiff, hunched shoulders being two of the most frequent reasons people book. It is not a cure-all, and persistent or unexplained pain always deserves proper assessment, but for the muscular tension behind a lot of day-to-day aches it is genuinely effective.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Aids recovery and eases DOMS</h2>
 
           <p>
-            After hard training or an unfamiliar effort, muscles often feel sore and stiff a day or two later — delayed onset muscle soreness, or DOMS. Sports massage supports recovery by increasing local circulation, helping to reduce that soreness and stiffness and leaving muscles feeling readier for the next session. It is a mainstay of <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">sports recovery</Link> for exactly this reason. It will not manufacture fitness you have not earned, but it can make the recovery side of training more comfortable and consistent.
+            After hard training or an unfamiliar effort, muscles often feel sore and stiff a day or two later — delayed onset muscle soreness, or DOMS. Sports massage supports recovery by increasing local circulation, helping to reduce that soreness and stiffness and leaving muscles feeling readier for the next session. It is a mainstay of <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline">sports recovery</Link> for exactly this reason. It will not manufacture fitness you have not earned, but it can make the recovery side of training more comfortable and consistent.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Improves mobility and flexibility</h2>
@@ -126,7 +127,7 @@ export default function SportsMassageBenefitsPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Helps prevent and rehab injuries</h2>
 
           <p>
-            Many overuse injuries build quietly out of tight, overloaded tissue and imbalances in how you move. Regular sports massage plays a part in prevention by keeping muscles supple, highlighting problem areas before they become injuries, and supporting balanced movement patterns. When something does flare up — the sort of niggles common in <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link> and other repetitive-load athletes — it also has a role in rehabilitation, working the surrounding tissue to reduce strain on the injured area. It works best alongside appropriate loading exercises and, where needed, input from a physiotherapist rather than in place of them.
+            Many overuse injuries build quietly out of tight, overloaded tissue and imbalances in how you move. Regular sports massage plays a part in prevention by keeping muscles supple, highlighting problem areas before they become injuries, and supporting balanced movement patterns. When something does flare up — the sort of niggles common in <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners</Link> and other repetitive-load athletes — it also has a role in rehabilitation, working the surrounding tissue to reduce strain on the injured area. It works best alongside appropriate loading exercises and, where needed, input from a physiotherapist rather than in place of them.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Supports relaxation, stress and sleep</h2>
@@ -156,7 +157,7 @@ export default function SportsMassageBenefitsPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a GP or physio first</h2>
 
           <p>
-            Sports massage suits most muscular aches, but some pain needs a proper medical look before anyone works on it. See your GP, a physio or A&amp;E first if your pain is severe or getting worse, follows a fall or other injury, comes with numbness, pins and needles or weakness in a limb, wakes you at night, or arrives with unexplained swelling or fever. Our therapists will tell you if something falls outside what massage can help with, and a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
+            Sports massage suits most muscular aches, but some pain needs a proper medical look before anyone works on it. See your GP, a physio or A&amp;E first if your pain is severe or getting worse, follows a fall or other injury, comes with numbness, pins and needles or weakness in a limb, wakes you at night, or arrives with unexplained swelling or fever. Our therapists will tell you if something falls outside what massage can help with, and a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage near you in North London</h2>
@@ -185,9 +186,9 @@ export default function SportsMassageBenefitsPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Feel the benefits for yourself</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Feel the benefits for yourself</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Book a sports massage in Archway, North London — assessment-led sports and deep tissue treatment tailored to your muscles, your activity and your aches.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -195,7 +196,7 @@ export default function SportsMassageBenefitsPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Book a Sports Massage
             </a>
@@ -203,13 +204,13 @@ export default function SportsMassageBenefitsPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -219,23 +220,23 @@ export default function SportsMassageBenefitsPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/muscle-knots-trigger-point-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.muscleKnotsTriggerPointMassageArchway} className="link-inline link-inline-tap">
               &rarr; Muscle Knots and Trigger Points: How Massage Helps
             </Link>
-            <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Lower Back Pain: How Sports Massage Helps
             </Link>
-            <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
               &rarr; Sports Recovery: Getting the Most From Your Training
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

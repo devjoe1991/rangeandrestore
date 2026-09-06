@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, personSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Press, Media & Interview Enquiries | Archway, North London',
@@ -101,9 +102,9 @@ export default function PressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       {/* ── Hero band ─────────────────────── */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Press &middot; Media &middot; Interviews &middot; Archway, North London</p>
+          <p className="eyebrow-sm">Press &middot; Media &middot; Interviews &middot; Archway, North London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Press, Media and Interview Enquiries
           </h1>
@@ -116,18 +117,18 @@ export default function PressPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
 
           <h2 className="text-2xl font-bold text-page mt-2 mb-3">Rooted in the Archway community</h2>
           <p>
             Range and Restore is a community-focused clinic, built shoulder to shoulder with the independents around us. Our hub on Junction Road sits inside a healthcare building shared with{' '}
-            <Link href="/community/reliable-scan" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Reliable Scan</Link>
+            <Link href={ROUTES.community.reliableScan} className="link-cite">Reliable Scan</Link>
             , a private diagnostic ultrasound clinic, a short walk from local cafés like{' '}
-            <Link href="/community/the-dynamic-spud" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">The Dynamic Spud</Link>
+            <Link href={ROUTES.community.theDynamicSpud} className="link-cite">The Dynamic Spud</Link>
             , yoga and Pilates studios like{' '}
-            <Link href="/community/sol-centre" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Sol Centre</Link>
+            <Link href={ROUTES.community.solCentre} className="link-cite">Sol Centre</Link>
             , bars, restaurants and the cycling and running scene that defines this part of North London. We work where we live, with the people we live alongside.
           </p>
           <p>
@@ -140,7 +141,7 @@ export default function PressPage() {
           </p>
           <ul className="list-disc pl-6 space-y-2 text-page-muted">
             <li><strong className="text-page">Local charities.</strong> We support{' '}
-              <Link href="/giving-back" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Whittington Health Charity and Phab</Link>
+              <Link href={ROUTES.givingBack} className="link-cite">Whittington Health Charity and Phab</Link>
               , donating sports massage treatments and gift vouchers as prizes for fundraising raffles. Carlos volunteers at Whittington Hospital events and at the London Marathon.
             </li>
             <li><strong className="text-page">Mental health support services.</strong> Soft tissue therapy and recovery work alongside mental health, with referrals in both directions where the work overlaps.</li>
@@ -149,7 +150,7 @@ export default function PressPage() {
             <li><strong className="text-page">Cycling clubs.</strong> Pre and post-ride soft tissue work for local cyclists and clubs, including riders training for sportives and longer routes out of London.</li>
             <li><strong className="text-page">Marathon and running clubs.</strong> Marathon prep, taper, race-day recovery and return-to-running rehab for local runners and running groups across the city.</li>
             <li><strong className="text-page">Independent businesses.</strong> Independent cafés, restaurants, bars and high street businesses we&apos;re proud to send our clients to, and who send theirs to us. See our{' '}
-              <Link href="/community" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Archway community page</Link>{' '}
+              <Link href={ROUTES.community.index} className="link-cite">Archway community page</Link>{' '}
               for the partners we&apos;re publicly working with.
             </li>
           </ul>
@@ -159,15 +160,15 @@ export default function PressPage() {
             Carlos Bonvicine is a BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist and a certified Manual Lymphatic Drainage practitioner. Subjects he&apos;s available to speak on, in plain language, without jargon:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-page-muted">
-            <li><Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Sports and deep tissue massage</Link> for everyday people, not just athletes.</li>
-            <li><Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Manual Lymphatic Drainage (MLD)</Link>, including post-surgery, oncology aftercare and pregnancy.</li>
-            <li><Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Recovery for marathons</Link>, half marathons, and amateur endurance athletes.</li>
-            <li><Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Infrared sauna</Link>,{' '}
-              <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">compression therapy</Link>{' '}
+            <li><Link href={ROUTES.services.sportsDeepTissueMassage} className="link-cite">Sports and deep tissue massage</Link> for everyday people, not just athletes.</li>
+            <li><Link href={ROUTES.services.manualLymphaticDrainage} className="link-cite">Manual Lymphatic Drainage (MLD)</Link>, including post-surgery, oncology aftercare and pregnancy.</li>
+            <li><Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-cite">Recovery for marathons</Link>, half marathons, and amateur endurance athletes.</li>
+            <li><Link href={ROUTES.recoverySuite.infraredSauna} className="link-cite">Infrared sauna</Link>,{' '}
+              <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-cite">compression therapy</Link>{' '}
               and contrast recovery for general wellbeing.
             </li>
-            <li><Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Desk-posture pain</Link>, chronic tension and stress-related musculoskeletal issues.</li>
-            <li><Link href="/services/advanced-clinical-massage" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Advanced clinical massage</Link> for sciatica, RSI, tension headaches and complex postural conditions.</li>
+            <li><Link href={ROUTES.blog.deskPosturePainMassage} className="link-cite">Desk-posture pain</Link>, chronic tension and stress-related musculoskeletal issues.</li>
+            <li><Link href={ROUTES.services.advancedClinicalMassage} className="link-cite">Advanced clinical massage</Link> for sciatica, RSI, tension headaches and complex postural conditions.</li>
             <li>How small independent clinics survive and thrive on a North London high street.</li>
             <li>The local independent scene in Archway, and why community-rooted businesses matter.</li>
           </ul>
@@ -186,7 +187,7 @@ export default function PressPage() {
             <strong className="text-page">Contact:</strong> Carlos Bonvicine, Founder &amp; Lead Therapist<br />
             <strong className="text-page">Clinic:</strong> Range and Restore, 130 Junction Road, Archway, London N19 5LB<br />
             <strong className="text-page">Press enquiries:</strong>{' '}
-            <Link href="/contact" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">use our contact form</Link>{' '}
+            <Link href={ROUTES.contact} className="link-cite">use our contact form</Link>{' '}
             with the outlet, angle and deadline.
           </p>
 
@@ -195,7 +196,7 @@ export default function PressPage() {
           <h3 className="text-lg font-bold text-page mt-6 mb-2">How do journalists and producers contact Range and Restore?</h3>
           <p>
             Press, podcast and media enquiries should be sent through the{' '}
-            <Link href="/contact" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">Range and Restore contact form</Link>. Include the outlet, the angle, your deadline and any preferred interview format. Carlos responds personally to all press requests.
+            <Link href={ROUTES.contact} className="link-cite">Range and Restore contact form</Link>. Include the outlet, the angle, your deadline and any preferred interview format. Carlos responds personally to all press requests.
           </p>
 
           <h3 className="text-lg font-bold text-page mt-6 mb-2">What subjects can Carlos speak on as an expert?</h3>
@@ -211,7 +212,7 @@ export default function PressPage() {
           <h3 className="text-lg font-bold text-page mt-6 mb-2">Where is Range and Restore based?</h3>
           <p>
             130 Junction Road, Archway, London N19 5LB. The clinic shares the building with Reliable Scan, a private diagnostic ultrasound clinic, and serves clients across Archway, Tufnell Park, Holloway, Islington, Finsbury Park, Highgate, Crouch End and the wider{' '}
-            <Link href="/areas-served" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold">North London area</Link>.
+            <Link href={ROUTES.areasServed.index} className="link-cite">North London area</Link>.
           </p>
 
           <h3 className="text-lg font-bold text-page mt-6 mb-2">Can journalists visit the clinic for filming or photography?</h3>
@@ -226,14 +227,14 @@ export default function PressPage() {
         </div>
 
         {/* ── Contact CTA ─────────────────────── */}
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-3">Press, interview and media enquiries</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-3">Press, interview and media enquiries</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Send a message through our contact form with a short note on the outlet, the angle and your deadline. Carlos comes back personally on everything.
           </p>
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+            href={ROUTES.contact}
+            className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
           >
             Contact Carlos <span aria-hidden="true">→</span>
           </Link>
@@ -243,22 +244,22 @@ export default function PressPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &rarr; Our Archway community and local partners
             </Link>
-            <Link href="/giving-back" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.givingBack} className="link-inline link-inline-tap">
               &rarr; The charities we support
             </Link>
-            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.about} className="link-inline link-inline-tap">
               &rarr; About Carlos and Range and Restore
             </Link>
-            <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.areasServed.index} className="link-inline link-inline-tap">
               &rarr; Areas we serve across North London
             </Link>
-            <Link href="/clinical-collaboration" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.clinicalCollaboration} className="link-inline link-inline-tap">
               &rarr; Clinical collaboration at 130 Junction Road
             </Link>
-            <Link href="/blog" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.index} className="link-inline link-inline-tap">
               &rarr; Range and Restore Wellness Hub
             </Link>
           </div>

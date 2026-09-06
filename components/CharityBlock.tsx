@@ -61,7 +61,7 @@ export function CharityBlock({
       {/* Text stays at a readable measure even though the page runs full width.
           The carousel below deliberately spans the whole container. */}
       <div className="max-w-3xl">
-        <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
+        <p className="eyebrow-sm">
           {eyebrow}
         </p>
         <h2 id={`${id}-heading`} className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-4">
@@ -80,7 +80,7 @@ export function CharityBlock({
           href={donateUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline min-h-[44px]"
+          className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline min-h-[44px]"
         >
           Donate to {shortName} <span aria-hidden="true">&rarr;</span>
         </a>
@@ -89,7 +89,7 @@ export function CharityBlock({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${name} on Instagram`}
-          className="inline-flex items-center gap-2 bg-card text-page hover:bg-[#1a3d3a] hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-[#1a3d3a] min-h-[44px]"
+          className="inline-flex items-center gap-2 bg-card text-page hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green min-h-[44px]"
         >
           <InstagramIcon /> {instagramHandle}
         </a>

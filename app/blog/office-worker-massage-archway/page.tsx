@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Office Workers in Archway | Desk Pain Relief',
@@ -85,9 +86,9 @@ export default function OfficeWorkerMassageArchwayPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub &middot; Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage Helps Office Workers in Archway, North London
           </h1>
@@ -99,14 +100,14 @@ export default function OfficeWorkerMassageArchwayPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             In today&apos;s fast-paced working environment, many of us spend long hours sitting at desks, commuting across the city, and staring at screens. Over months and years, that lifestyle builds up a quiet but relentless load on the body &mdash; muscular tension, restricted movement, postural change, and a slow drift toward persistent discomfort.
           </p>
 
           <p>
-            At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore Sports Massage in Archway, North London</Link>, I regularly treat office workers, commuters, and people working long hours at desks. The pattern is familiar: the same tightness appearing in the same places, the same aches settling in at the end of the working week. The good news is that it responds well to targeted treatment &mdash; and that you don&apos;t have to accept it as the price of a desk job.
+            At <Link href={ROUTES.about} className="link-inline">Range and Restore Sports Massage in Archway, North London</Link>, I regularly treat office workers, commuters, and people working long hours at desks. The pattern is familiar: the same tightness appearing in the same places, the same aches settling in at the end of the working week. The good news is that it responds well to targeted treatment &mdash; and that you don&apos;t have to accept it as the price of a desk job.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Common problems from desk work and commuting</h2>
@@ -145,7 +146,7 @@ export default function OfficeWorkerMassageArchwayPage() {
           </ul>
 
           <p>
-            This creates a self-reinforcing pattern &mdash; tight muscles pull joints out of alignment, weak muscles fail to hold them in place, and the nervous system gradually adopts the distortion as its new normal. For a deeper look at the mechanics, including upper and lower crossed syndrome and how to reverse them, see <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium">our guide to desk posture pain</Link>.
+            This creates a self-reinforcing pattern &mdash; tight muscles pull joints out of alignment, weak muscles fail to hold them in place, and the nervous system gradually adopts the distortion as its new normal. For a deeper look at the mechanics, including upper and lower crossed syndrome and how to reverse them, see <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">our guide to desk posture pain</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How sports massage and soft tissue therapy help</h2>
@@ -171,7 +172,7 @@ export default function OfficeWorkerMassageArchwayPage() {
 
           <ul className="space-y-4 list-none pl-0">
             <li>
-              <span className="font-semibold text-page"><Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Deep tissue massage</Link></span> &mdash; Sustained, controlled pressure applied to the deeper layers of muscle where desk-related tension embeds itself. Particularly effective for the upper trapezius, levator scapulae, and lumbar erectors.
+              <span className="font-semibold text-page"><Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Deep tissue massage</Link></span> &mdash; Sustained, controlled pressure applied to the deeper layers of muscle where desk-related tension embeds itself. Particularly effective for the upper trapezius, levator scapulae, and lumbar erectors.
             </li>
             <li>
               <span className="font-semibold text-page">Myofascial release</span> &mdash; Works with the connective tissue wrapping every muscle. Restores slide and glide between tissue layers, improving how freely your shoulders, hips, and spine move.
@@ -188,7 +189,7 @@ export default function OfficeWorkerMassageArchwayPage() {
           </ul>
 
           <p>
-            For complex or long-standing issues, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> may be incorporated to address the root cause rather than just the symptom.
+            For complex or long-standing issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> may be incorporated to address the root cause rather than just the symptom.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Commuters and long-hour workers</h2>
@@ -198,7 +199,7 @@ export default function OfficeWorkerMassageArchwayPage() {
           </p>
 
           <p>
-            If your week involves long hours at a desk plus a daily commute, the cumulative effect on the body is significant. Regular treatment &mdash; every three to four weeks through busy periods &mdash; keeps the tension from embedding, catches problem areas before they become injuries, and keeps you moving freely through the working day. Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated throughout the day</Link> alongside treatment helps the tissue stay supple and responsive.
+            If your week involves long hours at a desk plus a daily commute, the cumulative effect on the body is significant. Regular treatment &mdash; every three to four weeks through busy periods &mdash; keeps the tension from embedding, catches problem areas before they become injuries, and keeps you moving freely through the working day. Staying well <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated throughout the day</Link> alongside treatment helps the tissue stay supple and responsive.
           </p>
         </div>
 
@@ -236,12 +237,12 @@ export default function OfficeWorkerMassageArchwayPage() {
           <ul className="space-y-2 list-disc list-inside">
             <li>Open Monday to Friday 08:00&ndash;20:00, Saturday and Sunday 09:00&ndash;17:00 &mdash; appointments that work around the 9&ndash;5</li>
             <li>30, 60, and 90-minute sessions available</li>
-            <li><Link href="/services/massage-bundles" className="text-[#0f767a] hover:text-page font-medium">Massage bundles</Link> for regular treatment through busy working periods</li>
-            <li>See <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">areas served</Link> for more on the North London areas I cover</li>
+            <li><Link href={ROUTES.services.massageBundles} className="link-inline">Massage bundles</Link> for regular treatment through busy working periods</li>
+            <li>See <Link href={ROUTES.areasServed.index} className="link-inline">areas served</Link> for more on the North London areas I cover</li>
           </ul>
 
           <p>
-            If you&apos;re not sure which service or session length is right for you, <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">get in touch</Link> and I&apos;ll point you in the right direction.
+            If you&apos;re not sure which service or session length is right for you, <Link href={ROUTES.contact} className="link-inline">get in touch</Link> and I&apos;ll point you in the right direction.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Don&apos;t wait for it to become chronic</h2>
@@ -274,9 +275,9 @@ export default function OfficeWorkerMassageArchwayPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ready to undo the damage of desk work?</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Ready to undo the damage of desk work?</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Book a Back &amp; Neck Pain MOT at Range and Restore in Archway, North London. Assessment-led treatment tailored to office workers, commuters, and long-hour desk workers.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -284,7 +285,7 @@ export default function OfficeWorkerMassageArchwayPage() {
               href={BOOKING_URLS.backNeckMot}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -292,13 +293,13 @@ export default function OfficeWorkerMassageArchwayPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -308,20 +309,20 @@ export default function OfficeWorkerMassageArchwayPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
               &rarr; Back &amp; Neck Pain MOT &ndash; Soft Tissue Remedial Massage Therapy
             </Link>
-            <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
               &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps
             </Link>
-            <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline link-inline-tap">
               &rarr; Hydration and Muscle Health &ndash; What Every Client Should Know
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>

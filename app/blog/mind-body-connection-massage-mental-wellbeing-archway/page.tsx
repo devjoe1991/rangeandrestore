@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'The Mind-Body Connection: How Easing Pain Supports Mental Wellbeing',
@@ -88,9 +89,9 @@ export default function MindBodyConnectionPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             The Mind-Body Connection: How Reducing Pain and Improving Movement Can Support Your Mental Wellbeing
           </h1>
@@ -102,7 +103,7 @@ export default function MindBodyConnectionPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             Persistent pain, tight muscles and movement that has quietly become restricted do not just affect your body. They disturb sleep, push stress levels up, drag mood down and make people anxious about doing the things they used to do without thinking. Sports massage and soft tissue therapy work on the physical side of that picture — reducing pain and muscular tension and restoring comfortable movement — and when you are moving better and hurting less, it naturally has a positive effect on how you feel mentally too.
@@ -137,7 +138,7 @@ export default function MindBodyConnectionPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Reducing pain and muscular tension</h3>
           <p>
-            Hands-on work on tight, overloaded tissue — deep tissue massage, trigger point work, myofascial release and the other techniques in a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> — reduces the tension and tenderness that most persistent aches come from. A tight, guarded muscle is painful in itself; it also pulls on joints and surrounding structures, so releasing it often eases pain well beyond the spot being treated. Our pieces on <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">lower back pain</Link>, <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">neck pain</Link> and <Link href="/blog/muscle-knots-trigger-point-massage-archway" className="text-[#0f767a] hover:text-page font-medium">muscle knots</Link> go into the detail for the most common problem areas.
+            Hands-on work on tight, overloaded tissue — deep tissue massage, trigger point work, myofascial release and the other techniques in a <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> — reduces the tension and tenderness that most persistent aches come from. A tight, guarded muscle is painful in itself; it also pulls on joints and surrounding structures, so releasing it often eases pain well beyond the spot being treated. Our pieces on <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link>, <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">neck pain</Link> and <Link href={ROUTES.blog.muscleKnotsTriggerPointMassageArchway} className="link-inline">muscle knots</Link> go into the detail for the most common problem areas.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving range of movement</h3>
@@ -172,17 +173,17 @@ export default function MindBodyConnectionPage() {
           </p>
 
           <p>
-            Sleep is where this shows up most clearly. Many clients sleep noticeably better in the nights after a session — partly because an aching back or a stiff neck is no longer waking them, and partly because the nervous system has been given a proper chance to settle. Better sleep then improves mood, concentration and resilience to stress, which makes it one of the most valuable knock-on effects of easing physical discomfort. If stress and general tension are your main issue rather than a specific injury, our article on <Link href="/blog/stress-relief-massage-archway" className="text-[#0f767a] hover:text-page font-medium">stress relief massage</Link> covers that side in more depth, and a slower <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium">relaxation and restorative massage</Link> may be the better fit.
+            Sleep is where this shows up most clearly. Many clients sleep noticeably better in the nights after a session — partly because an aching back or a stiff neck is no longer waking them, and partly because the nervous system has been given a proper chance to settle. Better sleep then improves mood, concentration and resilience to stress, which makes it one of the most valuable knock-on effects of easing physical discomfort. If stress and general tension are your main issue rather than a specific injury, our article on <Link href={ROUTES.blog.stressReliefMassageArchway} className="link-inline">stress relief massage</Link> covers that side in more depth, and a slower <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">relaxation and restorative massage</Link> may be the better fit.
           </p>
 
           <p>
-            For clients who want to extend that effect, the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">Infrared Hybrid Sauna</Link> in our Recovery Suite pairs well with a treatment: gentle heat, quiet and time to switch off, before or after hands-on work.
+            For clients who want to extend that effect, the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link> in our Recovery Suite pairs well with a treatment: gentle heat, quiet and time to switch off, before or after hands-on work.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Which treatment is right for you?</h2>
 
           <p>
-            It depends on what is driving the discomfort. If there is a clear physical problem — a bad back, a stiff neck, a tight hip, an old injury that never quite settled — an assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> or <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> that works directly on the cause usually gives the biggest improvement in comfort, movement and, by extension, mood. If you are wound up and carrying general tension with no single source, a relaxation and restorative massage is often the better starting point.
+            It depends on what is driving the discomfort. If there is a clear physical problem — a bad back, a stiff neck, a tight hip, an old injury that never quite settled — an assessment-led <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> or <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> that works directly on the cause usually gives the biggest improvement in comfort, movement and, by extension, mood. If you are wound up and carrying general tension with no single source, a relaxation and restorative massage is often the better starting point.
           </p>
 
           <p>
@@ -192,7 +193,7 @@ export default function MindBodyConnectionPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How often should I come?</h2>
 
           <p>
-            There is no fixed prescription. If persistent pain or tension is affecting your sleep and mood, a short run of closer-together sessions to get on top of the physical problem, followed by a regular maintenance rhythm such as monthly, works well for most people. If you are after an occasional reset, a single session when you need one is perfectly reasonable. Between sessions the ordinary things still matter — protecting your sleep, moving regularly, taking real breaks from screens and staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated</Link>.
+            There is no fixed prescription. If persistent pain or tension is affecting your sleep and mood, a short run of closer-together sessions to get on top of the physical problem, followed by a regular maintenance rhythm such as monthly, works well for most people. If you are after an occasional reset, a single session when you need one is perfectly reasonable. Between sessions the ordinary things still matter — protecting your sleep, moving regularly, taking real breaks from screens and staying well <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek other support</h2>
@@ -202,7 +203,7 @@ export default function MindBodyConnectionPage() {
           </p>
 
           <p>
-            The same applies to the pain itself. If it is getting worse, follows an injury, comes with numbness, weakness or unexplained symptoms, or has not responded to treatment, it should be properly assessed. Our therapists will tell you if that is the case, and a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
+            The same applies to the pain itself. If it is getting worse, follows an injury, comes with numbness, weakness or unexplained symptoms, or has not responded to treatment, it should be properly assessed. Our therapists will tell you if that is the case, and a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage for pain, movement and wellbeing in North London</h2>
@@ -227,9 +228,9 @@ export default function MindBodyConnectionPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Move better. Feel better.</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Move better. Feel better.</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led sports massage and soft tissue therapy to ease pain, restore movement and help you feel more like yourself, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -237,7 +238,7 @@ export default function MindBodyConnectionPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -245,13 +246,13 @@ export default function MindBodyConnectionPage() {
               href={BOOKING_URLS.relaxation}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Book a Relaxation Massage
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -261,23 +262,23 @@ export default function MindBodyConnectionPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/blog/stress-relief-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.stressReliefMassageArchway} className="link-inline link-inline-tap">
               &rarr; Stress Relief Massage: Ease Tension and Switch Off
             </Link>
-            <Link href="/blog/sports-massage-benefits" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline link-inline-tap">
               &rarr; The Benefits of Sports Massage: What It Actually Does
             </Link>
-            <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline link-inline-tap">
               &rarr; Relaxation &amp; Restorative Massage
             </Link>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports &amp; Deep Tissue Massage
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

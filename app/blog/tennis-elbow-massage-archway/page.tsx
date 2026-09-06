@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Tennis Elbow and RSI: Can Soft Tissue Therapy Help?',
@@ -75,9 +76,9 @@ export default function TennisElbowRSIPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Tennis Elbow and RSI – How Soft Tissue Therapy Helps
           </h1>
@@ -89,10 +90,10 @@ export default function TennisElbowRSIPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Soft tissue therapy can help tennis elbow and RSI by releasing the tight forearm extensor muscles and addressing the neck, shoulder and grip patterns that overload the tendon at the elbow — working alongside load management and strengthening rather than instead of them. At Range and Restore in Archway, North London, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> takes an assessment-led approach to exactly this kind of overuse pain.
+            Soft tissue therapy can help tennis elbow and RSI by releasing the tight forearm extensor muscles and addressing the neck, shoulder and grip patterns that overload the tendon at the elbow — working alongside load management and strengthening rather than instead of them. At Range and Restore in Archway, North London, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> takes an assessment-led approach to exactly this kind of overuse pain.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is tennis elbow (and is it only from tennis)?</h2>
@@ -118,7 +119,7 @@ export default function TennisElbowRSIPage() {
           </ul>
 
           <p>
-            The underlying issue is often not confined to the elbow itself. Tension frequently builds through the whole forearm, and the way the neck, shoulder and grip are used at a workstation can keep feeding the problem. This is why the same desk-posture patterns behind <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium">desk-posture pain</Link> and the strain picked up by <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium">office workers</Link> so often show up as forearm and elbow symptoms too.
+            The underlying issue is often not confined to the elbow itself. Tension frequently builds through the whole forearm, and the way the neck, shoulder and grip are used at a workstation can keep feeding the problem. This is why the same desk-posture patterns behind <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">desk-posture pain</Link> and the strain picked up by <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">office workers</Link> so often show up as forearm and elbow symptoms too.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How soft tissue therapy helps</h2>
@@ -164,7 +165,7 @@ export default function TennisElbowRSIPage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to clarify what is going on at the tendon, this can be arranged within the same building.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to clarify what is going on at the tendon, this can be arranged within the same building.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find tennis elbow and RSI treatment near you in North London</h2>
@@ -193,9 +194,9 @@ export default function TennisElbowRSIPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Elbow or forearm pain that will not settle?</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Elbow or forearm pain that will not settle?</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led advanced clinical massage for the forearm tension and desk habits behind your tennis elbow or RSI, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -203,7 +204,7 @@ export default function TennisElbowRSIPage() {
               href={BOOKING_URLS.advancedClinical}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -211,13 +212,13 @@ export default function TennisElbowRSIPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -227,20 +228,20 @@ export default function TennisElbowRSIPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage
             </Link>
-            <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
               &rarr; Desk Posture Pain and How Massage Helps
             </Link>
-            <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
               &rarr; Massage for Office Workers in Archway
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

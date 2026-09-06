@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Sessions in Archway London | Infrared Sauna, Massage Packages & Memberships',
@@ -184,28 +185,28 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
   return (
     <div
       className={`relative rounded-2xl p-6 flex flex-col card-lift border-2 ${
-        session.popular ? 'bg-[#7dd94a] border-[#122a28]/15' : 'bg-card border-[#1a3d3a]'
+        session.popular ? 'bg-accent border-brand-green-dark/15' : 'bg-card border-brand-green'
       }`}
     >
       {session.popular && (
-        <span className="absolute -top-3 left-6 bg-[#122a28] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+        <span className="absolute -top-3 left-6 bg-brand-green-dark text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
           {popularLabel}
         </span>
       )}
-      <h3 className={`font-black text-lg leading-tight tracking-tight mb-2 ${session.popular ? 'text-[#122a28]' : 'text-page'}`}>
+      <h3 className={`font-black text-lg leading-tight tracking-tight mb-2 ${session.popular ? 'text-brand-green-dark' : 'text-page'}`}>
         {session.name}
       </h3>
       {session.price && (
-        <p className={`text-2xl font-black mb-1 ${session.popular ? 'text-[#122a28]' : 'text-page'}`}>{session.price}</p>
+        <p className={`text-2xl font-black mb-1 ${session.popular ? 'text-brand-green-dark' : 'text-page'}`}>{session.price}</p>
       )}
       {session.priceNote && (
-        <p className={`text-xs font-bold mb-1 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>{session.priceNote}</p>
+        <p className={`text-xs font-bold mb-1 ${session.popular ? 'text-brand-green/80' : 'text-page-muted'}`}>{session.priceNote}</p>
       )}
-      <p className={`text-sm font-bold mb-1 ${session.popular ? 'text-[#1a3d3a]' : 'text-[#0f767a]'}`}>{session.sequence}</p>
+      <p className={`text-sm font-bold mb-1 ${session.popular ? 'text-brand-green' : 'text-brand-teal'}`}>{session.sequence}</p>
       {session.total && (
-        <p className={`text-xs font-semibold mb-3 ${session.popular ? 'text-[#1a3d3a]/80' : 'text-page-muted'}`}>{session.total}</p>
+        <p className={`text-xs font-semibold mb-3 ${session.popular ? 'text-brand-green/80' : 'text-page-muted'}`}>{session.total}</p>
       )}
-      <p className={`text-sm leading-relaxed mb-5 flex-1 ${session.popular ? 'text-[#1a3d3a]' : 'text-page-muted'}`}>{session.desc}</p>
+      <p className={`text-sm leading-relaxed mb-5 flex-1 ${session.popular ? 'text-brand-green' : 'text-page-muted'}`}>{session.desc}</p>
       <div className="mt-auto flex items-center justify-between gap-3 flex-wrap">
         <a
           href={BOOKING_URLS.recoverySuite}
@@ -213,8 +214,8 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
           rel="noopener noreferrer"
           className={`inline-flex items-center justify-center px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-colors ${
             session.popular
-              ? 'bg-[#122a28] text-white hover:bg-[#1a3d3a]'
-              : 'bg-[#0f767a] text-white hover:bg-[#1a3d3a]'
+              ? 'bg-brand-green-dark text-white hover:bg-brand-green'
+              : 'bg-brand-teal text-white hover:bg-brand-green'
           }`}
         >
           Book Now
@@ -222,7 +223,7 @@ function SessionCard({ session, popularLabel = 'Best Value' }: { session: Sessio
         {session.detailHref && (
           <Link
             href={session.detailHref}
-            className={`text-xs font-black uppercase tracking-wide inline-flex items-center gap-1 ${session.popular ? 'text-[#122a28] hover:text-white' : 'text-[#0f767a] hover:text-page'}`}
+            className={`text-xs font-black uppercase tracking-wide inline-flex items-center gap-1 ${session.popular ? 'text-brand-green-dark hover:text-white' : 'text-brand-teal hover:text-page'}`}
           >
             Read more <span aria-hidden="true">→</span>
           </Link>
@@ -247,31 +248,31 @@ function MembershipCard({ m, popularLabel = 'Most Popular' }: { m: Membership; p
   return (
     <div
       className={`relative rounded-2xl p-6 flex flex-col card-lift border-2 ${
-        m.popular ? 'bg-[#7dd94a] border-[#122a28]/15' : 'bg-card border-[#1a3d3a]'
+        m.popular ? 'bg-accent border-brand-green-dark/15' : 'bg-card border-brand-green'
       }`}
     >
       {m.popular && (
-        <span className="absolute -top-3 left-6 bg-[#122a28] text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
+        <span className="absolute -top-3 left-6 bg-brand-green-dark text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
           {popularLabel}
         </span>
       )}
-      <h3 className={`font-black text-lg leading-tight tracking-tight mb-2 ${m.popular ? 'text-[#122a28]' : 'text-page'}`}>
+      <h3 className={`font-black text-lg leading-tight tracking-tight mb-2 ${m.popular ? 'text-brand-green-dark' : 'text-page'}`}>
         {m.name}
       </h3>
-      <p className={`mb-1 ${m.popular ? 'text-[#122a28]' : 'text-page'}`}>
+      <p className={`mb-1 ${m.popular ? 'text-brand-green-dark' : 'text-page'}`}>
         <span className="text-3xl font-black">{m.price}</span>
         <span className="text-sm font-bold">{m.period}</span>
       </p>
       {m.usual && (
-        <p className={`text-xs font-bold mb-2 line-through ${m.popular ? 'text-[#1a3d3a]/70' : 'text-page-muted'}`}>{m.usual}</p>
+        <p className={`text-xs font-bold mb-2 line-through ${m.popular ? 'text-brand-green/70' : 'text-page-muted'}`}>{m.usual}</p>
       )}
-      <p className={`text-sm font-bold mb-2 ${m.popular ? 'text-[#1a3d3a]' : 'text-[#0f767a]'}`}>{m.detail}</p>
+      <p className={`text-sm font-bold mb-2 ${m.popular ? 'text-brand-green' : 'text-brand-teal'}`}>{m.detail}</p>
       {m.desc && (
-        <p className={`text-sm leading-relaxed mb-3 flex-1 ${m.popular ? 'text-[#1a3d3a]' : 'text-page-muted'}`}>{m.desc}</p>
+        <p className={`text-sm leading-relaxed mb-3 flex-1 ${m.popular ? 'text-brand-green' : 'text-page-muted'}`}>{m.desc}</p>
       )}
       {m.saving && (
         <span className={`self-start text-[0.65rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-md mt-auto ${
-          m.popular ? 'bg-[#122a28] text-[#7dd94a]' : 'bg-[#7dd94a] text-[#1a2330]'
+          m.popular ? 'bg-brand-green-dark text-accent' : 'bg-accent text-ink'
         }`}>
           {m.saving}
         </span>
@@ -287,9 +288,9 @@ export default function RecoverySessionsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Recovery Sessions &middot; Archway London</p>
+          <p className="eyebrow-sm">Recovery Sessions &middot; Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Recovery Sessions in Archway, North London
           </h1>
@@ -392,7 +393,7 @@ export default function RecoverySessionsPage() {
           </section>
 
           {/* Membership join note */}
-          <section className="bg-card border-2 border-[#1a3d3a] rounded-2xl p-6 sm:p-8">
+          <section className="bg-card border-2 border-brand-green rounded-2xl p-6 sm:p-8">
             <h2 className="text-xl font-bold text-page mb-3">How to join a membership</h2>
             <p className="text-page-muted mb-5">
               To join a Restore+ membership, please call or email us. Memberships are set up personally and are not currently available to purchase online.
@@ -401,7 +402,7 @@ export default function RecoverySessionsPage() {
               <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call {BUSINESS.phone}</a>
               <a
                 href={`mailto:${BUSINESS.email}`}
-                className="text-page text-sm font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center underline underline-offset-2"
+                className="text-page text-sm font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center underline underline-offset-2"
               >
                 Email {BUSINESS.email}
               </a>
@@ -432,7 +433,7 @@ export default function RecoverySessionsPage() {
                 'Pay one price at checkout, no need to manage multiple bookings',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
                   {step}
                 </li>
               ))}
@@ -444,7 +445,7 @@ export default function RecoverySessionsPage() {
             <h2 className="text-2xl font-bold text-page mb-4">Already on a massage bundle?</h2>
             <p className="text-page-muted">
               Bundle clients can add a sauna session to any standalone massage at pay as you go pricing. Just speak to your therapist at the start of your next appointment and they&apos;ll add it on for you. See the
-              {' '}<Link href="/services/massage-bundles" className="text-[#0f767a] underline">Massage Bundles page</Link>{' '}
+              {' '}<Link href={ROUTES.services.massageBundles} className="text-brand-teal underline">Massage Bundles page</Link>{' '}
               for current bundle options.
             </p>
           </section>
@@ -456,16 +457,16 @@ export default function RecoverySessionsPage() {
           </section>
 
           {/* Book Now CTA */}
-          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Recovery Sessions at Range and Restore</h2>
-            <p className="text-[#1a3d3a] font-semibold mb-6">
+          <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-ink mb-4">Recovery Sessions at Range and Restore</h2>
+            <p className="text-brand-green font-semibold mb-6">
               The Recovery Suite is open in Archway, North London. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, and sports massage recovery packages from £85. Available to book now, with Restore+ memberships available on request.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ink text-white font-black uppercase tracking-widest text-sm hover:bg-brand-green-dark transition-colors"
             >
               Book Recovery Session
             </a>
@@ -474,10 +475,10 @@ export default function RecoverySessionsPage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline link-inline-tap">
                 &rarr; Infrared Hybrid Sauna
               </Link>
-              <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline link-inline-tap">
                 &rarr; Normatec Compression Therapy
               </Link>
             </div>

@@ -54,7 +54,7 @@ export default function ContactPage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[#1a3d3a]/70" />
+        <div className="absolute inset-0 bg-brand-green/70" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Contact Range and Restore – Archway, London N19</h1>
           <p className="mt-4 text-xl text-white/80">Get in touch with Range and Restore</p>
@@ -62,7 +62,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact actions */}
           <div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
-                className="btn w-full text-base border-2 border-[#0f767a] text-[#0f767a] hover:bg-[#0f767a] hover:text-white transition-colors"
+                className="btn w-full text-base border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white transition-colors"
               >
                 Email Range and Restore
               </a>
@@ -113,7 +113,7 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-semibold text-page mb-1">Email</h3>
-                <a href={`mailto:${BUSINESS.email}`} className="text-[#0f767a] hover:text-page font-medium min-h-[44px] inline-flex items-center">
+                <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.email}
                 </a>
               </div>

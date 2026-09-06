@@ -5,6 +5,7 @@ import { FaqAccordion } from '@/components/FaqAccordion'
 import { SaunaBenefits } from '@/components/sauna-room/SaunaBenefits'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 // WebGL has no server rendering path, so the scene mounts on the client only.
 const SaunaRoomScene = dynamic(() => import('@/components/sauna-room/SaunaRoomScene'), {
@@ -141,7 +142,7 @@ export default function SaunaRoomPage() {
 
       <main className="mx-auto w-full max-w-6xl px-4 py-10">
         <header className="mb-6 max-w-2xl">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#0f767a]">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
             An immersive experience in wellbeing
           </p>
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -202,7 +203,7 @@ export default function SaunaRoomPage() {
         </section>
 
         {/* Close on the ask. */}
-        <section className="mt-14 rounded-3xl bg-[#1a3d3a] px-6 py-10 text-center sm:px-10 sm:py-12">
+        <section className="mt-14 rounded-3xl bg-brand-green px-6 py-10 text-center sm:px-10 sm:py-12">
           <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Sessions run on availability first
           </h2>
@@ -215,12 +216,12 @@ export default function SaunaRoomPage() {
               href={BOOKING_URLS.infraredHybridSauna}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-[#1a3d3a] transition hover:bg-white/90"
+              className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-brand-green transition hover:bg-white/90"
             >
               Become a member
             </a>
             <Link
-              href="/recovery-suite/infrared-sauna"
+              href={ROUTES.recoverySuite.infraredSauna}
               className="rounded-full border border-white/35 px-7 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               About the infrared sauna
@@ -237,13 +238,13 @@ export default function SaunaRoomPage() {
 
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
-            href="/recovery-suite"
+            href={ROUTES.recoverySuite.index}
             className="rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-medium text-neutral-800 transition hover:bg-neutral-100"
           >
             Explore the recovery suite
           </Link>
           <Link
-            href="/contact"
+            href={ROUTES.contact}
             className="rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-medium text-neutral-800 transition hover:bg-neutral-100"
           >
             Ask us a question

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Tension Headaches: Can Massage Help?',
@@ -75,9 +76,9 @@ export default function TensionHeadachePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Tension Headaches – How Massage Can Help
           </h1>
@@ -89,10 +90,10 @@ export default function TensionHeadachePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Tension-type headaches are often driven by tight neck, upper-trapezius and jaw muscles and the trigger points within them. Where that is the case, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">Advanced Clinical Massage</Link> can help by releasing that muscle tension and the postural load behind it. Massage is not a treatment for migraine or other headache types, which need medical review.
+            Tension-type headaches are often driven by tight neck, upper-trapezius and jaw muscles and the trigger points within them. Where that is the case, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">Advanced Clinical Massage</Link> can help by releasing that muscle tension and the postural load behind it. Massage is not a treatment for migraine or other headache types, which need medical review.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is a tension headache?</h2>
@@ -110,7 +111,7 @@ export default function TensionHeadachePage() {
           <p>Common contributing factors include:</p>
           <ul className="space-y-2 list-disc list-inside">
             <li>Tight neck and shoulder muscles holding sustained tension</li>
-            <li>Prolonged <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium">desk posture</Link> and long hours at a screen</li>
+            <li>Prolonged <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">desk posture</Link> and long hours at a screen</li>
             <li>A forward head position that overloads the muscles at the base of the skull</li>
             <li>Stress, which tends to be carried in the upper trapezius and jaw</li>
             <li>Jaw clenching or teeth grinding</li>
@@ -118,7 +119,7 @@ export default function TensionHeadachePage() {
           </ul>
 
           <p>
-            This pattern is especially common in <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium">office workers</Link> and anyone spending long hours at a laptop. The underlying issue is often not the head itself, but the neck, shoulders and jaw muscles that surround it, which have become so tight and overloaded that they refer pain upwards. If a <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">stiff, aching neck</Link> is the bigger complaint, we cover that separately.
+            This pattern is especially common in <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">office workers</Link> and anyone spending long hours at a laptop. The underlying issue is often not the head itself, but the neck, shoulders and jaw muscles that surround it, which have become so tight and overloaded that they refer pain upwards. If a <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">stiff, aching neck</Link> is the bigger complaint, we cover that separately.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps tension headaches</h2>
@@ -164,7 +165,7 @@ export default function TensionHeadachePage() {
           </p>
 
           <p>
-            If your headaches are frequent, changing in pattern, or not clearly linked to neck and shoulder tension, please have them reviewed medically first. Range and Restore is happy to work alongside your GP, and operates in the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway, should a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> be needed.
+            If your headaches are frequent, changing in pattern, or not clearly linked to neck and shoulder tension, please have them reviewed medically first. Range and Restore is happy to work alongside your GP, and operates in the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway, should a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> be needed.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find headache and neck-tension massage near you in North London</h2>
@@ -193,9 +194,9 @@ export default function TensionHeadachePage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Ease the tension behind your headaches</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Ease the tension behind your headaches</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led Advanced Clinical Massage targeting the tight neck, shoulder and jaw muscles behind tension headaches, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -203,7 +204,7 @@ export default function TensionHeadachePage() {
               href={BOOKING_URLS.advancedClinical}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -211,13 +212,13 @@ export default function TensionHeadachePage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -227,23 +228,23 @@ export default function TensionHeadachePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
               &rarr; Desk Posture, Neck &amp; Shoulder Pain: How Massage Helps
             </Link>
-            <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Neck Pain and a Stiff Neck: How Massage Helps
             </Link>
-            <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Office Workers in Archway
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

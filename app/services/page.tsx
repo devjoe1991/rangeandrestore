@@ -7,6 +7,7 @@ import { AwardStrip } from '@/components/AwardStrip'
 import { ReviewsStrip } from '@/components/ReviewsStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
 import { BookingButton } from '@/components/BookingButton'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Services in Archway N19 | Range and Restore',
@@ -194,7 +195,7 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <div className="relative bg-[#1a3d3a] pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
+      <div className="relative bg-brand-green pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"
           alt="Sports massage treatment in progress"
@@ -205,10 +206,10 @@ export default function ServicesPage() {
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Sports Massage Services in Archway, North London</h1>
-          <p className="mt-4 text-xl text-[#d4ecea]/90 max-w-2xl">
+          <p className="mt-4 text-xl text-teal-tint/90 max-w-2xl">
             Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.
           </p>
-          <p className="mt-3 text-[#d4ecea]/70 max-w-2xl">
+          <p className="mt-3 text-teal-tint/70 max-w-2xl">
             Back pain, running injuries, runner&apos;s knee, shoulder problems, sciatica, neck pain. If any of these sound familiar, the right treatment is here.
           </p>
         </div>
@@ -224,11 +225,11 @@ export default function ServicesPage() {
           <div className="mb-7 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
             <div>
               <span className="eyebrow block mb-2" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Treatments</span>
-              <h2 id="treatments-heading" className="text-2xl sm:text-3xl font-extrabold text-[#1a2330] tracking-tight">
+              <h2 id="treatments-heading" className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
                 Massage &amp; clinical treatments
               </h2>
             </div>
-            <p className="text-[#1a3d3a]/80 text-sm font-semibold sm:text-right">
+            <p className="text-brand-green/80 text-sm font-semibold sm:text-right">
               Every session includes assessment<br className="hidden sm:block" /> and aftercare advice.
             </p>
           </div>
@@ -240,14 +241,14 @@ export default function ServicesPage() {
       </section>
 
       {/* ── RECOVERY SUITE ───────────────────────────────────── */}
-      <section className="section bg-[#1a3d3a]" aria-labelledby="recovery-heading">
+      <section className="section bg-brand-green" aria-labelledby="recovery-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <p className="text-[#7dd94a] font-semibold uppercase tracking-[0.18em] text-xs mb-2">The Recovery Suite</p>
+            <p className="text-accent font-semibold uppercase tracking-[0.18em] text-xs mb-2">The Recovery Suite</p>
             <h2 id="recovery-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
               Recover properly, under the same roof
             </h2>
-            <p className="text-[#d4ecea]/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
+            <p className="text-teal-tint/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
               A private recovery and wellness space alongside the treatment rooms. <span className="font-bold text-white">Infrared Hybrid Sauna from £19, recovery packages from £85, plus Restore+ monthly memberships.</span>
             </p>
           </div>
@@ -257,7 +258,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="text-center">
-            <Link href="/recovery-suite" className="btn bg-[#7dd94a] text-[#1a2330] hover:bg-white text-sm">
+            <Link href={ROUTES.recoverySuite.index} className="btn bg-accent text-ink hover:bg-white text-sm">
               Explore the Recovery Suite
             </Link>
           </div>
@@ -271,7 +272,7 @@ export default function ServicesPage() {
       {/* Tight top padding: pairs with the sauna card directly above it. */}
       <section className="bg-page pb-[clamp(3.5rem,6vw,5.5rem)] pt-3" aria-label="Help choosing and gift cards">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-          <div className="rounded-[24px] border-2 border-[#1a3d3a] bg-card p-6 sm:p-8 flex flex-col">
+          <div className="rounded-panel border-2 border-brand-green bg-card p-6 sm:p-8 flex flex-col">
             <span className="eyebrow block mb-3">Need a hand choosing?</span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-page tracking-tight mb-2">
               Not sure which treatment you need?
@@ -282,15 +283,15 @@ export default function ServicesPage() {
             <div className="flex flex-wrap gap-3">
               <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call {BUSINESS.phone}</a>
               <Link
-                href="/contact"
-                className="text-page text-sm font-bold hover:text-[#0f767a] transition-colors min-h-[44px] flex items-center underline underline-offset-2"
+                href={ROUTES.contact}
+                className="text-page text-sm font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center underline underline-offset-2"
               >
                 Send a message
               </Link>
             </div>
           </div>
 
-          <div className="rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage p-6 sm:p-8 flex flex-col">
+          <div className="rounded-panel border-2 border-brand-green bg-page-sage p-6 sm:p-8 flex flex-col">
             <span className="eyebrow block mb-3">Gift Cards</span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-page tracking-tight mb-2">
               Give the gift of movement
@@ -299,27 +300,27 @@ export default function ServicesPage() {
               Perfect for friends and family recovering from injury or needing proper relaxation. Redeemable against any treatment or the Recovery Suite.
             </p>
             <div>
-              <Link href="/gift-cards" className="btn btn-primary text-sm">Buy a Gift Card</Link>
+              <Link href={ROUTES.giftCards} className="btn btn-primary text-sm">Buy a Gift Card</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── CTA BAR ──────────────────────────────────────────── */}
-      <section className="section-sm bg-[#7dd94a]" aria-label="Book a session">
+      <section className="section-sm bg-accent" aria-label="Book a session">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-2xl sm:text-4xl font-black text-[#1a2330] tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-ink tracking-tight mb-3">
             Ready to feel better?
           </h2>
-          <p className="text-[#1a3d3a]/90 mb-7 text-base font-semibold">
+          <p className="text-brand-green/90 mb-7 text-base font-semibold">
             Back pain, injury or tension holding you back? Book online or call Range and Restore directly.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
+            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] hover:shadow-lg hover:-translate-y-[1px] transition-all"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
@@ -340,25 +341,25 @@ function TreatmentCard({ t }: { t: typeof treatments[0] }) {
       <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         {t.badge && (
-          <span className="self-start bg-[#1a3d3a] text-[#7dd94a] text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full mb-2.5">
+          <span className="self-start bg-brand-green text-accent text-[0.6rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-full mb-2.5">
             {t.badge}
           </span>
         )}
         <h3 className="font-black text-page text-sm sm:text-base leading-tight tracking-tight mb-1.5">
-          <Link href={t.href} className="hover:text-[#0f767a] transition-colors">
+          <Link href={t.href} className="hover:text-brand-teal transition-colors">
             {t.title}
           </Link>
         </h3>
-        <p className="text-[#0f767a] text-xs font-bold mb-2.5">
+        <p className="text-brand-teal text-xs font-bold mb-2.5">
           {t.price}
           {t.detail && <span className="text-page-muted font-semibold"> · {t.detail}</span>}
         </p>
         <p className="text-page-muted text-xs leading-relaxed flex-1 mb-3 line-clamp-4 sm:line-clamp-5">{t.description}</p>
-        <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-0 pt-2.5 border-t border-[#1a3d3a]/10 mt-auto">
+        <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-0 pt-2.5 border-t border-brand-green/10 mt-auto">
           <Link
             href={t.href}
             aria-label={`Learn more about ${t.title}`}
-            className="text-page text-xs font-bold hover:text-[#0f767a] transition-colors min-h-[42px] flex items-center underline underline-offset-2"
+            className="text-page text-xs font-bold hover:text-brand-teal transition-colors min-h-[42px] flex items-center underline underline-offset-2"
           >
             Details<span className="sr-only"> about {t.title}</span>
           </Link>
@@ -378,7 +379,7 @@ function TreatmentCard({ t }: { t: typeof treatments[0] }) {
 
 function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wideOnMobile?: boolean }) {
   return (
-    <div className={`group card-lift rounded-2xl overflow-hidden flex flex-col bg-white/5 backdrop-blur-sm border border-[#0f767a]/30 hover:border-[#0f767a] transition-colors h-full ${wideOnMobile ? 'col-span-2 sm:col-span-1' : ''}`}>
+    <div className={`group card-lift rounded-2xl overflow-hidden flex flex-col bg-white/5 backdrop-blur-sm border border-brand-teal/30 hover:border-brand-teal transition-colors h-full ${wideOnMobile ? 'col-span-2 sm:col-span-1' : ''}`}>
       <Link href={s.href} className="block relative aspect-[16/10] overflow-hidden">
         <Image
           src={s.image}
@@ -390,20 +391,20 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
       </Link>
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         <h3 className="font-black text-white text-sm sm:text-base leading-tight tracking-tight mb-1.5">
-          <Link href={s.href} className="hover:text-[#7dd94a] transition-colors">
+          <Link href={s.href} className="hover:text-accent transition-colors">
             {s.title}
           </Link>
         </h3>
-        <p className="text-[#7dd94a] text-xs font-bold mb-2.5">
+        <p className="text-accent text-xs font-bold mb-2.5">
           {s.price}
-          {s.detail && <span className="text-[#d4ecea]/70 font-semibold"> · {s.detail}</span>}
+          {s.detail && <span className="text-teal-tint/70 font-semibold"> · {s.detail}</span>}
         </p>
-        <p className="text-[#d4ecea]/70 text-xs leading-relaxed flex-1 mb-3">{s.description}</p>
+        <p className="text-teal-tint/70 text-xs leading-relaxed flex-1 mb-3">{s.description}</p>
         <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-0 pt-2.5 border-t border-white/10 mt-auto">
           <Link
             href={s.href}
             aria-label={`Learn more about ${s.title}`}
-            className="text-white text-xs font-bold hover:text-[#7dd94a] transition-colors min-h-[42px] flex items-center underline underline-offset-2"
+            className="text-white text-xs font-bold hover:text-accent transition-colors min-h-[42px] flex items-center underline underline-offset-2"
           >
             Details<span className="sr-only"> about {s.title}</span>
           </Link>
@@ -412,7 +413,7 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Book ${s.title}`}
-            className="bg-white text-[#1a3d3a] hover:bg-[#7dd94a] hover:text-[#1a2330] transition-colors text-xs font-black px-3.5 py-2 rounded-full min-h-[38px] flex items-center whitespace-nowrap"
+            className="bg-white text-brand-green hover:bg-accent hover:text-ink transition-colors text-xs font-black px-3.5 py-2 rounded-full min-h-[38px] flex items-center whitespace-nowrap"
           >
             Book now
           </a>

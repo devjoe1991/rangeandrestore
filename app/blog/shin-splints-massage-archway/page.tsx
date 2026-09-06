@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Shin Splints: How Sports Massage Helps',
@@ -75,9 +76,9 @@ export default function ShinSplintsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Shin Splints – How Sports Massage Supports Recovery
           </h1>
@@ -89,14 +90,14 @@ export default function ShinSplintsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             Sports massage helps shin splints by releasing the tight calf and lower-leg muscles that overload the shin, and by helping you address the training and loading factors behind the pain. It is a genuinely useful part of recovery — but load management and a gradual return to running matter just as much.
           </p>
 
           <p>
-            Shin splints are one of the most common complaints among <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link>, especially in the weeks after ramping up training. At Range and Restore in Archway, North London, sports massage and targeted <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">soft tissue therapy</Link> offer a practical, assessment-led way to ease shin pain and get you back to running sensibly.
+            Shin splints are one of the most common complaints among <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners</Link>, especially in the weeks after ramping up training. At Range and Restore in Archway, North London, sports massage and targeted <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">soft tissue therapy</Link> offer a practical, assessment-led way to ease shin pain and get you back to running sensibly.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What are shin splints?</h2>
@@ -122,7 +123,7 @@ export default function ShinSplintsPage() {
           </ul>
 
           <p>
-            The common thread is that the lower leg is being loaded more than it has adapted to handle. The classic trigger is doing too much too soon — the reason a gradual, structured build-up matters so much, as we cover in our guide to <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">sports massage for runners</Link>. Tight calves are frequently part of the picture, transmitting extra strain to the tissues along the shin.
+            The common thread is that the lower leg is being loaded more than it has adapted to handle. The classic trigger is doing too much too soon — the reason a gradual, structured build-up matters so much, as we cover in our guide to <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">sports massage for runners</Link>. Tight calves are frequently part of the picture, transmitting extra strain to the tissues along the shin.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How sports massage helps shin splints</h2>
@@ -158,7 +159,7 @@ export default function ShinSplintsPage() {
           </p>
 
           <p>
-            Between sessions, relative rest — reducing the running volume that provokes pain rather than stopping entirely — is usually the key. Low-impact cross-training, appropriate calf and lower-limb strengthening, and a gradual, structured return to running all help. Maintaining good <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydration</Link> supports recovery too. At Range and Restore in Archway, practical advice on what to do between sessions is always part of the treatment.
+            Between sessions, relative rest — reducing the running volume that provokes pain rather than stopping entirely — is usually the key. Low-impact cross-training, appropriate calf and lower-limb strengthening, and a gradual, structured return to running all help. Maintaining good <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydration</Link> supports recovery too. At Range and Restore in Archway, practical advice on what to do between sessions is always part of the treatment.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor or physio</h2>
@@ -168,7 +169,7 @@ export default function ShinSplintsPage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to help rule out more serious pathology, it can be arranged in the same building, and the clinic is happy to coordinate with a physiotherapist as part of your recovery.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to help rule out more serious pathology, it can be arranged in the same building, and the clinic is happy to coordinate with a physiotherapist as part of your recovery.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find shin splints treatment near you in North London</h2>
@@ -197,9 +198,9 @@ export default function ShinSplintsPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Shin pain every time you run?</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Shin pain every time you run?</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led sports massage and soft tissue therapy for the tight calves and training load behind your shin splints, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -207,7 +208,7 @@ export default function ShinSplintsPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -215,13 +216,13 @@ export default function ShinSplintsPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -231,20 +232,20 @@ export default function ShinSplintsPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline link-inline-tap">
               &rarr; Achilles Tendinitis – How Sports Massage Helps Recovery
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

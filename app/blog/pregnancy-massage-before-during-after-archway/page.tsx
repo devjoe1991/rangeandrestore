@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Before, During & After Pregnancy: Supporting Your Body Through Every Stage',
@@ -88,9 +89,9 @@ export default function PregnancyMassageStagesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Before, During &amp; After Pregnancy: Supporting Your Body Through Every Stage of Motherhood
           </h1>
@@ -102,7 +103,7 @@ export default function PregnancyMassageStagesPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             Pregnancy changes your body — but your need for care does not begin at conception or end after birth.
@@ -123,7 +124,7 @@ export default function PregnancyMassageStagesPage() {
           </p>
 
           <p>
-            Back pain is particularly common during pregnancy. Both <a href="https://www.nhs.uk/pregnancy/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">NHS guidance</a> and the American College of Obstetricians and Gynecologists list massage among the approaches that may help with comfort and relaxation. It is not presented as a cure, and neither will we present it that way.
+            Back pain is particularly common during pregnancy. Both <a href="https://www.nhs.uk/pregnancy/" target="_blank" rel="noopener noreferrer" className="link-cite">NHS guidance</a> and the American College of Obstetricians and Gynecologists list massage among the approaches that may help with comfort and relaxation. It is not presented as a cure, and neither will we present it that way.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Pelvic girdle pain</h3>
@@ -160,7 +161,7 @@ export default function PregnancyMassageStagesPage() {
           </p>
 
           <p>
-            This is where being treated by a Level 5 Sports Massage and Soft Tissue Remedial Therapist earns its keep, because treatment can be built around your movement, your muscular tension, your lifestyle and your goals rather than waiting for something to become painful enough to force the issue. Whether that means <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link>, work on <Link href="/blog/hip-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tight hips</Link> or attention to a <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">lower back</Link> that has been complaining for years, it is the same principle: assess first, then treat what is actually there.
+            This is where being treated by a Level 5 Sports Massage and Soft Tissue Remedial Therapist earns its keep, because treatment can be built around your movement, your muscular tension, your lifestyle and your goals rather than waiting for something to become painful enough to force the issue. Whether that means <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link>, work on <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline">tight hips</Link> or attention to a <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back</Link> that has been complaining for years, it is the same principle: assess first, then treat what is actually there.
           </p>
 
           <p>
@@ -179,7 +180,7 @@ export default function PregnancyMassageStagesPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Who you will see</h3>
           <p>
-            At Range and Restore, <Link href="/team#mateja-bracko-mounti" className="text-[#0f767a] hover:text-page font-medium">Mateja Bracko-Mounti</Link> and <Link href="/team#alison-isherwood" className="text-[#0f767a] hover:text-page font-medium">Alison Isherwood</Link> are BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists who are also trained in pregnancy massage. That combination is the part worth paying attention to.
+            At Range and Restore, <Link href={`${ROUTES.team}#mateja-bracko-mounti`} className="link-inline">Mateja Bracko-Mounti</Link> and <Link href={`${ROUTES.team}#alison-isherwood`} className="link-inline">Alison Isherwood</Link> are BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists who are also trained in pregnancy massage. That combination is the part worth paying attention to.
           </p>
 
           <p>
@@ -202,7 +203,7 @@ export default function PregnancyMassageStagesPage() {
           </ul>
 
           <p>
-            Every pregnancy is different, so every session starts with consultation and appropriate screening — your stage, how you have been, and anything your midwife or GP has flagged. Where something falls outside our scope, we refer back to your midwife, GP, obstetric team or physiotherapist. That is not a caveat bolted on at the end; it is part of doing the job properly. Our <Link href="/services/pregnancy-massage" className="text-[#0f767a] hover:text-page font-medium">pregnancy massage service page</Link> covers the practical detail, including the 60-minute session at £85.
+            Every pregnancy is different, so every session starts with consultation and appropriate screening — your stage, how you have been, and anything your midwife or GP has flagged. Where something falls outside our scope, we refer back to your midwife, GP, obstetric team or physiotherapist. That is not a caveat bolted on at the end; it is part of doing the job properly. Our <Link href={ROUTES.services.pregnancyMassage} className="link-inline">pregnancy massage service page</Link> covers the practical detail, including the 60-minute session at £85.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">After pregnancy: looking after Mum, not just the baby</h2>
@@ -269,13 +270,13 @@ export default function PregnancyMassageStagesPage() {
           </ul>
 
           <p>
-            If you are in your first trimester, or you have any pregnancy complications, check with your midwife or GP before booking. If you are unsure whether treatment is right for you at this stage, <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">get in touch</Link> and we will give you a straight answer, including if that answer is not yet.
+            If you are in your first trimester, or you have any pregnancy complications, check with your midwife or GP before booking. If you are unsure whether treatment is right for you at this stage, <Link href={ROUTES.contact} className="link-inline">get in touch</Link> and we will give you a straight answer, including if that answer is not yet.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Pregnancy and postnatal massage in Archway, Islington and North London</h2>
 
           <p>
-            Range and Restore is at 130 Junction Road, Archway, London N19 5LB — two minutes from <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">Archway</Link> tube on the Northern Line, with step-free access from the station and buses from across North London. Clients come to us from <Link href="/areas-served/islington-n1" className="text-[#0f767a] hover:text-page font-medium">Islington</Link>, <Link href="/areas-served/holloway-n7" className="text-[#0f767a] hover:text-page font-medium">Holloway</Link>, <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium">Tufnell Park</Link>, <Link href="/areas-served/highgate-n6" className="text-[#0f767a] hover:text-page font-medium">Highgate</Link>, <Link href="/areas-served/crouch-end-n8" className="text-[#0f767a] hover:text-page font-medium">Crouch End</Link>, <Link href="/areas-served/finsbury-park-n4" className="text-[#0f767a] hover:text-page font-medium">Finsbury Park</Link> and <Link href="/areas-served/kentish-town-nw5" className="text-[#0f767a] hover:text-page font-medium">Kentish Town</Link> — N19, N7, N6, N4, N8, N1, NW1 and NW5.
+            Range and Restore is at 130 Junction Road, Archway, London N19 5LB — two minutes from <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> tube on the Northern Line, with step-free access from the station and buses from across North London. Clients come to us from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link>, <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link> — N19, N7, N6, N4, N8, N1, NW1 and NW5.
           </p>
 
           <p>
@@ -298,9 +299,9 @@ export default function PregnancyMassageStagesPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book time for you, at whatever stage you are at</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book time for you, at whatever stage you are at</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Whether you are preparing for pregnancy, in the middle of it, or months into looking after everyone but yourself, book a pregnancy massage at Range and Restore. Every session starts with a consultation, treatment is adapted to your stage and symptoms, and your therapist will tell you honestly if something needs your midwife or GP first. 60 minutes, £85, at 130 Junction Road, Archway N19.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -308,7 +309,7 @@ export default function PregnancyMassageStagesPage() {
               href={BOOKING_URLS.pregnancyMassage}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Book Pregnancy Massage
             </a>
@@ -316,13 +317,13 @@ export default function PregnancyMassageStagesPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -332,23 +333,23 @@ export default function PregnancyMassageStagesPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/pregnancy-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.pregnancyMassage} className="link-inline link-inline-tap">
               &rarr; Pregnancy Massage in Archway, North London
             </Link>
-            <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Lower Back Pain: How Massage Can Help
             </Link>
-            <Link href="/blog/hip-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Hip Pain and Tight Hips: How Massage Helps
             </Link>
-            <Link href="/team" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.team} className="link-inline link-inline-tap">
               &rarr; Meet the Range and Restore team
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

@@ -4,6 +4,7 @@ import { CharityBlock } from '@/components/CharityBlock'
 import type { CharityPhoto } from '@/components/CharityBlock'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, personSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 const WHITTINGTON = {
   name: 'Whittington Health Charity',
@@ -242,7 +243,7 @@ const faqs = [
 ]
 
 const proseLink =
-  'text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] font-semibold'
+  'text-brand-teal underline decoration-brand-teal/40 hover:decoration-brand-teal font-semibold'
 
 export default function GivingBackPage() {
   return (
@@ -254,9 +255,9 @@ export default function GivingBackPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       {/* ── Hero band ─────────────────────── */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">
+          <p className="eyebrow-sm">
             Supporting Our Community &middot; Archway &middot; North London
           </p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
@@ -268,7 +269,7 @@ export default function GivingBackPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-full">
 
         {/* ── Charity blocks ─────────────────────── */}
         <div className="space-y-12 [&>section+section]:border-t [&>section+section]:border-page [&>section+section]:pt-12">
@@ -319,7 +320,7 @@ export default function GivingBackPage() {
             <h3 className="text-lg font-bold text-page mt-6 mb-2">What we do</h3>
             <p>
               Carlos has volunteered at the TCS London Marathon for three years running, working in the Phab recovery tent and giving post-race sports massage to runners who took it on for Phab. It started while he was still training as a therapist.{' '}
-              <Link href="/blog/marathon-sports-massage-archway" className={proseLink}>
+              <Link href={ROUTES.blog.marathonSportsMassageArchway} className={proseLink}>
                 Our marathon recovery guide
               </Link>{' '}
               covers what to do in the days after.
@@ -338,13 +339,13 @@ export default function GivingBackPage() {
         <div className="max-w-3xl mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/community" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &rarr; Our Archway community and local partners
             </Link>
-            <Link href="/about" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.about} className="link-inline link-inline-tap">
               &rarr; About Carlos and Range and Restore
             </Link>
-            <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
               &rarr; Marathon massage and recovery guide
             </Link>
           </div>

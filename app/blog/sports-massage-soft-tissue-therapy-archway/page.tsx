@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage & Soft Tissue Therapy Archway, North London',
@@ -80,9 +81,9 @@ export default function SportsMassageSoftTissueTherapyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub &middot; Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage and Soft Tissue Therapy Help You Perform, Recover and Stay Pain-Free
           </h1>
@@ -94,7 +95,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
         <div className="mb-10 rounded-2xl overflow-hidden">
           <Image
@@ -109,7 +110,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
 
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Sports massage and soft tissue remedial therapy help you perform, recover and stay pain-free by reducing muscle tension, restoring range of movement and catching the tightness and imbalances that turn into injuries. Sports massage deals with the load training puts on your body; soft tissue remedial therapy works out why a particular area keeps hurting and treats the cause. At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore in Archway</Link>, North London, the two are combined into one assessment-led session.
+            Sports massage and soft tissue remedial therapy help you perform, recover and stay pain-free by reducing muscle tension, restoring range of movement and catching the tightness and imbalances that turn into injuries. Sports massage deals with the load training puts on your body; soft tissue remedial therapy works out why a particular area keeps hurting and treats the cause. At <Link href={ROUTES.about} className="link-inline">Range and Restore in Archway</Link>, North London, the two are combined into one assessment-led session.
           </p>
 
           <p>
@@ -137,7 +138,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage vs soft tissue remedial therapy: what is the difference?</h2>
 
           <p>
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports massage</Link> is about the load you put on your body: reducing muscle tension, supporting recovery and preparing the muscles you use most for training and competition. It is hands-on and direct.
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Sports massage</Link> is about the load you put on your body: reducing muscle tension, supporting recovery and preparing the muscles you use most for training and competition. It is hands-on and direct.
           </p>
 
           <p>
@@ -161,13 +162,13 @@ export default function SportsMassageSoftTissueTherapyPage() {
           <ul className="space-y-2 list-disc list-inside">
             <li>Releasing tightness in the calves, hamstrings, quads and hip flexors</li>
             <li>Restoring stride length and running efficiency</li>
-            <li>Helping reduce the risk of common problems such as <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium">shin splints</Link>, <Link href="/blog/plantar-fasciitis-massage-archway" className="text-[#0f767a] hover:text-page font-medium">plantar fasciitis</Link>, <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles tendinopathy</Link> and IT band syndrome</li>
+            <li>Helping reduce the risk of common problems such as <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline">shin splints</Link>, <Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline">plantar fasciitis</Link>, <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline">Achilles tendinopathy</Link> and IT band syndrome</li>
             <li>Supporting recovery between runs so you can train more consistently</li>
             <li>Improving joint mobility in the ankles, hips and thoracic spine</li>
           </ul>
 
           <p>
-            At any mileage, from a first 5K to <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium">marathon training</Link>, consistent soft tissue work keeps problems small. They get caught early, before they sideline you. Our <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">guide for runners</Link> covers pre-race, post-race and maintenance sessions in more detail.
+            At any mileage, from a first 5K to <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon training</Link>, consistent soft tissue work keeps problems small. They get caught early, before they sideline you. Our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">guide for runners</Link> covers pre-race, post-race and maintenance sessions in more detail.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How does soft tissue therapy help cyclists?</h2>
@@ -189,7 +190,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </ul>
 
           <p>
-            If you ride regularly, whether commuting, training or racing, your body is adapting to the bike. Soft tissue therapy makes sure it adapts well, not just tightly. There is more in our piece on <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">sports massage for cyclists</Link>.
+            If you ride regularly, whether commuting, training or racing, your body is adapting to the bike. Soft tissue therapy makes sure it adapts well, not just tightly. There is more in our piece on <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">sports massage for cyclists</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Benefits for every active body</h2>
@@ -214,12 +215,12 @@ export default function SportsMassageSoftTissueTherapyPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Not training? You still benefit</h2>
 
           <p>
-            Some of the biggest improvements we see come from clients who would never call themselves athletes. Desk workers with <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">back pain that has been building for years</Link>. Parents carrying toddlers and tension in equal measure. People who have accepted that their body hurts, until they find out it does not have to.
+            Some of the biggest improvements we see come from clients who would never call themselves athletes. Desk workers with <Link href={ROUTES.services.backNeckPainMot} className="link-inline">back pain that has been building for years</Link>. Parents carrying toddlers and tension in equal measure. People who have accepted that their body hurts, until they find out it does not have to.
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li>Persistent <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">back pain</Link> from prolonged sitting</li>
-            <li><Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">Neck and shoulder tension</Link> that no amount of stretching shifts</li>
+            <li>Persistent <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">back pain</Link> from prolonged sitting</li>
+            <li><Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">Neck and shoulder tension</Link> that no amount of stretching shifts</li>
             <li>Stress-driven tightness through the jaw, chest and upper back</li>
             <li>Reduced mobility that makes everyday movement harder than it should be</li>
           </ul>
@@ -235,7 +236,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li><Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Deep tissue massage</Link>: sustained pressure to release long-standing tension in the deeper muscle layers</li>
+            <li><Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Deep tissue massage</Link>: sustained pressure to release long-standing tension in the deeper muscle layers</li>
             <li>Sports-specific soft tissue techniques: targeted work for the demands of your sport</li>
             <li>Myofascial release: addressing restrictions in the fascial network that limit movement</li>
             <li>Trigger point therapy: deactivating focal points of pain and referral</li>
@@ -247,7 +248,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When should I see a GP or physio first?</h2>
 
           <p>
-            Massage is the right call for most tightness, soreness and overuse niggles. It is the wrong first call if the pain followed a fall or impact, comes with numbness, weakness, pins and needles or unexplained swelling, wakes you at night, or has not improved after a few weeks of sensible rest. Get those assessed by your GP or a physio before booking. Our therapists will say so if they think something needs a different kind of help, and if imaging would be useful a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building.
+            Massage is the right call for most tightness, soreness and overuse niggles. It is the wrong first call if the pain followed a fall or impact, comes with numbness, weakness, pins and needles or unexplained swelling, wakes you at night, or has not improved after a few weeks of sensible rest. Get those assessed by your GP or a physio before booking. Our therapists will say so if they think something needs a different kind of help, and if imaging would be useful a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why Range and Restore in Archway?</h2>
@@ -257,7 +258,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </p>
 
           <p>
-            The team are BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapists, led by Founder &amp; Lead Therapist Carlos Bonvicine, with further training in <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">clinical massage</Link> and <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">manual lymphatic drainage</Link>. Every session begins with an assessment of your history, your goals and what your body is doing, so treatment is targeted rather than routine. Sessions are 30, 60 or 90 minutes, from £50.
+            The team are BTEC Level 5 qualified Sports Massage and Soft Tissue Remedial Therapists, led by Founder &amp; Lead Therapist Carlos Bonvicine, with further training in <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">clinical massage</Link> and <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">manual lymphatic drainage</Link>. Every session begins with an assessment of your history, your goals and what your body is doing, so treatment is targeted rather than routine. Sessions are 30, 60 or 90 minutes, from £50.
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -293,9 +294,9 @@ export default function SportsMassageSoftTissueTherapyPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Move better. Recover properly.</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Move better. Recover properly.</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Training for an event, recovering from an injury or just tired of a body that aches: book an assessment-led session at Range and Restore in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -303,7 +304,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -311,13 +312,13 @@ export default function SportsMassageSoftTissueTherapyPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -327,23 +328,23 @@ export default function SportsMassageSoftTissueTherapyPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline link-inline-tap">
               &rarr; Sports Massage and Recovery for Cyclists
             </Link>
-            <Link href="/blog/sports-massage-benefits" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline link-inline-tap">
               &rarr; The Benefits of Sports Massage: What It Actually Does
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>

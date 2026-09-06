@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Stiff Neck and Neck Pain: Can Massage Actually Help?',
@@ -83,9 +84,9 @@ export default function NeckPainMassagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Neck Pain and a Stiff Neck – How Massage Helps
           </h1>
@@ -97,10 +98,10 @@ export default function NeckPainMassagePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Most stiff or aching necks are muscular — the result of hours at a screen, everyday posture and accumulated stress rather than anything sinister. Massage helps by releasing the neck, upper trapezius and shoulder muscles that hold all that tension, and by addressing the postural drivers behind it. At Range and Restore in Archway, North London, the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link> is built around exactly this kind of problem.
+            Most stiff or aching necks are muscular — the result of hours at a screen, everyday posture and accumulated stress rather than anything sinister. Massage helps by releasing the neck, upper trapezius and shoulder muscles that hold all that tension, and by addressing the postural drivers behind it. At Range and Restore in Archway, North London, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> is built around exactly this kind of problem.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What causes a stiff or painful neck?</h2>
@@ -116,7 +117,7 @@ export default function NeckPainMassagePage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Desk posture</h3>
           <p>
-            Long hours at a desk are one of the most common reasons people arrive with a stiff neck. The head drifts forward towards the monitor, the shoulders round and creep up towards the ears, and the upper back rounds — a posture that loads the neck and shoulders continuously. If your neck flares up during the working week, it is worth reading more on <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium">how desk posture drives neck and shoulder pain</Link> and on <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium">massage for office workers</Link>.
+            Long hours at a desk are one of the most common reasons people arrive with a stiff neck. The head drifts forward towards the monitor, the shoulders round and creep up towards the ears, and the upper back rounds — a posture that loads the neck and shoulders continuously. If your neck flares up during the working week, it is worth reading more on <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">how desk posture drives neck and shoulder pain</Link> and on <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">massage for office workers</Link>.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Sleeping awkwardly</h3>
@@ -153,7 +154,7 @@ export default function NeckPainMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Neck tension and headaches</h2>
 
           <p>
-            Neck pain and headaches frequently travel together. Tight muscles at the base of the skull and across the upper neck and shoulders are a well-recognised driver of tension-type headaches — the dull, band-like pressure many people feel around the head after a long day at a screen. When the headache is coming from this muscular tension, releasing the neck and shoulders often eases the head as well, which is why the two are usually treated together rather than in isolation. There is more on this in our piece on <Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tension headaches and massage</Link>.
+            Neck pain and headaches frequently travel together. Tight muscles at the base of the skull and across the upper neck and shoulders are a well-recognised driver of tension-type headaches — the dull, band-like pressure many people feel around the head after a long day at a screen. When the headache is coming from this muscular tension, releasing the neck and shoulders often eases the head as well, which is why the two are usually treated together rather than in isolation. There is more on this in our piece on <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline">tension headaches and massage</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How many sessions will I need?</h2>
@@ -173,7 +174,7 @@ export default function NeckPainMassagePage() {
           </p>
 
           <p>
-            Range and Restore is happy to coordinate with your GP or physiotherapist, and works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway, if a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> is ever needed.
+            Range and Restore is happy to coordinate with your GP or physiotherapist, and works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway, if a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> is ever needed.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find neck pain treatment near you in North London</h2>
@@ -202,9 +203,9 @@ export default function NeckPainMassagePage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Don&apos;t let a stiff neck wear you down</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Don&apos;t let a stiff neck wear you down</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led massage and soft tissue therapy targeting the muscular tension and posture behind your neck pain in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -212,7 +213,7 @@ export default function NeckPainMassagePage() {
               href={BOOKING_URLS.backNeckMot}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -220,13 +221,13 @@ export default function NeckPainMassagePage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -236,23 +237,23 @@ export default function NeckPainMassagePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
               &rarr; How Desk Posture Drives Neck and Shoulder Pain
             </Link>
-            <Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline link-inline-tap">
               &rarr; Tension Headaches: How Massage Can Help
             </Link>
-            <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
               &rarr; Massage for Office Workers in Archway
             </Link>
-            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
               &rarr; Back &amp; Neck Pain MOT
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ROUTES } from '@/lib/routes'
 
 // Posts straight to Mailchimp's hosted subscribe endpoint (audience 942aa5d8ac,
 // dc us20). Deliberately not routed through our own API: that would need
@@ -17,8 +18,8 @@ export function NewsletterSignup({ variant = 'footer' }: { variant?: 'footer' | 
     <section
       className={
         isPanel
-          ? 'rounded-2xl border border-[#E9E5DE] bg-[#F2EDE4] p-6 sm:p-8'
-          : 'mt-10 pt-8 border-t border-[#1a3d3a]/15'
+          ? 'rounded-2xl border border-sand bg-sand-deep p-6 sm:p-8'
+          : 'mt-10 pt-8 border-t border-brand-green/15'
       }
       aria-labelledby="newsletter-heading"
     >
@@ -26,11 +27,11 @@ export function NewsletterSignup({ variant = 'footer' }: { variant?: 'footer' | 
         <div>
           <h2
             id="newsletter-heading"
-            className="text-[#1a2330] font-extrabold text-lg md:text-base tracking-tight mb-2"
+            className="text-ink font-extrabold text-lg md:text-base tracking-tight mb-2"
           >
             Recovery Notes
           </h2>
-          <p className="text-sm text-[#1a3d3a]/90 font-medium leading-relaxed max-w-prose">
+          <p className="text-sm text-brand-green/90 font-medium leading-relaxed max-w-prose">
             Occasional practical emails on managing pain, training and recovery, plus clinic
             news and availability. Written by our therapists. No more than once or twice a month.
           </p>
@@ -55,7 +56,7 @@ export function NewsletterSignup({ variant = 'footer' }: { variant?: 'footer' | 
                 id="mce-FNAME"
                 autoComplete="given-name"
                 placeholder="First name (optional)"
-                className="w-full min-h-[44px] rounded-full border border-[#1a3d3a]/20 bg-white px-4 py-2.5 text-sm text-[#1a2330] placeholder:text-[#4f5866]/70 focus:border-[#0f767a] focus:outline-none focus:ring-2 focus:ring-[#0f767a]/30"
+                className="w-full min-h-[44px] rounded-full border border-brand-green/20 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/30"
               />
             </div>
             <div className="flex-1">
@@ -69,13 +70,13 @@ export function NewsletterSignup({ variant = 'footer' }: { variant?: 'footer' | 
                 required
                 autoComplete="email"
                 placeholder="Email address"
-                className="w-full min-h-[44px] rounded-full border border-[#1a3d3a]/20 bg-white px-4 py-2.5 text-sm text-[#1a2330] placeholder:text-[#4f5866]/70 focus:border-[#0f767a] focus:outline-none focus:ring-2 focus:ring-[#0f767a]/30"
+                className="w-full min-h-[44px] rounded-full border border-brand-green/20 bg-white px-4 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-brand-teal focus:outline-none focus:ring-2 focus:ring-brand-teal/30"
               />
             </div>
             <button
               type="submit"
               name="subscribe"
-              className="btn bg-[#1a3d3a] text-white hover:bg-[#2a7a3a] text-sm px-6 min-h-[44px] whitespace-nowrap"
+              className="btn bg-brand-green text-white hover:bg-brand-green-mid text-sm px-6 min-h-[44px] whitespace-nowrap"
             >
               Subscribe
             </button>
@@ -86,10 +87,10 @@ export function NewsletterSignup({ variant = 'footer' }: { variant?: 'footer' | 
             <input type="text" name={HONEYPOT} tabIndex={-1} defaultValue="" />
           </div>
 
-          <p className="mt-3 text-xs leading-relaxed text-[#1a3d3a]/75 font-medium">
+          <p className="mt-3 text-xs leading-relaxed text-brand-green/75 font-medium">
             We only email about treatment, recovery and the clinic. Unsubscribe any time in one
             click. See our{' '}
-            <Link href="/privacy-policy" className="underline hover:text-[#0f767a] transition-colors">
+            <Link href={ROUTES.privacyPolicy} className="underline hover:text-brand-teal transition-colors">
               Privacy Policy
             </Link>
             .

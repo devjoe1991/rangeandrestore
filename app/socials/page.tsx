@@ -4,6 +4,7 @@ import { BookingButton } from '@/components/BookingButton'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { BUSINESS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Socials – Follow Range and Restore Sports Massage',
@@ -47,7 +48,7 @@ export default function SocialsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Follow Range and Restore</h1>
           <p className="mt-4 text-xl text-page-muted max-w-2xl">
@@ -57,7 +58,7 @@ export default function SocialsPage() {
       </div>
 
       {/* Social channel cards */}
-      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 section-md">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {channels.map(({ name, handle, description, href, Icon }) => (
             <a
@@ -65,13 +66,13 @@ export default function SocialsPage() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-[20px] overflow-hidden bg-card shadow-sm card-lift flex flex-col"
+              className="group rounded-card overflow-hidden bg-card shadow-sm card-lift flex flex-col"
               style={{ border: '2px solid #1a3d3a' }}
             >
               <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
               <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#1a3d3a]/10 text-[#1a3d3a] group-hover:bg-[#0f767a] group-hover:text-white transition-colors">
+                  <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green/10 text-brand-green group-hover:bg-brand-teal group-hover:text-white transition-colors">
                     <Icon />
                   </span>
                   <div>
@@ -80,7 +81,7 @@ export default function SocialsPage() {
                   </div>
                 </div>
                 <p className="text-page-muted text-sm leading-relaxed flex-1">{description}</p>
-                <span className="text-[#1a3d3a] text-xs font-black uppercase tracking-wide min-h-[24px] flex items-center gap-2 group-hover:text-[#0f767a] transition-colors">
+                <span className="text-brand-green text-xs font-black uppercase tracking-wide min-h-[24px] flex items-center gap-2 group-hover:text-brand-teal transition-colors">
                   Visit {name} <span aria-hidden="true">→</span>
                 </span>
               </div>
@@ -93,24 +94,24 @@ export default function SocialsPage() {
       <FacebookFeed />
 
       {/* CTA */}
-      <section className="section-sm bg-[#7dd94a]" aria-label="Book a session">
+      <section className="section-sm bg-accent" aria-label="Book a session">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-2xl sm:text-4xl font-black text-[#1a2330] tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-4xl font-black text-ink tracking-tight mb-3">
             Ready to book a session?
           </h2>
-          <p className="text-[#1a3d3a]/80 mb-7 text-base font-semibold">
+          <p className="text-brand-green/80 mb-7 text-base font-semibold">
             See what we share online, then come in for an assessment-led treatment with one of our therapists.
           </p>
           <div className="flex flex-row gap-3 justify-center flex-wrap">
-            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all" />
+            <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all" />
             <Link
-              href="/contact"
-              className="btn bg-white/60 backdrop-blur-sm border border-[#0f767a]/50 text-[#1a2330] hover:bg-white hover:border-[#0f767a] transition-all"
+              href={ROUTES.contact}
+              className="btn bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all"
             >
               Contact the clinic
             </Link>
           </div>
-          <p className="text-[#1a3d3a]/70 text-xs font-semibold mt-5">
+          <p className="text-brand-green/70 text-xs font-semibold mt-5">
             130 Junction Road, Archway, London N19 5LB · <a href={`tel:${BUSINESS.phoneTel}`} className="underline">{BUSINESS.phone}</a>
           </p>
         </div>

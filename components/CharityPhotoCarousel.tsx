@@ -76,7 +76,7 @@ export function CharityPhotoCarousel({ photos, label }: { photos: CharityPhoto[]
               photo.orientation === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]'
             }`}
           >
-            <div className="relative w-full h-full rounded-[20px] overflow-hidden border-2 border-[#1a3d3a] bg-card">
+            <div className="relative w-full h-full rounded-card overflow-hidden border-2 border-brand-green bg-card">
               <Image
                 src={photo.src}
                 alt={photo.alt}

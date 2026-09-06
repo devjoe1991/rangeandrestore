@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Runners Archway | Race Recovery',
@@ -79,9 +80,9 @@ export default function SportsMassageForRunnersPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Sports Massage Helps Runners Before and After Races
           </h1>
@@ -93,14 +94,14 @@ export default function SportsMassageForRunnersPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             Sports massage helps runners in three ways: a light session a few days before a race eases residual tightness so you start fresh, a deeper session one to three days after a race helps you recover and picks up any new strains, and regular maintenance work through a training block keeps the tightness that leads to injury in check. The timing changes what the session does, so it is worth getting right.
           </p>
 
           <p>
-            Running puts a lot of repetitive load through the muscles, tendons and connective tissue of the legs, hips and lower back. Over a training block, and particularly in the peak weeks, that load builds into tightness, imbalances and, if ignored, injury. At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore in Archway, North London</Link>, sports massage for runners is built around where you are in your training, not a set routine.
+            Running puts a lot of repetitive load through the muscles, tendons and connective tissue of the legs, hips and lower back. Over a training block, and particularly in the peak weeks, that load builds into tightness, imbalances and, if ignored, injury. At <Link href={ROUTES.about} className="link-inline">Range and Restore in Archway, North London</Link>, sports massage for runners is built around where you are in your training, not a set routine.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When should I have a massage before a race?</h2>
@@ -139,7 +140,7 @@ export default function SportsMassageForRunnersPage() {
           </ul>
 
           <p>
-            If you are racing a big-city marathon, our <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium">marathon massage guide</Link> goes into the pre- and post-race timing in more detail.
+            If you are racing a big-city marathon, our <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon massage guide</Link> goes into the pre- and post-race timing in more detail.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why is maintenance massage during training worth it?</h2>
@@ -154,17 +155,17 @@ export default function SportsMassageForRunnersPage() {
 
           <ul className="space-y-2 list-disc list-inside">
             <li>IT band tightness and iliotibial band syndrome (ITBS)</li>
-            <li><Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Calf and Achilles tension</Link></li>
-            <li><Link href="/blog/tight-hamstring-massage-archway" className="text-[#0f767a] hover:text-page font-medium">Hamstring tightness and strain</Link></li>
+            <li><Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline">Calf and Achilles tension</Link></li>
+            <li><Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline">Hamstring tightness and strain</Link></li>
             <li>Hip flexor restriction</li>
-            <li><Link href="/blog/plantar-fasciitis-massage-archway" className="text-[#0f767a] hover:text-page font-medium">Plantar fasciitis</Link> and <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium">shin splints</Link></li>
+            <li><Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline">Plantar fasciitis</Link> and <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline">shin splints</Link></li>
             <li>Lower back and glute tension from your running gait</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What to expect from a runner&rsquo;s session in Archway</h2>
 
           <p>
-            Every session at Range and Restore begins with a short assessment. For runners that means your training history, recent mileage, anything that has been niggling and your upcoming race schedule, so the <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports massage</Link> is shaped around where you are in your training cycle rather than a generic routine.
+            Every session at Range and Restore begins with a short assessment. For runners that means your training history, recent mileage, anything that has been niggling and your upcoming race schedule, so the <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports massage</Link> is shaped around where you are in your training cycle rather than a generic routine.
           </p>
 
           <p>
@@ -172,13 +173,13 @@ export default function SportsMassageForRunnersPage() {
           </p>
 
           <p>
-            Staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated before and after your session</Link> helps the tissue respond to treatment and helps you recover between runs.
+            Staying well <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated before and after your session</Link> helps the tissue respond to treatment and helps you recover between runs.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When should a runner see a GP or physio instead?</h2>
 
           <p>
-            Most running niggles are soft tissue problems and massage is the right call. Some are not. See your GP or a physio first if you have sharp, localised bone pain that gets worse with every run (a possible stress fracture), a sudden pop or snap in the calf or Achilles, swelling, bruising or an inability to bear weight after an injury, numbness or pins and needles, or pain that has not improved after a couple of weeks of reduced running. Chest pain, dizziness or fainting while running needs urgent medical attention. Our therapists will tell you if what you describe needs assessing elsewhere, and a <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
+            Most running niggles are soft tissue problems and massage is the right call. Some are not. See your GP or a physio first if you have sharp, localised bone pain that gets worse with every run (a possible stress fracture), a sudden pop or snap in the calf or Achilles, swelling, bruising or an inability to bear weight after an injury, numbness or pins and needles, or pain that has not improved after a couple of weeks of reduced running. Chest pain, dizziness or fainting while running needs urgent medical attention. Our therapists will tell you if what you describe needs assessing elsewhere, and a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage for runners near you in North London</h2>
@@ -205,9 +206,9 @@ export default function SportsMassageForRunnersPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Race well, recover properly</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Race well, recover properly</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Pre-race preparation, post-race recovery and maintenance massage for runners at Range and Restore in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -215,7 +216,7 @@ export default function SportsMassageForRunnersPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -223,13 +224,13 @@ export default function SportsMassageForRunnersPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -239,23 +240,23 @@ export default function SportsMassageForRunnersPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
               &rarr; Marathon Massage in Archway: Pre and Post Race Recovery Guide
             </Link>
-            <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline link-inline-tap">
               &rarr; Does Massage Help Achilles Tendinitis?
             </Link>
-            <Link href="/blog/shin-splints-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline link-inline-tap">
               &rarr; Shin Splints: How Sports Massage Supports Recovery
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

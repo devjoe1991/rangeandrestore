@@ -12,14 +12,14 @@ export const metadata: Metadata = buildMetadata({
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Privacy Policy</h1>
           <p className="mt-4 text-page-muted opacity-80">Last updated: January 2026</p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-8">
           <section>
             <h2 className="text-2xl font-bold text-page">1. Who We Are</h2>
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>
               If you have any questions about this policy, please contact us at{' '}
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#0f767a] hover:underline">{BUSINESS.email}</a>.
+              <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:underline">{BUSINESS.email}</a>.
             </p>
           </section>
 
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               To exercise any of these rights, contact us at{' '}
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#0f767a] hover:underline">{BUSINESS.email}</a>.
+              <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:underline">{BUSINESS.email}</a>.
               We will respond within 30 days.
             </p>
           </section>
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-2xl font-bold text-page">11. Complaints</h2>
             <p>
               If you are unhappy with how we handle your personal information, you have the right to lodge a complaint with the Information Commissioner&apos;s Office (ICO) at{' '}
-              <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] hover:underline">ico.org.uk</a>.
+              <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:underline">ico.org.uk</a>.
             </p>
           </section>
 
@@ -153,8 +153,8 @@ export default function PrivacyPolicyPage() {
               <strong>Carlos Bonvicine</strong><br />
               Range and Restore Sports Massage<br />
               {BUSINESS.address}<br />
-              <a href={`mailto:${BUSINESS.email}`} className="text-[#0f767a] hover:underline">{BUSINESS.email}</a><br />
-              <a href={`tel:${BUSINESS.phoneTel}`} className="text-[#0f767a] hover:underline">{BUSINESS.phone}</a>
+              <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:underline">{BUSINESS.email}</a><br />
+              <a href={`tel:${BUSINESS.phoneTel}`} className="text-brand-teal hover:underline">{BUSINESS.phone}</a>
             </address>
           </section>
         </div>

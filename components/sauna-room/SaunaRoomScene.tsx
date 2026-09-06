@@ -411,9 +411,9 @@ function HotspotPanel({ spot, isTouch }: { spot: Hotspot; isTouch: boolean }) {
   if (isTouch) {
     return (
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center px-3 pb-16">
-        <div className="fade-up w-full max-w-sm rounded-[20px] bg-white/75 px-3.5 py-3 shadow-[0_10px_34px_rgba(0,0,0,0.32)] ring-1 ring-black/5 backdrop-blur-xl">
+        <div className="fade-up w-full max-w-sm rounded-card bg-white/75 px-3.5 py-3 shadow-[0_10px_34px_rgba(0,0,0,0.32)] ring-1 ring-black/5 backdrop-blur-xl">
           <div className="flex items-start gap-3">
-            <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-[9px] bg-[#1a3d3a] text-[10px] font-bold tracking-tight text-white">
+            <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-[9px] bg-brand-green text-[10px] font-bold tracking-tight text-white">
               R&amp;R
             </span>
             <div className="min-w-0 flex-1">
@@ -702,7 +702,7 @@ export default function SaunaRoomScene() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={leaveForBooking}
-          className="pointer-events-auto rounded-full bg-[#0f767a] px-4 py-2 text-xs font-semibold text-white shadow-lg transition hover:bg-[#1a9aa0]"
+          className="pointer-events-auto rounded-full bg-brand-teal px-4 py-2 text-xs font-semibold text-white shadow-lg transition hover:bg-brand-teal-dark"
         >
           Become a member
         </a>

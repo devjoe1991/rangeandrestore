@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Infrared Sauna in Archway, North London | Recovery & Pain Relief',
@@ -82,9 +83,9 @@ export default function InfraredSaunaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Infrared Sauna · Archway · North London</p>
+          <p className="eyebrow-sm">Infrared Sauna · Archway · North London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Infrared Sauna in Archway, North London for Recovery, Pain Relief &amp; Mobility
           </h1>
@@ -104,7 +105,7 @@ export default function InfraredSaunaPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="space-y-12">
 
           <section>
@@ -120,7 +121,7 @@ export default function InfraredSaunaPage() {
                 'Recovering from a hard week, a race, or a long training block',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item}
@@ -135,20 +136,20 @@ export default function InfraredSaunaPage() {
               Experience the benefits of our private Full Spectrum Infrared Hybrid Sauna at Range and Restore Sports Massage in Archway, North London. Our premium infrared sauna combines advanced full spectrum infrared technology with a traditional sauna experience to help you relax, recover and recharge in complete privacy.
             </p>
 
-            <div className="bg-[#7dd94a] rounded-2xl p-6 sm:p-8">
-              <p className="text-[#1a2330] text-xs font-black uppercase tracking-widest mb-3">Infrared &amp; Traditional Hybrid Sauna · Pay As You Go</p>
+            <div className="bg-accent rounded-2xl p-6 sm:p-8">
+              <p className="text-ink text-xs font-black uppercase tracking-widest mb-3">Infrared &amp; Traditional Hybrid Sauna · Pay As You Go</p>
               <div className="flex flex-wrap gap-8 mb-5">
                 <div>
-                  <p className="text-[#1a2330] text-3xl sm:text-4xl font-black leading-none">£19</p>
-                  <p className="text-[#1a3d3a] font-semibold text-sm mt-1">45-minute private session</p>
+                  <p className="text-ink text-3xl sm:text-4xl font-black leading-none">£19</p>
+                  <p className="text-brand-green font-semibold text-sm mt-1">45-minute private session</p>
                 </div>
                 <div>
-                  <p className="text-[#1a2330] text-3xl sm:text-4xl font-black leading-none">£29</p>
-                  <p className="text-[#1a3d3a] font-semibold text-sm mt-1">60-minute private session</p>
+                  <p className="text-ink text-3xl sm:text-4xl font-black leading-none">£29</p>
+                  <p className="text-brand-green font-semibold text-sm mt-1">60-minute private session</p>
                 </div>
               </div>
 
-              <p className="text-[#1a2330] text-sm font-black uppercase tracking-wide mb-2">Every session includes</p>
+              <p className="text-ink text-sm font-black uppercase tracking-wide mb-2">Every session includes</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
                 {[
                   'Exclusive use of our private, air-conditioned recovery suite',
@@ -156,8 +157,8 @@ export default function InfraredSaunaPage() {
                   'Chilled drinking water',
                   'A Bluetooth speaker for your own music or podcast',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-[#1a3d3a] text-sm font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#1a2330] flex-shrink-0 mt-1.5" aria-hidden="true" />
+                  <li key={item} className="flex items-start gap-2 text-brand-green text-sm font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-ink flex-shrink-0 mt-1.5" aria-hidden="true" />
                     {item}
                   </li>
                 ))}
@@ -167,7 +168,7 @@ export default function InfraredSaunaPage() {
                 href={BOOKING_URLS.recoverySuite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ink text-white font-black uppercase tracking-widest text-sm hover:bg-brand-green-dark transition-colors"
               >
                 Book Sauna Session
               </a>
@@ -178,7 +179,7 @@ export default function InfraredSaunaPage() {
             </p>
             <p className="text-page-muted text-sm mt-3 italic">
               Every session is private, with the Recovery Suite to yourself. Prefer regular access? Ask about our{' '}
-              <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] underline">Restore+ Infrared Sauna memberships</Link>, from £49 a month.
+              <Link href={ROUTES.recoverySuite.recoveryPackages} className="text-brand-teal underline">Restore+ Infrared Sauna memberships</Link>, from £49 a month.
             </p>
           </section>
 
@@ -194,7 +195,7 @@ export default function InfraredSaunaPage() {
                 'Time to relax and properly switch off',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#0f767a] flex-shrink-0 mt-0.5" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {benefit}
@@ -233,7 +234,7 @@ export default function InfraredSaunaPage() {
                 'Optional: book a package that pairs your sauna session with a sports massage in the same visit',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
                   {step}
                 </li>
               ))}
@@ -253,7 +254,7 @@ export default function InfraredSaunaPage() {
                 'Acute illness, fever, or infection',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-page-muted">
-                  <span className="w-2 h-2 rounded-full bg-[#0f767a] flex-shrink-0" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
                   {item}
                 </li>
               ))}
@@ -265,11 +266,11 @@ export default function InfraredSaunaPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Pair your sauna session with</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/services/sports-deep-tissue-massage" className="bg-card border-2 border-[#1a3d3a] rounded-xl p-5 card-lift block">
+              <Link href={ROUTES.services.sportsDeepTissueMassage} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Sports &amp; Deep Tissue Massage</p>
                 <p className="text-page-muted text-sm">Add hands-on work after your sauna. Heat first, then targeted soft tissue therapy.</p>
               </Link>
-              <Link href="/recovery-suite/recovery-packages" className="bg-card border-2 border-[#1a3d3a] rounded-xl p-5 card-lift block">
+              <Link href={ROUTES.recoverySuite.recoveryPackages} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Recovery Packages</p>
                 <p className="text-page-muted text-sm">Save when you combine sports massage and sauna recovery as one visit. Packages from £85.</p>
               </Link>
@@ -283,16 +284,16 @@ export default function InfraredSaunaPage() {
           </section>
 
           {/* Book Now CTA */}
-          <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-            <h2 className="text-2xl font-black text-[#1a2330] mb-4">Infrared sauna recovery in Archway, North London</h2>
-            <p className="text-[#1a3d3a] font-semibold mb-6">
+          <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
+            <h2 className="text-2xl font-black text-ink mb-4">Infrared sauna recovery in Archway, North London</h2>
+            <p className="text-brand-green font-semibold mb-6">
               The Recovery Suite is open in Archway, North London. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, and sports massage recovery packages from £85. Available to book now.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#1a2330] text-white font-black uppercase tracking-widest text-sm hover:bg-[#122a28] transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ink text-white font-black uppercase tracking-widest text-sm hover:bg-brand-green-dark transition-colors"
             >
               Book Sauna Session
             </a>
@@ -301,10 +302,10 @@ export default function InfraredSaunaPage() {
           <div className="border-t pt-8">
             <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline link-inline-tap">
                 → Normatec Compression Therapy
               </Link>
-              <Link href="/recovery-suite/recovery-packages" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+              <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline link-inline-tap">
                 → Recovery Packages and Combos
               </Link>
             </div>

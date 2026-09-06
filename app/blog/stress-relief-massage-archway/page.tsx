@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Stress Relief Massage: Ease Tension and Switch Off',
@@ -75,9 +76,9 @@ export default function StressReliefMassagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Stress Relief Massage – Easing Tension and Switching Off
           </h1>
@@ -89,10 +90,10 @@ export default function StressReliefMassagePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            When you are stressed or heading towards burnout, the body holds it physically — tight shoulders, a stiff neck, a clenched jaw and shallow, quick breathing. A stress relief or <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium">relaxation massage</Link> helps by calming the nervous system, releasing that held tension and giving you the time and space to actually switch off.
+            When you are stressed or heading towards burnout, the body holds it physically — tight shoulders, a stiff neck, a clenched jaw and shallow, quick breathing. A stress relief or <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">relaxation massage</Link> helps by calming the nervous system, releasing that held tension and giving you the time and space to actually switch off.
           </p>
 
           <p>
@@ -113,7 +114,7 @@ export default function StressReliefMassagePage() {
           </ul>
 
           <p>
-            These often overlap with the strain of long hours at a screen. If your neck and shoulders are a particular problem, our pieces on <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium">desk posture and pain</Link> and on <Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tension headaches</Link> look at how that everyday tension builds up and what helps ease it.
+            These often overlap with the strain of long hours at a screen. If your neck and shoulders are a particular problem, our pieces on <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">desk posture and pain</Link> and on <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline">tension headaches</Link> look at how that everyday tension builds up and what helps ease it.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps with stress</h2>
@@ -144,7 +145,7 @@ export default function StressReliefMassagePage() {
           </p>
 
           <p>
-            A <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">deep tissue or sports massage</Link> uses firmer, more focused pressure to work on specific tight or overloaded areas, often tied to training or a persistent problem spot. In practice many people benefit from a blend, and part of an assessment-led session is simply working out what will serve you best on the day — a calmer, whole-body treatment, or more targeted work on the areas that need it.
+            A <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">deep tissue or sports massage</Link> uses firmer, more focused pressure to work on specific tight or overloaded areas, often tied to training or a persistent problem spot. In practice many people benefit from a blend, and part of an assessment-led session is simply working out what will serve you best on the day — a calmer, whole-body treatment, or more targeted work on the areas that need it.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How often should I come?</h2>
@@ -154,7 +155,7 @@ export default function StressReliefMassagePage() {
           </p>
 
           <p>
-            Between sessions, the ordinary things still matter: protecting your sleep, taking real breaks from screens, moving regularly and staying well <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated</Link>. At Range and Restore in Archway, we are happy to suggest a sensible pattern based on what is going on for you rather than pushing a fixed package.
+            Between sessions, the ordinary things still matter: protecting your sleep, taking real breaks from screens, moving regularly and staying well <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated</Link>. At Range and Restore in Archway, we are happy to suggest a sensible pattern based on what is going on for you rather than pushing a fixed package.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek other support</h2>
@@ -193,9 +194,9 @@ export default function StressReliefMassagePage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Give yourself an hour to switch off</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Give yourself an hour to switch off</h2>
+          <p className="text-brand-green font-semibold mb-6">
             A calming relaxation massage to ease tension and help you unwind, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -203,7 +204,7 @@ export default function StressReliefMassagePage() {
               href={BOOKING_URLS.relaxation}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -211,13 +212,13 @@ export default function StressReliefMassagePage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -227,23 +228,23 @@ export default function StressReliefMassagePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/relaxation-restorative-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline link-inline-tap">
               &rarr; Relaxation &amp; Restorative Massage
             </Link>
-            <Link href="/blog/mind-body-connection-massage-mental-wellbeing-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.mindBodyConnectionMassageMentalWellbeingArchway} className="link-inline link-inline-tap">
               &rarr; The Mind-Body Connection: How Easing Pain Supports Mental Wellbeing
             </Link>
-            <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
               &rarr; Desk Posture and Pain: How Massage Helps
             </Link>
-            <Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline link-inline-tap">
               &rarr; Tension Headaches: How Massage Can Help
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

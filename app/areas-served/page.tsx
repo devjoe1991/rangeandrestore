@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Areas Served – Sports Massage Near You in North London',
@@ -94,7 +95,7 @@ export default function AreasServedPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(areasSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Sports Massage Near You in North London</h1>
           <p className="mt-4 text-xl text-page-muted max-w-2xl">
@@ -103,14 +104,14 @@ export default function AreasServedPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Based at 130 Junction Road, Archway, London N19 5LB, Range and Restore is staffed by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link> — a certified MLD practitioner. The clinic is a short walk from Archway tube station on the Northern Line, with bus routes connecting to all surrounding areas.
+            Based at 130 Junction Road, Archway, London N19 5LB, Range and Restore is staffed by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link> — a certified MLD practitioner. The clinic is a short walk from Archway tube station on the Northern Line, with bus routes connecting to all surrounding areas.
           </p>
 
           <p>
-            Whether you need <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link>, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> for chronic conditions, <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">back and neck pain treatment</Link>, or <Link href="/services/manual-lymphatic-drainage" className="text-[#0f767a] hover:text-page font-medium">manual lymphatic drainage</Link>, the same assessment-led approach is available to clients across North London.
+            Whether you need <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link>, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> for chronic conditions, <Link href={ROUTES.services.backNeckPainMot} className="link-inline">back and neck pain treatment</Link>, or <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">manual lymphatic drainage</Link>, the same assessment-led approach is available to clients across North London.
           </p>
         </div>
 
@@ -123,17 +124,17 @@ export default function AreasServedPage() {
                   <h2 className="text-xl font-bold text-page mb-2">{area.name}</h2>
                   <p className="text-page-muted text-sm">{area.description}</p>
                   {area.href && (
-                    <p className="mt-3 text-[#0f767a] font-semibold text-sm">View {area.name.split(',')[0]} page &rarr;</p>
+                    <p className="mt-3 text-brand-teal font-semibold text-sm">View {area.name.split(',')[0]} page &rarr;</p>
                   )}
                 </div>
               </>
             )
             return area.href ? (
-              <Link key={area.name} href={area.href} className="rounded-[20px] overflow-hidden bg-card shadow-sm block hover:shadow-md transition-shadow" style={{ border: '2px solid #1a3d3a' }}>
+              <Link key={area.name} href={area.href} className="rounded-card overflow-hidden bg-card shadow-sm block hover:shadow-md transition-shadow" style={{ border: '2px solid #1a3d3a' }}>
                 {inner}
               </Link>
             ) : (
-              <div key={area.name} className="rounded-[20px] overflow-hidden bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+              <div key={area.name} className="rounded-card overflow-hidden bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
                 {inner}
               </div>
             )
@@ -159,9 +160,9 @@ export default function AreasServedPage() {
           </p>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your session at Range and Restore</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book your session at Range and Restore</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Sports massage, deep tissue therapy, clinical massage, and MLD in Archway, North London. Open 7 days a week.
           </p>
           <BookingButton label="Book Your Session" />
@@ -170,16 +171,16 @@ export default function AreasServedPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Explore our services</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage
             </Link>
-            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
               &rarr; Back &amp; Neck Pain MOT
             </Link>
-            <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.contact} className="link-inline link-inline-tap">
               &rarr; Contact &amp; Directions
             </Link>
           </div>

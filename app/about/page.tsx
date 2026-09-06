@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, personSchema, buildBreadcrumbs } from '@/lib/seo'
 import { RELIABLE_SCAN_URL } from '@/lib/constants'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Carlos Bonvicine | Sports Massage Therapist Archway',
@@ -18,7 +19,7 @@ export default function AboutPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">BTEC Level 5 Sports Massage &amp; Soft Tissue Remedial Therapist in Archway – Carlos Bonvicine</h1>
           <p className="mt-4 text-xl text-page-muted">Sports massage and soft tissue remedial therapy in Archway, rated five stars by clients across Islington, Tufnell Park, Finsbury Park and North London.</p>
@@ -27,14 +28,14 @@ export default function AboutPage() {
               <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               Rated 5 Stars on Google
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-badge-teal text-page font-semibold px-3 py-1.5 rounded-full border border-[#0f767a]/30">BTEC Level 5 Qualified</span>
+            <span className="inline-flex items-center gap-1.5 bg-badge-teal text-page font-semibold px-3 py-1.5 rounded-full border border-brand-teal/30">BTEC Level 5 Qualified</span>
             <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Certified MLD Practitioner</span>
             <span className="inline-flex items-center gap-1.5 bg-page-alt text-page font-semibold px-3 py-1.5 rounded-full border border-page">Archway, N19</span>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             {/* Therapist hero image */}
@@ -49,7 +50,7 @@ export default function AboutPage() {
               />
             </div>
             <h2 className="text-3xl font-bold text-page mb-2">Carlos Bonvicine</h2>
-            <p className="text-[#0f767a] font-semibold mb-1">BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist</p>
+            <p className="text-brand-teal font-semibold mb-1">BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapist</p>
             <p className="text-page-muted font-medium mb-6 text-sm">Certified MLD Practitioner · Cupping Therapy · Fully Insured</p>
             <div className="space-y-4 text-page-muted text-lg">
               <p>
@@ -67,7 +68,7 @@ export default function AboutPage() {
                   href={RELIABLE_SCAN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold"
+                  className="link-cite"
                 >
                   Reliable Scan
                 </a>
@@ -107,7 +108,7 @@ export default function AboutPage() {
                   { title: 'Aftercare Advice', desc: 'You leave with practical advice and, where needed, movement and exercise recommendations.' },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-3">
-                    <span className="text-[#0f767a] font-bold text-xl leading-none mt-0.5">→</span>
+                    <span className="text-brand-teal font-bold text-xl leading-none mt-0.5">→</span>
                     <div>
                       <p className="font-semibold text-page">{item.title}</p>
                       <p className="text-page-muted text-sm">{item.desc}</p>
@@ -118,23 +119,23 @@ export default function AboutPage() {
             </div>
 
             {/* Reliable Scan — compact card */}
-            <div className="bg-[#F2EDE4] text-[#1a2330] rounded-2xl p-8 border border-[#1a3d3a]/10">
-              <h3 className="text-xl font-bold mb-2 text-[#1a3d3a]">Clinical Collaboration</h3>
-              <p className="text-[#1a3d3a]/80 mb-4 text-sm font-medium">
+            <div className="bg-sand-deep text-ink rounded-2xl p-8 border border-brand-green/10">
+              <h3 className="text-xl font-bold mb-2 text-brand-green">Clinical Collaboration</h3>
+              <p className="text-brand-green/80 mb-4 text-sm font-medium">
                 Range and Restore is based at 130 Junction Road, Archway, within the same building as{' '}
                 <a
                   href={RELIABLE_SCAN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2a7a3a] underline decoration-[#2a7a3a]/40 hover:text-[#1a3d3a] hover:decoration-[#1a3d3a] transition-colors font-bold"
+                  className="text-brand-green-mid underline decoration-brand-green-mid/40 hover:text-brand-green hover:decoration-brand-green transition-colors font-bold"
                 >
                   Reliable Scan
                 </a>
                 {' '}— a private diagnostic ultrasound clinic led by GMC-registered doctors.
               </p>
               <Link
-                href="/clinical-collaboration"
-                className="inline-flex items-center gap-2 text-[#2a7a3a] font-bold hover:text-[#1a3d3a] transition-colors min-h-[44px]"
+                href={ROUTES.clinicalCollaboration}
+                className="inline-flex items-center gap-2 text-brand-green-mid font-bold hover:text-brand-green transition-colors min-h-[44px]"
               >
                 Learn about clinical collaboration →
               </Link>
@@ -147,8 +148,8 @@ export default function AboutPage() {
                 Carlos volunteers at Whittington Health Charity fundraising events at the hospital up the hill, treating NHS staff, patients and visitors. He has also worked the TCS London Marathon for three years running, giving post-race massage to runners raising money for Phab.
               </p>
               <Link
-                href="/giving-back"
-                className="inline-flex items-center gap-2 text-[#0f767a] font-bold hover:text-page transition-colors min-h-[44px]"
+                href={ROUTES.givingBack}
+                className="inline-flex items-center gap-2 text-brand-teal font-bold hover:text-page transition-colors min-h-[44px]"
               >
                 The charities we support →
               </Link>

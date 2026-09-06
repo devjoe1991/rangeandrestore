@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sciatica Treatment in North London: Why the Painful Spot Is Rarely the Problem',
@@ -84,9 +85,9 @@ export default function SciaticaTreatmentNorthLondonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sciatica Treatment in North London: Why the Painful Spot Is Rarely the Problem
           </h1>
@@ -98,7 +99,7 @@ export default function SciaticaTreatmentNorthLondonPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             You know the shuffle. Standing up from your desk at half four, one hand braced on the chair, waiting to see which version of your back you have got today.
@@ -189,12 +190,12 @@ export default function SciaticaTreatmentNorthLondonPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How we approach sciatic-type pain at Range and Restore</h2>
 
           <p>
-            Range and Restore is a sports and remedial massage clinic at 130 Junction Road in Archway, staffed by a <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>. Level 5 is the qualification level at which therapists are trained to assess, reason clinically and adapt treatment to the person in front of them, rather than deliver a fixed routine. For a problem as varied as sciatic-type pain, that is the difference that counts.
+            Range and Restore is a sports and remedial massage clinic at 130 Junction Road in Archway, staffed by a <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>. Level 5 is the qualification level at which therapists are trained to assess, reason clinically and adapt treatment to the person in front of them, rather than deliver a fixed routine. For a problem as varied as sciatic-type pain, that is the difference that counts.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">We assess first</h3>
           <p>
-            Your first appointment starts with a proper conversation and a physical assessment. What does the pain feel like, where does it travel, what makes it worse, what makes it better, what changed in the weeks before it started, how are you sleeping and sitting. Then your therapist looks at how you actually move — hip and lumbar range of motion, how you load each side, which tissues are tender and which reproduce your symptoms when tested. The aim is to build a picture of your presentation, not to match you to a template. A <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">back and neck pain MOT</Link> is a good option if you want that mapping to be the focus of the session.
+            Your first appointment starts with a proper conversation and a physical assessment. What does the pain feel like, where does it travel, what makes it worse, what makes it better, what changed in the weeks before it started, how are you sleeping and sitting. Then your therapist looks at how you actually move — hip and lumbar range of motion, how you load each side, which tissues are tender and which reproduce your symptoms when tested. The aim is to build a picture of your presentation, not to match you to a template. A <Link href={ROUTES.services.backNeckPainMot} className="link-inline">back and neck pain MOT</Link> is a good option if you want that mapping to be the focus of the session.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Then we tailor the treatment</h3>
@@ -213,7 +214,7 @@ export default function SciaticaTreatmentNorthLondonPage() {
           </ul>
 
           <p>
-            The goals are practical rather than grand: reduce the muscular tension contributing to the irritation, improve mobility and range of motion through the hips and lower back, ease the protective guarding that has built up, and support your recovery so that you can sit, walk, train and sleep with less interference. For many people that combination is what finally breaks the cycle that stretching and rolling could not. Our <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> and <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> are the two treatments this work most often sits within.
+            The goals are practical rather than grand: reduce the muscular tension contributing to the irritation, improve mobility and range of motion through the hips and lower back, ease the protective guarding that has built up, and support your recovery so that you can sit, walk, train and sleep with less interference. For many people that combination is what finally breaks the cycle that stretching and rolling could not. Our <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> and <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> are the two treatments this work most often sits within.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">And we tell you when it is not a massage problem</h3>
@@ -222,7 +223,7 @@ export default function SciaticaTreatmentNorthLondonPage() {
           </p>
 
           <p>
-            That might mean your GP, a physiotherapist, or diagnostic imaging. Range and Restore shares 130 Junction Road with <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic, so if a scan is worth having we can point you at it in the same building. Our guide to <Link href="/blog/msk-ultrasound-scan-massage-archway" className="text-[#0f767a] hover:text-page font-medium">MSK ultrasound scans</Link> covers when imaging is and is not useful.
+            That might mean your GP, a physiotherapist, or diagnostic imaging. Range and Restore shares 130 Junction Road with <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic, so if a scan is worth having we can point you at it in the same building. Our guide to <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">MSK ultrasound scans</Link> covers when imaging is and is not useful.
           </p>
 
           <p>
@@ -232,11 +233,11 @@ export default function SciaticaTreatmentNorthLondonPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sciatica, lower back and glute pain treatment in Archway, Islington and North London</h2>
 
           <p>
-            If you have been searching for sciatica treatment in North London, sciatica massage, sports massage for sciatica, lower back pain treatment or help with hip and glute pain, this clinic is set up for exactly that kind of work. Range and Restore is at 130 Junction Road, Archway, London N19 5LB — two minutes from <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">Archway</Link> tube on the Northern Line, and an easy run in from <Link href="/areas-served/islington-n1" className="text-[#0f767a] hover:text-page font-medium">Islington</Link>, <Link href="/areas-served/holloway-n7" className="text-[#0f767a] hover:text-page font-medium">Holloway</Link>, <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium">Tufnell Park</Link>, <Link href="/areas-served/highgate-n6" className="text-[#0f767a] hover:text-page font-medium">Highgate</Link>, <Link href="/areas-served/crouch-end-n8" className="text-[#0f767a] hover:text-page font-medium">Crouch End</Link>, <Link href="/areas-served/finsbury-park-n4" className="text-[#0f767a] hover:text-page font-medium">Finsbury Park</Link> and <Link href="/areas-served/kentish-town-nw5" className="text-[#0f767a] hover:text-page font-medium">Kentish Town</Link>.
+            If you have been searching for sciatica treatment in North London, sciatica massage, sports massage for sciatica, lower back pain treatment or help with hip and glute pain, this clinic is set up for exactly that kind of work. Range and Restore is at 130 Junction Road, Archway, London N19 5LB — two minutes from <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> tube on the Northern Line, and an easy run in from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link>, <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>.
           </p>
 
           <p>
-            That covers N19, N7, N6, N4, N8, N1, NW1 and NW5 — most of North London within a short bus or tube ride. If you want the detail on neighbouring problems, our guides to <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">lower back pain</Link>, <Link href="/blog/hip-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">hip pain and tight hips</Link>, <Link href="/blog/tight-hamstring-massage-archway" className="text-[#0f767a] hover:text-page font-medium">tight hamstrings</Link> and <Link href="/blog/sciatica-massage-archway" className="text-[#0f767a] hover:text-page font-medium">sciatica and trapped nerve pain</Link> go further into each.
+            That covers N19, N7, N6, N4, N8, N1, NW1 and NW5 — most of North London within a short bus or tube ride. If you want the detail on neighbouring problems, our guides to <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link>, <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline">hip pain and tight hips</Link>, <Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline">tight hamstrings</Link> and <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline">sciatica and trapped nerve pain</Link> go further into each.
           </p>
         </div>
 
@@ -255,9 +256,9 @@ export default function SciaticaTreatmentNorthLondonPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Stop guessing where the pain is coming from</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Stop guessing where the pain is coming from</h2>
+          <p className="text-brand-green font-semibold mb-6">
             If persistent lower back, glute or sciatic-type pain has been dictating how you sit, sleep and train, book an initial consultation and treatment at Range and Restore. Your therapist will assess you properly, tell you honestly what they find, and treat the presentation in front of them — or point you towards the right person if that is what you need. Archway, N19, two minutes from the tube.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -265,7 +266,7 @@ export default function SciaticaTreatmentNorthLondonPage() {
               href={BOOKING_URLS.advancedClinical}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Book an Initial Consultation &amp; Treatment
             </a>
@@ -273,13 +274,13 @@ export default function SciaticaTreatmentNorthLondonPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Book Sports &amp; Deep Tissue Massage
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -289,23 +290,23 @@ export default function SciaticaTreatmentNorthLondonPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/blog/sciatica-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline link-inline-tap">
               &rarr; Sciatica and Trapped Nerve Pain: Can Massage Help?
             </Link>
-            <Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Lower Back Pain: How Massage Can Help
             </Link>
-            <Link href="/blog/hip-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Hip Pain and Tight Hips: How Massage Helps
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

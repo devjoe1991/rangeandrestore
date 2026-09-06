@@ -4,6 +4,7 @@ import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import FaqAccordion from './FaqAccordion'
 import { faqs } from './data'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage FAQs – Range and Restore Archway',
@@ -30,7 +31,7 @@ export default function FAQsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       {/* Header */}
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-extrabold text-page tracking-tight">
             Frequently Asked Questions
@@ -49,14 +50,14 @@ export default function FAQsPage() {
         <FaqAccordion />
 
         {/* CTA */}
-        <div className="mt-10 bg-[#1a3d3a] rounded-2xl p-8 text-center">
+        <div className="mt-10 bg-brand-green rounded-2xl p-8 text-center">
           <h2 className="text-2xl font-extrabold text-white tracking-tight mb-2">Still have questions?</h2>
-          <p className="text-[#d4ecea]/80 mb-6 text-sm">
+          <p className="text-teal-tint/80 mb-6 text-sm">
             Get in touch and our team will be happy to help before you book.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <BookingButton label="Book Your Session" />
-            <Link href="/contact" className="btn btn-outline-white">
+            <Link href={ROUTES.contact} className="btn btn-outline-white">
               Contact Us
             </Link>
           </div>

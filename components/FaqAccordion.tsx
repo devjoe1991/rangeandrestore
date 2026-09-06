@@ -25,12 +25,12 @@ export function FaqAccordion({ items, includeSchema = true }: FaqAccordionProps)
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
 
-      <div className="rounded-2xl border-2 border-[#1a3d3a] overflow-hidden bg-card">
+      <div className="rounded-2xl border-2 border-brand-green overflow-hidden bg-card">
         {items.map((faq, i) => (
-          <details key={faq.q} className={`group ${i < items.length - 1 ? 'border-b border-[#1a3d3a]/15' : ''}`}>
+          <details key={faq.q} className={`group ${i < items.length - 1 ? 'border-b border-brand-green/15' : ''}`}>
             <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none font-semibold text-page text-base leading-snug hover:bg-page-sage transition-colors min-h-[56px]">
               {faq.q}
-              <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#1a3d3a]/10 flex items-center justify-center text-[#1a3d3a]">
+              <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green">
                 <span className="absolute w-3 h-[2px] bg-current rounded-sm"></span>
                 <span className="absolute w-[2px] h-3 bg-current rounded-sm transition-transform duration-300 group-open:rotate-90"></span>
               </span>

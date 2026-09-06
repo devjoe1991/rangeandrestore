@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Desk Posture Pain: Stiff Neck & Bad Back Massage Archway',
@@ -79,9 +80,9 @@ export default function DeskPosturePainMassagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
           </h1>
@@ -93,10 +94,10 @@ export default function DeskPosturePainMassagePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Yes, massage helps desk posture pain. The stiff neck, tight shoulders and aching lower back that come from sitting at a screen all day are mostly a soft tissue problem: some muscles are overworked and shortened, others have switched off, and the joints in between have stopped moving well. Assessment-led <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">massage and soft tissue treatment</Link> releases the overloaded tissue and restores movement, and paired with a few changes to how you work, it stops the pattern building back up.
+            Yes, massage helps desk posture pain. The stiff neck, tight shoulders and aching lower back that come from sitting at a screen all day are mostly a soft tissue problem: some muscles are overworked and shortened, others have switched off, and the joints in between have stopped moving well. Assessment-led <Link href={ROUTES.services.backNeckPainMot} className="link-inline">massage and soft tissue treatment</Link> releases the overloaded tissue and restores movement, and paired with a few changes to how you work, it stops the pattern building back up.
           </p>
 
           <p>
@@ -125,11 +126,11 @@ export default function DeskPosturePainMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What are the most common symptoms?</h2>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li>Persistent <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">neck pain and stiffness</Link>, often worse at the end of the working day</li>
-            <li><Link href="/blog/tension-headache-massage-archway" className="text-[#0f767a] hover:text-page font-medium">Tension headaches</Link> starting at the base of the skull or across the forehead</li>
+            <li>Persistent <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">neck pain and stiffness</Link>, often worse at the end of the working day</li>
+            <li><Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline">Tension headaches</Link> starting at the base of the skull or across the forehead</li>
             <li>Upper back pain and tightness between the shoulder blades</li>
             <li>Shoulder aching, particularly on the mouse-hand side</li>
-            <li><Link href="/blog/lower-back-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium">Lower back pain</Link> after prolonged sitting</li>
+            <li><Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">Lower back pain</Link> after prolonged sitting</li>
             <li>Occasional pins and needles in the arms or hands from tight tissue around the neck or shoulder</li>
             <li>Jaw tension from holding the head forward</li>
           </ul>
@@ -162,7 +163,7 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            Alongside treatment, simple workplace adjustments make a big difference: screen at eye level, chair set so your hips are slightly above your knees, and a short movement break every 30 to 45 minutes. Staying <Link href="/blog/hydration-and-muscle-health" className="text-[#0f767a] hover:text-page font-medium">hydrated through the day</Link> helps too. Practical advice on these changes is part of every session at Range and Restore, and our <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium">guide for office workers</Link> covers the desk set-up side in more detail.
+            Alongside treatment, simple workplace adjustments make a big difference: screen at eye level, chair set so your hips are slightly above your knees, and a short movement break every 30 to 45 minutes. Staying <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated through the day</Link> helps too. Practical advice on these changes is part of every session at Range and Restore, and our <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">guide for office workers</Link> covers the desk set-up side in more detail.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When should I see a GP instead?</h2>
@@ -189,7 +190,7 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            Every session at Range and Restore begins with an assessment of your posture, movement and specific symptoms, so the treatment is relevant to you rather than a general back rub. The <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link> is built for exactly this, with 30, 60 and 90-minute sessions from £50.
+            Every session at Range and Restore begins with an assessment of your posture, movement and specific symptoms, so the treatment is relevant to you rather than a general back rub. The <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> is built for exactly this, with 30, 60 and 90-minute sessions from £50.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Desk posture pain treatment near you in North London</h2>
@@ -216,9 +217,9 @@ export default function DeskPosturePainMassagePage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Sort the stiff neck before it becomes normal</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Sort the stiff neck before it becomes normal</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led Back &amp; Neck Pain MOT and remedial massage for desk workers in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -226,7 +227,7 @@ export default function DeskPosturePainMassagePage() {
               href={BOOKING_URLS.backNeckMot}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -234,13 +235,13 @@ export default function DeskPosturePainMassagePage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -250,23 +251,23 @@ export default function DeskPosturePainMassagePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
               &rarr; Back &amp; Neck Pain MOT – Soft Tissue Remedial Massage Therapy
             </Link>
-            <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage
             </Link>
-            <Link href="/blog/office-worker-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Office Workers
             </Link>
-            <Link href="/blog/neck-pain-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Neck Pain and a Stiff Neck: How Massage Helps
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

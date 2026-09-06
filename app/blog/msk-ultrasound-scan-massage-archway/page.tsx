@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Do I Need a Scan for My Injury? MSK Ultrasound Explained',
@@ -91,9 +92,9 @@ export default function MskUltrasoundScanMassagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Do I Need a Scan for My Injury? MSK Ultrasound, Explained
           </h1>
@@ -105,10 +106,10 @@ export default function MskUltrasoundScanMassagePage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Here&apos;s the honest answer: most aches don&apos;t need a scan. But if your pain has persisted for weeks, keeps coming back, or started with an injury you never got looked at, treating it blind is a slow way to get better. A diagnostic musculoskeletal (MSK) ultrasound shows what is actually going on in the muscle, tendon or joint — and at Range and Restore in Archway, you can now book the scan and a <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">clinical massage guided by the findings</Link> as one package, under one roof.
+            Here&apos;s the honest answer: most aches don&apos;t need a scan. But if your pain has persisted for weeks, keeps coming back, or started with an injury you never got looked at, treating it blind is a slow way to get better. A diagnostic musculoskeletal (MSK) ultrasound shows what is actually going on in the muscle, tendon or joint — and at Range and Restore in Archway, you can now book the scan and a <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">clinical massage guided by the findings</Link> as one package, under one roof.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is an MSK ultrasound?</h2>
@@ -118,7 +119,7 @@ export default function MskUltrasoundScanMassagePage() {
           </p>
 
           <p>
-            At 130 Junction Road, MSK scans are performed and reported by the GMC-registered doctors at <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, the private diagnostic ultrasound clinic that shares our building. You leave with a clinical consultation, a comprehensive written report and your ultrasound images.
+            At 130 Junction Road, MSK scans are performed and reported by the GMC-registered doctors at <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, the private diagnostic ultrasound clinic that shares our building. You leave with a clinical consultation, a comprehensive written report and your ultrasound images.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What can it show?</h2>
@@ -134,7 +135,7 @@ export default function MskUltrasoundScanMassagePage() {
           </ul>
 
           <p>
-            That covers a large share of what walks through a massage clinic&apos;s door: the calf strain that keeps recurring, the shoulder that clicks and aches, the <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium">Achilles that flares every time training ramps up</Link>, the <Link href="/blog/tennis-elbow-massage-archway" className="text-[#0f767a] hover:text-page font-medium">elbow that never quite settles</Link>.
+            That covers a large share of what walks through a massage clinic&apos;s door: the calf strain that keeps recurring, the shoulder that clicks and aches, the <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline">Achilles that flares every time training ramps up</Link>, the <Link href={ROUTES.blog.tennisElbowMassageArchway} className="link-inline">elbow that never quite settles</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When is a scan actually worth it?</h2>
@@ -163,7 +164,7 @@ export default function MskUltrasoundScanMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How the scan-plus-massage package works in Archway</h2>
 
           <p>
-            The <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">MSK Injury Assessment, Diagnostic Ultrasound &amp; Clinical Massage package</Link> joins the two halves of the problem — diagnosis and treatment — into one coordinated visit at 130 Junction Road:
+            The <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">MSK Injury Assessment, Diagnostic Ultrasound &amp; Clinical Massage package</Link> joins the two halves of the problem — diagnosis and treatment — into one coordinated visit at 130 Junction Road:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -173,7 +174,7 @@ export default function MskUltrasoundScanMassagePage() {
           </ul>
 
           <p>
-            Pricing is deliberately transparent. The total is £165: £75 paid online to Range and Restore when you book, which covers the clinical massage, and £90 paid directly to Reliable Scan for the scan, consultation, report and images. The ultrasound element of the package is provided by Reliable Scan as an independent clinic — that&apos;s the point. You get imaging from imaging specialists and hands-on treatment from soft tissue specialists, in the same building, on the same problem. You can read more about how the two clinics work together on our <Link href="/clinical-collaboration" className="text-[#0f767a] hover:text-page font-medium">clinical collaboration page</Link>.
+            Pricing is deliberately transparent. The total is £165: £75 paid online to Range and Restore when you book, which covers the clinical massage, and £90 paid directly to Reliable Scan for the scan, consultation, report and images. The ultrasound element of the package is provided by Reliable Scan as an independent clinic — that&apos;s the point. You get imaging from imaging specialists and hands-on treatment from soft tissue specialists, in the same building, on the same problem. You can read more about how the two clinics work together on our <Link href={ROUTES.clinicalCollaboration} className="link-inline">clinical collaboration page</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor first</h2>
@@ -208,9 +209,9 @@ export default function MskUltrasoundScanMassagePage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Stop guessing what&apos;s causing your pain</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Stop guessing what&apos;s causing your pain</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Diagnostic MSK ultrasound, written report and a 60-minute clinical massage guided by the findings — all at 130 Junction Road, Archway. £75 online secures your appointment.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -218,19 +219,19 @@ export default function MskUltrasoundScanMassagePage() {
               href={BOOKING_URLS.mskUltrasoundMassage}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Book the Package
             </a>
             <Link
-              href="/services/msk-ultrasound-clinical-massage"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              href={ROUTES.services.mskUltrasoundClinicalMassage}
+              className="btn-ink-outline"
             >
               See Full Details
             </Link>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -240,23 +241,23 @@ export default function MskUltrasoundScanMassagePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/msk-ultrasound-clinical-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline link-inline-tap">
               &rarr; MSK Injury Assessment, Diagnostic Ultrasound &amp; Clinical Massage
             </Link>
-            <Link href="/clinical-collaboration" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.clinicalCollaboration} className="link-inline link-inline-tap">
               &rarr; How clinical collaboration works at 130 Junction Road
             </Link>
-            <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline link-inline-tap">
               &rarr; Does Massage Help Achilles Tendinitis?
             </Link>
-            <Link href="/blog/sports-recovery-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
               &rarr; How to Recover Faster Between Training and Events
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

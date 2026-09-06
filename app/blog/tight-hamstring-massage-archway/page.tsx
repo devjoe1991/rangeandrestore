@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Tight and Pulled Hamstrings: Sports Massage for Recovery',
@@ -75,9 +76,9 @@ export default function TightHamstringPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Tight and Pulled Hamstrings – How Sports Massage Helps
           </h1>
@@ -89,10 +90,10 @@ export default function TightHamstringPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Sports massage helps tight hamstrings by releasing muscle and fascial tension, improving circulation, and addressing the hips, glutes and pelvic mechanics that keep the hamstrings overloaded. For an acute pulled or strained hamstring, early care is different and the grade of the strain matters. At Range and Restore in Archway, North London, an assessment-led approach to <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> looks at why the hamstrings are tight, not just where it hurts.
+            Sports massage helps tight hamstrings by releasing muscle and fascial tension, improving circulation, and addressing the hips, glutes and pelvic mechanics that keep the hamstrings overloaded. For an acute pulled or strained hamstring, early care is different and the grade of the strain matters. At Range and Restore in Archway, North London, an assessment-led approach to <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> looks at why the hamstrings are tight, not just where it hurts.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why do hamstrings get tight?</h2>
@@ -111,7 +112,7 @@ export default function TightHamstringPage() {
           </ul>
 
           <p>
-            If you spend most of the day at a desk, that posture is often part of the picture — the same pattern that drives <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">tightness in runners</Link> who then train on top of a full day of sitting. Understanding this is why lasting relief usually comes from addressing the hips and glutes, not just stretching the hamstrings harder.
+            If you spend most of the day at a desk, that posture is often part of the picture — the same pattern that drives <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">tightness in runners</Link> who then train on top of a full day of sitting. Understanding this is why lasting relief usually comes from addressing the hips and glutes, not just stretching the hamstrings harder.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Tight hamstring vs pulled (strained) hamstring</h2>
@@ -167,7 +168,7 @@ export default function TightHamstringPage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to grade a strain or rule out more serious injury, this can be arranged within the same building.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to grade a strain or rule out more serious injury, this can be arranged within the same building.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find hamstring treatment near you in North London</h2>
@@ -177,7 +178,7 @@ export default function TightHamstringPage() {
           </p>
 
           <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for runners and active clients across all of those postcodes who do not want to trek into central London for proper hands-on hamstring treatment. If you are training for a race, it also pairs well with a plan around your <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium">marathon build-up</Link>.
+            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for runners and active clients across all of those postcodes who do not want to trek into central London for proper hands-on hamstring treatment. If you are training for a race, it also pairs well with a plan around your <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon build-up</Link>.
           </p>
         </div>
 
@@ -196,9 +197,9 @@ export default function TightHamstringPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Hamstrings always tight?</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Hamstrings always tight?</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led sports and deep tissue massage that works on the cause of your hamstring tightness, not just the symptom, in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -206,7 +207,7 @@ export default function TightHamstringPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -214,13 +215,13 @@ export default function TightHamstringPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -230,20 +231,20 @@ export default function TightHamstringPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/marathon-sports-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
               &rarr; Marathon Sports Massage in Archway
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

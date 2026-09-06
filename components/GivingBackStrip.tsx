@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ROUTES } from '@/lib/routes'
 
 /**
  * Homepage strip linking to /giving-back. Deliberately low visual weight: it
@@ -15,8 +16,8 @@ export function GivingBackStrip() {
     <section className="bg-page pt-0 pb-[clamp(3.5rem,6vw,5.5rem)]" aria-labelledby="giving-back-heading">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Link
-          href="/giving-back"
-          className="group block rounded-[24px] border-2 border-[#1a3d3a] bg-page-sage px-6 py-5 sm:px-8 sm:py-6 no-underline hover:bg-card transition-colors"
+          href={ROUTES.givingBack}
+          className="group block rounded-panel border-2 border-brand-green bg-page-sage px-6 py-5 sm:px-8 sm:py-6 no-underline hover:bg-card transition-colors"
         >
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <div className="flex-1">
@@ -28,7 +29,7 @@ export function GivingBackStrip() {
                 Donated treatments and gift vouchers for Whittington Health Charity fundraising, and Carlos in the Phab recovery tent at the London Marathon three years running.
               </p>
             </div>
-            <span className="flex-shrink-0 text-[#0f767a] text-xs font-black uppercase tracking-wide inline-flex items-center gap-2 min-h-[44px] group-hover:text-page transition-colors">
+            <span className="flex-shrink-0 text-brand-teal text-xs font-black uppercase tracking-wide inline-flex items-center gap-2 min-h-[44px] group-hover:text-page transition-colors">
               Read more <span aria-hidden="true">&rarr;</span>
             </span>
           </div>

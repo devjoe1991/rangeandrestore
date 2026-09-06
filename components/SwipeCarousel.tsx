@@ -145,7 +145,7 @@ export function SwipeCarousel({
             onClick={() => page(-1)}
             disabled={atStart}
             aria-label={`Show previous ${itemNoun}`}
-            className="w-10 h-10 rounded-full border-2 border-[#1a3d3a] bg-card text-page flex items-center justify-center transition-opacity hover:bg-page-sage disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-10 h-10 rounded-full border-2 border-brand-green bg-card text-page flex items-center justify-center transition-opacity hover:bg-page-sage disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M15 18l-6-6 6-6" />
@@ -156,7 +156,7 @@ export function SwipeCarousel({
             onClick={() => page(1)}
             disabled={atEnd}
             aria-label={`Show more ${itemNoun}`}
-            className="w-10 h-10 rounded-full border-2 border-[#1a3d3a] bg-card text-page flex items-center justify-center transition-opacity hover:bg-page-sage disabled:opacity-30 disabled:cursor-not-allowed"
+            className="w-10 h-10 rounded-full border-2 border-brand-green bg-card text-page flex items-center justify-center transition-opacity hover:bg-page-sage disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M9 18l6-6-6-6" />

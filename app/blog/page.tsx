@@ -228,18 +228,18 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Wellness Hub</h1>
           <p className="mt-4 text-xl text-page-muted">Expert advice on massage, recovery, and long-term muscle health</p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-full">
         {/* Featured posts — only posts with their own dedicated cover image */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredPosts.map((post) => (
-            <article key={post.slug} className="group card-lift rounded-[20px] overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+            <article key={post.slug} className="group card-lift rounded-card overflow-hidden flex flex-col bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
               <Link href={`/blog/${post.slug}`} className="block aspect-[4/3] relative overflow-hidden">
                 <Image
                   src={post.image!}
@@ -252,14 +252,14 @@ export default function BlogPage() {
               <div className="p-6 flex flex-col flex-grow">
                 <time className="text-sm text-page-muted opacity-70 uppercase tracking-wide">{post.date}</time>
                 <h2 className="text-xl font-bold text-page mt-2 mb-3 leading-snug">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-[#0f767a] transition-colors">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-brand-teal transition-colors">
                     {post.title}
                   </Link>
                 </h2>
                 <p className="text-page-muted mb-4">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-[#0f767a] font-semibold hover:text-page transition-colors min-h-[44px]"
+                  className="inline-flex items-center text-brand-teal font-semibold hover:text-page transition-colors min-h-[44px]"
                 >
                   Read more →
                 </Link>
@@ -276,22 +276,22 @@ export default function BlogPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {guidePosts.map((post) => (
-              <article key={post.slug} className="group card-lift rounded-[16px] overflow-hidden flex bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
-                <div className="w-1.5 shrink-0 bg-[#0f767a]" aria-hidden="true" />
+              <article key={post.slug} className="group card-lift rounded-2xl overflow-hidden flex bg-card shadow-sm" style={{ border: '2px solid #1a3d3a' }}>
+                <div className="w-1.5 shrink-0 bg-brand-teal" aria-hidden="true" />
                 <div className="p-5 flex flex-col flex-grow">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="text-[#0f767a] font-semibold uppercase tracking-widest text-[11px]">Wellness guide</span>
+                    <span className="text-brand-teal font-semibold uppercase tracking-widest text-[11px]">Wellness guide</span>
                     <time className="text-[11px] text-page-muted uppercase tracking-wide">{post.date}</time>
                   </div>
                   <h3 className="text-lg font-bold text-page mt-2 mb-2 leading-snug">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-[#0f767a] transition-colors">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-brand-teal transition-colors">
                       {post.title}
                     </Link>
                   </h3>
                   <p className="text-page-muted text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-[#0f767a] font-semibold text-sm hover:text-page transition-colors mt-2 min-h-[44px]"
+                    className="inline-flex items-center text-brand-teal font-semibold text-sm hover:text-page transition-colors mt-2 min-h-[44px]"
                   >
                     Read more →
                   </Link>

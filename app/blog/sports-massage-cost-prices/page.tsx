@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'How Much Does a Sports Massage Cost? Prices Explained',
@@ -75,9 +76,9 @@ export default function SportsMassageCostPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             How Much Does a Sports Massage Cost?
           </h1>
@@ -89,10 +90,10 @@ export default function SportsMassageCostPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            In London a sports massage typically costs £50–£110, depending mainly on the length of the session. At Range and Restore in Archway, North London, a <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Sports &amp; Deep Tissue Massage</Link> is £50 for 30 minutes, £75 for 60 minutes and £110 for 90 minutes. Prices can change, so it&rsquo;s always worth checking the booking page for the latest.
+            In London a sports massage typically costs £50–£110, depending mainly on the length of the session. At Range and Restore in Archway, North London, a <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Sports &amp; Deep Tissue Massage</Link> is £50 for 30 minutes, £75 for 60 minutes and £110 for 90 minutes. Prices can change, so it&rsquo;s always worth checking the booking page for the latest.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How much does a sports massage cost?</h2>
@@ -155,12 +156,12 @@ export default function SportsMassageCostPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Community Tuesday Clinic</h3>
           <p>
-            The <Link href="/services/community-tuesday-clinic" className="text-[#0f767a] hover:text-page font-medium">Community Tuesday Clinic</Link> runs every Tuesday at a lower cost — £60 for 60 minutes and £85 for 90 minutes. It&rsquo;s the same hands-on treatment at a more accessible price, and a good option if you want regular maintenance work without the full weekday rate.
+            The <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link> runs every Tuesday at a lower cost — £60 for 60 minutes and £85 for 90 minutes. It&rsquo;s the same hands-on treatment at a more accessible price, and a good option if you want regular maintenance work without the full weekday rate.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Massage bundles</h3>
           <p>
-            If you train regularly or you&rsquo;re managing an ongoing issue, <Link href="/services/massage-bundles" className="text-[#0f767a] hover:text-page font-medium">massage bundles</Link> offer better per-session value. A 5 × 60-minute bundle is £350, which works out at £70 a session, and a 10 × 60-minute bundle is £650, or £65 a session. For longer treatments, a 5 × 90-minute bundle is £500 and a 10 × 90-minute bundle is £950. Buying ahead is the simplest way to bring the ongoing cost down.
+            If you train regularly or you&rsquo;re managing an ongoing issue, <Link href={ROUTES.services.massageBundles} className="link-inline">massage bundles</Link> offer better per-session value. A 5 × 60-minute bundle is £350, which works out at £70 a session, and a 10 × 60-minute bundle is £650, or £65 a session. For longer treatments, a 5 × 90-minute bundle is £500 and a 10 × 90-minute bundle is £950. Buying ahead is the simplest way to bring the ongoing cost down.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Gift cards</h3>
@@ -175,7 +176,7 @@ export default function SportsMassageCostPage() {
           </p>
 
           <p>
-            If you only have a minor, one-off ache that&rsquo;s already settling, you may not need a full 90-minute treatment — a shorter 30-minute session, or waiting to see if it clears on its own, might be the sensible call. A good therapist will tell you that rather than upselling. If you want to understand what a session actually does for you, our guide to the <Link href="/blog/sports-massage-benefits" className="text-[#0f767a] hover:text-page font-medium">benefits of sports massage</Link> goes into more detail.
+            If you only have a minor, one-off ache that&rsquo;s already settling, you may not need a full 90-minute treatment — a shorter 30-minute session, or waiting to see if it clears on its own, might be the sensible call. A good therapist will tell you that rather than upselling. If you want to understand what a session actually does for you, our guide to the <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline">benefits of sports massage</Link> goes into more detail.
           </p>
 
           <p>
@@ -208,9 +209,9 @@ export default function SportsMassageCostPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your session or see the latest prices</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book your session or see the latest prices</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Clear, honest pricing on assessment-led sports and deep tissue massage in Archway, North London. Check the booking page for the latest prices and availability.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -218,7 +219,7 @@ export default function SportsMassageCostPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Book &amp; See Prices
             </a>
@@ -226,13 +227,13 @@ export default function SportsMassageCostPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -242,20 +243,20 @@ export default function SportsMassageCostPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/massage-bundles" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.massageBundles} className="link-inline link-inline-tap">
               &rarr; Massage Bundles &ndash; Better Value for Regulars
             </Link>
-            <Link href="/services/community-tuesday-clinic" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline link-inline-tap">
               &rarr; Community Tuesday Clinic &ndash; Lower-Cost Sessions
             </Link>
-            <Link href="/blog/sports-massage-benefits" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline link-inline-tap">
               &rarr; The Benefits of Sports Massage
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Lower Back Pain: How Massage Can Help',
@@ -75,9 +76,9 @@ export default function LowerBackPainPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub · Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub · Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Lower Back Pain – How Sports and Clinical Massage Help
           </h1>
@@ -89,10 +90,10 @@ export default function LowerBackPainPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Most lower back pain is muscular and mechanical rather than a sign of serious damage. Sports and clinical massage help by releasing the tight muscles of the lower back, glutes and hips that pull on the spine, and by addressing the posture and movement patterns behind the problem. Assessment matters, and some back pain needs medical review — but for the common &ldquo;bad back&rdquo;, hands-on treatment can help a great deal. Range and Restore in Archway, North London, offers a dedicated <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link> for exactly this.
+            Most lower back pain is muscular and mechanical rather than a sign of serious damage. Sports and clinical massage help by releasing the tight muscles of the lower back, glutes and hips that pull on the spine, and by addressing the posture and movement patterns behind the problem. Assessment matters, and some back pain needs medical review — but for the common &ldquo;bad back&rdquo;, hands-on treatment can help a great deal. Range and Restore in Archway, North London, offers a dedicated <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> for exactly this.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What causes lower back pain?</h2>
@@ -101,7 +102,7 @@ export default function LowerBackPainPage() {
             &ldquo;Bad back&rdquo; is a broad term, and in most cases the pain comes from the soft tissue — muscles, fascia and their attachments — rather than the bones or discs. The usual contributors are:
           </p>
           <ul className="space-y-2 list-disc list-inside">
-            <li>Prolonged sitting and poor <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium">desk posture</Link>, which leaves the hip flexors short and the lower back working hard to hold you upright</li>
+            <li>Prolonged sitting and poor <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">desk posture</Link>, which leaves the hip flexors short and the lower back working hard to hold you upright</li>
             <li>A weak core and glutes, so the lower back muscles take on load they were never meant to carry</li>
             <li>Awkward, heavy or repetitive lifting, particularly when done with a rounded back or a sudden twist</li>
             <li>Stress and tension, which quietly raise resting muscle tone across the back and shoulders</li>
@@ -130,7 +131,7 @@ export default function LowerBackPainPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Assessment-led, not one-size-fits-all</h3>
           <p>
-            No two bad backs are the same. A session begins by understanding how your pain behaves, what aggravates and eases it, and where the tightness and weakness actually sit. For more complex or longstanding cases, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> combines several techniques into a focused treatment plan rather than a generic rub-down.
+            No two bad backs are the same. A session begins by understanding how your pain behaves, what aggravates and eases it, and where the tightness and weakness actually sit. For more complex or longstanding cases, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> combines several techniques into a focused treatment plan rather than a generic rub-down.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How many sessions will I need?</h2>
@@ -146,7 +147,7 @@ export default function LowerBackPainPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Lower back pain vs sciatica</h2>
 
           <p>
-            It helps to know whether you are dealing with a general bad back or <Link href="/blog/sciatica-massage-archway" className="text-[#0f767a] hover:text-page font-medium">sciatica</Link>. A typical bad back is a dull, aching or stiff pain that stays in the lower back and sometimes the buttocks. Sciatica, by contrast, involves a sharp, shooting or burning pain — or pins and needles — that travels down the leg because a nerve is being irritated.
+            It helps to know whether you are dealing with a general bad back or <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline">sciatica</Link>. A typical bad back is a dull, aching or stiff pain that stays in the lower back and sometimes the buttocks. Sciatica, by contrast, involves a sharp, shooting or burning pain — or pins and needles — that travels down the leg because a nerve is being irritated.
           </p>
 
           <p>
@@ -164,7 +165,7 @@ export default function LowerBackPainPage() {
           </p>
 
           <p>
-            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="text-[#0f767a] underline decoration-[#0f767a]/40 hover:decoration-[#0f767a] transition-colors font-semibold">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to look more closely at the source of your pain, it can be arranged within the same building, and treatment can be coordinated with your GP or physiotherapist.
+            Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to look more closely at the source of your pain, it can be arranged within the same building, and treatment can be coordinated with your GP or physiotherapist.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find lower back pain treatment near you in North London</h2>
@@ -193,9 +194,9 @@ export default function LowerBackPainPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Take the pressure off your lower back</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Take the pressure off your lower back</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Assessment-led sports and clinical massage targeting the muscular causes of your back pain in Archway, North London.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -203,7 +204,7 @@ export default function LowerBackPainPage() {
               href={BOOKING_URLS.backNeckMot}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -211,13 +212,13 @@ export default function LowerBackPainPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -227,20 +228,20 @@ export default function LowerBackPainPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
               &rarr; Back &amp; Neck Pain MOT
             </Link>
-            <Link href="/blog/sciatica-massage-archway" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline link-inline-tap">
               &rarr; Sciatica – How Massage Can Help Ease Nerve Pain
             </Link>
-            <Link href="/blog/desk-posture-pain-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
               &rarr; Desk Posture Pain – How Massage Helps Office Workers
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             ← Back to Wellness Hub
           </Link>
         </div>

@@ -131,7 +131,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
       >
         {/* Input */}
         <div className="flex items-center gap-3 px-4 py-4 border-b border-page">
-          <SearchIcon className="text-[#2a9d8f] flex-shrink-0" />
+          <SearchIcon className="text-brand-teal-soft flex-shrink-0" />
           <input
             ref={inputRef}
             value={query}
@@ -162,7 +162,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
             <div className="py-2">
               {(Object.entries(grouped) as [string, SearchItem[]][]).map(([group, items]) => (
                 <div key={group}>
-                  <p className="px-4 pt-3 pb-1 text-[0.65rem] font-black uppercase tracking-widest text-[#2a9d8f]">{group}</p>
+                  <p className="px-4 pt-3 pb-1 text-[0.65rem] font-black uppercase tracking-widest text-brand-teal-soft">{group}</p>
                   {items.map((item) => {
                     const globalIndex = flat.indexOf(item)
                     const isActive = globalIndex === activeIndex
@@ -172,7 +172,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
                         href={item.href}
                         onClick={onClose}
                         onMouseEnter={() => setActiveIndex(globalIndex)}
-                        className={`flex flex-col px-4 py-2.5 transition-colors ${isActive ? 'bg-[#c6e28a]/30 dark:bg-[#2a9d8f]/15' : 'hover:bg-page-alt'}`}
+                        className={`flex flex-col px-4 py-2.5 transition-colors ${isActive ? 'bg-lime-soft/30 dark:bg-brand-teal-soft/15' : 'hover:bg-page-alt'}`}
                       >
                         <span className="font-semibold text-page text-sm leading-snug">{item.title}</span>
                         <span className="text-page-muted opacity-60 text-xs mt-0.5">{item.description}</span>

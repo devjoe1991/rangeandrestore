@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Holloway N7 | Straight Up Holloway Road',
@@ -73,9 +74,9 @@ export default function HollowayN7Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Holloway · London N7</p>
+          <p className="eyebrow-sm">Holloway · London N7</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage for Holloway (N7)
           </h1>
@@ -85,10 +86,10 @@ export default function HollowayN7Page() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Holloway is one of our closest catchment areas &mdash; Holloway Road runs directly up to Archway, where it becomes Junction Road and passes the clinic at number 130. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>, a certified MLD practitioner.
+            Holloway is one of our closest catchment areas &mdash; Holloway Road runs directly up to Archway, where it becomes Junction Road and passes the clinic at number 130. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>, a certified MLD practitioner.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N7</h2>
@@ -103,12 +104,12 @@ export default function HollowayN7Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Holloway clients</h2>
           <p>
-            For gym-goers, climbers and runners, the go-to is a 60- or 90-minute <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link>. Desk workers and students dealing with neck, shoulder and lower back tension usually start with the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link>. For pain that hasn&apos;t settled with general massage elsewhere, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> takes an assessment-led approach to the root cause.
+            For gym-goers, climbers and runners, the go-to is a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link>. Desk workers and students dealing with neck, shoulder and lower back tension usually start with the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link>. For pain that hasn&apos;t settled with general massage elsewhere, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> takes an assessment-led approach to the root cause.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Holloway and the wider N7 catchment</h2>
           <p>
-            This page covers Holloway, the Nag&apos;s Head, and the streets running off Holloway Road and Hornsey Road. If you&apos;re a little further out, the clinic also serves neighbouring <Link href="/areas-served/tufnell-park-n7" className="text-[#0f767a] hover:text-page font-medium">Tufnell Park</Link>, <Link href="/areas-served/upper-holloway-n19" className="text-[#0f767a] hover:text-page font-medium">Upper Holloway</Link> and <Link href="/areas-served/islington-n1" className="text-[#0f767a] hover:text-page font-medium">Islington</Link>. See all the <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">areas we serve</Link>.
+            This page covers Holloway, the Nag&apos;s Head, and the streets running off Holloway Road and Hornsey Road. If you&apos;re a little further out, the clinic also serves neighbouring <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.upperHollowayN19} className="link-inline">Upper Holloway</Link> and <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>. See all the <Link href={ROUTES.areasServed.index} className="link-inline">areas we serve</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>
@@ -138,9 +139,9 @@ export default function HollowayN7Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your session from Holloway</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Holloway</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; straight up Holloway Road.
           </p>
           <BookingButton label="Book Your Session" />

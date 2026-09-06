@@ -11,12 +11,52 @@
   --color-brand-cream:        #f5fbfc;
   --color-accent:             #7dd94a;
   --color-accent-light:       #B7D968;
+
+  /* Ink + tints that were previously written as raw hex in className strings.
+     Declared here so Tailwind generates text-ink / bg-teal-tint / border-sand
+     utilities and the values live in exactly one place. */
+  --color-ink:                #1a2330;
+  --color-teal-tint:          #d4ecea;
+  --color-sand:               #E9E5DE;
+  --color-sand-deep:          #F2EDE4;
+
+  /* Card radius. 20px is the house value and sits between Tailwind's
+     rounded-2xl (16px) and rounded-3xl (24px), so it needs its own token. */
+  /* The sage surface as a real theme token, so Tailwind can generate opacity
+     and variant forms of it (`bg-sage/20`). It points at the same runtime var
+     as .bg-page-sage, so it still flips automatically in dark mode — which is
+     why the callers do not need a `dark:` override. */
+  --color-sage: var(--page-bg-sage);
+
+  /* Remaining recurring values that were still written as raw hex. */
+  --color-brand-teal-soft: #2a9d8f;  /* search + 404 accents */
+  --color-brand-teal-deep: #0f4f4d;  /* on-white teal, hero badges */
+  --color-sand-warm:       #EAE2D2;  /* award + reviews strip hover */
+  --color-muted:           #4f5866;  /* == --page-text-muted (light) */
+  --color-google-star:     #fbbc04;  /* Google's own star yellow */
+  --color-award-orange:    #c2410c;  /* award strip — NOT Tailwind's orange-700 */
+
+  /* Single-use surface colours. Each is used in exactly one place, so these
+     tokens buy naming and a single source of truth rather than reuse — but
+     they mean the whole palette is enumerable from this one block. */
+  --color-forest-ink:     #003010;  /* FAQ accordion icon */
+  --color-forest-deep:    #0f4a2e;  /* partner card panel */
+  --color-forest-card:    #1e3d22;  /* dark service card */
+  --color-forest-night:   #1a3532;  /* 404 tile */
+  --color-teal-mid:       #155e5c;  /* hero gradient midpoint */
+  --color-surface-night:  #0e1a09;  /* gallery ring offset (dark) */
+  --color-surface-moss:   #2a3d1f;  /* gallery skeleton (dark) */
+  --color-lime-soft:      #c6e28a;  /* search active row */
+  --color-panel:          #eeeeee;  /* neutral info panel */
+
+  --radius-card:  20px;
+  --radius-panel: 24px;
+
   --font-sans: var(--font-inter);
 
   /* Shadow system */
   --shadow-card: 0 4px 24px rgba(26,61,58,0.07), 0 1px 4px rgba(26,61,58,0.05);
   --shadow-card-hover: 0 16px 48px rgba(26,61,58,0.14), 0 4px 12px rgba(26,61,58,0.09);
-  --shadow-glow-green: 0 0 0 2px #0f767a, 0 8px 32px rgba(26,61,58,0.2);
 }
 
 /* ── Light mode tokens ─────────────────────────────────────── */
@@ -29,7 +69,6 @@
   --card-bg:        #ffffff;
   --card-border:    #E9E5DE; /* Warm border */
   --header-bg:      #F2EDE4;
-  --header-border:  transparent;
   --input-bg:       #ffffff;
   --input-border:   #E9E5DE;
   --badge-bg-teal:  #F7F5F0; /* Matching sand */
@@ -44,7 +83,6 @@
   --card-bg:        #1a2826;
   --card-border:    #2a3d3a;
   --header-bg:      #1a3d3a;
-  --header-border:  transparent;
   --input-bg:       #1a2812;
   --input-border:   #2a3d1f;
   --badge-bg-teal:  #162628;
@@ -57,15 +95,100 @@
 .bg-page-sage   { background-color: var(--page-bg-sage); }
 .bg-card        { background-color: var(--card-bg); }
 .bg-header      { background-color: var(--header-bg); }
-.bg-input       { background-color: var(--input-bg); }
 .bg-badge-teal  { background-color: var(--badge-bg-teal); }
 .text-page      { color: var(--page-text); }
 .text-page-muted{ color: var(--page-text-muted); }
 .border-page    { border-color: var(--card-border); }
-.border-header  { border-color: var(--header-border); }
-.border-input   { border-color: var(--input-border); }
-.card-surface   { background-color: var(--card-bg); border-color: var(--card-border); }
-.input-surface  { background-color: var(--input-bg); border-color: var(--input-border); color: var(--page-text); }
+
+/* ── Composite patterns ───────────────────────────────────── */
+/*
+  These are the class strings that were repeated verbatim hundreds of times
+  across the blog, areas-served and services pages. They live in
+  @layer components (not unlayered like the rest of this file) on purpose, so a
+  Tailwind utility in a className can still override one case-by-case.
+*/
+@layer components {
+  /* Inline body link — the single most repeated string on the site. */
+  .link-inline {
+    color: var(--color-brand-teal);
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  .link-inline:hover { color: var(--page-text); }
+
+  /* Same link where it must also meet the 44px touch target. */
+  .link-inline-tap {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Underlined citation / outbound link. */
+  .link-cite {
+    color: var(--color-brand-teal);
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-brand-teal) 40%, transparent);
+    transition: text-decoration-color 0.2s ease;
+  }
+  .link-cite:hover { text-decoration-color: var(--color-brand-teal); }
+
+  /* Small teal kicker above a section heading. */
+  .eyebrow-sm {
+    color: var(--color-brand-teal);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Page shells. The max-width is the only thing that varied. */
+  .container-page {
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-block: 3rem;
+  }
+  @media (min-width: 640px) { .container-page { padding-inline: 1.5rem; } }
+  @media (min-width: 1024px) {
+    .container-page { padding-inline: 2rem; padding-block: 5rem; }
+  }
+  .container-prose { max-width: 48rem; }  /* was max-w-3xl */
+  .container-wide  { max-width: 56rem; }  /* was max-w-4xl */
+  .container-full  { max-width: 80rem; }  /* was max-w-7xl */
+
+  /* Solid / outline CTA pair used at the foot of the content pages. */
+  .btn-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background: var(--color-ink);
+    color: #fff;
+    border: 2px solid var(--color-ink);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-ink:hover { background: var(--color-brand-green); border-color: var(--color-brand-green); }
+
+  .btn-ink-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background: #fff;
+    color: var(--color-ink);
+    border: 2px solid var(--color-ink);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-ink-outline:hover { background: var(--color-ink); color: #fff; }
+}
 
 /* ── Base ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
@@ -92,8 +215,13 @@ input, select, textarea {
 ::selection { background: #7dd94a; color: #1a2330; }
 
 /* ── Spacing ──────────────────────────────────────────────── */
-.section    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }
-.section-sm { padding-block: clamp(2rem,   4vw, 3.5rem); }
+/* Vertical rhythm, smallest to largest. .section-md is by far the most used
+   band; it is written as an explicit breakpoint rather than a clamp because it
+   replaces `py-12 lg:py-16`, and a clamp would have changed the curve. */
+.section-sm { padding-block: clamp(2rem,   4vw, 3.5rem); }   /* 32 → 56px */
+.section-md { padding-block: 3rem; }                          /* 48 → 64px */
+@media (min-width: 1024px) { .section-md { padding-block: 4rem; } }
+.section    { padding-block: clamp(3.5rem, 6vw, 5.5rem); }   /* 56 → 88px */
 
 /* Tighten the seam where two same-coloured sections meet, so their stacked
    padding does not read as dead space. Declared after .section (and, like the
@@ -153,7 +281,6 @@ input, select, textarea {
 .btn-white { background: #fff; color: #1a3d3a; border-color: #fff; }
 .btn-white:hover { background: #7dd94a; border-color: #7dd94a; color: #1a2330; }
 
-
 /* ── Swipe carousel (mobile) ──────────────────────────────── */
 .swipe-row {
   display: flex;
@@ -178,30 +305,6 @@ input, select, textarea {
 }
 
 /* ── Card premium (service cards) ────────────────────────── */
-.card-premium {
-  transition: box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-}
-.card-premium:hover {
-  box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.12);
-  transform: translateY(-4px);
-}
-.dark .card-premium {
-  box-shadow: 0 2px 16px rgba(0,0,0,0.40);
-}
-.dark .card-premium:hover {
-  box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 4px 16px rgba(0,0,0,0.35);
-}
-
-/* ── Accent bar animation ─────────────────────────────────── */
-.accent-bar {
-  height: 3px;
-  background: #1a3d3a;
-  width: 40px;
-  transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.card-premium:hover .accent-bar { width: 100%; }
 
 /* ── Fade-up animation ────────────────────────────────────── */
 @keyframes fadeUp {
@@ -224,24 +327,6 @@ input, select, textarea {
   .hint-touch   { display: inline; }
 }
 
-/* ── Button styles ────────────────────────────────────────── */
-.btn-outline-dark {
-  background: transparent;
-  color: var(--page-text);
-  border-color: var(--card-border);
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.btn-outline-dark:hover {
-  background: var(--page-text);
-  color: var(--page-bg);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  transform: translateY(-1px);
-}
-
-/* Green / teal accent utilities */
-.text-teal { color: #0f767a; }
-.bg-teal    { background-color: #1a3d3a; }
-
 /* ── Book now button (service cards) ─────────────────────── */
 .book-now-btn {
   background: rgba(255, 255, 255, 0.6);
@@ -257,18 +342,6 @@ input, select, textarea {
   color: #1a2330;
   box-shadow: 0 4px 12px rgba(42, 180, 184, 0.2);
   transform: translateY(-1px);
-}
-
-/* ── Dark mode utility overrides ─────────────────────────── */
-.dark .section-light {
-  background: var(--page-bg-sage) !important;
-}
-.dark .section-alt {
-  background: var(--page-bg-alt) !important;
-}
-.dark .card-light {
-  background: var(--card-bg) !important;
-  border-color: var(--card-border) !important;
 }
 
 /* ── Skip link (accessibility) ────────────────────────────── */
@@ -308,7 +381,6 @@ input, select, textarea {
   border-radius: 10px;
   height: 30px; /* Force a consistent thumb length */
 }
-
 
 /* ── Floating WhatsApp CTA ────────────────────────────────── */
 /*

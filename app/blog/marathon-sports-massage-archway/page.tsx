@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Marathon Massage in Archway | Pre & Post London Marathon Recovery',
@@ -85,9 +86,9 @@ export default function MarathonSportsMassageArchwayPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Wellness Hub &middot; Range and Restore</p>
+          <p className="eyebrow-sm">Wellness Hub &middot; Range and Restore</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Marathon Massage in Archway: Your Pre and Post Race Recovery Guide
           </h1>
@@ -99,7 +100,7 @@ export default function MarathonSportsMassageArchwayPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-prose">
 
         <div className="mb-10 rounded-2xl overflow-hidden">
           <Image
@@ -118,7 +119,7 @@ export default function MarathonSportsMassageArchwayPage() {
           </p>
 
           <p>
-            At <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Range and Restore Sports Massage in Archway, North London</Link>, I have spent the past four years working with marathon runners — both at events and in clinic. I have treated runners in the hours before they line up at the start, and I have treated them in the days after they cross the finish line. That hands-on experience shapes every session I deliver, because I have seen first-hand what 26.2 miles does to the body and what targeted treatment can do to prepare it and repair it.
+            At <Link href={ROUTES.about} className="link-inline">Range and Restore Sports Massage in Archway, North London</Link>, I have spent the past four years working with marathon runners — both at events and in clinic. I have treated runners in the hours before they line up at the start, and I have treated them in the days after they cross the finish line. That hands-on experience shapes every session I deliver, because I have seen first-hand what 26.2 miles does to the body and what targeted treatment can do to prepare it and repair it.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who this is for</h2>
@@ -198,7 +199,7 @@ export default function MarathonSportsMassageArchwayPage() {
           </ul>
 
           <p>
-            Sports massage addresses every one of these issues directly — breaking down adhesions, restoring slide between tissue layers, and giving the body what it needs to repair properly rather than just stiffen up. For a broader look at how sports massage supports runners across all distances, see our <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">guide to sports massage for runners</Link>.
+            Sports massage addresses every one of these issues directly — breaking down adhesions, restoring slide between tissue layers, and giving the body what it needs to repair properly rather than just stiffen up. For a broader look at how sports massage supports runners across all distances, see our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">guide to sports massage for runners</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Techniques used with marathon runners</h2>
@@ -209,7 +210,7 @@ export default function MarathonSportsMassageArchwayPage() {
 
           <ul className="space-y-4 list-none pl-0">
             <li>
-              <span className="font-semibold text-page"><Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">Deep tissue massage</Link></span> — Targets the deeper muscle layers where marathon-distance tension embeds itself. This is not about pressing harder. It is sustained, controlled pressure applied to areas where the tissue has thickened and restricted under months of training load.
+              <span className="font-semibold text-page"><Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Deep tissue massage</Link></span> — Targets the deeper muscle layers where marathon-distance tension embeds itself. This is not about pressing harder. It is sustained, controlled pressure applied to areas where the tissue has thickened and restricted under months of training load.
             </li>
             <li>
               <span className="font-semibold text-page">Sports massage</span> — A broader, assessment-led treatment covering the full kinetic chain. The calves, hamstrings, quads, hip flexors, glutes, and lower back all take a battering over 26.2 miles. Sports massage works systematically through these areas, restoring function and reducing tension.
@@ -226,7 +227,7 @@ export default function MarathonSportsMassageArchwayPage() {
           </ul>
 
           <p>
-            These techniques are combined and adapted based on where you are in your marathon cycle — preparation looks different from recovery, and the treatment reflects that. For complex or long-standing issues, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> may also be incorporated to address the root cause rather than just the symptom.
+            These techniques are combined and adapted based on where you are in your marathon cycle — preparation looks different from recovery, and the treatment reflects that. For complex or long-standing issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> may also be incorporated to address the root cause rather than just the symptom.
           </p>
         </div>
 
@@ -264,12 +265,12 @@ export default function MarathonSportsMassageArchwayPage() {
           <ul className="space-y-2 list-disc list-inside">
             <li>Open Monday to Friday 08:00–20:00, Saturday and Sunday 09:00–17:00</li>
             <li>30, 60, and 90-minute sessions available — from a focused post-race flush to a thorough pre-marathon preparation</li>
-            <li><Link href="/services/massage-bundles" className="text-[#0f767a] hover:text-page font-medium">Massage bundles</Link> available for runners who want a series of sessions through their training cycle</li>
+            <li><Link href={ROUTES.services.massageBundles} className="link-inline">Massage bundles</Link> available for runners who want a series of sessions through their training cycle</li>
             <li>Four years of hands-on marathon event experience alongside regular clinic work with runners</li>
           </ul>
 
           <p>
-            If you have questions about what session length or timing is right for you, <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">get in touch</Link> and I will point you in the right direction.
+            If you have questions about what session length or timing is right for you, <Link href={ROUTES.contact} className="link-inline">get in touch</Link> and I will point you in the right direction.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find marathon sports massage near you in North London</h2>
@@ -296,9 +297,9 @@ export default function MarathonSportsMassageArchwayPage() {
           </div>
         </section>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">The marathon is not just 26.2 miles. It is everything you do before and after.</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">The marathon is not just 26.2 miles. It is everything you do before and after.</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Book your pre-marathon or post-marathon sports massage at Range and Restore in Archway, North London. Four years of hands-on marathon event experience, your body is in the right hands.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
@@ -306,7 +307,7 @@ export default function MarathonSportsMassageArchwayPage() {
               href={BOOKING_URLS.sportsDeepTissue}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#1a2330] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3d3a] transition-colors min-h-[44px]"
+              className="btn-ink"
             >
               Make a Booking
             </a>
@@ -314,13 +315,13 @@ export default function MarathonSportsMassageArchwayPage() {
               href={BOOKING_URLS.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white text-[#1a2330] font-semibold px-6 py-3 rounded-lg border-2 border-[#1a2330] hover:bg-[#1a2330] hover:text-white transition-colors min-h-[44px]"
+              className="btn-ink-outline"
             >
               Buy a Gift Card
             </a>
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center text-[#1a2330] font-semibold underline min-h-[44px] sm:ml-2"
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
             >
               Or ask a question first
             </Link>
@@ -330,20 +331,20 @@ export default function MarathonSportsMassageArchwayPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
-            <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
-            <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
-            <Link href="/blog/achilles-tendinitis-recovery-massage" className="text-[#0f767a] hover:text-page font-medium min-h-[44px] flex items-center">
+            <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline link-inline-tap">
               &rarr; Achilles Tendinitis — How Sports Massage Helps Recovery
             </Link>
           </div>
         </div>
 
         <div className="mt-6">
-          <Link href="/blog" className="text-[#0f767a] font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
             &larr; Back to Wellness Hub
           </Link>
         </div>

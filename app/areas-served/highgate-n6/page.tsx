@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
+import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Highgate N6 | Just Down Highgate Hill',
@@ -73,9 +74,9 @@ export default function HighgateN6Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="bg-page-sage py-12 lg:py-16">
+      <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[#0f767a] font-semibold uppercase tracking-widest text-sm mb-3">Highgate · London N6</p>
+          <p className="eyebrow-sm">Highgate · London N6</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             Sports Massage for Highgate (N6)
           </h1>
@@ -85,10 +86,10 @@ export default function HighgateN6Page() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Highgate sits at the top of the hill and Range and Restore is at the bottom of it &mdash; the clinic at 130 Junction Road is a short trip down Highgate Hill to Archway. Treatment is delivered by our <Link href="/team" className="text-[#0f767a] hover:text-page font-medium">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href="/about" className="text-[#0f767a] hover:text-page font-medium">Carlos Bonvicine</Link>. With Hampstead Heath, Highgate Wood and some of London&apos;s most iconic cycling climbs on the doorstep, N6 is one of our most active catchment areas.
+            Highgate sits at the top of the hill and Range and Restore is at the bottom of it &mdash; the clinic at 130 Junction Road is a short trip down Highgate Hill to Archway. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>. With Hampstead Heath, Highgate Wood and some of London&apos;s most iconic cycling climbs on the doorstep, N6 is one of our most active catchment areas.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N6</h2>
@@ -103,12 +104,12 @@ export default function HighgateN6Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Highgate clients</h2>
           <p>
-            Cyclists and hill-runners book a 60- or 90-minute <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports and deep tissue massage</Link> to work the legs, hips and lower back; the <Link href="/blog/sports-massage-cycling-recovery-archway" className="text-[#0f767a] hover:text-page font-medium">cycling recovery guide</Link> covers this in detail. After big efforts, many add the <Link href="/recovery-suite/infrared-sauna" className="text-[#0f767a] hover:text-page font-medium">infrared sauna</Link> or <Link href="/recovery-suite/compression-therapy" className="text-[#0f767a] hover:text-page font-medium">Normatec compression boots</Link>. For chronic pain and postural issues, <Link href="/services/advanced-clinical-massage" className="text-[#0f767a] hover:text-page font-medium">advanced clinical massage</Link> and the <Link href="/services/back-neck-pain-mot" className="text-[#0f767a] hover:text-page font-medium">Back &amp; Neck Pain MOT</Link> are the common starting points.
+            Cyclists and hill-runners book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> to work the legs, hips and lower back; the <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">cycling recovery guide</Link> covers this in detail. After big efforts, many add the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> or <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression boots</Link>. For chronic pain and postural issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> and the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> are the common starting points.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Highgate and the wider catchment</h2>
           <p>
-            This page covers Highgate Village, the streets around Highgate Hill and West Hill, and the edges of the Heath. It connects along the Parkland Walk to <Link href="/areas-served/crouch-end-n8" className="text-[#0f767a] hover:text-page font-medium">Crouch End</Link> and <Link href="/areas-served/stroud-green-n4" className="text-[#0f767a] hover:text-page font-medium">Stroud Green</Link>, and down the hill to <Link href="/areas-served/archway-n19" className="text-[#0f767a] hover:text-page font-medium">Archway</Link> and <Link href="/areas-served/kentish-town-nw5" className="text-[#0f767a] hover:text-page font-medium">Kentish Town</Link>. See all the <Link href="/areas-served" className="text-[#0f767a] hover:text-page font-medium">areas we serve</Link>.
+            This page covers Highgate Village, the streets around Highgate Hill and West Hill, and the edges of the Heath. It connects along the Parkland Walk to <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link> and <Link href={ROUTES.areasServed.stroudGreenN4} className="link-inline">Stroud Green</Link>, and down the hill to <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>. See all the <Link href={ROUTES.areasServed.index} className="link-inline">areas we serve</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>
@@ -138,9 +139,9 @@ export default function HighgateN6Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-[#1a2330] mb-4">Book your session from Highgate</h2>
-          <p className="text-[#1a3d3a] font-semibold mb-6">
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Highgate</h2>
+          <p className="text-brand-green font-semibold mb-6">
             Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; just down the hill.
           </p>
           <BookingButton label="Book Your Session" />

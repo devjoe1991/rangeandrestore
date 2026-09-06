@@ -7,14 +7,14 @@ import { faqs } from './data'
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className={`border-b border-page transition-colors ${open ? 'bg-page-sage/20 dark:bg-[#162211]/40' : ''}`}>
+    <div className={`border-b border-page transition-colors ${open ? 'bg-sage/20' : ''}`}>
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left min-h-[56px]"
         aria-expanded={open}
       >
         <span className="font-semibold text-page text-base leading-snug">{q}</span>
-        <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-[#003010]/10 flex items-center justify-center text-[#003010]">
+        <span className="relative flex-shrink-0 w-7 h-7 rounded-full bg-forest-ink/10 flex items-center justify-center text-forest-ink">
           <span className="absolute w-3 h-[2px] bg-current rounded-sm"></span>
           <span className={`absolute w-[2px] h-3 bg-current rounded-sm transition-transform duration-300 ${open ? 'rotate-90' : ''}`}></span>
         </span>
