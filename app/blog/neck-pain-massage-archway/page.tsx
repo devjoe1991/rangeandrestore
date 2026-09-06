@@ -4,8 +4,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Neck Pain and Stiff Neck: How Massage Helps',
-  description: 'Most stiff necks are muscular, driven by screens, posture and stress. How massage helps neck pain, text neck and tension headaches. Archway, North London.',
+  title: 'Stiff Neck and Neck Pain: Can Massage Actually Help?',
+  description: 'Woken up with a neck you cannot turn? Most stiff necks are muscular. When massage helps, when to leave it alone, and what actually settles it. Archway, North London.',
   path: '/blog/neck-pain-massage-archway',
   author: true,
 })
@@ -47,6 +47,14 @@ const faqs = [
   {
     q: "Can massage help a stiff neck?",
     a: "Yes. Most stiff necks are muscular, and massage helps by releasing tension in the neck, upper trapezius and shoulder muscles that has built up from screens, posture or stress. Alongside hands-on release, an assessment-led session looks at the postural habits driving the stiffness so it is less likely to return.",
+  },
+  {
+    q: "Should you massage a stiff neck, or leave it alone?",
+    a: "It depends on what caused it. If you have simply woken up stiff or seized up after a long stretch at a desk, gentle work on the surrounding muscles usually helps and there is no reason to leave it alone. If the stiffness arrived after a fall, a car accident or a blow to the head, or if there is pins and needles, numbness or weakness in an arm, do not massage it and get it assessed medically first. Heavy pressure on an acutely inflamed neck also tends to backfire, so gentler is genuinely better in the first day or two.",
+  },
+  {
+    q: "How do you massage a stiff neck properly?",
+    a: "Work the muscles around the neck rather than grinding into the sorest point. The upper trapezius across the top of the shoulder, the levator scapulae running up to the shoulder blade and the muscles at the base of the skull are usually where the tension sits, and easing those is what restores movement. Use moderate, sustained pressure rather than sharp digging, keep the neck supported, and stop if anything produces pain shooting down the arm. If you have had it more than a week or it keeps returning, an assessment will find the pattern causing it.",
   },
   {
     q: "Why does my neck hurt from working at a computer?",

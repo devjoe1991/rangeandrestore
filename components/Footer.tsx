@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { BUSINESS, BOOKING_URLS, RELIABLE_SCAN_URL } from '@/lib/constants'
+import { NewsletterSignup } from '@/components/NewsletterSignup'
 
 export function Footer() {
   return (
@@ -169,6 +170,8 @@ export function Footer() {
             </ul>
           </div>
         </div>
+
+        <NewsletterSignup />
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-[#1a3d3a]/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#1a3d3a]/80 font-semibold">

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { NewsletterSignup } from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Wellness Hub – Sports Massage Advice & Tips',
@@ -10,6 +11,12 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const posts = [
+  {
+    title: 'Can Massage Help a Trapped Nerve? An Honest Answer',
+    slug: 'trapped-nerve-massage-archway',
+    date: '6 September 2026',
+    excerpt: 'Pins and needles down your arm or leg, or a neck you cannot turn? When massage genuinely helps a trapped nerve, when it cannot, and why pressing on the painful spot backfires. Archway, Islington and North London.',
+  },
   {
     title: 'Before, During & After Pregnancy: Supporting Your Body Through Every Stage of Motherhood',
     slug: 'pregnancy-massage-before-during-after-archway',
@@ -292,6 +299,10 @@ export default function BlogPage() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="pb-16 lg:pb-20">
+          <NewsletterSignup variant="panel" />
         </section>
       </div>
     </>

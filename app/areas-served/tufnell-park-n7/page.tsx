@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage in Tufnell Park N7 | 10-min Walk',
@@ -36,7 +36,7 @@ const localBusinessSchema = {
     { '@type': 'Place', name: 'Tufnell Park, London N7' },
     { '@type': 'Place', name: 'Dartmouth Park, London NW5' },
   ],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '47', bestRating: '5', worstRating: '1' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: REVIEW_RATING, reviewCount: REVIEW_COUNT, bestRating: '5', worstRating: '1' },
 }
 
 const faqSchema = {

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Manual Lymphatic Drainage (MLD) Archway N19',
-  description: 'Certified MLD in Archway for post-surgery recovery, post-op swelling, lymphoedema and immune support. Gentle, evidence-based technique. From £50.',
+  title: 'Manual Lymphatic Drainage (MLD) London | Archway N19',
+  description: 'Certified Manual Lymphatic Drainage in North London for post-surgery and post-op swelling, lymphoedema, fluid retention and immune support. Gentle, hands-on, evidence-based. From £50.',
   path: '/services/manual-lymphatic-drainage',
 })
 
@@ -14,6 +14,47 @@ const breadcrumbs = buildBreadcrumbs([
   { name: 'Services', path: '/services' },
   { name: 'Manual Lymphatic Drainage', path: '/services/manual-lymphatic-drainage' },
 ])
+
+// MLD-specific FAQs. This page sat at position 46 in Search Console on ~340
+// quarterly impressions, largely because it was the thinnest service page on the
+// site (~480 words) with no FAQ schema. These target the questions people
+// actually search around post-op swelling and lymphoedema.
+const faqs = [
+  {
+    q: 'What is Manual Lymphatic Drainage and how is it different from a normal massage?',
+    a: 'Manual Lymphatic Drainage is a gentle, rhythmic, hands-on technique that works with the lymphatic system rather than the muscles. Where a sports or deep tissue massage uses firm pressure to release muscular tension, MLD uses very light pressure and a specific directional sequence to encourage lymph fluid to move through the vessels and nodes towards where it can drain. It should never feel deep or painful. If it does, it is not MLD.',
+  },
+  {
+    q: 'How soon after surgery can I have MLD?',
+    a: 'That depends entirely on the procedure and your surgeon. Many surgeons recommend starting lymphatic drainage within the first couple of weeks after an operation, while others prefer to wait longer, and some procedures have specific protocols. Always follow the guidance of the surgical team who performed your operation, and bring their advice with you. We will not treat over unhealed incisions and we will ask about your post-operative instructions before starting.',
+  },
+  {
+    q: 'Does MLD help with post-surgery swelling?',
+    a: 'Reducing post-operative swelling is one of the most common reasons people are referred for MLD. After surgery the lymphatic pathways in the area are disrupted, and fluid that would normally drain away collects in the tissue. MLD encourages that fluid towards intact pathways, which can help with swelling, tightness and the heavy, congested feeling that follows many procedures. It is usually most effective as a short course rather than a single session.',
+  },
+  {
+    q: 'Can MLD help with lymphoedema?',
+    a: 'MLD is a recognised part of lymphoedema management, most often as one element of a broader plan that may also include compression garments, skin care and exercise. It can help manage the volume and the discomfort, but it is not a cure and it works best alongside care from a lymphoedema specialist or your medical team. If you have a formal lymphoedema diagnosis, tell us at booking so the session can be planned appropriately.',
+  },
+  {
+    q: 'How many MLD sessions will I need?',
+    a: 'For post-surgical swelling, a short course of several sessions relatively close together usually produces a better result than occasional single appointments, because the effect builds. Many people start with a weekly session and space them out as the swelling settles. For ongoing lymphoedema management, a longer-term rhythm agreed with your medical team is more appropriate. Your therapist will give you an honest view at the first appointment rather than sell you a package.',
+  },
+  {
+    q: 'Is Manual Lymphatic Drainage the same as compression boots?',
+    a: 'No, and this is a common mix-up. Normatec pneumatic compression, which we offer in the Recovery Suite, uses inflating sleeves for general circulation and muscle recovery after training. MLD is a clinical, hands-on technique delivered by a certified practitioner for post-surgical swelling and lymphoedema. They are different treatments for different purposes, and compression boots are not a substitute for MLD if you have had surgery or have a lymphatic condition.',
+  },
+  {
+    q: 'When should I avoid MLD?',
+    a: 'MLD is not appropriate if you have an active infection or cellulitis in the area, untreated congestive heart failure, an acute deep vein thrombosis, or an active untreated cancer without your oncology team\u2019s agreement. Tell us about any medical conditions, medication and recent procedures at booking, and if there is any doubt we will ask you to check with your GP or consultant before we treat.',
+  },
+  {
+    q: 'Where can I get Manual Lymphatic Drainage in North London?',
+    a: 'Range and Restore is at 130 Junction Road, Archway, N19 5LB, two minutes from Archway tube on the Northern Line, with clients travelling in from Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. MLD is delivered by a certified practitioner and sessions start from \u00a350.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -43,6 +84,7 @@ export default function ManualLymphaticDrainagePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -132,6 +174,18 @@ export default function ManualLymphaticDrainagePage() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section aria-labelledby="mld-faqs">
+            <h2 id="mld-faqs" className="text-2xl font-black text-page mb-5">Common questions about MLD</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                  <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                  <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">

@@ -12,6 +12,17 @@ Preview and test-send yourself from the Mailchimp UI.
 - `newsletter.html` — Recurring "Recovery Notes" (merge-field content slots)
 - `reengagement.html` — Win-back / rebooking, premium, no offer
 
+**Retention / triggered** (added 6 Sep 2026 — until then every template was a
+broadcast, so nothing in the library was triggered by client behaviour)
+- `aftercare-first-visit.html` — 24 to 48h after a first session. Trigger on `VISITS` = 1.
+- `birthday.html` — Uses the `BIRTHDAY` merge field. Deliberately carries no offer.
+- `milestone-visits.html` — Thanks regulars and surfaces bundles / Restore+. Trigger on a `VISITS` threshold.
+
+All three depend on live `VISITS` / `LVISITDATE` / `BIRTHDAY` data, which means
+the Jane sync has to be running (it is currently a stale one-off Dec 2025
+import). They are templates only. The automations themselves have to be built in
+Mailchimp's Customer Journey builder, which the API does not expose.
+
 **Community / collaboration** (one per real partner, punchy `×` header)
 - `collab-dynamic-spud.html` — The Dynamic Spud (logo image)
 - `collab-alis-quiff-barber.html` — Ali's Quiff Barber (text tile)
@@ -65,6 +76,36 @@ Pill buttons (`border-radius:9999px`). 600px, mobile-responsive, dark-mode aware
 - Footer: address, phone, email, BTEC L5 + 5★ trust line, `*|UNSUB|*`, `*|UPDATE_PROFILE|*`.
 - Photo strips: horizontal scroll (swipe on Apple Mail/iOS, tidy row elsewhere).
 - FAQ blocks: static styled Q&A (accordions do not work in most email clients).
+
+## Sending rules (added 6 Sep 2026, from Search Console + Mailchimp report data)
+
+**Do NOT re-send a campaign to non-openers.** This was tried on five campaigns
+between June and August 2026 and failed every time:
+
+| Re-send | Open | Click |
+| --- | --- | --- |
+| Recovery Suite | 13.2% | 1.9% |
+| Meet the Team | 8.3% | 0% |
+| Community Tuesday | 20.4% | 0% |
+| Restore+ Memberships | 8.0% | 0% |
+| Carlos Annual Leave | 9.1% | 0% |
+
+Against a 37.6% list open rate, every one of those underperformed by 2-4x and
+four produced zero clicks. Unsubscribes went 12 → 14 → 18 → 21 across the same
+months, having sat flat at 3-8 for the six months before. The list gained 12 net
+subscribers in nine months and lost 18 to unsubscribes.
+
+**Segment before sending.** All 37 drafts currently target all 90 subscribers,
+including `reengagement.html` ("Re-engagement / Rebooking — lapsed clients"),
+which is aimed at the whole list rather than lapsed clients. Engagement is
+strongly bimodal: a core opens 85-100% while a tail sits at 0-12%. Mailing the
+tail repeatedly is what converts it into unsubscribes.
+
+**What actually performs.** The two best campaigns were operational, not
+promotional: "We've moved — new clinic location" (56% open, 7.1% click — triple
+any promo) and "I am away from 14 August" (62.5% open). Restore+ Memberships
+managed 1.1% and Community Tuesday 1.2%. Specific, personal and time-bound beats
+campaign-style content on this list by roughly 3-6x.
 
 ## Booking links (Jane), from `lib/constants.ts`
 - General / all services: `https://rangeandrestoresportsmassage.janeapp.co.uk/#/list`

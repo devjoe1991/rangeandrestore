@@ -151,6 +151,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/blog/trapped-nerve-massage-archway`,
+      lastModified: new Date('2026-09-06'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/blog/pregnancy-massage-before-during-after-archway`,
       lastModified: new Date('2026-09-05'),
       changeFrequency: 'monthly',

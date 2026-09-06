@@ -3,6 +3,10 @@ import type { Metadata } from 'next'
 export const SITE_NAME = 'Range and Restore'
 export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://rangeandrestore.co.uk'
 
+// Google review totals. Single source of truth — update here only.
+export const REVIEW_COUNT = '154'
+export const REVIEW_RATING = '5.0'
+
 export function buildMetadata({
   title,
   description,
@@ -246,8 +250,8 @@ export const businessSchema = {
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '47',
+    ratingValue: REVIEW_RATING,
+    reviewCount: REVIEW_COUNT,
     bestRating: '5',
     worstRating: '1',
   },

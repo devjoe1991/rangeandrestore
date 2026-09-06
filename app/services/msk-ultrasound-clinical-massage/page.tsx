@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
 import { FaqAccordion } from '@/components/FaqAccordion'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS, RELIABLE_SCAN_URL } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'MSK Ultrasound Scan + Clinical Massage Archway N19',
+  title: 'MSK Scan and Ultrasound North London | Archway N19',
   description:
-    'Diagnostic MSK ultrasound with Reliable Scan plus a 60-minute clinical massage guided by the findings. Scan, report and treatment under one roof in Archway. £165 total.',
+    'Diagnostic MSK ultrasound scan with written report, plus a 60-minute clinical massage guided by the findings. Scan and treatment in one visit in Archway, North London. £165 total.',
   path: '/services/msk-ultrasound-clinical-massage',
 })
 
@@ -149,6 +149,7 @@ export default function MskUltrasoundClinicalMassagePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <div className="bg-page-sage py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

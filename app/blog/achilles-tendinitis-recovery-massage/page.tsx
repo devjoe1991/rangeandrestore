@@ -4,8 +4,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Does Massage Help Achilles Tendinitis? A Therapist Explains',
-  description: "Does massage help Achilles tendinitis? Yes, done the right way. How it eases the tight calves behind the pain, healing times and when to see a GP. Archway, N19.",
+  title: 'Does Massage Help Achilles Tendinitis (Tendonitis)? A Therapist Explains',
+  description: "Does massage help Achilles tendinitis, or tendonitis as it is often spelled? Yes, done the right way. How it eases the tight calves behind the pain, healing times and when to see a GP. Archway, N19.",
   path: '/blog/achilles-tendinitis-recovery-massage',
   author: true,
 })
@@ -19,7 +19,7 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Achilles Tendinitis – How Sports Massage Helps Recovery',
-  description: 'Does massage help Achilles tendinitis? How sports massage and soft tissue therapy in Archway, North London ease the tight calf muscles behind the pain, whether it is safe, how long recovery takes and when to see a GP or physio.',
+  description: 'Does massage help Achilles tendinitis, also commonly spelled Achilles tendonitis? How sports massage and soft tissue therapy in Archway, North London ease the tight calf muscles behind the pain, whether it is safe, how long recovery takes and when to see a GP or physio.',
   image: 'https://rangeandrestore.co.uk/sports-massage-treatment-room-couch-range-and-restore-archway-north-london.jpeg',
   author: {
     '@type': 'Person',
@@ -36,7 +36,7 @@ const articleSchema = {
   dateModified: '2026-08-23',
   url: 'https://rangeandrestore.co.uk/blog/achilles-tendinitis-recovery-massage',
   mainEntityOfPage: 'https://rangeandrestore.co.uk/blog/achilles-tendinitis-recovery-massage',
-  keywords: 'Achilles tendinitis massage, Achilles tendon recovery, sports massage Archway, calf pain treatment, running injury massage London, soft tissue therapy Achilles',
+  keywords: 'Achilles tendinitis massage, Achilles tendonitis massage, does massage help Achilles tendonitis, can you massage Achilles tendonitis, Achilles tendon recovery, sports massage Archway, calf pain treatment, running injury massage London, soft tissue therapy Achilles',
 }
 
 // Problem-based FAQs — mirror the question-shaped headings above so the page is
@@ -67,6 +67,14 @@ const faqs = [
   {
     q: 'Can massage make Achilles tendinitis worse?',
     a: "Done properly, no. A trained therapist avoids heavy, direct pressure on the acutely inflamed tendon and works the surrounding calf and lower-leg muscles instead. Aggressive prodding of an angry tendon can aggravate it, which is exactly why assessment-led treatment and the right level of pressure matter.",
+  },
+  {
+    q: 'Does massage help Achilles tendonitis?',
+    a: 'Yes, and tendonitis is simply the more common spelling of the same condition. Massage helps by releasing the calf muscles pulling on the tendon and addressing the movement patterns further up the leg that are overloading it, rather than by working on the sore tendon itself. Paired with sensible load management and calf strengthening, that combination gives the tendon a genuine chance to settle.',
+  },
+  {
+    q: 'Is Achilles tendonitis the same as Achilles tendinitis?',
+    a: 'Yes. They are two spellings of the same condition, inflammation and irritation of the Achilles tendon. Tendinitis is the medically correct spelling and tendonitis is the one most people use and search for. If symptoms have been present for several months, clinicians often use the term Achilles tendinopathy instead, which describes degenerative change in the tendon rather than acute inflammation, and which needs a loading programme rather than rest.',
   },
   {
     q: 'Can you massage your Achilles tendon at home?',
@@ -109,6 +117,10 @@ export default function AchillesTendinitisPage() {
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
             Yes, massage can help Achilles tendinitis, provided it is done the right way. The tendon itself is not the target: the work goes into the tight calf muscles that are pulling on it and the movement patterns further up the leg that overload it, while the sore tendon is left alone. Combined with sensible load management and calf strengthening, that takes tension off the Achilles and gives it a better chance to settle. It is one of the most common overuse injuries we see in <Link href="/blog/sports-massage-for-runners" className="text-[#0f767a] hover:text-page font-medium">runners</Link> at Range and Restore in Archway, North London, and it is treated with assessment-led <Link href="/services/sports-deep-tissue-massage" className="text-[#0f767a] hover:text-page font-medium">sports massage and soft tissue therapy</Link>.
+          </p>
+
+          <p>
+            A quick note on spelling, because it trips people up when they are searching: you will see this written as both <strong className="text-page">Achilles tendinitis</strong> and <strong className="text-page">Achilles tendonitis</strong>. They are the same condition. Tendinitis is the medically correct form, tendonitis is the far more common spelling in everyday use, and clinicians increasingly use tendinopathy for the longer-standing degenerative version. Whichever you typed to get here, this article is about your problem.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is Achilles tendinitis?</h2>
