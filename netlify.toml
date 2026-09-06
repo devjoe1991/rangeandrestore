@@ -188,7 +188,14 @@
   to = "/services/manual-lymphatic-drainage"
   status = 301
 
-# Crawled as /back-%26-neck-pain-mot; Netlify matches the decoded path.
+# Crawled as /back-%26-neck-pain-mot. Netlify matches the raw (still-encoded)
+# request path, so the %26 form is the one that actually fires; the decoded
+# variant is kept alongside it in case anything links the literal ampersand.
+[[redirects]]
+  from = "/back-%26-neck-pain-mot"
+  to = "/services/back-neck-pain-mot"
+  status = 301
+
 [[redirects]]
   from = "/back-&-neck-pain-mot"
   to = "/services/back-neck-pain-mot"
@@ -204,6 +211,18 @@
 [[redirects]]
   from = "/wellness-hub"
   to = "/blog"
+  status = 301
+
+# Both 404 but rank at position 1 in Search Console: the "tendonitis" spelling
+# variant (queries use it far more than "tendinitis") and an old FAQ split-out.
+[[redirects]]
+  from = "/blog/achilles-tendonitis-recovery-massage"
+  to = "/blog/achilles-tendinitis-recovery-massage"
+  status = 301
+
+[[redirects]]
+  from = "/blog/achilles-tendinitis-recovery-massage-faq"
+  to = "/blog/achilles-tendinitis-recovery-massage"
   status = 301
 
 # NOTE: Netlify matches redirect `from` paths with and without a trailing slash,
