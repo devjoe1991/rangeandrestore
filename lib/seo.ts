@@ -24,7 +24,7 @@ export function buildMetadata({
 }): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`
   const url = `${BASE_URL}${path}`
-  const ogImage = image || `${BASE_URL}/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg`
+  const ogImage = image || `${BASE_URL}/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg`
 
   return {
     title: fullTitle,
@@ -215,7 +215,7 @@ export const businessSchema = {
   url: BASE_URL,
   telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
-  image: `${BASE_URL}/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpg`,
+  image: `${BASE_URL}/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: '130 Junction Road',
