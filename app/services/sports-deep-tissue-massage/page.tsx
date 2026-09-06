@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports & Deep Tissue Massage Archway N19',
-  description: 'Assessment-led deep tissue and sports massage in Archway. 60/90 min sessions. Back, neck, shoulders, IT band. BTEC L5. Same-week slots.',
+  title: 'Deep Tissue & Sports Massage, Archway North London',
+  description: 'Assessment-led deep tissue and sports massage in Archway, North London. 30 min £50, 60 min £75, 90 min £110, assessment included. BTEC Level 5 therapists, same-week slots.',
   path: '/services/sports-deep-tissue-massage',
 })
 
@@ -38,37 +38,32 @@ const serviceSchema = {
   serviceType: 'Sports Massage',
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does deep tissue sports massage cost in Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute targeted session is £50, a 60-minute treatment is £75, and a 90-minute full-body or multi-area session is £110. All prices include the initial assessment.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will sports massage hurt?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sports massage works deeper than relaxation massage, so you may feel firm pressure and some discomfort when tense or restricted areas are addressed. The pressure is always adjusted to your tolerance — discomfort should be productive, never sharp pain.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How often should I book sports massage?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For an active injury or acute pain, weekly or fortnightly sessions are usually recommended for 3-4 weeks, then spaced out as you improve. For training maintenance or chronic tension, monthly sessions are typical. Your therapist will advise after your first assessment.' },
-    },
-    {
-      '@type': 'Question',
-      name: "What's the difference between sports massage and deep tissue massage?",
-      acceptedAnswer: { '@type': 'Answer', text: 'Deep tissue refers to the pressure and target depth — slow, sustained strokes reaching the deeper layers of muscle and fascia. Sports massage is a wider clinical approach that uses deep tissue work alongside techniques like trigger point therapy, MET and soft tissue release, applied based on assessment.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to book an assessment separately?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. Every session at Range and Restore includes a brief assessment at the start so the treatment is tailored to your presentation that day. You only book the treatment length you need.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'How much does deep tissue sports massage cost in Archway?',
+    a: 'A 30-minute targeted session is £50, a 60-minute treatment is £75, and a 90-minute full-body or multi-area session is £110. All prices include the initial assessment.',
+  },
+  {
+    q: 'Will sports massage hurt?',
+    a: 'Sports massage works deeper than relaxation massage, so you may feel firm pressure and some discomfort when tense or restricted areas are addressed. The pressure is always adjusted to your tolerance — discomfort should be productive, never sharp pain.',
+  },
+  {
+    q: 'How often should I book sports massage?',
+    a: 'For an active injury or acute pain, weekly or fortnightly sessions are usually recommended for 3-4 weeks, then spaced out as you improve. For training maintenance or chronic tension, monthly sessions are typical. Your therapist will advise after your first assessment.',
+  },
+  {
+    q: "What's the difference between sports massage and deep tissue massage?",
+    a: 'Deep tissue refers to the pressure and target depth — slow, sustained strokes reaching the deeper layers of muscle and fascia. Sports massage is a wider clinical approach that uses deep tissue work alongside techniques like trigger point therapy, MET and soft tissue release, applied based on assessment.',
+  },
+  {
+    q: 'Do I need to book an assessment separately?',
+    a: 'No. Every session at Range and Restore includes a brief assessment at the start so the treatment is tailored to your presentation that day. You only book the treatment length you need.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function SportsDeepTissuePage() {
   return (
@@ -173,6 +168,18 @@ export default function SportsDeepTissuePage() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section aria-labelledby="sdt-faqs">
+            <h2 id="sdt-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                  <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                  <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
