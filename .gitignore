@@ -62,3 +62,6 @@ content/canva_plan.md
 
 # Canva render output (regenerate with: node scripts/canva/canva.mjs render)
 scripts/canva/out/
+
+# Reusable SEO audit playbook — local reference, kept out of the repo
+docs/technical-seo-audit-playbook.md
