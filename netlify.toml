@@ -177,6 +177,35 @@
   to = "/faqs"
   status = 301
 
+# Long-form Squarespace slugs and the bare (no /f/ prefix) variants.
+[[redirects]]
+  from = "/hydration-and-muscle-health-what-every-client-should-know"
+  to = "/blog/hydration-and-muscle-health"
+  status = 301
+
+[[redirects]]
+  from = "/manual-lymphatic-drainage-massage-gentle-support-for-natural-healing-and-recovery"
+  to = "/services/manual-lymphatic-drainage"
+  status = 301
+
+# Crawled as /back-%26-neck-pain-mot; Netlify matches the decoded path.
+[[redirects]]
+  from = "/back-&-neck-pain-mot"
+  to = "/services/back-neck-pain-mot"
+  status = 301
+
+# Path-only `from` matches regardless of query string, so this also catches the
+# ?blogcategory=Running+%26+Recovery variant Google has on file.
+[[redirects]]
+  from = "/f/how-sports-massage-helps-runners-before-after-races"
+  to = "/blog/sports-massage-for-runners"
+  status = 301
+
+[[redirects]]
+  from = "/wellness-hub"
+  to = "/blog"
+  status = 301
+
 # NOTE: Netlify matches redirect `from` paths with and without a trailing slash,
 # so explicit `/privacy-policy/` -> `/privacy-policy` rules also match
 # `/privacy-policy` and 301-redirect it to itself, causing ERR_TOO_MANY_REDIRECTS
