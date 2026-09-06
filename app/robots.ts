@@ -7,7 +7,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        // /_next/static/ holds the CSS, JS and fonts Googlebot needs to render
+        // pages, so it must stay crawlable; the broader /_next/ disallow still
+        // keeps RSC payloads and internal data routes out of the index.
+        allow: ['/', '/_next/static/'],
         disallow: ['/api/', '/_next/'],
       },
     ],

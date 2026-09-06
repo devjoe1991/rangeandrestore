@@ -150,6 +150,23 @@
   to = "/services/massage-bundles"
   status = 301
 
+# Legacy URLs still 404ing in Search Console (Not found, first detected 11 Apr 2026).
+# Bare paths only — see the trailing-slash note above; Netlify matches both forms.
+[[redirects]]
+  from = "/manual-lymphatic-drainage"
+  to = "/services/manual-lymphatic-drainage"
+  status = 301
+
+[[redirects]]
+  from = "/sports-deep-tissue-soft-tissue-remedial-massage-therapy-for-injury-recovery"
+  to = "/services/sports-deep-tissue-massage"
+  status = 301
+
+[[redirects]]
+  from = "/massage-bundle-offer"
+  to = "/services/massage-bundles"
+  status = 301
+
 # NOTE: Netlify matches redirect `from` paths with and without a trailing slash,
 # so explicit `/privacy-policy/` -> `/privacy-policy` rules also match
 # `/privacy-policy` and 301-redirect it to itself, causing ERR_TOO_MANY_REDIRECTS

@@ -63,6 +63,7 @@ const CAMPAIGNS = {
   // Service / conversion (evergreen)
   'R&R — Recovery Suite': { subject: 'Recover faster with the Recovery Suite', preview: 'Infrared sauna and Normatec compression in Archway.', send: 'Evergreen' },
   'R&R — Sports & Pain Relief': { subject: 'Get to the root of your pain', preview: 'Assessment-led sports and deep-tissue massage.', send: 'Evergreen' },
+  'R&R — Infrared Sauna Sessions & Memberships': { subject: 'Your private infrared sauna, from £19', preview: 'Single sessions, Restore+ memberships from £49 a month, and what the cabin is good for.', send: 'Evergreen / autumn and winter push' },
   'R&R — Restore+ Memberships': { subject: 'Introducing Restore+ Memberships', preview: 'Feel better, recover faster and save more with regular treatment.', send: 'Evergreen' },
   'R&R — Massage Bundles': { subject: 'Commit to your recovery, save as you go', preview: 'Massage bundles with bigger savings on regular sessions.', send: 'Evergreen' },
   'Range and Restore — Book a Session': { subject: 'Book Your Session at Range and Restore', preview: 'Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.', send: 'Evergreen' },
