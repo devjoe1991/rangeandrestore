@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -38,37 +38,32 @@ const serviceSchema = {
   serviceType: 'Clinical Massage',
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How is advanced clinical massage different from regular sports massage?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Advanced clinical massage is the right choice when general massage has stopped helping. It combines trigger point therapy, muscle energy techniques (MET), myofascial release, and soft tissue release in a structured assessment-led plan — designed for chronic, complex, or layered presentations rather than general muscle tightness.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What conditions does advanced clinical massage help with?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Common reasons clients book this service include sciatica, chronic lower back pain, repetitive strain injuries (RSI), tension headaches, jaw and TMJ pain, postural problems from desk work, and recovery from old injuries that never fully resolved.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does advanced clinical massage cost in Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 30-minute focused session is £50, a 60-minute treatment is £75, and a 90-minute comprehensive session for multi-area or complex cases is £110.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How many sessions will I need?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For chronic conditions, most clients see meaningful change within 3-6 sessions spaced 1-2 weeks apart, then move to monthly maintenance. After your first assessment your therapist will give you a realistic plan rather than open-ended bookings.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a referral from a doctor or physio?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No referral is needed. If you are working with a physio or consultant, our therapists are happy to coordinate so the treatments complement rather than overlap.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'How is advanced clinical massage different from regular sports massage?',
+    a: 'Advanced clinical massage is the right choice when general massage has stopped helping. It combines trigger point therapy, muscle energy techniques (MET), myofascial release, and soft tissue release in a structured assessment-led plan — designed for chronic, complex, or layered presentations rather than general muscle tightness.',
+  },
+  {
+    q: 'What conditions does advanced clinical massage help with?',
+    a: 'Common reasons clients book this service include sciatica, chronic lower back pain, repetitive strain injuries (RSI), tension headaches, jaw and TMJ pain, postural problems from desk work, and recovery from old injuries that never fully resolved.',
+  },
+  {
+    q: 'How much does advanced clinical massage cost in Archway?',
+    a: 'A 30-minute focused session is £50, a 60-minute treatment is £75, and a 90-minute comprehensive session for multi-area or complex cases is £110.',
+  },
+  {
+    q: 'How many sessions will I need?',
+    a: 'For chronic conditions, most clients see meaningful change within 3-6 sessions spaced 1-2 weeks apart, then move to monthly maintenance. After your first assessment your therapist will give you a realistic plan rather than open-ended bookings.',
+  },
+  {
+    q: 'Do I need a referral from a doctor or physio?',
+    a: 'No referral is needed. If you are working with a physio or consultant, our therapists are happy to coordinate so the treatments complement rather than overlap.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function AdvancedClinicalMassagePage() {
   return (
@@ -174,6 +169,18 @@ export default function AdvancedClinicalMassagePage() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          <section aria-labelledby="page-faqs">
+            <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                  <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                  <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">

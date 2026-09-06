@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Bikeztube Cycles and Range and Restore | Archway Local Partners',
@@ -33,27 +33,24 @@ const partnerOrgSchema = {
   memberOf: { '@id': `${BASE_URL}/#business` },
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Where can I get my bike serviced in Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Bikeztube Cycles at 118 Junction Road, between Archway and Tufnell Park tube, is the local workshop we send our clients to. The mechanics work on everything: geared bikes, folding bikes, e-bikes, Bromptons, internal hub gears, kids bikes and single speeds. They also build wheels and repair carbon fibre frames.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What helps my legs recover after long bike rides?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sports and deep tissue massage targets the areas cycling loads most: hip flexors, quads, calves and the lower back. Between rides, Normatec full leg compression and an infrared sauna help clear heaviness and keep tissue moving well. All of it is available at Range and Restore, 130 Junction Road in Archway, a few doors from Bikeztube Cycles.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do Range and Restore and Bikeztube Cycles work together?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. The two shops sit a few doors apart on Junction Road in Archway and refer honestly both ways. Bikeztube looks after the bike, Range and Restore looks after the cyclist. There is no formal scheme, just two local independents looking after the same North London cycling community.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'Where can I get my bike serviced in Archway?',
+    a: 'Bikeztube Cycles at 118 Junction Road, between Archway and Tufnell Park tube, is the local workshop we send our clients to. The mechanics work on everything: geared bikes, folding bikes, e-bikes, Bromptons, internal hub gears, kids bikes and single speeds. They also build wheels and repair carbon fibre frames.',
+  },
+  {
+    q: 'What helps my legs recover after long bike rides?',
+    a: 'Sports and deep tissue massage targets the areas cycling loads most: hip flexors, quads, calves and the lower back. Between rides, Normatec full leg compression and an infrared sauna help clear heaviness and keep tissue moving well. All of it is available at Range and Restore, 130 Junction Road in Archway, a few doors from Bikeztube Cycles.',
+  },
+  {
+    q: 'Do Range and Restore and Bikeztube Cycles work together?',
+    a: 'Yes. The two shops sit a few doors apart on Junction Road in Archway and refer honestly both ways. Bikeztube looks after the bike, Range and Restore looks after the cyclist. There is no formal scheme, just two local independents looking after the same North London cycling community.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function BikeztubeCyclesPartnerPage() {
   return (
@@ -118,6 +115,18 @@ export default function BikeztubeCyclesPartnerPage() {
             That&apos;s what cyclist wellbeing means on Junction Road. The bike and the body, sorted a few doors apart.
           </p>
         </div>
+
+        <section aria-labelledby="page-faqs" className="mt-12">
+          <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-3">Visit Bikeztube Cycles</h2>

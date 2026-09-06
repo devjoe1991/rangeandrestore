@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'NC Osteopathy and Range and Restore | Osteopathy and Sports Massage in North London',
@@ -31,27 +31,24 @@ const partnerOrgSchema = {
   memberOf: { '@id': `${BASE_URL}/#business` },
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is the difference between an osteopath and a sports massage therapist?',
-      acceptedAnswer: { '@type': 'Answer', text: 'An osteopath like Nagma at NC Osteopathy is a registered, university-trained practitioner who diagnoses and treats using structural manipulation, cranial and visceral techniques, massage and myofascial release, looking at the whole system. A soft tissue therapist like Carlos at Range and Restore works hands-on with the muscles, fascia and movement patterns to release tension, improve range and support recovery. For many people the two work best together: osteopathy to assess and treat the underlying mechanics, sports massage and recovery to keep the soft tissue moving well in between.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I know whether to see an osteopath or book a sports massage first?',
-      acceptedAnswer: { '@type': 'Answer', text: 'If something is new, sharp, not settling, referring down a limb, or you are not sure what is going on, start with an osteopathic assessment at NC Osteopathy. If you know the issue is muscular, such as tightness from training, desk work or a long run, and you mainly want hands-on release and recovery, start with sports massage at Range and Restore. Whichever you choose, the practitioner will point you to the other discipline if it would serve you better.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'I am pregnant or recently had a baby. Who should I see?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Nagma at NC Osteopathy is a certified Mummy MOT practitioner with a focus on pregnancy and postnatal assessment and recovery, so that is the right starting point. Once you have been assessed and cleared, gentle soft tissue work and Manual Lymphatic Drainage at Range and Restore can support recovery alongside her care.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'What is the difference between an osteopath and a sports massage therapist?',
+    a: 'An osteopath like Nagma at NC Osteopathy is a registered, university-trained practitioner who diagnoses and treats using structural manipulation, cranial and visceral techniques, massage and myofascial release, looking at the whole system. A soft tissue therapist like Carlos at Range and Restore works hands-on with the muscles, fascia and movement patterns to release tension, improve range and support recovery. For many people the two work best together: osteopathy to assess and treat the underlying mechanics, sports massage and recovery to keep the soft tissue moving well in between.',
+  },
+  {
+    q: 'How do I know whether to see an osteopath or book a sports massage first?',
+    a: 'If something is new, sharp, not settling, referring down a limb, or you are not sure what is going on, start with an osteopathic assessment at NC Osteopathy. If you know the issue is muscular, such as tightness from training, desk work or a long run, and you mainly want hands-on release and recovery, start with sports massage at Range and Restore. Whichever you choose, the practitioner will point you to the other discipline if it would serve you better.',
+  },
+  {
+    q: 'I am pregnant or recently had a baby. Who should I see?',
+    a: 'Nagma at NC Osteopathy is a certified Mummy MOT practitioner with a focus on pregnancy and postnatal assessment and recovery, so that is the right starting point. Once you have been assessed and cleared, gentle soft tissue work and Manual Lymphatic Drainage at Range and Restore can support recovery alongside her care.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function NcOsteopathyPartnerPage() {
   return (
@@ -132,6 +129,18 @@ export default function NcOsteopathyPartnerPage() {
             That&apos;s what we mean when we say we&apos;re rooted in the North London community. When you ask &ldquo;do you know a good osteopath?&rdquo; you don&apos;t want a name off a search engine &mdash; you want someone whose work the person sending you actually trusts. The collaboration means both clinics can give that answer with confidence. There&apos;s no formal scheme, no vouchers, no commission. Just two local clinics that share the same values, talk to each other, and want the best care for the same community across Archway, Highgate, Holloway, Tufnell Park, Finsbury Park, Crouch End, Islington, Camden and Kentish Town.
           </p>
         </div>
+
+        <section aria-labelledby="page-faqs" className="mt-12">
+          <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-3">Book with Range and Restore or NC Osteopathy</h2>

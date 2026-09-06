@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -42,37 +42,32 @@ const serviceSchema = {
   ],
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is reflexology?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Reflexology is a gentle, relaxing treatment in which pressure is applied to specific points on the feet. Clients typically book it to soothe tired feet, reduce stress, unwind and support their overall sense of wellbeing.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does reflexology cost in Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 60-minute reflexology appointment at Range and Restore in Archway is £75, for both first and follow-up appointments. Your first appointment includes a consultation so the treatment is tailored to you.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to undress for reflexology?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. Reflexology is focused on the feet and lower legs, so you only need to remove your shoes and socks. You stay fully clothed, resting comfortably on the treatment couch for the whole session.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who provides reflexology at Range and Restore?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Reflexology is provided by Mateja Bracko-Mounti, a qualified reflexologist and BTEC Level 5 sports massage and soft tissue remedial therapist with over 18 years of experience in therapeutic settings.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens in a reflexology session?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Your first appointment starts with a short consultation about your health, lifestyle and what you would like from the treatment. You then relax on the treatment couch while pressure is applied to specific points on your feet, adjusted to your comfort throughout. Follow-up sessions build on your previous treatment and are tailored to how you are feeling on the day.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'What is reflexology?',
+    a: 'Reflexology is a gentle, relaxing treatment in which pressure is applied to specific points on the feet. Clients typically book it to soothe tired feet, reduce stress, unwind and support their overall sense of wellbeing.',
+  },
+  {
+    q: 'How much does reflexology cost in Archway?',
+    a: 'A 60-minute reflexology appointment at Range and Restore in Archway is £75, for both first and follow-up appointments. Your first appointment includes a consultation so the treatment is tailored to you.',
+  },
+  {
+    q: 'Do I need to undress for reflexology?',
+    a: 'No. Reflexology is focused on the feet and lower legs, so you only need to remove your shoes and socks. You stay fully clothed, resting comfortably on the treatment couch for the whole session.',
+  },
+  {
+    q: 'Who provides reflexology at Range and Restore?',
+    a: 'Reflexology is provided by Mateja Bracko-Mounti, a qualified reflexologist and BTEC Level 5 sports massage and soft tissue remedial therapist with over 18 years of experience in therapeutic settings.',
+  },
+  {
+    q: 'What happens in a reflexology session?',
+    a: 'Your first appointment starts with a short consultation about your health, lifestyle and what you would like from the treatment. You then relax on the treatment couch while pressure is applied to specific points on your feet, adjusted to your comfort throughout. Follow-up sessions build on your previous treatment and are tailored to how you are feeling on the day.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function ReflexologyPage() {
   return (
@@ -164,6 +159,18 @@ export default function ReflexologyPage() {
               Reflexology at Range and Restore is provided by{' '}
               <Link href="/team#mateja-bracko-mounti" className="text-[#0f767a] hover:text-page font-medium">Mateja Bracko-Mounti</Link>, a qualified reflexologist and BTEC Level 5 sports massage and soft tissue remedial therapist with over 18 years of experience in therapeutic settings.
             </p>
+          </section>
+
+          <section aria-labelledby="page-faqs">
+            <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                  <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                  <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">

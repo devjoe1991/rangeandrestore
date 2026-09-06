@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -56,37 +56,32 @@ const serviceSchema = {
   ],
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is the Community Tuesday Clinic?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The Community Tuesday Clinic is a community-focused initiative at Range and Restore designed to make professional treatment more accessible to our local Archway and North London community. You receive the same expert assessment-led sports and soft tissue treatment, delivered to the same high standards, at more accessible pricing — every Tuesday.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does the Community Tuesday Clinic cost?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 60-minute treatment is £60 and a 90-minute treatment is £85. Both include the initial assessment so your session is tailored to your needs.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'When is the Community Tuesday Clinic available?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The Community Tuesday Clinic runs every Tuesday at our clinic on 130 Junction Road, Archway, London N19 5LB. Sessions are booked online in advance.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is the treatment any different from a standard session?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. This is not a reduced or watered-down treatment — it is the same high standard of care, assessment and hands-on therapy you would receive in any session at Range and Restore. The clinic exists to make that expert care more accessible to the local community.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What can the Community Tuesday Clinic help with?',
-      acceptedAnswer: { '@type': 'Answer', text: 'It is suited to back pain, neck pain, sports injuries, muscle tension, mobility issues and general wellbeing. Depending on your needs, treatment may include sports massage, deep tissue massage, soft tissue remedial therapy, assisted stretching, myofascial release, cupping therapy and manual lymphatic drainage (MLD).' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'What is the Community Tuesday Clinic?',
+    a: 'The Community Tuesday Clinic is a community-focused initiative at Range and Restore designed to make professional treatment more accessible to our local Archway and North London community. You receive the same expert assessment-led sports and soft tissue treatment, delivered to the same high standards, at more accessible pricing — every Tuesday.',
+  },
+  {
+    q: 'How much does the Community Tuesday Clinic cost?',
+    a: 'A 60-minute treatment is £60 and a 90-minute treatment is £85. Both include the initial assessment so your session is tailored to your needs.',
+  },
+  {
+    q: 'When is the Community Tuesday Clinic available?',
+    a: 'The Community Tuesday Clinic runs every Tuesday at our clinic on 130 Junction Road, Archway, London N19 5LB. Sessions are booked online in advance.',
+  },
+  {
+    q: 'Is the treatment any different from a standard session?',
+    a: 'No. This is not a reduced or watered-down treatment — it is the same high standard of care, assessment and hands-on therapy you would receive in any session at Range and Restore. The clinic exists to make that expert care more accessible to the local community.',
+  },
+  {
+    q: 'What can the Community Tuesday Clinic help with?',
+    a: 'It is suited to back pain, neck pain, sports injuries, muscle tension, mobility issues and general wellbeing. Depending on your needs, treatment may include sports massage, deep tissue massage, soft tissue remedial therapy, assisted stretching, myofascial release, cupping therapy and manual lymphatic drainage (MLD).',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function CommunityTuesdayClinicPage() {
   return (
@@ -189,6 +184,18 @@ export default function CommunityTuesdayClinicPage() {
             <p className="text-page-muted">
               Every Community Tuesday Clinic session is delivered by a qualified therapist and begins with a proper assessment of your posture, movement and concerns. The treatment, the techniques and the aftercare advice are exactly what you&apos;d expect from Range and Restore. Our goal is simple: to help more people in our community move better, feel better and stay well.
             </p>
+          </section>
+
+          <section aria-labelledby="page-faqs">
+            <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                  <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                  <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">

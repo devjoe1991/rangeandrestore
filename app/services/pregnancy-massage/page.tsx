@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
-import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
@@ -42,37 +42,32 @@ const serviceSchema = {
   ],
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does pregnancy massage cost in Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 60-minute pregnancy massage at Range and Restore in Archway is £85, for both first and follow-up appointments. Every session includes a consultation so treatment is tailored to how you are feeling on the day.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is pregnancy massage safe?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Pregnancy massage at Range and Restore is delivered by qualified therapists using gentle, pregnancy-appropriate techniques and supported positioning, typically side-lying with cushions so you stay comfortable throughout. If you have any pregnancy complications, or you are in your first trimester, we recommend checking with your midwife or GP before booking.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What can pregnancy massage help with?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Common reasons clients book include lower back pain, pelvic discomfort, hip pain, neck and shoulder tension, and swollen or heavy legs. Many clients also simply want dedicated time to relax and unwind as their body changes through pregnancy.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What position will I be in during the treatment?',
-      acceptedAnswer: { '@type': 'Answer', text: 'You will be positioned comfortably and safely for your stage of pregnancy, usually side-lying and supported with cushions, or semi-reclined where appropriate. Your therapist will check in with you throughout and adjust positioning and pressure to keep you comfortable.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who provides pregnancy massage at Range and Restore?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Pregnancy massage is available with our team of qualified sports massage and soft tissue therapists, including Alison Isherwood and Mateja Bracko-Mounti, who both hold a specialist interest in pregnancy massage.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'How much does pregnancy massage cost in Archway?',
+    a: 'A 60-minute pregnancy massage at Range and Restore in Archway is £85, for both first and follow-up appointments. Every session includes a consultation so treatment is tailored to how you are feeling on the day.',
+  },
+  {
+    q: 'Is pregnancy massage safe?',
+    a: 'Pregnancy massage at Range and Restore is delivered by qualified therapists using gentle, pregnancy-appropriate techniques and supported positioning, typically side-lying with cushions so you stay comfortable throughout. If you have any pregnancy complications, or you are in your first trimester, we recommend checking with your midwife or GP before booking.',
+  },
+  {
+    q: 'What can pregnancy massage help with?',
+    a: 'Common reasons clients book include lower back pain, pelvic discomfort, hip pain, neck and shoulder tension, and swollen or heavy legs. Many clients also simply want dedicated time to relax and unwind as their body changes through pregnancy.',
+  },
+  {
+    q: 'What position will I be in during the treatment?',
+    a: 'You will be positioned comfortably and safely for your stage of pregnancy, usually side-lying and supported with cushions, or semi-reclined where appropriate. Your therapist will check in with you throughout and adjust positioning and pressure to keep you comfortable.',
+  },
+  {
+    q: 'Who provides pregnancy massage at Range and Restore?',
+    a: 'Pregnancy massage is available with our team of qualified sports massage and soft tissue therapists, including Alison Isherwood and Mateja Bracko-Mounti, who both hold a specialist interest in pregnancy massage.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function PregnancyMassagePage() {
   return (
@@ -176,6 +171,18 @@ export default function PregnancyMassagePage() {
               <Link href="/team#alison-isherwood" className="text-[#0f767a] hover:text-page font-medium">Alison Isherwood</Link> and{' '}
               <Link href="/team#mateja-bracko-mounti" className="text-[#0f767a] hover:text-page font-medium">Mateja Bracko-Mounti</Link>, who both hold a specialist interest in pregnancy massage.
             </p>
+          </section>
+
+          <section aria-labelledby="page-faqs">
+            <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+            <div className="space-y-4">
+              {faqs.map((faq) => (
+                <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                  <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                  <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <section className="bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">

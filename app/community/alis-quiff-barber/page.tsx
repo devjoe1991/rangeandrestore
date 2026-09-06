@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Ali’s Quiff Barber and Range and Restore | Men’s Self-Care in Archway N19',
@@ -40,27 +40,24 @@ const partnerOrgSchema = {
   memberOf: { '@id': `${BASE_URL}/#business` },
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Where is Ali’s Quiff Barber in Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Ali’s Quiff Barber is at 746 Holloway Road, Archway, London N19 3JF. It’s a short walk from Range and Restore Sports Massage at 130 Junction Road and easy to combine with a massage or recovery session on the same day.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why does Range and Restore recommend Ali’s Quiff Barber for men’s self-care?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The full-service experience at Ali’s Quiff Barber, including haircut, beard trim, hair wash, facial scrub, hot towels, facial massage, head massage and warm steam treatments, gives men proper time to switch off and reset. Paired with sports massage, recovery and remedial therapy at Range and Restore, it’s a simple way to look after both physical and mental wellbeing.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How often should men book self-care sessions like grooming and massage?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Even one dedicated session a month, whether that’s a massage treatment, recovery session or full-service grooming experience, can make a real difference to stress levels, confidence, recovery and overall wellbeing. The two together work very naturally for men in their 30s, 40s and 50s in Archway and North London.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'Where is Ali’s Quiff Barber in Archway?',
+    a: 'Ali’s Quiff Barber is at 746 Holloway Road, Archway, London N19 3JF. It’s a short walk from Range and Restore Sports Massage at 130 Junction Road and easy to combine with a massage or recovery session on the same day.',
+  },
+  {
+    q: 'Why does Range and Restore recommend Ali’s Quiff Barber for men’s self-care?',
+    a: 'The full-service experience at Ali’s Quiff Barber, including haircut, beard trim, hair wash, facial scrub, hot towels, facial massage, head massage and warm steam treatments, gives men proper time to switch off and reset. Paired with sports massage, recovery and remedial therapy at Range and Restore, it’s a simple way to look after both physical and mental wellbeing.',
+  },
+  {
+    q: 'How often should men book self-care sessions like grooming and massage?',
+    a: 'Even one dedicated session a month, whether that’s a massage treatment, recovery session or full-service grooming experience, can make a real difference to stress levels, confidence, recovery and overall wellbeing. The two together work very naturally for men in their 30s, 40s and 50s in Archway and North London.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function AlisQuiffBarberPartnerPage() {
   return (
@@ -140,6 +137,18 @@ export default function AlisQuiffBarberPartnerPage() {
             Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">Ali’s Quiff Barber</a> (746 Holloway Road, Archway N19 3JF) for a haircut, beard trim and the full grooming experience. Then <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">book in with Range and Restore</Link> for a sports massage, remedial therapy or recovery session at 130 Junction Road, N19 5LB. Two local businesses, one neighbourhood, one easy way to actually look after yourself.
           </p>
         </div>
+
+        <section aria-labelledby="page-faqs" className="mt-12">
+          <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-3">Book sports massage and recovery in Archway</h2>

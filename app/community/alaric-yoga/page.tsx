@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Alaric Yoga and Range and Restore | Iyengar Yoga and Soft Tissue Therapy in Archway N19',
@@ -33,27 +33,24 @@ const partnerOrgSchema = {
   memberOf: { '@id': `${BASE_URL}/#business` },
 }
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Does Range and Restore work with yoga students?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Range and Restore at 130 Junction Road, Archway N19 regularly supports yoga students, including many practitioners from Alaric Newcombe of Alaric Yoga. Treatment focuses on mobility, recovery, injury prevention, muscular balance and reducing discomfort that builds up through regular Iyengar yoga, asana and pranayama practice.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which services help most with yoga practice?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Sports and deep tissue massage, advanced clinical massage, advanced cupping with deep tissue, the Back and Neck Pain MOT, 2-hour pain-relief sessions and Manual Lymphatic Drainage (MLD) are the services most commonly booked by yoga practitioners. Every session is assessment-led and matched to what the body presents with that day.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Where is Range and Restore Sports Massage based?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The clinic is at 130 Junction Road, Archway, London N19 5LB, three minutes’ walk from Archway tube on the Northern Line. It serves clients across N19, N7, N6, N8, NW5, NW1, NW3, N4 and the wider North London area, including Archway, Upper Holloway, Tufnell Park, Holloway, Highgate, Crouch End, Hornsey, Kentish Town, Dartmouth Park, Gospel Oak, Camden, Hampstead, Belsize Park, Finsbury Park and Stroud Green.' },
-    },
-  ],
-}
+// Rendered visibly below. FAQPage markup must match on-page content, so the
+// schema and the rendered block are generated from this one array.
+const faqs = [
+  {
+    q: 'Does Range and Restore work with yoga students?',
+    a: 'Yes. Range and Restore at 130 Junction Road, Archway N19 regularly supports yoga students, including many practitioners from Alaric Newcombe of Alaric Yoga. Treatment focuses on mobility, recovery, injury prevention, muscular balance and reducing discomfort that builds up through regular Iyengar yoga, asana and pranayama practice.',
+  },
+  {
+    q: 'Which services help most with yoga practice?',
+    a: 'Sports and deep tissue massage, advanced clinical massage, advanced cupping with deep tissue, the Back and Neck Pain MOT, 2-hour pain-relief sessions and Manual Lymphatic Drainage (MLD) are the services most commonly booked by yoga practitioners. Every session is assessment-led and matched to what the body presents with that day.',
+  },
+  {
+    q: 'Where is Range and Restore Sports Massage based?',
+    a: 'The clinic is at 130 Junction Road, Archway, London N19 5LB, three minutes’ walk from Archway tube on the Northern Line. It serves clients across N19, N7, N6, N8, NW5, NW1, NW3, N4 and the wider North London area, including Archway, Upper Holloway, Tufnell Park, Holloway, Highgate, Crouch End, Hornsey, Kentish Town, Dartmouth Park, Gospel Oak, Camden, Hampstead, Belsize Park, Finsbury Park and Stroud Green.',
+  },
+]
+
+const faqSchema = buildFaqSchema(faqs)
 
 export default function AlaricYogaPartnerPage() {
   return (
@@ -136,6 +133,18 @@ export default function AlaricYogaPartnerPage() {
             Alaric Newcombe teaches Iyengar yoga and pranayama through <a href={PARTNER_URL} target="_blank" rel="noopener" className="text-[#0f767a] hover:text-page font-medium">Alaric Yoga</a>. Yoga students looking for soft tissue support, injury rehab, mobility work or general musculoskeletal care alongside their practice can <Link href="/contact" className="text-[#0f767a] hover:text-page font-medium">book directly with Range and Restore</Link>. Same-week appointments are usually available at 130 Junction Road, N19.
           </p>
         </div>
+
+        <section aria-labelledby="page-faqs" className="mt-12">
+          <h2 id="page-faqs" className="text-2xl font-black text-page mb-5">Common questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="rounded-xl border border-[#E9E5DE] bg-white p-5">
+                <h3 className="font-bold text-page mb-2">{faq.q}</h3>
+                <p className="text-page-muted text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 bg-[#7dd94a] rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-[#1a2330] mb-3">Book sports massage and soft tissue therapy in Archway</h2>
