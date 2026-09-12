@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/Header'
+import { OfferBar } from '@/components/OfferBar'
 import { Footer } from '@/components/Footer'
 import { Analytics } from '@/components/Analytics'
 import { ConsentBanner } from '@/components/ConsentBanner'
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <Analytics />
         <a href="#main-content" className="skip-link">Skip to content</a>
+        <OfferBar />
         <Header />
         <main id="main-content">{children}</main>
         <Footer />

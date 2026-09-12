@@ -203,22 +203,6 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
 
-      {/* ── OFFER BANNER ─────────────────────────────────────── */}
-      <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
-        <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
-          <span className="text-ink text-sm font-bold leading-snug">
-            Injured? Get answers fast.{' '}
-            <span className="block sm:inline">MSK ultrasound scan + treatment, all in one package.</span>
-          </span>
-          <Link
-            href={ROUTES.services.mskUltrasoundClinicalMassage}
-            className="flex-shrink-0 text-xs font-black bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink px-3 py-1.5 rounded-full hover:bg-white hover:border-brand-teal transition-all whitespace-nowrap"
-          >
-            Book Now
-          </Link>
-        </div>
-      </div>
-
       {/* ── 1. HERO ──────────────────────────────────────────── */}
       <section className="relative overflow-hidden" style={{ minHeight: '560px' }} aria-label="Hero">
         <Image
