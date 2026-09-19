@@ -12,6 +12,12 @@ export const metadata: Metadata = buildMetadata({
 
 const posts = [
   {
+    title: 'Small Businesses Keep Each Other Going. That Is Why We Joined the Refuse 2 Quit Network',
+    slug: 'small-businesses-refuse-2-quit-network-archway',
+    date: '19 September 2026',
+    excerpt: 'Range and Restore is now listed on the Refuse 2 Quit Network, a directory where London small businesses find, message and vouch for each other. What it is, why a sports massage clinic joined, and how to find us there.',
+  },
+  {
     title: 'Can Massage Help a Trapped Nerve? An Honest Answer',
     slug: 'trapped-nerve-massage-archway',
     date: '6 September 2026',

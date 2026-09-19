@@ -205,6 +205,11 @@ export default function CommunityPage() {
           More partners are on the way. We’re talking to local yoga studios, wellness spaces and a handful of other independents across the community. If you run a local business and want to chat, the door is open.
         </p>
 
+        <p className="text-page-muted text-sm mt-4 max-w-2xl">
+          We also back small businesses across London. You can find us, vouch for us and message us on the{' '}
+          <Link href={ROUTES.community.refuse2QuitNetwork} className="link-cite">Refuse 2 Quit Network</Link>.
+        </p>
+
         <div className="mt-10 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-3">Local independent? Get in touch</h2>
           <p className="text-brand-green font-semibold mb-6 max-w-2xl">

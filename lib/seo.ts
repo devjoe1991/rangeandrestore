@@ -294,6 +294,7 @@ export const businessSchema = {
     'https://www.facebook.com/people/Range-and-Restore-Sports-Massage/61572962878628/',
     'https://www.instagram.com/rangeandrestore',
     'https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9',
+    'https://refuse2quit.com/m/448c8b0a-9683-4857-9f05-a577dd0f95b5',
   ],
   makesOffer: [
     {
