@@ -79,6 +79,7 @@ export const ROUTES = {
     alaricYoga: '/community/alaric-yoga',
     alisQuiffBarber: '/community/alis-quiff-barber',
     bikeztubeCycles: '/community/bikeztube-cycles',
+    fs8FinsburyPark: '/community/fs8-finsbury-park',
     glowByD: '/community/glow-by-d',
     ncOsteopathy: '/community/nc-osteopathy',
     privateGpSurgery: '/community/private-gp-surgery',

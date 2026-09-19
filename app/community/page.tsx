@@ -76,6 +76,17 @@ const partners: Partner[] = [
     externalUrl: 'https://www.alaricyoga.co.uk/pranayama/',
   },
   {
+    slug: 'fs8-finsbury-park',
+    name: 'Range and Restore × FS8 Finsbury Park',
+    headerText: 'Range and Restore × FS8 Finsbury Park',
+    category: 'Finsbury Park. Reformer Pilates, Tone and Yoga',
+    blurb: 'Range and Restore and FS8 Finsbury Park join up treatment and training. Reformer Pilates, tone and yoga by Finsbury Park station, assessment-led sports massage and recovery on Junction Road. Referrals both ways, and 10% off FS8’s intro for our clients.',
+    logo: '/fs8-finsbury-park-reformer-pilates-logo.svg',
+    logoAlt: 'FS8 logo, reformer Pilates studio in Finsbury Park',
+    logoBg: 'bg-sand-deep',
+    externalUrl: 'https://fs8.com/studio/finsburypark/',
+  },
+  {
     slug: 'alis-quiff-barber',
     name: 'Range and Restore × Ali’s Quiff Barber',
     headerText: 'Range and Restore × Ali’s Quiff Barber',

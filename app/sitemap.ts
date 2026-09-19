@@ -493,6 +493,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${BASE_URL}/community/fs8-finsbury-park`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/socials`,
       lastModified,
       changeFrequency: 'weekly',
