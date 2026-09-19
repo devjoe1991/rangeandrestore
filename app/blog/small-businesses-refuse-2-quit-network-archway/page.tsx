@@ -6,7 +6,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Why We Joined the Refuse 2 Quit Network',
-  description: 'Range and Restore is now on the Refuse 2 Quit Network. What the small business directory is, why a sports massage clinic joined, and how to vouch for us. Archway, N19.',
+  description: 'Range and Restore is on the Refuse 2 Quit Network. What the small business directory is, why a sports massage clinic joined, and how to vouch for us. Archway, N19.',
   path: ROUTES.blog.smallBusinessesRefuse2QuitNetworkArchway,
   author: true,
 })
