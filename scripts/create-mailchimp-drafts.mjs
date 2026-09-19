@@ -8,7 +8,8 @@
  * - NEVER sends or schedules. Every campaign is left in "save" (draft) status.
  * - Idempotent: skips creating a draft whose internal title already exists.
  *
- * Usage: node scripts/create-mailchimp-drafts.mjs
+ * Usage: node scripts/create-mailchimp-drafts.mjs [name-filter]
+ *   Pass part of a template name (e.g. "Corporate") to create only matching drafts.
  */
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -57,6 +58,7 @@ const CAMPAIGNS = {
   'Range and Restore — Newsletter / Recovery Notes': { subject: 'Recovery Notes from Range and Restore', preview: 'A recovery tip, and what is new in the clinic.', send: 'Evergreen / monthly' },
   'Range and Restore — Re-engagement / Rebooking': { subject: 'It has been a while', preview: 'Your body misses good hands. Pick up where you left off.', send: 'Evergreen / lapsed clients' },
   'Range and Restore — Thank You / Google Review': { subject: 'Thank you, from all of us at Range and Restore', preview: 'A quick check-in, and a small favour if you have two minutes.', send: 'One-off / Engaged + Lukewarm only', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
+  'Range and Restore — Corporate Wellbeing': { subject: 'Massage for your workplace', preview: 'On-site or at the clinic, tailored to your team. Worth forwarding to whoever looks after wellbeing at work.', send: 'After site deploy / Engaged + Lukewarm', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
   // Community / collaboration (evergreen)
   'Range and Restore — Community × Dynamic Spud': { subject: 'Two Archway independents looking after you', preview: 'Recovery and good food, the same week in Archway.', send: 'Evergreen' },
   "Range and Restore — Community × Ali's Quiff": { subject: 'Looking after Archway, inside and out', preview: 'Sports massage on Junction Road, barbering up the road.', send: 'Evergreen' },
@@ -130,7 +132,9 @@ async function main() {
   const existingTitles = await listDraftTitles()
   const results = []
 
+  const only = process.argv[2]
   for (const [tplName, cfg] of Object.entries(CAMPAIGNS)) {
+    if (only && !tplName.includes(only)) continue
     const tplId = templates[tplName]
     if (!tplId) { console.log(`SKIP (template not found): ${tplName}`); continue }
     const title = `${tplName}  [send: ${cfg.send}]`

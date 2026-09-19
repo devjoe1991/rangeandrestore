@@ -5,7 +5,8 @@
  * Creates new templates, or updates existing ones matched by name.
  * NEVER sends anything. Templates only.
  *
- * Usage: node scripts/sync-mailchimp-templates.mjs
+ * Usage: node scripts/sync-mailchimp-templates.mjs [file-name]
+ *   Pass a file name without .html (e.g. corporate-wellbeing) to sync only that one.
  */
 import { readFileSync, readdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -39,6 +40,7 @@ const NAME_MAP = {
   'birthday': 'Range and Restore — Birthday',
   'milestone-visits': 'Range and Restore — Milestone Thank You',
   'thank-you-google-review': 'Range and Restore — Thank You / Google Review',
+  'corporate-wellbeing': 'Range and Restore — Corporate Wellbeing',
   'collab-dynamic-spud': 'Range and Restore — Community × Dynamic Spud',
   'collab-alis-quiff-barber': "Range and Restore — Community × Ali's Quiff",
   'collab-nc-osteopathy': 'Range and Restore — Community × NC Osteopathy',
@@ -111,7 +113,11 @@ async function main() {
   const existing = await listExisting()
   console.log(`Existing user templates: ${Object.keys(existing).length}`)
 
-  const files = readdirSync(EMAILS_DIR).filter(f => f.endsWith('.html') && f !== '_MASTER.html')
+  const only = process.argv[2]
+  const files = readdirSync(EMAILS_DIR)
+    .filter(f => f.endsWith('.html') && f !== '_MASTER.html')
+    .filter(f => !only || f === `${only}.html`)
+  if (only && !files.length) throw new Error(`No emails/${only}.html`)
   const results = []
 
   for (const file of files.sort()) {
