@@ -11,6 +11,7 @@ Preview and test-send yourself from the Mailchimp UI.
 - `welcome.html` — Welcome / onboarding (photo strip + FAQ)
 - `newsletter.html` — Recurring "Recovery Notes" (merge-field content slots)
 - `reengagement.html` — Win-back / rebooking, premium, no offer
+- `thank-you-google-review.html` — Thank-you and check-in with a Google review request (writing prompts, "Who did you see?" team faces, review button to `g.page/r/CYvRAkYgnqqREBM/review`), then a compact list of current treatments and prices. The review ask is open to every client, not only happy ones: Google does not allow review gating.
 
 **Retention / triggered** (added 6 Sep 2026 — until then every template was a
 broadcast, so nothing in the library was triggered by client behaviour)
@@ -134,3 +135,8 @@ node scripts/sync-mailchimp-templates.mjs
 It reads `MAILCHIMP_API_KEY` from `.env.local`, creates new templates and
 updates existing ones by name (mapping in the script). Byte-exact, no
 transcription risk. It NEVER sends. Templates only.
+
+To make a draft campaign from a template, add it to `CAMPAIGNS` in
+`scripts/create-mailchimp-drafts.mjs` and run the script. An entry can carry
+`segments: [SEGMENTS.engaged, SEGMENTS.lukewarm]` so the draft is already
+targeted to those static segments rather than the whole list.

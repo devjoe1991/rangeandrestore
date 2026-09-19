@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * Refresh every R&R draft campaign's content from its (updated) saved template.
+ * Refresh every Range and Restore draft campaign's content from its (updated) saved template.
  * Mailchimp snapshots template HTML into a campaign at creation, so after editing
  * templates we must re-apply the template to each draft. NEVER sends.
- * Only touches campaigns whose title starts with "R&R — " and status === "save".
+ * Only touches draft campaigns (status === "save") whose title carries a "  [send:" note.
  */
 import { readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'

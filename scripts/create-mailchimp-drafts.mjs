@@ -34,6 +34,10 @@ const FROM_NAME = 'Carlos at Range and Restore'
 const REPLY_TO = 'carlos@rangeandrestore.co.uk'
 const AUDIENCE_ID = '942aa5d8ac' // placeholder; Carlos changes per draft before scheduling
 
+// Static engagement segments on AUDIENCE_ID (built 6 Sep 2026, see emails/README.md "Sending rules").
+// A campaign with `segments` is pre-targeted to members of any of them instead of the whole list.
+const SEGMENTS = { engaged: 2493675, lukewarm: 2493676 }
+
 async function mc(path, opts = {}) {
   const res = await fetch(BASE + path, {
     ...opts,
@@ -45,53 +49,53 @@ async function mc(path, opts = {}) {
   return json
 }
 
-// templateName -> { subject, preview, send (recommended window) }
+// templateName -> { subject, preview, send (recommended window), segments? }
 // templateName must match the NAME_MAP names in sync-mailchimp-templates.mjs
 const CAMPAIGNS = {
   // Core lifecycle (evergreen — send as needed)
-  'R&R — Welcome / Onboarding': { subject: 'Welcome to Range and Restore', preview: 'What to expect, and how to book your first session.', send: 'Evergreen / on signup' },
-  'R&R — Newsletter / Recovery Notes': { subject: 'Recovery Notes from Range and Restore', preview: 'A recovery tip, and what is new in the clinic.', send: 'Evergreen / monthly' },
-  'R&R — Re-engagement / Rebooking': { subject: 'It has been a while', preview: 'Your body misses good hands. Pick up where you left off.', send: 'Evergreen / lapsed clients' },
+  'Range and Restore — Welcome / Onboarding': { subject: 'Welcome to Range and Restore', preview: 'What to expect, and how to book your first session.', send: 'Evergreen / on signup' },
+  'Range and Restore — Newsletter / Recovery Notes': { subject: 'Recovery Notes from Range and Restore', preview: 'A recovery tip, and what is new in the clinic.', send: 'Evergreen / monthly' },
+  'Range and Restore — Re-engagement / Rebooking': { subject: 'It has been a while', preview: 'Your body misses good hands. Pick up where you left off.', send: 'Evergreen / lapsed clients' },
+  'Range and Restore — Thank You / Google Review': { subject: 'Thank you, from all of us at Range and Restore', preview: 'A quick check-in, and a small favour if you have two minutes.', send: 'One-off / Engaged + Lukewarm only', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
   // Community / collaboration (evergreen)
-  'R&R — Community × The Dynamic Spud': { subject: 'Two Archway independents looking after you', preview: 'Recovery and good food, the same week in Archway.', send: 'Evergreen' },
-  "R&R — Community × Ali's Quiff Barber": { subject: 'Looking after Archway, inside and out', preview: 'Sports massage on Junction Road, barbering up the road.', send: 'Evergreen' },
-  'R&R — Community × NC Osteopathy': { subject: 'Whole-person care in North London', preview: 'Two complementary disciplines, honest referrals both ways.', send: 'Evergreen' },
-  'R&R — Community × Sol Centre': { subject: 'Movement, rest and recovery in Archway', preview: 'From the yoga mat to the treatment room.', send: 'Evergreen' },
-  'R&R — Community × Alaric Yoga': { subject: 'Movement, recovery and longevity', preview: 'Working side by side with Alaric Yoga.', send: 'Evergreen' },
-  'R&R — Community × Reliable Scan': { subject: 'Scan and treatment under one roof', preview: 'Sharing the building at 130 Junction Road.', send: 'Evergreen' },
-  'R&R — Community Roundup': { subject: 'Our Archway community', preview: 'The local independents we work with, and why.', send: 'Evergreen / quarterly' },
+  'Range and Restore — Community × Dynamic Spud': { subject: 'Two Archway independents looking after you', preview: 'Recovery and good food, the same week in Archway.', send: 'Evergreen' },
+  "Range and Restore — Community × Ali's Quiff": { subject: 'Looking after Archway, inside and out', preview: 'Sports massage on Junction Road, barbering up the road.', send: 'Evergreen' },
+  'Range and Restore — Community × NC Osteopathy': { subject: 'Whole-person care in North London', preview: 'Two complementary disciplines, honest referrals both ways.', send: 'Evergreen' },
+  'Range and Restore — Community × Sol Centre': { subject: 'Movement, rest and recovery in Archway', preview: 'From the yoga mat to the treatment room.', send: 'Evergreen' },
+  'Range and Restore — Community × Alaric Yoga': { subject: 'Movement, recovery and longevity', preview: 'Working side by side with Alaric Yoga.', send: 'Evergreen' },
+  'Range and Restore — Community × Reliable Scan': { subject: 'Scan and treatment under one roof', preview: 'Sharing the building at 130 Junction Road.', send: 'Evergreen' },
+  'Range and Restore — Community Roundup': { subject: 'Our Archway community', preview: 'The local independents we work with, and why.', send: 'Evergreen / quarterly' },
   // Service / conversion (evergreen)
-  'R&R — Recovery Suite': { subject: 'Recover faster with the Recovery Suite', preview: 'Infrared sauna and Normatec compression in Archway.', send: 'Evergreen' },
-  'R&R — Sports & Pain Relief': { subject: 'Get to the root of your pain', preview: 'Assessment-led sports and deep-tissue massage.', send: 'Evergreen' },
-  'R&R — Infrared Sauna Sessions & Memberships': { subject: 'Your private infrared sauna, from £19', preview: 'Single sessions, Restore+ memberships from £49 a month, and what the cabin is good for.', send: 'Evergreen / autumn and winter push' },
-  'R&R — Restore+ Memberships': { subject: 'Introducing Restore+ Memberships', preview: 'Feel better, recover faster and save more with regular treatment.', send: 'Evergreen' },
-  'R&R — Massage Bundles': { subject: 'Commit to your recovery, save as you go', preview: 'Massage bundles with bigger savings on regular sessions.', send: 'Evergreen' },
+  'Range and Restore — Recovery Suite': { subject: 'Recover faster with the Recovery Suite', preview: 'Infrared sauna and Normatec compression in Archway.', send: 'Evergreen' },
+  'Range and Restore — Sports & Pain Relief': { subject: 'Get to the root of your pain', preview: 'Assessment-led sports and deep-tissue massage.', send: 'Evergreen' },
+  'Range and Restore — Infrared Sauna & Memberships': { subject: 'Your private infrared sauna, from £19', preview: 'Single sessions, Restore+ memberships from £49 a month, and what the cabin is good for.', send: 'Evergreen / autumn and winter push' },
+  'Range and Restore — Restore+ Memberships': { subject: 'Introducing Restore+ Memberships', preview: 'Feel better, recover faster and save more with regular treatment.', send: 'Evergreen' },
+  'Range and Restore — Massage Bundles': { subject: 'Commit to your recovery, save as you go', preview: 'Massage bundles with bigger savings on regular sessions.', send: 'Evergreen' },
   'Range and Restore — Book a Session': { subject: 'Book Your Session at Range and Restore', preview: 'Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.', send: 'Evergreen' },
-  'R&R — Marathon / Event Recovery': { subject: 'Marathon prep and recovery', preview: 'Pre-race preparation and post-race recovery.', send: 'Race season' },
-  'R&R — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
-  'R&R — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
-  'R&R — Carlos Annual Leave (Aug 2026)': { subject: 'I am away from 14 August, the clinic is open as normal', preview: 'Back in the clinic on 24 August. Alison, Darael and Mateja are covering, seven days a week.', send: 'approx 10 Aug 2026 (leave starts Fri 14 Aug)' },
-  'R&R — Award / Prestige 2026': { subject: 'We have been named Clinic of the Year', preview: 'Recognised at the 2026/27 London and South East England Prestige Awards.', send: 'On award announcement' },
-  'R&R — Gallery Showcase': { subject: 'A look inside Range and Restore', preview: 'The clinic, the Recovery Suite, and what to expect.', send: 'Evergreen' },
-  'R&R — Meet the Team': { subject: 'Meet the team behind Range and Restore', preview: 'Carlos, Darael and Mateja. The qualified hands looking after you in Archway.', send: 'Evergreen / one-off introduction' },
+  'Range and Restore — Marathon / Event Recovery': { subject: 'Marathon prep and recovery', preview: 'Pre-race preparation and post-race recovery.', send: 'Race season' },
+  'Range and Restore — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
+  'Range and Restore — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
+  'Range and Restore — Award / Prestige 2026': { subject: 'We have been named Clinic of the Year', preview: 'Recognised at the 2026/27 London and South East England Prestige Awards.', send: 'On award announcement' },
+  'Range and Restore — Gallery Showcase': { subject: 'A look inside Range and Restore', preview: 'The clinic, the Recovery Suite, and what to expect.', send: 'Evergreen' },
+  'Range and Restore — Meet the Team': { subject: 'Meet the team behind Range and Restore', preview: 'Carlos, Darael and Mateja. The qualified hands looking after you in Archway.', send: 'Evergreen / one-off introduction' },
   // Seasonal / holiday / event (dated)
-  'R&R — Summer Bank Holiday': { subject: 'Before the bank holiday weekend', preview: 'Book in before we close for the long weekend.', send: 'approx 24 Aug 2026 (BH Mon 31 Aug)' },
-  'R&R — Halloween': { subject: 'Do not let tight muscles haunt you', preview: 'An autumn nudge from the clinic.', send: 'approx 28 Oct 2026 (Halloween 31 Oct)' },
-  'R&R — Bonfire Night': { subject: 'Cold nights, stiff muscles', preview: 'Looking after your body as it gets colder.', send: 'approx 3 Nov 2026 (Bonfire 5 Nov)' },
-  'R&R — Black Friday': { subject: 'Gift cards and bundles this weekend', preview: 'A simple gift that gets used.', send: 'Fri 27 Nov 2026' },
-  'R&R — Cyber Monday': { subject: 'The easiest gift to send', preview: 'Online gift cards, delivered instantly.', send: 'Mon 30 Nov 2026' },
-  'R&R — Christmas': { subject: 'Merry Christmas from Range and Restore', preview: 'A thank you, gift cards, and our festive hours.', send: 'approx 15 Dec 2026' },
-  'R&R — New Year': { subject: 'A fresh start for the new year', preview: 'Recovery as a routine, not a resolution.', send: 'approx 1 to 3 Jan 2027' },
-  'R&R — New Year Reset / Blue Monday': { subject: 'The January reset', preview: 'Looking after your body and mind this month.', send: 'approx 18 Jan 2027 (Blue Monday)' },
-  "R&R — Valentine's Day": { subject: 'Treat someone you love, or yourself', preview: 'Gift a session, or book the sauna for two.', send: 'approx 7 Feb 2027 (Valentine 14 Feb)' },
-  'R&R — Mothering Sunday': { subject: 'Something Mum will actually use', preview: 'A gift card for Mothering Sunday.', send: 'approx 28 Feb 2027 (Mother Sun 7 Mar)' },
-  "R&R — St Patrick's Day": { subject: 'Celebrating St Patrick in Archway', preview: 'Good Irish food next door, recovery round the corner.', send: 'approx 14 Mar 2027 (St Patrick 17 Mar)' },
-  'R&R — Easter': { subject: 'Our Easter hours, and a spring reset', preview: 'When we are closed, and when we are back.', send: 'approx 22 Mar 2027 (Good Fri 26 Mar)' },
-  "R&R — St George's Day": { subject: "A proper British treat for St George's Day", preview: 'Celebrating England with a sports massage.', send: 'approx 20 Apr 2027 (St George 23 Apr)' },
-  'R&R — Marathon Day': { subject: 'Marathon day in London', preview: 'Recovery starts the moment you cross the line.', send: 'approx 20 Apr 2027 (Marathon 25 Apr)' },
-  'R&R — Clocks Change': { subject: 'The clocks have changed', preview: 'A seasonal MOT for your body.', send: 'approx 28 Mar 2027 / 25 Oct 2026' },
-  'R&R — Closure Notice (editable)': { subject: 'Our opening hours over the break', preview: 'When we are closed, and when we are back.', send: 'Reusable for any closure' },
-  'R&R — Arsenal Champions (North London)': { subject: 'Champions of North London', preview: 'Celebrating with the local football community.', send: 'On the day Arsenal win the league' },
+  'Range and Restore — Summer Bank Holiday': { subject: 'Before the bank holiday weekend', preview: 'Book in before we close for the long weekend.', send: 'approx 24 Aug 2026 (BH Mon 31 Aug)' },
+  'Range and Restore — Halloween': { subject: 'Do not let tight muscles haunt you', preview: 'An autumn nudge from the clinic.', send: 'approx 28 Oct 2026 (Halloween 31 Oct)' },
+  'Range and Restore — Bonfire Night': { subject: 'Cold nights, stiff muscles', preview: 'Looking after your body as it gets colder.', send: 'approx 3 Nov 2026 (Bonfire 5 Nov)' },
+  'Range and Restore — Black Friday': { subject: 'Gift cards and bundles this weekend', preview: 'A simple gift that gets used.', send: 'Fri 27 Nov 2026' },
+  'Range and Restore — Cyber Monday': { subject: 'The easiest gift to send', preview: 'Online gift cards, delivered instantly.', send: 'Mon 30 Nov 2026' },
+  'Range and Restore — Christmas': { subject: 'Merry Christmas from Range and Restore', preview: 'A thank you, gift cards, and our festive hours.', send: 'approx 15 Dec 2026' },
+  'Range and Restore — New Year': { subject: 'A fresh start for the new year', preview: 'Recovery as a routine, not a resolution.', send: 'approx 1 to 3 Jan 2027' },
+  'Range and Restore — New Year Reset / Blue Monday': { subject: 'The January reset', preview: 'Looking after your body and mind this month.', send: 'approx 18 Jan 2027 (Blue Monday)' },
+  "Range and Restore — Valentine's Day": { subject: 'Treat someone you love, or yourself', preview: 'Gift a session, or book the sauna for two.', send: 'approx 7 Feb 2027 (Valentine 14 Feb)' },
+  'Range and Restore — Mothering Sunday': { subject: 'Something Mum will actually use', preview: 'A gift card for Mothering Sunday.', send: 'approx 28 Feb 2027 (Mother Sun 7 Mar)' },
+  "Range and Restore — St Patrick's Day": { subject: 'Celebrating St Patrick in Archway', preview: 'Good Irish food next door, recovery round the corner.', send: 'approx 14 Mar 2027 (St Patrick 17 Mar)' },
+  'Range and Restore — Easter': { subject: 'Our Easter hours, and a spring reset', preview: 'When we are closed, and when we are back.', send: 'approx 22 Mar 2027 (Good Fri 26 Mar)' },
+  "Range and Restore — St George's Day": { subject: "A proper British treat for St George's Day", preview: 'Celebrating England with a sports massage.', send: 'approx 20 Apr 2027 (St George 23 Apr)' },
+  'Range and Restore — Marathon Day': { subject: 'Marathon day in London', preview: 'Recovery starts the moment you cross the line.', send: 'approx 20 Apr 2027 (Marathon 25 Apr)' },
+  'Range and Restore — Clocks Change': { subject: 'The clocks have changed', preview: 'A seasonal MOT for your body.', send: 'approx 28 Mar 2027 / 25 Oct 2026' },
+  'Range and Restore — Closure Notice (editable)': { subject: 'Our opening hours over the break', preview: 'When we are closed, and when we are back.', send: 'Reusable for any closure' },
+  'Range and Restore — Arsenal Champions': { subject: 'Champions of North London', preview: 'Celebrating with the local football community.', send: 'On the day Arsenal win the league' },
 }
 
 async function listTemplates() {
@@ -111,7 +115,9 @@ async function listDraftTitles() {
   let offset = 0
   while (true) {
     const d = await mc(`/campaigns?count=100&offset=${offset}`)
-    for (const c of d.campaigns || []) titles.add(c.settings?.title)
+    // Titles made before 16 Sep 2026 start "R&R — ". Mailchimp ignores title changes
+    // on sent campaigns, so match those under the current prefix.
+    for (const c of d.campaigns || []) titles.add(c.settings?.title?.replace(/^R&R — /, 'Range and Restore — '))
     if (!d.campaigns || d.campaigns.length < 100) break
     offset += 100
   }
@@ -134,7 +140,15 @@ async function main() {
         method: 'POST',
         body: JSON.stringify({
           type: 'regular',
-          recipients: { list_id: AUDIENCE_ID },
+          recipients: {
+            list_id: AUDIENCE_ID,
+            ...(cfg.segments && {
+              segment_opts: {
+                match: 'any',
+                conditions: cfg.segments.map(id => ({ condition_type: 'StaticSegment', field: 'static_segment', op: 'static_is', value: id })),
+              },
+            }),
+          },
           settings: {
             title,
             subject_line: cfg.subject,
