@@ -48,6 +48,7 @@ const NAME_MAP = {
   'collab-alaric-yoga': 'Range and Restore — Community × Alaric Yoga',
   'collab-reliable-scan': 'Range and Restore — Community × Reliable Scan',
   'community-roundup': 'Range and Restore — Community Roundup',
+  'community-partners': 'Range and Restore — Community Partners',
   'service-recovery-suite': 'Range and Restore — Recovery Suite',
   'service-msk-ultrasound-massage': 'Range and Restore — MSK Scan + Clinical Massage',
   'service-sports-pain': 'Range and Restore — Sports & Pain Relief',

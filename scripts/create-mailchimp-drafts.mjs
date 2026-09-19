@@ -67,6 +67,7 @@ const CAMPAIGNS = {
   'Range and Restore — Community × Alaric Yoga': { subject: 'Movement, recovery and longevity', preview: 'Working side by side with Alaric Yoga.', send: 'Evergreen' },
   'Range and Restore — Community × Reliable Scan': { subject: 'Scan and treatment under one roof', preview: 'Sharing the building at 130 Junction Road.', send: 'Evergreen' },
   'Range and Restore — Community Roundup': { subject: 'Our Archway community', preview: 'The local independents we work with, and why.', send: 'Evergreen / quarterly' },
+  'Range and Restore — Community Partners': { subject: 'The local businesses we work with', preview: 'Ten independents we trust and send our clients to, from Junction Road to Finsbury Park.', send: 'One-off / Engaged + Lukewarm only', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
   // Service / conversion (evergreen)
   'Range and Restore — Recovery Suite': { subject: 'Recover faster with the Recovery Suite', preview: 'Infrared sauna and Normatec compression in Archway.', send: 'Evergreen' },
   'Range and Restore — Sports & Pain Relief': { subject: 'Get to the root of your pain', preview: 'Assessment-led sports and deep-tissue massage.', send: 'Evergreen' },
