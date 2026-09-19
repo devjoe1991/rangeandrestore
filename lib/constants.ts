@@ -56,6 +56,19 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICo
   WHATSAPP_MESSAGE,
 ).replace(/'/g, '%27')}`
 
+/**
+ * Corporate wellbeing enquiries open a pre-filled email to the clinic inbox.
+ * As with WhatsApp, the fields are left blank for the company to complete.
+ */
+export const CORPORATE_ENQUIRY_SUBJECT = 'Corporate wellbeing enquiry'
+
+export const CORPORATE_ENQUIRY_MESSAGE =
+  "Hi Range and Restore,\n\nWe'd like to find out more about corporate wellbeing for our team.\n\nCompany name: \nWorkplace location / postcode: \nNumber of staff: \nOn-site at our workplace, at your clinic, or both: \nHow often / preferred dates: \nBest phone number: \n"
+
+export const CORPORATE_ENQUIRY_URL = `mailto:${BUSINESS.email}?subject=${encodeURIComponent(
+  CORPORATE_ENQUIRY_SUBJECT,
+)}&body=${encodeURIComponent(CORPORATE_ENQUIRY_MESSAGE).replace(/'/g, '%27')}`
+
 export const NAV_ITEMS = [
   { label: 'About', href: '/about' },
   { label: 'Awards', href: '/awards' },

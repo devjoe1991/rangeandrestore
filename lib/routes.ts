@@ -14,6 +14,7 @@ export const ROUTES = {
   awards: '/awards',
   clinicalCollaboration: '/clinical-collaboration',
   contact: '/contact',
+  corporateWellbeing: '/corporate-wellbeing',
   faqs: '/faqs',
   gallery: '/gallery',
   giftCards: '/gift-cards',

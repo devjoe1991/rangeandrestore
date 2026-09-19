@@ -197,6 +197,9 @@ export default function BackNeckPainMotPage() {
               <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline link-inline-tap">
                 → Hydration and Muscle Health – What Every Client Should Know
               </Link>
+              <Link href={ROUTES.corporateWellbeing} className="link-inline link-inline-tap">
+                → Corporate Massage &amp; Workplace Wellbeing for Employers
+              </Link>
             </div>
           </div>
         </div>

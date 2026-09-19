@@ -263,6 +263,9 @@ export default function DeskPosturePainMassagePage() {
             <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
               &rarr; Neck Pain and a Stiff Neck: How Massage Helps
             </Link>
+            <Link href={ROUTES.corporateWellbeing} className="link-inline link-inline-tap">
+              &rarr; Corporate Massage &amp; Workplace Wellbeing for Employers
+            </Link>
           </div>
         </div>
 

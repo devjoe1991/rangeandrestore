@@ -160,6 +160,7 @@ export function Footer() {
                 ['Socials',                '/socials'],
                 ['FAQs',                   '/faqs'],
                 ['Contact',                '/contact'],
+                ['Corporate Wellbeing',    '/corporate-wellbeing'],
                 ['Clinical Collaboration', '/clinical-collaboration'],
               ].map(([label, href]) => (
                 <li key={href}>

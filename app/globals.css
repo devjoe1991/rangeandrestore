@@ -241,6 +241,8 @@ input, select, textarea {
   padding-bottom: 0.35em;
   border-bottom: 2px solid #0f767a;
 }
+/* Eyebrow on a black panel (CorporateWellbeingStrip). */
+.eyebrow-inverse { color: #fff; border-bottom-color: #fff; }
 
 /* ── Buttons ──────────────────────────────────────────────── */
 .btn {

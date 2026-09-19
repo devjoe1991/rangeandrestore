@@ -436,6 +436,13 @@ export const businessSchema = {
     },
     {
       '@type': 'Offer',
+      name: 'Corporate Massage & Workplace Wellbeing',
+      description: 'For businesses in London and North London: on-site workplace and office massage, or clinic sessions for employees, for back, neck and shoulder tension, muscular tightness, mobility, recovery and general wellbeing. Tailored options, priced on enquiry.',
+      url: `${BASE_URL}/corporate-wellbeing`,
+      itemOffered: { '@type': 'Service', name: 'Corporate Massage & Workplace Wellbeing', serviceType: 'Corporate massage' },
+    },
+    {
+      '@type': 'Offer',
       name: 'Restore+ Signature Treatment Memberships',
       description: 'Monthly Signature Treatment memberships at a saving on the usual price. Essential (1 × 60-minute treatment), Plus (1 × 90-minute treatment) and Elite (2 × 90-minute treatments). Set up personally, not bookable online.',
       url: `${BASE_URL}/recovery-suite/recovery-packages`,

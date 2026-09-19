@@ -7,6 +7,7 @@ import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
 import { GivingBackStrip } from '@/components/GivingBackStrip'
+import { CorporateWellbeingStrip } from '@/components/CorporateWellbeingStrip'
 import { SwipeCarousel } from '@/components/SwipeCarousel'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
@@ -480,6 +481,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 3.2 CORPORATE WELLBEING ──────────────────────────── */}
+      <CorporateWellbeingStrip />
 
       {/* ── 5. GOOGLE REVIEWS ────────────────────────────────── */}
       <GoogleReviews />

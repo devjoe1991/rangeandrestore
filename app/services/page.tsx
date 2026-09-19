@@ -6,6 +6,7 @@ import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { AwardStrip } from '@/components/AwardStrip'
 import { ReviewsStrip } from '@/components/ReviewsStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
+import { CorporateWellbeingStrip } from '@/components/CorporateWellbeingStrip'
 import { BookingButton } from '@/components/BookingButton'
 import { ROUTES } from '@/lib/routes'
 
@@ -305,6 +306,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* ── CORPORATE WELLBEING ──────────────────────────────── */}
+      <CorporateWellbeingStrip />
 
       {/* ── CTA BAR ──────────────────────────────────────────── */}
       <section className="section-sm bg-accent" aria-label="Book a session">
