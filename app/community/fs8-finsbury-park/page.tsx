@@ -15,6 +15,15 @@ const PARTNER_INSTAGRAM = 'https://www.instagram.com/fs8_finsburypark'
 const PARTNER_ADDRESS = '1-7 Morris Place, Finsbury Park, London N4 3JG'
 // Printed on the FS8 intro cards we keep at reception. Swap here if FS8 issue a new code.
 const PARTNER_CODE = 'CHEEKYTEN'
+const PARTNER_STUDIO_PHOTO = '/fs8-finsbury-park-reformer-pilates-studio-north-london.jpg'
+
+/* The same therapist photos as the team page, so both stay in step. */
+const THERAPISTS = [
+  { name: 'Carlos Bonvicine', role: 'Founder & Lead Therapist', img: '/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg' },
+  { name: 'Alison Isherwood', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg' },
+  { name: 'Darael Beckles', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg' },
+  { name: 'Mateja Bracko-Mounti', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg' },
+]
 
 const breadcrumbs = buildBreadcrumbs([
   { name: 'Community', path: ROUTES.community.index },
@@ -99,6 +108,20 @@ export default function Fs8FinsburyParkPartnerPage() {
           <p>
             <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park</a> is a reformer Pilates studio at {PARTNER_ADDRESS}, a couple of minutes from Finsbury Park station. FS8 blends Pilates, tone and yoga into one workout: reformer and mat Pilates, toning work with dumbbells, rings and bands, and yoga-based stretching and flow. It is low impact, full body and built so a complete beginner and a regular can train in the same room.
           </p>
+          <figure className="not-prose my-6">
+            <Image
+              src={PARTNER_STUDIO_PHOTO}
+              alt="Reformer studio floor at FS8 Finsbury Park, reformer Pilates, tone and yoga in North London"
+              width={1920}
+              height={724}
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="rounded-card border-2 border-brand-green w-full h-auto"
+            />
+            <figcaption className="text-sm text-page-muted mt-3 text-center">
+              The reformer studio floor at FS8 Finsbury Park, 1-7 Morris Place, N4
+            </figcaption>
+          </figure>
+
           <p>
             The studio runs three class formats. FS8 Original is the all-round mix of Pilates, tone and yoga for strength, flexibility and posture. FS8 Ignite adds more pace and athletic movement for people who want to work harder. ReformX is reformer only, slower and focused on control and technique.
           </p>
@@ -137,6 +160,28 @@ export default function Fs8FinsburyParkPartnerPage() {
           <p>
             Range and Restore is run by a <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>. Every session is assessment, treatment and reassessment, so you can feel what changed before you leave. Common reasons FS8 members and other active clients come in include <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline">sciatica</Link>, <Link href={ROUTES.blog.frozenShoulderMassageArchway} className="link-inline">frozen shoulder</Link>, <Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline">tight hamstrings</Link>, <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link>, limited range of movement and swelling or fluid retention, which we treat with <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage</Link>. We also offer <Link href={ROUTES.services.pregnancyMassage} className="link-inline">pregnancy massage</Link> before and after birth.
           </p>
+          <figure className="not-prose my-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {THERAPISTS.map((t) => (
+                <div key={t.name}>
+                  <Image
+                    src={t.img}
+                    alt={`${t.name}, ${t.role} at Range and Restore Sports Massage, Archway, North London`}
+                    width={1060}
+                    height={1484}
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    className="rounded-card border-2 border-brand-green w-full h-auto aspect-[3/4] object-cover"
+                  />
+                  <p className="text-sm font-bold text-page mt-2 leading-tight">{t.name}</p>
+                  <p className="text-xs text-page-muted leading-snug">{t.role}</p>
+                </div>
+              ))}
+            </div>
+            <figcaption className="text-sm text-page-muted mt-4 text-center">
+              The team at Range and Restore, 130 Junction Road, Archway N19
+            </figcaption>
+          </figure>
+
           <p>
             For something that needs a closer look, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> and the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back and Neck Pain MOT</Link> go deeper into how the whole body is moving, not only where it hurts.
           </p>
