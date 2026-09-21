@@ -19,10 +19,10 @@ const PARTNER_STUDIO_PHOTO = '/fs8-finsbury-park-reformer-pilates-studio-north-l
 
 /* The same therapist photos as the team page, so both stay in step. */
 const THERAPISTS = [
-  { name: 'Carlos Bonvicine', role: 'Founder & Lead Therapist', img: '/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg' },
-  { name: 'Alison Isherwood', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg' },
-  { name: 'Darael Beckles', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg' },
-  { name: 'Mateja Bracko-Mounti', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg' },
+  { name: 'Carlos Bonvicine', role: 'Founder & Lead Therapist', img: '/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', anchor: '#carlos-bonvicine' },
+  { name: 'Alison Isherwood', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', anchor: '#alison-isherwood' },
+  { name: 'Darael Beckles', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', anchor: '#darael-beckles' },
+  { name: 'Mateja Bracko-Mounti', role: 'Sports Massage & Soft Tissue Remedial Therapist', img: '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg', anchor: '#mateja-bracko-mounti' },
 ]
 
 const breadcrumbs = buildBreadcrumbs([
@@ -163,18 +163,25 @@ export default function Fs8FinsburyParkPartnerPage() {
           <figure className="not-prose my-6">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {THERAPISTS.map((t) => (
-                <div key={t.name}>
-                  <Image
-                    src={t.img}
-                    alt={`${t.name}, ${t.role} at Range and Restore Sports Massage, Archway, North London`}
-                    width={1060}
-                    height={1484}
-                    sizes="(max-width: 640px) 50vw, 25vw"
-                    className="rounded-card border-2 border-brand-green w-full h-auto aspect-[3/4] object-cover"
-                  />
-                  <p className="text-sm font-bold text-page mt-2 leading-tight">{t.name}</p>
+                <Link
+                  key={t.name}
+                  href={`${ROUTES.team}${t.anchor}`}
+                  className="group block no-underline"
+                >
+                  <div className="rounded-card border-2 border-brand-green overflow-hidden">
+                    <Image
+                      src={t.img}
+                      alt={`${t.name}, ${t.role} at Range and Restore Sports Massage, Archway, North London`}
+                      width={1060}
+                      height={1484}
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="w-full h-auto aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <p className="text-sm font-bold text-page mt-2 leading-tight group-hover:text-brand-teal transition-colors">{t.name}</p>
                   <p className="text-xs text-page-muted leading-snug">{t.role}</p>
-                </div>
+                  <p className="text-xs font-bold text-brand-teal mt-1">Read profile &rarr;</p>
+                </Link>
               ))}
             </div>
             <figcaption className="text-sm text-page-muted mt-4 text-center">
