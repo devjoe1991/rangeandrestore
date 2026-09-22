@@ -7,6 +7,7 @@ import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
 import { GivingBackStrip } from '@/components/GivingBackStrip'
+import { NhsDiscountStrip } from '@/components/NhsDiscountStrip'
 import { CorporateWellbeingStrip } from '@/components/CorporateWellbeingStrip'
 import { SwipeCarousel } from '@/components/SwipeCarousel'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
@@ -334,6 +335,9 @@ export default function HomePage() {
 
       {/* ── 2.15 GIVING BACK ─────────────────────────────────── */}
       <GivingBackStrip />
+
+      {/* ── 2.17 NHS & EMERGENCY SERVICES DISCOUNT ───────────── */}
+      <NhsDiscountStrip />
 
       {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">

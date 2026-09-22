@@ -20,6 +20,7 @@ export const ROUTES = {
   giftCards: '/gift-cards',
   givingBack: '/giving-back',
   home: '/',
+  nhsEmergencyServicesDiscount: '/nhs-emergency-services-discount',
   press: '/press',
   privacyPolicy: '/privacy-policy',
   saunaRoom: '/sauna-room',

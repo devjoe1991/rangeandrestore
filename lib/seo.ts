@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { NHS_DISCOUNT } from '@/lib/constants'
 
 export const SITE_NAME = 'Range and Restore'
 export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://rangeandrestore.co.uk'
@@ -441,6 +442,16 @@ export const businessSchema = {
       description: 'For businesses in London and North London: on-site workplace and office massage, or clinic sessions for employees, for back, neck and shoulder tension, muscular tightness, mobility, recovery and general wellbeing. Tailored options, priced on enquiry.',
       url: `${BASE_URL}/corporate-wellbeing`,
       itemOffered: { '@type': 'Service', name: 'Corporate Massage & Workplace Wellbeing', serviceType: 'Corporate massage' },
+    },
+    {
+      '@type': 'Offer',
+      '@id': `${BASE_URL}/nhs-emergency-services-discount#offer`,
+      name: 'NHS & Emergency Services Discount',
+      description: `${NHS_DISCOUNT.display} off each full-priced massage treatment for NHS staff, ambulance service staff, police, fire and rescue service staff and eligible health and social care workers. Book and pay the standard price, show a workplace ID or Blue Light Card at the clinic on the day, and the ${NHS_DISCOUNT.display} is refunded to the original payment method or held as credit towards the next session. Not available with the Community Tuesday Clinic, bundles, packages, memberships or other offers.`,
+      url: `${BASE_URL}/nhs-emergency-services-discount`,
+      discount: NHS_DISCOUNT.amount,
+      discountCurrency: 'GBP',
+      priceCurrency: 'GBP',
     },
     {
       '@type': 'Offer',

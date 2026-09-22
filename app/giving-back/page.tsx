@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CharityBlock } from '@/components/CharityBlock'
 import type { CharityPhoto } from '@/components/CharityBlock'
 import { FaqAccordion } from '@/components/FaqAccordion'
+import { NhsDiscountStrip } from '@/components/NhsDiscountStrip'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, personSchema } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -269,6 +270,9 @@ export default function GivingBackPage() {
         </div>
       </div>
 
+      {/* ── NHS & emergency services discount ─────────────────────── */}
+      <NhsDiscountStrip className="section-flush-t section-flush-b bg-page" />
+
       <div className="container-page container-full">
 
         {/* ── Charity blocks ─────────────────────── */}
@@ -339,6 +343,9 @@ export default function GivingBackPage() {
         <div className="max-w-3xl mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
+            <Link href={ROUTES.nhsEmergencyServicesDiscount} className="link-inline link-inline-tap">
+              &rarr; NHS &amp; emergency services discount
+            </Link>
             <Link href={ROUTES.community.index} className="link-inline link-inline-tap">
               &rarr; Our Archway community and local partners
             </Link>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
+import { NhsDiscountStrip } from '@/components/NhsDiscountStrip'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 import { ROUTES } from '@/lib/routes'
@@ -87,6 +88,8 @@ export default function SportsDeepTissuePage() {
           </div>
         </div>
       </div>
+
+      <NhsDiscountStrip className="section-flush-t section-flush-b bg-page" />
 
       <div className="container-page container-wide">
         <div className="space-y-12">
@@ -203,6 +206,9 @@ export default function SportsDeepTissuePage() {
             </div>
             <h3 className="text-lg font-semibold text-page mb-4">Related articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href={ROUTES.nhsEmergencyServicesDiscount} className="link-inline link-inline-tap">
+                → NHS &amp; Emergency Services Discount
+              </Link>
               <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
                 → How Sports Massage Helps Runners Before and After Races
               </Link>

@@ -105,3 +105,17 @@ export const NAV_ITEMS = [
   { label: 'FAQs', href: '/faqs' },
   { label: 'Contact', href: '/contact' },
 ] as const
+
+/**
+ * NHS and emergency services discount. Clients book and pay the normal price
+ * online, show a Blue Light Card or workplace ID at the clinic on the day, and
+ * take the £10 back as a refund or as credit against the next session.
+ *
+ * The amount lives here because it appears in the strip, on the discount page
+ * and in the LocalBusiness schema — one edit changes all three. `amount` is a
+ * string because schema.org wants prices as strings.
+ */
+export const NHS_DISCOUNT = {
+  amount: '10',
+  display: '£10',
+} as const
