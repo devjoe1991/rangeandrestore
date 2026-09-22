@@ -13,8 +13,9 @@ export const metadata: Metadata = buildMetadata({
 const PARTNER_URL = 'https://fs8.com/studio/finsburypark/'
 const PARTNER_INSTAGRAM = 'https://www.instagram.com/fs8_finsburypark'
 const PARTNER_ADDRESS = '1-7 Morris Place, Finsbury Park, London N4 3JG'
-// Printed on the FS8 intro cards we keep at reception. Swap here if FS8 issue a new code.
-const PARTNER_CODE = 'CHEEKYTEN'
+// Our own FS8 code, and the intro-offer link FS8 gave us. Swap here if either changes.
+const PARTNER_CODE = 'RANGEANDRESTORE'
+const PARTNER_INTRO_URL = 'https://tinyurl.com/FS8-FP-Intro'
 const PARTNER_STUDIO_PHOTO = '/fs8-finsbury-park-reformer-pilates-studio-north-london.jpg'
 
 /* The same therapist photos as the team page, so both stay in step. */
@@ -60,7 +61,7 @@ const faqs = [
   },
   {
     q: 'Is there an offer for new FS8 clients?',
-    a: `FS8 Finsbury Park runs a 5-class intro for new clients at that studio. Their intro card, which we keep at reception, gives 10% off with the code ${PARTNER_CODE}. Terms are set by FS8, so check the current details on their website before you buy.`,
+    a: `Yes. FS8 Finsbury Park runs a 5-class intro for new clients at that studio, and our clients get 10% off it with the code ${PARTNER_CODE}. Use the intro link on this page, or ask at reception in Archway. Terms are set by FS8, so check the current details before you buy.`,
   },
   {
     q: 'How far is Range and Restore from FS8 Finsbury Park?',
@@ -146,7 +147,7 @@ export default function Fs8FinsburyParkPartnerPage() {
               <strong className="text-page">Referrals both ways.</strong> When our therapists see a client who would benefit from regular, supervised strength and mobility work, we point them to FS8. When FS8&apos;s trainers see a member held back by pain or tightness, they point them to us.
             </li>
             <li>
-              <strong className="text-page">An offer for our clients.</strong> We keep FS8&apos;s intro cards and flyers at reception. New clients get 10% off FS8&apos;s 5-class intro with the code <strong className="text-page">{PARTNER_CODE}</strong>.
+              <strong className="text-page">An offer for our clients.</strong> New clients get 10% off FS8&apos;s 5-class intro with our code <strong className="text-page">{PARTNER_CODE}</strong>. Buy it on the <a href={PARTNER_INTRO_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park intro offer page</a>, or pick up a card at our reception in Archway.
             </li>
             <li>
               <strong className="text-page">Joined-up advice.</strong> Tell your therapist you train at FS8 and your home plan can be built around the classes you already go to. Tell your FS8 trainer what we found and they can adjust the movements for you.
@@ -224,6 +225,14 @@ export default function Fs8FinsburyParkPartnerPage() {
               Book Range and Restore <span aria-hidden="true">→</span>
             </Link>
             <a
+              href={PARTNER_INTRO_URL}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
+            >
+              Get the FS8 intro offer <span aria-hidden="true">→</span>
+            </a>
+            <a
               href={PARTNER_URL}
               target="_blank"
               rel="noopener"
@@ -252,6 +261,9 @@ export default function Fs8FinsburyParkPartnerPage() {
             <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline link-inline-tap">
               &rarr; Sports massage for Finsbury Park N4
             </Link>
+            <a href={PARTNER_INTRO_URL} target="_blank" rel="noopener" className="link-inline link-inline-tap">
+              &rarr; FS8 Finsbury Park 5-class intro offer
+            </a>
             <a href={PARTNER_INSTAGRAM} target="_blank" rel="noopener" className="link-inline link-inline-tap">
               &rarr; FS8 Finsbury Park on Instagram
             </a>
