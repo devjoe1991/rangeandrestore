@@ -15,6 +15,11 @@ const PARTNER_INSTAGRAM = 'https://www.instagram.com/fs8_finsburypark'
 const PARTNER_ADDRESS = '1-7 Morris Place, Finsbury Park, London N4 3JG'
 // Our own FS8 code, and the intro-offer link FS8 gave us. Swap here if either changes.
 const PARTNER_CODE = 'RANGEANDRESTORE'
+// FS8 set the intro price, and our code takes 10% off it. The discounted figure
+// is written out rather than calculated because £53.10 is rounded for the copy —
+// if FS8 change the price, change both.
+const PARTNER_INTRO_PRICE = '£59'
+const PARTNER_INTRO_PRICE_WITH_CODE = '£53'
 const PARTNER_INTRO_URL = 'https://tinyurl.com/FS8-FP-Intro'
 const PARTNER_STUDIO_PHOTO = '/fs8-finsbury-park-reformer-pilates-studio-north-london.jpg'
 
@@ -61,7 +66,7 @@ const faqs = [
   },
   {
     q: 'Is there an offer for new FS8 clients?',
-    a: `Yes. FS8 Finsbury Park runs a 5-class intro for new clients at that studio, and our clients get 10% off it with the code ${PARTNER_CODE}. Use the intro link on this page, or ask at reception in Archway. Terms are set by FS8, so check the current details before you buy.`,
+    a: `Yes. FS8 Finsbury Park runs a 5-class intro for new clients at that studio, normally ${PARTNER_INTRO_PRICE}. Our clients get 10% off it with the code ${PARTNER_CODE}, which brings it down to about ${PARTNER_INTRO_PRICE_WITH_CODE}. Use the intro link on this page, or ask at reception in Archway. Prices and terms are set by FS8, so check the current details before you buy.`,
   },
   {
     q: 'How far is Range and Restore from FS8 Finsbury Park?',
@@ -147,7 +152,7 @@ export default function Fs8FinsburyParkPartnerPage() {
               <strong className="text-page">Referrals both ways.</strong> When our therapists see a client who would benefit from regular, supervised strength and mobility work, we point them to FS8. When FS8&apos;s trainers see a member held back by pain or tightness, they point them to us.
             </li>
             <li>
-              <strong className="text-page">An offer for our clients.</strong> New clients get 10% off FS8&apos;s 5-class intro with our code <strong className="text-page">{PARTNER_CODE}</strong>. Buy it on the <a href={PARTNER_INTRO_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park intro offer page</a>, or pick up a card at our reception in Archway.
+              <strong className="text-page">An offer for our clients.</strong> FS8&apos;s 5-class intro for new clients is {PARTNER_INTRO_PRICE}. Our code <strong className="text-page">{PARTNER_CODE}</strong> takes 10% off it, so it works out at about <strong className="text-page">{PARTNER_INTRO_PRICE_WITH_CODE}</strong> for five classes. Buy it on the <a href={PARTNER_INTRO_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park intro offer page</a>, or pick up a card at our reception in Archway.
             </li>
             <li>
               <strong className="text-page">Joined-up advice.</strong> Tell your therapist you train at FS8 and your home plan can be built around the classes you already go to. Tell your FS8 trainer what we found and they can adjust the movements for you.
