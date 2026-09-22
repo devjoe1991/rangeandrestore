@@ -5,9 +5,11 @@ import { BookingButton } from '@/components/BookingButton'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
-import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
-import { GivingBackStrip } from '@/components/GivingBackStrip'
-import { NhsDiscountStrip } from '@/components/NhsDiscountStrip'
+import { CardCarousel } from '@/components/CardCarousel'
+import { SaunaRoomCard } from '@/components/SaunaRoomStrip'
+import { CommunityTuesdayCard } from '@/components/CommunityTuesdayCard'
+import { GivingBackCard } from '@/components/GivingBackStrip'
+import { NhsDiscountCard } from '@/components/NhsDiscountStrip'
 import { CorporateWellbeingStrip } from '@/components/CorporateWellbeingStrip'
 import { SwipeCarousel } from '@/components/SwipeCarousel'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
@@ -273,71 +275,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2.05 VIRTUAL SAUNA ROOM ──────────────────────────── */}
-      <SaunaRoomStrip />
-
-      {/* ── 2.1 COMMUNITY TUESDAY CLINIC ─────────────────────── */}
-      {/* Tight top padding: this pairs with the sauna card directly above it. */}
-      <section
-        className="bg-page pb-[clamp(3.5rem,6vw,5.5rem)] pt-3"
-        aria-labelledby="community-tuesday-heading"
-      >
+      {/* ── 2.05 FEATURE CAROUSEL ────────────────────────────── */}
+      {/* The sauna tour, Community Tuesday, the charities and the NHS discount
+          were four stacked panels and roughly three screens of scrolling. One
+          swipeable row keeps all four above the fold on a phone. */}
+      <section className="bg-page pb-[clamp(3.5rem,6vw,5.5rem)] pt-[clamp(3.5rem,6vw,5.5rem)]" aria-labelledby="feature-carousel-heading">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-panel border-2 border-brand-green bg-page-sage overflow-hidden">
-            <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
-            <div className="p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
-              <div className="flex-1">
-                <span className="eyebrow block mb-2">New · Community Initiative</span>
-                <h2 id="community-tuesday-heading" className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-2">
-                  Community Tuesday Clinic
-                </h2>
-                <p className="text-page font-bold text-base sm:text-lg mb-3">
-                  The same expert treatment. More accessible pricing. Available every Tuesday.
-                </p>
-                <p className="text-page-muted text-sm font-medium leading-relaxed">
-                  A community-focused clinic helping more people across Archway and North London access expert treatment for back pain, neck pain, sports injuries, muscle tension, mobility and wellbeing.
-                </p>
-              </div>
-
-              <div className="flex-shrink-0 lg:w-64">
-                <div className="flex gap-3 mb-4">
-                  <div className="flex-1 bg-card rounded-xl border border-brand-green/15 p-4 text-center">
-                    <p className="text-brand-teal text-[0.65rem] font-black uppercase tracking-widest mb-1">60 min</p>
-                    <p className="text-2xl font-black text-page leading-none">£60</p>
-                  </div>
-                  <div className="flex-1 bg-card rounded-xl border border-brand-green/15 p-4 text-center">
-                    <p className="text-brand-teal text-[0.65rem] font-black uppercase tracking-widest mb-1">90 min</p>
-                    <p className="text-2xl font-black text-page leading-none">£85</p>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <a
-                    href={BOOKING_URLS.communityTuesday}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary text-sm w-full"
-                  >
-                    Book a Tuesday session
-                  </a>
-                  <Link
-                    href={ROUTES.services.communityTuesdayClinic}
-                    aria-label="Learn more about the Community Tuesday Clinic"
-                    className="text-page text-sm font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center justify-center underline underline-offset-2"
-                  >
-                    Learn more<span className="sr-only"> about the Community Tuesday Clinic</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 id="feature-carousel-heading" className="sr-only">
+            The Recovery Suite, Community Tuesday Clinic, the charities we support and our NHS and emergency services discount
+          </h2>
+          <CardCarousel
+            label="Recovery Suite, Community Tuesday, our charities and the NHS discount"
+            slides={[
+              { key: 'sauna', label: 'the virtual sauna room', node: <SaunaRoomCard compact /> },
+              { key: 'community-tuesday', label: 'the Community Tuesday Clinic', node: <CommunityTuesdayCard /> },
+              { key: 'giving-back', label: 'the charities we support', node: <GivingBackCard /> },
+              { key: 'nhs', label: 'the NHS and emergency services discount', node: <NhsDiscountCard /> },
+            ]}
+          />
         </div>
       </section>
-
-      {/* ── 2.15 GIVING BACK ─────────────────────────────────── */}
-      <GivingBackStrip />
-
-      {/* ── 2.17 NHS & EMERGENCY SERVICES DISCOUNT ───────────── */}
-      <NhsDiscountStrip />
 
       {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">

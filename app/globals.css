@@ -48,6 +48,12 @@
   --color-surface-moss:   #2a3d1f;  /* gallery skeleton (dark) */
   --color-lime-soft:      #c6e28a;  /* search active row */
   --color-panel:          #eeeeee;  /* neutral info panel */
+  /* The NHS & emergency services card. A deep service blue, deliberately
+     NOT the NHS logo blue (#005EB8) — we accept a Blue Light Card as ID but
+     are not an NHS or Blue Light Card partner, and the card must not read
+     as their branding. Fixed in both themes, like the black corporate panel. */
+  --color-bluelight:      #123a75;  /* NHS + emergency services card */
+  --color-bluelight-deep: #0d2b57;  /* its hover state */
 
   --radius-card:  20px;
   --radius-panel: 24px;
@@ -295,6 +301,25 @@ input, select, textarea {
 }
 .swipe-row::-webkit-scrollbar { display: none; }
 .swipe-row > * { scroll-snap-align: start; flex-shrink: 0; }
+
+/* ── Feature carousel ─────────────────────────────────────── */
+/*
+  One full-width card per view with the next one poking out, so the row reads
+  as swipeable before anyone touches it. Extends .swipe-row rather than
+  replacing it: the touch scrolling, snapping and hidden scrollbar are already
+  there, and this only sets the slide width.
+
+  The row is the scroll container and carries no padding of its own (its
+  wrapper supplies the gutter), so a card at scrollLeft 0 already sits on the
+  gutter and no scroll-padding is needed. The subtracted width IS the peek.
+
+  align-items: stretch is the flex default, so every card matches the tallest
+  one — which is why each card sets h-full and pushes its CTA down with
+  mt-auto instead of relying on its own content height.
+*/
+.feature-row > * { width: calc(100% - 3rem); }
+@media (min-width: 640px) { .feature-row > * { width: calc(100% - 4rem); } }
+@media (min-width: 1024px) { .feature-row > * { width: calc(100% - 5rem); } }
 
 /* ── Card lift ────────────────────────────────────────────── */
 .card-lift {
