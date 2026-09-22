@@ -21,6 +21,9 @@ const PARTNER_CODE = 'RANGEANDRESTORE'
 const PARTNER_INTRO_PRICE = '£59'
 const PARTNER_INTRO_PRICE_WITH_CODE = '£53'
 const PARTNER_INTRO_URL = 'https://tinyurl.com/FS8-FP-Intro'
+// Our side of the deal: what FS8 members get at Range and Restore.
+const OUR_CODE = 'FS8'
+const OUR_DISCOUNT = '£10'
 const PARTNER_STUDIO_PHOTO = '/fs8-finsbury-park-reformer-pilates-studio-north-london.jpg'
 
 /* The same therapist photos as the team page, so both stay in step. */
@@ -67,6 +70,10 @@ const faqs = [
   {
     q: 'Is there an offer for new FS8 clients?',
     a: `Yes. FS8 Finsbury Park runs a 5-class intro for new clients at that studio, normally ${PARTNER_INTRO_PRICE}. Our clients get 10% off it with the code ${PARTNER_CODE}, which brings it down to about ${PARTNER_INTRO_PRICE_WITH_CODE}. Use the intro link on this page, or ask at reception in Archway. Prices and terms are set by FS8, so check the current details before you buy.`,
+  },
+  {
+    q: 'Do FS8 members get anything at Range and Restore?',
+    a: `Yes. FS8 members get ${OUR_DISCOUNT} off any treatment at Range and Restore with the code ${OUR_CODE}. That covers the full treatment list, including sports and deep tissue massage, advanced clinical massage, the Back and Neck Pain MOT, Manual Lymphatic Drainage, pregnancy massage and reflexology. Use the code when you book online, or mention FS8 when you arrive at 130 Junction Road.`,
   },
   {
     q: 'How far is Range and Restore from FS8 Finsbury Park?',
@@ -155,6 +162,9 @@ export default function Fs8FinsburyParkPartnerPage() {
               <strong className="text-page">An offer for our clients.</strong> FS8&apos;s 5-class intro for new clients is {PARTNER_INTRO_PRICE}. Our code <strong className="text-page">{PARTNER_CODE}</strong> takes 10% off it, so it works out at about <strong className="text-page">{PARTNER_INTRO_PRICE_WITH_CODE}</strong> for five classes. Buy it on the <a href={PARTNER_INTRO_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park intro offer page</a>, or pick up a card at our reception in Archway.
             </li>
             <li>
+              <strong className="text-page">An offer for FS8 members.</strong> It goes both ways. FS8 members get <strong className="text-page">{OUR_DISCOUNT} off any treatment</strong> at Range and Restore with the code <strong className="text-page">{OUR_CODE}</strong>. Use it when you book, or tell your therapist when you arrive.
+            </li>
+            <li>
               <strong className="text-page">Joined-up advice.</strong> Tell your therapist you train at FS8 and your home plan can be built around the classes you already go to. Tell your FS8 trainer what we found and they can adjust the movements for you.
             </li>
             <li>
@@ -220,7 +230,7 @@ export default function Fs8FinsburyParkPartnerPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-3">Train at FS8, recover at Range and Restore</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Assessment-led sports massage, clinical massage and recovery at 130 Junction Road, Archway N19. Reformer Pilates, tone and yoga at FS8, by Finsbury Park station. Same-week appointments, direct 210 bus between the two.
+            Assessment-led sports massage, clinical massage and recovery at 130 Junction Road, Archway N19. Reformer Pilates, tone and yoga at FS8, by Finsbury Park station. Same-week appointments, direct 210 bus between the two. FS8 members: use the code {OUR_CODE} for {OUR_DISCOUNT} off any treatment with us.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
