@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FEATURE_CARD_SHELL, FeatureCardContent } from '@/components/FeatureCard'
 import { ROUTES } from '@/lib/routes'
 import { NHS_DISCOUNT } from '@/lib/constants'
 
@@ -10,42 +11,45 @@ import { NHS_DISCOUNT } from '@/lib/constants'
  * The blue is a house token, deliberately not the NHS logo blue — see
  * --color-bluelight in globals.css for why.
  *
- * One action, so the whole panel is the link — same pattern as GivingBackCard.
- * The discount is verified at the clinic and has exclusions, so the action we
- * want is "read the terms", not "book now": someone who booked straight from
- * here without reading would turn up expecting £10 off a Community Tuesday
- * session.
+ * One action, so the whole panel is the link. The discount is verified at the
+ * clinic and has exclusions, so the action we want is "read the terms", not
+ * "book now": someone who booked straight from here without reading would turn
+ * up expecting £10 off a Community Tuesday session.
  */
 export function NhsDiscountCard() {
   return (
     <Link
       href={ROUTES.nhsEmergencyServicesDiscount}
-      className="group flex h-full w-full flex-col rounded-panel bg-bluelight text-white no-underline p-6 sm:p-8 lg:p-10 hover:bg-bluelight-deep transition-colors"
+      className={`${FEATURE_CARD_SHELL} group bg-bluelight text-white hover:bg-bluelight-deep`}
     >
-      <div className="flex flex-1 flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
-        <div className="flex-1">
-          <span className="eyebrow eyebrow-inverse block mb-2">NHS &amp; Emergency Services</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
-            {NHS_DISCOUNT.display} off every full-priced massage
-          </h2>
-          <p className="text-white font-bold text-base sm:text-lg mb-3">
-            For NHS staff, ambulance, police, fire and rescue, and health and social care workers.
+      <FeatureCardContent
+        inverse
+        eyebrow="NHS & Emergency Services"
+        title={`${NHS_DISCOUNT.display} off every full-priced massage`}
+        lead="For NHS staff, ambulance, police, fire and rescue, and health and social care workers."
+        body={
+          <p>
+            Book and pay as normal, then show your Blue Light Card or workplace ID at our Archway
+            clinic on the day. We refund the {NHS_DISCOUNT.display} to your card, or hold it as
+            credit against your next session.
           </p>
-          <p className="text-white/80 text-sm font-medium leading-relaxed">
-            Book and pay as normal, then show your Blue Light Card or workplace ID at our Archway clinic on the day. We refund the {NHS_DISCOUNT.display} to your card, or hold it as credit against your next session.
-          </p>
-        </div>
-
-        <div className="flex-shrink-0 lg:w-56 flex flex-row lg:flex-col items-center gap-4 lg:gap-3">
-          <div className="rounded-xl bg-white px-5 py-4 text-center">
-            <p className="text-3xl sm:text-4xl font-black text-bluelight leading-none">{NHS_DISCOUNT.display}</p>
-            <p className="text-bluelight/70 text-[0.65rem] font-black uppercase tracking-widest mt-1">off each session</p>
-          </div>
-          <span className="text-white text-sm font-bold underline underline-offset-2 inline-flex items-center gap-2 min-h-[44px] group-hover:text-white/70 transition-colors">
-            How it works <span aria-hidden="true">&rarr;</span>
-          </span>
-        </div>
-      </div>
+        }
+        aside={
+          <>
+            <div className="rounded-xl bg-white px-5 py-4 text-center">
+              <p className="text-3xl font-black leading-none text-bluelight sm:text-4xl">
+                {NHS_DISCOUNT.display}
+              </p>
+              <p className="mt-1 text-[0.65rem] font-black uppercase tracking-widest text-bluelight/70">
+                off each session
+              </p>
+            </div>
+            <span className="mt-auto inline-flex min-h-[44px] items-center gap-2 pt-4 text-sm font-bold text-white underline underline-offset-2 transition-colors group-hover:text-white/70">
+              How it works <span aria-hidden="true">&rarr;</span>
+            </span>
+          </>
+        }
+      />
     </Link>
   )
 }

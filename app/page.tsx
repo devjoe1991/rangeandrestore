@@ -287,7 +287,7 @@ export default function HomePage() {
           <CardCarousel
             label="Recovery Suite, Community Tuesday, our charities and the NHS discount"
             slides={[
-              { key: 'sauna', label: 'the virtual sauna room', node: <SaunaRoomCard compact /> },
+              { key: 'sauna', label: 'the virtual sauna room', node: <SaunaRoomCard /> },
               { key: 'community-tuesday', label: 'the Community Tuesday Clinic', node: <CommunityTuesdayCard /> },
               { key: 'giving-back', label: 'the charities we support', node: <GivingBackCard /> },
               { key: 'nhs', label: 'the NHS and emergency services discount', node: <NhsDiscountCard /> },
