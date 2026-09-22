@@ -21,9 +21,14 @@ import type { ReactNode } from 'react'
  * Cards keep their own wrapper (some are a Link, some are not) and their own
  * surface colour, and spread FEATURE_CARD_SHELL for the padding and shape.
  * `inverse` switches the text to white for the cards on a dark panel.
+ *
+ * Every card stretches to the tallest one, so the padding and gaps here are
+ * kept tight on purpose: whatever height the biggest card needs, the smallest
+ * one has to pad out with empty space. Keeping the four close in natural
+ * height matters more than any one of them breathing.
  */
 export const FEATURE_CARD_SHELL =
-  'flex h-full w-full flex-col rounded-panel p-6 sm:p-8 lg:p-10 no-underline transition-colors'
+  'flex h-full w-full flex-col rounded-panel p-5 sm:p-7 lg:p-8 no-underline transition-colors'
 
 export function FeatureCardContent({
   eyebrow,
@@ -41,7 +46,7 @@ export function FeatureCardContent({
   inverse?: boolean
 }) {
   return (
-    <div className="flex flex-1 flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
+    <div className="flex flex-1 flex-col gap-5 lg:flex-row lg:items-start lg:gap-8">
       <div className="flex flex-1 flex-col">
         <span className={`eyebrow mb-2 block self-start ${inverse ? 'eyebrow-inverse' : ''}`}>
           {eyebrow}

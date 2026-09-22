@@ -24,31 +24,31 @@ const SAUNA_POINTS = [
  * full-height image down one edge would have pushed this card's heading to a
  * different place from every other card, which is the drift the carousel makes
  * obvious. /services still gets the original full-bleed treatment below.
+ *
+ * This is the card the whole row sizes itself against, so it is also the one
+ * that was trimmed: every pixel it loses is a pixel of empty space the
+ * charities card no longer has to pad out. The four selling points and the
+ * secondary link are gone from the carousel for that reason — measured on a
+ * 390px phone they were 103px and 41px of pure height. Both survive on the
+ * /services strip below, which stands alone and has nothing to line up with.
  */
 export function SaunaRoomCard() {
   return (
     <div className={`${FEATURE_CARD_SHELL} border-2 border-brand-green bg-brand-green`}>
       <FeatureCardContent
         inverse
-        eyebrow="An immersive experience in wellbeing"
+        eyebrow="Virtual Sauna Room Tour"
         title="Explore our sauna room before you book"
         lead="A private two person infrared suite at the quiet back of the clinic."
         body={
-          <>
-            <p>
-              Walk around the real room in 3D, flick the lights on and off, and see exactly what you
-              are booking — then come and feel it.
-            </p>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-              {SAUNA_POINTS.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </>
+          <p>
+            Walk around the real room in 3D, flick the lights on and off, and see exactly what you
+            are booking — then come and feel it.
+          </p>
         }
         aside={
           <>
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl lg:aspect-[4/5]">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl">
               <Image
                 src={SAUNA_PHOTO.src}
                 alt={SAUNA_PHOTO.alt}
@@ -57,20 +57,12 @@ export function SaunaRoomCard() {
                 className="object-cover"
               />
             </div>
-            <div className="mt-auto flex flex-col gap-2 pt-4">
-              <Link
-                href={ROUTES.saunaRoom}
-                className="rounded-full bg-white px-6 py-3 text-center text-sm font-semibold text-brand-green transition hover:bg-white/90"
-              >
-                Enter the virtual room
-              </Link>
-              <Link
-                href={ROUTES.recoverySuite.infraredSauna}
-                className="flex min-h-[44px] items-center justify-center text-sm font-bold text-white underline underline-offset-2 transition-colors hover:text-white/70"
-              >
-                About the sauna
-              </Link>
-            </div>
+            <Link
+              href={ROUTES.saunaRoom}
+              className="mt-auto flex min-h-[44px] items-center justify-center rounded-full bg-white px-5 text-center text-sm font-semibold text-brand-green transition hover:bg-white/90"
+            >
+              Enter the virtual room
+            </Link>
           </>
         }
       />

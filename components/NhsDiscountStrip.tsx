@@ -20,7 +20,7 @@ export function NhsDiscountCard() {
   return (
     <Link
       href={ROUTES.nhsEmergencyServicesDiscount}
-      className={`${FEATURE_CARD_SHELL} group bg-bluelight text-white hover:bg-bluelight-deep`}
+      className={`${FEATURE_CARD_SHELL} group border-2 border-white/25 bg-bluelight text-white hover:bg-bluelight-deep`}
     >
       <FeatureCardContent
         inverse
