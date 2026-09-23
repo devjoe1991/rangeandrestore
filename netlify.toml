@@ -79,6 +79,12 @@
   to = "/services/back-neck-pain-mot"
   status = 301
 
+# Old service slug still in Google's index
+[[redirects]]
+  from = "/services/back-neck-mot"
+  to = "/services/back-neck-pain-mot"
+  status = 301
+
 [[redirects]]
   from = "/gift-card"
   to = "/gift-cards"

@@ -8,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Deep Tissue & Sports Massage, Archway North London',
-  description: 'Assessment-led deep tissue and sports massage in Archway, North London. 30 min £50, 60 min £75, 90 min £110, assessment included. BTEC Level 5 therapists, same-week slots.',
+  description: 'Assessment-led deep tissue, sports and remedial massage in Archway, North London. 30 min £50, 60 min £75, 90 min £110, assessment included. BTEC Level 5 therapists, same-week slots.',
   path: '/services/sports-deep-tissue-massage',
 })
 
@@ -161,6 +161,7 @@ export default function SportsDeepTissuePage() {
               {[
                 'Deep tissue massage techniques',
                 'Sports-specific massage therapy',
+                'Remedial massage and soft tissue therapy',
                 'Myofascial release',
                 'Soft tissue mobilisation',
                 'Assisted stretching and mobilisation',

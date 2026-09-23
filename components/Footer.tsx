@@ -171,6 +171,33 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            {/* Areas we serve — the location pages were only reachable from
+                their hub page, so this is what gives them sitewide links. */}
+            <div className="mt-5 pt-4 border-t border-brand-green/15">
+              <p className="text-ink font-extrabold text-sm md:font-bold mb-3 tracking-tight">
+                <Link href={ROUTES.areasServed.index} className="hover:text-brand-teal transition-colors">Areas We Serve</Link>
+              </p>
+              <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-brand-green/90 font-medium">
+                {[
+                  ['Archway N19',       ROUTES.areasServed.archwayN19],
+                  ['Upper Holloway',    ROUTES.areasServed.upperHollowayN19],
+                  ['Tufnell Park N7',   ROUTES.areasServed.tufnellParkN7],
+                  ['Holloway N7',       ROUTES.areasServed.hollowayN7],
+                  ['Kentish Town NW5',  ROUTES.areasServed.kentishTownNw5],
+                  ['Highgate N6',       ROUTES.areasServed.highgateN6],
+                  ['Crouch End N8',     ROUTES.areasServed.crouchEndN8],
+                  ['Finsbury Park N4',  ROUTES.areasServed.finsburyParkN4],
+                  ['Stroud Green N4',   ROUTES.areasServed.stroudGreenN4],
+                  ['Islington N1',      ROUTES.areasServed.islingtonN1],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <Link href={href} className="hover:text-brand-teal transition-colors min-h-[36px] flex items-center">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 

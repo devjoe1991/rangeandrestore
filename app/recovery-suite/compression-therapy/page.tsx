@@ -7,7 +7,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Normatec Compression Therapy London',
-  description: 'Hyperice Normatec 3 full body compression therapy in Archway, North London. Included in a private Recovery Suite session from £19, or paired with a 60 minute sports massage for £110.',
+  description: 'Normatec 3 compression boots and full body compression therapy in Archway, North London. From £19 in a private Recovery Suite session, or £110 with a 60 minute sports massage.',
   path: '/recovery-suite/compression-therapy',
 })
 
@@ -86,7 +86,7 @@ export default function CompressionTherapyPage() {
             Normatec Full Body Compression Therapy in Archway, North London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms. Built for recovery between training sessions, after races, or after a long week on your feet.
+            Hyperice Normatec 3 Full Body compression boots, with hip and arm attachments. Recovery boots for use between training sessions, after races, or after a long week on your feet.
           </p>
           <div className="mt-6">
             <a
@@ -169,7 +169,7 @@ export default function CompressionTherapyPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">How it works</h2>
             <p className="text-page-muted mb-3">
-              The Normatec system uses pneumatic compression. Air pumps into a series of chambers built into the boots and attachments, which inflate in a controlled wave from your feet up towards your hips, or from your hands up towards your shoulders.
+              Normatec recovery boots use pneumatic compression. Air pumps into a series of chambers built into the compression boots and attachments, which inflate in a controlled wave from your feet up towards your hips, or from your hands up towards your shoulders.
             </p>
             <p className="text-page-muted mb-3">
               That rhythmic squeeze-and-release pattern supports blood flow and helps move fluid through the limbs, which is the bit that makes legs feel lighter afterwards. Pressure levels are adjustable, so you can run it firmer if you want a more intense session or lighter if you prefer a gentler recovery.
