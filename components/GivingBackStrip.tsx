@@ -4,7 +4,7 @@ import { ROUTES } from '@/lib/routes'
 
 /* Registered charity numbers, the same two the /giving-back page lists. */
 const CHARITIES = [
-  { name: 'Whittington Health', no: '1056452' },
+  { name: 'Whittington', no: '1056452' },
   { name: 'Phab', no: '283931' },
 ] as const
 
@@ -31,10 +31,10 @@ export function GivingBackCard() {
       <FeatureCardContent
         eyebrow="Supporting Our Community"
         title="The charities we support"
-        lead="Whittington Health Charity and Phab, two registered charities."
+        lead="Whittington Charity and Phab, two registered charities."
         body={
           <p>
-            Donated treatments and gift vouchers for Whittington Health Charity fundraising,
+            Donated treatments and gift vouchers for Whittington Charity fundraising,
             including a 60-minute sports massage voucher for the Christmas Market raffle, and Carlos in
             the Phab recovery tent at the London Marathon three years running.
           </p>

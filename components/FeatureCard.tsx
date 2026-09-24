@@ -58,11 +58,13 @@ export function FeatureCardContent({
         >
           {title}
         </h2>
-        <p className={`mb-3 text-base font-bold sm:text-lg ${inverse ? 'text-white' : 'text-page'}`}>
+        <p className={`text-base font-bold sm:mb-3 sm:text-lg ${inverse ? 'text-white' : 'text-page'}`}>
           {lead}
         </p>
+        {/* Phones get the heading, lead and actions only: with the body the
+            cards ran to 500-560px, most of a phone screen. */}
         <div
-          className={`text-sm font-medium leading-relaxed ${
+          className={`hidden text-sm font-medium leading-relaxed sm:block ${
             inverse ? 'text-white/80' : 'text-page-muted'
           }`}
         >
