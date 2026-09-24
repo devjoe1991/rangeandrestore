@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -47,7 +47,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to the clinic from Finsbury Park?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The 210 bus runs directly from Finsbury Park to Archway, stopping a short walk from the clinic — usually 10–15 minutes. Finsbury Park itself is a major interchange (Victoria and Piccadilly lines plus National Rail), so it is easy to reach from across the N4 area first.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The 210 bus runs directly from Finsbury Park to Archway, stopping a short walk from the clinic. Finsbury Park itself is a major interchange (Victoria and Piccadilly lines plus National Rail), so it is easy to reach from across the N4 area first.' },
     },
     {
       '@type': 'Question',
@@ -57,7 +57,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What’s the best massage after a long run or race?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 60- or 90-minute sports and deep tissue session, ideally a day or two after the event rather than immediately. For bigger efforts, pairing massage with the infrared sauna or Normatec compression boots in the Recovery Suite speeds things along.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A 60- or 90-minute sports and deep tissue session (£75 or £110), ideally a day or two after the event rather than immediately. After bigger efforts, many runners add a private infrared sauna session (from £19) or book the 90-minute Sports Massage + Normatec session (£110) in the Recovery Suite.' },
     },
     {
       '@type': 'Question',
@@ -99,12 +99,12 @@ export default function FinsburyParkN4Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Finsbury Park</h2>
           <p>
-            The simplest route is the 210 bus, which runs directly from Finsbury Park to Archway and drops you a short walk from the clinic &mdash; usually 10 to 15 minutes. Because Finsbury Park station is a major interchange (Victoria and Piccadilly lines plus National Rail), it&apos;s easy to get there first from anywhere in N4. Cyclists can ride up via the quiet streets towards Stroud Green and Crouch Hill, and there are bike racks at the clinic end.
+            The simplest route is the 210 bus, which runs directly from Finsbury Park to Archway and drops you a short walk from the clinic. Because Finsbury Park station is a major interchange (Victoria and Piccadilly lines plus National Rail), it&apos;s easy to get there first from anywhere in N4. Cyclists can ride up via the quiet streets towards Stroud Green and Crouch Hill, and there are bike racks at the clinic end.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Finsbury Park clients</h2>
           <p>
-            Runners typically book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> to work through the posterior chain &mdash; calves, hamstrings, glutes and lower back &mdash; plus the hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> and <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon massage guide</Link> cover the detail. After big efforts, many pair massage with the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> or <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression boots</Link> in the Recovery Suite.
+            Runners typically book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110) to work through the posterior chain &mdash; calves, hamstrings, glutes and lower back &mdash; plus the hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> and <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon massage guide</Link> cover the detail. After big efforts, many add a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> session (from £19) or book the 90-minute <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link> session (£110).
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finsbury Park and the wider catchment</h2>
@@ -122,7 +122,7 @@ export default function FinsburyParkN4Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to the clinic from Finsbury Park?</h3>
-              <p>The 210 bus runs directly from Finsbury Park to Archway, stopping a short walk from the clinic &mdash; usually 10&ndash;15 minutes. Finsbury Park itself is a major interchange (Victoria and Piccadilly lines plus National Rail), so it is easy to reach from across the N4 area first.</p>
+              <p>The 210 bus runs directly from Finsbury Park to Archway, stopping a short walk from the clinic. Finsbury Park itself is a major interchange (Victoria and Piccadilly lines plus National Rail), so it is easy to reach from across the N4 area first.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat runners from Finsbury Park parkrun?</h3>
@@ -130,7 +130,7 @@ export default function FinsburyParkN4Page() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">What&apos;s the best massage after a long run or race?</h3>
-              <p>A 60- or 90-minute sports and deep tissue session, ideally a day or two after the event rather than immediately. For bigger efforts, pairing massage with the infrared sauna or Normatec compression boots in the Recovery Suite speeds things along.</p>
+              <p>A 60- or 90-minute sports and deep tissue session (£75 or £110), ideally a day or two after the event rather than immediately. After bigger efforts, many runners add a private infrared sauna session (from £19) or book the 90-minute Sports Massage + Normatec session (£110) in the Recovery Suite.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat cyclists and commuters from N4?</h3>
@@ -139,13 +139,10 @@ export default function FinsburyParkN4Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Finsbury Park</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; a direct 210 bus away.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Finsbury Park"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — a direct 210 bus away."
+        />
       </div>
     </>
   )

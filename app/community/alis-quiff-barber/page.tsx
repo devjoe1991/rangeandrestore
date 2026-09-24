@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
+import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Ali’s Quiff Barber and Range and Restore | Men’s Self-Care in Archway N19',
@@ -81,7 +82,7 @@ export default function AlisQuiffBarberPartnerPage() {
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/alis-quiff-barber-shop-holloway-road-archway.jpg"
             alt="Ali’s Quiff Barber Shop logo, Holloway Road"
@@ -95,12 +96,12 @@ export default function AlisQuiffBarberPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">A nice collaboration between two Archway businesses</h2>
           <p>
-            This is a community piece between Carlos at Range and Restore Sports Massage and Ali from Ali’s Quiff Barber, both based here in Archway. Carlos had the full-service experience at Ali’s today and honestly it was a good reminder of how important it is, especially for men, to actually take time to look after themselves properly, not only physically but mentally as well.
+            Range and Restore Sports Massage and Ali’s Quiff Barber are both based here in Archway. Our founder, Carlos, has had the full-service experience at Ali’s, and it’s a good reminder of how important it is, especially for men, to take time to look after themselves properly, not only physically but mentally as well.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">More than just a haircut</h2>
           <p>
-            The experience was much more than just a haircut. It included a beard trim, haircut, facial scrub, hair wash, warm towels, facial massage, head massage and even relaxing warm steam treatments throughout the service. Over an hour of genuinely switching off, relaxing and leaving feeling refreshed, lighter and more confident. You can tell immediately when someone truly cares about their craft and customer experience, and Ali and his team really do. Professional, welcoming and highly skilled.
+            The full-service experience is much more than a haircut. It includes a beard trim, haircut, facial scrub, hair wash, warm towels, facial massage, head massage and warm steam treatments throughout the service. Over an hour of switching off and leaving feeling refreshed, lighter and more confident. You can tell immediately when someone truly cares about their craft and customer experience, and Ali and his team really do. Professional, welcoming and highly skilled.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why self-care matters for men</h2>
@@ -110,7 +111,7 @@ export default function AlisQuiffBarberPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Outside and inside, working together</h2>
           <p>
-            There’s a really nice connection between what Ali and Carlos do. At Ali’s Quiff Barber, people leave feeling refreshed externally, more confident, groomed and relaxed. At Range and Restore Sports Massage, clients leave feeling physically better internally through sports massage, remedial therapy, recovery sessions, mobility work and tension relief. Together, both experiences complement each other really well, looking after men from the outside in and the inside out.
+            There’s a natural connection between what Ali’s team does and what ours does. At Ali’s Quiff Barber, people leave feeling refreshed externally, more confident, groomed and relaxed. At Range and Restore Sports Massage, clients leave feeling physically better internally through sports massage, remedial therapy, recovery sessions, mobility work and tension relief. Together, both experiences complement each other really well, looking after men from the outside in and the inside out.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Local trust and word of mouth</h2>
@@ -120,22 +121,22 @@ export default function AlisQuiffBarberPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How Range and Restore supports men’s wellbeing</h2>
           <p>
-            For men juggling work, training, family life and everything else, the body picks up the slack. Tight shoulders, stiff lower backs, headaches from screen time, niggles from the gym, restless nights and a general low-grade tension that builds up over the week. Range and Restore offers assessment-led <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link>, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link>, <Link href={ROUTES.services.advancedCuppingSportsDeepTissue} className="link-inline">advanced cupping with deep tissue</Link>, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back and Neck Pain MOT</Link>, <Link href={ROUTES.services.twoHourPainReliefMassage} className="link-inline">2-hour pain-relief sessions</Link>, <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">relaxation and restorative massage</Link> and certified <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage (MLD)</Link>. Every session begins with a proper assessment, so treatment is matched to what each client turns up with that day, rather than a generic protocol. The <Link href={ROUTES.recoverySuite.index} className="link-inline">recovery suite</Link> (sauna and pneumatic compression) is also available to extend recovery between sessions.
+            For men juggling work, training, family life and everything else, the body picks up the slack. Tight shoulders, stiff lower backs, headaches from screen time, niggles from the gym, restless nights and a general low-grade tension that builds up over the week. Range and Restore offers assessment-led <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link>, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link>, <Link href={ROUTES.services.advancedCuppingSportsDeepTissue} className="link-inline">Cupping + Sports Massage</Link>, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back and Neck Pain MOT</Link>, <Link href={ROUTES.services.twoHourPainReliefMassage} className="link-inline">2-hour pain-relief sessions</Link>, <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">relaxation and restorative massage</Link> and certified <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage (MLD)</Link>. Every session begins with a proper assessment, so treatment is matched to what each client turns up with that day, rather than a generic protocol. The <Link href={ROUTES.recoverySuite.index} className="link-inline">recovery suite</Link> (sauna and pneumatic compression) is also available to extend recovery between sessions.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">A natural Archway pairing: barber then bodywork</h2>
           <p>
-            A solid rhythm for men in Archway looks something like this. Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">Ali’s Quiff Barber</a> at 746 Holloway Road for a haircut, beard trim, hot towels and head massage. Walk fifteen minutes down to <Link href={ROUTES.areasServed.archwayN19} className="link-inline">130 Junction Road, N19 5LB</Link> for a sports massage, Back and Neck MOT or recovery session. Done in a single Archway afternoon. You leave the area looking better, moving better and feeling better, and it’s all within the N19 postcode.
+            A solid rhythm for men in Archway looks something like this. Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">Ali’s Quiff Barber</a> at 746 Holloway Road for a haircut, beard trim, hot towels and head massage. Then it’s a short walk to <Link href={ROUTES.areasServed.archwayN19} className="link-inline">130 Junction Road, N19 5LB</Link> for a sports massage, Back and Neck MOT or recovery session. Done in a single Archway afternoon. You leave the area looking better, moving better and feeling better, and it’s all within the N19 postcode.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Service areas: where Range and Restore covers</h2>
           <p>
-            The Range and Restore clinic at <Link href={ROUTES.areasServed.archwayN19} className="link-inline">130 Junction Road, Archway, London N19 5LB</Link> sits at the centre of a tight cluster of North London postcodes, which makes it easy to pair a grooming session at Ali’s on Holloway Road with sports massage, recovery or remedial work on the same day. Clients regularly come in from <strong>Archway (N19)</strong>, <strong>Upper Holloway (N19)</strong>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline"><strong>Tufnell Park (N7 / N19)</strong></Link>, <strong>Holloway (N7)</strong>, <strong>Highgate (N6)</strong>, <strong>Crouch End (N8)</strong>, <strong>Hornsey (N8)</strong>, <strong>Kentish Town (NW5)</strong>, <strong>Dartmouth Park (NW5)</strong>, <strong>Gospel Oak (NW5)</strong>, <strong>Camden (NW1)</strong>, <strong>Hampstead (NW3)</strong>, <strong>Belsize Park (NW3)</strong>, <strong>Finsbury Park (N4)</strong>, <strong>Stroud Green (N4)</strong> and the wider <Link href={ROUTES.areasServed.index} className="link-inline">North London service area</Link>. The clinic is three minutes’ walk from Archway tube (Northern Line) and on multiple bus routes.
+            The Range and Restore clinic at <Link href={ROUTES.areasServed.archwayN19} className="link-inline">130 Junction Road, Archway, London N19 5LB</Link> sits at the centre of a tight cluster of North London postcodes, which makes it easy to pair a grooming session at Ali’s on Holloway Road with sports massage, recovery or remedial work on the same day. Clients regularly come in from <strong>Archway (N19)</strong>, <strong>Upper Holloway (N19)</strong>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline"><strong>Tufnell Park (N7 / N19)</strong></Link>, <strong>Holloway (N7)</strong>, <strong>Highgate (N6)</strong>, <strong>Crouch End (N8)</strong>, <strong>Hornsey (N8)</strong>, <strong>Kentish Town (NW5)</strong>, <strong>Dartmouth Park (NW5)</strong>, <strong>Gospel Oak (NW5)</strong>, <strong>Camden (NW1)</strong>, <strong>Hampstead (NW3)</strong>, <strong>Belsize Park (NW3)</strong>, <strong>Finsbury Park (N4)</strong>, <strong>Stroud Green (N4)</strong> and the wider <Link href={ROUTES.areasServed.index} className="link-inline">North London service area</Link>. The clinic is a short walk from Archway and Tufnell Park stations (Northern Line) and on multiple bus routes.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Invest in yourself, inside and out</h2>
           <p>
-            Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">Ali’s Quiff Barber</a> (746 Holloway Road, Archway N19 3JF) for a haircut, beard trim and the full grooming experience. Then <Link href={ROUTES.contact} className="link-inline">book in with Range and Restore</Link> for a sports massage, remedial therapy or recovery session at 130 Junction Road, N19 5LB. Two local businesses, one neighbourhood, one easy way to actually look after yourself.
+            Book in with Ali at <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">Ali’s Quiff Barber</a> (746 Holloway Road, Archway N19 3JF) for a haircut, beard trim and the full grooming experience. Then <a href={BOOKING_URLS.general} target="_blank" rel="noopener noreferrer" className="link-inline">book in with Range and Restore</a> for a sports massage, remedial therapy or recovery session at 130 Junction Road, N19 5LB. Two local businesses, one neighbourhood, one easy way to actually look after yourself.
           </p>
         </div>
 
@@ -154,15 +155,17 @@ export default function AlisQuiffBarberPartnerPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-3">Book sports massage and recovery in Archway</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Sort the haircut and beard at Ali’s Quiff Barber on Holloway Road. Sort the body, recovery and tension at Range and Restore on Junction Road. Same-week appointments, three minutes from Archway tube, all inside N19.
+            Sort the haircut and beard at Ali’s Quiff Barber on Holloway Road. Sort the body, recovery and tension at Range and Restore on Junction Road. Same-week appointments, a short walk from Archway tube, all inside N19.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={ROUTES.contact}
+            <a
+              href={BOOKING_URLS.general}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
             >
               Book Range and Restore <span aria-hidden="true">→</span>
-            </Link>
+            </a>
             <a
               href={PARTNER_URL}
               target="_blank"

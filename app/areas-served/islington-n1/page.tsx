@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage for Islington N1 | Direct Bus from Angel',
-  description: 'Sports, deep tissue and clinical massage for Islington (N1). Direct 43/271 bus from Angel & Upper Street to the Archway clinic. Book online.',
+  description: 'Sports, deep tissue and clinical massage for Islington (N1). Direct 43 bus from Angel & Upper Street to the Archway clinic. Book online.',
   path: '/areas-served/islington-n1',
 })
 
@@ -52,7 +52,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to the clinic from Angel or Upper Street?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The 43 and 271 buses run from Angel and Upper Street straight up through Highbury and Holloway to Archway, stopping a short walk from the clinic. By tube it is Angel (Northern Line) or Highbury & Islington to Archway. By car or cab it is a short run up Holloway Road.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The 43 bus runs from Angel and Upper Street straight up through Highbury and Holloway to Archway, stopping a short walk from the clinic. By tube, take the Northern Line from Angel to Archway. By car or cab it is a short run up Holloway Road.' },
     },
     {
       '@type': 'Question',
@@ -94,17 +94,17 @@ export default function IslingtonN1Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N1</h2>
           <p>
-            Islington is office, media and hospitality country, and that shapes the pain we see. Desk and tech workers from around Angel, Upper Street and the Business Design Centre come in with the classic pattern &mdash; tight neck and shoulders, upper back knots and a stiff lower back from long hours at a screen. Hospitality staff from Upper Street&apos;s restaurants and bars book for the foot, lower back and shoulder strain of long shifts. And Islington has a serious running community &mdash; Highbury Fields and the canal towpath are full of them &mdash; who use sports massage to stay injury-free through training blocks.
+            Islington is office, media and hospitality country, and that shapes the pain we see. Desk and tech workers from around Angel, Upper Street and the Business Design Centre come in with the classic pattern &mdash; tight neck and shoulders, upper back knots and a stiff lower back from long hours at a screen. Hospitality staff from Upper Street&apos;s restaurants and bars book for the foot, lower back and shoulder strain of long shifts. And Islington has a serious running community &mdash; the Regent&apos;s Canal towpath is full of them, and plenty head up to Highbury Fields in N5 &mdash; who use sports massage to stay injury-free through training blocks.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Islington</h2>
           <p>
-            The most reliable route is the bus: the 43 and 271 run from Angel and Upper Street straight up through Highbury and Holloway to Archway, dropping you a short walk from the clinic. By tube, take the Northern Line from Angel to Archway, or come via Highbury &amp; Islington. By bike it&apos;s a straightforward ride up through Highbury to Archway, and there are racks at the clinic end. By car or cab it&apos;s a short run up Holloway Road.
+            The most reliable route is the bus: the 43 runs from Angel and Upper Street straight up through Highbury and Holloway to Archway, dropping you a short walk from the clinic. By tube, take the Northern Line from Angel to Archway. By bike it&apos;s a straightforward ride up through Highbury to Archway, and there are racks at the clinic end. By car or cab it&apos;s a short run up Holloway Road.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Islington clients</h2>
           <p>
-            For desk-related neck, shoulder and back pain, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> is usually the right starting point. Runners and gym-goers book <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> for maintenance and recovery. For chronic or stubborn pain &mdash; tension headaches, RSI, long-standing lower back issues &mdash; <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> takes a more detailed, assessment-led approach.
+            For desk-related neck, shoulder and back pain, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> (from £75) is usually the right starting point. Runners and gym-goers book <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (from £50) for maintenance and recovery. For chronic or stubborn pain &mdash; tension headaches, RSI, long-standing lower back issues &mdash; <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> (from £75) takes a more detailed, assessment-led approach.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Islington and the wider catchment</h2>
@@ -126,7 +126,7 @@ export default function IslingtonN1Page() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to the clinic from Angel or Upper Street?</h3>
-              <p>The 43 and 271 buses run from Angel and Upper Street straight up through Highbury and Holloway to Archway, stopping a short walk from the clinic. By tube it is Angel (Northern Line) or Highbury &amp; Islington to Archway. By car or cab it is a short run up Holloway Road.</p>
+              <p>The 43 bus runs from Angel and Upper Street straight up through Highbury and Holloway to Archway, stopping a short walk from the clinic. By tube, take the Northern Line from Angel to Archway. By car or cab it is a short run up Holloway Road.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat desk workers and hospitality staff from Upper Street?</h3>
@@ -139,13 +139,10 @@ export default function IslingtonN1Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Islington</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; a direct bus from Angel.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Islington"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — a direct bus from Angel."
+        />
       </div>
     </>
   )

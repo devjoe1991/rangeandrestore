@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage in Archway N19 | 3-min Walk from Tube',
-  description: 'Sports and clinical massage in Archway N19. 130 Junction Road — 3 minutes from Archway tube. A team of BTEC L5 qualified therapists. Book online.',
+  title: 'Sports Massage in Archway N19 | Short Walk from the Tube',
+  description: 'Sports and clinical massage in Archway N19. 130 Junction Road — a short walk from Archway and Tufnell Park stations. A team of BTEC L5 qualified therapists. Book online.',
   path: '/areas-served/archway-n19',
 })
 
@@ -20,7 +20,7 @@ const localBusinessSchema = {
   '@type': ['LocalBusiness', 'MedicalBusiness', 'HealthAndBeautyBusiness'],
   '@id': `${BASE_URL}/areas-served/archway-n19#business`,
   name: 'Range and Restore Sports Massage — Archway N19',
-  description: 'Assessment-led sports massage, deep tissue therapy and clinical massage in Archway, London N19. Three minutes from Archway tube station.',
+  description: 'Assessment-led sports massage, deep tissue therapy and clinical massage in Archway, London N19. A short walk from Archway and Tufnell Park stations.',
   url: `${BASE_URL}/areas-served/archway-n19`,
   telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
@@ -47,7 +47,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to Range and Restore from Archway tube station?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Exit Archway station and head south down Junction Road for about 250 metres. The clinic is on the left at number 130, just past Macdonald Road. It is a 3-minute walk on flat ground.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'From Archway station, head south along Junction Road, the road towards Tufnell Park. The clinic is at number 130, inside the Reliable Scan building. It is a short walk from both Archway and Tufnell Park stations.' },
     },
     {
       '@type': 'Question',
@@ -57,12 +57,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What buses stop near 130 Junction Road, Archway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Routes 4, 17, 41, 43, 134, 143, 210, 263 and 271 all stop within a few minutes\' walk of the clinic. Archway station itself is on the Northern Line.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The 134 runs along Junction Road past the clinic. Routes 4, 17, 41, 43, 143, 210 and 263 stop at Archway station, a short walk away. Archway station itself is on the Northern Line.' },
     },
     {
       '@type': 'Question',
       name: 'Do you treat staff from the Whittington Hospital?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — several regular clients are nurses, doctors and allied health staff from the Whittington, which is a 7-minute walk up the hill. Evening and Saturday slots work well for shift patterns.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — several regular clients are nurses, doctors and allied health staff from the Whittington, which is a short walk up the hill. Evening and Saturday slots work well for shift patterns.' },
     },
   ],
 }
@@ -81,7 +81,7 @@ export default function ArchwayN19Page() {
             Sports Massage in Archway (N19)
           </h1>
           <p className="mt-4 text-xl text-page-muted max-w-2xl">
-            130 Junction Road — three minutes&apos; walk from Archway tube. Assessment-led sports, deep tissue and clinical massage for residents and workers in N19.
+            130 Junction Road — a short walk from Archway and Tufnell Park stations. Assessment-led sports, deep tissue and clinical massage for residents and workers in N19.
           </p>
         </div>
       </div>
@@ -99,17 +99,17 @@ export default function ArchwayN19Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Walking directions from Archway tube</h2>
           <p>
-            Take the main station exit onto Junction Road. Turn south (away from the Whittington roundabout) and walk down the hill for about 250 metres, past the Sainsbury&apos;s Local and Macdonald Road. The clinic is at number 130, on the left-hand side. It&apos;s a flat 3-minute walk — easier than the climb up to Highgate or across to Tufnell Park.
+            From Archway station, head south along Junction Road, the road that runs towards Tufnell Park. The clinic is at number 130, inside the Reliable Scan building &mdash; look for the Range and Restore sign in the window (there&apos;s a photo at the bottom of this page). The 134 bus also runs along Junction Road past the door.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What treatments people in Archway book most</h2>
           <p>
-            Across the N19 postcode, the most-requested services are <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> for cyclists, runners and gym-goers; the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back & Neck Pain MOT</Link> for desk workers and hospital staff with postural pain; and <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> for chronic conditions that haven&apos;t responded to general massage elsewhere. Every session begins with an assessment so the treatment is matched to your presentation that day, not delivered as a generic protocol.
+            Across the N19 postcode, the most-requested services are <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (30 minutes £50, 60 minutes £75, 90 minutes £110) for cyclists, runners and gym-goers; the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back & Neck Pain MOT</Link> (from £75) for desk workers and hospital staff with postural pain; and <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> (from £75) for chronic conditions that haven&apos;t responded to general massage elsewhere. Every session begins with an assessment so the treatment is matched to your presentation that day, not delivered as a generic protocol.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Wider area: Upper Holloway and beyond</h2>
           <p>
-            The N19 postcode also covers Upper Holloway, the streets running down towards Tufnell Park, and parts of the Whittington Park area. If you live further out, the clinic is also a short trip from <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link> (15 minutes&apos; walk), <Link href={ROUTES.areasServed.index} className="link-inline">Holloway, Highgate and Kentish Town</Link>.
+            The N19 postcode also covers <Link href={ROUTES.areasServed.upperHollowayN19} className="link-inline">Upper Holloway</Link>, the streets running down towards Tufnell Park, and parts of the Whittington Park area. If you live further out, the clinic is also a short trip from <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>. See all the <Link href={ROUTES.areasServed.index} className="link-inline">areas we serve</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>
@@ -122,7 +122,7 @@ export default function ArchwayN19Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to Range and Restore from Archway tube station?</h3>
-              <p>Exit Archway station and head south down Junction Road for about 250 metres. The clinic is on the left at number 130, just past Macdonald Road. It is a 3-minute walk on flat ground.</p>
+              <p>From Archway station, head south along Junction Road, the road towards Tufnell Park. The clinic is at number 130, inside the Reliable Scan building. It is a short walk from both Archway and Tufnell Park stations.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Is there parking near the clinic in Archway?</h3>
@@ -130,22 +130,19 @@ export default function ArchwayN19Page() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">What buses stop near 130 Junction Road, Archway?</h3>
-              <p>Routes 4, 17, 41, 43, 134, 143, 210, 263 and 271 all stop within a few minutes&apos; walk of the clinic. Archway station itself is on the Northern Line.</p>
+              <p>The 134 runs along Junction Road past the clinic. Routes 4, 17, 41, 43, 143, 210 and 263 stop at Archway station, a short walk away. Archway station itself is on the Northern Line.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat staff from the Whittington Hospital?</h3>
-              <p>Yes — several regular clients are nurses, doctors and allied health staff from the Whittington, which is a 7-minute walk up the hill. Evening and Saturday slots work well for shift patterns.</p>
+              <p>Yes — several regular clients are nurses, doctors and allied health staff from the Whittington, which is a short walk up the hill. Evening and Saturday slots work well for shift patterns.</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session in Archway</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session in Archway"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — a short walk from Archway and Tufnell Park stations."
+        />
       </div>
     </>
   )

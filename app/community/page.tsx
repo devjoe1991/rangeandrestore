@@ -91,7 +91,7 @@ const partners: Partner[] = [
     name: 'Range and Restore × Ali’s Quiff Barber',
     headerText: 'Range and Restore × Ali’s Quiff Barber',
     category: 'Archway. Barbering and Men’s Self-Care',
-    blurb: 'Range and Restore and Ali’s Quiff Barber on Holloway Road look after Archway from the inside out. Sports massage, recovery and remedial therapy on Junction Road, traditional barbering, beard work and full-service grooming a few minutes up the road.',
+    blurb: 'Range and Restore and Ali’s Quiff Barber on Holloway Road look after Archway from the inside out. Sports massage, recovery and remedial therapy on Junction Road, traditional barbering, beard work and full-service grooming a short walk up the road.',
     logo: '/alis-quiff-barber-shop-holloway-road-archway.jpg',
     logoAlt: 'Ali’s Quiff Barber Shop logo, Holloway Road',
     externalUrl: 'https://booksy.com/en-gb/167323_alis-quiff-barber_barber_311817_london',
@@ -100,8 +100,8 @@ const partners: Partner[] = [
     slug: 'nc-osteopathy',
     name: 'Range and Restore × NC Osteopathy',
     headerText: 'Range and Restore × NC Osteopathy',
-    category: 'North London. Osteopathy and Whole-Person Care',
-    blurb: 'Range and Restore and NC Osteopathy work together on whole-person care in North London. Osteopathy and Mummy MOT with Nagma Chaudhry M.Ost, sports massage and recovery with the team at Range and Restore. Two complementary disciplines, honest referrals both ways.',
+    category: 'Archway. Osteopathy and Whole-Person Care',
+    blurb: 'Range and Restore and NC Osteopathy work together on whole-person care in Archway. Osteopathy and Mummy MOT with Nagma Chaudhry M.Ost, sports massage and recovery with the team at Range and Restore. Two complementary disciplines, honest referrals both ways.',
     logo: '/nc-osteopathy-logo-north-london.webp',
     logoAlt: 'NC Osteopathy logo, North London',
     externalUrl: 'https://ncosteopathy.co.uk',
@@ -121,8 +121,8 @@ const partners: Partner[] = [
     slug: 'private-gp-surgery',
     name: 'Range and Restore × Private GP Surgery',
     headerText: 'Range and Restore × Private GP Surgery',
-    category: 'North London. Private GP and Whole-Person Care',
-    blurb: 'Range and Restore and Private GP Surgery bring you joined-up care across North London. CQC-regulated private GP appointments, online and home visits with Dr Ali Mahmood M.D., sports massage and recovery with the team at Range and Restore. Honest referrals both ways.',
+    category: 'London. Private GP, Online and Home Visits',
+    blurb: 'Range and Restore and Private GP Surgery bring you joined-up care. CQC-regulated private GP appointments, online and home visits with Dr Ali Mahmood M.D., sports massage and recovery with the team at Range and Restore. Honest referrals both ways.',
     logo: '/private-gp-surgery-archway-north-london.webp',
     logoAlt: 'Private GP Surgery logo',
     externalUrl: 'https://privategpsurgery.co.uk',
@@ -170,7 +170,7 @@ export default function CommunityPage() {
             Range and Restore is a community-focused clinic, built shoulder to shoulder with the other independents around us. We thrive because the cafés, studios, bars and shops in our local community thrive, and we work to send trade, clients and trust back their way.
           </p>
           <p className="text-lg text-page-muted font-medium mb-4">
-            Our hub on Junction Road is a place you can be one hundred percent confident in. Somewhere your body can rest, restore and recover properly. Local business owners talk about us, recommend us, and collaborate with us. We&apos;ve become a staple in the Archway and North London community, a household name deep rooted in the local bars, cafés, restaurants and studios that make this part of the city what it is.
+            Our clinic on Junction Road is somewhere your body can rest, restore and recover properly. Local business owners recommend us, and we recommend them: the bars, cafés, restaurants and studios that make this part of North London what it is.
           </p>
           <p className="text-lg text-page-muted font-medium mb-4">
             We also back two charities beyond the high street.{' '}
@@ -184,6 +184,8 @@ export default function CommunityPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 section-md">
+        {/* The "get in touch" panel sits in the grid and spans two columns, so it
+            fills the row beside the last card instead of leaving it orphaned. */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 items-stretch">
           {partners.map((p) => (
             <PartnerCard
@@ -199,35 +201,30 @@ export default function CommunityPage() {
               headerText={p.headerText}
             />
           ))}
-        </div>
 
-        <p className="text-page-muted text-sm mt-10 max-w-2xl">
-          More partners are on the way. We’re talking to local yoga studios, wellness spaces and a handful of other independents across the community. If you run a local business and want to chat, the door is open.
-        </p>
-
-        <p className="text-page-muted text-sm mt-4 max-w-2xl">
-          We also back small businesses across London. You can find us, vouch for us and message us on the{' '}
-          <Link href={ROUTES.community.refuse2QuitNetwork} className="link-cite">Refuse 2 Quit Network</Link>.
-        </p>
-
-        <div className="mt-10 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-3">Local independent? Get in touch</h2>
-          <p className="text-brand-green font-semibold mb-6 max-w-2xl">
-            We collaborate with independents across Archway, Tufnell Park, Holloway, Highgate and North London. Honest referrals, mutual support, real trade going both ways. If you run a local business, we&apos;d love to hear from you.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href={ROUTES.contact}
-              className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
-            >
-              Reach out <span aria-hidden="true">→</span>
-            </Link>
-            <Link
-              href={ROUTES.press}
-              className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
-            >
-              Press &amp; media <span aria-hidden="true">→</span>
-            </Link>
+          <div className="sm:col-span-2 bg-accent rounded-card p-8 flex flex-col justify-center text-center sm:text-left">
+            <h2 className="text-2xl font-black text-ink mb-3">Local independent? Get in touch</h2>
+            <p className="text-brand-green font-semibold mb-4">
+              We collaborate with independents across Archway, Tufnell Park, Holloway, Highgate and North London. Honest referrals, mutual support, real trade going both ways. More partners are on the way, and if you run a local business, we&apos;d love to hear from you.
+            </p>
+            <p className="text-brand-green text-sm mb-6">
+              We also back small businesses across London. You can find us, vouch for us and message us on the{' '}
+              <Link href={ROUTES.community.refuse2QuitNetwork} className="link-cite">Refuse 2 Quit Network</Link>.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href={ROUTES.contact}
+                className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
+              >
+                Reach out <span aria-hidden="true">→</span>
+              </Link>
+              <Link
+                href={ROUTES.press}
+                className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
+              >
+                Press &amp; media <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

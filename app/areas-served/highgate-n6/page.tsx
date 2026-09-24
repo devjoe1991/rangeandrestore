@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -47,12 +47,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to the clinic from Highgate?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Archway is just down the hill from Highgate. The 143, 210 and 271 buses run down Highgate Hill to Archway, stopping a short walk from the clinic. From Highgate tube (Northern Line) it is one stop to Archway, or a 15-minute walk downhill. Most Highgate clients find it quicker to reach than heading into town.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Archway is just down the hill from Highgate. The 263 runs from Highgate Village down Highgate Hill to Archway, and the 134 runs from Highgate down to Archway and along Junction Road past the clinic. From Highgate tube (Northern Line) it is one stop to Archway, or a walk downhill. Most Highgate clients find it quicker to reach than heading into town.' },
     },
     {
       '@type': 'Question',
       name: 'Do you treat cyclists who ride Swains Lane and Highgate Hill?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — the Highgate climbs are legendary among London cyclists, and repeated efforts on Swains Lane and Highgate Hill are hard on the quads, calves, hip flexors and lower back. A 60- or 90-minute sports and deep tissue session is the usual recommendation for riders training these climbs.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — the Highgate climbs are legendary among London cyclists, and repeated efforts on Swains Lane and Highgate Hill are hard on the quads, calves, hip flexors and lower back. A 60- or 90-minute sports and deep tissue session (£75 or £110) is the usual recommendation for riders training these climbs.' },
     },
     {
       '@type': 'Question',
@@ -99,12 +99,12 @@ export default function HighgateN6Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Highgate</h2>
           <p>
-            It&apos;s downhill all the way. The 143, 210 and 271 buses run down Highgate Hill to Archway and stop a short walk from the clinic. From Highgate tube station on the Northern Line it&apos;s a single stop to Archway, or a 15-minute walk down (a bit more of a pull on the way back). Cyclists already out on the climbs can drop into Archway easily, and there are racks at the clinic end.
+            It&apos;s downhill all the way. The 263 runs from Highgate Village down Highgate Hill to Archway, and the 134 runs from Highgate down to Archway and along Junction Road past the clinic. From Highgate tube station on the Northern Line it&apos;s a single stop to Archway, or a walk down the hill (a bit more of a pull on the way back). Cyclists already out on the climbs can drop into Archway easily, and there are racks at the clinic end.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Highgate clients</h2>
           <p>
-            Cyclists and hill-runners book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> to work the legs, hips and lower back; the <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">cycling recovery guide</Link> covers this in detail. After big efforts, many add the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> or <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression boots</Link>. For chronic pain and postural issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> and the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> are the common starting points.
+            Cyclists and hill-runners book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110) to work the legs, hips and lower back; the <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">cycling recovery guide</Link> covers this in detail. After big efforts, many add a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> session (from £19), or book the 90-minute <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link> session (£110). For chronic pain and postural issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> and the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> (both from £75) are the common starting points.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Highgate and the wider catchment</h2>
@@ -122,11 +122,11 @@ export default function HighgateN6Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to the clinic from Highgate?</h3>
-              <p>Archway is just down the hill from Highgate. The 143, 210 and 271 buses run down Highgate Hill to Archway, stopping a short walk from the clinic. From Highgate tube (Northern Line) it is one stop to Archway, or a 15-minute walk downhill.</p>
+              <p>Archway is just down the hill from Highgate. The 263 runs from Highgate Village down Highgate Hill to Archway, and the 134 runs from Highgate down to Archway and along Junction Road past the clinic. From Highgate tube (Northern Line) it is one stop to Archway, or a walk downhill.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat cyclists who ride Swains Lane and Highgate Hill?</h3>
-              <p>Yes &mdash; the Highgate climbs are legendary among London cyclists, and repeated efforts on Swains Lane and Highgate Hill are hard on the quads, calves, hip flexors and lower back. A 60- or 90-minute sports and deep tissue session is the usual recommendation.</p>
+              <p>Yes &mdash; the Highgate climbs are legendary among London cyclists, and repeated efforts on Swains Lane and Highgate Hill are hard on the quads, calves, hip flexors and lower back. A 60- or 90-minute sports and deep tissue session (£75 or £110) is the usual recommendation.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you see runners and walkers from Hampstead Heath and Highgate Wood?</h3>
@@ -139,13 +139,10 @@ export default function HighgateN6Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Highgate</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; just down the hill.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Highgate"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — just down the hill."
+        />
       </div>
     </>
   )

@@ -47,7 +47,7 @@ export default function SolCentrePartnerPage() {
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/sol-centre-logo.svg"
             alt="Sol Centre logo"
@@ -66,17 +66,14 @@ export default function SolCentrePartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we work together</h2>
           <p>
-            We work hand in hand with Sol Centre on health and wellbeing in the community. Movement, rest and recovery are the same conversation, and we both want our clients and members leaving with real knowledge and real experiences, not a service they paid for and forgot. A normal Archway week looks like a Rocket class on Tuesday, a sports massage on Thursday, a sauna and Yin class on the Sunday to put it all back together. That works better when the studio and the clinic talk to each other. We’re both small. We’re both independent. We’re both rooted in the same North London community trying to do right by the people who walk in.
+            We work hand in hand with Sol Centre on health and wellbeing in the community. Movement, rest and recovery are the same conversation, and we both want our clients and members leaving with real knowledge and real experiences, not a service they paid for and forgot. A normal Archway week looks like a Rocket class on Tuesday, a sports massage on Thursday, a sauna and Yin class on the Sunday to put it all back together. That works better when the studio and the clinic talk to each other, and two independents a short walk apart are well placed to do that.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How we look out for each other</h2>
           <p>
-            Honest referrals, both ways. When clients ask Carlos where to take a regular class, or want somewhere to keep moving between sessions, Sol Centre is the first place we send them. When the team at Sol meet someone in class who’s working through an injury, a tight back, or a flare-up they can’t stretch out, they point them our way. We share what we know. They share what they know. Our clients and their members get the benefit of both rooms. There’s no formal scheme. No vouchers, no commission, no marketing dance. Just two local independents looking after each other and the people who keep both spaces going.
+            Honest referrals, both ways. When clients ask us where to take a regular class, or want somewhere to keep moving between sessions, Sol Centre is the first place we send them. When the team at Sol meet someone in class who’s working through an injury, a tight back, or a flare-up they can’t stretch out, they point them our way. We share what we know. They share what they know. Our clients and their members get the benefit of both rooms, and neither of us takes a fee for the recommendation.
           </p>
 
-          <p>
-            That’s what we mean when we say we’re rooted in the Archway community. It isn’t a slogan. It’s the actual day to day.
-          </p>
         </div>
 
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">

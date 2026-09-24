@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
+import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'NC Osteopathy and Range and Restore | Osteopathy and Sports Massage in North London',
@@ -23,6 +24,13 @@ const partnerOrgSchema = {
   name: 'NC Osteopathy',
   url: PARTNER_URL,
   description: 'North London osteopathic clinic led by Nagma Chaudhry M.Ost, DO, Clinic Director and Principal Osteopath. Cranial, visceral and structural osteopathy, therapeutic massage, myofascial release and certified Mummy MOT for pregnancy and postnatal recovery.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Archway Studios (Studio 21A), Bickerton House, 25-27 Bickerton Road',
+    addressLocality: 'London',
+    postalCode: 'N19 5JT',
+    addressCountry: 'GB',
+  },
   areaServed: [
     { '@type': 'Place', name: 'Archway, London N19' },
     { '@type': 'Place', name: 'Highgate, London N6' },
@@ -37,7 +45,7 @@ const partnerOrgSchema = {
 const faqs = [
   {
     q: 'What is the difference between an osteopath and a sports massage therapist?',
-    a: 'An osteopath like Nagma at NC Osteopathy is a registered, university-trained practitioner who diagnoses and treats using structural manipulation, cranial and visceral techniques, massage and myofascial release, looking at the whole system. A soft tissue therapist like Carlos at Range and Restore works hands-on with the muscles, fascia and movement patterns to release tension, improve range and support recovery. For many people the two work best together: osteopathy to assess and treat the underlying mechanics, sports massage and recovery to keep the soft tissue moving well in between.',
+    a: 'An osteopath like Nagma at NC Osteopathy is a registered, university-trained practitioner who diagnoses and treats using structural manipulation, cranial and visceral techniques, massage and myofascial release, looking at the whole system. Our therapists at Range and Restore are soft tissue specialists: they work hands-on with the muscles, fascia and movement patterns to release tension, improve range and support recovery. For many people the two work best together: osteopathy to assess and treat the underlying mechanics, sports massage and recovery to keep the soft tissue moving well in between.',
   },
   {
     q: 'How do I know whether to see an osteopath or book a sports massage first?',
@@ -60,19 +68,19 @@ export default function NcOsteopathyPartnerPage() {
 
       <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="eyebrow-sm">Local Partner &middot; North London &middot; Osteopathy</p>
+          <p className="eyebrow-sm">Local Partner &middot; Archway &middot; Osteopathy</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             NC Osteopathy and Range and Restore
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Osteopathy and whole-person care with Nagma Chaudhry M.Ost at NC Osteopathy. Sports massage, recovery and remedial therapy with our team at Range and Restore on Junction Road. Two North London clinics, two complementary disciplines, one joined-up approach to your body.
+            Osteopathy and whole-person care with Nagma Chaudhry M.Ost at NC Osteopathy. Sports massage, recovery and remedial therapy with our team at Range and Restore on Junction Road. Two clinics in N19, two complementary disciplines, one joined-up approach to your body.
           </p>
         </div>
       </div>
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/nc-osteopathy-logo-north-london.webp"
             alt="NC Osteopathy logo, North London"
@@ -103,7 +111,7 @@ export default function NcOsteopathyPartnerPage() {
             </figcaption>
           </figure>
           <p>
-            NC Osteopathy is led by Nagma Chaudhry M.Ost, DO, Clinic Director and Principal Osteopath. Nagma graduated from the European School of Osteopathy and has treated patients across a wide range of specialist settings &mdash; babies and children, women&apos;s health and sports clinics &mdash; alongside time in the NHS and other areas of healthcare, from acute to surgical scenarios. Her treatments integrate cranial, visceral and structural osteopathic techniques with therapeutic massage and myofascial release. She is also a certified Mummy MOT&reg; practitioner, with a particular focus on pregnant women and postnatal assessment and recovery. Nagma is a member of the Institute of Osteopathy and registered with the General Osteopathic Council (GOsC).
+            NC Osteopathy is led by Nagma Chaudhry M.Ost, DO, Clinic Director and Principal Osteopath. Nagma graduated from the European School of Osteopathy and has treated patients across a wide range of specialist settings &mdash; babies and children, women&apos;s health and sports clinics &mdash; alongside time in the NHS and other areas of healthcare, from acute to surgical scenarios. Her treatments integrate cranial, visceral and structural osteopathic techniques with therapeutic massage and myofascial release. She is also a certified Mummy MOT&reg; practitioner, with a particular focus on pregnant women and postnatal assessment and recovery. Nagma is a member of the Institute of Osteopathy and registered with the General Osteopathic Council (GOsC). NC Osteopathy is at Archway Studios (Studio 21A), Bickerton House, 25-27 Bickerton Road, London N19 5JT, also in N19 and near Archway station.
           </p>
 
           <p>
@@ -122,12 +130,12 @@ export default function NcOsteopathyPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How the Recovery Suite fits in</h2>
           <p>
-            Alongside hands-on sports massage, Range and Restore runs a full <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at 130 Junction Road &mdash; a Vidalux two-person hybrid <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> and the Hyperice Normatec 3 Full Body <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression system</Link>. For a client working through something with Nagma, those tools are a natural complement. The infrared sauna helps relax tight tissue and brings an over-wound nervous system back into a parasympathetic state, which dovetails neatly with the co-regulation side of osteopathic care. For postnatal recovery, gentle <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage</Link> can support the body alongside osteopathic treatment, once cleared. None of it replaces what Nagma does &mdash; it gives her clients somewhere local to keep the progress moving between appointments.
+            Alongside hands-on sports massage, Range and Restore runs a full <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at 130 Junction Road &mdash; a Vidalux two-person hybrid <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> and the Hyperice Normatec 3 Full Body <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression system</Link>. For a client working through something with Nagma, those tools can sit alongside her care. Many clients find a private sauna session a good way to unwind between appointments, and the Normatec boots are used as part of our 90-minute Sports Massage + Normatec session. For postnatal recovery, gentle <Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage</Link> can support the body alongside osteopathic treatment, once cleared. None of it replaces what Nagma does &mdash; it gives her clients somewhere local to keep the progress moving between appointments.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Honest referrals, both ways</h2>
           <p>
-            That&apos;s what we mean when we say we&apos;re rooted in the North London community. When you ask &ldquo;do you know a good osteopath?&rdquo; you don&apos;t want a name off a search engine &mdash; you want someone whose work the person sending you actually trusts. The collaboration means both clinics can give that answer with confidence. There&apos;s no formal scheme, no vouchers, no commission. Just two local clinics that share the same values, talk to each other, and want the best care for the same community across Archway, Highgate, Holloway, Tufnell Park, Finsbury Park, Crouch End, Islington, Camden and Kentish Town.
+            When a client asks us &ldquo;do you know a good osteopath?&rdquo;, they don&apos;t want a name off a search engine &mdash; they want someone whose work we actually trust. Nagma is that answer for us, and we&apos;re hers when a patient needs ongoing soft tissue work. Nobody pays anyone for a referral. We&apos;re two clinics a short distance apart in N19 that talk to each other and want the best care for the same patients across Archway, Highgate, Holloway, Tufnell Park, Finsbury Park, Crouch End, Islington, Camden and Kentish Town.
           </p>
         </div>
 
@@ -146,15 +154,17 @@ export default function NcOsteopathyPartnerPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-3">Book with Range and Restore or NC Osteopathy</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Sports massage, soft tissue therapy and the Recovery Suite at Range and Restore, two minutes from Archway tube. Osteopathy, Mummy MOT&reg; and whole-person care with Nagma Chaudhry at NC Osteopathy. Wherever you start, you get pointed to the right care for North London.
+            Sports massage, soft tissue therapy and the Recovery Suite at Range and Restore, a short walk from Archway tube. Osteopathy, Mummy MOT&reg; and whole-person care with Nagma Chaudhry at NC Osteopathy. Wherever you start, you get pointed to the right care for North London.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={ROUTES.contact}
+            <a
+              href={BOOKING_URLS.general}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
             >
               Book Range and Restore <span aria-hidden="true">→</span>
-            </Link>
+            </a>
             <a
               href={PARTNER_URL}
               target="_blank"

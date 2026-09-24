@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage in Tufnell Park N7 | 10-min Walk',
-  description: 'Sports and cycling-recovery massage for Tufnell Park (N7). Clinic 10 minutes from Tufnell Park tube. A team of BTEC L5 therapists. Book online — same-week slots.',
+  title: 'Sports Massage in Tufnell Park N7 | Short Walk from the Tube',
+  description: 'Sports and cycling-recovery massage for Tufnell Park (N7). Clinic on Junction Road, a short walk from Tufnell Park tube. A team of BTEC L5 therapists. Book online — same-week slots.',
   path: '/areas-served/tufnell-park-n7',
 })
 
@@ -47,7 +47,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to Range and Restore from Tufnell Park tube station?',
-      acceptedAnswer: { '@type': 'Answer', text: 'From Tufnell Park station (Northern Line), head north up Tufnell Park Road, then turn right onto Junction Road. The clinic is at 130 Junction Road on the right. It is a flat 10-minute walk, or a 3-minute ride on routes 4 or 134 towards Archway.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'From Tufnell Park station (Northern Line), Junction Road runs north towards Archway, and the clinic is on it at number 130, inside the Reliable Scan building. It is a short walk from the station, or a quick ride on the 134 bus towards Archway.' },
     },
     {
       '@type': 'Question',
@@ -57,12 +57,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Is the clinic walkable from Dartmouth Park and Tufnell Park Road?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most addresses on Tufnell Park Road, Lady Margaret Road, Anson Road and the surrounding Dartmouth Park streets are within a 10-15 minute walk. The route is flat to gently uphill on the way back.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Tufnell Park Road, Lady Margaret Road, Anson Road and the surrounding Dartmouth Park streets are all within walking distance.' },
     },
     {
       '@type': 'Question',
       name: 'What’s the best massage for cycling recovery?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 60- or 90-minute sports and deep tissue session is the standard recommendation. The 90-minute slot is preferred for high-mileage weeks or post-sportive recovery, as it gives time to work through the whole posterior chain (calves, hamstrings, glutes, lower back) and the hip flexors and quads.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A 60- or 90-minute sports and deep tissue session (£75 or £110) is the standard recommendation. The 90-minute slot is preferred for high-mileage weeks or post-sportive recovery, as it gives time to work through the whole posterior chain (calves, hamstrings, glutes, lower back) and the hip flexors and quads.' },
     },
   ],
 }
@@ -81,7 +81,7 @@ export default function TufnellParkN7Page() {
             Sports Massage for Tufnell Park (N7)
           </h1>
           <p className="mt-4 text-xl text-page-muted max-w-2xl">
-            10-minute walk from Tufnell Park tube. Cycling recovery, runner&apos;s maintenance and clinical massage for N7 residents at our Archway clinic.
+            A short walk up Junction Road from Tufnell Park tube. Cycling recovery, runner&apos;s maintenance and clinical massage for N7 residents at our Archway clinic.
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function TufnellParkN7Page() {
       <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Range and Restore is the closest specialist sports massage clinic to Tufnell Park. We&apos;re at 130 Junction Road, a 10-minute walk north from Tufnell Park station and a few minutes&apos; ride on the 4 or 134 bus. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>.
+            Range and Restore is the closest specialist sports massage clinic to Tufnell Park. We&apos;re at 130 Junction Road, a short walk north from Tufnell Park station or a quick ride on the 134 bus. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why Tufnell Park clients book sports massage</h2>
@@ -102,17 +102,17 @@ export default function TufnellParkN7Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Walking and transport from Tufnell Park</h2>
           <p>
-            From Tufnell Park tube station (Northern Line), head north up Tufnell Park Road and turn right onto Junction Road at the junction. The clinic is on the right at number 130. It&apos;s a flat 10-minute walk — easier than the route up to Hampstead Heath. If you prefer to bus, routes 4 and 134 go straight up Junction Road towards Archway and stop within a minute&apos;s walk of the door. By bike, the run up Junction Road is short and well-served by bike racks at the clinic end.
+            From Tufnell Park tube station (Northern Line), Junction Road runs north towards Archway, and the clinic is on it at number 130, inside the Reliable Scan building &mdash; a short walk from the station. If you&apos;d rather take the bus, the 134 runs up Junction Road towards Archway and stops near the door. By bike, the run up Junction Road is short and well-served by bike racks at the clinic end.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by N7 clients</h2>
           <p>
-            For cyclists, the standard recommendation is a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue session</Link> covering the posterior chain, hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">cycling recovery guide</Link> covers this in detail. Runners typically book around long runs and races, often combining sports massage with the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> or <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression boots</Link> in the Recovery Suite. For postural pain from desk work, the Back & Neck Pain MOT is usually the right starting point.
+            For cyclists, the standard recommendation is a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue session</Link> (£75 or £110) covering the posterior chain, hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">cycling recovery guide</Link> covers this in detail. Runners typically book around long runs and races, often adding a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> session (from £19) or booking the 90-minute <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link> session (£110) in the Recovery Suite. For postural pain from desk work, the Back & Neck Pain MOT (from £75) is usually the right starting point.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Tufnell Park, Dartmouth Park and the wider catchment</h2>
           <p>
-            This page is the home for clients across Tufnell Park itself, the Dartmouth Park streets (which straddle N7 and NW5), and the residential roads running off Fortess Road. If you&apos;re further north, we also serve <Link href={ROUTES.areasServed.index} className="link-inline">Kentish Town, Gospel Oak and Hampstead</Link>; further east the clinic catches <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> and Upper Holloway.
+            This page is the home for clients across Tufnell Park itself, the Dartmouth Park streets (which straddle N7 and NW5), and the residential roads running off Fortess Road. To the south, we also see clients from <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>, Gospel Oak and Hampstead; to the north, the clinic serves <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> and <Link href={ROUTES.areasServed.upperHollowayN19} className="link-inline">Upper Holloway</Link>. See all the <Link href={ROUTES.areasServed.index} className="link-inline">areas we serve</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Opening hours</h2>
@@ -125,7 +125,7 @@ export default function TufnellParkN7Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to Range and Restore from Tufnell Park tube station?</h3>
-              <p>From Tufnell Park station (Northern Line), head north up Tufnell Park Road, then turn right onto Junction Road. The clinic is at 130 Junction Road on the right. It is a flat 10-minute walk, or a 3-minute ride on routes 4 or 134 towards Archway.</p>
+              <p>From Tufnell Park station (Northern Line), Junction Road runs north towards Archway, and the clinic is on it at number 130, inside the Reliable Scan building. It is a short walk from the station, or a quick ride on the 134 bus towards Archway.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat cyclists from the Tufnell Park area?</h3>
@@ -133,22 +133,19 @@ export default function TufnellParkN7Page() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Is the clinic walkable from Dartmouth Park and Tufnell Park Road?</h3>
-              <p>Yes. Most addresses on Tufnell Park Road, Lady Margaret Road, Anson Road and the surrounding Dartmouth Park streets are within a 10-15 minute walk. The route is flat to gently uphill on the way back.</p>
+              <p>Yes. Tufnell Park Road, Lady Margaret Road, Anson Road and the surrounding Dartmouth Park streets are all within walking distance.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">What&apos;s the best massage for cycling recovery?</h3>
-              <p>A 60- or 90-minute sports and deep tissue session is the standard recommendation. The 90-minute slot is preferred for high-mileage weeks or post-sportive recovery.</p>
+              <p>A 60- or 90-minute sports and deep tissue session (£75 or £110) is the standard recommendation. The 90-minute slot is preferred for high-mileage weeks or post-sportive recovery.</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Tufnell Park</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB — 10 minutes from Tufnell Park.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Tufnell Park"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — a short walk up Junction Road from Tufnell Park station."
+        />
       </div>
     </>
   )

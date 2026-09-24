@@ -59,13 +59,13 @@ export default function GlowByDPartnerPage() {
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-white mb-10 p-4 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/glow-by-d-skincare-beauty-clinic-archway.png"
             alt="Glow By D skincare and beauty clinic logo, Archway"
             width={400}
             height={400}
-            className="max-h-44 w-auto object-contain"
+            className="max-h-full w-auto object-contain"
           />
         </div>
 
@@ -96,7 +96,7 @@ export default function GlowByDPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why a shared building matters</h2>
           <p>
-            130 Junction Road has quietly become a health and wellbeing hub for Archway, and Glow By D is part of that under this roof. This isn&apos;t a partnership arranged over email between two businesses across town. It&apos;s the same front door, the same corridor, rooms a few steps apart. When a massage client asks about skincare on their way out, the answer is next door. When a Glow By D client mentions a stiff neck or heavy legs, the answer is next door the other way. For a high street in North London, having luxury skincare, sports massage, lymphatic drainage and a private infrared sauna at one address is genuinely rare.
+            130 Junction Road has quietly become a health and wellbeing hub for Archway, and Glow By D is part of that under this roof. It&apos;s a working relationship, not a marketing deal: the same front door, rooms a few steps apart. When a massage client asks about skincare on their way out, the answer is next door. When a Glow By D client mentions a stiff neck or heavy legs, the answer is next door the other way. Skincare, sports massage, lymphatic drainage and a private infrared sauna, all at one address on Junction Road.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How it works with our clients</h2>
@@ -105,14 +105,14 @@ export default function GlowByDPartnerPage() {
           </p>
           <ul className="list-disc pl-6 space-y-2 text-page-muted">
             <li><strong className="text-page">The full self-care visit.</strong> A sports massage or a private sauna session with us, then a facial with Glow By D, all in one trip to one address.</li>
-            <li><strong className="text-page">Skin and sauna.</strong> Infrared sauna sessions support circulation and skin health from the inside. Glow By D&apos;s facials and skin treatments work from the outside. Clients who care about one tend to love the other.</li>
-            <li><strong className="text-page">Stress as well as skin.</strong> Plenty of skincare clients are carrying neck, shoulder and jaw tension that shows up in how they feel and how they look. Hands-on soft tissue work next door deals with the cause.</li>
+            <li><strong className="text-page">Skin and sauna.</strong> Plenty of clients like to pair a private sauna session with us and a facial or skin treatment with Glow By D. Ask Glow By D how best to time the two around your treatment.</li>
+            <li><strong className="text-page">Stress as well as skin.</strong> Plenty of skincare clients are carrying neck, shoulder and jaw tension that shows up in how they feel and how they look. Hands-on soft tissue work next door may help ease it.</li>
             <li><strong className="text-page">Honest referrals both ways.</strong> If a Glow By D client needs recovery work, they hear about us. If our client asks about skincare, they hear about Glow By D. No commissions, no scripts, just neighbours recommending each other because the work is good.</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Looking after Archway, inside and out</h2>
           <p>
-            Range and Restore are specialists in soft tissue therapy, lymphatic drainage and sauna and compression recovery. Glow By D are specialists in skin, beauty and wellness. Put both in the same building and you get something most parts of London don&apos;t have: one address where you can recover, reset and glow without changing postcodes. Two independents, one roof, the same community walking out feeling better than they walked in.
+            Range and Restore are specialists in soft tissue therapy, lymphatic drainage and sauna and compression recovery. Glow By D are specialists in skin, beauty and wellness. Put both in the same building and you can recover, reset and look after your skin in one visit to Junction Road. Two independents, one roof, the same community walking out feeling better than they walked in.
           </p>
         </div>
 

@@ -22,7 +22,7 @@ const partnerOrgSchema = {
   '@type': 'Organization',
   name: 'The Dynamic Spud',
   url: PARTNER_URL,
-  description: 'Independent café and community spot in Archway, North London.',
+  description: 'Independent café and community spot in Archway, North London, serving hearty Irish food.',
   areaServed: { '@type': 'Place', name: 'Archway, London N19' },
   memberOf: { '@id': `${BASE_URL}/#business` },
 }
@@ -40,20 +40,20 @@ export default function TheDynamicSpudPartnerPage() {
             The Dynamic Spud and Range and Restore
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Two small Archway businesses rooted in the same North London community, looking out for each other and our clients.
+            Two small Archway businesses looking out for each other and for the people who come through both doors.
           </p>
         </div>
       </div>
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
-            src="/partners/the-dynamic-spud.png"
+            src="/the_dynamic_spud_logo.png"
             alt="The Dynamic Spud logo"
             width={400}
-            height={200}
-            className="max-h-40 w-auto object-contain"
+            height={400}
+            className="max-h-full w-auto object-contain"
           />
         </div>
 
@@ -61,22 +61,19 @@ export default function TheDynamicSpudPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About The Dynamic Spud</h2>
           <p>
-            The Dynamic Spud is Karen’s independent spot in Archway. Good food, proper coffee, and a room that actually feels like the neighbourhood. It’s the kind of place locals stop into on the way to work, after a gym session, or for a long lunch on the weekend. If you’ve been around N19 for a while, you probably already know it.
+            The Dynamic Spud is Karen’s independent spot in Archway: hearty Irish food, from Dublin to Archway, proper coffee, and a room that actually feels like the neighbourhood. It’s the kind of place locals stop into on the way to work, after a gym session, or for a long lunch on the weekend. If you’ve been around N19 for a while, you probably already know it.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we work together</h2>
           <p>
-            Recovery and good food go in the same week for most of our clients. Someone books a sports massage on a Wednesday, picks up lunch round the corner, comes back for sauna and compression on the Saturday. That’s how a normal week looks in Archway, and it works better when the local businesses talk to each other. We’re both small. We’re both independent. We’re both rooted in the same North London community, trying to do right by the people who walk in.
+            Recovery and good food go in the same week for most of our clients. Someone books a sports massage on a Wednesday, picks up lunch round the corner, comes back for a sauna session on the Saturday. That’s how a normal week looks in Archway, and it works better when the local businesses talk to each other.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How we look out for each other</h2>
           <p>
-            Honest referrals, both ways. When clients ask Carlos where to eat after a session, The Dynamic Spud is the first place we send them. When Karen has someone in who’s nursing a stiff back or recovering from a long week, she points them our way. There’s no formal scheme. No vouchers, no commission, no marketing dance. Just neighbours looking after each other and the people who keep both businesses going.
+            Honest referrals, both ways. When clients ask us where to eat after a session, The Dynamic Spud is the first place we send them. When Karen has someone in who’s nursing a stiff back or recovering from a long week, she points them our way. No vouchers or commission change hands. We’re neighbours, and we’d rather send people somewhere we’d eat ourselves.
           </p>
 
-          <p>
-            That’s what we mean when we say we’re rooted in the Archway community. It isn’t a slogan. It’s the actual day to day.
-          </p>
         </div>
 
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">

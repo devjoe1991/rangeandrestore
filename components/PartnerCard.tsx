@@ -23,7 +23,7 @@ export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFi
       href={href}
       className="group card-lift rounded-card overflow-hidden flex flex-col bg-card shadow-sm border-2 border-brand-green no-underline"
     >
-      <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
+      <div className="h-1 w-full bg-brand-teal" />
       {logo ? (
         logoFit === 'cover' ? (
           <div className="relative w-full aspect-[16/10] bg-page-sage overflow-hidden">
@@ -62,7 +62,7 @@ export function PartnerCard({ name, category, blurb, href, logo, logoAlt, logoFi
         </h3>
         <p className="text-page-muted text-sm leading-relaxed flex-1 mb-4">{blurb}</p>
         <span className="text-page text-xs font-black uppercase tracking-wide inline-flex items-center gap-2">
-          Read the story <span aria-hidden="true">→</span>
+          Read more <span aria-hidden="true">→</span>
         </span>
       </div>
     </Link>

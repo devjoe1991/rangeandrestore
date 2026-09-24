@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, buildFaqSchema } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
+import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'FS8 Finsbury Park and Range and Restore | Reformer Pilates and Sports Massage, North London',
@@ -77,7 +78,7 @@ const faqs = [
   },
   {
     q: 'How far is Range and Restore from FS8 Finsbury Park?',
-    a: 'FS8 is at 1-7 Morris Place, by Finsbury Park station. Range and Restore is at 130 Junction Road, Archway N19 5LB. The 210 bus runs directly from Finsbury Park to Archway and drops you a short walk from the clinic, usually 10 to 15 minutes.',
+    a: 'FS8 is at 1-7 Morris Place, by Finsbury Park station. Range and Restore is at 130 Junction Road, Archway N19 5LB. The 210 bus runs directly from Finsbury Park to Archway and drops you a short walk from the clinic.',
   },
 ]
 
@@ -104,7 +105,7 @@ export default function Fs8FinsburyParkPartnerPage() {
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-sand-deep mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-sand-deep mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/fs8-finsbury-park-reformer-pilates-logo.svg"
             alt="FS8 logo, reformer Pilates, tone and yoga studio in Finsbury Park"
@@ -119,7 +120,7 @@ export default function Fs8FinsburyParkPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">About FS8 Finsbury Park</h2>
           <p>
-            <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park</a> is a reformer Pilates studio at {PARTNER_ADDRESS}, a couple of minutes from Finsbury Park station. FS8 blends Pilates, tone and yoga into one workout: reformer and mat Pilates, toning work with dumbbells, rings and bands, and yoga-based stretching and flow. It is low impact, full body and built so a complete beginner and a regular can train in the same room.
+            <a href={PARTNER_URL} target="_blank" rel="noopener" className="link-inline">FS8 Finsbury Park</a> is a reformer Pilates studio at {PARTNER_ADDRESS}, by Finsbury Park station. FS8 blends Pilates, tone and yoga into one workout: reformer and mat Pilates, toning work with dumbbells, rings and bands, and yoga-based stretching and flow. It is low impact, full body and built so a complete beginner and a regular can train in the same room.
           </p>
           <figure className="not-prose my-6">
             <Image
@@ -168,7 +169,7 @@ export default function Fs8FinsburyParkPartnerPage() {
               <strong className="text-page">Joined-up advice.</strong> Tell your therapist you train at FS8 and your home plan can be built around the classes you already go to. Tell your FS8 trainer what we found and they can adjust the movements for you.
             </li>
             <li>
-              <strong className="text-page">Recovery between classes.</strong> Our <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in Archway has a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> and Normatec <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression therapy</Link>, useful after a hard week of training or on its own.
+              <strong className="text-page">Recovery between classes.</strong> Our <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in Archway has a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> (from £19 on its own), useful after a hard week of training, and Normatec <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression therapy</Link> as part of the 90-minute Sports Massage + Normatec session (£110).
             </li>
           </ul>
 
@@ -211,7 +212,7 @@ export default function Fs8FinsburyParkPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting between the two</h2>
           <p>
-            FS8 sits by Finsbury Park station. Range and Restore is at 130 Junction Road, Archway N19 5LB. The 210 bus runs directly between the two, usually 10 to 15 minutes, so a class in the morning and a treatment later the same day is easy. Our clinic is open seven days a week. See our <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park N4 page</Link> for more on getting here.
+            FS8 sits by Finsbury Park station. Range and Restore is at 130 Junction Road, Archway N19 5LB. The 210 bus runs directly between the two, so a class in the morning and a treatment later the same day is easy. Our clinic is open seven days a week. See our <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park N4 page</Link> for more on getting here.
           </p>
         </div>
 
@@ -233,12 +234,14 @@ export default function Fs8FinsburyParkPartnerPage() {
             Assessment-led sports massage, clinical massage and recovery at 130 Junction Road, Archway N19. Reformer Pilates, tone and yoga at FS8, by Finsbury Park station. Same-week appointments, direct 210 bus between the two. FS8 members: use the code {OUR_CODE} for {OUR_DISCOUNT} off any treatment with us.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={ROUTES.contact}
+            <a
+              href={BOOKING_URLS.general}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-green text-white hover:bg-brand-green-mid transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline"
             >
               Book Range and Restore <span aria-hidden="true">→</span>
-            </Link>
+            </a>
             <a
               href={PARTNER_INTRO_URL}
               target="_blank"

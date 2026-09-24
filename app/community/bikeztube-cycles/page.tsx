@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'What helps my legs recover after long bike rides?',
-    a: 'Sports and deep tissue massage targets the areas cycling loads most: hip flexors, quads, calves and the lower back. Between rides, Normatec full leg compression and an infrared sauna help clear heaviness and keep tissue moving well. All of it is available at Range and Restore, 130 Junction Road in Archway, a few doors from Bikeztube Cycles.',
+    a: 'Sports and deep tissue massage targets the areas cycling loads most: hip flexors, quads, calves and the lower back. Between rides, many cyclists add a private infrared sauna session, or book the 90-minute Sports Massage + Normatec session, which finishes with 30 minutes of full leg compression. All of it is available at Range and Restore, 130 Junction Road in Archway, a few doors from Bikeztube Cycles.',
   },
   {
     q: 'Do Range and Restore and Bikeztube Cycles work together?',
@@ -74,7 +74,7 @@ export default function BikeztubeCyclesPartnerPage() {
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-sand-deep mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-sand-deep mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/bikeztube-cycles-bike-shop-junction-road-archway.png"
             alt="Bikeztube Cycles and Repairs logo, bike shop on Junction Road, Archway"
@@ -101,15 +101,15 @@ export default function BikeztubeCyclesPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Bike and body, serviced on the same street</h2>
           <p>
-            Cycling is kind on the joints and hard on the soft tissue. The riding position shortens the hip flexors, rounds the lower back and loads the neck, and most riders are far better at maintaining the bike than maintaining themselves. That&apos;s the gap this collaboration closes. Our <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> goes straight to the areas riding loads up, and the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at 130 adds Normatec full leg <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression</Link> to flush heavy quads and calves, plus an infrared sauna that winds the nervous system down after a long day in the saddle.
+            Cycling is kind on the joints and hard on the soft tissue. The riding position shortens the hip flexors, rounds the lower back and loads the neck, and most riders are far better at maintaining the bike than maintaining themselves. That&apos;s the gap this collaboration closes. Our <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> goes straight to the areas riding loads up, and the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at 130 has Normatec full leg <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression</Link> as part of the 90-minute Sports Massage + Normatec session (£110), plus a private infrared sauna that many riders find a good way to wind down after a long day in the saddle.
           </p>
           <p>
-            The practical version: if your bike is going in for a service, drop it at 118 and walk the few doors up to 130. Thirty minutes in the Normatec boots or a sports massage while the mechanics work, and you ride home on a bike that shifts properly with legs that have actually recovered. We wrote a full guide to <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">sports massage and recovery for cyclists</Link> if you want the detail.
+            The practical version: if your bike is going in for a service, drop it at 118 and walk the few doors up to 130. A sports massage or a private sauna session while the mechanics work, and you ride home on a bike that shifts properly with legs that have actually recovered. We wrote a full guide to <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline">sports massage and recovery for cyclists</Link> if you want the detail.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How we look out for each other</h2>
           <p>
-            Honest referrals, both ways. When clients ask Carlos where to take a bike that is skipping gears or overdue a service, Bikeztube at 118 is the answer, a one minute walk from our door. When a cyclist rolls into Bikeztube nursing a stiff back or legs that haven&apos;t recovered from the weekend, the team point them up the road to us. There&apos;s no formal scheme. No vouchers, no commission, no marketing dance. Just two shops on the same street looking after Archway&apos;s cyclists and their bikes.
+            Honest referrals, both ways. When clients ask us where to take a bike that is skipping gears or overdue a service, Bikeztube at 118 is the answer, a few doors from ours. When a cyclist rolls into Bikeztube nursing a stiff back or legs that haven&apos;t recovered from the weekend, the team point them up the road to us. Nobody gets paid for sending anyone. It&apos;s two shops on the same street looking after Archway&apos;s cyclists and their bikes.
           </p>
 
           <p>
@@ -132,7 +132,7 @@ export default function BikeztubeCyclesPartnerPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-3">Visit Bikeztube Cycles</h2>
           <p className="text-brand-green font-semibold mb-6">
-            The shop is at 118 Junction Road, between Archway and Tufnell Park tube and a one minute walk from our clinic. Drop in for a service, a wheel build, a carbon repair or a chat about a custom build.
+            The shop is at 118 Junction Road, between Archway and Tufnell Park tube and a few doors from our clinic. Drop in for a service, a wheel build, a carbon repair or a chat about a custom build.
           </p>
           <a
             href={PARTNER_URL}

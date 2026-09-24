@@ -55,7 +55,7 @@ export default function ReliableScanPartnerPage() {
 
       <div className="container-page container-prose">
 
-        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 flex items-center justify-center">
+        <div className="rounded-card overflow-hidden border-2 border-brand-green bg-page-sage mb-10 p-8 h-56 sm:h-64 flex items-center justify-center">
           <Image
             src="/Reliabale-scan.webp"
             alt="Reliable Scan logo"
@@ -88,12 +88,12 @@ export default function ReliableScanPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why a shared building matters</h2>
           <p>
-            130 Junction Road is a small healthcare hub. Reliable Scan run their ultrasound clinic from the same address we run Range and Restore from. That isn’t marketing language. It’s the front door, the lift, the corridor. When someone walks in for a scan and asks about the soft tissue work upstairs, they’re asking about us. When someone books a sports massage and we think they’d benefit from imaging before we go further, the answer is twenty metres away. For Archway and the wider North London community, having diagnostic imaging and hands-on recovery therapy in one building is genuinely rare. We don’t take it for granted.
+            130 Junction Road is a small healthcare hub. Reliable Scan run their ultrasound clinic from the same address we run Range and Restore from. Same front door, same building. When someone comes in for a scan and asks about soft tissue work, they’re asking about us. When someone books a sports massage and we think they’d benefit from imaging before we go further, the answer is under the same roof. Having diagnostic imaging and hands-on recovery therapy at one address saves our clients a lot of travelling between appointments.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How it works with our clients</h2>
           <p>
-            A lot of what walks through our door benefits from imaging at some point in the journey. Range and Restore clients are runners, lifters, marathoners, desk workers with chronic pain, post-surgery rehab cases, people in lymphatic care, expectant mums booking pregnancy MLD, and people who just want their body looked after. Reliable Scan slots into that work in concrete ways.
+            A lot of what walks through our door benefits from imaging at some point during treatment. Range and Restore clients are runners, lifters, marathoners, desk workers with chronic pain, post-surgery rehab cases, people in lymphatic care, expectant mums booking pregnancy MLD, and people who just want their body looked after. Reliable Scan slots into that work in concrete ways.
           </p>
           <ul className="list-disc pl-6 space-y-2 text-page-muted">
             <li><strong className="text-page">MSK scans before deeper work.</strong> A persistent shoulder, a knee that won’t settle, a calf strain that keeps coming back. An MSK ultrasound tells us what we’re actually working with before we go in heavy.</li>
@@ -103,13 +103,18 @@ export default function ReliableScanPartnerPage() {
             <li><strong className="text-page">General wellbeing.</strong> Full body screenings for clients who want a baseline check alongside the recovery work. Health from the inside out, in one trip.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">The MSK Scan + Clinical Massage package</h2>
+          <p>
+            For an injury that needs a clear picture first, we run a combined package with Reliable Scan: a diagnostic MSK ultrasound of one body area followed by a 60-minute Clinical Massage, about 90 minutes in all. It costs £165 in total, paid in two parts: <strong className="text-page">£75 online to Range and Restore</strong> when you book, which secures the appointment and covers the massage, and <strong className="text-page">£90 direct to Reliable Scan</strong> for the scan, before the appointment or on the day. See the <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">MSK Scan + Clinical Massage page</Link> for the details.
+          </p>
+
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Wellbeing experts under one roof</h2>
           <p>
-            Range and Restore are specialists in soft tissue therapy, lymphatic drainage and sauna and compression recovery. Reliable Scan are specialists in diagnostic imaging. Put both in the same building and Archway has something most parts of London don’t: a healthcare hub on the high street where you can be assessed, imaged, treated and recovered without changing postcodes. We aren’t a marketing partnership. We are neighbours on a corridor with overlapping clients, mutual respect, and a shared interest in the same community walking out healthier.
+            Range and Restore are specialists in soft tissue therapy, lymphatic drainage and sauna and compression recovery. Reliable Scan are specialists in diagnostic imaging. Put both in the same building and you can be assessed, imaged, treated and recovered on Junction Road without changing postcodes. It’s a working relationship, not a marketing deal: neighbours with overlapping clients, mutual respect and a shared interest in the same people walking out healthier.
           </p>
 
           <p>
-            That’s what we mean when we say we’re rooted in Archway. It isn’t a slogan. It’s the actual day to day, on the actual street, at the actual address.
+            Not sure whether you need a scan or a massage first? Ask us when you book and we’ll tell you honestly.
           </p>
         </div>
 

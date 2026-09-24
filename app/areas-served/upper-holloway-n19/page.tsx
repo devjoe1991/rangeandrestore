@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -47,12 +47,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How close is the clinic to Upper Holloway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Very close — the clinic is in the same N19 postcode. 130 Junction Road runs through the heart of Upper Holloway, so for most local addresses it is a short, flat walk. Upper Holloway Overground station is a few minutes away, and every Junction Road and Holloway Road bus stops nearby.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Very close — the clinic is in the same N19 postcode. 130 Junction Road runs through the heart of Upper Holloway, so for most local addresses it is a short walk. Upper Holloway station (Overground, Suffragette line) is nearby, and buses along Junction Road and Holloway Road stop close by.' },
     },
     {
       '@type': 'Question',
       name: 'Which station is nearest for Upper Holloway?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Upper Holloway station on the Overground (Gospel Oak to Barking line) is the closest, just off Holloway Road. Archway on the Northern Line is also a short walk. Both put the clinic within a few minutes.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The clinic is a short walk from Archway and Tufnell Park stations on the Northern Line. Upper Holloway station, on Holloway Road, is on the Overground\'s Suffragette line.' },
     },
     {
       '@type': 'Question',
@@ -99,12 +99,12 @@ export default function UpperHollowayN19Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Upper Holloway</h2>
           <p>
-            For most of Upper Holloway, walking is the simplest option &mdash; Junction Road and the streets off it (St John&apos;s Way, Sunnyside Road, the Whittington Park area) are all within a short, flat walk of the clinic. Upper Holloway Overground station on the Gospel Oak to Barking line is a few minutes away, and Archway on the Northern Line is close too. Every bus along Junction Road and Holloway Road stops nearby.
+            For most of Upper Holloway, walking is the simplest option &mdash; Junction Road and the streets off it (St John&apos;s Way, Sunnyside Road, the Whittington Park area) are all within a short walk of the clinic. Upper Holloway station on the Overground&apos;s Suffragette line is nearby, and the clinic is a short walk from Archway and Tufnell Park stations on the Northern Line. The 134 runs along Junction Road past the door.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Upper Holloway clients</h2>
           <p>
-            Being so local, Upper Holloway clients book across the board &mdash; <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> for training and gym niggles, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> for desk-related pain, and <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> for stubborn, long-standing conditions. Local clients also make good use of the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> and the lower-cost <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link>.
+            Being so local, Upper Holloway clients book across the board &mdash; <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (from £50) for training and gym niggles, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> (from £75) for desk-related pain, and <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> (from £75) for stubborn, long-standing conditions. Local clients also make good use of the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> (private sauna sessions from £19) and the lower-cost <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link> (60 minutes for £60 on Tuesdays).
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Upper Holloway and the wider N19</h2>
@@ -122,11 +122,11 @@ export default function UpperHollowayN19Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How close is the clinic to Upper Holloway?</h3>
-              <p>Very close &mdash; the clinic is in the same N19 postcode. 130 Junction Road runs through the heart of Upper Holloway, so for most local addresses it is a short, flat walk. Upper Holloway Overground station is a few minutes away, and every Junction Road and Holloway Road bus stops nearby.</p>
+              <p>Very close &mdash; the clinic is in the same N19 postcode. 130 Junction Road runs through the heart of Upper Holloway, so for most local addresses it is a short walk. Upper Holloway station (Overground, Suffragette line) is nearby, and buses along Junction Road and Holloway Road stop close by.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Which station is nearest for Upper Holloway?</h3>
-              <p>Upper Holloway station on the Overground (Gospel Oak to Barking line) is the closest, just off Holloway Road. Archway on the Northern Line is also a short walk. Both put the clinic within a few minutes.</p>
+              <p>The clinic is a short walk from Archway and Tufnell Park stations on the Northern Line. Upper Holloway station, on Holloway Road, is on the Overground&apos;s Suffragette line.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat Whittington Hospital staff?</h3>
@@ -139,13 +139,10 @@ export default function UpperHollowayN19Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your local session in Upper Holloway</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; on your doorstep.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your local session in Upper Holloway"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — on your doorstep."
+        />
       </div>
     </>
   )

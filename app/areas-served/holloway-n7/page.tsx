@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -47,7 +47,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to the clinic from Holloway Road or the Nag’s Head?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Holloway Road runs straight up to Archway, where it becomes Junction Road. From the Nag’s Head it is about a 15-minute walk, or a few stops on the 43, 271, 263 or 17 bus towards Archway. From Holloway Road tube (Piccadilly Line) the clinic is roughly 1.2km north.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Holloway Road runs straight up to Archway, and the clinic is a short walk from Archway station along Junction Road. From the Nag’s Head it is a few stops on the 43, 263 or 17 bus towards Archway. From Holloway Road tube (Piccadilly Line), the 43 runs north to Archway.' },
     },
     {
       '@type': 'Question',
@@ -89,7 +89,7 @@ export default function HollowayN7Page() {
       <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Holloway is one of our closest catchment areas &mdash; Holloway Road runs directly up to Archway, where it becomes Junction Road and passes the clinic at number 130. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>, a certified MLD practitioner.
+            Holloway is one of our closest catchment areas &mdash; Holloway Road runs directly up to Archway, and the clinic is a short walk from there at 130 Junction Road. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>, a certified MLD practitioner.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N7</h2>
@@ -99,12 +99,12 @@ export default function HollowayN7Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Holloway</h2>
           <p>
-            The simplest route is straight up Holloway Road. From the Nag&apos;s Head it&apos;s about a 15-minute walk to Archway, then a minute onto Junction Road. If you&apos;d rather ride, the 43, 271, 263 and 17 all run up Holloway Road towards Archway and stop within a short walk of the clinic. From Holloway Road tube station on the Piccadilly Line the clinic is roughly 1.2km north &mdash; an easy bus hop or a brisk walk. Caledonian Road &amp; Barnsbury on the Overground is also within reach.
+            The simplest route is straight up Holloway Road to Archway, then a short walk along Junction Road to the clinic. The 43, 263 and 17 all run up Holloway Road from the Nag&apos;s Head towards Archway. From Holloway Road tube station on the Piccadilly Line, hop on the 43 north to Archway.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Holloway clients</h2>
           <p>
-            For gym-goers, climbers and runners, the go-to is a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link>. Desk workers and students dealing with neck, shoulder and lower back tension usually start with the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link>. For pain that hasn&apos;t settled with general massage elsewhere, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> takes an assessment-led approach to the root cause.
+            For gym-goers, climbers and runners, the go-to is a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110). Desk workers and students dealing with neck, shoulder and lower back tension usually start with the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> (from £75). For pain that hasn&apos;t settled with general massage elsewhere, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> (from £75) takes an assessment-led approach to the root cause.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Holloway and the wider N7 catchment</h2>
@@ -122,7 +122,7 @@ export default function HollowayN7Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to the clinic from Holloway Road or the Nag&apos;s Head?</h3>
-              <p>Holloway Road runs straight up to Archway, where it becomes Junction Road. From the Nag&apos;s Head it is about a 15-minute walk, or a few stops on the 43, 271, 263 or 17 bus towards Archway. From Holloway Road tube (Piccadilly Line) the clinic is roughly 1.2km north.</p>
+              <p>Holloway Road runs straight up to Archway, and the clinic is a short walk from Archway station along Junction Road. From the Nag&apos;s Head it is a few stops on the 43, 263 or 17 bus towards Archway. From Holloway Road tube (Piccadilly Line), the 43 runs north to Archway.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat gym-goers and students from London Metropolitan University?</h3>
@@ -139,13 +139,10 @@ export default function HollowayN7Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Holloway</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; straight up Holloway Road.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Holloway"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — straight up Holloway Road."
+        />
       </div>
     </>
   )

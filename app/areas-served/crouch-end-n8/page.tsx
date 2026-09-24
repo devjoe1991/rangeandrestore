@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -47,7 +47,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Crouch End has no tube — how do I get to the clinic?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The 41 bus runs from Crouch End Broadway straight to Archway, where the clinic is a short walk on Junction Road — usually 15–20 minutes. Because Archway has a tube station, the 41 is also the easy way to connect to the Northern Line. The W7 to Finsbury Park is another option, connecting to the 210.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The 41 bus runs from Crouch End Broadway straight to Archway, where the clinic is a short walk on Junction Road. Because Archway has a tube station, the 41 is also the easy way to connect to the Northern Line. The W7 to Finsbury Park is another option, connecting to the 210.' },
     },
     {
       '@type': 'Question',
@@ -89,7 +89,7 @@ export default function CrouchEndN8Page() {
       <div className="container-page container-wide">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Crouch End is famous for having no tube station of its own &mdash; which is exactly why our Archway clinic is so handy. The 41 bus runs from Crouch End Broadway straight to Archway, where Range and Restore sits at 130 Junction Road, right by the Northern Line. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>.
+            Crouch End is famous for having no tube station of its own &mdash; which is exactly why our Archway clinic is so handy. The 41 bus runs from Crouch End Broadway straight to Archway, where Range and Restore sits at 130 Junction Road, a short walk from Archway station on the Northern Line. Treatment is delivered by our <Link href={ROUTES.team} className="link-inline">team of BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists</Link>, led by founder <Link href={ROUTES.about} className="link-inline">Carlos Bonvicine</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who books with us from N8</h2>
@@ -99,12 +99,12 @@ export default function CrouchEndN8Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Crouch End</h2>
           <p>
-            The 41 bus is the direct route: from Crouch End Broadway it runs to Archway, dropping you a short walk from the clinic &mdash; usually 15 to 20 minutes. If you&apos;re coming from the Hornsey or Ferme Park side, the W7 to Finsbury Park connects to the 210 up to Archway. By bike, the ride over via Stroud Green and Crouch Hill is well within reach, and there are racks at the clinic. Archway&apos;s Northern Line station makes the return trip easy if you&apos;re heading on into town.
+            The 41 bus is the direct route: from Crouch End Broadway it runs to Archway, dropping you a short walk from the clinic. If you&apos;re coming from the Hornsey or Ferme Park side, the W7 to Finsbury Park connects to the 210 up to Archway. By bike, the ride over via Stroud Green and Crouch Hill is well within reach, and there are racks at the clinic. Archway&apos;s Northern Line station makes the return trip easy if you&apos;re heading on into town.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Crouch End clients</h2>
           <p>
-            Runners book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> for maintenance and recovery &mdash; our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> has the detail. Freelancers and home-workers usually start with the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> for postural pain. For chronic or complex issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> takes an assessment-led approach to the underlying cause.
+            Runners book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110) for maintenance and recovery &mdash; our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> has the detail. Freelancers and home-workers usually start with the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> (from £75) for postural pain. For chronic or complex issues, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> (from £75) takes an assessment-led approach to the underlying cause.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Crouch End and the wider catchment</h2>
@@ -122,7 +122,7 @@ export default function CrouchEndN8Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Crouch End has no tube &mdash; how do I get to the clinic?</h3>
-              <p>The 41 bus runs from Crouch End Broadway straight to Archway, where the clinic is a short walk on Junction Road &mdash; usually 15&ndash;20 minutes. Because Archway has a tube station, the 41 is also the easy way to connect to the Northern Line. The W7 to Finsbury Park is another option, connecting to the 210.</p>
+              <p>The 41 bus runs from Crouch End Broadway straight to Archway, where the clinic is a short walk on Junction Road. Because Archway has a tube station, the 41 is also the easy way to connect to the Northern Line. The W7 to Finsbury Park is another option, connecting to the 210.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat runners from Priory Park and Alexandra Palace?</h3>
@@ -139,13 +139,10 @@ export default function CrouchEndN8Page() {
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Crouch End</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; a direct 41 bus from the Broadway.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Crouch End"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — a direct 41 bus from the Broadway."
+        />
       </div>
     </>
   )

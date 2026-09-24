@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, buildBreadcrumbs, BASE_URL } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
+import { BOOKING_URLS } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Find Us on the Refuse 2 Quit Network',
@@ -51,7 +52,7 @@ export default function Refuse2QuitNetworkPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What the Refuse 2 Quit Network is</h2>
           <p>
-            The <a href={NETWORK_URL} target="_blank" rel="noopener" className="link-inline">Refuse 2 Quit Network</a> is an online directory of creatives, makers and specialists, most of them small businesses in London. When we joined in September 2026 it listed more than 3,600 people. Members sit in categories from food and drink, events and hospitality, and beauty, hair and makeup, to music, photography, marketing, tech and health and wellbeing. Each member has a profile saying what they do and what kind of connections they are looking for. Other members can message them, and vouch for work they have seen first hand.
+            The <a href={LISTING_URL} target="_blank" rel="noopener" className="link-inline">Refuse 2 Quit Network</a> is an online directory of creatives, makers and specialists, most of them small businesses in London. When we joined in September 2026 it listed more than 3,600 people. Members sit in categories from food and drink, events and hospitality, and beauty, hair and makeup, to music, photography, marketing, tech and health and wellbeing. Each member has a profile saying what they do and what kind of connections they are looking for. Other members can message them, and vouch for work they have seen first hand.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we are on it</h2>
@@ -87,12 +88,14 @@ export default function Refuse2QuitNetworkPage() {
             >
               Range and Restore on Refuse 2 Quit <span aria-hidden="true">→</span>
             </a>
-            <Link
-              href={ROUTES.contact}
+            <a
+              href={BOOKING_URLS.general}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-brand-green hover:bg-brand-green hover:text-white transition-colors font-bold uppercase tracking-wide text-sm px-6 py-3 rounded-full no-underline border-2 border-brand-green"
             >
               Book Range and Restore <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </div>
         </div>
 

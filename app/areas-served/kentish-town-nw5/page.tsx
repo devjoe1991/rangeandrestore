@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BookingButton } from '@/components/BookingButton'
+import { AreaVisit } from '../_components/AreaVisit'
 import { buildMetadata, buildBreadcrumbs, BASE_URL, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
@@ -47,7 +47,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How do I get to the clinic from Kentish Town?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The 134 bus runs from Kentish Town up Fortess Road through Tufnell Park to Archway, dropping you a short walk from the clinic — usually around 15 minutes. From Kentish Town tube (Northern Line) it is a couple of stops to Archway. By bike, the ride up Fortess Road and Junction Road is short and direct.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The 134 bus runs from Kentish Town up Fortess Road through Tufnell Park and along Junction Road, stopping near the clinic door. From Kentish Town tube (Northern Line) it is one stop to Tufnell Park or two to Archway, and the clinic is a short walk from either. By bike, the ride up Fortess Road and Junction Road is short and direct.' },
     },
     {
       '@type': 'Question',
@@ -62,7 +62,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What do most Kentish Town clients book?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The most-booked options from NW5 are a 60- or 90-minute sports and deep tissue massage for runners and gym-goers, and the Back & Neck Pain MOT for desk-related pain. Every session begins with an assessment so the treatment fits how you present that day.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The most-booked options from NW5 are a 60- or 90-minute sports and deep tissue massage (£75 or £110) for runners and gym-goers, and the Back & Neck Pain MOT (from £75) for desk-related pain. Every session begins with an assessment so the treatment fits how you present that day.' },
     },
   ],
 }
@@ -99,12 +99,12 @@ export default function KentishTownNW5Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Kentish Town</h2>
           <p>
-            The 134 bus is the direct route: it runs from Kentish Town up Fortess Road, through Tufnell Park to Archway, and drops you a short walk from the clinic &mdash; usually around 15 minutes. From Kentish Town tube on the Northern Line it&apos;s a couple of stops to Archway, and Kentish Town is also on the Overground and Thameslink for connections. By bike, the run up Fortess Road and Junction Road is short and there are racks at the clinic.
+            The 134 bus is the direct route: it runs from Kentish Town up Fortess Road, through Tufnell Park and along Junction Road, stopping near the clinic door. By tube, take the Northern Line from Kentish Town one stop to Tufnell Park or two to Archway; the clinic is a short walk from either. By bike, the run up Fortess Road and Junction Road is short and there are racks at the clinic.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Kentish Town clients</h2>
           <p>
-            Runners and gym-goers book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> for maintenance and recovery &mdash; our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> covers the detail, and around bigger efforts the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> and <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression boots</Link> are popular add-ons. For desk and postural pain, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> is the usual starting point.
+            Runners and gym-goers book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110) for maintenance and recovery &mdash; our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> covers the detail, and around bigger efforts many add a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> session (from £19) or book the 90-minute <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link> session (£110). For desk and postural pain, the <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> (from £75) is the usual starting point.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Kentish Town and the wider catchment</h2>
@@ -122,7 +122,7 @@ export default function KentishTownNW5Page() {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">How do I get to the clinic from Kentish Town?</h3>
-              <p>The 134 bus runs from Kentish Town up Fortess Road through Tufnell Park to Archway, dropping you a short walk from the clinic &mdash; usually around 15 minutes. From Kentish Town tube (Northern Line) it is a couple of stops to Archway. By bike, the ride up Fortess Road and Junction Road is short and direct.</p>
+              <p>The 134 bus runs from Kentish Town up Fortess Road through Tufnell Park and along Junction Road, stopping near the clinic door. From Kentish Town tube (Northern Line) it is one stop to Tufnell Park or two to Archway, and the clinic is a short walk from either. By bike, the ride up Fortess Road and Junction Road is short and direct.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat runners from Hampstead Heath and Gospel Oak?</h3>
@@ -134,18 +134,15 @@ export default function KentishTownNW5Page() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">What do most Kentish Town clients book?</h3>
-              <p>The most-booked options from NW5 are a 60- or 90-minute sports and deep tissue massage for runners and gym-goers, and the Back &amp; Neck Pain MOT for desk-related pain. Every session begins with an assessment so the treatment fits how you present that day.</p>
+              <p>The most-booked options from NW5 are a 60- or 90-minute sports and deep tissue massage (£75 or £110) for runners and gym-goers, and the Back &amp; Neck Pain MOT (from £75) for desk-related pain. Every session begins with an assessment so the treatment fits how you present that day.</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Book your session from Kentish Town</h2>
-          <p className="text-brand-green font-semibold mb-6">
-            Same-week slots available. 130 Junction Road, Archway, London N19 5LB &mdash; a direct 134 bus up Fortess Road.
-          </p>
-          <BookingButton label="Book Your Session" />
-        </div>
+        <AreaVisit
+          heading="Book your session from Kentish Town"
+          text="Same-week slots available. 130 Junction Road, Archway, London N19 5LB — a direct 134 bus up Fortess Road."
+        />
       </div>
     </>
   )
