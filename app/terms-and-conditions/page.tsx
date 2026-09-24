@@ -95,7 +95,7 @@ export default function TermsAndConditionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-page">8. Conduct</h2>
             <ul className="space-y-3 list-disc list-inside">
-              <li>We expect all clients to treat our therapist and any associated staff with respect and professionalism.</li>
+              <li>We expect all clients to treat our therapists and staff with respect and professionalism.</li>
               <li>Any inappropriate, abusive, or disrespectful behaviour will result in immediate termination of the session, and the client will be charged in full.</li>
               <li>Massage therapy is a professional healthcare service. Any sexual advances or inappropriate behaviour will result in immediate termination of the session and may be reported to the appropriate authorities.</li>
             </ul>

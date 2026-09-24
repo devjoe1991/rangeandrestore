@@ -323,12 +323,11 @@ export const businessSchema = {
     },
     {
       '@type': 'Offer',
-      name: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage',
-      description: 'Integrated cupping therapy combined with sports and deep tissue massage \u2014 static and dynamic cupping, myofascial release and deep tissue work for chronic tension, fascial restriction and recovery. 30, 60 or 90 minutes.',
+      name: 'Cupping + Sports Massage',
+      description: 'Advanced cupping therapy combined with sports and deep tissue massage \u2014 static and dynamic cupping, myofascial release and deep tissue work for chronic tension, fascial restriction and recovery. 60 or 90 minutes.',
       url: `${BASE_URL}/services/advanced-cupping-sports-deep-tissue`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '60', priceCurrency: 'GBP', description: '30 minutes' },
         { '@type': 'PriceSpecification', price: '85', priceCurrency: 'GBP', description: '60 minutes' },
         { '@type': 'PriceSpecification', price: '125', priceCurrency: 'GBP', description: '90 minutes' },
       ],
@@ -353,7 +352,6 @@ export const businessSchema = {
       url: `${BASE_URL}/services/advanced-clinical-massage`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
         { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
         { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
       ],
@@ -365,7 +363,6 @@ export const businessSchema = {
       url: `${BASE_URL}/services/back-neck-pain-mot`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
         { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
         { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
       ],
@@ -373,11 +370,10 @@ export const businessSchema = {
     {
       '@type': 'Offer',
       name: 'Manual Lymphatic Drainage (MLD)',
-      description: 'Certified MLD for post-surgery recovery, lymphoedema, swelling and immune support.',
+      description: 'Certified MLD for post-surgery recovery, lymphoedema and swelling.',
       url: `${BASE_URL}/services/manual-lymphatic-drainage`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '50', priceCurrency: 'GBP', description: '30 minutes' },
         { '@type': 'PriceSpecification', price: '75', priceCurrency: 'GBP', description: '60 minutes' },
         { '@type': 'PriceSpecification', price: '110', priceCurrency: 'GBP', description: '90 minutes' },
       ],
@@ -395,7 +391,7 @@ export const businessSchema = {
     {
       '@type': 'Offer',
       name: 'Infrared Hybrid Sauna',
-      description: 'Private use of the Recovery Suite with the Infrared & Traditional Hybrid Sauna (full spectrum infrared and traditional heat) and Hyperice Normatec 3 Full Body recovery system.',
+      description: 'Private use of the Recovery Suite with the Infrared & Traditional Hybrid Sauna (full spectrum infrared and traditional heat), for one or two people.',
       url: `${BASE_URL}/recovery-suite/infrared-sauna`,
       priceCurrency: 'GBP',
       priceSpecification: [
@@ -406,7 +402,7 @@ export const businessSchema = {
     {
       '@type': 'Offer',
       name: 'Sports Massage + Sauna Recovery Package',
-      description: 'Combined sports massage and private Infrared Hybrid Sauna Recovery Suite session in one appointment.',
+      description: 'Sports massage followed by a private Infrared Hybrid Sauna Recovery Suite session.',
       url: `${BASE_URL}/recovery-suite/recovery-packages`,
       priceCurrency: 'GBP',
       priceSpecification: [

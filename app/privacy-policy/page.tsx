@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
       <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Privacy Policy</h1>
-          <p className="mt-4 text-page-muted opacity-80">Last updated: January 2026</p>
+          <p className="mt-4 text-page-muted opacity-80">Last updated: September 2026</p>
         </div>
       </div>
 
@@ -40,7 +40,8 @@ export default function PrivacyPolicyPage() {
               <li><strong>Health information:</strong> relevant medical history, injury details, and treatment notes — only as necessary for providing massage therapy services</li>
               <li><strong>Booking information:</strong> appointment dates, treatment types, and session notes</li>
               <li><strong>Communication records:</strong> emails, messages, and enquiries you send us</li>
-              <li><strong>Website usage data:</strong> anonymised analytics data collected via PostHog (where you have consented)</li>
+              <li><strong>Website usage data:</strong> pages visited, clicks on booking links and similar activity, collected by Google Analytics, Google Ads and the Meta Pixel only if you accept cookies</li>
+              <li><strong>Newsletter sign-ups:</strong> your email address and name, if you join our mailing list</li>
             </ul>
           </section>
 
@@ -53,6 +54,8 @@ export default function PrivacyPolicyPage() {
               <li>Respond to your enquiries and communications</li>
               <li>Process bookings and gift card purchases</li>
               <li>Send appointment reminders where requested</li>
+              <li>Send our newsletter, if you have signed up (you can unsubscribe from any email)</li>
+              <li>Measure which adverts and pages lead to bookings, if you have accepted cookies</li>
               <li>Improve our services and website</li>
             </ul>
           </section>
@@ -80,8 +83,9 @@ export default function PrivacyPolicyPage() {
             <p>We do not sell your personal information. We may share information with:</p>
             <ul className="space-y-2 list-disc list-inside">
               <li><strong>Our booking system provider (JaneApp):</strong> to manage appointments. JaneApp operates GDPR-compliant data practices.</li>
-              <li><strong>Email service providers:</strong> to send booking confirmations and communications</li>
-              <li><strong>Analytics providers:</strong> anonymised usage data only, where you have consented</li>
+              <li><strong>Mailchimp (Intuit):</strong> to store newsletter sign-ups and send our newsletter</li>
+              <li><strong>Google (Analytics and Ads) and Meta (Facebook and Instagram):</strong> website usage and booking-link clicks, only if you accept cookies</li>
+              <li><strong>Google Maps and Facebook:</strong> the map on our contact page and the Facebook feed load content from Google and Meta, who may record your visit under their own privacy policies</li>
               <li><strong>Legal authorities:</strong> where required by law</li>
             </ul>
             <p>
@@ -118,7 +122,16 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-page">9. Cookies and Analytics</h2>
             <p>
-              Our website may use cookies and analytics tools to understand how visitors use the site. Where analytics tools are used, data is collected anonymously and aggregated. You will be asked for consent before any tracking takes place.
+              When you first visit, a banner asks whether you accept cookies. Until you accept, no analytics or advertising cookies are set and nothing is sent to Google or Meta for measurement.
+            </p>
+            <p>If you accept, we use:</p>
+            <ul className="space-y-2 list-disc list-inside">
+              <li><strong>Google Analytics:</strong> to see which pages people visit and how they find us</li>
+              <li><strong>Google Ads:</strong> to measure which adverts lead to bookings</li>
+              <li><strong>Meta Pixel:</strong> to measure which Facebook and Instagram adverts lead to bookings</li>
+            </ul>
+            <p>
+              Your choice is saved in your browser. To change it, clear this site&apos;s data in your browser settings and the banner will ask again on your next visit.
             </p>
           </section>
 
