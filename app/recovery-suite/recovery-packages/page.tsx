@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { SaunaPhotos } from '@/components/SaunaPhotos'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
@@ -292,7 +292,6 @@ export default function RecoverySessionsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(parentServiceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

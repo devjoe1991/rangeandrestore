@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
@@ -78,7 +78,6 @@ export default function CompressionTherapyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -5,7 +5,7 @@ import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { RecoverySuiteCard } from '@/components/RecoverySuiteCard'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,7 +58,6 @@ export default function RecoverySuitePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqSchema(faqs)) }} />
 
       {/* Hero */}
       <div className="relative bg-brand-green py-16 lg:py-24 overflow-hidden">
