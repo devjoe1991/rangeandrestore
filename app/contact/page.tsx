@@ -86,7 +86,7 @@ export default function ContactPage() {
                 href={`tel:${BUSINESS.phoneTel}`}
                 className="btn btn-primary w-full text-base"
               >
-                Call {BUSINESS.phone}
+                Call now to book
               </a>
               <a
                 href={WHATSAPP_URL}
@@ -122,7 +122,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-page mb-1">WhatsApp</h3>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-page font-medium min-h-[44px] inline-flex items-center">
-                  Message {BUSINESS.phone} on WhatsApp
+                  Message us on WhatsApp
                 </a>
               </div>
 

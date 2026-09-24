@@ -283,7 +283,7 @@ export default function ServicesPage() {
               Tell us what&apos;s going on — where it hurts, how long it&apos;s been there, what you&apos;ve tried — and we&apos;ll point you to the right session before you book.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call {BUSINESS.phone}</a>
+              <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call now to book</a>
               <Link
                 href={ROUTES.contact}
                 className="text-page text-sm font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center underline underline-offset-2"
@@ -324,7 +324,7 @@ export default function ServicesPage() {
             <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
+              aria-label="Call Range and Restore to book"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />

@@ -81,7 +81,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <SearchTrigger className="text-brand-green/80 hover:text-brand-green" />
             <a href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
+              aria-label="Call Range and Restore to book"
               className="flex items-center justify-center w-11 h-11 rounded-full bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all flex-shrink-0">
               <PhoneIcon />
             </a>
@@ -101,7 +101,7 @@ export function Header() {
           </span>
         </Link>
         <SearchTrigger className="text-brand-green/80 w-10 h-10 justify-center flex-shrink-0" />
-        <a href={`tel:${BUSINESS.phoneTel}`} aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
+        <a href={`tel:${BUSINESS.phoneTel}`} aria-label="Call Range and Restore to book"
           className="flex items-center justify-center w-10 h-10 rounded-full bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white transition-all flex-shrink-0">
           <PhoneIcon />
         </a>
@@ -156,7 +156,7 @@ export function Header() {
           </a>
           <a href={`tel:${BUSINESS.phoneTel}`}
             className="flex items-center justify-center gap-2 text-white font-semibold text-base min-h-[48px]">
-            <PhoneIcon /> {BUSINESS.phone}
+            <PhoneIcon /> Call now to book
           </a>
         </div>
       </div>

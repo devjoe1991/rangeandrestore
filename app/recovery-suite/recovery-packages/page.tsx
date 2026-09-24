@@ -409,7 +409,7 @@ export default function RecoverySessionsPage() {
               To join a Restore+ membership, please call or email us. Memberships are set up personally and are not currently available to purchase online.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call {BUSINESS.phone}</a>
+              <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-primary text-sm">Call now to book</a>
               <a
                 href={`mailto:${BUSINESS.email}`}
                 className="text-page text-sm font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center underline underline-offset-2"

@@ -167,7 +167,7 @@ export default function PrivacyPolicyPage() {
               Range and Restore Sports Massage<br />
               {BUSINESS.address}<br />
               <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:underline">{BUSINESS.email}</a><br />
-              <a href={`tel:${BUSINESS.phoneTel}`} className="text-brand-teal hover:underline">{BUSINESS.phone}</a>
+              <a href={`tel:${BUSINESS.phoneTel}`} className="text-brand-teal hover:underline">Call us</a>
             </address>
           </section>
         </div>

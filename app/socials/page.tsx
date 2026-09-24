@@ -111,7 +111,7 @@ export default function SocialsPage() {
             </Link>
           </div>
           <p className="text-brand-green/70 text-xs font-semibold mt-5">
-            130 Junction Road, Archway, London N19 5LB · <a href={`tel:${BUSINESS.phoneTel}`} className="underline">{BUSINESS.phone}</a>
+            130 Junction Road, Archway, London N19 5LB · <a href={`tel:${BUSINESS.phoneTel}`} className="underline">Call now to book</a>
           </p>
         </div>
       </section>

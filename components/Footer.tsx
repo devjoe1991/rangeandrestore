@@ -42,7 +42,7 @@ export function Footer() {
               <p>
                 <a href={`tel:${BUSINESS.phoneTel}`}
                   className="hover:text-brand-teal transition-colors inline-flex items-center gap-1.5 min-h-[44px] font-bold">
-                  <PhoneIcon /> {BUSINESS.phone}
+                  <PhoneIcon /> Call now to book
                 </a>
               </p>
             </address>

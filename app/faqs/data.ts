@@ -24,7 +24,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'How do I book?',
-    a: `Book online any time through our booking system, Jane, where you can pick your treatment, therapist and time. You can also call us on ${BUSINESS.phone} or message us on WhatsApp.`,
+    a: `Book online any time through our booking system, Jane, where you can pick your treatment, therapist and time. You can also call us or message us on WhatsApp using the buttons on any page.`,
     link: { href: BOOKING_URLS.general, label: 'Book online' },
   },
   {

@@ -237,7 +237,7 @@ export default function HomePage() {
             <BookingButton label="Book Your Session" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
+              aria-label="Call Range and Restore to book"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-brand-teal/60 hover:bg-white/25 hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
@@ -492,7 +492,7 @@ export default function HomePage() {
                 <p className="text-sm mt-2">
                   <a href={`tel:${BUSINESS.phoneTel}`}
                     className="text-brand-green hover:text-brand-teal transition-colors font-bold inline-flex items-center gap-1.5 min-h-[44px]">
-                    <PhoneIcon /> {BUSINESS.phone}
+                    <PhoneIcon /> Call now to book
                   </a>
                 </p>
               </div>
@@ -603,7 +603,7 @@ export default function HomePage() {
             <BookingButton label="Book Your Session" className="bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal transition-all" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
-              aria-label={`Call Range and Restore on ${BUSINESS.phone}`}
+              aria-label="Call Range and Restore to book"
               className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />

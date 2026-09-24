@@ -44,7 +44,7 @@ export function AreaVisit({ heading, text }: AreaVisitProps) {
             href={`tel:${BUSINESS.phoneTel}`}
             className="btn-ink-outline"
           >
-            Call {BUSINESS.phone}
+            Call now to book
           </a>
           <a
             href={WHATSAPP_URL}

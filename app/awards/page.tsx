@@ -211,7 +211,7 @@ export default function AwardsPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-3">Book the award-winning clinic</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Come and feel the difference for yourself. Book online in a couple of minutes, or call Range and Restore directly on {BUSINESS.phone}.
+            Come and feel the difference for yourself. Book online in a couple of minutes, or <a href={`tel:${BUSINESS.phoneTel}`} className="underline underline-offset-2">call Range and Restore</a> directly.
           </p>
           <a
             href={BOOKING_URLS.general}

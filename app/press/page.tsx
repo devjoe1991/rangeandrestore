@@ -48,7 +48,7 @@ const faqSchema = {
       name: 'How do journalists and producers contact Range and Restore?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Email press, podcast and media enquiries to ${BUSINESS.email}, or call ${BUSINESS.phone}. Include the outlet, the angle, your deadline and any preferred interview format. Carlos Bonvicine replies to all press requests himself.`,
+        text: `Email press, podcast and media enquiries to ${BUSINESS.email}, or call us. Include the outlet, the angle, your deadline and any preferred interview format. Carlos Bonvicine replies to all press requests himself.`,
       },
     },
     {
@@ -80,7 +80,7 @@ const faqSchema = {
       name: 'Can journalists visit the clinic for filming or photography?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: `Yes. We host clinic visits, behind-the-scenes filming, photography and interview shoots at 130 Junction Road by appointment. Email ${BUSINESS.email} or call ${BUSINESS.phone} to arrange access.`,
+        text: `Yes. We host clinic visits, behind-the-scenes filming, photography and interview shoots at 130 Junction Road by appointment. Email ${BUSINESS.email} or call us to arrange access.`,
       },
     },
     {
@@ -190,7 +190,7 @@ export default function PressPage() {
             <strong className="text-page">Email:</strong>{' '}
             <a href={`mailto:${BUSINESS.email}`} className="link-cite">{BUSINESS.email}</a><br />
             <strong className="text-page">Phone:</strong>{' '}
-            <a href={`tel:${BUSINESS.phoneTel}`} className="link-cite">{BUSINESS.phone}</a><br />
+            <a href={`tel:${BUSINESS.phoneTel}`} className="link-cite">Call us</a><br />
             Please include the outlet, angle and deadline.
           </p>
 
@@ -200,8 +200,8 @@ export default function PressPage() {
           <p>
             Email press, podcast and media enquiries to{' '}
             <a href={`mailto:${BUSINESS.email}`} className="link-cite">{BUSINESS.email}</a>{' '}
-            or call{' '}
-            <a href={`tel:${BUSINESS.phoneTel}`} className="link-cite">{BUSINESS.phone}</a>. Include the outlet, the angle, your deadline and any preferred interview format. Carlos replies to all press requests himself.
+            or{' '}
+            <a href={`tel:${BUSINESS.phoneTel}`} className="link-cite">call us</a>. Include the outlet, the angle, your deadline and any preferred interview format. Carlos replies to all press requests himself.
           </p>
 
           <h3 className="text-lg font-bold text-page mt-6 mb-2">What subjects can Carlos speak on as an expert?</h3>
@@ -237,8 +237,8 @@ export default function PressPage() {
           <p className="text-brand-green font-semibold mb-6">
             Email{' '}
             <a href={`mailto:${BUSINESS.email}`} className="underline underline-offset-2">{BUSINESS.email}</a>{' '}
-            or call{' '}
-            <a href={`tel:${BUSINESS.phoneTel}`} className="underline underline-offset-2">{BUSINESS.phone}</a>{' '}
+            or{' '}
+            <a href={`tel:${BUSINESS.phoneTel}`} className="underline underline-offset-2">call us</a>{' '}
             with a short note on the outlet, the angle and your deadline.
           </p>
           <a

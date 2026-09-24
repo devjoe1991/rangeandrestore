@@ -54,7 +54,7 @@ export default function NotFound() {
             Book Your Session
           </a>
           <a href={`tel:${BUSINESS.phoneTel}`} className="btn btn-outline-white">
-            {BUSINESS.phone}
+            Call now to book
           </a>
         </div>
 

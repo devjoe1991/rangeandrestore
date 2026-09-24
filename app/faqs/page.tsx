@@ -41,7 +41,7 @@ export default function FAQsPage() {
             Whether you are new to massage, managing an injury, or just curious about booking, find your answer here.
           </p>
           <p className="mt-3 text-base text-page-muted opacity-80 max-w-xl">
-            Not sure which treatment is right for you? Call Range and Restore on <a href={`tel:${BUSINESS.phoneTel}`} className="font-semibold text-page hover:underline">{BUSINESS.phone}</a>. We are happy to talk it through before you book.
+            Not sure which treatment is right for you? <a href={`tel:${BUSINESS.phoneTel}`} className="font-semibold text-page hover:underline">Call Range and Restore</a>. We are happy to talk it through before you book.
           </p>
         </div>
       </div>

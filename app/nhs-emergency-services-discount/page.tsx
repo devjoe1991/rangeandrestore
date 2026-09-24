@@ -205,8 +205,7 @@ export default function NhsEmergencyServicesDiscountPage() {
               ))}
             </ul>
             <p className="mt-4 text-page-muted">
-              Not sure whether your role qualifies? Ring the clinic on{' '}
-              <a href={`tel:${BUSINESS.phoneTel}`} className="link-inline">{BUSINESS.phone}</a>{' '}
+              Not sure whether your role qualifies? <a href={`tel:${BUSINESS.phoneTel}`} className="link-inline">Call the clinic</a>{' '}
               before you book and we will tell you straight away.
             </p>
           </section>
