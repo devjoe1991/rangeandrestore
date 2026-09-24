@@ -136,7 +136,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 ### A2 — Inside the sauna room ⭐
 - **Format:** Carousel or Reel · **Template:** T1 cover + photos
 - **Photos:** `public/Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg` for the cover; then `Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg`, `Gallery/two-person-infrared-sauna-red-light-heaters-range-and-restore-archway-north-london.jpg` and the shower shot. For a Reel, use the September 2026 phone videos of the room.
-- **On-image cover:** `SEE OUR SAUNA ROOM` / `BEFORE YOU BOOK` · small tag `THE SAUNA ROOM`
+- **On-image cover:** `OUR SAUNA ROOM` · small tag `THE SAUNA ROOM`
 - **Caption:**
 > This is the sauna room, exactly as you'll find it.
 >

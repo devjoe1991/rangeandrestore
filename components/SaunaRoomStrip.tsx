@@ -35,7 +35,7 @@ export function SaunaRoomCard() {
       <FeatureCardContent
         inverse
         eyebrow="Private Sauna Suite"
-        title="See our sauna room before you book"
+        title="Our sauna room"
         lead="A private two person infrared suite at the quiet back of the clinic."
         body={
           <p>
