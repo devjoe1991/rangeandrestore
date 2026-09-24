@@ -99,7 +99,7 @@ export default function StroudGreenN4Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Stroud Green</h2>
           <p>
-            The simplest route is a short walk down to Finsbury Park for the 210 bus to Archway; the clinic is a short walk from there along Junction Road. Crouch Hill station on the Overground is close by too. By bike it&apos;s a quick ride over, and there are bike racks at the clinic end.
+            The simplest route is a short walk down to Finsbury Park for the 210 bus to Archway; the clinic is a short walk from there along Junction Road. Crouch Hill station on the Overground is close by too. By bike it&apos;s a quick ride over, and there are public bike racks on Junction Road, right outside the clinic.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Stroud Green clients</h2>

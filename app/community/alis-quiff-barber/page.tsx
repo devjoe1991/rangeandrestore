@@ -96,7 +96,7 @@ export default function AlisQuiffBarberPartnerPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">A nice collaboration between two Archway businesses</h2>
           <p>
-            Range and Restore Sports Massage and Ali’s Quiff Barber are both based here in Archway. Our founder, Carlos, has had the full-service experience at Ali’s, and it’s a good reminder of how important it is, especially for men, to take time to look after themselves properly, not only physically but mentally as well.
+            Range and Restore Sports Massage and Ali’s Quiff Barber are both based here in Archway. Carlos Bonvicine, founder of Range and Restore, has had the full-service experience at Ali’s, and it’s a good reminder of how important it is, especially for men, to take time to look after themselves properly, not only physically but mentally as well.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">More than just a haircut</h2>

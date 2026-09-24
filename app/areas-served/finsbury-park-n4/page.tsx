@@ -99,7 +99,7 @@ export default function FinsburyParkN4Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Finsbury Park</h2>
           <p>
-            The simplest route is the 210 bus, which runs directly from Finsbury Park to Archway and drops you a short walk from the clinic. Because Finsbury Park station is a major interchange (Victoria and Piccadilly lines plus National Rail), it&apos;s easy to get there first from anywhere in N4. Cyclists can ride up via the quiet streets towards Stroud Green and Crouch Hill, and there are bike racks at the clinic end.
+            The simplest route is the 210 bus, which runs directly from Finsbury Park to Archway and drops you a short walk from the clinic. Because Finsbury Park station is a major interchange (Victoria and Piccadilly lines plus National Rail), it&apos;s easy to get there first from anywhere in N4. Cyclists can ride up via the quiet streets towards Stroud Green and Crouch Hill, and there are public bike racks on Junction Road, right outside the clinic.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Finsbury Park clients</h2>

@@ -99,7 +99,7 @@ export default function CrouchEndN8Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Crouch End</h2>
           <p>
-            The 41 bus is the direct route: from Crouch End Broadway it runs to Archway, dropping you a short walk from the clinic. If you&apos;re coming from the Hornsey or Ferme Park side, the W7 to Finsbury Park connects to the 210 up to Archway. By bike, the ride over via Stroud Green and Crouch Hill is well within reach, and there are racks at the clinic. Archway&apos;s Northern Line station makes the return trip easy if you&apos;re heading on into town.
+            The 41 bus is the direct route: from Crouch End Broadway it runs to Archway, dropping you a short walk from the clinic. If you&apos;re coming from the Hornsey or Ferme Park side, the W7 to Finsbury Park connects to the 210 up to Archway. By bike, the ride over via Stroud Green and Crouch Hill is well within reach, and there are public bike racks on Junction Road, right outside the clinic. Archway&apos;s Northern Line station makes the return trip easy if you&apos;re heading on into town.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Crouch End clients</h2>

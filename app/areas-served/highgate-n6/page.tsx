@@ -99,7 +99,7 @@ export default function HighgateN6Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Highgate</h2>
           <p>
-            It&apos;s downhill all the way. The 263 runs from Highgate Village down Highgate Hill to Archway, and the 134 runs from Highgate down to Archway and along Junction Road past the clinic. From Highgate tube station on the Northern Line it&apos;s a single stop to Archway, or a walk down the hill (a bit more of a pull on the way back). Cyclists already out on the climbs can drop into Archway easily, and there are racks at the clinic end.
+            It&apos;s downhill all the way. The 263 runs from Highgate Village down Highgate Hill to Archway, and the 134 runs from Highgate down to Archway and along Junction Road past the clinic. From Highgate tube station on the Northern Line it&apos;s a single stop to Archway, or a walk down the hill (a bit more of a pull on the way back). Cyclists already out on the climbs can drop into Archway easily, and there are public bike racks on Junction Road, right outside the clinic.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Highgate clients</h2>

@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: 'Is the clinic bike-friendly?',
-    a: 'The clinic is at 130 Junction Road, a short walk from Archway and Tufnell Park stations. Cyclists are welcome to bring kit in, and lock points are nearby.',
+    a: 'The clinic is at 130 Junction Road, a short walk from Archway and Tufnell Park stations. Cyclists are welcome to bring kit in, and there are public bike racks on Junction Road, right outside the clinic.',
   },
   {
     q: 'I commute on the road every day. Is that doing me damage?',

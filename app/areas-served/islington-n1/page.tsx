@@ -99,7 +99,7 @@ export default function IslingtonN1Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Islington</h2>
           <p>
-            The most reliable route is the bus: the 43 runs from Angel and Upper Street straight up through Highbury and Holloway to Archway, dropping you a short walk from the clinic. By tube, take the Northern Line from Angel to Archway. By bike it&apos;s a straightforward ride up through Highbury to Archway, and there are racks at the clinic end. By car or cab it&apos;s a short run up Holloway Road.
+            The most reliable route is the bus: the 43 runs from Angel and Upper Street straight up through Highbury and Holloway to Archway, dropping you a short walk from the clinic. By tube, take the Northern Line from Angel to Archway. By bike it&apos;s a straightforward ride up through Highbury to Archway, and there are public bike racks on Junction Road, right outside the clinic. By car or cab it&apos;s a short run up Holloway Road.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Islington clients</h2>

@@ -99,7 +99,7 @@ export default function KentishTownNW5Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Getting here from Kentish Town</h2>
           <p>
-            The 134 bus is the direct route: it runs from Kentish Town up Fortess Road, through Tufnell Park and along Junction Road, stopping near the clinic door. By tube, take the Northern Line from Kentish Town one stop to Tufnell Park or two to Archway; the clinic is a short walk from either. By bike, the run up Fortess Road and Junction Road is short and there are racks at the clinic.
+            The 134 bus is the direct route: it runs from Kentish Town up Fortess Road, through Tufnell Park and along Junction Road, stopping near the clinic door. By tube, take the Northern Line from Kentish Town one stop to Tufnell Park or two to Archway; the clinic is a short walk from either. By bike, the run up Fortess Road and Junction Road is short and there are public bike racks on Junction Road, right outside the clinic.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Kentish Town clients</h2>

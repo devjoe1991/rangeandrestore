@@ -102,7 +102,7 @@ export default function TufnellParkN7Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Walking and transport from Tufnell Park</h2>
           <p>
-            From Tufnell Park tube station (Northern Line), Junction Road runs north towards Archway, and the clinic is on it at number 130, inside the Reliable Scan building &mdash; a short walk from the station. If you&apos;d rather take the bus, the 134 runs up Junction Road towards Archway and stops near the door. By bike, the run up Junction Road is short and well-served by bike racks at the clinic end.
+            From Tufnell Park tube station (Northern Line), Junction Road runs north towards Archway, and the clinic is on it at number 130, inside the Reliable Scan building &mdash; a short walk from the station. If you&apos;d rather take the bus, the 134 runs up Junction Road towards Archway and stops near the door. By bike, the run up Junction Road is short, and there are public bike racks on Junction Road, right outside the clinic.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by N7 clients</h2>
