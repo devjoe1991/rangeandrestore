@@ -27,19 +27,19 @@
       "priceUnit": "45 minutes",
       "sub": "Private means the whole Recovery Suite to yourself. No sharing, no queue.",
       "cta": "BOOK ONLINE · ARCHWAY N19",
-      "photo": "sauna-room/hero-portrait.jpg"
+      "photo": "Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg"
     },
     {
       "id": "A2",
-      "slug": "3d-sauna-tour",
+      "slug": "inside-the-sauna-room",
       "template": "T1",
       "format": "square",
       "folder": "03-posts-feed",
-      "eyebrow": "3D ROOM TOUR",
-      "headline": "See our sauna room ==in 3D before you book==",
-      "photo": "sauna-room/hero-portrait.jpg",
-      "sub": "Walk around the actual room on our website. Phone or laptop, takes a minute.",
-      "cta": "RANGEANDRESTORE.CO.UK/SAUNA-ROOM"
+      "eyebrow": "THE SAUNA ROOM",
+      "headline": "See our sauna room ==before you book==",
+      "photo": "Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg",
+      "sub": "Private cabin, private shower, the whole room to yourself.",
+      "cta": "BOOK ONLINE · ARCHWAY N19"
     },
     {
       "id": "A3",
@@ -73,7 +73,7 @@
       "folder": "03-posts-feed",
       "eyebrow": "RECOVERY PACKAGES",
       "headline": "Sports massage first, ==then the sauna==",
-      "photo": "sauna-room/hero-portrait.jpg",
+      "photo": "Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg",
       "sub": "Hands-on work on what's tight, then 30–45 minutes of heat. £85 or £90.",
       "cta": "BOOK ONLINE · ARCHWAY N19"
     },
@@ -85,7 +85,7 @@
       "folder": "03-posts-feed",
       "eyebrow": "THE SAUNA ROOM",
       "headline": "Our sauna room ==fits two people==",
-      "photo": "sauna-room/hero-portrait.jpg",
+      "photo": "Gallery/two-person-infrared-sauna-red-light-heaters-range-and-restore-archway-north-london.jpg",
       "sub": "Come alone and have it to yourself, or bring someone. £19 for 45 minutes.",
       "cta": "BOOK ONLINE · ARCHWAY N19"
     },
@@ -110,7 +110,7 @@
       "folder": "03-posts-feed",
       "eyebrow": "SEASONAL",
       "headline": "Cold outside? ==Our sauna runs all winter==",
-      "photo": "sauna-room/hero-portrait.jpg",
+      "photo": "Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg",
       "sub": "45 private minutes when the last thing you want is another hour outdoors.",
       "cta": "BOOK ONLINE · ARCHWAY N19"
     },

@@ -1,14 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
+import { SaunaPhotos, SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 import { BOOKING_URLS } from '@/lib/constants'
-import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
+import { buildMetadata, buildBreadcrumbs, buildFaqSchema, BASE_URL } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Infrared Sauna in Archway, North London | Recovery & Pain Relief',
   description: 'Private Full Spectrum Infrared Hybrid Sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and better mobility. Full spectrum infrared and traditional heat. Private sessions from £19.',
   path: '/recovery-suite/infrared-sauna',
+  image: `${BASE_URL}${SAUNA_PHOTOS.front.src}`,
 })
 
 const breadcrumbs = buildBreadcrumbs([
@@ -107,6 +109,8 @@ export default function InfraredSaunaPage() {
 
       <div className="container-page container-wide">
         <div className="space-y-12">
+
+          <SaunaPhotos />
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Who is this for?</h2>

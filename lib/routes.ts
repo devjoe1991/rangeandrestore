@@ -23,7 +23,6 @@ export const ROUTES = {
   nhsEmergencyServicesDiscount: '/nhs-emergency-services-discount',
   press: '/press',
   privacyPolicy: '/privacy-policy',
-  saunaRoom: '/sauna-room',
   socials: '/socials',
   team: '/team',
   termsAndConditions: '/terms-and-conditions',

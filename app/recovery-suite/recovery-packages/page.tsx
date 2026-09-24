@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqAccordion } from '@/components/FaqAccordion'
+import { SaunaPhotos } from '@/components/SaunaPhotos'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
@@ -323,6 +324,8 @@ export default function RecoverySessionsPage() {
               Pay as you go covers standalone sauna sessions and combined sports massage packages. Restore+ memberships give you regular sauna access or Signature Treatments every month at a saving.
             </p>
           </section>
+
+          <SaunaPhotos />
 
           {/* PAYG heading */}
           <section>

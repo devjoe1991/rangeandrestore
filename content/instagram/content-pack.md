@@ -133,23 +133,20 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 > 130 Junction Road, N19. Booking link in bio.
 - **Tags:** `#InfraredSauna #SaunaLondon #Archway #N19 #NorthLondon #RecoveryRoom #HybridSauna #SportsMassage #RangeAndRestore #UpperHolloway #RecoveryDay`
 
-### A2 — The immersive virtual sauna tour ⭐
-- **Format:** Reel or carousel · **Template:** T1 cover + screen recording
-- **Photo:** `public/sauna-room/hero-portrait.jpg` for the cover; body = **screen recording of the 3D room at rangeandrestore.co.uk/sauna-room**
-- **On-image cover:** `WALK INTO OUR SAUNA` / `WITHOUT LEAVING THE SOFA` · small tag `3D ROOM TOUR`
+### A2 — Inside the sauna room ⭐
+- **Format:** Carousel or Reel · **Template:** T1 cover + photos
+- **Photos:** `public/Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg` for the cover; then `Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg`, `Gallery/two-person-infrared-sauna-red-light-heaters-range-and-restore-archway-north-london.jpg` and the shower shot. For a Reel, use the September 2026 phone videos of the room.
+- **On-image cover:** `SEE OUR SAUNA ROOM` / `BEFORE YOU BOOK` · small tag `THE SAUNA ROOM`
 - **Caption:**
-> You can walk around our sauna room before you ever book it.
+> This is the sauna room, exactly as you'll find it.
 >
-> We built a proper 3D tour of the Recovery Suite on the website. Not a photo gallery — an actual room you move through. Walk in, look around, flick the lights on and off, get a feel for the space and how private it is.
+> The suite sits at the quiet back of the clinic, shut off from the street. Two person infrared and traditional cabin, a shower, towels and water, and the whole room to yourself for the session.
 >
-> On your phone: hold the left side of the screen to walk, drag to look around, pinch to zoom.
-> On a laptop: W, A, S, D to move, mouse to look.
+> The cabin has Bluetooth audio, so you pair your phone and bring your own soundtrack. Between that, the lighting and the heat setting, you set the tone.
 >
-> The suite sits at the quiet back of the clinic, shut off from the street. The cabin has Bluetooth audio, so you pair your phone and bring your own soundtrack. Between that, the lighting and the heat setting, you set the tone.
->
-> Go and have a look — rangeandrestore.co.uk/sauna-room. Link in bio.
-- **Tags:** `#InfraredSauna #SaunaLondon #Archway #N19 #NorthLondon #3DTour #VirtualTour #RecoveryRoom #WellbeingLondon #RangeAndRestore #HybridSauna`
-- **Note:** This is the single most distinctive thing on the account. Run it as a Reel, pin it to the grid, and re-run a cut-down version every 6–8 weeks. Screen-record in portrait at 60fps.
+> £19 for 45 minutes, £29 for 60. 130 Junction Road, N19. Booking link in bio.
+- **Tags:** `#InfraredSauna #SaunaLondon #Archway #N19 #NorthLondon #RecoveryRoom #WellbeingLondon #RangeAndRestore #HybridSauna`
+- **Note:** Pin it to the grid, and re-run a cut-down version every 6–8 weeks.
 
 ### A3 — What "hybrid" actually means
 - **Format:** Carousel, 4 slides · **Template:** T3
@@ -167,7 +164,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 - **Tags:** `#HybridSauna #InfraredSauna #SaunaLondon #Archway #NorthLondon #N19 #RecoveryRoom #SaunaTherapy #RangeAndRestore`
 
 ### A4 — Sauna + massage, why the order matters
-- **Format:** Single · **Template:** T1 · **Photo:** `infrared-hybrid-sauna-red-light-…jpg`
+- **Format:** Single · **Template:** T1 · **Photo:** `Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg`
 - **On-image:** `MASSAGE FIRST.` / `SAUNA AFTER.`
 - **Caption:**
 > Our packages run massage first, sauna second, and that order is deliberate.
@@ -183,7 +180,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 - **Tags:** `#SportsMassage #InfraredSauna #RecoveryDay #Archway #N19 #NorthLondon #DeepTissueMassage #SaunaLondon #RangeAndRestore`
 
 ### A5 — Made for two
-- **Format:** Single · **Template:** T1 · **Photo:** `sauna-room/hero-portrait.jpg` (label it as the 3D room)
+- **Format:** Single · **Template:** T1 · **Photo:** `Gallery/two-person-infrared-sauna-red-light-heaters-range-and-restore-archway-north-london.jpg`
 - **On-image:** `COME ALONE.` / `OR DON'T.`
 - **Caption:**
 > The sauna room takes two.
@@ -951,7 +948,7 @@ Reusable, low-effort, run alongside the grid. All T5, 1080×1920.
 | S2 | "This week's remaining slots" screenshot from Jane | Link → Jane |
 | S3 | Poll: "Sauna or Normatec after a long run?" | Poll |
 | S4 | Question box: "Ask about your niggle" | Question sticker |
-| S5 | Screen recording of the 3D sauna tour | Link → /sauna-room |
+| S5 | Sauna room photo or clip, lights on | Link → /recovery-suite/infrared-sauna |
 | S6 | Repost a client's tagged story | — |
 | S7 | "Community Tuesday — spaces left this week" | Link → Jane |
 | S8 | Countdown to a local race weekend + recovery slots | Countdown |
@@ -964,7 +961,7 @@ Reusable, low-effort, run alongside the grid. All T5, 1080×1920.
 
 Shoot these in one afternoon and you've got a month of Reels.
 
-1. **3D sauna walkthrough** — screen recording, portrait, 15–25s. Highest-value single asset. (A2)
+1. **Sauna room walkthrough** — phone video of the room, portrait, 15–25s. Highest-value single asset. (A2)
 2. **Sauna door opening, red light spilling out** — 5s loop, no talking.
 3. **Normatec boots inflating in sequence** — 10s, top-down, oddly satisfying.
 4. **Cups being applied down a back** — 12s, close, no faces.

@@ -231,6 +231,38 @@
   to = "/blog/achilles-tendinitis-recovery-massage"
   status = 301
 
+# Virtual sauna tour removed Sept 2026, and the old sauna photos replaced.
+# Old photo URLs point at the new photos so emails already sent still show one.
+[[redirects]]
+  from = "/sauna-room"
+  to = "/recovery-suite/infrared-sauna"
+  status = 301
+
+[[redirects]]
+  from = "/sauna-room/hero-portrait.jpg"
+  to = "/Gallery/two-person-infrared-sauna-red-light-heaters-range-and-restore-archway-north-london.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp"
+  to = "/Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/recovery-suite/infrared-sauna-red-light-recovery-suite-range-and-restore-archway-north-london.jpg"
+  to = "/Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/Gallery/infrared-sauna-red-light-recovery-suite-range-and-restore-archway-north-london.jpg"
+  to = "/Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg"
+  to = "/Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg"
+  status = 301
+
 # NOTE: Netlify matches redirect `from` paths with and without a trailing slash,
 # so explicit `/privacy-policy/` -> `/privacy-policy` rules also match
 # `/privacy-policy` and 301-redirect it to itself, causing ERR_TOO_MANY_REDIRECTS

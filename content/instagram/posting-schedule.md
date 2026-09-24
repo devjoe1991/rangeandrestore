@@ -28,7 +28,7 @@ Front-loaded with the strongest assets so the grid looks established from the st
 
 | Week | Mon | Wed | Sat | Reel | Notes |
 |---|---|---|---|---|---|
-| **1** | **D1 Sciatica** | **A1 Sauna £19** | **G1 Award** | **A2 3D sauna tour** | Pin A2 and G1 to the profile |
+| **1** | **D1 Sciatica** | **A1 Sauna £19** | **G1 Award** | **A2 Inside the sauna room** | Pin A2 and G1 to the profile |
 | **2** | D3 Lower back pain | B1 What is Normatec | F1 Archway N19 | Sauna door loop | |
 | **3** | D6 Desk posture | C1 Three packages | G2 Meet Carlos | Normatec boots | |
 | **4** | D5 Neck & headaches | A3 Hybrid explained | E3 Cyclists | Route from the tube | |
@@ -100,7 +100,7 @@ You only get one link, and the captions reference several destinations. Options:
 
 - **Simplest:** point it at `rangeandrestore.co.uk` and update the caption to name the page
   ("full write-up on the blog") — visitors navigate from the homepage.
-- **Better:** a link-in-bio page listing Book on Jane · Recovery Suite · 3D Sauna Tour · Blog · Contact.
+- **Better:** a link-in-bio page listing Book on Jane · Recovery Suite · Infrared Sauna · Blog · Contact.
   Given the site is already Next.js, this could just be a `/links` route styled with the existing
   brand tokens rather than a third-party tool — no extra subscription, no external domain in the
   analytics, and it keeps the Google Ads / GA4 cross-domain tracking clean.

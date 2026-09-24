@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { RecoverySuiteCard } from '@/components/RecoverySuiteCard'
 import { BOOKING_URLS } from '@/lib/constants'
@@ -119,8 +120,8 @@ export default function RecoverySuitePage() {
             title="Infrared Hybrid Sauna"
             summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Solo or shared sessions to support muscle recovery, circulation and proper time to switch off. Private sessions from £19."
             href={ROUTES.recoverySuite.infraredSauna}
-            image="/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp"
-            imageAlt="Vidalux 2 person hybrid infrared sauna at Range and Restore Archway"
+            image={SAUNA_PHOTOS.front.src}
+            imageAlt={SAUNA_PHOTOS.front.alt}
           />
           <RecoverySuiteCard
             title="Compression Therapy"

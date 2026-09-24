@@ -113,7 +113,7 @@ const posts = [
     slug: 'sports-recovery-archway',
     date: '3 July 2026',
     excerpt: 'Recovery is where hard training turns into results. How to stack sports massage, Normatec compression and infrared sauna between sessions and around race day, all in one place in Archway, North London.',
-    image: '/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
+    image: '/Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg',
   },
   {
     title: 'Sciatica and Trapped Nerve Pain: Can Massage Help?',

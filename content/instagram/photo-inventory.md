@@ -13,7 +13,10 @@ Every image below was opened and checked, not inferred from the filename. Resolu
 | `public/Gallery/IMG_1831.jpeg` | 5712×3213 | Treatment room, empty and tidy. Table with blue/grey linen, **four framed certificates on the wall**, anatomy charts, skeleton model, massage wax tubs. | Credentials, "what the room looks like", trust posts |
 | `public/Gallery/IMG_1828.jpeg` | 5712×3213 | Second treatment room, bay window, natural light, anatomy charts, table made up. Softer and warmer than 1831. | Room tour, calm/relaxation angle |
 | `public/sports-massage-soft-tissue-therapy-archway-north-london.jpeg` | 2048×1152 | **Carlos treating a client** — green polo, hands-on upper back work, anatomy charts behind. The single best "this is the treatment" photo. | Sports/deep tissue, clinical massage, hero |
-| `public/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg` | 1600×1132 | The **sauna cabin lit red** in the Recovery Suite. Teal wall, cream recliner, mirrored wall, warm wood. Genuinely striking. | Sauna posts, Recovery Suite, memberships |
+| `public/Gallery/private-infrared-hybrid-sauna-suite-range-and-restore-archway-north-london.jpg` | 2048×1152 | **Sauna cabin head-on, heaters lit red**, shower door and lit arched mirror either side. Sept 2026 photo. | Sauna posts, Recovery Suite, memberships |
+| `public/Gallery/two-person-infrared-sauna-red-light-heaters-range-and-restore-archway-north-london.jpg` | 1536×2048 | Portrait of the **cabin lit red and pink**, green bath mat, wood floor. Sept 2026. | 4:5 feed posts, stories |
+| `public/Gallery/infrared-sauna-room-with-private-shower-range-and-restore-archway-north-london.jpg` | 2048×1546 | Wide shot: **shower, sauna and mirror** in one frame. Sept 2026. | Room tour, privacy angle |
+| `public/Gallery/private-shower-sauna-recovery-suite-range-and-restore-archway-north-london.jpg` | 1152×2048 | The **private shower** in the suite. Sept 2026. | Amenity slide in carousels |
 | `public/normatec-3-full-body-compression-session-recovery-suite-archway-north-london.jpg` | 1600×900 | Client lying on a teal-topped table in **full Normatec boots + hip attachment**, branding visible. Blue wall, real session. | Normatec, compression, recovery packages |
 | `public/carlos-bonvicine-sports-massage-archway-hero.jpg` | 1600×1537 | **Carlos seated on the table, smiling to camera**, green polo, tattoo sleeve, roller banner beside him. Warm, approachable. | Meet the team, founder posts |
 | `public/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg` | 2048×1152 | **Shopfront exterior** on Junction Road. Reliable Scan + Range and Restore window graphics, brick, pavement. | Location, "you'll find us here", areas-served |
@@ -30,7 +33,6 @@ Every image below was opened and checked, not inferred from the filename. Resolu
 | `public/cycling-recovery-sports-massage-archway-north-london.jpg` | 4032×3024 | **Pack of road cyclists riding through Archway**, blue skies, cycle lane, flats behind. Genuine local context. | Cyclist recovery, RideLondon, local sport |
 | `public/community-tuesday-clinic-sports-massage-archway-north-london.jpg` | 1600×914 | **Already a finished designed graphic** — near-black bg, lime accents, Carlos on the table, £60/£85 pricing. | Reference for poster style. Reuse as-is or rebuild at 4:5 |
 | `public/range-and-restore-…-prestige-awards-winner-…jpg` | 1080×1080 | **Official Prestige Awards winner graphic**, orange/white, "New Sports Massage Clinic of the Year", 2026/27. | Award post — publish unmodified |
-| `public/sauna-room/hero-portrait.jpg` | 1080×1350 | **3D render** of the sauna room, dark and moody, glowing panels. Not a photo — clearly CGI. | Only for the 3D room-tour post. Never present as a photo |
 
 ---
 
@@ -65,7 +67,6 @@ Every image below was opened and checked, not inferred from the filename. Resolu
 | File | Px | Why |
 |---|---|---|
 | `public/recovery-suite/recovery-suite-room-archway.jpg` | 232×130 | Thumbnail. Unusable at any IG size. |
-| `public/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp` | 382×510 | Too small. |
 | `public/hydration-wellness.png` | 640×640 | Below 1080. |
 | `public/og-banner.png` | 640×640 | Below 1080, and it's an OG card, not content. |
 | `public/partners/the-dynamic-spud.png` | 1×1 | **Broken file — 1×1 pixel.** Worth fixing in the repo separately. |

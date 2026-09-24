@@ -6,6 +6,7 @@ import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { AwardStrip } from '@/components/AwardStrip'
 import { ReviewsStrip } from '@/components/ReviewsStrip'
 import { SaunaRoomStrip } from '@/components/SaunaRoomStrip'
+import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 import { CorporateWellbeingStrip } from '@/components/CorporateWellbeingStrip'
 import { BookingButton } from '@/components/BookingButton'
 import { ROUTES } from '@/lib/routes'
@@ -143,8 +144,8 @@ const recoveryServices = [
     price: 'From £19',
     detail: '45 or 60 min private',
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation.',
-    image: '/recovery-suite/vidalux-hybrid-infrared-sauna-archway.webp',
-    imageAlt: 'Vidalux two person hybrid infrared sauna at the Recovery Suite, Range and Restore, Archway, North London',
+    image: SAUNA_PHOTOS.front.src,
+    imageAlt: SAUNA_PHOTOS.front.alt,
   },
   {
     title: 'Normatec Compression',
@@ -165,8 +166,8 @@ const recoveryServices = [
     price: 'From £85',
     detail: '75 or 90 min',
     description: 'Hands-on sports massage plus private Recovery Suite time, booked as one appointment. Finish with the sauna or Normatec compression. Restore+ memberships also available.',
-    image: '/infrared-hybrid-sauna-red-light-recovery-suite-archway-north-london.jpg',
-    imageAlt: 'Infrared Hybrid Sauna glowing red beside the recliner in the private Recovery Suite at Range and Restore, Archway, North London',
+    image: SAUNA_PHOTOS.suite.src,
+    imageAlt: SAUNA_PHOTOS.suite.alt,
   },
 ]
 
@@ -266,7 +267,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── VIRTUAL SAUNA ROOM ───────────────────────────────── */}
+      {/* ── PRIVATE SAUNA SUITE ─────────────────────────────── */}
       <SaunaRoomStrip />
 
       {/* ── HELP + GIFT CARDS ────────────────────────────────── */}

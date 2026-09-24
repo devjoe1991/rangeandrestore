@@ -7,12 +7,15 @@ import Link from 'next/link'
 import { GalleryClient } from './GalleryClient'
 import type { GalleryImage } from './GalleryClient'
 import { ROUTES } from '@/lib/routes'
+import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Gallery – Range and Restore Sports Massage Archway',
   description: 'See inside Range and Restore Sports Massage in Archway: real clinic photos, treatment sessions and the environment behind every appointment.',
   path: '/gallery',
 })
+
+const fileOf = (src: string) => src.replace('/Gallery/', '')
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
 
@@ -29,7 +32,11 @@ const CURATED: Array<{ file: string; alt: string; caption: string }> = [
   { file: '2-hour-pain-relief-massage-neck-shoulder-treatment-range-and-restore-archway-north-london.jpg', alt: 'Carlos Bonvicine working through the neck and shoulder during an extended pain relief massage at Range and Restore, Archway, North London', caption: 'Range and Restore — 2-hour pain relief massage' },
   { file: 'manual-lymphatic-drainage-massage-therapist-range-and-restore-archway-north-london.jpg', alt: 'Range and Restore therapist treating a client during a manual lymphatic drainage session in Archway, North London', caption: 'Range and Restore — manual lymphatic drainage' },
   { file: 'relaxation-restorative-massage-treatment-range-and-restore-archway-north-london.jpg', alt: 'Therapist delivering a calm, pressure-adjusted relaxation and restorative massage at Range and Restore, Archway, North London', caption: 'Range and Restore — relaxation massage' },
-  { file: 'infrared-sauna-red-light-recovery-suite-range-and-restore-archway-north-london.jpg', alt: 'Range and Restore therapist opening the Vidalux two person hybrid infrared sauna, heaters glowing red, in the Recovery Suite at Archway, North London', caption: 'Range and Restore — Infrared Hybrid Sauna' },
+  // The sauna suite; alt text is shared with the rest of the site via SAUNA_PHOTOS.
+  { file: fileOf(SAUNA_PHOTOS.front.src), alt: SAUNA_PHOTOS.front.alt, caption: 'Range and Restore — Infrared Hybrid Sauna' },
+  { file: fileOf(SAUNA_PHOTOS.portrait.src), alt: SAUNA_PHOTOS.portrait.alt, caption: 'Range and Restore — inside the sauna' },
+  { file: fileOf(SAUNA_PHOTOS.suite.src), alt: SAUNA_PHOTOS.suite.alt, caption: 'Range and Restore — the sauna room' },
+  { file: fileOf(SAUNA_PHOTOS.shower.src), alt: SAUNA_PHOTOS.shower.alt, caption: 'Range and Restore — private shower' },
   { file: 'IMG_1828.jpeg', alt: 'Sports massage treatment session at Range and Restore clinic, Archway, North London', caption: 'Range and Restore — treatment session' },
   { file: 'IMG_1831.jpeg', alt: 'Professional massage therapy room at Range and Restore, 130 Junction Road, Archway', caption: 'Range and Restore — clinic interior' },
   { file: 'IMG_1552.jpeg', alt: 'Deep tissue massage being performed at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — deep tissue massage' },

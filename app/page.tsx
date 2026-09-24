@@ -7,6 +7,7 @@ import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
 import { CardCarousel } from '@/components/CardCarousel'
 import { SaunaRoomCard } from '@/components/SaunaRoomStrip'
+import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 import { CommunityTuesdayCard } from '@/components/CommunityTuesdayCard'
 import { GivingBackCard } from '@/components/GivingBackStrip'
 import { NhsDiscountCard } from '@/components/NhsDiscountStrip'
@@ -113,8 +114,8 @@ const services = [
     solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £19, plus Restore+ monthly memberships.',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
-    image: '/recovery-suite/infrared-sauna-red-light-recovery-suite-range-and-restore-archway-north-london.jpg',
-    imageAlt: 'Range and Restore therapist opening the Vidalux two person hybrid infrared sauna, heaters glowing red, in the Recovery Suite at Archway, North London',
+    image: SAUNA_PHOTOS.front.src,
+    imageAlt: SAUNA_PHOTOS.front.alt,
   },
   {
     title: 'Normatec Compression Therapy',
@@ -287,7 +288,7 @@ export default function HomePage() {
           <CardCarousel
             label="Recovery Suite, Community Tuesday, our charities and the NHS discount"
             slides={[
-              { key: 'sauna', label: 'the virtual sauna room', node: <SaunaRoomCard /> },
+              { key: 'sauna', label: 'the private sauna room', node: <SaunaRoomCard /> },
               { key: 'community-tuesday', label: 'the Community Tuesday Clinic', node: <CommunityTuesdayCard /> },
               { key: 'giving-back', label: 'the charities we support', node: <GivingBackCard /> },
               { key: 'nhs', label: 'the NHS and emergency services discount', node: <NhsDiscountCard /> },
