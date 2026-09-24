@@ -2,31 +2,42 @@ export const BOOKING_BASE = 'https://rangeandrestoresportsmassage.janeapp.co.uk'
 
 export const RELIABLE_SCAN_URL = 'https://reliablescanltd.com/'
 
+/**
+ * Jane deep links. Jane silently sends an unknown treatment or section link to
+ * its front page, so these break without any error when treatments are moved
+ * or renumbered in Jane. After changing anything in Jane, run
+ * `npm run check:booking` to confirm every link still lands where it should.
+ *
+ * Treatment links open the first-session booking for that treatment; the
+ * service pages show the other lengths, which are on the same Jane list.
+ */
+const SAUNA_SECTION = `${BOOKING_BASE}/#/infrared-hybrid-sauna`
+
 export const BOOKING_URLS = {
   general: `${BOOKING_BASE}/#/list`,
-  advancedClinical: `${BOOKING_BASE}/#/discipline/1/treatment/1`,
-  sportsDeepTissue: `${BOOKING_BASE}/#/discipline/2/treatment/7`,
-  backNeckMot: `${BOOKING_BASE}/#/discipline/3/treatment/13`,
-  relaxation: `${BOOKING_BASE}/#/discipline/4/treatment/19`,
-  mld: `${BOOKING_BASE}/#/discipline/5/treatment/25`,
-  twoHourRelief: `${BOOKING_BASE}/#/discipline/7/treatment/32`,
-  cuppingSportsDeepTissue: `${BOOKING_BASE}/#/discipline/9/treatment/36`,
+  advancedClinical: `${BOOKING_BASE}/#/discipline/16/treatment/3`,
+  sportsDeepTissue: `${BOOKING_BASE}/#/discipline/16/treatment/8`,
+  backNeckMot: `${BOOKING_BASE}/#/discipline/16/treatment/14`,
+  relaxation: `${BOOKING_BASE}/#/discipline/16/treatment/20`,
+  mld: `${BOOKING_BASE}/#/discipline/16/treatment/27`,
+  twoHourRelief: `${BOOKING_BASE}/#/discipline/16/treatment/32`,
+  cuppingSportsDeepTissue: `${BOOKING_BASE}/#/discipline/16/treatment/38`,
   mskUltrasoundMassage: `${BOOKING_BASE}/#/discipline/13/treatment/71`,
   pregnancyMassage: `${BOOKING_BASE}/#/discipline/14/treatment/72`,
   reflexology: `${BOOKING_BASE}/#/discipline/15/treatment/49`,
   communityTuesday: `${BOOKING_BASE}/#/community-tuesday-clinic`,
-  recoverySuite: `${BOOKING_BASE}/#/recovery-suite`,
-  infraredHybridSauna: `${BOOKING_BASE}/#/infrared-hybrid-sauna`,
-  saunaSolo: `${BOOKING_BASE}/#/recovery-suite`,
-  saunaShared: `${BOOKING_BASE}/#/recovery-suite`,
-  compressionLegs: `${BOOKING_BASE}/#/recovery-suite`,
-  compressionFull: `${BOOKING_BASE}/#/recovery-suite`,
-  packageSaunaMassage: `${BOOKING_BASE}/#/recovery-suite`,
-  packageCompressionMassage: `${BOOKING_BASE}/#/recovery-suite`,
-  packageFullRecovery: `${BOOKING_BASE}/#/recovery-suite`,
-  packageSaunaCompression: `${BOOKING_BASE}/#/recovery-suite`,
+  recoverySuite: SAUNA_SECTION,
+  infraredHybridSauna: SAUNA_SECTION,
+  // The £85 and £90 massage + sauna packages are not in Jane yet, so this
+  // opens the sauna section until they are added there.
+  packageSaunaMassage: SAUNA_SECTION,
+  packageCompressionMassage: `${BOOKING_BASE}/#/discipline/16/treatment/76`,
   giftCards: `${BOOKING_BASE}/online_gift_cards/new`,
   bundles: `${BOOKING_BASE}/#packages`,
+  staffCarlos: `${BOOKING_BASE}/#/staff_member/1`,
+  staffDarael: `${BOOKING_BASE}/#/staff_member/2`,
+  staffMateja: `${BOOKING_BASE}/#/staff_member/3`,
+  staffAlison: `${BOOKING_BASE}/#/staff_member/4`,
 } as const
 
 export const BUSINESS = {

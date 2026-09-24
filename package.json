@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "check:routes": "node scripts/check-routes.mjs",
+    "check:booking": "node --experimental-strip-types --no-warnings scripts/check-booking-links.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
