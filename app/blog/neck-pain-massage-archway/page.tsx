@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -112,7 +112,7 @@ export default function NeckPainMassagePage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Screens and &ldquo;text neck&rdquo;</h3>
           <p>
-            Looking down at a phone or tablet tips the head forward and down, and the further the head sits in front of the body the harder the neck muscles have to work to hold it there. Do this for long enough, day after day, and those muscles stay switched on, leaving the neck stiff and achy. This is what people mean by &ldquo;text neck&rdquo; — not damage to the spine, but sustained muscular strain from a repeated head-down posture.
+            Looking down at a phone or tablet tips the head forward and down, and the further the head sits in front of the body the harder the neck muscles have to work to hold it there. Do this for long enough, day after day, and those muscles stay switched on, leaving the neck stiff and achy. This is what people mean by &ldquo;text neck&rdquo;: sustained muscular strain from a repeated head-down posture, rather than damage to the spine.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Desk posture</h3>
@@ -177,14 +177,10 @@ export default function NeckPainMassagePage() {
             Range and Restore is happy to coordinate with your GP or physiotherapist, and works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway, if a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> is ever needed.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find neck pain treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;neck pain massage near me&rdquo;, &ldquo;stiff neck treatment North London&rdquo;, &ldquo;text neck therapist Archway&rdquo;, &ldquo;massage for neck tension London&rdquo; or &ldquo;neck and shoulder massage N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N8, N4, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for desk workers and anyone carrying a stiff, aching neck across all of those postcodes who does not want to trek into central London for proper hands-on treatment.
+            Range and Restore is on Junction Road in Archway (number 130, N19), a short walk from Archway and Tufnell Park stations. Desk workers and anyone else with a stiff, aching neck come to us from Kentish Town, Holloway, Islington, Crouch End and nearby.
           </p>
         </div>
 
@@ -238,13 +234,13 @@ export default function NeckPainMassagePage() {
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; How Desk Posture Drives Neck and Shoulder Pain
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
             <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Tension Headaches: How Massage Can Help
+              &rarr; Tension Headaches – How Massage Can Help
             </Link>
             <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Massage for Office Workers in Archway
+              &rarr; How Sports Massage Helps Office Workers in Archway, North London
             </Link>
             <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
               &rarr; Back &amp; Neck Pain MOT

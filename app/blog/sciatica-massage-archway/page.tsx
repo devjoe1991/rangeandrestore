@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -127,9 +127,15 @@ export default function SciaticaMassagePage() {
             Massage cannot reposition a disc or reverse nerve-root compression — those are medical issues. What it can do, and do well, is address the muscular tension that is either causing or amplifying the irritation of the sciatic nerve. Where the problem is muscular, releasing that tension often brings meaningful relief.
           </p>
 
+          <p>
+            One point matters more than any technique: with nerve pain, the place you feel it is rarely the place causing it. Pain halfway down the thigh is often generated higher up, in the buttock, hip or lower back, and pressing hard on the sore spot or directly on an irritated nerve tends to flare it up. That is why your therapist assesses first and then works on the tissues that are loading the nerve, at a pressure your symptoms tolerate. Our longer guides on{' '}
+            <Link href={ROUTES.blog.sciaticaTreatmentNorthLondon} className="link-inline">why the painful spot is rarely the problem</Link> and{' '}
+            <Link href={ROUTES.blog.trappedNerveMassageArchway} className="link-inline">whether massage can help a trapped nerve</Link> go into this in more detail.
+          </p>
+
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Releasing the glutes and piriformis</h3>
           <p>
-            The piriformis and the deeper glute muscles sit directly over the path of the sciatic nerve. When they become tight and overloaded, they can compress or irritate the nerve — a pattern sometimes described as piriformis-related sciatic pain. Targeted soft tissue release, trigger point work and deep tissue techniques applied to these muscles reduce that pressure and are often where the most noticeable relief comes from.
+            The piriformis and the deeper glute muscles sit directly over the path of the sciatic nerve. When they become tight and overloaded, they can compress or irritate the nerve — a pattern sometimes described as piriformis-related sciatic pain. Where the assessment shows these muscles are involved, soft tissue release, trigger point work and deep tissue techniques, applied at a pressure the nerve tolerates, can reduce that load. They are a common source, but not the only one, which is why they are assessed rather than assumed.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Easing lower-back and pelvic tension</h3>
@@ -166,14 +172,10 @@ export default function SciaticaMassagePage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required, or if our therapists feel your symptoms need medical input, we can help coordinate with Reliable Scan, a physiotherapist or your GP so you get the right care rather than the wrong treatment. Our guide to <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">MSK ultrasound scans</Link> explains when imaging is worth having.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sciatica treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;sciatica massage near me&rdquo;, &ldquo;trapped nerve pain treatment North London&rdquo;, &ldquo;piriformis massage Archway&rdquo;, &ldquo;sciatic nerve pain therapist London&rdquo; or &ldquo;massage for sciatica N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local, assessment-led option for anyone across those postcodes dealing with sciatica or trapped-nerve pain who would rather not trek into central London for proper hands-on treatment.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations on the Northern line. People come to us with sciatic and trapped-nerve pain from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town.
           </p>
         </div>
 
@@ -226,14 +228,17 @@ export default function SciaticaMassagePage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
+            <Link href={ROUTES.blog.sciaticaTreatmentNorthLondon} className="link-inline link-inline-tap">
+              &rarr; Sciatica Treatment in North London: Why the Painful Spot Is Rarely the Problem
+            </Link>
+            <Link href={ROUTES.blog.trappedNerveMassageArchway} className="link-inline link-inline-tap">
+              &rarr; Can Massage Help a Trapped Nerve? An Honest Answer
+            </Link>
             <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage
             </Link>
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture and Back Pain: How Massage Helps
-            </Link>
-            <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Massage for Office Workers in Archway
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
           </div>
         </div>

@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -138,7 +138,7 @@ export default function TightHamstringPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving circulation</h3>
           <p>
-            Massage increases local circulation, improving the delivery of oxygen and nutrients to the tissue and supporting recovery. For a hamstring that has been overloaded — or is recovering from a settled strain — this helps create better conditions for the tissue to repair and adapt.
+            Massage increases local circulation, which may support recovery. For a hamstring that has been overloaded — or is recovering from a settled strain — this can help create better conditions for the tissue to repair and adapt.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Addressing the hips, glutes and pelvis</h3>
@@ -171,14 +171,10 @@ export default function TightHamstringPage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to grade a strain or rule out more serious injury, this can be arranged within the same building.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find hamstring treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;tight hamstring massage near me&rdquo;, &ldquo;pulled hamstring treatment North London&rdquo;, &ldquo;hamstring strain therapist Archway&rdquo;, &ldquo;deep tissue massage hamstrings London&rdquo; or &ldquo;sports massage hamstring N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for runners and active clients across all of those postcodes who do not want to trek into central London for proper hands-on hamstring treatment. If you are training for a race, it also pairs well with a plan around your <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon build-up</Link>.
+            You will find Range and Restore at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Runners and other active clients with tight hamstrings come to us from Tufnell Park, Highgate, Crouch End, Kentish Town and across North London. If you are training for a race, see our guide to massage around your <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon build-up</Link>.
           </p>
         </div>
 
@@ -238,7 +234,7 @@ export default function TightHamstringPage() {
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
             <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Marathon Sports Massage in Archway
+              &rarr; Marathon Massage in Archway: Your Pre and Post Race Recovery Guide
             </Link>
           </div>
         </div>

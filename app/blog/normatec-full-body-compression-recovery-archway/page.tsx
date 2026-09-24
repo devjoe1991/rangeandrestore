@@ -8,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Faster Recovery with Normatec Compression in Archway',
-  description: 'Hyperice Normatec 3 full body compression is now in our Archway Recovery Suite. How it works, who it helps and how to book your session.',
+  description: 'Hyperice Normatec 3 full body compression at our Archway Recovery Suite. How it works, who it helps and how to book it with a sports massage.',
   path: '/blog/normatec-full-body-compression-recovery-archway',
   author: true,
 })
@@ -21,13 +21,13 @@ const breadcrumbs = buildBreadcrumbs([
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
-  headline: 'Faster Recovery with Normatec Compression, Now in Archway',
-  description: 'A complete guide to Normatec Full-Body Compression Recovery and the Hyperice Normatec 3 Full Body system. How pneumatic compression works, who it helps, and why we brought one to Archway, North London.',
+  headline: 'Faster Recovery with Normatec Compression in Archway',
+  description: 'A complete guide to Normatec Full-Body Compression Recovery and the Hyperice Normatec 3 Full Body system. How pneumatic compression works, who it helps, and how to book it at Range and Restore in Archway, North London.',
   image: 'https://rangeandrestore.co.uk/recovery-suite/normatec-compression-therapy-archway.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -45,19 +45,19 @@ const articleSchema = {
 const faqs = [
   {
     q: "What's the difference between Normatec compression and a regular sports massage?",
-    a: "Sports massage is hands-on, assessment-led work that targets specific muscles, fascia and movement patterns. Normatec compression is a recovery tool that uses pneumatic pressure to move fluid and support circulation across whole limbs. The two pair really well, but they do different jobs. Compression flushes the legs after a hard session. Sports massage handles the tight, restricted, niggly bits a machine can't reach.",
+    a: "Sports massage is hands-on, assessment-led work that targets specific muscles, fascia and movement patterns. Normatec compression is a recovery tool that uses pneumatic pressure to move fluid and support circulation across whole limbs. The two pair well, but they do different jobs. Compression may help heavy legs feel lighter after a hard session. Sports massage handles the tight, restricted, niggly bits a machine can't reach.",
   },
   {
     q: 'Will I feel a difference after one session?',
-    a: 'Most people do. Legs typically feel lighter and less heavy straight away. The relaxation side of things kicks in within the first ten minutes once the rhythm settles. The bigger benefits, like reduced DOMS the day after a hard session, are more noticeable when you use it consistently around training rather than as a one-off.',
+    a: 'Many clients find their legs feel lighter straight away, and the relaxation side of things kicks in within the first ten minutes once the rhythm settles. Any effect on next-day soreness (DOMS) tends to be more noticeable when you use it regularly around training rather than as a one-off.',
   },
   {
     q: 'How often should I use compression therapy?',
     a: "It depends on what you're doing. In a heavy training block, once or twice a week works well. Around a race or event, a session the day before and one within 48 hours afterwards is a strong pattern. If you're using it for general recovery and time off your feet, once a week is plenty.",
   },
   {
-    q: 'Can I combine it with sports massage on the same visit?',
-    a: "Yes, and a lot of clients do. The usual order is compression first to flush the legs, then hands-on sports massage to release the areas that need direct work. The bundled version is on our Recovery Packages page.",
+    q: 'Can I book Normatec on its own?',
+    a: "No. Normatec is only available as part of our 90-minute Sports Massage + Normatec session (£110): 60 minutes of hands-on sports massage, then 30 minutes of Normatec compression. There is no standalone Normatec session and no Normatec add-on.",
   },
   {
     q: 'Is Normatec compression the same as lymphatic drainage massage?',
@@ -68,12 +68,12 @@ const faqs = [
     a: "Pneumatic compression isn't suitable in some circumstances, including DVT or a history of blood clots, recent surgery, vascular conditions, pregnancy, severe heart conditions, or open wounds in the area being treated. If anything on that list applies, check with your GP first and let your therapist know before you book. The full contraindications list is on the compression therapy service page.",
   },
   {
-    q: 'Do I need to undress?',
-    a: 'No. You can wear loose, comfortable kit. Leggings, joggers, shorts and a t-shirt all work fine. The attachments go over your clothes.',
+    q: 'Do I need to undress for the Normatec?',
+    a: 'No. The Normatec attachments go over loose, comfortable kit. Leggings, joggers, shorts and a t-shirt all work fine. For the massage part of the session, your therapist will talk you through what is comfortable for you.',
   },
   {
     q: 'How long is each session?',
-    a: "Sessions are either 30 minutes for legs only, 30 minutes for full body, or 45 minutes for full body at a slower pace. Your therapist will help you pick what suits you depending on what you're recovering from. Current pricing is on the booking page.",
+    a: "The Sports Massage + Normatec session is 90 minutes and costs £110: 60 minutes of sports massage followed by 30 minutes of Normatec compression.",
   },
 ]
 
@@ -87,10 +87,10 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="eyebrow-sm">Wellness Hub &middot; Recovery Suite</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            Faster Recovery with Normatec Compression, Now in Archway
+            Faster Recovery with Normatec Compression in Archway
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Hyperice Normatec 3 Full Body pneumatic compression has joined the Recovery Suite at Range and Restore. A complete guide to what it is, how it helps, who it suits and how to come and see it in person.
+            Hyperice Normatec 3 Full Body pneumatic compression at the Range and Restore Recovery Suite in Archway. A guide to what it is, how it helps, who it suits and how to book it.
           </p>
           <div className="flex items-center gap-4 text-page-muted opacity-80 text-sm mt-4">
             <time dateTime="2026-05-13">13 May 2026</time>
@@ -117,11 +117,11 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
 
           <p className="text-xl font-medium text-page">
-            For years, Normatec compression boots were the recovery kit you only saw in elite training rooms, Premier League physio rooms, and the back of Team GB tents at the finish line. That has changed. The same system the pros use is now installed in our <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in Archway, ready for anyone who lives, works or trains around N19, Tufnell Park, Holloway, Highgate, Finsbury Park, Crouch End, Islington and Kentish Town.
+            For years, Normatec compression boots were recovery kit you mostly saw in elite training rooms and professional sport. The same system is in our <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in Archway, and you can book it as part of a sports massage session.
           </p>
 
           <p>
-            This guide covers what Normatec Full-Body Compression Recovery actually is, how it works under the hood, who gets the most out of it, and what it means for your training and recovery routine. If you have been searching for &ldquo;compression therapy Archway&rdquo;, &ldquo;Normatec near me&rdquo; or &ldquo;recovery boots London&rdquo;, this is written for you. And if you want to come and see the kit before you book, we have it set up at the clinic. Pop in.
+            This guide covers what Normatec Full-Body Compression Recovery actually is, how it works, who gets the most out of it, and how it fits into a training and recovery routine.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is Normatec Full-Body Compression Recovery?</h2>
@@ -173,10 +173,10 @@ export default function NormatecCompressionRecoveryArchwayPage() {
 
           <ul className="space-y-2 list-disc list-inside">
             <li><strong>Runners</strong> in a training block, before or after a long run, or recovering from a half or full marathon. The legs feeling heavy the day after a long Sunday run is the classic Normatec use case.</li>
-            <li><strong>Gym-goers and lifters</strong> on a leg-day cycle, or anyone running heavy training weeks. A 30-minute compression session the night of a hard session noticeably knocks the edge off the next-day DOMS.</li>
+            <li><strong>Gym-goers and lifters</strong> on a leg-day cycle, or anyone running heavy training weeks. Many clients find compression after a hard session takes the edge off next-day DOMS.</li>
             <li><strong>Cyclists</strong> who finish a long ride with tight quads, hip flexors and a stiff lower back. Full-body covers all three at once.</li>
             <li><strong>People on their feet all day</strong> for work. Hospitality, healthcare staff, teachers, retail, trades. If your legs feel like concrete by 7pm, this is recovery built for you.</li>
-            <li><strong>Office workers and commuters</strong> who want a structured 30 minutes of recovery that is not just sitting on the sofa again.</li>
+            <li><strong>Office workers and commuters</strong> who want structured recovery time that is not just sitting on the sofa again.</li>
             <li><strong>Climbers and racquet sport players</strong> who train arms hard and never give the upper body the same recovery attention as the legs.</li>
             <li><strong>Anyone managing DOMS</strong>, that delayed-onset soreness that hits 24 to 48 hours after a hard session.</li>
           </ul>
@@ -188,107 +188,83 @@ export default function NormatecCompressionRecoveryArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How it benefits you</h2>
 
           <p>
-            The reason Normatec has become such a fixture in elite sport is that the benefits stack up well against the time investment. Thirty minutes in the boots gives you:
+            Normatec has become a fixture in elite sport because it is an easy, low-effort part of a recovery routine. In the 30-minute Normatec part of the session, many clients find:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li><strong>Reduced DOMS.</strong> Less soreness the day and two days after a hard session, which means you train the next session in better shape.</li>
-            <li><strong>Lighter, less-fatigued legs.</strong> The drained, heavy feeling after long runs or long shifts on your feet eases significantly.</li>
-            <li><strong>Improved circulation</strong> through the legs, hips and arms while the system is running.</li>
-            <li><strong>Reduced swelling and puffiness</strong> after long flights, long days standing, or hard training.</li>
+            <li><strong>Less next-day soreness.</strong> Compression may help ease soreness in the day or two after a hard session.</li>
+            <li><strong>Lighter, less-fatigued legs.</strong> The drained, heavy feeling after long runs or long shifts on your feet often eases.</li>
+            <li><strong>Support for circulation</strong> through the legs, hips and arms while the system is running.</li>
+            <li><strong>Less puffiness</strong> after long flights, long days standing, or hard training.</li>
             <li><strong>A proper 30 minutes off your feet.</strong> Phone down, eyes closed, recovery mode. That bit on its own matters more than people give it credit for.</li>
-            <li><strong>Stack-ability.</strong> Normatec works well alongside <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Sports &amp; Deep Tissue Massage</Link> and our hybrid <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link>, which is why all three live in the same Recovery Suite.</li>
+            <li><strong>Hands-on work first.</strong> The Normatec follows 60 minutes of hands-on <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports massage</Link> in the same session, so the areas that need direct work get it. Our hybrid <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> is booked separately.</li>
           </ul>
 
           <p>
             It is not magic. It is not going to fix a torn hamstring or a chronic hip problem on its own. But as a piece of a recovery routine, it does what it says and it does it consistently.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Why we brought one to Archway</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">A local recovery option in Archway</h2>
 
           <p>
-            Until recently, if you wanted to use a Normatec system in London you had two options. Buy one yourself for around &pound;1,299, or find one of the specialist sports medicine clinics or premium cryotherapy studios where they tend to be installed. Those places exist, but they cluster in the West End, Mayfair, the City and Shoreditch. None of them are in N19.
+            A home Normatec system costs around &pound;1,299, which is a lot for something most people use once or twice a week. We wanted a pro-grade setup that people around Archway could use without travelling across London. The Hyperice Normatec 3 Full Body sits in our Recovery Suite at 130 Junction Road, a short walk from Archway and Tufnell Park stations, alongside the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Vidalux two-person hybrid infrared sauna</Link> and the hands-on services from <Link href={ROUTES.team} className="link-inline">our team of therapists</Link>.
           </p>
 
           <p>
-            North London locals deserve a proper recovery setup that is not an hour each way on the tube. So we put one in. The Hyperice Normatec 3 Full Body now sits inside our new Recovery Suite at 130 Junction Road, two minutes from Archway tube on the Northern Line, alongside the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Vidalux two-person hybrid infrared sauna</Link> and the existing hands-on services from <Link href={ROUTES.team} className="link-inline">our team of therapists</Link>.
+            For runners training on Hampstead Heath, Parkland Walk and Highgate Wood, and for people coming out of the gyms across Archway, Tufnell Park and Holloway, that is a recovery option close to home.
           </p>
 
-          <p>
-            For runners training on Hampstead Heath, Parkland Walk and Highgate Wood, that is a proper local recovery option. For people coming out of the gyms across Archway, Tufnell Park and Holloway, it is a 30-minute walk-in. For anyone in <Link href={ROUTES.areasServed.index} className="link-inline">our wider catchment</Link> across N19, N7, N6, N4, N8 and N1, it is a short hop on the bus or the tube.
-          </p>
-
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What a session looks like</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">What a Sports Massage + Normatec session looks like</h2>
 
           <p>
-            A first compression session at the clinic is straightforward:
+            Normatec is booked as one 90-minute session for &pound;110: 60 minutes of sports massage, then 30 minutes of Normatec compression. There is no standalone Normatec session. Here is how it runs:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li>You arrive in loose, comfortable kit. Leggings, joggers, shorts and a t-shirt all work fine.</li>
-            <li>Your therapist fits the attachments, talks you through the programme options and sets the pressure level.</li>
-            <li>You sit back or lie down. The system runs through the inflation wave from feet to hips and, on full-body sessions, from hands to shoulders.</li>
-            <li>You can adjust the pressure or pause the session at any point. If something does not feel right, we change it.</li>
-            <li>Most people find it genuinely relaxing. Eyes closed, phone off, 30 minutes of proper recovery.</li>
-            <li>You can pair the same visit with a sauna session or a sports massage to make it a proper recovery block.</li>
+            <li>You arrive in loose, comfortable kit. Leggings, joggers, shorts and a t-shirt all work fine for the Normatec part.</li>
+            <li>The first 60 minutes are hands-on sports massage, with your therapist working on the areas that need direct attention.</li>
+            <li>Your therapist then fits the Normatec attachments, talks you through the programme and sets the pressure level.</li>
+            <li>You sit back or lie down. The system runs through the inflation wave from feet to hips and, on full-body programmes, from hands to shoulders.</li>
+            <li>You can adjust the pressure or pause at any point. If something does not feel right, we change it.</li>
+            <li>Most people find the last 30 minutes genuinely relaxing. Eyes closed, phone off.</li>
           </ul>
 
           <p>
-            We run three session lengths: 30 minutes legs only, 30 minutes full body, and 45 minutes full body at a slower pace. The 45-minute full-body session is the one runners book after marathons and big training blocks. The full session menu lives on the <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression therapy service page</Link> and you can also see how it bundles with sauna and massage on the <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page.
-          </p>
-
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Come in and have a look</h2>
-
-          <p>
-            One of the things people genuinely appreciate about a clinic over an app is being able to see the kit before you commit to a session. If you have never used Normatec before, the idea of strapping into a pair of inflatable boots is reasonably described as unfamiliar. Come and see it. The kit is set up at 130 Junction Road, Archway. Pop in, ask questions, try a boot on for fit if you want to, and get a feel for what a session would actually be like before you book.
-          </p>
-
-          <p>
-            The Recovery Suite is now open at 130 Junction Road, Archway. Sessions are bookable online, and you can <Link href={ROUTES.contact} className="link-inline">contact the clinic</Link> if you want to chat through which session suits before you book.
+            Full details, including who compression is not suitable for, are on the <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression therapy page</Link>. You can also see our massage and sauna options on the <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page. Book the session online, or <Link href={ROUTES.contact} className="link-inline">contact the clinic</Link> if you want to talk through whether it suits you first.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Frequently asked questions</h2>
 
           <FaqAccordion items={faqs} />
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Recovery is local now</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you live or train in North London and you have ever wished a Normatec session was around the corner instead of a tube journey away, that is the bit that has changed. The Hyperice Normatec 3 Full Body is here, set up, and bookable now. Book online, or pop in for a look first if you want to see the kit before you commit.
-          </p>
-
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find Normatec compression near you in North London</h2>
-
-          <p>
-            If you have been searching &ldquo;Normatec near me&rdquo;, &ldquo;compression boots London&rdquo;, &ldquo;recovery boots North London&rdquo;, &ldquo;Hyperice Normatec 3 London&rdquo;, &ldquo;compression therapy Archway&rdquo;, &ldquo;Normatec for runners London&rdquo;, &ldquo;recovery suite N19&rdquo; or &ldquo;pneumatic compression therapy near me&rdquo;, this is the local option. Range and Restore is at 130 Junction Road, two minutes from Archway tube on the Northern Line, and serves clients across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. Runners, cyclists, gym-goers, hospitality staff and anyone on their feet all day across those postcodes can now access a pro-grade recovery setup without trekking into the West End or the City.
+            The Recovery Suite is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations on the Northern line. Runners, cyclists, gym-goers and people who spend the day on their feet come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town, and you can see more on our <Link href={ROUTES.areasServed.index} className="link-inline">areas served</Link> page.
           </p>
         </div>
 
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Use the Normatec at Range and Restore</h2>
           <p className="text-brand-green font-semibold mb-6">
-            The Recovery Suite is now open at 130 Junction Road, Archway. The Normatec is part of the private Recovery Suite experience — private sessions start from £19, bookable online, and there&rsquo;s a Sports Massage + Normatec Compression package for £110. Sports massage is bookable separately, and gift cards are live.
+            Normatec is booked as a 90-minute Sports Massage + Normatec session for &pound;110: 60 minutes of sports massage, then 30 minutes of Normatec compression. The infrared hybrid sauna is booked separately, from &pound;19 for a private 45-minute session, and gift cards are available.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a
-              href={BOOKING_URLS.recoverySuite}
+              href={BOOKING_URLS.packageCompressionMassage}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ink"
             >
-              Book Recovery Suite Session
+              Book Sports Massage + Normatec
             </a>
             <a
-              href={BOOKING_URLS.sportsDeepTissue}
+              href={BOOKING_URLS.infraredHybridSauna}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ink-outline"
             >
-              Book Sports Massage
+              Book a Sauna Session
             </a>
             <a
               href={BOOKING_URLS.giftCards}
@@ -314,7 +290,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
               &rarr; Infrared Hybrid Sauna
             </Link>
             <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline link-inline-tap">
-              &rarr; Recovery Packages: compression, sauna and massage bundled
+              &rarr; Recovery Packages: massage with sauna or Normatec
             </Link>
             <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports &amp; Deep Tissue Massage
@@ -323,7 +299,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
             <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Marathon Massage in Archway: Pre and Post Race Recovery
+              &rarr; Marathon Massage in Archway: Your Pre and Post Race Recovery Guide
             </Link>
           </div>
         </div>

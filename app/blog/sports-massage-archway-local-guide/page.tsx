@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -99,11 +99,11 @@ export default function SportsMassageArchwayLocalGuidePage() {
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
 
           <p className="text-xl font-medium text-page">
-            If you live in Archway, Tufnell Park, Holloway, Highgate, Finsbury Park or anywhere across N19 and the surrounding postcodes, you don&apos;t have to head into central London for a proper sports massage. The clinic at 130 Junction Road sits two minutes from Archway tube and serves clients from across North London who want recovery, pain relief and mobility work without the trek.
+            If you live in Archway, Tufnell Park, Holloway, Highgate or Finsbury Park, you don&apos;t have to head into central London for a proper sports massage. The clinic at 130 Junction Road, N19, is a short walk from Archway and Tufnell Park stations, and clients come from across North London for recovery, pain relief and mobility work.
           </p>
 
           <p>
-            This guide covers what sports massage actually is, who it helps round here, and what to look for when you&apos;re searching for a sports massage therapist near you. If you&apos;ve typed &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage near me&rdquo; into Google in the last week, this is written for you.
+            This guide covers what sports massage actually is, who it helps round here, and what to look for in a sports massage therapist near you.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What sports massage actually is (and what it isn&apos;t)</h2>
@@ -123,7 +123,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li><strong>Runners</strong> training for events on Hampstead Heath, Parkland Walk and Highgate Wood. Calf tightness, achilles niggles, hip flexor tension, lower back from heavy training weeks.</li>
+            <li><strong>Runners</strong> training for events on Hampstead Heath, Parkland Walk and Highgate Wood. Calf tightness, Achilles niggles, hip flexor tension, lower back from heavy training weeks.</li>
             <li><strong>Gym-goers and lifters</strong> from the gyms scattered around Archway, Tufnell Park and Holloway, dealing with the usual: tight shoulders, lower back tightness, sore quads after leg day.</li>
             <li><strong>Desk workers and commuters</strong> across Islington, Crouch End and Finsbury Park. Neck, shoulders, mid-back, sciatic-style discomfort from too much sitting and not enough moving.</li>
             <li><strong>Cyclists</strong> riding into work along the canal or up to Highgate, with tight hips and stiff lower backs from long hours in the saddle.</li>
@@ -182,27 +182,27 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where Archway sits for transport</h2>
 
           <p>
-            One of the practical reasons people travel a few stops to book at Range and Restore is the location. The clinic is two minutes from Archway tube on the Northern Line, so getting to and from sessions is straightforward whether you&apos;re coming in from:
+            One of the practical reasons people travel a few stops to book at Range and Restore is the location. The clinic is on Junction Road, between Archway and Tufnell Park stations on the Northern line, and the 134 bus stops on Junction Road. Getting to and from sessions is straightforward whether you&apos;re coming in from:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
-            <li>Tufnell Park (one stop south on the Northern Line, or a 15 minute walk)</li>
-            <li>Highgate (one stop north, or a walk down through Highgate Wood)</li>
-            <li>Holloway and Upper Holloway (a few minutes by bus or 10 to 15 minute walk)</li>
-            <li>Finsbury Park (210 bus direct to Archway, or a 25 minute walk)</li>
-            <li>Crouch End (10 minute bus from Highgate or Archway)</li>
-            <li>Islington (43 or 271 bus up Holloway Road)</li>
-            <li>Kentish Town (one stop south of Tufnell Park, or a 20 minute walk)</li>
+            <li>Tufnell Park (the clinic is a short walk from Tufnell Park station)</li>
+            <li>Highgate (one stop north of Archway on the Northern line)</li>
+            <li>Holloway and Upper Holloway (a short bus ride up Holloway Road to Archway)</li>
+            <li>Finsbury Park (the 210 bus runs direct to Archway)</li>
+            <li>Crouch End (a short bus ride to Archway)</li>
+            <li>Islington (the 43 bus up Holloway Road to Archway)</li>
+            <li>Kentish Town (two stops to Archway or one to Tufnell Park on the Northern line, or the 134 bus along Junction Road)</li>
           </ul>
 
           <p>
-            Plenty of clients pop in before or after work, fit a session around training on the Heath or Parkland Walk, or treat it as part of their wider recovery routine.
+            Plenty of clients come in before or after work, fit a session around training on the Heath or Parkland Walk, or treat it as part of their wider recovery routine.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">More than just massage: the new Recovery Suite</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">More than just massage: the Recovery Suite</h2>
 
           <p>
-            The clinic has expanded. Alongside the hands-on sports massage and soft tissue work, there&apos;s now a full <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in the same building. Two new pieces of recovery kit have been added to the room:
+            Alongside the hands-on sports massage and soft tissue work, there&apos;s a <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in the same building, with:
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
@@ -211,7 +211,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           </ul>
 
           <p>
-            That means for runners, gym-goers and anyone who takes recovery seriously, you can pair sports massage with sauna and compression in a single visit. The <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> combine them in one booking. It&apos;s a proper recovery set-up close to home, which is the bit most North London locals have been missing without going into the West End or Shoreditch.
+            The sauna is a private session, booked on its own: 45 minutes for &pound;19 or 60 minutes for &pound;29. Normatec comes as part of a 90-minute Sports Massage + Normatec session for &pound;110 (60 minutes of massage, then 30 minutes of Normatec). The <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page shows how massage, sauna and Normatec fit together.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When sports massage isn&apos;t the right first step</h2>
@@ -223,11 +223,11 @@ export default function SportsMassageArchwayLocalGuidePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">If you&apos;re local and you&apos;ve been putting it off</h2>
 
           <p>
-            If you&apos;ve had a niggle for weeks, a tight back you&apos;ve been ignoring, or a training block coming up that you want to feel sharp for, the right session catches it before it gets worse. Range and Restore is a few minutes from where you live, work or train. You don&apos;t have to add an hour each way to your day.
+            If you&apos;ve had a niggle for weeks, a tight back you&apos;ve been ignoring, or a training block coming up that you want to feel sharp for, the right session catches it before it gets worse. Range and Restore is close to where you live, work or train, so you don&apos;t have to add an hour each way to your day.
           </p>
 
           <p>
-            If you&apos;ve searched for &ldquo;sports massage near me&rdquo;, &ldquo;sports massage Archway&rdquo; or &ldquo;deep tissue sports massage therapist&rdquo; and ended up here, have a look at the <Link href={ROUTES.services.index} className="link-inline">services page</Link>, pick what fits, and get booked in.
+            Have a look at the <Link href={ROUTES.services.index} className="link-inline">services page</Link>, pick what fits, and get booked in. Clients come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town, and you can see more on our <Link href={ROUTES.areasServed.index} className="link-inline">areas served</Link> page.
           </p>
         </div>
 
@@ -245,7 +245,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
         </section>
 
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">Sports massage in Archway, two minutes from the tube</h2>
+          <h2 className="text-2xl font-black text-ink mb-4">Sports massage on Junction Road, Archway</h2>
           <p className="text-brand-green font-semibold mb-6">
             Range and Restore Sports Massage. 130 Junction Road, Archway N19 5LB. Assessment-led sessions for runners, desk workers and anyone who lives round here.
           </p>
@@ -288,7 +288,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
               &rarr; Areas Served Across North London
             </Link>
             <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Marathon Massage in Archway: Pre and Post Race Recovery
+              &rarr; Marathon Massage in Archway: Your Pre and Post Race Recovery Guide
             </Link>
           </div>
         </div>

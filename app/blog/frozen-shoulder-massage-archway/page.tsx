@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -167,14 +167,10 @@ export default function FrozenShoulderMassagePage() {
             Range and Restore works alongside your wider care rather than instead of it, and we will happily coordinate with your GP or physiotherapist. The clinic also operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> would help clarify what is going on in the shoulder, it can be arranged within the same building.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find shoulder pain treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;frozen shoulder massage near me&rdquo;, &ldquo;shoulder pain treatment North London&rdquo;, &ldquo;stiff shoulder therapist Archway&rdquo;, &ldquo;massage for shoulder tension London&rdquo; or &ldquo;advanced clinical massage shoulder N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for desk workers and active clients across all of those postcodes who want proper hands-on assessment and treatment for shoulder pain without trekking into central London.
+            The clinic is at 130 Junction Road, Archway, N19, a short walk from both Archway and Tufnell Park stations. Clients with stiff or painful shoulders come to us from Highgate, Holloway, Crouch End, Islington, Kentish Town and the rest of North London.
           </p>
         </div>
 
@@ -228,13 +224,13 @@ export default function FrozenShoulderMassagePage() {
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture, Neck &amp; Shoulder Pain: How Massage Helps
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
             <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Neck Pain and a Stiff Neck: How Massage Helps
+              &rarr; Neck Pain and a Stiff Neck – How Massage Helps
             </Link>
             <Link href={ROUTES.blog.tennisElbowMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Tennis Elbow and RSI: Can Soft Tissue Therapy Help?
+              &rarr; Tennis Elbow and RSI – How Soft Tissue Therapy Helps
             </Link>
             <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage

@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -171,14 +171,10 @@ export default function HipPainMassagePage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic clinic at 130 Junction Road, Archway. If a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> is needed to rule out joint pathology, this can be arranged within the same building, and treatment can be coordinated with your GP or physiotherapist so that everyone is working from the same picture.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find hip pain treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;hip pain massage near me&rdquo;, &ldquo;tight hips treatment North London&rdquo;, &ldquo;hip flexor release Archway&rdquo;, &ldquo;deep tissue massage for tight hips London&rdquo; or &ldquo;sports massage hips N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N8, N4, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for desk workers, cyclists and active clients across all of those postcodes who want proper hands-on treatment for tight, aching hips without trekking into central London.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Desk workers, cyclists and runners come to us with tight hips from Tufnell Park, Holloway, Highgate, Crouch End, Kentish Town and across North London.
           </p>
         </div>
 
@@ -235,10 +231,10 @@ export default function HipPainMassagePage() {
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
             <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Sciatica and Nerve Pain – How Sports Massage Helps
+              &rarr; Sciatica and Trapped Nerve Pain – How Massage Can Help
             </Link>
             <Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Tight Hamstrings – How Sports Massage Helps
+              &rarr; Tight and Pulled Hamstrings – How Sports Massage Helps
             </Link>
           </div>
         </div>

@@ -28,7 +28,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -47,23 +47,23 @@ const articleSchema = {
 const faqs = [
   {
     q: 'How do athletes recover after hard training?',
-    a: "Recovery usually stacks a few things on top of the basics of sleep, food and easy days: sports massage to release the muscles that training loads most; compression such as Normatec to flush heavy legs; and heat like an infrared sauna to relax and support sleep. At Range and Restore in Archway you can book all three in one place.",
+    a: "Recovery usually stacks a few things on top of the basics of sleep, food and easy days: sports massage to release the muscles that training loads most; compression such as Normatec for heavy legs; and heat like an infrared sauna to relax and support sleep. At Range and Restore in Archway you can get all three under one roof: Normatec comes as part of a 90-minute Sports Massage + Normatec session, and the sauna is booked on its own or alongside a massage.",
   },
   {
     q: 'Does sports massage help recovery?',
-    a: "Yes. Hard training loads the calves, quads, glutes, lower back, forearms and shoulders. Regular sports and deep tissue massage keeps that tissue loose, eases post-session soreness and helps you train more consistently across a block instead of breaking down with niggles.",
+    a: "Yes. Hard training loads the calves, quads, glutes, lower back, forearms and shoulders. Many clients find regular sports and deep tissue massage keeps that tissue loose, eases post-session soreness and helps them train more consistently across a block.",
   },
   {
     q: 'Does Normatec compression help sore legs?',
-    a: "Pneumatic compression like the Hyperice Normatec is popular with runners, cyclists and gym-goers because it helps flush heavy, tired legs after long or hard sessions and feels genuinely restorative between training days. It is a simple, passive way to recover while you sit back for around half an hour.",
+    a: "Pneumatic compression like the Hyperice Normatec is popular with runners, cyclists and gym-goers because many people find it eases heavy, tired legs after long or hard sessions. At Range and Restore it is the last 30 minutes of our 90-minute Sports Massage + Normatec session (£110), after 60 minutes of hands-on sports massage.",
   },
   {
     q: 'Can an infrared sauna help muscle recovery?',
-    a: "Many athletes use heat to unwind after hard sessions. An infrared hybrid sauna session promotes relaxation and circulation and can support better sleep, which is the part of recovery that actually rebuilds you. It pairs well with a massage or a compression session in the same visit.",
+    a: "Many athletes use heat to unwind after hard sessions. An infrared hybrid sauna session helps you relax, and many people find they sleep better afterwards, which is the part of recovery that actually rebuilds you. Sessions are 45 minutes (£19) or 60 minutes (£29), and it pairs well with a massage.",
   },
   {
     q: 'When should I get a sports massage before an event?',
-    a: "Keep maintenance massage regular through your training block, then keep anything close to race day gentle and schedule it a few days before rather than the day before, so you turn up fresh rather than tender. Save the deeper flush-out work for after you have competed.",
+    a: "Keep maintenance massage regular through your training block, then keep anything close to race day gentle and schedule it a few days before rather than the day before, so you turn up fresh rather than tender. Save the deeper work for after you have competed.",
   },
 ]
 
@@ -93,7 +93,7 @@ export default function SportsRecoveryPage() {
       <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Whether you run, lift, cycle or train functional fitness, the athletes who progress are the ones who recover as seriously as they train. Hard sessions leave your legs, back and shoulders loaded — and how fast you bounce back decides how much quality training you can string together. The most effective sports recovery stacks three things: <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports massage</Link>, compression and heat. At Range and Restore in Archway, North London, you can book all three in one place, minutes from Archway tube.
+            Whether you run, lift, cycle or train functional fitness, the athletes who progress are the ones who recover as seriously as they train. Hard sessions leave your legs, back and shoulders loaded — and how fast you bounce back decides how much quality training you can string together. The most effective sports recovery stacks three things: <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports massage</Link>, compression and heat. At Range and Restore in Archway, North London, all three are under one roof.
           </p>
 
           <p>
@@ -118,7 +118,7 @@ export default function SportsRecoveryPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">The sports recovery stack: massage, compression and heat</h2>
 
           <p>
-            No single tool does everything. The athletes who recover best combine hands-on work, compression and heat — which is exactly what the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at Range and Restore is built for.
+            No single tool does everything. The athletes who recover best combine hands-on work, compression and heat, which is what the <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> at Range and Restore is set up for.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Sports and deep tissue massage</h3>
@@ -128,16 +128,22 @@ export default function SportsRecoveryPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Normatec compression</h3>
           <p>
-            The Recovery Suite runs the <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Hyperice Normatec 3 Full Body</Link> pneumatic compression system — the same kit you will see in elite recovery zones. It cycles pressure through the legs, hips and arms to flush heavy, tired limbs after long or hard sessions. It is passive and easy: you sit back for around half an hour and let it work. Read more in our guide to <Link href={ROUTES.blog.normatecFullBodyCompressionRecoveryArchway} className="link-inline">Normatec compression recovery</Link>.
+            The Recovery Suite runs the <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Hyperice Normatec 3 Full Body</Link> pneumatic compression system — the same kit you will see in elite recovery zones. It cycles pressure through the legs, hips and arms, and many people find it eases heavy, tired limbs after long or hard sessions. You book it as a 90-minute Sports Massage + Normatec session: 60 minutes of sports massage, then 30 minutes of Normatec. There is no standalone Normatec session. Read more in our guide to <Link href={ROUTES.blog.normatecFullBodyCompressionRecoveryArchway} className="link-inline">Normatec compression recovery</Link>.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Infrared hybrid sauna</h3>
           <p>
-            The <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link> — a two-person Vidalux cabin with traditional and full-spectrum infrared heat — is the wind-down piece. Heat promotes relaxation and circulation and helps you switch off and sleep, which is where your body actually rebuilds. It is the perfect way to finish a hard week, and it pairs naturally with a massage or compression session.
+            The <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link> — a two-person Vidalux cabin with traditional and full-spectrum infrared heat — is the wind-down piece. Heat helps you relax and switch off, and many people find they sleep better afterwards, which is where your body actually rebuilds. It is a good way to finish a hard week. Sessions are private, for up to two people, and the price is per session.
           </p>
 
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Prices</h3>
+          <ul className="space-y-2 list-disc list-inside">
+            <li><strong>Infrared Hybrid Sauna</strong>: 45 minutes &pound;19, 60 minutes &pound;29 (sauna only).</li>
+            <li><strong>Sports Massage + Normatec</strong>: 90 minutes, &pound;110 (60 minutes of sports massage, then 30 minutes of Normatec).</li>
+            <li><strong>Sports Massage + Sauna</strong>: &pound;85 for a 30-minute massage and a 45-minute sauna, or &pound;90 for a 60-minute massage and a 30-minute sauna.</li>
+          </ul>
           <p>
-            Because all three live under one roof, you can stack them. Our <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> combine sports massage with sauna and compression in a single visit — a complete recovery session without trekking across London for the parts separately.
+            You can see the massage and sauna options side by side on our <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How to build recovery into your training week</h2>
@@ -146,7 +152,7 @@ export default function SportsRecoveryPage() {
             You do not need to recover after every session — you need to recover around the ones that matter. A simple approach for a typical block:
           </p>
           <ul className="space-y-2 list-disc list-inside">
-            <li><strong>Compression on your heaviest days</strong> — a Normatec session after a big workout takes the edge off heavy legs for the next day.</li>
+            <li><strong>Massage + Normatec after your biggest sessions</strong> — many people find the 90-minute Sports Massage + Normatec session takes the edge off heavy legs for the next day.</li>
             <li><strong>Massage every two to three weeks</strong> — regular maintenance work keeps tissue quality up across a block; increase the frequency as volume climbs.</li>
             <li><strong>Sauna to wind down</strong> — use heat on an easy day or after your hardest session of the week to relax and protect your sleep.</li>
           </ul>
@@ -157,19 +163,16 @@ export default function SportsRecoveryPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Recovery around race day or a big event</h2>
 
           <p>
-            In the final week, keep everything gentle. Book any pre-event massage a few days out rather than the day before, so you feel fresh rather than tender — light flushing work, not deep tissue. A short compression session and an easy sauna in taper week can help you feel loose and calm going in.
+            In the final week, keep everything gentle. Book any pre-event massage a few days out rather than the day before, so you feel fresh rather than tender — light work, not deep tissue. An easy sauna in taper week can help you feel calm going in.
           </p>
           <p>
-            Afterwards is when the deeper work earns its place. A sports massage in the days that follow, a Normatec session to flush the legs and a sauna to unwind will get you moving comfortably again far quicker than doing nothing. A <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Package</Link> is an easy way to book the lot.
+            Afterwards is when the deeper work earns its place. A Sports Massage + Normatec session in the days that follow, and a sauna to unwind, can help you get moving comfortably again. See the <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page for how massage, sauna and Normatec fit together.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to recover near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;sports recovery London&rdquo;, &ldquo;sports massage and recovery near me&rdquo;, &ldquo;Normatec compression near me&rdquo; or &ldquo;infrared sauna North London&rdquo;, Range and Restore is set up for exactly this. The clinic and Recovery Suite at 130 Junction Road are two minutes from Archway tube on the Northern Line and serve athletes right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Stroud Green, Islington, Camden and Kentish Town — a proper recovery base for North London, without heading into the West End between training and work.
+            The clinic and Recovery Suite are at 130 Junction Road, Archway, N19, a short walk from both Archway and Tufnell Park stations. Athletes come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town.
           </p>
         </div>
 
@@ -191,16 +194,24 @@ export default function SportsRecoveryPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Recover like you train</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Sports massage, Normatec compression and infrared sauna — the complete recovery stack, in one place in Archway, North London. Book a session or a Recovery Package.
+            Sports massage, Normatec compression and infrared sauna, under one roof in Archway, North London. Sauna sessions from &pound;19; Sports Massage + Normatec &pound;110 for 90 minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a
-              href={BOOKING_URLS.recoverySuite}
+              href={BOOKING_URLS.infraredHybridSauna}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ink"
             >
-              Book the Recovery Suite
+              Book a Sauna Session
+            </a>
+            <a
+              href={BOOKING_URLS.packageCompressionMassage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ink-outline"
+            >
+              Book Sports Massage + Normatec
             </a>
             <a
               href={BOOKING_URLS.sportsDeepTissue}
@@ -223,10 +234,10 @@ export default function SportsRecoveryPage() {
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline link-inline-tap">
-              &rarr; Recovery Packages — massage, sauna &amp; compression
+              &rarr; Recovery Packages — massage with sauna or Normatec
             </Link>
             <Link href={ROUTES.blog.normatecFullBodyCompressionRecoveryArchway} className="link-inline link-inline-tap">
-              &rarr; Faster Recovery with Normatec Compression, Now in Archway
+              &rarr; Faster Recovery with Normatec Compression in Archway
             </Link>
             <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage

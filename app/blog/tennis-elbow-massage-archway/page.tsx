@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -125,7 +125,7 @@ export default function TennisElbowRSIPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How soft tissue therapy helps</h2>
 
           <p>
-            Soft tissue therapy addresses tennis elbow and RSI by targeting the muscle and fascial tension contributing to the problem, rather than focusing only on the painful point at the elbow. Direct, aggressive work on an acutely irritated tendon is avoided — but releasing the surrounding forearm muscles and the wider pattern above is both appropriate and effective.
+            Soft tissue therapy addresses tennis elbow and RSI by targeting the muscle and fascial tension contributing to the problem, rather than focusing only on the painful point at the elbow. Direct, aggressive work on an acutely irritated tendon is avoided, while releasing the surrounding forearm muscles and the wider pattern above is appropriate and often helpful.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Releasing the forearm extensors</h3>
@@ -140,7 +140,7 @@ export default function TennisElbowRSIPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving tissue health and circulation</h3>
           <p>
-            Tendons have a relatively poor blood supply compared to muscle, which is one reason they are slow to heal. Massage increases local circulation, supporting the delivery of nutrients and oxygen to the affected tissue and helping the repair process, while easing the protective muscle tension that builds up around a painful area.
+            Tendons have a relatively poor blood supply compared to muscle, which is one reason they are slow to heal. Massage increases local circulation, which may support the repair process, and it eases the protective muscle tension that builds up around a painful area.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Mobility and myofascial work</h3>
@@ -168,14 +168,10 @@ export default function TennisElbowRSIPage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is required to clarify what is going on at the tendon, this can be arranged within the same building.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find tennis elbow and RSI treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;tennis elbow massage near me&rdquo;, &ldquo;RSI treatment North London&rdquo;, &ldquo;forearm pain therapist Archway&rdquo;, &ldquo;soft tissue therapy for tennis elbow London&rdquo; or &ldquo;repetitive strain massage N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for desk workers, tradespeople and racket-sport players across all of those postcodes who do not want to trek into central London for proper hands-on treatment of tennis elbow and RSI.
+            The clinic is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Desk workers, tradespeople and racket-sport players come to us with elbow and forearm pain from Holloway, Islington, Kentish Town, Highgate and the rest of North London.
           </p>
         </div>
 
@@ -232,10 +228,10 @@ export default function TennisElbowRSIPage() {
               &rarr; Advanced Clinical Massage
             </Link>
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture Pain and How Massage Helps
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
             <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Massage for Office Workers in Archway
+              &rarr; How Sports Massage Helps Office Workers in Archway, North London
             </Link>
           </div>
         </div>

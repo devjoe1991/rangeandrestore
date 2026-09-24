@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
@@ -17,26 +16,16 @@ const breadcrumbs = buildBreadcrumbs([
   { name: 'Office Worker Massage Archway', path: '/blog/office-worker-massage-archway' },
 ])
 
-const galleryPhotos = [
-  'https://lh3.googleusercontent.com/p/AF1QipMeGsB5EWhgxJyZ3DNekd_e1muf6vhA700DGX9t=w1200',
-  'https://lh3.googleusercontent.com/p/AF1QipPYQq2vnnDI-IEVa-dVpPEkhBm6bVzjba_OOtLn=w1200',
-  'https://lh3.googleusercontent.com/p/AF1QipOOsSnkrvHR0AX6tPqr-5tN6Duo5R-qe_OkbnYm=w1200',
-  'https://lh3.googleusercontent.com/p/AF1QipOfPEiIrGSycWokGCYx5JOu9K46ePIet7ItwZ9o=w1200',
-  'https://lh3.googleusercontent.com/p/AF1QipM1J4nxzyobndo7qz2phY94Z510gjVgonLq4ZzI=w1200',
-  'https://lh3.googleusercontent.com/p/AF1QipM-esC8kOmfV6odX8qWscq3ALAdibbQ7F4-oCH8=w1200',
-  'https://lh3.googleusercontent.com/p/AF1QipMgPreXskxNdPwVkCB_HwsgFVYdKd93CFuzM1l9=w1200',
-]
-
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'How Sports Massage Helps Office Workers in Archway, North London',
   description: 'Sports massage and soft tissue remedial therapy for office workers, commuters, and long-hour desk workers in Archway, North London. Target neck, back, hip and shoulder tension.',
-  image: 'https://lh3.googleusercontent.com/p/AF1QipMeGsB5EWhgxJyZ3DNekd_e1muf6vhA700DGX9t=w1200',
+  image: 'https://rangeandrestore.co.uk/back-neck-pain-mot-neck-massage-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -56,24 +45,20 @@ const articleSchema = {
 // article content above; keep the two in sync when editing.
 const faqs = [
   {
-    q: "Can massage help back and neck pain from a desk job?",
-    a: "Yes. Sports massage and soft tissue remedial therapy release the muscle tension that builds up in the neck, shoulders, back, hips and chest from sitting at a desk, improve your posture by balancing tight and weakened areas, and reduce the daily pain and discomfort that accumulates over the working week. The aim is to address the root cause of the pattern, not just the symptoms at the surface.",
+    q: "Does the commute make desk pain worse?",
+    a: "It often does. Standing on the Northern line with a bag on one shoulder, gripping a handrail and bracing against sudden stops loads the neck, shoulders and lower back before the working day has started, and evenings on a laptop add to it. Treatment looks at the whole week, not just the hours at the desk.",
   },
   {
-    q: "Why does sitting at a desk all day give me back pain?",
-    a: "The body is not designed for sustained static postures. When you sit for hours leaning slightly toward a monitor, the hip flexors shorten from continuous hip flexion and the glutes become inhibited, which leaves the lower back to do their work. Over time that creates a self-reinforcing pattern where tight muscles pull joints out of alignment and weak muscles fail to hold them in place.",
+    q: "Can I book a massage before or after work?",
+    a: "Yes. The clinic is open Monday to Friday 08:00 to 20:00 and Saturday and Sunday 09:00 to 17:00, so early-morning, evening and weekend appointments are available around a 9 to 5.",
   },
   {
-    q: "How do I get rid of a stiff neck from working at a computer?",
-    a: "Working at a computer tends to push the neck forward, loading the upper traps and the muscles at the base of the skull, which is where a lot of tension and even tension headaches come from. Trigger point therapy releases the specific knotted areas that refer pain into the head and shoulders, while deep tissue work and assisted stretching help unwind the forward head posture behind a stiff neck.",
+    q: "Which treatment should I book for desk-related aches?",
+    a: "If you want a proper assessment of your neck, shoulders and back, book the Back & Neck Pain MOT (60 or 90 minutes). For regular upkeep once things have settled, a Sports & Deep Tissue Massage (30, 60 or 90 minutes) works well. For complex or long-standing problems, Advanced Clinical Massage is the better fit. If you are unsure, get in touch and we will point you to the right one.",
   },
   {
-    q: "Can working from home give you bad posture?",
-    a: "It can. Long hours at a desk, rounded shoulders rolling inward toward the keyboard, and evenings of late-night email on a laptop at the kitchen table all compound the same pattern — a rounding mid-back, tight chest and forward-drifting neck. Assessment-led treatment works to improve posture and alignment by releasing the tight areas and restoring mobility through the thoracic spine, hips and shoulders.",
-  },
-  {
-    q: "How often should I get a massage if I sit at a desk all day?",
-    a: "For office workers with a daily commute on top, regular treatment roughly every three to four weeks through busy periods keeps the tension from embedding, catches problem areas before they become injuries, and keeps you moving freely through the working day. Staying well hydrated alongside treatment helps the tissue stay supple and responsive.",
+    q: "How often should office workers have a massage?",
+    a: "Once any established pain has settled, many desk workers find a session every three to four weeks through busy periods keeps tension from building back up. If you are starting with pain that has been there for months, our desk posture guide explains how a first block of sessions usually looks.",
   },
 ]
 
@@ -103,11 +88,11 @@ export default function OfficeWorkerMassageArchwayPage() {
       <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            In today&apos;s fast-paced working environment, many of us spend long hours sitting at desks, commuting across the city, and staring at screens. Over months and years, that lifestyle builds up a quiet but relentless load on the body &mdash; muscular tension, restricted movement, postural change, and a slow drift toward persistent discomfort.
+            Long hours at a desk, a daily commute across the city and evenings on a laptop add up. Over months and years, that routine builds up a quiet but relentless load on the body &mdash; muscular tension, restricted movement, postural change, and a slow drift toward persistent discomfort.
           </p>
 
           <p>
-            At <Link href={ROUTES.about} className="link-inline">Range and Restore Sports Massage in Archway, North London</Link>, I regularly treat office workers, commuters, and people working long hours at desks. The pattern is familiar: the same tightness appearing in the same places, the same aches settling in at the end of the working week. The good news is that it responds well to targeted treatment &mdash; and that you don&apos;t have to accept it as the price of a desk job.
+            At Range and Restore in Archway, North London, our therapists regularly treat office workers, commuters and people working long hours at desks. The pattern is familiar: the same tightness appearing in the same places, the same aches settling in at the end of the working week. The good news is that it responds well to targeted treatment &mdash; and that you don&apos;t have to accept it as the price of a desk job.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Common problems from desk work and commuting</h2>
@@ -146,7 +131,8 @@ export default function OfficeWorkerMassageArchwayPage() {
           </ul>
 
           <p>
-            This creates a self-reinforcing pattern &mdash; tight muscles pull joints out of alignment, weak muscles fail to hold them in place, and the nervous system gradually adopts the distortion as its new normal. For a deeper look at the mechanics, including upper and lower crossed syndrome and how to reverse them, see <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">our guide to desk posture pain</Link>.
+            This creates a self-reinforcing pattern &mdash; tight muscles pull joints out of alignment, weak muscles fail to hold them in place, and the nervous system gradually adopts the distortion as its new normal. This article focuses on office life and the commute. For the fuller guide to the mechanics, including upper and lower crossed syndrome, how many sessions to expect and when to see a GP, read{' '}
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How sports massage and soft tissue therapy help</h2>
@@ -201,48 +187,27 @@ export default function OfficeWorkerMassageArchwayPage() {
           <p>
             If your week involves long hours at a desk plus a daily commute, the cumulative effect on the body is significant. Regular treatment &mdash; every three to four weeks through busy periods &mdash; keeps the tension from embedding, catches problem areas before they become injuries, and keeps you moving freely through the working day. Staying well <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated throughout the day</Link> alongside treatment helps the tissue stay supple and responsive.
           </p>
-        </div>
 
-        <div className="mt-10 mb-10">
-          <h2 className="text-2xl font-bold text-page mb-4">Carlos at work &mdash; clinic sessions in Archway</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {galleryPhotos.map((src, i) => (
-              <div key={i} className="aspect-square rounded-xl overflow-hidden relative">
-                <Image
-                  src={src}
-                  alt={`Range and Restore Sports Massage clinic in Archway, North London — photo ${i + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 50vw, 33vw"
-                />
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-page-muted opacity-70 mt-3">
-            Photos from the Range and Restore Google Business listing &mdash; clinic sessions in Archway, North London.
-          </p>
-        </div>
-
-        <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Local support in Archway, North London</h2>
 
           <p>
-            Range and Restore is based at 130 Junction Road, Archway, London N19 5LB &mdash; a short walk from Archway tube station on the Northern line. For office workers in North London, getting the right treatment locally means you can fit a session into an evening or a Saturday morning without adding a long commute on top of an already demanding week.
+            Range and Restore is based at 130 Junction Road, Archway, London N19 5LB &mdash; a short walk from Archway and Tufnell Park stations on the Northern line. For office workers in North London, getting the right treatment locally means you can fit a session into an evening or a Saturday morning without adding a long commute on top of an already demanding week.
           </p>
 
           <p>
-            I work with clients from across the area &mdash; Archway, Tufnell Park, Holloway, Highgate, Islington, Crouch End, and Finsbury Park. Many come in regularly through busy work cycles and find that consistent treatment makes a measurable difference to how they feel at the end of the working week.
+            Our clients come from across the area &mdash; Archway, Tufnell Park, Holloway, Highgate, Islington, Crouch End and Finsbury Park. Many come in regularly through busy work cycles and find that consistent treatment makes a measurable difference to how they feel at the end of the working week.
           </p>
 
           <ul className="space-y-2 list-disc list-inside">
             <li>Open Monday to Friday 08:00&ndash;20:00, Saturday and Sunday 09:00&ndash;17:00 &mdash; appointments that work around the 9&ndash;5</li>
-            <li>30, 60, and 90-minute sessions available</li>
+            <li>Sports &amp; Deep Tissue Massage in 30, 60 or 90-minute sessions; the Back &amp; Neck Pain MOT in 60 or 90 minutes</li>
             <li><Link href={ROUTES.services.massageBundles} className="link-inline">Massage bundles</Link> for regular treatment through busy working periods</li>
-            <li>See <Link href={ROUTES.areasServed.index} className="link-inline">areas served</Link> for more on the North London areas I cover</li>
+            <li>See <Link href={ROUTES.areasServed.index} className="link-inline">areas served</Link> for more on the North London areas we cover</li>
           </ul>
 
           <p>
-            If you&apos;re not sure which service or session length is right for you, <Link href={ROUTES.contact} className="link-inline">get in touch</Link> and I&apos;ll point you in the right direction.
+            If you&apos;re not sure which service or session length is right for you,{' '}
+            <Link href={ROUTES.contact} className="link-inline">get in touch</Link> and we&apos;ll point you in the right direction.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Don&apos;t wait for it to become chronic</h2>
@@ -251,15 +216,6 @@ export default function OfficeWorkerMassageArchwayPage() {
             If you&apos;re already dealing with neck, back, or shoulder discomfort from desk work and commuting, the time to address it is now, before it becomes a long-term issue that&apos;s harder to reverse. Regular treatment makes a real difference to your comfort, posture, and overall wellbeing.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find office worker massage near you in North London</h2>
-
-          <p>
-            If you have been searching &ldquo;office worker massage near me&rdquo;, &ldquo;back and neck pain massage North London&rdquo;, &ldquo;commuter massage Archway&rdquo;, &ldquo;tech neck treatment London&rdquo;, &ldquo;remote worker massage N19&rdquo;, &ldquo;deep tissue massage for desk workers&rdquo; or &ldquo;sciatica massage Archway&rdquo;, Range and Restore is the local clinic for it. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Office workers and commuters across all those postcodes use Range and Restore as the proper local option for posture, back and neck work, instead of generic spa or chain bookings.
-          </p>
         </div>
 
         {/* Problem-based FAQ — visible copy that matches the FAQPage schema above */}
@@ -313,10 +269,10 @@ export default function OfficeWorkerMassageArchwayPage() {
               &rarr; Back &amp; Neck Pain MOT &ndash; Soft Tissue Remedial Massage Therapy
             </Link>
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
             <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline link-inline-tap">
-              &rarr; Hydration and Muscle Health &ndash; What Every Client Should Know
+              &rarr; Hydration and Muscle Health – What Every Client Should Know
             </Link>
             <Link href={ROUTES.corporateWellbeing} className="link-inline link-inline-tap">
               &rarr; Corporate Massage &amp; Workplace Wellbeing for Employers

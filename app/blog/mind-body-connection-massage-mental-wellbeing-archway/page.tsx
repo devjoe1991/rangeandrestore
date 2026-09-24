@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: 'Can massage help with stress and anxiety?',
-    a: 'Massage is not a treatment for anxiety or depression, and we do not claim it is. What it does do is reduce the physical burden that so often sits underneath stress and low mood — pain, muscular tension and stiff, restricted movement. Slow, skilled hands-on work also helps the nervous system settle, so people usually leave calmer and sleep better afterwards. For anyone whose mood or anxiety is being affected by persistent discomfort, that can be a genuinely useful part of looking after yourself, alongside proper support from a GP or mental-health professional where needed.',
+    a: 'Massage is not a treatment for anxiety or depression, and we do not claim it is. What it does do is reduce the physical burden that so often sits underneath stress and low mood — pain, muscular tension and stiff, restricted movement. Slow, skilled hands-on work may also help the nervous system settle, and many people leave calmer and sleep better afterwards. For anyone whose mood or anxiety is being affected by persistent discomfort, that can be a genuinely useful part of looking after yourself, alongside proper support from a GP or mental-health professional where needed.',
   },
   {
     q: 'Does massage release endorphins?',
@@ -160,16 +160,16 @@ export default function MindBodyConnectionPage() {
             <li><strong className="text-page">Endorphins.</strong> Massage is associated with the release of endorphins, the body&rsquo;s own natural pain-relieving chemicals, which is part of why pain often feels noticeably reduced straight after a session, not just in the days that follow.</li>
             <li><strong className="text-page">A calmer nervous system.</strong> Slow, skilled touch encourages a shift away from the stressed, alert state and towards the rest-and-digest state the body needs for recovery. Breathing deepens and slows, the shoulders drop, and the sense of being braced against everything eases.</li>
             <li><strong className="text-page">Less guarding.</strong> Muscles that have been held tight to protect a painful area learn to let go, and once they do the pain-tension loop loses some of its momentum.</li>
-            <li><strong className="text-page">Improved circulation.</strong> Hands-on work increases blood flow through tight, stagnant tissue, which supports recovery and reduces the heavy, stiff feeling that makes people reluctant to move.</li>
+            <li><strong className="text-page">Local circulation.</strong> Hands-on work may increase blood flow in the area being treated, and many clients find it eases the heavy, stiff feeling that makes people reluctant to move.</li>
           </ul>
           <p>
-            The exact mechanisms are still being studied and we are careful not to overstate them. The practical outcome, though, is consistent: people get off the couch with less pain, lower tension and a calmer, clearer head.
+            The exact mechanisms are still being studied and we are careful not to overstate them. In practice, many clients get off the couch with less pain, lower tension and a calmer, clearer head.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Relaxation, stress and better sleep</h2>
 
           <p>
-            The calming effect of a massage is not a side benefit; for a lot of people it is half the point. An hour with no screen, nowhere to be and nothing to do is a genuine reset for an overstretched mind, and the physical release that comes with it means the calm tends to last past the treatment itself.
+            For a lot of people the calming effect of a massage is half the point. An hour with no screen, nowhere to be and nothing to do is a genuine reset for an overstretched mind, and the physical release that comes with it means the calm tends to last past the treatment itself.
           </p>
 
           <p>
@@ -209,7 +209,7 @@ export default function MindBodyConnectionPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage for pain, movement and wellbeing in North London</h2>
 
           <p>
-            If persistent pain, tension or stiffness has started to affect how you sleep, how you feel and how much you do, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5 — Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden and Kentish Town. Every session starts with an assessment, and every treatment is shaped around what will actually help you move better and feel better.
+            If persistent pain, tension or stiffness has started to affect how you sleep, how you feel and how much you do, Range and Restore is set up for exactly this. The clinic is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations, and clients come to us from Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town. Every session starts with an assessment, and every treatment is shaped around what will actually help you move better and feel better.
           </p>
         </div>
 
@@ -263,10 +263,10 @@ export default function MindBodyConnectionPage() {
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href={ROUTES.blog.stressReliefMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Stress Relief Massage: Ease Tension and Switch Off
+              &rarr; Stress Relief Massage – Easing Tension and Switching Off
             </Link>
             <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline link-inline-tap">
-              &rarr; The Benefits of Sports Massage: What It Actually Does
+              &rarr; The Benefits of Sports Massage
             </Link>
             <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline link-inline-tap">
               &rarr; Relaxation &amp; Restorative Massage

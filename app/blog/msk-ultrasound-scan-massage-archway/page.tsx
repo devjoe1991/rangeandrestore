@@ -20,12 +20,12 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Do I Need a Scan for My Injury? MSK Ultrasound, Explained',
-  description: 'When a diagnostic MSK ultrasound is worth having for persistent pain or a sports injury, what it can show, and how the new scan plus clinical massage package works at 130 Junction Road, Archway, North London.',
+  description: 'When a diagnostic MSK ultrasound is worth having for persistent pain or a sports injury, what it can show, and how the scan plus clinical massage package works at 130 Junction Road, Archway, North London.',
   image: 'https://rangeandrestore.co.uk/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'How much does an MSK ultrasound scan cost in Archway?',
-    a: 'As part of the MSK Injury Assessment package at Range and Restore, the diagnostic ultrasound is £90, paid directly to Reliable Scan, and covers the scan of one body area, a clinical consultation, a comprehensive written report and your images. The full package, including a 60-minute clinical massage, is £165 in total.',
+    a: 'The MSK Injury Assessment package at Range and Restore is £165 in total, paid in two parts: £75 online to Range and Restore when you book, which covers the 60-minute clinical massage, and £90 directly to Reliable Scan for the diagnostic ultrasound of one body area, a clinical consultation, a comprehensive written report and your images.',
   },
   {
     q: 'Will my massage actually be different because of the scan?',
@@ -109,7 +109,7 @@ export default function MskUltrasoundScanMassagePage() {
       <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            Here&apos;s the honest answer: most aches don&apos;t need a scan. But if your pain has persisted for weeks, keeps coming back, or started with an injury you never got looked at, treating it blind is a slow way to get better. A diagnostic musculoskeletal (MSK) ultrasound shows what is actually going on in the muscle, tendon or joint — and at Range and Restore in Archway, you can now book the scan and a <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">clinical massage guided by the findings</Link> as one package, under one roof.
+            Here&apos;s the honest answer: most aches don&apos;t need a scan. But if your pain has persisted for weeks, keeps coming back, or started with an injury you never got looked at, treating it blind is a slow way to get better. A diagnostic musculoskeletal (MSK) ultrasound shows what is actually going on in the muscle, tendon or joint — and at Range and Restore in Archway, you can book the scan and a <Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">clinical massage guided by the findings</Link> as one package, under one roof.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is an MSK ultrasound?</h2>
@@ -170,7 +170,7 @@ export default function MskUltrasoundScanMassagePage() {
           <ul className="space-y-2 list-disc list-inside">
             <li><strong className="text-page">The scan comes first.</strong> A diagnostic MSK ultrasound of one body area with Reliable Scan, including consultation, written report and images.</li>
             <li><strong className="text-page">The findings reach your therapist.</strong> Where clinically appropriate, the report and images are shared with your Range and Restore therapist before treatment.</li>
-            <li><strong className="text-page">Then a 60-minute clinical massage.</strong> Pressure, technique and priorities are matched to what the imaging shows — not guesswork.</li>
+            <li><strong className="text-page">Then a 60-minute clinical massage.</strong> Pressure, technique and priorities are matched to what the imaging shows.</li>
           </ul>
 
           <p>
@@ -183,14 +183,10 @@ export default function MskUltrasoundScanMassagePage() {
             Diagnostic ultrasound supports clinical decision-making, but it is not a substitute for urgent medical care. If your pain is severe, has suddenly worsened, follows significant trauma, or comes with red flags such as fever, unexplained swelling, numbness or loss of function, see a doctor or A&amp;E first. And if a scan reveals something that hands-on treatment can&apos;t help, you&apos;ll be told plainly — the written report is yours to take to your GP, physio or consultant.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to get an MSK ultrasound and massage near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you&apos;ve been searching &ldquo;MSK ultrasound near me&rdquo;, &ldquo;private ultrasound scan North London&rdquo;, &ldquo;sports injury scan Archway&rdquo;, &ldquo;muscle tear scan London&rdquo; or &ldquo;injury assessment N19&rdquo;, this package was built for exactly that. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5. Reliable Scan is open seven days a week, 10am to 10pm, with same-day appointments often available.
-          </p>
-
-          <p>
-            That puts diagnosis-led treatment within easy reach of Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Stroud Green, Islington, Kentish Town and the wider North London catchment — without a trip into central London or a long imaging waiting list.
+            Both clinics are at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Clients come for the scan and massage from Holloway, Highgate, Crouch End, Finsbury Park, Islington, Kentish Town and further across North London. Reliable Scan is open seven days a week, 10am to 10pm, with same-day appointments often available.
           </p>
         </div>
 
@@ -212,7 +208,7 @@ export default function MskUltrasoundScanMassagePage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Stop guessing what&apos;s causing your pain</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Diagnostic MSK ultrasound, written report and a 60-minute clinical massage guided by the findings — all at 130 Junction Road, Archway. £75 online secures your appointment.
+            Diagnostic MSK ultrasound, written report and a 60-minute clinical massage guided by the findings — all at 130 Junction Road, Archway. £165 in total: £75 online to Range and Restore secures your appointment, and £90 is paid directly to Reliable Scan.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a
@@ -248,10 +244,10 @@ export default function MskUltrasoundScanMassagePage() {
               &rarr; How clinical collaboration works at 130 Junction Road
             </Link>
             <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline link-inline-tap">
-              &rarr; Does Massage Help Achilles Tendinitis?
+              &rarr; Achilles Tendinitis – How Sports Massage Helps Recovery
             </Link>
             <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
-              &rarr; How to Recover Faster Between Training and Events
+              &rarr; Sports Recovery in Archway: Your Complete Recovery Stack
             </Link>
           </div>
         </div>

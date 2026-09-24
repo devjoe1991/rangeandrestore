@@ -26,7 +26,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -115,6 +115,11 @@ export default function SportsMassageSoftTissueTherapyPage() {
 
           <p>
             Your body keeps a running tally of every training session, every hour at a desk and every night of broken sleep. Eventually it presents the bill: tight hamstrings that cut your stride short, a lower back that locks up on long rides, shoulders that sit somewhere near your ears by Friday afternoon. Regular soft tissue work settles that debt before it becomes a real problem.
+          </p>
+
+          <p>
+            This article looks at soft tissue remedial therapy and what it offers runners, cyclists and desk workers. For a plain run-through of what sports massage does, from easing tension to helping recovery and sleep, read{' '}
+            <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline">The Benefits of Sports Massage</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Who benefits from sports massage and soft tissue therapy?</h2>
@@ -265,17 +270,11 @@ export default function SportsMassageSoftTissueTherapyPage() {
             <li>Assessment-led treatment that addresses the cause, not just the pain</li>
             <li>Sessions tailored to athletes, office workers and everyone in between</li>
             <li>Techniques chosen for what they will do for you, not a fixed routine</li>
-            <li>A clean, professional clinic at 130 Junction Road, two minutes from Archway tube</li>
+            <li>A clean, professional clinic at 130 Junction Road, a short walk from Archway and Tufnell Park stations</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage and soft tissue therapy near you in North London</h2>
-
           <p>
-            If you have been searching &ldquo;sports massage near me&rdquo;, &ldquo;soft tissue therapy North London&rdquo;, &ldquo;deep tissue massage Archway&rdquo;, &ldquo;sports massage therapist N19&rdquo;, &ldquo;sports injury massage London&rdquo;, &ldquo;remedial massage Archway&rdquo; or &ldquo;clinical sports massage North London&rdquo;, Range and Restore is the local option. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That includes runners, cyclists, gym-goers, lifters, office workers, commuters and post-surgery clients from Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. If you live, work or train in North London and want assessment-led sports massage and soft tissue remedial therapy, this is the clinic.
+            Runners, cyclists, gym-goers and office workers come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Stroud Green, Islington and Kentish Town.
           </p>
         </div>
 
@@ -328,6 +327,9 @@ export default function SportsMassageSoftTissueTherapyPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
+            <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline link-inline-tap">
+              &rarr; The Benefits of Sports Massage
+            </Link>
             <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
@@ -335,10 +337,7 @@ export default function SportsMassageSoftTissueTherapyPage() {
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
             <Link href={ROUTES.blog.sportsMassageCyclingRecoveryArchway} className="link-inline link-inline-tap">
-              &rarr; Sports Massage and Recovery for Cyclists
-            </Link>
-            <Link href={ROUTES.blog.sportsMassageBenefits} className="link-inline link-inline-tap">
-              &rarr; The Benefits of Sports Massage: What It Actually Does
+              &rarr; Sports Massage and Recovery for Cyclists in Archway, North London
             </Link>
           </div>
         </div>

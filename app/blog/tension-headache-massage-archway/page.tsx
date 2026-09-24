@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -119,7 +119,7 @@ export default function TensionHeadachePage() {
           </ul>
 
           <p>
-            This pattern is especially common in <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">office workers</Link> and anyone spending long hours at a laptop. The underlying issue is often not the head itself, but the neck, shoulders and jaw muscles that surround it, which have become so tight and overloaded that they refer pain upwards. If a <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">stiff, aching neck</Link> is the bigger complaint, we cover that separately.
+            This pattern is especially common in <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">office workers</Link> and anyone spending long hours at a laptop. The source is often the neck, shoulder and jaw muscles, which have become so tight and overloaded that they refer pain upwards into the head. If a <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">stiff, aching neck</Link> is the bigger complaint, we cover that separately.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps tension headaches</h2>
@@ -140,12 +140,12 @@ export default function TensionHeadachePage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Addressing trigger points and the jaw</h3>
           <p>
-            Trigger points — tight, sensitive bands within a muscle — can refer pain in predictable patterns, and several in the neck, shoulders and jaw refer directly into the head. Trigger point therapy deactivates these, while attention to a clenched jaw can help where teeth grinding is part of the picture.
+            Trigger points — tight, sensitive bands within a muscle — can refer pain in predictable patterns, and several in the neck, shoulders and jaw refer directly into the head. Trigger point therapy aims to ease these, while attention to a clenched jaw can help where teeth grinding is part of the picture.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Reducing the postural load</h3>
           <p>
-            Because tension headaches are so often driven by posture, effective treatment looks beyond the neck alone. Releasing a tight chest and restoring movement through the upper back and shoulders reduces the forward-head position that keeps overloading the neck muscles, so the relief is more likely to last.
+            Because tension headaches are so often driven by posture, effective treatment looks beyond the neck alone. Releasing a tight chest and restoring movement through the upper back and shoulders can reduce the forward-head position that keeps overloading the neck muscles, so the relief is more likely to last.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How many sessions will I need?</h2>
@@ -168,14 +168,10 @@ export default function TensionHeadachePage() {
             If your headaches are frequent, changing in pattern, or not clearly linked to neck and shoulder tension, please have them reviewed medically first. Range and Restore is happy to work alongside your GP, and operates in the same building as <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway, should a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> be needed.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find headache and neck-tension massage near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;tension headache massage near me&rdquo;, &ldquo;neck tension headache treatment North London&rdquo;, &ldquo;massage for headaches Archway&rdquo;, &ldquo;shoulder and neck massage for headaches London&rdquo; or &ldquo;headache massage N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N8, N4, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden and Kentish Town, along with the wider North London catchment. Range and Restore is the local option for desk-based clients and anyone with neck-driven headaches who would rather not trek into central London for proper hands-on treatment.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Clients with neck-driven headaches, many of them desk-based, come to us from Tufnell Park, Kentish Town, Holloway, Islington and nearby parts of North London.
           </p>
         </div>
 
@@ -229,13 +225,13 @@ export default function TensionHeadachePage() {
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture, Neck &amp; Shoulder Pain: How Massage Helps
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
             <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Neck Pain and a Stiff Neck: How Massage Helps
+              &rarr; Neck Pain and a Stiff Neck – How Massage Helps
             </Link>
             <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
-              &rarr; How Sports Massage Helps Office Workers in Archway
+              &rarr; How Sports Massage Helps Office Workers in Archway, North London
             </Link>
             <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage

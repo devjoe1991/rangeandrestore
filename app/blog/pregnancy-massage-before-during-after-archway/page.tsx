@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'Who provides pregnancy massage at Range and Restore?',
-    a: 'Alison Isherwood and Mateja Bracko-Mounti, both BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists who are also trained in pregnancy massage. That combination means treatment is not a generic relaxing routine — it draws on remedial soft tissue knowledge, adapted appropriately to your stage of pregnancy, symptoms and comfort.',
+    a: 'Alison Isherwood and Mateja Bracko-Mounti, both BTEC Level 5 Sports Massage and Soft Tissue Remedial Therapists who are also trained in pregnancy massage. That means treatment draws on remedial soft tissue knowledge, adapted appropriately to your stage of pregnancy, symptoms and comfort.',
   },
   {
     q: 'How much is pregnancy massage in Archway?',
@@ -120,7 +120,7 @@ export default function PregnancyMassageStagesPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What actually changes, and why it hurts</h2>
 
           <p>
-            Pregnancy places progressively different demands on the body. Body weight increases, posture adapts around it, and the centre of gravity shifts forward. Ligaments become more flexible. The growing uterus changes the load through the abdomen, pelvis and lower back. None of this is a fault or a failure — it is the body doing exactly what it is supposed to do — but the muscles have to work differently to manage it, and that is where the discomfort tends to come from.
+            Pregnancy places progressively different demands on the body. Body weight increases, posture adapts around it, and the centre of gravity shifts forward. Ligaments become more flexible. The growing uterus changes the load through the abdomen, pelvis and lower back. This is the body doing exactly what it is supposed to do, but the muscles have to work differently to manage it, and that is where the discomfort tends to come from.
           </p>
 
           <p>
@@ -139,11 +139,11 @@ export default function PregnancyMassageStagesPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What the evidence actually supports</h2>
 
           <p>
-            Research into manual therapy during pregnancy has found improvements in pregnancy-related back and pelvic pain compared with usual care or relaxation alone. That is worth knowing. It is also worth being straight about the limits: the evidence is not strong enough to claim massage will cure these conditions, and anyone telling you otherwise is selling something.
+            Research into manual therapy during pregnancy has found improvements in pregnancy-related back and pelvic pain compared with usual care or relaxation alone. That is worth knowing. It is also worth being straight about the limits: the evidence is not strong enough to claim massage will cure these conditions.
           </p>
 
           <p>
-            That honest position happens to describe exactly what we do anyway. The realistic aims are helping manage muscular tension, easing discomfort, and supporting comfortable movement while your body adapts — not fixing pregnancy, which does not need fixing.
+            That honest position happens to describe exactly what we do anyway. The realistic aims are helping manage muscular tension, easing discomfort, and supporting comfortable movement while your body adapts.
           </p>
 
           <p>
@@ -184,12 +184,12 @@ export default function PregnancyMassageStagesPage() {
           </p>
 
           <p>
-            It means you are not simply booking a generic relaxing massage with the word &ldquo;pregnancy&rdquo; in front of it. It means a therapist who understands soft tissue, movement and muscular loading, applying that knowledge with pregnancy-specific training — so treatment is individualised and appropriately adapted to your stage of pregnancy, your symptoms, your comfort and what you actually want out of the session.
+            In practice you see a therapist who understands soft tissue, movement and muscular loading, applying that knowledge with pregnancy-specific training — so treatment is individualised and appropriately adapted to your stage of pregnancy, your symptoms, your comfort and what you actually want out of the session.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">How treatment is adapted</h3>
           <p>
-            Positioning, pressure and technique all shift as pregnancy advances. Side-lying positioning with cushion support is commonly recommended as pregnancy progresses, with semi-reclined positioning where appropriate. Pressure is adjusted to your preference, not to a house standard, and your therapist checks in as the session goes on rather than assuming.
+            Positioning, pressure and technique all shift as pregnancy advances. Side-lying positioning with cushion support is commonly recommended as pregnancy progresses, with semi-reclined positioning where appropriate. Pressure is adjusted to your preference, and your therapist checks in as the session goes on.
           </p>
 
           <p>Depending on what the consultation and your symptoms point to, treatment may help with:</p>
@@ -203,7 +203,7 @@ export default function PregnancyMassageStagesPage() {
           </ul>
 
           <p>
-            Every pregnancy is different, so every session starts with consultation and appropriate screening — your stage, how you have been, and anything your midwife or GP has flagged. Where something falls outside our scope, we refer back to your midwife, GP, obstetric team or physiotherapist. That is not a caveat bolted on at the end; it is part of doing the job properly. Our <Link href={ROUTES.services.pregnancyMassage} className="link-inline">pregnancy massage service page</Link> covers the practical detail, including the 60-minute session at £85.
+            Every pregnancy is different, so every session starts with consultation and appropriate screening — your stage, how you have been, and anything your midwife or GP has flagged. Where something falls outside our scope, we refer back to your midwife, GP, obstetric team or physiotherapist. That is part of doing the job properly. Our <Link href={ROUTES.services.pregnancyMassage} className="link-inline">pregnancy massage service page</Link> covers the practical detail, including the 60-minute session at £85.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">After pregnancy: looking after Mum, not just the baby</h2>
@@ -221,7 +221,7 @@ export default function PregnancyMassageStagesPage() {
           </p>
 
           <p>
-            All of that builds completely new patterns of muscular tension — usually through the upper back, neck, shoulders and one-sided through the hips and lower back. It is not a pregnancy problem any more. It is a different problem, and it deserves treating as one.
+            All of that builds completely new patterns of muscular tension — usually through the upper back, neck, shoulders and one-sided through the hips and lower back. By this point it is a different problem from pregnancy, and it deserves treating as one.
           </p>
 
           <p>
@@ -243,7 +243,7 @@ export default function PregnancyMassageStagesPage() {
           </p>
 
           <p>
-            One session might be mostly lower-back and hip tension. The next might be almost entirely upper back and shoulders. Later in pregnancy, positioning and techniques may need adapting again. After birth, the demands are different from anything that came before, and treatment changes with them. Rather than a one-off pregnancy massage, this can be ongoing, individualised soft tissue care through each stage.
+            One session might be mostly lower-back and hip tension. The next might be almost entirely upper back and shoulders. Later in pregnancy, positioning and techniques may need adapting again. After birth, the demands are different from anything that came before, and treatment changes with them. This can be ongoing, individualised soft tissue care through each stage.
           </p>
 
           <p>
@@ -253,7 +253,7 @@ export default function PregnancyMassageStagesPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When massage is not the right first step</h2>
 
           <p>
-            Good remedial therapy is not about trying to treat everything. A large part of it is recognising when somebody needs to be somewhere else.
+            A large part of good remedial therapy is recognising when somebody needs to be somewhere else.
           </p>
 
           <p>
@@ -276,11 +276,11 @@ export default function PregnancyMassageStagesPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Pregnancy and postnatal massage in Archway, Islington and North London</h2>
 
           <p>
-            Range and Restore is at 130 Junction Road, Archway, London N19 5LB — two minutes from <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> tube on the Northern Line, with step-free access from the station and buses from across North London. Clients come to us from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link>, <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link> — N19, N7, N6, N4, N8, N1, NW1 and NW5.
+            Range and Restore is at 130 Junction Road, <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link>, London N19 5LB, a short walk from Archway and Tufnell Park stations, and the 134 bus runs along Junction Road past the door. Clients come to us from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link>, <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>.
           </p>
 
           <p>
-            If you have been searching for pregnancy massage in North London, prenatal massage near you, or postnatal massage in Archway or Islington, this is the kind of care we are set up to provide: assessment-led, adapted to your stage, and delivered by therapists who will tell you honestly when something needs your midwife or GP instead.
+            Whether you are planning a pregnancy, expecting, or a few months postnatal, the care is the same: assessment-led, adapted to your stage, and delivered by therapists who will tell you honestly when something needs your midwife or GP instead.
           </p>
         </div>
 
@@ -337,10 +337,10 @@ export default function PregnancyMassageStagesPage() {
               &rarr; Pregnancy Massage in Archway, North London
             </Link>
             <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Lower Back Pain: How Massage Can Help
+              &rarr; Lower Back Pain – How Sports and Clinical Massage Help
             </Link>
             <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Hip Pain and Tight Hips: How Massage Helps
+              &rarr; Hip Pain and Tight Hips – How Sports Massage Helps
             </Link>
             <Link href={ROUTES.team} className="link-inline link-inline-tap">
               &rarr; Meet the Range and Restore team

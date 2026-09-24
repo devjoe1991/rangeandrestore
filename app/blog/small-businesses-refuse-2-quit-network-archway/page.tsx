@@ -12,8 +12,8 @@ export const metadata: Metadata = buildMetadata({
 })
 
 // Our listing. The profile is under Carlos's name, so vouches and messages go to him.
+// The network's home page redirects to a login screen, so we only link to the public listing.
 const LISTING_URL = 'https://refuse2quit.com/m/448c8b0a-9683-4857-9f05-a577dd0f95b5'
-const NETWORK_URL = 'https://refuse2quit.com'
 
 const breadcrumbs = buildBreadcrumbs([
   { name: 'Blog', path: ROUTES.blog.index },
@@ -101,7 +101,7 @@ export default function SmallBusinessesRefuse2QuitNetworkPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What is the Refuse 2 Quit Network?</h2>
 
           <p>
-            The <a href={NETWORK_URL} target="_blank" rel="noopener" className="link-inline">Refuse 2 Quit Network</a> is an online directory of creatives, makers and specialists. Most are small businesses in London. When we joined in September 2026 it listed more than 3,600 people, across categories that include food and drink, events and hospitality, beauty, hair and makeup, music and entertainment, photography and video, marketing, tech and web, and health and wellbeing.
+            The Refuse 2 Quit Network is an online directory of creatives, makers and specialists. Most are small businesses in London. When we joined in September 2026 it listed more than 3,600 people, across categories that include food and drink, events and hospitality, beauty, hair and makeup, music and entertainment, photography and video, marketing, tech and web, and health and wellbeing.
           </p>
 
           <p>
@@ -125,7 +125,7 @@ export default function SmallBusinessesRefuse2QuitNetworkPage() {
           </p>
           <ul className="space-y-2 list-disc list-inside">
             <li><strong className="text-page">Barbers, hairdressers and makeup artists.</strong> On your feet all day with your arms up and your head tilted towards the client. Neck, shoulders and lower back take the load. See our guides to <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline">neck pain</Link> and <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link>.</li>
-            <li><strong className="text-page">Chefs, bakers and event crews.</strong> Long shifts standing on hard floors, lifting and carrying. Hips, lower back and feet, and legs that feel heavy by the end of the week. <Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline">Heel pain</Link> is common, and <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression</Link> helps tired legs.</li>
+            <li><strong className="text-page">Chefs, bakers and event crews.</strong> Long shifts standing on hard floors, lifting and carrying. Hips, lower back and feet, and legs that feel heavy by the end of the week. <Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline">Heel pain</Link> is common, and for heavy legs there is our <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec session</Link>.</li>
             <li><strong className="text-page">DJs, musicians and photographers.</strong> Heavy kit on one shoulder, crouching for the shot, late nights. Upper back, shoulders and the <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline">tension headaches</Link> that come with them.</li>
             <li><strong className="text-page">Founders, marketers and developers.</strong> A laptop, a phone and long hours. The <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline">stiff neck and bad back that come from desk work</Link>, and the kind of <Link href={ROUTES.blog.stressReliefMassageArchway} className="link-inline">stress</Link> that ends up sitting in your shoulders.</li>
           </ul>
@@ -155,7 +155,7 @@ export default function SmallBusinessesRefuse2QuitNetworkPage() {
           <div className="not-prose mt-10 rounded-2xl border border-sand bg-page-sage p-6 sm:p-8">
             <h2 className="text-xl font-bold text-page mb-2">Run a small business in North London?</h2>
             <p className="text-page-muted text-sm leading-relaxed mb-5">
-              Whether you want to swap referrals or your back needs sorting after a long week, we are at 130 Junction Road, Archway N19, a few minutes&apos; walk from Archway tube.
+              Whether you want to swap referrals or your back needs sorting after a long week, we are at 130 Junction Road, Archway N19, a short walk from Archway and Tufnell Park stations.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -181,6 +181,27 @@ export default function SmallBusinessesRefuse2QuitNetworkPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-10 border-t border-page pt-8">
+          <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
+          <div className="space-y-2">
+            <Link href={ROUTES.community.refuse2QuitNetwork} className="link-inline link-inline-tap">
+              &rarr; Range and Restore on the Refuse 2 Quit Network
+            </Link>
+            <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
+            </Link>
+            <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
+              &rarr; Sports &amp; Deep Tissue Massage
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+            ← Back to Wellness Hub
+          </Link>
         </div>
       </div>
     </>

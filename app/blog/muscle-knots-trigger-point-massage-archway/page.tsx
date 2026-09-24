@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -159,7 +159,7 @@ export default function MuscleKnotsTriggerPointPage() {
           </p>
 
           <p>
-            The aim is not to keep you coming back indefinitely, but to release the current problem and give you the tools to keep it away. Once your knots are under control, occasional maintenance sessions are often enough to stay comfortable.
+            The aim is to release the current problem and give you the tools to keep it away. Once your knots are under control, occasional maintenance sessions are often enough to stay comfortable.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a doctor or physio</h2>
@@ -172,14 +172,10 @@ export default function MuscleKnotsTriggerPointPage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. Where appropriate, treatment can be coordinated with your GP or physiotherapist, and imaging arranged within the same building if it is needed to rule out anything more serious.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find trigger point massage near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;muscle knot massage near me&rdquo;, &ldquo;trigger point therapy North London&rdquo;, &ldquo;shoulder knots treatment Archway&rdquo;, &ldquo;deep tissue massage for knots London&rdquo; or &ldquo;myofascial release N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for anyone across those postcodes carrying stubborn muscle knots who does not want to trek into central London for proper hands-on treatment.
+            The clinic is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Clients with stubborn knots in their shoulders and back come to us from Tufnell Park, Highgate, Holloway, Finsbury Park, Islington and elsewhere in North London.
           </p>
         </div>
 
@@ -236,10 +232,10 @@ export default function MuscleKnotsTriggerPointPage() {
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
             <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Neck Pain and Massage in Archway
+              &rarr; Neck Pain and a Stiff Neck – How Massage Helps
             </Link>
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture, Pain and How Massage Helps
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
           </div>
         </div>

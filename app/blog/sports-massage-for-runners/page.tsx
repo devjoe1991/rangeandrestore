@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: 'When should a runner see a GP or physio rather than book a massage?',
-    a: 'See your GP or a physio first if you have sharp, localised bone pain that gets worse with each run (a possible stress fracture), a sudden pop or snap in the calf or Achilles, swelling, bruising or an inability to bear weight after an injury, numbness or pins and needles, or pain that has not improved after a couple of weeks of reduced running. Chest pain, dizziness or fainting while running needs urgent medical attention. Massage can sit alongside that care but should not replace it.',
+    a: 'Go to your GP or a physio first for bone pain that gets worse with every run, a pop or snap in the calf or Achilles, an injury you cannot put weight on, numbness, or pain that is no better after a couple of weeks of easier running. Chest pain, dizziness or fainting on a run needs urgent medical help. Massage can sit alongside that care but should not replace it.',
   },
 ]
 
@@ -182,14 +182,10 @@ export default function SportsMassageForRunnersPage() {
             Most running niggles are soft tissue problems and massage is the right call. Some are not. See your GP or a physio first if you have sharp, localised bone pain that gets worse with every run (a possible stress fracture), a sudden pop or snap in the calf or Achilles, swelling, bruising or an inability to bear weight after an injury, numbness or pins and needles, or pain that has not improved after a couple of weeks of reduced running. Chest pain, dizziness or fainting while running needs urgent medical attention. Our therapists will tell you if what you describe needs assessing elsewhere, and a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage for runners near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;sports massage for runners near me&rdquo;, &ldquo;runners massage North London&rdquo;, &ldquo;post race massage London&rdquo;, &ldquo;10K recovery massage&rdquo;, &ldquo;half marathon massage Archway&rdquo; or &ldquo;deep tissue for runners N19&rdquo;, Range and Restore is the local option. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves runners across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That includes runners training on Hampstead Heath, Parkland Walk, Highgate Wood, Alexandra Palace, Regent&rsquo;s Park and the canal paths, from Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town and Belsize Park. Race prep, post-race recovery and ongoing maintenance work, all under one roof.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Runners who train on Hampstead Heath, in Highgate Wood or along the Parkland Walk come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park and Kentish Town for race prep, post-race recovery and regular maintenance.
           </p>
         </div>
 
@@ -244,13 +240,13 @@ export default function SportsMassageForRunnersPage() {
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
             <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Marathon Massage in Archway: Pre and Post Race Recovery Guide
+              &rarr; Marathon Massage in Archway: Your Pre and Post Race Recovery Guide
             </Link>
             <Link href={ROUTES.blog.achillesTendinitisRecoveryMassage} className="link-inline link-inline-tap">
-              &rarr; Does Massage Help Achilles Tendinitis?
+              &rarr; Achilles Tendinitis – How Sports Massage Helps Recovery
             </Link>
             <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Shin Splints: How Sports Massage Supports Recovery
+              &rarr; Shin Splints – How Sports Massage Supports Recovery
             </Link>
           </div>
         </div>

@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -51,11 +51,11 @@ const faqs = [
   },
   {
     q: "How much is a 60-minute sports massage?",
-    a: "A 60-minute Sports & Deep Tissue Massage at Range and Restore in Archway is £75. If you add advanced cupping it's £85 for 60 minutes, and the lower-cost Community Tuesday Clinic runs at £60 for 60 minutes every Tuesday. Check the booking page for the latest prices.",
+    a: "A 60-minute Sports & Deep Tissue Massage at Range and Restore in Archway is £75. A 60-minute Cupping + Sports Massage is £85, and the lower-priced Community Tuesday Clinic is £60 for 60 minutes. Check the booking page for the latest prices.",
   },
   {
     q: "Why do sports massage prices vary?",
-    a: "The main factor is session length — a 30-minute treatment costs less than a 90-minute one. Beyond that, the therapist's qualifications and experience, the clinic's location (central London tends to be dearer) and any add-ons such as cupping all affect the price. At Range and Restore, every therapist holds a BTEC Level 5 qualification in soft tissue therapy.",
+    a: "The main factor is session length — a 30-minute treatment costs less than a 90-minute one. Beyond that, the therapist's qualifications and experience, the clinic's location (central London tends to be dearer) and the type of treatment, such as adding cupping, all affect the price. At Range and Restore, every therapist holds a BTEC Level 5 qualification in soft tissue therapy.",
   },
   {
     q: "Is a sports massage worth the money?",
@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: "Are there cheaper sports massage options?",
-    a: "Yes. The Community Tuesday Clinic runs every Tuesday at a lower cost — £60 for 60 minutes and £85 for 90 minutes. If you come regularly, massage bundles bring the per-session price down: a 5 × 60-minute bundle is £350 (£70 a session) and a 10 × 60-minute bundle is £650 (£65 a session). Gift cards are also available.",
+    a: "Yes. The Community Tuesday Clinic is a lower-priced clinic that runs on Tuesdays — £60 for 60 minutes and £85 for 90 minutes. If you come regularly, Sports & Deep Tissue massage bundles bring the per-session price down: a 5 × 60-minute bundle is £350 (£70 a session, £25 less than five standard £75 sessions) and a 10 × 60-minute bundle is £650 (£65 a session, £100 less). Gift cards are also available.",
   },
 ]
 
@@ -99,23 +99,28 @@ export default function SportsMassageCostPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How much does a sports massage cost?</h2>
 
           <p>
-            The single biggest thing that decides the price is how long you book for. Here is the full price list at Range and Restore so you can see exactly what you&rsquo;re paying for:
+            The single biggest thing that decides the price is how long you book for. Here is the full price list at Range and Restore so you can see exactly what you&rsquo;re paying for.
           </p>
 
-          <p><strong className="text-page">Sports &amp; Deep Tissue Massage</strong></p>
+          <p><strong className="text-page">Massage treatments</strong></p>
           <ul className="space-y-2 list-disc list-inside">
-            <li>30 minutes — £50</li>
-            <li>60 minutes — £75</li>
-            <li>90 minutes — £110</li>
+            <li><Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">Sports &amp; Deep Tissue Massage</Link>: 30 minutes £50, 60 minutes £75, 90 minutes £110</li>
+            <li><Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">Advanced Clinical Massage</Link>: 60 minutes £75, 90 minutes £110</li>
+            <li><Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link>: 60 minutes £75, 90 minutes £110</li>
+            <li><Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">Relaxation Massage</Link>: 60 minutes £75, 90 minutes £110</li>
+            <li><Link href={ROUTES.services.manualLymphaticDrainage} className="link-inline">Manual Lymphatic Drainage</Link>: 60 minutes £75, 90 minutes £110</li>
+            <li><Link href={ROUTES.services.advancedCuppingSportsDeepTissue} className="link-inline">Cupping + Sports Massage</Link>: 60 minutes £85, 90 minutes £125</li>
+            <li><Link href={ROUTES.services.twoHourPainReliefMassage} className="link-inline">2-Hour Pain Relief Massage</Link>: 120 minutes £170, for when you want time to work through several areas thoroughly in one visit</li>
+            <li><Link href={ROUTES.services.pregnancyMassage} className="link-inline">Pregnancy Massage</Link>: 60 minutes £85</li>
+            <li><Link href={ROUTES.services.reflexology} className="link-inline">Reflexology</Link>: 60 minutes £75</li>
+            <li><Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link>: 60 minutes £60, 90 minutes £85 (Tuesdays only)</li>
+            <li><Link href={ROUTES.services.mskUltrasoundClinicalMassage} className="link-inline">MSK Scan + Clinical Massage</Link>: £165 in total, paid in two parts: £75 online to Range and Restore for the massage, and £90 direct to Reliable Scan for the scan</li>
           </ul>
 
-          <p><strong className="text-page">2-Hour Pain Relief Massage</strong> — £170 for a full two hours, for when you want time to work through several areas thoroughly in one visit.</p>
-
-          <p><strong className="text-page">Advanced Cupping + Sports/Deep Tissue Massage</strong></p>
+          <p><strong className="text-page">Recovery Suite</strong></p>
           <ul className="space-y-2 list-disc list-inside">
-            <li>30 minutes — £60</li>
-            <li>60 minutes — £85</li>
-            <li>90 minutes — £125</li>
+            <li><Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link>: 45 minutes £19, 60 minutes £29 (private, up to two people, price per session)</li>
+            <li><Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link>: 90 minutes £110 (60 minutes of sports massage, then 30 minutes of Normatec compression)</li>
           </ul>
 
           <p>
@@ -140,12 +145,12 @@ export default function SportsMassageCostPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Location</h3>
           <p>
-            Central London clinics tend to charge more, largely because their overheads are higher. A local clinic like Range and Restore in Archway can keep prices sensible without you having to trek into the middle of town for proper hands-on treatment.
+            Central London clinics tend to charge more, largely because their overheads are higher. A local clinic like Range and Restore in Archway can keep prices sensible without you having to travel into the middle of town for proper hands-on treatment.
           </p>
 
-          <h3 className="text-xl font-bold text-page mt-6 mb-2">Add-ons</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Type of treatment</h3>
           <p>
-            Extras such as advanced cupping alongside your massage add a little to the price — a 60-minute session with cupping is £85 rather than £75, for example. Whether that&rsquo;s worth it depends on what you&rsquo;re coming in for, which is something worth discussing at the start of your appointment.
+            Some treatments cost a little more. A 60-minute Cupping + Sports Massage is £85 rather than £75 for a 60-minute Sports &amp; Deep Tissue Massage, for example. Whether that&rsquo;s worth it depends on what you&rsquo;re coming in for, which is something worth discussing at the start of your appointment.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Ways to pay less</h2>
@@ -156,13 +161,19 @@ export default function SportsMassageCostPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Community Tuesday Clinic</h3>
           <p>
-            The <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link> runs every Tuesday at a lower cost — £60 for 60 minutes and £85 for 90 minutes. It&rsquo;s the same hands-on treatment at a more accessible price, and a good option if you want regular maintenance work without the full weekday rate.
+            The <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link> is a lower-priced clinic that runs on Tuesdays — £60 for 60 minutes and £85 for 90 minutes. It&rsquo;s hands-on treatment at a more accessible price, and a good option if you want regular maintenance work and can come in on a Tuesday.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Massage bundles</h3>
           <p>
-            If you train regularly or you&rsquo;re managing an ongoing issue, <Link href={ROUTES.services.massageBundles} className="link-inline">massage bundles</Link> offer better per-session value. A 5 × 60-minute bundle is £350, which works out at £70 a session, and a 10 × 60-minute bundle is £650, or £65 a session. For longer treatments, a 5 × 90-minute bundle is £500 and a 10 × 90-minute bundle is £950. Buying ahead is the simplest way to bring the ongoing cost down.
+            If you train regularly or you&rsquo;re managing an ongoing issue, <Link href={ROUTES.services.massageBundles} className="link-inline">massage bundles</Link> of Sports &amp; Deep Tissue sessions bring the per-session price down:
           </p>
+          <ul className="space-y-2 list-disc list-inside">
+            <li>5 × 60 minutes: £350 (£70 a session, £25 less than five standard £75 sessions)</li>
+            <li>10 × 60 minutes: £650 (£65 a session, £100 less than ten standard sessions)</li>
+            <li>5 × 90 minutes: £500 (£100 a session, £50 less than five standard £110 sessions)</li>
+            <li>10 × 90 minutes: £950 (£95 a session, £150 less than ten standard sessions)</li>
+          </ul>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Gift cards</h3>
           <p>
@@ -183,14 +194,10 @@ export default function SportsMassageCostPage() {
             One caveat before you spend anything: if your pain is severe or getting worse, follows a fall or other injury, or comes with numbness, weakness, night pain or unexplained swelling, see your GP or a physio first. Massage is not the right first step for everything, and we will say so if that is the case.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage prices near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you&rsquo;ve been searching &ldquo;sports massage cost near me&rdquo;, &ldquo;sports massage prices London&rdquo;, &ldquo;how much is a sports massage Archway&rdquo; or &ldquo;deep tissue massage price N19&rdquo;, Range and Restore is a local option with clear, honest pricing. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden and Kentish Town, along with the wider North London catchment. It means you can get properly qualified, assessment-led sports massage at sensible prices without heading into central London — and with lower-cost Community Tuesday sessions and bundles if you&rsquo;re coming back regularly.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations on the Northern line. Clients come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town, and the Community Tuesday Clinic and bundles are there if you&rsquo;re coming back regularly.
           </p>
         </div>
 

@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -46,48 +46,24 @@ const articleSchema = {
 // article content; keep the two in sync when editing.
 const faqs = [
   {
-    q: 'Does sports massage help Achilles tendinitis?',
-    a: 'Yes, as part of a wider plan. Sports massage and soft tissue therapy support Achilles tendinitis recovery by releasing the tight calf muscles (gastrocnemius and soleus) that place excessive tension on the tendon, improving circulation around the slow-healing tendon, and addressing the wider movement patterns driving the overload. The acutely inflamed tendon itself is not worked directly, and hands-on work sits alongside load management and calf strengthening exercises.',
-  },
-  {
-    q: 'Should you massage an inflamed Achilles tendon directly?',
-    a: 'No. Direct work on an acutely inflamed Achilles tendon should be avoided. Effective treatment works the surrounding calf and lower-leg muscles and fascia, which is where much of the excess tension on the tendon comes from.',
-  },
-  {
-    q: 'How many sports massage sessions does Achilles tendinitis need?',
-    a: "It varies with severity and how long you've had it. Mild to moderate cases caught early often respond well within 3–6 sessions, while longer-standing or severe cases may need ongoing management over several months alongside loading exercises.",
-  },
-  {
-    q: 'What causes Achilles tendinitis?',
-    a: 'Common causes include a sudden increase in training load or mileage, inadequate recovery between sessions, tight calf muscles, weak hip and glute muscles that alter running mechanics, poor footwear or a change of running surface, and returning to activity too quickly after a period of rest.',
-  },
-  {
-    q: 'When should I see a doctor instead of booking a massage?',
-    a: 'If your pain is severe or suddenly worse, you felt a pop or snap in the back of the ankle, you cannot push off or stand on tiptoe on that leg, or there is marked swelling, bruising or a gap you can feel in the tendon, see your GP, a physio or A&E first, because those are signs of a possible rupture. Pain with fever, redness or heat, or numbness in the foot, also needs a doctor. Range and Restore works alongside Reliable Scan, a private diagnostic ultrasound clinic in the same building in Archway, if imaging is needed.',
-  },
-  {
-    q: 'Can massage make Achilles tendinitis worse?',
-    a: "Done properly, no. A trained therapist avoids heavy, direct pressure on the acutely inflamed tendon and works the surrounding calf and lower-leg muscles instead. Aggressive prodding of an angry tendon can aggravate it, which is exactly why assessment-led treatment and the right level of pressure matter.",
-  },
-  {
-    q: 'Does massage help Achilles tendonitis?',
-    a: 'Yes, and tendonitis is simply the more common spelling of the same condition. Massage helps by releasing the calf muscles pulling on the tendon and addressing the movement patterns further up the leg that are overloading it, rather than by working on the sore tendon itself. Paired with sensible load management and calf strengthening, that combination gives the tendon a genuine chance to settle.',
+    q: 'Does massage help Achilles tendinitis (tendonitis)?',
+    a: 'It can, as one part of a wider plan. The work goes into the tight calf muscles pulling on the tendon, and the hips and legs above, while the sore tendon itself is left alone. Most people also need to cut back the aggravating load for a while and do calf strengthening exercises.',
   },
   {
     q: 'Is Achilles tendonitis the same as Achilles tendinitis?',
-    a: 'Yes. They are two spellings of the same condition, inflammation and irritation of the Achilles tendon. Tendinitis is the medically correct spelling and tendonitis is the one most people use and search for. If symptoms have been present for several months, clinicians often use the term Achilles tendinopathy instead, which describes degenerative change in the tendon rather than acute inflammation, and which needs a loading programme rather than rest.',
+    a: 'Yes, they are two spellings of the same problem. If it has been going on for several months, clinicians usually call it Achilles tendinopathy, which responds better to a loading programme than to rest.',
   },
   {
-    q: 'Can you massage your Achilles tendon at home?',
-    a: "You can gently self-massage and stretch the calf muscles (gastrocnemius and soleus) above the tendon, with your hands, a massage ball or a foam roller, which helps reduce the tension pulling on the Achilles. Avoid digging directly into the sore tendon itself, especially when it is inflamed.",
+    q: 'Should you massage an inflamed Achilles tendon directly?',
+    a: 'No. Firm pressure on an irritated tendon can make it angrier. A trained therapist works the calf and lower-leg muscles around it instead.',
   },
   {
-    q: 'How long does Achilles tendinitis take to heal?',
-    a: "It depends on severity and how early it is caught. Mild cases managed well can settle within a few weeks; longer-standing or degenerative cases (tendinopathy) often take a few months and need consistent loading exercises alongside hands-on treatment. Tendons heal slowly because they have a relatively poor blood supply.",
+    q: 'How many sessions will I need?',
+    a: 'Many early, mild cases feel noticeably better within three to six sessions. Longer-standing cases can take a few months of treatment alongside exercises. Your therapist will give you an honest idea after the first assessment.',
   },
   {
-    q: 'Is it Achilles tendinitis or tendinopathy?',
-    a: "\"Tendinitis\" implies active inflammation and tends to describe recent, acute cases; \"tendinopathy\" describes the longer-standing degenerative changes seen in persistent cases. The hands-on approach is similar — release the calf, manage load, and build tendon capacity with exercise — but longer-standing cases usually take more time.",
+    q: 'When should I see a doctor instead of booking a massage?',
+    a: 'If you felt a pop or snap, cannot stand on tiptoe on that leg, or have marked swelling or bruising, see your GP, a physio or A&E first, as these can be signs of a tear. The same goes for heat, redness, fever or numbness in the foot.',
   },
 ]
 
@@ -168,7 +144,7 @@ export default function AchillesTendinitisPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving tissue health and circulation</h3>
           <p>
-            Tendons have a relatively poor blood supply compared with muscle, which is one of the reasons they are slow to heal. Massage increases local circulation in the surrounding tissue, which supports the repair process.
+            Tendons have a relatively poor blood supply compared with muscle, which is one of the reasons they are slow to heal. Massage may increase local circulation in the surrounding tissue, and many clients find the area feels less stiff afterwards.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Myofascial release and mobility work</h3>
@@ -222,14 +198,10 @@ export default function AchillesTendinitisPage() {
             Range and Restore works alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic in the same building at 130 Junction Road, Archway. If imaging is needed to rule out a tear or something more serious, a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> can be arranged under the same roof, and our therapists will say so if they think you need one.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Achilles tendinitis treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Achilles treatment in Archway</h2>
 
           <p>
-            If you have been searching &ldquo;Achilles tendinitis massage near me&rdquo;, &ldquo;Achilles pain treatment North London&rdquo;, &ldquo;runner Achilles therapist Archway&rdquo;, &ldquo;deep tissue massage for Achilles tendinitis London&rdquo; or &ldquo;sports massage Achilles N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Hampstead, Crouch End, Finsbury Park, Stroud Green, Muswell Hill, Islington, Camden, Kentish Town and Belsize Park. Sessions are 30, 60 or 90 minutes, from £50, and every one starts with an assessment of the calf, ankle and the rest of the leg rather than a routine.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Runners and walkers come to us from Tufnell Park, Holloway, Highgate, Crouch End, Kentish Town and further afield. Sessions are 30, 60 or 90 minutes, from £50, and every one starts with an assessment of the calf, ankle and the rest of the leg.
           </p>
         </div>
 
@@ -289,10 +261,10 @@ export default function AchillesTendinitisPage() {
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
             <Link href={ROUTES.blog.shinSplintsMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Shin Splints: How Sports Massage Helps
+              &rarr; Shin Splints – How Sports Massage Supports Recovery
             </Link>
             <Link href={ROUTES.blog.plantarFasciitisMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Plantar Fasciitis and Heel Pain: How Massage Helps
+              &rarr; Plantar Fasciitis and Heel Pain – How Sports Massage Helps
             </Link>
           </div>
         </div>

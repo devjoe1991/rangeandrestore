@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -163,7 +163,8 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            Alongside treatment, simple workplace adjustments make a big difference: screen at eye level, chair set so your hips are slightly above your knees, and a short movement break every 30 to 45 minutes. Staying <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated through the day</Link> helps too. Practical advice on these changes is part of every session at Range and Restore, and our <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">guide for office workers</Link> covers the desk set-up side in more detail.
+            Alongside treatment, simple workplace adjustments make a big difference: screen at eye level, chair set so your hips are slightly above your knees, and a short movement break every 30 to 45 minutes. Staying <Link href={ROUTES.blog.hydrationAndMuscleHealth} className="link-inline">hydrated through the day</Link> helps too. Practical advice on these changes is part of every session at Range and Restore. If a daily commute is part of your week too, our shorter guide,{' '}
+            <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline">How Sports Massage Helps Office Workers in Archway, North London</Link>, covers the commute and fitting treatment around work.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When should I see a GP instead?</h2>
@@ -190,17 +191,13 @@ export default function DeskPosturePainMassagePage() {
           </p>
 
           <p>
-            Every session at Range and Restore begins with an assessment of your posture, movement and specific symptoms, so the treatment is relevant to you rather than a general back rub. The <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> is built for exactly this, with 30, 60 and 90-minute sessions from £50.
+            Every session at Range and Restore begins with an assessment of your posture, movement and specific symptoms, so the treatment is relevant to you rather than a general back rub. The <Link href={ROUTES.services.backNeckPainMot} className="link-inline">Back &amp; Neck Pain MOT</Link> is built for exactly this, with 60 and 90-minute sessions from £75.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Desk posture pain treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;massage for desk pain near me&rdquo;, &ldquo;office posture massage North London&rdquo;, &ldquo;neck and shoulder massage Archway&rdquo;, &ldquo;text neck treatment London&rdquo;, &ldquo;lower back pain from sitting massage&rdquo; or &ldquo;remote worker massage N19&rdquo;, Range and Restore is the local option. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That includes home workers and office commuters across Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Islington, Camden, Kentish Town, Hampstead, Belsize Park and Stroud Green. If you sit at a desk all day in North London and your body is telling you about it, you do not need to trek into the West End or the City to get it sorted.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations on the Northern line. Home workers and office commuters come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town, often before or after work.
           </p>
         </div>
 
@@ -258,10 +255,10 @@ export default function DeskPosturePainMassagePage() {
               &rarr; Advanced Clinical Massage
             </Link>
             <Link href={ROUTES.blog.officeWorkerMassageArchway} className="link-inline link-inline-tap">
-              &rarr; How Sports Massage Helps Office Workers
+              &rarr; How Sports Massage Helps Office Workers in Archway, North London
             </Link>
             <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Neck Pain and a Stiff Neck: How Massage Helps
+              &rarr; Neck Pain and a Stiff Neck – How Massage Helps
             </Link>
             <Link href={ROUTES.corporateWellbeing} className="link-inline link-inline-tap">
               &rarr; Corporate Massage &amp; Workplace Wellbeing for Employers

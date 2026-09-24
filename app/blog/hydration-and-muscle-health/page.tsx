@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -151,21 +151,17 @@ export default function HydrationMuscleHealthPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">The bottom line</h2>
 
           <p>
-            Hydration is not a supplement or a hack; it is a basic requirement for muscles that work well, recover properly and are less likely to get hurt. Making it a habit, rather than something you try to fix on the morning of a massage, will show in how your muscles feel, how well your treatment works and how quickly you recover between sessions.
+            Hydration is a basic requirement for muscles that work well, recover properly and are less likely to get hurt. Making it a habit, rather than something you try to fix on the morning of a massage, will show in how your muscles feel, how well your treatment works and how quickly you recover between sessions.
           </p>
 
           <p>
             If you are not sure what to do before or after an appointment, ask during your session. Practical advice on recovery is part of every treatment at <Link href={ROUTES.about} className="link-inline">Range and Restore in Archway, North London</Link>.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage and recovery advice near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;sports massage near me&rdquo;, &ldquo;recovery advice North London&rdquo;, &ldquo;muscle recovery clinic Archway&rdquo;, &ldquo;sports massage N19&rdquo;, &ldquo;deep tissue massage London&rdquo; or &ldquo;hydration and muscle recovery&rdquo;, Range and Restore is the local option. The clinic is at 130 Junction Road, two minutes from Archway tube on the Northern Line, and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Muswell Hill, Stroud Green, Islington, Camden, Kentish Town, Hampstead and Belsize Park. Runners, cyclists, gym-goers, desk workers and post-surgery clients all come to us for assessment-led sports massage, soft tissue therapy and ongoing recovery support.
+            The clinic is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Runners, cyclists, gym-goers, desk workers and post-surgery clients come to us from Holloway, Highgate, Crouch End, Islington, Kentish Town and nearby for assessment-led sports massage, soft tissue therapy and recovery advice.
           </p>
         </div>
 
@@ -223,7 +219,7 @@ export default function HydrationMuscleHealthPage() {
               &rarr; How Sports Massage Helps Runners Before and After Races
             </Link>
             <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
-              &rarr; Sports Recovery in Archway: Massage, Compression and Sauna
+              &rarr; Sports Recovery in Archway: Your Complete Recovery Stack
             </Link>
           </div>
         </div>

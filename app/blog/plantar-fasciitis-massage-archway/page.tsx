@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -149,7 +149,7 @@ export default function PlantarFasciitisPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving circulation and mobility</h3>
           <p>
-            Massage increases local circulation, supporting the tissue repair process, while assisted stretching and mobility work helps restore range of motion in the ankle and calf. Better ankle mobility means less compensatory strain travelling down into the heel.
+            Massage increases local circulation, which may support the tissue repair process, while assisted stretching and mobility work helps restore range of motion in the ankle and calf. Better ankle mobility means less compensatory strain travelling down into the heel.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How many sessions will I need?</h2>
@@ -172,14 +172,10 @@ export default function PlantarFasciitisPage() {
             Range and Restore is happy to coordinate with your physiotherapist so treatment complements your rehab rather than duplicating it. The clinic also operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> is needed to rule out other causes of heel pain, this can be arranged within the same building.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find plantar fasciitis treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;plantar fasciitis massage near me&rdquo;, &ldquo;heel pain treatment North London&rdquo;, &ldquo;foot pain therapist Archway&rdquo;, &ldquo;deep tissue massage for plantar fasciitis London&rdquo; or &ldquo;sports massage heel pain N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N8, N4, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for runners and people on their feet all day across all of those postcodes who do not want to trek into central London for proper hands-on heel pain treatment.
+            We are at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Runners and people who spend all day on their feet come to us with heel pain from Highgate, Crouch End, Finsbury Park, Holloway, Kentish Town and across North London.
           </p>
         </div>
 

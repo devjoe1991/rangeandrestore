@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -116,7 +116,7 @@ export default function LowerBackPainPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps a bad back</h2>
 
           <p>
-            Sports and clinical massage address lower back pain by working the muscle and fascial tension contributing to it, and by helping the area move more freely again. The aim is not simply to rub where it hurts, but to change the pattern keeping you in pain.
+            Sports and clinical massage address lower back pain by working the muscle and fascial tension contributing to it, and by helping the area move more freely again. The aim is to change the pattern that keeps you in pain.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Releasing tight lower back, glute and hip muscles</h3>
@@ -129,7 +129,7 @@ export default function LowerBackPainPage() {
             When the lower back has been painful for a while, movement becomes cautious and restricted. Assisted stretching, mobility work and myofascial release help restore range through the hips and spine, while an honest look at your sitting, standing and lifting habits addresses the posture driving the load. Small changes here are often what stop the problem returning.
           </p>
 
-          <h3 className="text-xl font-bold text-page mt-6 mb-2">Assessment-led, not one-size-fits-all</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Treatment based on your assessment</h3>
           <p>
             No two bad backs are the same. A session begins by understanding how your pain behaves, what aggravates and eases it, and where the tightness and weakness actually sit. For more complex or longstanding cases, <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline">advanced clinical massage</Link> combines several techniques into a focused treatment plan rather than a generic rub-down.
           </p>
@@ -168,14 +168,10 @@ export default function LowerBackPainPage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to look more closely at the source of your pain, it can be arranged within the same building, and treatment can be coordinated with your GP or physiotherapist.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find lower back pain treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;lower back pain massage near me&rdquo;, &ldquo;bad back treatment North London&rdquo;, &ldquo;clinical massage back pain Archway&rdquo;, &ldquo;deep tissue massage lower back London&rdquo; or &ldquo;back pain MOT N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for anyone with a bad back across all of those postcodes who does not want to trek into central London for proper hands-on treatment.
+            You will find us at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. People come in with bad backs from Tufnell Park, Holloway, Kentish Town, Highgate, Finsbury Park and the surrounding parts of North London.
           </p>
         </div>
 
@@ -232,10 +228,10 @@ export default function LowerBackPainPage() {
               &rarr; Back &amp; Neck Pain MOT
             </Link>
             <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Sciatica – How Massage Can Help Ease Nerve Pain
+              &rarr; Sciatica and Trapped Nerve Pain – How Massage Can Help
             </Link>
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture Pain – How Massage Helps Office Workers
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
           </div>
         </div>

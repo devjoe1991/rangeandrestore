@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'Do you treat sciatica in Archway and Islington?',
-    a: 'Yes. Range and Restore is at 130 Junction Road, Archway, N19 5LB, two minutes from Archway tube on the Northern Line, and clients travel in from across Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. Sciatic-type pain, lower back pain and hip and glute pain are among the most common reasons people book with us.',
+    a: 'Yes. Range and Restore is at 130 Junction Road, Archway, N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line, and clients travel in from across Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. Sciatic-type pain, lower back pain and hip and glute pain are among the most common reasons people book with us.',
   },
 ]
 
@@ -233,11 +233,12 @@ export default function SciaticaTreatmentNorthLondonPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sciatica, lower back and glute pain treatment in Archway, Islington and North London</h2>
 
           <p>
-            If you have been searching for sciatica treatment in North London, sciatica massage, sports massage for sciatica, lower back pain treatment or help with hip and glute pain, this clinic is set up for exactly that kind of work. Range and Restore is at 130 Junction Road, Archway, London N19 5LB — two minutes from <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> tube on the Northern Line, and an easy run in from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link>, <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>.
+            Range and Restore is at 130 Junction Road, Archway, London N19 5LB, a short walk from{' '}
+            <Link href={ROUTES.areasServed.archwayN19} className="link-inline">Archway</Link> and Tufnell Park stations on the Northern line. Clients with back, glute and sciatic-type pain come to us from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, <Link href={ROUTES.areasServed.crouchEndN8} className="link-inline">Crouch End</Link>, <Link href={ROUTES.areasServed.finsburyParkN4} className="link-inline">Finsbury Park</Link> and <Link href={ROUTES.areasServed.kentishTownNw5} className="link-inline">Kentish Town</Link>.
           </p>
 
           <p>
-            That covers N19, N7, N6, N4, N8, N1, NW1 and NW5 — most of North London within a short bus or tube ride. If you want the detail on neighbouring problems, our guides to <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link>, <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline">hip pain and tight hips</Link>, <Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline">tight hamstrings</Link> and <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline">sciatica and trapped nerve pain</Link> go further into each.
+            If you want the detail on neighbouring problems, our guides to <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline">lower back pain</Link>, <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline">hip pain and tight hips</Link>, <Link href={ROUTES.blog.tightHamstringMassageArchway} className="link-inline">tight hamstrings</Link> and <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline">sciatica and trapped nerve pain</Link> go further into each.
           </p>
         </div>
 
@@ -259,7 +260,7 @@ export default function SciaticaTreatmentNorthLondonPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Stop guessing where the pain is coming from</h2>
           <p className="text-brand-green font-semibold mb-6">
-            If persistent lower back, glute or sciatic-type pain has been dictating how you sit, sleep and train, book an initial consultation and treatment at Range and Restore. Your therapist will assess you properly, tell you honestly what they find, and treat the presentation in front of them — or point you towards the right person if that is what you need. Archway, N19, two minutes from the tube.
+            If persistent lower back, glute or sciatic-type pain has been dictating how you sit, sleep and train, book an Advanced Clinical Massage at Range and Restore. Your therapist will assess you properly, tell you honestly what they find, and treat the presentation in front of them — or point you towards the right person if that is what you need. 130 Junction Road, Archway, N19.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a
@@ -268,7 +269,7 @@ export default function SciaticaTreatmentNorthLondonPage() {
               rel="noopener noreferrer"
               className="btn-ink"
             >
-              Book an Initial Consultation &amp; Treatment
+              Book Advanced Clinical Massage
             </a>
             <a
               href={BOOKING_URLS.sportsDeepTissue}
@@ -290,14 +291,17 @@ export default function SciaticaTreatmentNorthLondonPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
+            <Link href={ROUTES.blog.trappedNerveMassageArchway} className="link-inline link-inline-tap">
+              &rarr; Can Massage Help a Trapped Nerve? An Honest Answer
+            </Link>
             <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Sciatica and Trapped Nerve Pain: Can Massage Help?
+              &rarr; Sciatica and Trapped Nerve Pain – How Massage Can Help
             </Link>
             <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Lower Back Pain: How Massage Can Help
+              &rarr; Lower Back Pain – How Sports and Clinical Massage Help
             </Link>
             <Link href={ROUTES.blog.hipPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Hip Pain and Tight Hips: How Massage Helps
+              &rarr; Hip Pain and Tight Hips – How Sports Massage Helps
             </Link>
             <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
               &rarr; Advanced Clinical Massage

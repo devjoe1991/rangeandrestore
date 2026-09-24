@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -151,7 +151,8 @@ export default function SportsMassageBenefitsPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Sports massage vs deep tissue massage</h2>
 
           <p>
-            People often ask which one they need, and in practice the two overlap almost entirely. Deep tissue massage describes firmer pressure that reaches the deeper layers of muscle and fascia to release stubborn tension. Sports massage is a broader, assessment-led approach that draws on deep tissue work alongside trigger point release, myofascial techniques and mobility work, tailored to your activity and problem areas. At Range and Restore they are delivered within the same treatment, so you do not need to choose between them — the session is shaped around what your body actually needs on the day.
+            People often ask which one they need, and in practice the two overlap almost entirely. Deep tissue massage describes firmer pressure that reaches the deeper layers of muscle and fascia to release stubborn tension. Sports massage is a broader, assessment-led approach that draws on deep tissue work alongside trigger point release, myofascial techniques and mobility work, tailored to your activity and problem areas. At Range and Restore they are delivered within the same treatment, so you do not need to choose between them — the session is shaped around what your body actually needs on the day. For how soft tissue remedial therapy fits in, and what it offers runners, cyclists and desk workers in particular, read{' '}
+            <Link href={ROUTES.blog.sportsMassageSoftTissueTherapyArchway} className="link-inline">How Sports Massage and Soft Tissue Therapy Help You Perform, Recover and Stay Pain-Free</Link>.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to see a GP or physio first</h2>
@@ -160,14 +161,10 @@ export default function SportsMassageBenefitsPage() {
             Sports massage suits most muscular aches, but some pain needs a proper medical look before anyone works on it. See your GP, a physio or A&amp;E first if your pain is severe or getting worse, follows a fall or other injury, comes with numbness, pins and needles or weakness in a limb, wakes you at night, or arrives with unexplained swelling or fever. Our therapists will tell you if something falls outside what massage can help with, and a <Link href={ROUTES.blog.mskUltrasoundScanMassageArchway} className="link-inline">diagnostic MSK ultrasound</Link> with Reliable Scan is available in the same building if imaging would help.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find sports massage near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;sports massage benefits&rdquo;, &ldquo;deep tissue massage benefits&rdquo;, &ldquo;sports massage near me&rdquo; or &ldquo;deep tissue massage North London&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden and Kentish Town, along with the wider North London catchment. It is the convenient local option for anyone — athlete or desk worker — who wants proper hands-on treatment without trekking into central London.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations on the Northern line. Athletes and desk workers alike come to us from Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington and Kentish Town.
           </p>
         </div>
 
@@ -220,17 +217,20 @@ export default function SportsMassageBenefitsPage() {
         <div className="mt-10 border-t border-page pt-8">
           <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
           <div className="space-y-2">
+            <Link href={ROUTES.blog.sportsMassageSoftTissueTherapyArchway} className="link-inline link-inline-tap">
+              &rarr; How Sports Massage and Soft Tissue Therapy Help You Perform, Recover and Stay Pain-Free
+            </Link>
             <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline link-inline-tap">
               &rarr; Sports, Deep Tissue &amp; Soft Tissue Remedial Massage
             </Link>
             <Link href={ROUTES.blog.muscleKnotsTriggerPointMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Muscle Knots and Trigger Points: How Massage Helps
+              &rarr; Muscle Knots and Trigger Points – How Massage Releases Them
             </Link>
             <Link href={ROUTES.blog.lowerBackPainMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Lower Back Pain: How Sports Massage Helps
+              &rarr; Lower Back Pain – How Sports and Clinical Massage Help
             </Link>
             <Link href={ROUTES.blog.sportsRecoveryArchway} className="link-inline link-inline-tap">
-              &rarr; Sports Recovery: Getting the Most From Your Training
+              &rarr; Sports Recovery in Archway: Your Complete Recovery Stack
             </Link>
           </div>
         </div>

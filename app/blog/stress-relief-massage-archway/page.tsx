@@ -6,7 +6,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Stress Relief Massage: Ease Tension and Switch Off',
-  description: 'How a relaxation massage calms the nervous system, eases held tension in the neck, shoulders and jaw, and helps you switch off. Archway, North London.',
+  description: 'How a relaxation massage may help you unwind, ease held tension in the neck, shoulders and jaw, and switch off. Archway, North London.',
   path: '/blog/stress-relief-massage-archway',
   author: true,
 })
@@ -20,12 +20,12 @@ const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: 'Stress Relief Massage – Easing Tension and Switching Off',
-  description: 'How stress and burnout show up as physical tension, and how a relaxation massage in Archway, North London helps calm the nervous system and switch off.',
+  description: 'How stress and burnout show up as physical tension, and how a relaxation massage in Archway, North London may help you unwind and switch off.',
   image: 'https://rangeandrestore.co.uk/relaxation-restorative-massage-treatment-range-and-restore-archway-north-london.jpg',
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -47,15 +47,15 @@ const articleSchema = {
 const faqs = [
   {
     q: "Can massage help with stress?",
-    a: "Yes. When you are stressed the body holds physical tension — tight shoulders, a stiff neck and a clenched jaw, along with shallower breathing. A relaxation massage helps by calming the nervous system, easing that held tension and giving you time and space to properly switch off. It supports your wellbeing and complements other ways of managing stress, but it is not a treatment for a diagnosed mental-health condition.",
+    a: "Many clients find it does. When you are stressed the body holds physical tension — tight shoulders, a stiff neck and a clenched jaw, along with shallower breathing. A relaxation massage may help by easing that held tension and giving you time and space to switch off. It can sit alongside other ways of managing stress, but it is not a treatment for anxiety, depression or any other mental-health condition.",
   },
   {
     q: "What is a relaxation massage?",
-    a: "A relaxation massage uses slower, flowing, rhythmic strokes at a comfortable pressure, working over the whole body to help you unwind rather than digging into a specific injury. The aim is to settle the nervous system, ease everyday muscular tension and leave you feeling calm and rested. At Range and Restore in Archway it is a gentler counterpart to our sports and clinical work.",
+    a: "A relaxation massage uses slower, flowing, rhythmic strokes at a comfortable pressure, working over the whole body to help you unwind rather than digging into a specific injury. The aim is to help you unwind, ease everyday muscular tension and leave you feeling calmer and rested. At Range and Restore in Archway it is a gentler counterpart to our sports and clinical work.",
   },
   {
     q: "How does massage help you relax?",
-    a: "Slow, unhurried touch encourages the body to shift out of a stressed, alert state and into a calmer one, so your breathing tends to deepen and slow. At the same time the physical release of tight muscles reduces the aches and stiffness that stress creates, and simply having an hour with nothing to do and nowhere to be gives an overstretched mind a genuine chance to rest.",
+    a: "Many people find that slow, unhurried touch helps them shift out of a stressed, alert state into a calmer one, and their breathing deepens and slows. Easing tight muscles may also reduce the aches and stiffness that often come with stress, and an hour with nothing to do and nowhere to be gives you a chance to rest.",
   },
   {
     q: "What's the difference between a relaxation and a deep tissue massage?",
@@ -93,17 +93,17 @@ export default function StressReliefMassagePage() {
       <div className="container-page container-prose">
         <div className="prose prose-lg max-w-none text-page-muted space-y-6">
           <p className="text-xl font-medium text-page">
-            When you are stressed or heading towards burnout, the body holds it physically — tight shoulders, a stiff neck, a clenched jaw and shallow, quick breathing. A stress relief or <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">relaxation massage</Link> helps by calming the nervous system, releasing that held tension and giving you the time and space to actually switch off.
+            When you are stressed or heading towards burnout, the body holds it physically — tight shoulders, a stiff neck, a clenched jaw and shallow, quick breathing. A stress relief or <Link href={ROUTES.services.relaxationRestorativeMassage} className="link-inline">relaxation massage</Link> may help you relax: it eases that held tension and gives you the time and space to switch off.
           </p>
 
           <p>
-            At Range and Restore in Archway, North London, most of our work is sports and clinical — but a good deal of the tension people carry has nothing to do with training and everything to do with a demanding job, a busy life and a mind that rarely stops. This is where a slower, gentler relaxation massage earns its place alongside the harder-working sports and deep tissue treatments.
+            At Range and Restore in Archway, North London, most of our work is sports and clinical, yet a good deal of the tension people carry comes from a demanding job, a busy life and a mind that rarely stops rather than from training. This is where a slower, gentler relaxation massage earns its place alongside the harder-working sports and deep tissue treatments.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How stress shows up in the body</h2>
 
           <p>
-            Stress is not only a feeling — it has a physical footprint. When you are under sustained pressure the body stays in a low-level state of alert, and over time that tends to settle into familiar patterns of tension.
+            Stress often shows up in the body as well as the mind. When you are under sustained pressure the body stays in a low-level state of alert, and over time that tends to settle into familiar patterns of tension.
           </p>
           <ul className="space-y-2 list-disc list-inside">
             <li>Tight, raised shoulders and a stiff neck that never quite loosen off</li>
@@ -120,28 +120,28 @@ export default function StressReliefMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How massage helps with stress</h2>
 
           <p>
-            A relaxation massage works on both sides of the problem at once — the physical tension you are carrying and the wound-up state that keeps putting it there.
+            A relaxation massage works on the physical tension you are carrying, and many clients find it also helps them feel less wound up.
           </p>
 
-          <h3 className="text-xl font-bold text-page mt-6 mb-2">Calming the nervous system</h3>
+          <h3 className="text-xl font-bold text-page mt-6 mb-2">Helping you wind down</h3>
           <p>
-            Slow, rhythmic, unhurried touch encourages the body to shift out of its stressed, alert state and towards a calmer one. As that happens, breathing tends to naturally deepen and slow, the shoulders drop, and the sense of being braced against everything begins to ease. It is a simple, well-established effect — the body responds to being handled calmly by calming down.
+            Many people find that slow, rhythmic, unhurried touch helps them shift out of a stressed, alert state towards a calmer one. Breathing often deepens and slows, the shoulders drop, and the sense of being braced against everything begins to ease.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Releasing held tension</h3>
           <p>
-            The tight neck, shoulders and upper back that stress creates are real, physical restrictions, and steady hands-on work loosens them. Easing that muscular tension reduces the aches, stiffness and stress-driven headaches that come with it, so you feel physically lighter and less held-together as well as calmer in yourself.
+            The tight neck, shoulders and upper back that come with stress are real, physical tension, and steady hands-on work can help loosen them. Easing that tension may reduce the aches and stiffness that go with it, and many clients leave feeling physically lighter as well as calmer.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Making space to switch off</h3>
           <p>
-            Part of the value is simply the hour itself. For an overstretched mind, an hour with nothing to do, no screen to check and nowhere to be is a genuine reset. Many people find they sleep better in the days after a treatment, and better sleep is one of the most reliable ways to become more resilient to stress in the first place.
+            Part of the value is simply the hour itself. An hour with nothing to do, no screen to check and nowhere to be can be a welcome reset. Some people find they sleep better in the days after a treatment, and good sleep makes a busy life easier to handle.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Relaxation vs deep tissue — which do I need?</h2>
 
           <p>
-            The two are not rivals so much as different tools. A relaxation massage uses lighter, flowing pressure over the whole body, and is about winding down and settling the nervous system — it is usually the better fit when stress and general tension are the main thing you want to address.
+            The two are different tools. A relaxation massage uses lighter, flowing pressure over the whole body, and is about winding down and settling the nervous system — it is usually the better fit when stress and general tension are the main thing you want to address.
           </p>
 
           <p>
@@ -151,7 +151,7 @@ export default function StressReliefMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How often should I come?</h2>
 
           <p>
-            There is no fixed prescription for this. If stress is a steady feature of your life, a regular rhythm — monthly, or fortnightly through a particularly demanding stretch — helps you stay ahead of the tension before it accumulates. If you are after the occasional reset, a single session as and when you need one is perfectly reasonable.
+            There is no fixed prescription for this. If stress is a steady feature of your life, many people find a regular rhythm — monthly, or fortnightly through a particularly demanding stretch — helps them stay ahead of the tension before it builds up. If you are after the occasional reset, a single session as and when you need one is perfectly reasonable.
           </p>
 
           <p>
@@ -161,21 +161,17 @@ export default function StressReliefMassagePage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When to seek other support</h2>
 
           <p>
-            It is worth being clear about what massage is and is not. A relaxation massage supports your wellbeing and can be a real help in managing everyday stress — but it is not a treatment for a mental-health condition. If low mood, anxiety or stress is persistent, severe, or getting in the way of daily life, please speak to your GP or a mental-health professional. Massage can sit comfortably alongside that kind of support, but it is not a substitute for it. The same goes for physical symptoms: headaches that are sudden or severe, jaw pain with clicking or locking, or neck pain with numbness, weakness or pins and needles down an arm should be checked by your GP or a physio rather than treated with massage alone.
+            It is worth being clear about what massage is and is not. A relaxation massage may help you manage everyday stress, but it is not a treatment for anxiety, depression or any other mental-health condition. If low mood, anxiety or stress is persistent, severe, or getting in the way of daily life, please speak to your GP or a mental-health professional. Massage can sit comfortably alongside that kind of support, but it is not a substitute for it. The same goes for physical symptoms: headaches that are sudden or severe, jaw pain with clicking or locking, or neck pain with numbness, weakness or pins and needles down an arm should be checked by your GP or a physio rather than treated with massage alone.
           </p>
 
           <p>
             Used sensibly, though, a regular hour to switch off and let the tension go is a genuinely useful part of looking after yourself — and something a lot of people simply do not make time for.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find a stress relief massage near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;stress relief massage near me&rdquo;, &ldquo;de-stress massage North London&rdquo;, &ldquo;relaxation massage Archway&rdquo; or &ldquo;massage to unwind N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for anyone across those postcodes who wants an hour to properly switch off without trekking into central London.
+            We are at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Clients from Highgate, Crouch End, Tufnell Park, Kentish Town, Islington and across North London come to us when they want an hour to switch off.
           </p>
         </div>
 
@@ -232,13 +228,13 @@ export default function StressReliefMassagePage() {
               &rarr; Relaxation &amp; Restorative Massage
             </Link>
             <Link href={ROUTES.blog.mindBodyConnectionMassageMentalWellbeingArchway} className="link-inline link-inline-tap">
-              &rarr; The Mind-Body Connection: How Easing Pain Supports Mental Wellbeing
+              &rarr; The Mind-Body Connection: How Reducing Pain and Improving Movement Can Support Your Mental Wellbeing
             </Link>
             <Link href={ROUTES.blog.deskPosturePainMassage} className="link-inline link-inline-tap">
-              &rarr; Desk Posture and Pain: How Massage Helps
+              &rarr; Stiff Neck and Bad Back From Desk Work? How Massage Helps Desk Posture Pain
             </Link>
             <Link href={ROUTES.blog.tensionHeadacheMassageArchway} className="link-inline link-inline-tap">
-              &rarr; Tension Headaches: How Massage Can Help
+              &rarr; Tension Headaches – How Massage Can Help
             </Link>
           </div>
         </div>

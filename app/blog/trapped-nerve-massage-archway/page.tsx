@@ -75,7 +75,7 @@ const faqs = [
   },
   {
     q: 'Do you treat trapped nerve symptoms in Archway and North London?',
-    a: 'Yes. Range and Restore is at 130 Junction Road, Archway, N19 5LB, two minutes from Archway tube on the Northern Line, and clients travel in from Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. Nerve-related neck, shoulder, arm and leg symptoms are among the most common reasons people book with us, and we will tell you honestly if what you have needs a doctor rather than a treatment couch.',
+    a: 'Yes. Range and Restore is at 130 Junction Road, Archway, N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line, and clients travel in from Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. Nerve-related neck, shoulder, arm and leg symptoms are among the most common reasons people book with us, and we will tell you honestly if what you have needs a doctor rather than a treatment couch.',
   },
 ]
 
@@ -109,7 +109,7 @@ export default function TrappedNerveMassageArchwayPage() {
           </p>
 
           <p>
-            The story is nearly always the same. Something in the neck or shoulder felt tight for a week or two and you got on with it. Then one morning there is a sharp line running from the neck into the shoulder blade, or down the outside of the arm into the thumb, and turning your head to reverse the car is genuinely unpleasant. Somebody at work says the words &ldquo;trapped nerve&rdquo;, and that is the phrase that ends up in the search bar.
+            It nearly always goes the same way. Something in the neck or shoulder felt tight for a week or two and you got on with it. Then one morning there is a sharp line running from the neck into the shoulder blade, or down the outside of the arm into the thumb, and turning your head to reverse the car is genuinely unpleasant. Somebody at work says the words &ldquo;trapped nerve&rdquo;, and that is the phrase that ends up in the search bar.
           </p>
 
           <p>
@@ -223,27 +223,12 @@ export default function TrappedNerveMassageArchwayPage() {
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Trapped nerve treatment in Archway and North London</h2>
 
           <p>
-            We are at 130 Junction Road, Archway, N19 5LB, a two-minute walk from Archway tube on the Northern Line, with clients coming from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, Crouch End, Finsbury Park and Kentish Town.
+            We are at 130 Junction Road, Archway, N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line, with clients coming from <Link href={ROUTES.areasServed.islingtonN1} className="link-inline">Islington</Link>, <Link href={ROUTES.areasServed.tufnellParkN7} className="link-inline">Tufnell Park</Link>, <Link href={ROUTES.areasServed.hollowayN7} className="link-inline">Holloway</Link>, <Link href={ROUTES.areasServed.highgateN6} className="link-inline">Highgate</Link>, Crouch End, Finsbury Park and Kentish Town.
           </p>
 
           <p>
             If you are not sure whether what you have is a nerve problem or a muscular one, that is a perfectly good reason to book an assessment. Working out which it is takes one appointment, and it will save you months of treating the wrong thing.
           </p>
-
-          <div className="not-prose mt-10 rounded-2xl border border-sand bg-page-sage p-6 sm:p-8">
-            <h2 className="text-xl font-bold text-page mb-2">Book an assessment</h2>
-            <p className="text-page-muted text-sm leading-relaxed mb-5">
-              Nerve-related symptoms in the neck, arm, back or leg, assessed properly before anything is treated. If it needs a doctor rather than a therapist, we will tell you.
-            </p>
-            <a
-              href={BOOKING_URLS.general}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn bg-brand-green text-white hover:bg-brand-green-mid text-sm px-6"
-            >
-              Book Online
-            </a>
-          </div>
 
           <h2 className="text-2xl font-bold text-page mt-12 mb-3">Common questions</h2>
           <div className="not-prose space-y-5">
@@ -258,6 +243,64 @@ export default function TrappedNerveMassageArchwayPage() {
           <p className="text-sm text-page-muted opacity-80 mt-10">
             This article is general information, not medical advice, and does not replace assessment by a qualified clinician. If you have numbness, weakness or symptoms that are getting worse, see your GP.
           </p>
+        </div>
+
+        <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
+          <h2 className="text-2xl font-black text-ink mb-4">Book an assessment</h2>
+          <p className="text-brand-green font-semibold mb-6">
+            Nerve-related symptoms in the neck, arm, back or leg, assessed properly before anything is treated. If it needs a doctor rather than a therapist, we will tell you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
+            <a
+              href={BOOKING_URLS.advancedClinical}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ink"
+            >
+              Book Advanced Clinical Massage
+            </a>
+            <a
+              href={BOOKING_URLS.backNeckMot}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ink-outline"
+            >
+              Book a Back and Neck Pain MOT
+            </a>
+            <Link
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center text-ink font-semibold underline min-h-[44px] sm:ml-2"
+            >
+              Or ask a question first
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-page pt-8">
+          <h3 className="text-lg font-semibold text-page mb-4">Related</h3>
+          <div className="space-y-2">
+            <Link href={ROUTES.blog.sciaticaTreatmentNorthLondon} className="link-inline link-inline-tap">
+              &rarr; Sciatica Treatment in North London: Why the Painful Spot Is Rarely the Problem
+            </Link>
+            <Link href={ROUTES.blog.sciaticaMassageArchway} className="link-inline link-inline-tap">
+              &rarr; Sciatica and Trapped Nerve Pain – How Massage Can Help
+            </Link>
+            <Link href={ROUTES.blog.neckPainMassageArchway} className="link-inline link-inline-tap">
+              &rarr; Neck Pain and a Stiff Neck – How Massage Helps
+            </Link>
+            <Link href={ROUTES.services.advancedClinicalMassage} className="link-inline link-inline-tap">
+              &rarr; Advanced Clinical Massage
+            </Link>
+            <Link href={ROUTES.services.backNeckPainMot} className="link-inline link-inline-tap">
+              &rarr; Back and Neck Pain MOT
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <Link href={ROUTES.blog.index} className="text-brand-teal font-semibold hover:text-page min-h-[44px] inline-flex items-center">
+            ← Back to Wellness Hub
+          </Link>
         </div>
       </div>
     </>

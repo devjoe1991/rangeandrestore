@@ -25,7 +25,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Carlos Bonvicine',
-    jobTitle: 'Soft Tissue Therapist & MLD Practitioner',
+    jobTitle: 'Founder & Lead Therapist',
     url: 'https://rangeandrestore.co.uk/about',
   },
   publisher: {
@@ -139,7 +139,7 @@ export default function ShinSplintsPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Improving circulation to the area</h3>
           <p>
-            Massage increases local blood flow to the lower leg, improving the delivery of oxygen and nutrients to the overloaded tissue and supporting the natural repair process. Better circulation also helps reduce the sense of tightness and congestion that often accompanies shin splints.
+            Massage increases local blood flow to the lower leg, which may support the natural repair process in the overloaded tissue. Many runners also find it eases the sense of tightness that often comes with shin splints.
           </p>
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Looking at the wider loading pattern</h3>
@@ -172,14 +172,10 @@ export default function ShinSplintsPage() {
             Range and Restore operates alongside <a href="https://reliablescanltd.com/" target="_blank" rel="noopener noreferrer" className="link-cite">Reliable Scan</a>, a private diagnostic ultrasound clinic at 130 Junction Road, Archway. If imaging is needed to help rule out more serious pathology, it can be arranged in the same building, and the clinic is happy to coordinate with a physiotherapist as part of your recovery.
           </p>
 
-          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Where to find shin splints treatment near you in North London</h2>
+          <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finding us</h2>
 
           <p>
-            If you have been searching &ldquo;shin splints massage near me&rdquo;, &ldquo;shin pain treatment North London&rdquo;, &ldquo;runner shin therapist Archway&rdquo;, &ldquo;sports massage for shin splints London&rdquo; or &ldquo;MTSS massage N19&rdquo;, Range and Restore is set up for exactly this. The clinic at 130 Junction Road is two minutes from Archway tube on the Northern Line and serves clients right across N19, N7, N6, N4, N8, N1, NW1 and NW5.
-          </p>
-
-          <p>
-            That covers Archway, Tufnell Park, Holloway, Highgate, Crouch End, Finsbury Park, Islington, Camden, Kentish Town and the wider North London catchment. Range and Restore is the local option for runners and active clients across all of those postcodes who do not want to trek into central London for proper hands-on shin splints treatment.
+            Range and Restore is at 130 Junction Road, Archway, N19, a short walk from Archway and Tufnell Park stations. Runners with sore shins come to us from Highgate, Crouch End, Tufnell Park, Holloway, Finsbury Park and further across North London.
           </p>
         </div>
 
