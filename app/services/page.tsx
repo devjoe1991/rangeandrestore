@@ -299,7 +299,7 @@ export default function ServicesPage() {
               Give the gift of movement
             </h2>
             <p className="text-page-muted text-sm font-medium leading-relaxed flex-1 mb-5">
-              Perfect for friends and family recovering from injury or needing proper relaxation. Redeemable against any treatment, valid for 12 months.
+              Perfect for friends and family recovering from injury or needing proper relaxation. Redeemable against any treatment, including the sauna, and valid for 12 months.
             </p>
             <div>
               <Link href={ROUTES.giftCards} className="btn btn-primary text-sm">Buy a Gift Card</Link>

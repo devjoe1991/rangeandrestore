@@ -75,7 +75,7 @@ export default function TermsAndConditionsPage() {
             <ul className="space-y-3 list-disc list-inside">
               <li>Gift cards are valid for 12 months from the date of purchase.</li>
               <li>Gift cards are non-refundable and cannot be exchanged for cash.</li>
-              <li>Gift cards are redeemable against any treatment at Range and Restore Sports Massage. They cannot be used for Recovery Suite (sauna) sessions.</li>
+              <li>Gift cards are redeemable against any treatment at Range and Restore Sports Massage. This includes Recovery Suite (sauna) sessions.</li>
               <li>Lost or stolen gift cards cannot be replaced.</li>
               <li>Gift cards cannot be used to purchase other gift cards or bundle packages.</li>
             </ul>
