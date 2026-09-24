@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { BLOG_POSTS } from '@/lib/blog-posts'
 
 type SearchItem = {
   title: string
@@ -20,11 +21,15 @@ const SEARCH_INDEX: SearchItem[] = [
   { title: 'Manual Lymphatic Drainage (MLD)', description: 'Post-surgery swelling, lymphoedema, recovery', href: '/services/manual-lymphatic-drainage', group: 'Services', keywords: ['mld', 'lymphatic', 'drainage', 'swelling', 'surgery', 'lymphoedema', 'oedema', 'immune'] },
   { title: 'Relaxation Massage', description: 'Stress relief, burnout, calming treatment', href: '/services/relaxation-restorative-massage', group: 'Services', keywords: ['relax', 'stress', 'burnout', 'calm', 'restore', 'gentle', 'unwind'] },
   { title: 'Massage Bundle Offers', description: 'Multi-session packages, save money', href: '/services/massage-bundles', group: 'Services', keywords: ['bundle', 'package', 'save', 'discount', 'sessions', 'buy', 'value'] },
-  // Blog
-  { title: 'Hydration and Muscle Health', description: 'Why water matters for muscle recovery and massage', href: '/blog/hydration-and-muscle-health', group: 'Blog', keywords: ['hydration', 'water', 'muscle', 'health', 'recovery'] },
-  { title: 'Sports Massage for Runners', description: 'Before and after race preparation and recovery', href: '/blog/sports-massage-for-runners', group: 'Blog', keywords: ['runner', 'running', 'race', 'marathon', '10k', 'training'] },
-  { title: 'Achilles Tendinitis Recovery', description: 'How sports massage helps Achilles injuries', href: '/blog/achilles-tendinitis-recovery-massage', group: 'Blog', keywords: ['achilles', 'tendinitis', 'tendon', 'ankle', 'heel', 'injury'] },
-  { title: 'Desk Posture Pain', description: 'Fixing neck, shoulder and back pain from desk work', href: '/blog/desk-posture-pain-massage', group: 'Blog', keywords: ['desk', 'posture', 'office', 'neck', 'back', 'shoulder', 'sitting'] },
+  { title: 'Cupping + Sports Massage', description: 'Advanced cupping therapy with sports and deep tissue massage', href: '/services/advanced-cupping-sports-deep-tissue', group: 'Services', keywords: ['cupping', 'cups', 'deep tissue', 'sports', 'tight', 'fascia'] },
+  { title: 'MSK Scan + Clinical Massage', description: 'Diagnostic ultrasound with Reliable Scan, then clinical massage', href: '/services/msk-ultrasound-clinical-massage', group: 'Services', keywords: ['msk', 'scan', 'ultrasound', 'diagnosis', 'injury', 'assessment', 'reliable'] },
+  { title: 'Pregnancy Massage', description: 'Safe, supportive massage through pregnancy', href: '/services/pregnancy-massage', group: 'Services', keywords: ['pregnancy', 'pregnant', 'prenatal', 'antenatal', 'postnatal', 'bump', 'maternity'] },
+  { title: 'Reflexology', description: 'Relaxing foot reflexology', href: '/services/reflexology', group: 'Services', keywords: ['reflexology', 'feet', 'foot', 'relax', 'stress'] },
+  { title: 'Community Tuesday Clinic', description: 'Tuesday sessions at a lower price for the local community', href: '/services/community-tuesday-clinic', group: 'Services', keywords: ['community', 'tuesday', 'cheaper', 'affordable', 'lower price', 'low cost'] },
+  { title: 'Recovery Suite', description: 'Private infrared sauna and Normatec compression in Archway', href: '/recovery-suite', group: 'Services', keywords: ['recovery', 'suite', 'sauna', 'normatec', 'compression'] },
+  { title: 'Infrared Hybrid Sauna', description: 'Private infrared and traditional sauna sessions from £19', href: '/recovery-suite/infrared-sauna', group: 'Services', keywords: ['sauna', 'infrared', 'heat', 'steam', 'hot', 'couples', 'private'] },
+  { title: 'Normatec Compression', description: 'Normatec compression boots with a sports massage', href: '/recovery-suite/compression-therapy', group: 'Services', keywords: ['normatec', 'compression', 'boots', 'legs', 'recovery', 'hyperice'] },
+  { title: 'Recovery Packages & Memberships', description: 'Massage with sauna or Normatec, plus Restore+ memberships', href: '/recovery-suite/recovery-packages', group: 'Services', keywords: ['package', 'membership', 'restore+', 'monthly', 'sauna', 'normatec', 'combo'] },
   // Pages
   { title: 'Meet the Team', description: 'The BTEC Level 5 therapists at Range and Restore', href: '/team', group: 'Pages', keywords: ['team', 'therapists', 'staff', 'meet', 'carlos', 'alison', 'isherwood', 'darael', 'beckles', 'mateja', 'bracko-mounti', 'who', 'practitioners'] },
   { title: 'About Carlos Bonvicine', description: 'Founder and lead therapist at Range and Restore', href: '/about', group: 'Pages', keywords: ['carlos', 'about', 'founder', 'lead therapist', 'owner', 'biography', 'qualifications', 'mld', 'certified'] },
@@ -35,8 +40,19 @@ const SEARCH_INDEX: SearchItem[] = [
   { title: 'Corporate Wellbeing', description: 'Workplace and office massage for staff, on-site or in clinic', href: '/corporate-wellbeing', group: 'Pages', keywords: ['corporate', 'business', 'company', 'workplace', 'office', 'employee', 'staff', 'wellbeing', 'wellness', 'team', 'hr', 'on-site', 'onsite'] },
   { title: 'Clinical Collaboration', description: 'Range and Restore alongside Reliable Scan Archway', href: '/clinical-collaboration', group: 'Pages', keywords: ['ultrasound', 'scan', 'reliable', 'collaboration', 'diagnostic'] },
   { title: 'Giving Back', description: 'The charities we support: Whittington Health Charity and Phab', href: '/giving-back', group: 'Pages', keywords: ['charity', 'charities', 'giving', 'giving back', 'donate', 'donation', 'whittington', 'nhs', 'hospital', 'phab', 'fundraising', 'raffle', 'volunteer', 'community', 'marathon', 'london marathon'] },
-  { title: 'Wellness Hub', description: 'Articles on massage, injury and recovery', href: '/blog', group: 'Pages', keywords: ['blog', 'articles', 'wellness', 'advice', 'tips'] },
+  { title: 'Blog', description: 'Articles on massage, injury and recovery', href: '/blog', group: 'Pages', keywords: ['blog', 'articles', 'wellness', 'advice', 'tips'] },
+  { title: 'NHS & Emergency Services Discount', description: '£10 off for NHS staff and emergency services', href: '/nhs-emergency-services-discount', group: 'Pages', keywords: ['nhs', 'discount', 'blue light', 'nurse', 'doctor', 'police', 'fire', 'paramedic', 'emergency'] },
+  { title: 'Areas We Serve', description: 'Archway, Tufnell Park, Holloway, Highgate, Islington and nearby', href: '/areas-served', group: 'Pages', keywords: ['area', 'near me', 'archway', 'tufnell park', 'holloway', 'upper holloway', 'highgate', 'islington', 'finsbury park', 'stroud green', 'crouch end', 'kentish town', 'n19', 'n7', 'n4', 'n6', 'n8', 'nw5', 'n1'] },
+  { title: 'Awards', description: 'New Sports Massage Clinic of the Year 2026/27', href: '/awards', group: 'Pages', keywords: ['award', 'awards', 'prestige', 'winner'] },
+  { title: 'Community Partners', description: 'Local businesses we work with, and partner offers', href: '/community', group: 'Pages', keywords: ['community', 'partner', 'partners', 'fs8', 'yoga', 'osteopath', 'gp', 'local', 'offer', 'code'] },
+  { title: 'Press', description: 'Press and media enquiries', href: '/press', group: 'Pages', keywords: ['press', 'media', 'journalist'] },
 ]
+
+// Blog posts come from the same list as /blog, so new posts are searchable
+// without being added here. Their title and summary are what gets matched.
+for (const post of BLOG_POSTS) {
+  SEARCH_INDEX.push({ title: post.title, description: post.excerpt, href: `/blog/${post.slug}`, group: 'Blog', keywords: [] })
+}
 
 function score(item: SearchItem, query: string): number {
   const q = query.toLowerCase().trim()

@@ -41,12 +41,12 @@ export function OfferBar() {
             </span>
           </p>
 
-          <p className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-1 sm:justify-center text-[0.6875rem] sm:text-xs leading-tight">
+          <p className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-1 sm:justify-center text-xs leading-tight">
             <span className="rounded-full bg-accent-light px-2 py-[0.09375rem] text-ink font-black">£10</span>
             <span className="text-white/70 font-semibold">
               usually <span className="line-through">£19</span>
             </span>
-            <span className="text-white/60 font-medium sm:hidden">· 45 min sauna after your massage</span>
+            <span className="text-white/60 font-medium sm:hidden">· 45 min sauna after any massage · ask on the day</span>
             <span className="hidden sm:inline text-white/60 font-medium">
               · stay warm, unwind and keep the circulation going
             </span>

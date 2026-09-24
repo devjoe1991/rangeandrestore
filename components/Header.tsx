@@ -10,6 +10,11 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [visible, setVisible]       = useState(true)
   const lastScrollY                  = useRef(0)
+  // The drawer is fixed to the viewport, but the header sits below the offer
+  // bar until the page scrolls, so the drawer's top gap is measured from where
+  // the header actually ends rather than assumed to be its 60px height.
+  const mobileHeaderRef              = useRef<HTMLElement>(null)
+  const [drawerGap, setDrawerGap]    = useState(60)
 
   useEffect(() => {
     const onScroll = () => {
@@ -89,7 +94,7 @@ export function Header() {
       </header>
 
       {/* ── Mobile sticky bar ──────────────────────────────── */}
-      <header className={`lg:hidden ${headerBase} h-[60px] flex items-center px-4 gap-2`}>
+      <header ref={mobileHeaderRef} className={`lg:hidden ${headerBase} h-[60px] flex items-center px-4 gap-2`}>
         <Link href={ROUTES.home} aria-label="Range and Restore — Home" className="mr-auto flex items-center min-h-[44px]">
           <span className="font-extrabold text-ink text-base tracking-tight leading-none">
             Range and Restore
@@ -104,7 +109,10 @@ export function Header() {
           className="inline-flex items-center justify-center rounded-full font-bold text-xs px-4 min-h-[40px] bg-white/60 backdrop-blur-sm border border-brand-teal/50 text-ink hover:bg-white transition-all whitespace-nowrap">
           Book Now
         </a>
-        <button onClick={() => setMobileOpen(!mobileOpen)}
+        <button onClick={() => {
+            if (!mobileOpen && mobileHeaderRef.current) setDrawerGap(mobileHeaderRef.current.getBoundingClientRect().bottom)
+            setMobileOpen(!mobileOpen)
+          }}
           className="text-ink min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}>
@@ -116,7 +124,7 @@ export function Header() {
       <div
         className={`lg:hidden fixed inset-0 z-40 bg-brand-green flex flex-col transition-transform duration-300 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
         aria-hidden={!mobileOpen}>
-        <div className="h-[60px] flex-shrink-0 border-b border-white/10" />
+        <div className="flex-shrink-0 border-b border-white/10" style={{ height: drawerGap }} />
 
         <nav className="flex-1 overflow-y-auto px-6 pt-2 pb-6">
           {NAV_ITEMS.map((item) => (

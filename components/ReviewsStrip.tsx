@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { REVIEW_COUNT } from '@/lib/seo'
 
 const PLACE_URL = 'https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9'
 
@@ -9,7 +10,7 @@ const PLACE_URL = 'https://maps.app.goo.gl/ahN3tJdZyPXk2KaP9'
  * review count, linking out to the Google listing. Designed to sit directly
  * beneath the AwardStrip and share its cream surface so the pair reads as one
  * block. Pulls the live rating/total from /api/reviews and falls back to the
- * static 5.0 / 47 when the API is unavailable.
+ * static 5.0 / REVIEW_COUNT when the API is unavailable.
  */
 export function ReviewsStrip() {
   const [rating, setRating] = useState<number | null>(null)
@@ -47,7 +48,7 @@ export function ReviewsStrip() {
           </span>
           <span className="text-brand-green/40 font-bold" aria-hidden="true">·</span>
           <span className="text-xs sm:text-sm font-bold text-brand-green">
-            {total ?? 47} verified reviews
+            {total ?? REVIEW_COUNT} verified reviews
           </span>
           <span className="text-[0.7rem] sm:text-xs font-black uppercase tracking-wide text-brand-green/50 transition-colors group-hover:text-brand-green whitespace-nowrap">
             Read them <span aria-hidden="true">&rarr;</span>
