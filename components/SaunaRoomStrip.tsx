@@ -39,8 +39,8 @@ export function SaunaRoomCard() {
         lead="A private two person infrared suite at the quiet back of the clinic."
         body={
           <p>
-            Infrared and traditional heat, your own music and the whole room to yourself for the
-            hour. Private sessions from £19.
+            Infrared and traditional heat, your own music and the whole room to yourself for your
+            session. Private sessions from £19, for one or two people.
           </p>
         }
         aside={
@@ -97,7 +97,7 @@ export function SaunaRoomStrip() {
               <p className="mt-3 text-sm leading-relaxed text-white/75">
                 A private two person infrared suite, tucked away at the quiet back of the clinic and
                 shut off from the hustle outside. Infrared and traditional heat, your own music, and
-                the whole room to yourself for the hour.
+                the whole room to yourself for your session. From £19 for one or two people.
               </p>
 
               <ul className="mt-5 grid gap-2 text-sm text-white/70 sm:grid-cols-2">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
@@ -7,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Advanced Clinical Massage Archway N19',
-  description: "Soft tissue remedial therapy in Archway. Trigger point, MET and myofascial techniques. BTEC L5. For chronic pain that hasn't responded to general massage.",
+  description: "Soft tissue remedial therapy in Archway. Trigger point, MET and myofascial techniques. BTEC L5. 60 min £75, 90 min £110. For chronic pain that hasn't responded to general massage.",
   path: '/services/advanced-clinical-massage',
 })
 
@@ -52,7 +53,7 @@ const faqs = [
   },
   {
     q: 'How much does advanced clinical massage cost in Archway?',
-    a: 'A 30-minute focused session is £50, a 60-minute treatment is £75, and a 90-minute comprehensive session for multi-area or complex cases is £110.',
+    a: 'A 60-minute treatment is £75, and a 90-minute comprehensive session for multi-area or complex cases is £110.',
   },
   {
     q: 'How many sessions will I need?',
@@ -85,6 +86,15 @@ export default function AdvancedClinicalMassagePage() {
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.advancedClinical} label="Book Now" />
           </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/advanced-clinical-massage-assessment-treatment-room-range-and-restore-archway-north-london.jpg"
+              alt="Carlos Bonvicine leading an assessment-led clinical massage session with the team in the treatment room at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -116,9 +126,8 @@ export default function AdvancedClinicalMassagePage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – £50', desc: 'Focused clinical treatment for a single area or specific condition. Suitable for follow-up sessions or targeted problem areas.' },
                 { duration: '60 Minutes – £75', desc: 'In-depth assessment and treatment for one or two areas. Provides time for thorough assessment and effective clinical work.' },
                 { duration: '90 Minutes – £110', desc: 'Comprehensive clinical session for complex or multi-area presentations. Recommended for chronic conditions and full-body assessments.' },
               ].map((option) => (

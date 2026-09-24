@@ -5,8 +5,8 @@ import { BOOKING_URLS } from '@/lib/constants'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Massage Bundles Archway N19 | Save up to £300',
-  description: '5 or 10 session sports and clinical massage bundles in Archway. Save £75 to £300 vs single sessions. 60 or 90 minute slots, valid 6-12 months.',
+  title: 'Massage Bundles Archway N19 | Save up to £150',
+  description: '5 or 10 session Sports & Deep Tissue Massage bundles in Archway. Save £25 to £150 against standard prices (£75 for 60 min, £110 for 90 min). 60 or 90 minute sessions.',
   path: '/services/massage-bundles',
 })
 
@@ -15,31 +15,31 @@ const bundles = [
     title: 'Pain Relief & Mobility Plan – 5 × 60-Minute Sessions',
     price: '£350',
     validity: 'Expires after 6 months',
-    saving: 'Save £75',
-    description: 'This 5-session plan is designed to reduce pain, improve mobility, and begin building long-term results through consistent, targeted treatment. Each 60-minute session is tailored to your needs and may include sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, assisted stretching, and aftercare advice.',
+    saving: 'Save £25',
+    description: 'This 5-session plan is designed to reduce pain, improve mobility, and begin building long-term results through consistent, targeted treatment. Each 60-minute session is tailored to your needs and may include sports massage, deep tissue therapy, soft tissue remedial techniques, myofascial release, assisted stretching, and aftercare advice.',
     ideal: 'Ideal for: Clients wanting regular maintenance sessions, people managing a specific issue or injury over time, and those looking to build consistent self-care into their routine.',
   },
   {
     title: 'Pain Relief & Mobility Plan – 10 × 60-Minute Sessions',
     price: '£650',
     validity: 'Expires after 12 months',
-    saving: 'Save £200',
-    description: 'This structured 10-session plan is designed to reduce pain, improve mobility, and deliver long-term results through consistent, targeted treatment. Each 60-minute session is tailored to your needs and may include sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, assisted stretching, and aftercare advice.',
+    saving: 'Save £100',
+    description: 'This structured 10-session plan is designed to reduce pain, improve mobility, and deliver long-term results through consistent, targeted treatment. Each 60-minute session is tailored to your needs and may include sports massage, deep tissue therapy, soft tissue remedial techniques, myofascial release, assisted stretching, and aftercare advice.',
     ideal: 'Ideal for: Clients committed to a long-term recovery plan, individuals with chronic pain or recurring injuries, and those who have experienced the benefits of regular massage and want to continue.',
   },
   {
     title: 'Advanced Recovery & Performance Plan – 5 × 90-Minute Sessions',
     price: '£500',
     validity: 'Expires after 8 months',
-    saving: 'Save £125',
-    description: 'This 5-session advanced plan is designed for clients who need deeper, more focused treatment to address pain, improve mobility, and accelerate recovery. Each 90-minute session allows for a thorough assessment and extended hands-on work, combining sports massage, deep tissue therapy, soft tissue remedial techniques, cupping, myofascial release, and assisted stretching.',
+    saving: 'Save £50',
+    description: 'This 5-session advanced plan is designed for clients who need deeper, more focused treatment to address pain, improve mobility, and accelerate recovery. Each 90-minute session allows for a thorough assessment and extended hands-on work, combining sports massage, deep tissue therapy, soft tissue remedial techniques, myofascial release, and assisted stretching.',
     ideal: 'Ideal for: Athletes and runners, clients with multiple areas of concern, and those who prefer a more thorough, in-depth session each time.',
   },
   {
     title: 'Advanced Recovery & Performance Plan – 10 × 90-Minute Sessions',
     price: '£950',
     validity: 'Expires after 10 months',
-    saving: 'Save £300',
+    saving: 'Save £150',
     description: 'This 10-session advanced plan is designed for clients committed to achieving long-term pain relief, improved mobility, and optimal physical performance through consistent, high-level treatment. Each 90-minute session provides the time for a full assessment and comprehensive hands-on therapy, combining sports massage, deep tissue work, and advanced soft tissue techniques.',
     ideal: 'Ideal for: Clients with complex or chronic conditions, performance-focused athletes, and those looking for the best possible long-term value and care.',
   },
@@ -80,7 +80,10 @@ export default function MassageBundlesPage() {
             Invest in Your Long-Term Wellbeing
           </p>
           <p className="mt-4 text-lg text-page-muted max-w-2xl">
-            Regular massage is one of the most effective investments you can make in your health, recovery, and quality of life. Our bundle packages make consistent treatment more accessible and affordable, so you can commit to your wellbeing without compromise.
+            Regular treatment works better than the odd one-off session. Bundles let you pay for 5 or 10 Sports &amp; Deep Tissue Massage sessions up front at a lower price per session.
+          </p>
+          <p className="mt-3 text-page-muted max-w-2xl">
+            Savings are against our standard prices: £75 for a 60-minute session and £110 for a 90-minute session.
           </p>
         </div>
       </div>
@@ -154,7 +157,7 @@ export default function MassageBundlesPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 lg:p-10 text-center">
           <h2 className="text-2xl font-black text-ink mb-4">Ready to commit to your health?</h2>
           <p className="text-brand-green text-lg font-semibold mb-6 max-w-2xl mx-auto">
-            Take control of your health and recovery with a tailored bundle that suits your needs. Secure your package today and start your journey towards better mobility, less pain, and improved performance.
+            Take control of your health and recovery with a tailored bundle that suits your needs. Buy your bundle online, then book each session when it suits you.
           </p>
           <div className="flex justify-center">
             <a

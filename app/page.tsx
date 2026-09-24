@@ -14,14 +14,14 @@ import { NhsDiscountCard } from '@/components/NhsDiscountStrip'
 import { CorporateWellbeingStrip } from '@/components/CorporateWellbeingStrip'
 import { SwipeCarousel } from '@/components/SwipeCarousel'
 import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
-import { businessSchema, websiteSchema, buildMetadata } from '@/lib/seo'
+import { businessSchema, websiteSchema, buildMetadata, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage Archway N19 | BTEC L5 Therapists',
   description:
-    'Sports massage clinic in Archway N19 with a team of BTEC Level 5 therapists. 47 five-star reviews. Pain relief, injury recovery, mobility. Book online — same-week slots from £50.',
+    `Sports massage clinic in Archway N19 with a team of BTEC Level 5 therapists. Rated ${REVIEW_RATING} from ${REVIEW_COUNT} Google reviews. Pain relief, injury recovery, mobility. Book online, sports massage from £50.`,
   path: '/',
 })
 
@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: 'Back & Neck Pain MOT',
-    price: 'From £50',
+    price: 'From £75',
     problem: 'Desk-related back pain or a stiff neck?',
     solution: 'Full postural assessment and focused treatment targeting the exact muscles driving your pain.',
     href: '/services/back-neck-pain-mot',
@@ -48,7 +48,7 @@ const services = [
   },
   {
     title: 'Advanced Clinical Massage',
-    price: 'From £50',
+    price: 'From £75',
     problem: 'Chronic pain, sciatica or persistent tension?',
     solution: 'Assessment-led clinical massage identifies the root cause — effective for back pain, nerve pain, RSI and postural conditions.',
     href: '/services/advanced-clinical-massage',
@@ -68,8 +68,8 @@ const services = [
   },
   {
     /* Matches the wording on /services, and keeps the card title to one line. */
-    title: 'Cupping + Deep Tissue Massage',
-    price: 'From £60',
+    title: 'Cupping + Sports Massage',
+    price: 'From £85',
     problem: 'Deep-seated tightness or fascial restriction holding you back?',
     solution: 'Integrated cupping plus sports and deep tissue therapy decompresses fascia, releases adhesions and accelerates recovery.',
     href: '/services/advanced-cupping-sports-deep-tissue',
@@ -89,9 +89,9 @@ const services = [
   },
   {
     title: 'Manual Lymphatic Drainage',
-    price: 'From £50',
+    price: 'From £75',
     problem: 'Recovering from surgery or dealing with swelling?',
-    solution: 'Certified MLD reduces swelling, clears bruising and accelerates post-surgical recovery safely.',
+    solution: 'Certified MLD, a gentle hands-on technique that may help reduce swelling and bruising after surgery.',
     href: '/services/manual-lymphatic-drainage',
     bookingHref: BOOKING_URLS.mld,
     image: '/manual-lymphatic-drainage-massage-therapist-range-and-restore-archway-north-london.jpg',
@@ -119,13 +119,13 @@ const services = [
   },
   {
     title: 'Normatec Compression Therapy',
-    price: 'From £19',
+    price: '£110 with massage',
     problem: 'Heavy legs after long runs, rides or shifts?',
-    solution: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired muscles fast.',
+    solution: 'Hyperice Normatec 3 Full Body compression for legs, hips and arms, as the last 30 minutes of our 90-minute Sports Massage + Normatec package.',
     href: '/recovery-suite/compression-therapy',
-    bookingHref: BOOKING_URLS.recoverySuite,
+    bookingHref: BOOKING_URLS.packageCompressionMassage,
     image: '/recovery-suite/normatec-compression-therapy-archway.jpg',
-    imageAlt: 'Hyperice Normatec 3 Full Body pneumatic compression system at the Recovery Suite, Range and Restore, Archway, North London',
+    imageAlt: 'Hyperice Normatec 3 Full Body compression boots and attachments laid out on a treatment table at Range and Restore, Archway, North London',
   },
 ]
 
@@ -170,8 +170,8 @@ const blogPosts = [
     title:    'Marathon Massage in Archway: Your Pre and Post Race Recovery Guide',
     href:     '/blog/marathon-sports-massage-archway',
     date:     '13 Apr 2026',
-    img:      'https://lh3.googleusercontent.com/p/AF1QipPwlk_sqmDIVY-g-_dlBgZ4lW0vG1R-m6SyKK0O=s680-w680-h510-rw',
-    imgAlt:   'Carlos Bonvicine providing sports massage at a marathon event, Range and Restore, Archway, North London',
+    img:      '/giving-back/carlos-bonvicine-phab-runner-tcs-london-marathon-post-race-sports-massage.jpg',
+    imgAlt:   'Carlos Bonvicine treating a Phab runner with post-race sports massage at the TCS London Marathon',
     category: 'Marathon',
     readTime: '6 min read',
   },
@@ -187,17 +187,17 @@ const blogPosts = [
 ]
 
 const bundles = [
-  { name: 'Pain Relief & Mobility Plan', label: '5 × 60 min', originalPrice: '£425', price: '£350', perSession: '£70/session', saving: 'Saving £75', valid: '6 months' },
-  { name: 'Pain Relief & Mobility Plan', label: '10 × 60 min', originalPrice: '£850', price: '£650', perSession: '£65/session', saving: 'Saving £200', valid: '12 months', popular: true },
-  { name: 'Advanced Recovery & Performance Plan', label: '5 × 90 min', originalPrice: '£625', price: '£500', perSession: '£100/session', saving: 'Saving £125', valid: '8 months' },
-  { name: 'Advanced Recovery & Performance Plan', label: '10 × 90 min', originalPrice: '£1250', price: '£950', perSession: '£95/session', saving: 'Saving £300', valid: '10 months' },
+  { name: 'Pain Relief & Mobility Plan', label: '5 × 60 min', price: '£350', perSession: '£70/session', saving: 'Saving £25', valid: '6 months' },
+  { name: 'Pain Relief & Mobility Plan', label: '10 × 60 min', price: '£650', perSession: '£65/session', saving: 'Saving £100', valid: '12 months' },
+  { name: 'Advanced Recovery & Performance Plan', label: '5 × 90 min', price: '£500', perSession: '£100/session', saving: 'Saving £50', valid: '8 months' },
+  { name: 'Advanced Recovery & Performance Plan', label: '10 × 90 min', price: '£950', perSession: '£95/session', saving: 'Saving £150', valid: '10 months' },
 ]
 
 const teamMembers = [
   { name: 'Carlos Bonvicine', title: 'Founder & Lead Therapist', creds: 'BTEC Level 5 · MLD & Cupping Therapy', img: '/carlos-bonvicine-founder-lead-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Carlos Bonvicine, founder and lead therapist at Range and Restore, Archway', href: '/team#carlos-bonvicine', cta: 'Meet Carlos' },
   { name: 'Alison Isherwood', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'LSSM Graduate · BTEC Level 5', img: '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Alison Isherwood, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#alison-isherwood', cta: 'Meet Alison' },
-  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
-  { name: 'Mateja Bracko-Mounti', title: 'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist', creds: "LSSM · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
+  { name: 'Darael Beckles', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: 'BTEC Level 5 · NLSSM Graduate · SMRT, MSMA', img: '/darael-beckles-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Darael Beckles, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#darael-beckles', cta: 'Meet Darael' },
+  { name: 'Mateja Bracko-Mounti', title: 'Sports Massage & Soft Tissue Remedial Therapist', creds: "BTEC Level 5 (LSSM) · SMRT, MSMA · 18+ Years' Experience", img: '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-therapist-range-and-restore-archway-north-london.jpeg', alt: 'Mateja Bracko-Mounti, sports massage and soft tissue therapist at Range and Restore, Archway, North London', href: '/team#mateja-bracko-mounti', cta: 'Meet Mateja' },
 ]
 
 export default function HomePage() {
@@ -297,11 +297,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2.2 RECOVERY SUITE NOW OPEN BANNER ──────────────── */}
+      {/* ── 2.2 RECOVERY SUITE BANNER ───────────────────────── */}
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-ink text-sm font-bold leading-snug">
-            <span className="font-black">Recovery Suite:</span> private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; treatment memberships.
+            <span className="font-black">Recovery Suite:</span>{' '}private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; treatment memberships.
           </span>
         </div>
       </div>
@@ -311,10 +311,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 id="recovery-suite-heading" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
-              Now Open at Range and Restore. Our New Advanced Recovery Suite
+              The Recovery Suite at Range and Restore
             </h2>
             <p className="text-teal-tint/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
-              A new dedicated recovery and wellness space is now open at the clinic. Hybrid infrared and traditional sauna, Normatec full-body compression recovery, and recovery-focused wellness and sports recovery sessions. Available now at Range and Restore, Archway.
+              A private hybrid infrared and traditional sauna room at the clinic, from £19 a session for one or two people. Normatec full body compression is part of our £110 Sports Massage + Normatec package.
             </p>
           </div>
 
@@ -327,7 +327,7 @@ export default function HomePage() {
               },
               {
                 title: 'Compression Therapy',
-                desc: 'Hyperice Normatec 3 Full Body. Pneumatic compression for legs, hips and arms.',
+                desc: 'Hyperice Normatec 3 Full Body compression for legs, hips and arms, with a 60-minute sports massage. £110.',
                 href: '/recovery-suite/compression-therapy',
               },
               {
@@ -383,53 +383,38 @@ export default function HomePage() {
               Invest in your long-term wellbeing
             </h2>
             <p className="text-brand-green/80 mt-3 text-sm font-medium max-w-lg mx-auto">
-              Save more and stay consistent. Bundles keep you on track and give your body the ongoing care it needs.
+              5 or 10 Sports &amp; Deep Tissue Massage sessions at a lower price per session. Savings are against our standard £75 (60 min) and £110 (90 min) prices.
             </p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-7">
             {bundles.map((b) => (
-              <div key={b.label}
-                className={`rounded-2xl p-5 text-center relative flex flex-col card-lift border-2 ${
-                  b.popular ? 'bg-accent border-brand-green-dark/15' : 'bg-white border-brand-green/12'
-                }`}>
-                {b.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-green-dark text-white text-[0.6rem] font-black tracking-widest uppercase px-3 py-1 rounded-full whitespace-nowrap shadow-sm">
-                    Best Value
-                  </span>
-                )}
-                <p className={`text-[0.7rem] sm:text-xs font-black leading-tight mb-1.5 min-h-[2.5em] ${b.popular ? 'text-brand-green-dark' : 'text-brand-green'}`}>
+              <div key={b.label} className="rounded-2xl p-5 text-center relative flex flex-col card-lift border-2 bg-white border-brand-green/12">
+                <p className="text-[0.7rem] sm:text-xs font-black leading-tight mb-1.5 min-h-[2.5em] text-brand-green">
                   {b.name}
                 </p>
-                <p className={`text-[0.65rem] font-black uppercase tracking-widest mb-2 ${b.popular ? 'text-brand-green-dark/90' : 'text-brand-green/80'}`}>
+                <p className="text-[0.65rem] font-black uppercase tracking-widest mb-2 text-brand-green/80">
                   {b.label}
                 </p>
-                <p className={`text-[0.65rem] font-bold mb-1 line-through ${b.popular ? 'text-brand-green-dark/80' : 'text-brand-green/70'}`}>
-                  {b.originalPrice}
-                </p>
-                <p className={`text-4xl font-black tracking-tight leading-none mb-1 ${b.popular ? 'text-brand-green-dark' : 'text-brand-green'}`}>
+                <p className="text-4xl font-black tracking-tight leading-none mb-1 text-brand-green">
                   {b.price}
                 </p>
-                <p className={`text-xs font-bold mt-0.5 ${b.popular ? 'text-brand-green/90' : 'text-brand-green/80'}`}>
+                <p className="text-xs font-bold mt-0.5 text-brand-green/80">
                   {b.perSession}
                 </p>
                 <div className="mt-2 mb-3">
-                  <span className={`text-[0.65rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-md shadow-sm ${
-                    b.popular ? 'bg-brand-green-dark text-accent' : 'bg-accent text-ink'
-                  }`}>
+                  <span className="text-[0.65rem] font-black uppercase tracking-widest px-2.5 py-1 rounded-md shadow-sm bg-accent text-ink">
                     {b.saving}
                   </span>
                 </div>
-                <p className={`text-xs font-semibold mt-0 mb-4 ${b.popular ? 'text-brand-green-dark/90' : 'text-brand-green/80'}`}>
+                <p className="text-xs font-semibold mt-0 mb-4 text-brand-green/80">
                   Valid {b.valid}
                 </p>
                 <a
                   href={BOOKING_URLS.bundles}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-auto text-xs font-bold py-2 px-3 rounded-full transition-all ${
-                    b.popular ? 'bg-brand-green-dark text-white hover:bg-white hover:text-brand-green-dark' : 'bg-brand-green/10 text-brand-green hover:bg-brand-green hover:text-white'
-                  }`}
+                  className="mt-auto text-xs font-bold py-2 px-3 rounded-full transition-all bg-brand-green/10 text-brand-green hover:bg-brand-green hover:text-white"
                 >
                   Book now
                 </a>
@@ -449,13 +434,13 @@ export default function HomePage() {
       {/* ── 5. GOOGLE REVIEWS ────────────────────────────────── */}
       <GoogleReviews />
 
-      {/* ── 3.5 WHY CHOOSE RANGE & RESTORE ─────────────────────── */}
+      {/* ── 3.5 WHY CHOOSE RANGE AND RESTORE ───────────────────── */}
       <section className="section section-flush-t bg-page-sage">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center text-page">
-          <h2 className="text-3xl font-extrabold tracking-tight mb-8">Why Choose Range &amp; Restore?</h2>
+          <h2 className="text-3xl font-extrabold tracking-tight mb-8">Why Choose Range and Restore?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
             {[
-              'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapist',
+              'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapists',
               'Advanced soft tissue and remedial techniques',
               'Certified Full Body Manual Lymphatic Drainage (MLD)',
               'Aftercare advice included in every session',
@@ -535,12 +520,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. BLOG / WELLNESS HUB ───────────────────────────── */}
+      {/* ── 6. BLOG ──────────────────────────────────────────── */}
       <section className="section bg-sand-deep" aria-labelledby="blog-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-7 gap-4">
             <div>
-              <span className="eyebrow block mb-1.5" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Wellness Hub</span>
+              <span className="eyebrow block mb-1.5" style={{ color: '#1a3d3a', borderBottomColor: '#1a3d3a' }}>Blog</span>
               <h2 id="blog-heading" className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight">
                 Expert advice &amp; insights
               </h2>
@@ -799,7 +784,7 @@ function BlogCard({ p, dark, mobile }: { p: typeof blogPosts[0]; dark?: boolean;
           </span>
         </div>
         <div className="absolute bottom-3 left-3">
-          <span className="text-accent/80 text-[0.65rem] font-semibold">{p.date}</span>
+          <span className="bg-black/40 backdrop-blur-sm text-white text-[0.65rem] font-semibold px-2.5 py-1 rounded-full">{p.date}</span>
         </div>
       </div>
 

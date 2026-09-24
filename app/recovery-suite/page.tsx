@@ -37,15 +37,15 @@ const collectionSchema = {
 const faqs = [
   {
     q: 'Do I need to be an existing client to use the Recovery Suite?',
-    a: 'No. The sauna and compression therapy are open to anyone. You don\'t need to have had a sports massage with us to book a recovery session.',
+    a: 'No. The sauna is open to anyone, and you don\'t need to have had a sports massage with us to book a session. Normatec compression is different: it is only available as part of our 90-minute Sports Massage + Normatec package (£110).',
   },
   {
     q: 'Can I bring a guest into the sauna?',
-    a: 'Yes. The sauna fits two people comfortably and every session is private, so you\'re welcome to bring a partner, training mate or friend along. Just mention it when you book.',
+    a: 'Yes. The sauna fits two people comfortably and every session is private, so you\'re welcome to bring a partner, training mate or friend along. The price is per session, not per person. Just mention it when you book.',
   },
   {
-    q: 'How do I book a combined session like sauna and massage together?',
-    a: 'Recovery packages are bookable as a single appointment, so you don\'t need to chain bookings together. Pick the package that suits and your therapist will run the full session in one visit.',
+    q: 'How do I book a sauna and a massage together?',
+    a: 'Book your massage, then a sauna session straight after it. If you\'d like help lining the two up, call or message us and we\'ll arrange it. After any massage you can also ask on the day for a 45-minute sauna for £10 (usually £19). The Sports Massage + Normatec package (£110) is booked online as one appointment.',
   },
   {
     q: 'What should I bring with me?',
@@ -62,43 +62,42 @@ export default function RecoverySuitePage() {
 
       {/* Hero */}
       <div className="relative bg-brand-green py-16 lg:py-24 overflow-hidden">
-        {/* TODO: replace with real photo of the redesigned recovery room */}
         <Image
-          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=75"
-          alt="Premium recovery and wellness suite with warm lighting and natural materials"
+          src={SAUNA_PHOTOS.front.src}
+          alt={SAUNA_PHOTOS.front.alt}
           fill
           className="object-cover opacity-30"
           priority
           sizes="100vw"
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-3">New at Range and Restore &middot; Now Open</p>
+          <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-3">Private Sauna &middot; Normatec Compression &middot; Archway</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-white">Recovery Suite in Archway, North London</h1>
           <p className="mt-4 text-xl text-teal-tint/90 max-w-2xl">
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
           <p className="mt-3 text-teal-tint/70 max-w-2xl">
-            Infrared Hybrid Sauna and Normatec full body compression in one private suite. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, recovery packages with sports massage from £85, and Restore+ monthly memberships. Now open.
+            Private Infrared &amp; Traditional Hybrid Sauna sessions from £19 (the whole room for you, up to two people), sports massage + sauna packages from £85, Normatec compression as part of our £110 sports massage package, and Restore+ monthly memberships.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 items-center">
-            <a href={BOOKING_URLS.recoverySuite} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Recovery Session</a>
+            <a href={BOOKING_URLS.recoverySuite} target="_blank" rel="noopener noreferrer" className="btn btn-white">Book a Sauna Session</a>
             <Link href="#whats-in-the-suite" className="btn btn-outline-white">Explore the suite</Link>
           </div>
         </div>
       </div>
 
-      {/* The story */}
+      {/* About the suite */}
       <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <span className="eyebrow block mb-2">The Story</span>
+          <span className="eyebrow block mb-2">About the Suite</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-page tracking-tight mb-5">
             More than a sports massage clinic
           </h2>
           <p className="text-page-muted font-medium mb-4">
-            The treatment room at 130 Junction Road has been redesigned into a premium recovery and wellness space. Warm lighting, natural materials, plants and considered details, built around how you actually want to feel when you walk in.
+            The private sauna room sits at the quiet back of the clinic at 130 Junction Road, with its own shower. It is yours alone for the length of your session.
           </p>
           <p className="text-page-muted font-medium">
-            Sitting alongside the hands-on sports and soft tissue work our team already offers, the new Recovery Suite brings two pieces of premium recovery kit into one place. A two person hybrid infrared sauna for heat-based recovery, and a Normatec 3 Full Body compression system for the legs, hips and arms. Use them on their own, or pair them with massage for a complete session.
+            Alongside the hands-on sports and soft tissue work our team offers, the Recovery Suite adds two pieces of recovery kit. A two person hybrid infrared sauna, which you can book on its own or after a massage. And a Normatec 3 Full Body compression system for the legs, hips and arms, used as the last 30 minutes of our 90-minute Sports Massage + Normatec package.
           </p>
         </div>
       </div>
@@ -111,31 +110,31 @@ export default function RecoverySuitePage() {
             Three ways to recover
           </h2>
           <p className="text-page-muted font-medium mt-3 max-w-2xl mx-auto">
-            Use a single modality on its own or build a combined recovery session that takes you from heat to compression to hands-on work in one visit.
+            Book the sauna on its own, or pair a sports massage with the sauna or with Normatec compression.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <RecoverySuiteCard
             title="Infrared Hybrid Sauna"
-            summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Solo or shared sessions to support muscle recovery, circulation and proper time to switch off. Private sessions from £19."
+            summary="Hybrid two person Vidalux sauna with traditional and full spectrum infrared heat. Private sessions for one or two people, with time to switch off. From £19 a session."
             href={ROUTES.recoverySuite.infraredSauna}
             image={SAUNA_PHOTOS.front.src}
             imageAlt={SAUNA_PHOTOS.front.alt}
           />
           <RecoverySuiteCard
             title="Compression Therapy"
-            summary="Hyperice Normatec 3 Full Body. Pneumatic compression for the legs, hips and arms. Ideal after a long run, a leg session or a long week on your feet."
+            summary="Hyperice Normatec 3 Full Body pneumatic compression for the legs, hips and arms. Available as part of our 90-minute Sports Massage + Normatec package, £110."
             href={ROUTES.recoverySuite.compressionTherapy}
             image="/recovery-suite/normatec-compression-therapy-archway.jpg"
-            imageAlt="Normatec 3 full body compression therapy setup at Range and Restore Archway"
+            imageAlt="Hyperice Normatec 3 Full Body compression boots and attachments laid out on a treatment table at Range and Restore, Archway, North London"
           />
           <RecoverySuiteCard
             title="Recovery Sessions & Packages"
-            summary="Private Infrared Hybrid Sauna sessions from £19, combined sports massage recovery packages from £85, plus Restore+ monthly memberships. Pick the level that suits you."
+            summary="Private Infrared Hybrid Sauna sessions from £19, sports massage + sauna packages from £85, the £110 Sports Massage + Normatec package, plus Restore+ monthly memberships. Pick the level that suits you."
             href={ROUTES.recoverySuite.recoveryPackages}
-            image="/recovery-suite/recovery-suite-room-archway.jpg"
-            imageAlt="Recovery sessions and packages combining sauna compression and sports massage in Archway"
+            image={SAUNA_PHOTOS.suite.src}
+            imageAlt={SAUNA_PHOTOS.suite.alt}
           />
         </div>
       </div>
@@ -151,8 +150,8 @@ export default function RecoverySuitePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { step: '01', title: 'Standalone recovery', desc: 'A private Infrared & Traditional Hybrid Sauna session from £19. Quick to fit in around training or a busy week, no massage needed.' },
-              { step: '02', title: 'Recovery with massage', desc: 'Sports massage plus sauna or Normatec recovery in one booking, from £85. The full sequence in one visit.' },
+              { step: '01', title: 'Standalone recovery', desc: 'A private Infrared & Traditional Hybrid Sauna session from £19, for one or two people. Quick to fit in around training or a busy week, no massage needed.' },
+              { step: '02', title: 'Recovery with massage', desc: 'Sports massage followed by the sauna (from £85), or by Normatec compression (£110). Or ask on the day for a 45-minute sauna for £10 after any massage.' },
               { step: '03', title: 'Become a member', desc: 'Restore+ sauna and Signature Treatment memberships, from £49 a month. Set up personally — call or email to join.' },
             ].map((item) => (
               <div key={item.step} className="bg-page-sage rounded-2xl p-6">
@@ -199,9 +198,9 @@ export default function RecoverySuitePage() {
       {/* Book Now CTA */}
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 section-md">
         <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
-          <h2 className="text-2xl font-black text-ink mb-4">The Recovery Suite is now open</h2>
+          <h2 className="text-2xl font-black text-ink mb-4">Book the Recovery Suite</h2>
           <p className="text-brand-green font-semibold mb-6">
-            A new dedicated recovery and wellness space at Range and Restore in Archway, North London. Sauna, compression and full recovery sessions available to book now.
+            Private sauna sessions, sports massage + sauna packages and the Sports Massage + Normatec package at Range and Restore in Archway, North London.
           </p>
           <a
             href={BOOKING_URLS.recoverySuite}
@@ -209,7 +208,7 @@ export default function RecoverySuitePage() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ink text-white font-black uppercase tracking-widest text-sm hover:bg-brand-green-dark transition-colors"
           >
-            Book Recovery Session
+            Book a Sauna Session
           </a>
         </section>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
@@ -56,6 +57,15 @@ export default function TwoHourPainReliefPage() {
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.twoHourRelief} label="Book 2-Hour Session" />
+          </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/2-hour-pain-relief-massage-neck-shoulder-treatment-range-and-restore-archway-north-london.jpg"
+              alt="Carlos Bonvicine working through the neck and shoulder during an extended pain relief massage at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
@@ -143,7 +153,7 @@ export default function TwoHourPainReliefPage() {
             <h3 className="text-lg font-semibold text-page mb-4">Pair this with</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline link-inline-tap">
-                → Recovery Packages (Sauna + Compression + Massage)
+                → Sports Massage + Sauna or Normatec Packages
               </Link>
               <Link href={ROUTES.recoverySuite.index} className="link-inline link-inline-tap">
                 → Recovery Suite Overview

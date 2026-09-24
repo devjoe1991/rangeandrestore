@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { NhsDiscountStrip } from '@/components/NhsDiscountStrip'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
@@ -85,6 +86,15 @@ export default function SportsDeepTissuePage() {
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.sportsDeepTissue} label="Book Your Session" />
+          </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/sports-deep-tissue-massage-back-shoulder-treatment-range-and-restore-archway-north-london.jpg"
+              alt="Therapist working deep tissue techniques through the back and shoulder during a sports massage at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
@@ -199,7 +209,7 @@ export default function SportsDeepTissuePage() {
             <h3 className="text-lg font-semibold text-page mb-4">Pair this with</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline link-inline-tap">
-                → Recovery Packages (Sauna + Compression + Massage)
+                → Sports Massage + Sauna or Normatec Packages
               </Link>
               <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline link-inline-tap">
                 → Infrared &amp; Hybrid Sauna
@@ -207,9 +217,6 @@ export default function SportsDeepTissuePage() {
             </div>
             <h3 className="text-lg font-semibold text-page mb-4">Related articles</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link href={ROUTES.nhsEmergencyServicesDiscount} className="link-inline link-inline-tap">
-                → NHS &amp; Emergency Services Discount
-              </Link>
               <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline link-inline-tap">
                 → How Sports Massage Helps Runners Before and After Races
               </Link>

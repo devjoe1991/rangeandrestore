@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
@@ -9,7 +10,7 @@ import { ROUTES } from '@/lib/routes'
 export const metadata: Metadata = buildMetadata({
   title: 'MSK Scan and Ultrasound North London | Archway N19',
   description:
-    'Diagnostic MSK ultrasound scan with written report, plus a 60-minute clinical massage guided by the findings. Scan and treatment in one visit in Archway, North London. £165 total.',
+    'Diagnostic MSK ultrasound scan with written report, plus a 60-minute clinical massage guided by the findings. Archway, North London. £165 total: £75 online to Range and Restore, £90 direct to Reliable Scan.',
   path: '/services/msk-ultrasound-clinical-massage',
 })
 
@@ -163,6 +164,15 @@ export default function MskUltrasoundClinicalMassagePage() {
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.mskUltrasoundMassage} label="Book Now – £75 Online" />
+          </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/msk-ultrasound-clinical-massage-treatment-room-range-and-restore-archway-north-london.jpg"
+              alt="Treatment room at Range and Restore, Archway, where MSK ultrasound scans and clinical massage take place, 130 Junction Road, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

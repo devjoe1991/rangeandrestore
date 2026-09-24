@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
@@ -7,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Manual Lymphatic Drainage (MLD) London | Archway N19',
-  description: 'Certified Manual Lymphatic Drainage in North London for post-surgery and post-op swelling, lymphoedema, fluid retention and immune support. Gentle, hands-on, evidence-based. From £50.',
+  description: 'Certified Manual Lymphatic Drainage in North London for post-surgery and post-op swelling, lymphoedema and fluid retention. Gentle and hands-on. 60 min £75, 90 min £110.',
   path: '/services/manual-lymphatic-drainage',
 })
 
@@ -51,7 +52,7 @@ const faqs = [
   },
   {
     q: 'Where can I get Manual Lymphatic Drainage in North London?',
-    a: 'Range and Restore is at 130 Junction Road, Archway, N19 5LB, two minutes from Archway tube on the Northern Line, with clients travelling in from Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. MLD is delivered by a certified practitioner and sessions start from \u00a350.',
+    a: 'Range and Restore is at 130 Junction Road, Archway, N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line, with clients travelling in from Islington, Holloway, Tufnell Park, Highgate, Crouch End, Finsbury Park, Camden and Kentish Town. MLD is delivered by a certified practitioner and sessions start from \u00a375.',
   },
 ]
 
@@ -61,7 +62,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Manual Lymphatic Drainage (MLD)',
-  description: 'Certified MLD for post-surgery recovery, lymphoedema, swelling, and immune support. Gentle and non-invasive treatment in Archway, North London.',
+  description: 'Certified MLD for post-surgery recovery, lymphoedema and swelling. Gentle and non-invasive treatment in Archway, North London.',
   provider: {
     '@type': 'LocalBusiness',
     name: 'Range and Restore Sports Massage',
@@ -99,6 +100,15 @@ export default function ManualLymphaticDrainagePage() {
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.mld} label="Book Now" />
           </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/manual-lymphatic-drainage-massage-therapist-range-and-restore-archway-north-london.jpg"
+              alt="Range and Restore therapist treating a client during a manual lymphatic drainage session in Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -112,7 +122,7 @@ export default function ManualLymphaticDrainagePage() {
                 'Clients recovering from cosmetic or orthopaedic surgery',
                 'Individuals with swelling, puffiness, or water retention',
                 'Those managing lymphoedema or post-injury recovery',
-                'People seeking improved circulation, healing, or immune support',
+                'People who want gentle, hands-on support for fluid build-up after injury',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-page-muted">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" aria-hidden="true">
@@ -126,9 +136,8 @@ export default function ManualLymphaticDrainagePage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – £50', desc: 'Focused MLD treatment for a specific area. Suitable for targeted swelling management or follow-up sessions.' },
                 { duration: '60 Minutes – £75', desc: 'A thorough MLD session covering multiple areas. Recommended for post-surgery recovery and general lymphatic support.' },
                 { duration: '90 Minutes – £110', desc: 'Comprehensive full-body MLD treatment. Ideal for more complex lymphatic conditions or full post-surgical recovery support.' },
               ].map((option) => (
@@ -144,10 +153,9 @@ export default function ManualLymphaticDrainagePage() {
             <h2 className="text-2xl font-bold text-page mb-4">What are the benefits?</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
-                'Reduced swelling, bruising, and water retention',
-                'Improved circulation and faster recovery after surgery or injury',
+                'May help reduce swelling, bruising and water retention',
+                'Can support recovery after surgery or injury',
                 'Relief from puffiness and fluid build-up',
-                'Boosted immune function and natural detoxification',
                 'Gentle relaxation for body and mind',
               ].map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3 text-page-muted">

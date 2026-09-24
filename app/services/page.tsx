@@ -12,7 +12,7 @@ import { BookingButton } from '@/components/BookingButton'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Massage Services in Archway N19 | Range and Restore',
+  title: 'Massage Services in Archway N19',
   description: 'Sports, deep tissue, cupping, MLD and relaxation massage in Archway. A team of BTEC L5 qualified therapists at Range and Restore. 5★ rated. From £50 · book online.',
   path: '/services',
 })
@@ -45,8 +45,8 @@ const treatments = [
     schemaName: 'Back & Neck Pain MOT',
     href: '/services/back-neck-pain-mot',
     bookingHref: BOOKING_URLS.backNeckMot,
-    price: 'From £50',
-    detail: '30 / 60 / 90 min',
+    price: 'From £75',
+    detail: '60 / 90 min',
     description: 'Focused assessment and treatment for persistent lower back pain, desk-related neck pain, postural issues and spinal stiffness.',
   },
   {
@@ -54,8 +54,8 @@ const treatments = [
     schemaName: 'Advanced Clinical Massage & Soft Tissue Remedial Therapy',
     href: '/services/advanced-clinical-massage',
     bookingHref: BOOKING_URLS.advancedClinical,
-    price: 'From £50',
-    detail: '30 / 60 / 90 min',
+    price: 'From £75',
+    detail: '60 / 90 min',
     description: 'Expert clinical massage for sciatica, chronic neck pain, tension headaches, RSI and complex postural conditions.',
   },
   {
@@ -68,12 +68,12 @@ const treatments = [
     description: 'Targeted treatment for muscle tightness, runner\'s knee, shoulder tension, calf tightness, injury recovery and performance support.',
   },
   {
-    title: 'Cupping + Deep Tissue Massage',
-    schemaName: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage',
+    title: 'Cupping + Sports Massage',
+    schemaName: 'Advanced Cupping Therapy with Sports & Deep Tissue Massage',
     href: '/services/advanced-cupping-sports-deep-tissue',
     bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
-    price: 'From £60',
-    detail: '30 / 60 / 90 min',
+    price: 'From £85',
+    detail: '60 / 90 min',
     description: 'Integrated cupping combined with sports and deep tissue massage — targets deep muscle tension, fascial restrictions and long-standing adhesions.',
   },
   {
@@ -90,17 +90,17 @@ const treatments = [
     schemaName: 'Manual Lymphatic Drainage (MLD)',
     href: '/services/manual-lymphatic-drainage',
     bookingHref: BOOKING_URLS.mld,
-    price: 'From £50',
-    detail: '30 / 60 / 90 min',
-    description: 'Certified MLD for post-surgery recovery, lymphoedema, swelling and immune support. Gentle and non-invasive.',
+    price: 'From £75',
+    detail: '60 / 90 min',
+    description: 'Certified MLD for post-surgery recovery, lymphoedema and swelling. Gentle and non-invasive.',
   },
   {
     title: 'Relaxation Massage',
     schemaName: 'Relaxation Restorative Massage',
     href: '/services/relaxation-restorative-massage',
     bookingHref: BOOKING_URLS.relaxation,
-    price: 'From £50',
-    detail: '30 / 60 / 90 min',
+    price: 'From £75',
+    detail: '60 / 90 min',
     description: 'Gentle, calming treatment designed to reduce stress, ease mild tension and restore your sense of balance.',
   },
   {
@@ -131,7 +131,7 @@ const treatments = [
     badge: 'Save',
     price: 'From £350',
     detail: '5 or 10 sessions',
-    description: 'Save with 5 or 10 session bundles for 60 or 90 minute treatments. From £350 for 5 × 60 min sessions.',
+    description: '5 or 10 Sports & Deep Tissue Massage sessions at 60 or 90 minutes, saving up to £150 on standard prices. From £350 for 5 × 60 min.',
   },
 ]
 
@@ -142,30 +142,30 @@ const recoveryServices = [
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     price: 'From £19',
-    detail: '45 or 60 min private',
+    detail: '45 or 60 min, up to two people',
     description: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Built for muscle recovery, better sleep and circulation.',
     image: SAUNA_PHOTOS.front.src,
     imageAlt: SAUNA_PHOTOS.front.alt,
   },
   {
     title: 'Normatec Compression',
-    schemaName: 'Normatec Compression Therapy (Recovery Suite)',
+    schemaName: 'Sports Massage + Normatec Compression Therapy',
     href: '/recovery-suite/compression-therapy',
-    bookingHref: BOOKING_URLS.recoverySuite,
-    price: 'From £19',
-    detail: 'in a Recovery Suite session',
-    description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Reduces DOMS and flushes tired legs after long runs, rides or shifts.',
+    bookingHref: BOOKING_URLS.packageCompressionMassage,
+    price: '£110',
+    detail: 'with a 60 min sports massage',
+    description: 'Hyperice Normatec 3 Full Body pneumatic compression for legs, hips and arms. Available as the last 30 minutes of our 90-minute Sports Massage + Normatec package.',
     image: '/recovery-suite/normatec-compression-therapy-archway.jpg',
-    imageAlt: 'Client on the treatment table wearing the Hyperice Normatec 3 Full Body compression system at Range and Restore, Archway, North London',
+    imageAlt: 'Hyperice Normatec 3 Full Body compression boots and attachments laid out on a treatment table at Range and Restore, Archway, North London',
   },
   {
     title: 'Massage + Recovery Packages',
     schemaName: 'Sports Massage + Recovery Packages (Recovery Suite)',
     href: '/recovery-suite/recovery-packages',
-    bookingHref: BOOKING_URLS.recoverySuite,
+    bookingHref: BOOKING_URLS.packageSaunaMassage,
     price: 'From £85',
     detail: '75 or 90 min',
-    description: 'Hands-on sports massage plus private Recovery Suite time, booked as one appointment. Finish with the sauna or Normatec compression. Restore+ memberships also available.',
+    description: 'Hands-on sports massage followed by the sauna or Normatec compression. Restore+ memberships also available.',
     image: SAUNA_PHOTOS.suite.src,
     imageAlt: SAUNA_PHOTOS.suite.alt,
   },
@@ -199,8 +199,8 @@ export default function ServicesPage() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <div className="relative bg-brand-green pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=75"
-          alt="Sports massage treatment in progress"
+          src="/sports-deep-tissue-massage-back-shoulder-treatment-range-and-restore-archway-north-london.jpg"
+          alt="Therapist working deep tissue techniques through the back and shoulder during a sports massage at Range and Restore, Archway, North London"
           fill
           className="object-cover opacity-30"
           priority
@@ -351,7 +351,7 @@ function TreatmentCard({ t }: { t: typeof treatments[0] }) {
           </span>
         )}
         <h3 className="font-black text-page text-sm sm:text-base leading-tight tracking-tight mb-1.5">
-          <Link href={t.href} className="hover:text-brand-teal transition-colors">
+          <Link href={t.href} className="inline-block py-3.5 -my-3.5 hover:text-brand-teal transition-colors">
             {t.title}
           </Link>
         </h3>
@@ -359,12 +359,12 @@ function TreatmentCard({ t }: { t: typeof treatments[0] }) {
           {t.price}
           {t.detail && <span className="text-page-muted font-semibold"> · {t.detail}</span>}
         </p>
-        <p className="text-page-muted text-xs leading-relaxed flex-1 mb-3 line-clamp-4 sm:line-clamp-5">{t.description}</p>
+        <p className="text-page-muted text-xs leading-relaxed flex-1 mb-3">{t.description}</p>
         <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-0 pt-2.5 border-t border-brand-green/10 mt-auto">
           <Link
             href={t.href}
             aria-label={`Learn more about ${t.title}`}
-            className="text-page text-xs font-bold hover:text-brand-teal transition-colors min-h-[42px] flex items-center underline underline-offset-2"
+            className="text-page text-xs font-bold hover:text-brand-teal transition-colors min-h-[44px] flex items-center underline underline-offset-2"
           >
             Details<span className="sr-only"> about {t.title}</span>
           </Link>
@@ -372,7 +372,7 @@ function TreatmentCard({ t }: { t: typeof treatments[0] }) {
             href={t.bookingHref}
             {...(isTel ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
             aria-label={`Book ${t.title}`}
-            className="book-now-btn text-xs font-black px-3.5 py-2 rounded-full min-h-[38px] flex items-center whitespace-nowrap"
+            className="book-now-btn text-xs font-black px-3.5 py-2 rounded-full min-h-[44px] flex items-center whitespace-nowrap"
           >
             Book now
           </a>
@@ -396,7 +396,7 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
       </Link>
       <div className="p-4 sm:p-5 flex flex-col flex-1">
         <h3 className="font-black text-white text-sm sm:text-base leading-tight tracking-tight mb-1.5">
-          <Link href={s.href} className="hover:text-accent transition-colors">
+          <Link href={s.href} className="inline-block py-3.5 -my-3.5 hover:text-accent transition-colors">
             {s.title}
           </Link>
         </h3>
@@ -409,7 +409,7 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
           <Link
             href={s.href}
             aria-label={`Learn more about ${s.title}`}
-            className="text-white text-xs font-bold hover:text-accent transition-colors min-h-[42px] flex items-center underline underline-offset-2"
+            className="text-white text-xs font-bold hover:text-accent transition-colors min-h-[44px] flex items-center underline underline-offset-2"
           >
             Details<span className="sr-only"> about {s.title}</span>
           </Link>
@@ -418,7 +418,7 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Book ${s.title}`}
-            className="bg-white text-brand-green hover:bg-accent hover:text-ink transition-colors text-xs font-black px-3.5 py-2 rounded-full min-h-[38px] flex items-center whitespace-nowrap"
+            className="bg-white text-brand-green hover:bg-accent hover:text-ink transition-colors text-xs font-black px-3.5 py-2 rounded-full min-h-[44px] flex items-center whitespace-nowrap"
           >
             Book now
           </a>

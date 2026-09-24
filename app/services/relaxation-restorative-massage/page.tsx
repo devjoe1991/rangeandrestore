@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
@@ -57,6 +58,15 @@ export default function RelaxationRestorativeMassagePage() {
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.relaxation} label="Book Now" />
           </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/relaxation-restorative-massage-treatment-range-and-restore-archway-north-london.jpg"
+              alt="Therapist delivering a calm, pressure-adjusted relaxation and restorative massage at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -67,7 +77,7 @@ export default function RelaxationRestorativeMassagePage() {
             <p className="text-page-muted mb-4">Relaxation Restorative Massage is ideal for:</p>
             <ul className="space-y-2">
               {[
-                'Anyone feeling stressed, anxious, mentally drained, or overstimulated',
+                'Anyone feeling stressed, mentally drained, or overstimulated',
                 'People with general muscle tightness who prefer lighter, soothing treatment',
                 'Clients experiencing poor sleep, low energy, or tension-related discomfort',
                 'Those wanting a calming alternative to sports or deep tissue massage',
@@ -85,9 +95,8 @@ export default function RelaxationRestorativeMassagePage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – £50', desc: 'A short, calming session to ease tension in a specific area such as the back, neck, or shoulders. Perfect for a quick recharge.' },
                 { duration: '60 Minutes – £75', desc: 'A full relaxation session covering the back, shoulders, and legs. Enough time to genuinely unwind and feel restored.' },
                 { duration: '90 Minutes – £110', desc: 'A luxurious, full-body relaxation experience. Ideal for a thorough reset, deep relaxation, and a lasting sense of calm and wellbeing.' },
               ].map((option) => (

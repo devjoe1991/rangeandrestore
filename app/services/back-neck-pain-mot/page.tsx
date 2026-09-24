@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
@@ -7,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Back & Neck Pain MOT | Archway N19 Clinic',
-  description: 'Assessment + treatment for chronic back and neck pain in Archway. BTEC L5 qualified therapists. 90-min session covers posture, mobility, soft tissue work.',
+  description: 'Assessment + treatment for chronic back and neck pain in Archway. BTEC L5 qualified therapists. 60 min £75 or 90 min £110, covering posture, mobility and soft tissue work.',
   path: '/services/back-neck-pain-mot',
 })
 
@@ -52,7 +53,7 @@ const faqs = [
   },
   {
     q: 'How much does the Back & Neck Pain MOT cost in Archway?',
-    a: 'A 30-minute focused follow-up is £50, a 60-minute MOT session is £75, and the comprehensive 90-minute full MOT with detailed postural assessment is £110.',
+    a: 'A 60-minute MOT session is £75, and the comprehensive 90-minute full MOT with detailed postural assessment is £110.',
   },
   {
     q: 'Should I get a sports massage or the Back & Neck Pain MOT?',
@@ -85,6 +86,15 @@ export default function BackNeckPainMotPage() {
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.backNeckMot} label="Book Now" />
           </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/back-neck-pain-mot-neck-massage-treatment-range-and-restore-archway-north-london.jpg"
+              alt="Therapist supporting the head during neck and upper trapezius treatment as part of the Back and Neck Pain MOT at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -114,11 +124,10 @@ export default function BackNeckPainMotPage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – £50', desc: 'Quick, targeted relief for a specific area of back or neck pain. Ideal for follow-up sessions and ongoing maintenance.' },
                 { duration: '60 Minutes – £75', desc: 'Focused assessment and treatment of the back and neck, with time to address contributing postural patterns.' },
-                { duration: '90 Minutes – £110', desc: 'Comprehensive Back &amp; Neck MOT with full postural assessment and treatment of the spine, shoulders, and related areas.' },
+                { duration: '90 Minutes – £110', desc: 'Comprehensive Back & Neck MOT with full postural assessment and treatment of the spine, shoulders, and related areas.' },
               ].map((option) => (
                 <div key={option.duration} className="bg-page-sage rounded-xl p-5">
                   <p className="font-bold text-page text-lg mb-2">{option.duration}</p>

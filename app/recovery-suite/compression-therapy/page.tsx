@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaqAccordion } from '@/components/FaqAccordion'
 import { BOOKING_URLS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs, buildFaqSchema } from '@/lib/seo'
@@ -7,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Normatec Compression Therapy London',
-  description: 'Normatec 3 compression boots and full body compression therapy in Archway, North London. From £19 in a private Recovery Suite session, or £110 with a 60 minute sports massage.',
+  description: 'Hyperice Normatec 3 full body compression in Archway, North London. Available in our Sports Massage + Normatec package: a 60-minute sports massage followed by 30 minutes of compression, £110.',
   path: '/recovery-suite/compression-therapy',
 })
 
@@ -59,7 +60,7 @@ const faqs = [
   },
   {
     q: 'How do I book time on the Normatec?',
-    a: 'The Normatec is part of the private Recovery Suite experience. Book a private Recovery Suite session and you have the suite, including the Infrared Hybrid Sauna and the Normatec system, to yourself. You can also book the Sports Massage + Normatec Compression package (90 minutes, £110) to combine a full sports massage with compression in one visit. Your therapist will help you fit compression into your session depending on what you\'re recovering from.',
+    a: 'Book the Sports Massage + Normatec package online: 90 minutes for £110, a 60-minute sports massage followed by 30 minutes on the Normatec. This is the only way to use the Normatec. There is no standalone Normatec session, and a £19 or £29 sauna session does not include it.',
   },
   {
     q: 'Do I need to undress?',
@@ -86,17 +87,26 @@ export default function CompressionTherapyPage() {
             Normatec Full Body Compression Therapy in Archway, North London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Hyperice Normatec 3 Full Body compression boots, with hip and arm attachments. Recovery boots for use between training sessions, after races, or after a long week on your feet.
+            Hyperice Normatec 3 Full Body compression boots, with hip and arm attachments. Book it as the last 30 minutes of our 90-minute Sports Massage + Normatec package, £110.
           </p>
           <div className="mt-6">
             <a
-              href={BOOKING_URLS.recoverySuite}
+              href={BOOKING_URLS.packageCompressionMassage}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Book Recovery Suite Session
+              Book Sports Massage + Normatec
             </a>
+          </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/recovery-suite/normatec-compression-therapy-archway.jpg"
+              alt="Hyperice Normatec 3 Full Body compression boots and attachments laid out on a treatment table at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
@@ -129,20 +139,25 @@ export default function CompressionTherapyPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">How to book it</h2>
             <p className="text-page-muted mb-4">
-              The Normatec features as part of the private Recovery Suite experience rather than as a separately booked session. Book a Recovery Suite session and the suite, including the sauna and the Normatec system, is yours for the visit.
+              The Normatec is only available as part of our Sports Massage + Normatec package. There is no standalone Normatec session, and it is not part of a sauna session.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { duration: 'Private Recovery Suite Session', desc: '45 minutes for £19 or 60 minutes for £29. Private use of the suite, including the Infrared Hybrid Sauna and the Normatec recovery system.' },
-                { duration: 'Sports Massage + Normatec Compression', desc: '90 minutes for £110. A full 60-minute sports massage followed by 30 minutes on the Normatec system.' },
-              ].map((option) => (
-                <div key={option.duration} className="bg-page-sage rounded-xl p-5">
-                  <p className="font-bold text-page text-lg mb-2">{option.duration}</p>
-                  <p className="text-page-muted text-sm">{option.desc}</p>
-                </div>
-              ))}
+            <div className="bg-page-sage rounded-xl p-5 sm:max-w-md">
+              <p className="font-bold text-page text-lg mb-2">Sports Massage + Normatec Compression</p>
+              <p className="text-page-muted text-sm mb-4">90 minutes for £110. A full 60-minute sports massage followed by 30 minutes on the Normatec system.</p>
+              <a
+                href={BOOKING_URLS.packageCompressionMassage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary text-sm"
+              >
+                Book this package
+              </a>
             </div>
-            <p className="text-page-muted text-sm mt-3 italic">Prices are also shown on the booking page.</p>
+            <p className="text-page-muted text-sm mt-4">
+              Looking for the sauna? Private{' '}
+              <Link href={ROUTES.recoverySuite.infraredSauna} className="text-brand-teal underline">Infrared Hybrid Sauna</Link>{' '}
+              sessions are £19 for 45 minutes or £29 for 60 minutes, and don&apos;t include the Normatec.
+            </p>
           </section>
 
           <section>
@@ -172,7 +187,7 @@ export default function CompressionTherapyPage() {
               Normatec recovery boots use pneumatic compression. Air pumps into a series of chambers built into the compression boots and attachments, which inflate in a controlled wave from your feet up towards your hips, or from your hands up towards your shoulders.
             </p>
             <p className="text-page-muted mb-3">
-              That rhythmic squeeze-and-release pattern supports blood flow and helps move fluid through the limbs, which is the bit that makes legs feel lighter afterwards. Pressure levels are adjustable, so you can run it firmer if you want a more intense session or lighter if you prefer a gentler recovery.
+              That rhythmic squeeze-and-release pattern is designed to support blood flow, and many people say their legs feel lighter afterwards. Pressure levels are adjustable, so you can run it firmer if you want a more intense session or lighter if you prefer a gentler recovery.
             </p>
             <p className="text-page-muted">
               It&apos;s a recovery tool. Useful, well-tested, and a proper addition to a recovery routine. It doesn&apos;t replace hands-on treatment when you actually need it, but it works well alongside.
@@ -188,7 +203,7 @@ export default function CompressionTherapyPage() {
                 'Sit back or lie down, the system runs through its programme',
                 'You can adjust pressure or pause at any point',
                 'Most people find it genuinely relaxing, plenty of clients close their eyes for the session',
-                'Optional: pair your Recovery Suite session with a sports massage in the same visit',
+                'Your 60-minute sports massage comes first, then 30 minutes on the Normatec',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
                   <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
@@ -225,15 +240,15 @@ export default function CompressionTherapyPage() {
 
           {/* Pair with */}
           <section>
-            <h2 className="text-2xl font-bold text-page mb-4">Pair your recovery session with</h2>
+            <h2 className="text-2xl font-bold text-page mb-4">Other ways to recover</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href={ROUTES.services.sportsDeepTissueMassage} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Sports &amp; Deep Tissue Massage</p>
-                <p className="text-page-muted text-sm">Hands-on work to release tighter areas, then recovery time in the suite. A solid combo for runners.</p>
+                <p className="text-page-muted text-sm">Hands-on work on its own, from £50 for 30 minutes.</p>
               </Link>
               <Link href={ROUTES.recoverySuite.recoveryPackages} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Recovery Packages</p>
-                <p className="text-page-muted text-sm">Save when you combine sports massage and Recovery Suite time as one visit. Packages from £85.</p>
+                <p className="text-page-muted text-sm">Sports massage followed by the sauna, from £85, or by the Normatec, £110.</p>
               </Link>
             </div>
           </section>
@@ -248,15 +263,15 @@ export default function CompressionTherapyPage() {
           <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-ink mb-4">Normatec recovery at Range and Restore</h2>
             <p className="text-brand-green font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Private Recovery Suite sessions from £19, and a Sports Massage + Normatec Compression package for £110. Available to book now.
+              Normatec compression is part of our 90-minute Sports Massage + Normatec package, £110: a 60-minute sports massage followed by 30 minutes of compression, in Archway, North London.
             </p>
             <a
-              href={BOOKING_URLS.recoverySuite}
+              href={BOOKING_URLS.packageCompressionMassage}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-ink text-white font-black uppercase tracking-widest text-sm hover:bg-brand-green-dark transition-colors"
             >
-              Book Recovery Suite Session
+              Book Sports Massage + Normatec
             </a>
           </section>
 

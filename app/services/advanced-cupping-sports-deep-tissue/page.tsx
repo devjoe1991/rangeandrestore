@@ -1,25 +1,26 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { BOOKING_URLS } from '@/lib/constants'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Cupping & Sports Massage Archway N19',
-  description: 'Integrated cupping therapy with sports and deep tissue massage in Archway. Static and dynamic cupping for fascial release and chronic tension. BTEC L5.',
+  title: 'Cupping + Sports Massage Archway N19',
+  description: 'Integrated cupping therapy with sports and deep tissue massage in Archway. Static and dynamic cupping for fascial release and chronic tension. 60 min £85, 90 min £125. BTEC L5.',
   path: '/services/advanced-cupping-sports-deep-tissue',
 })
 
 const breadcrumbs = buildBreadcrumbs([
   { name: 'Services', path: '/services' },
-  { name: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage', path: '/services/advanced-cupping-sports-deep-tissue' },
+  { name: 'Cupping + Sports Massage', path: '/services/advanced-cupping-sports-deep-tissue' },
 ])
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Advanced Cupping Therapy & Sports / Deep Tissue Massage',
+  name: 'Advanced Cupping Therapy with Sports & Deep Tissue Massage',
   description: 'Integrated cupping therapy combined with sports and deep tissue massage. Uses static and dynamic cupping, myofascial release, and advanced manual therapy to relieve muscular tension, reduce pain and improve mobility.',
   provider: {
     '@type': 'LocalBusiness',
@@ -49,13 +50,22 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="eyebrow-sm">Cupping Therapy · Archway London</p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
-            Advanced Cupping Therapy &amp; Sports / Deep Tissue Massage in Archway, London
+            Advanced Cupping Therapy with Sports &amp; Deep Tissue Massage in Archway, London
           </h1>
           <p className="text-xl lg:text-2xl font-semibold text-page-muted">
             A highly effective integrated treatment designed to relieve muscular tension, reduce pain, and improve mobility — targeting deeper layers of muscle and fascia to support recovery, performance, and long-term musculoskeletal health.
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.cuppingSportsDeepTissue} label="Book Now" />
+          </div>
+          <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
+            <Image
+              src="/cupping-therapy-sports-deep-tissue-massage-back-range-and-restore-archway-north-london.jpg"
+              alt="Cupping therapy set along the spine during a sports and deep tissue massage at Range and Restore, Archway, North London"
+              fill
+              sizes="(max-width: 640px) 100vw, 576px"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>
@@ -94,9 +104,8 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
 
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Choose your ideal session length</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { duration: '30 Minutes – £60', desc: 'Focused single-area treatment. Ideal for targeted cupping on a specific tight or painful region combined with deep tissue work.' },
                 { duration: '60 Minutes – £85', desc: 'Integrated cupping plus sports and deep tissue massage across one or two regions. Great for recovery, mobility and chronic tension.' },
                 { duration: '90 Minutes – £125', desc: 'Full-body or multi-area integrated treatment. Best for athletes, runners, or anyone with long-standing tension needing comprehensive care.' },
               ].map((option) => (

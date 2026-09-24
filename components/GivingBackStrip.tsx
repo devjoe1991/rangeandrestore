@@ -35,7 +35,7 @@ export function GivingBackCard() {
         body={
           <p>
             Donated treatments and gift vouchers for Whittington Health Charity fundraising,
-            including a £85 sports massage voucher for the Christmas Market raffle, and Carlos in
+            including a 60-minute sports massage voucher for the Christmas Market raffle, and Carlos in
             the Phab recovery tent at the London Marathon three years running.
           </p>
         }

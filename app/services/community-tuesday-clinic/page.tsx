@@ -117,7 +117,7 @@ export default function CommunityTuesdayClinicPage() {
               At Range and Restore we believe expert treatment shouldn&apos;t be out of reach. The Community Tuesday Clinic is our way of opening the doors a little wider — a community-focused initiative offering the same assessment-led, high-standard care we provide every day, at pricing designed to help more local people get the treatment they need.
             </p>
             <p className="text-page-muted">
-              This isn&apos;t a discount or a reduced service. You receive a full session with a qualified therapist, a proper assessment, and treatment tailored to your body and your goals. The only thing that changes is how accessible it is.
+              It&apos;s the same full service at a lower price: a full session with a qualified therapist, a proper assessment, and treatment tailored to your body and your goals. The only thing that changes is the price.
             </p>
           </section>
 

@@ -8,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Infrared Sauna in Archway, North London | Recovery & Pain Relief',
-  description: 'Private Full Spectrum Infrared Hybrid Sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and better mobility. Full spectrum infrared and traditional heat. Private sessions from £19.',
+  description: 'Private Full Spectrum Infrared Hybrid Sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and better mobility. Full spectrum infrared and traditional heat. Private sessions for up to two people from £19.',
   path: '/recovery-suite/infrared-sauna',
   image: `${BASE_URL}${SAUNA_PHOTOS.front.src}`,
 })
@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: 'Can I bring someone with me?',
-    a: 'Yes. The cabin is built for two people and every session is private, so you\'re welcome to share your session with a partner, friend or training mate. Just mention it when you book.',
+    a: 'Yes. The cabin is built for two people and every session is private, so you\'re welcome to share your session with a partner, friend or training mate. The price is per session, not per person. Just mention it when you book.',
   },
   {
     q: 'What should I wear?',
@@ -145,13 +145,16 @@ export default function InfraredSaunaPage() {
               <div className="flex flex-wrap gap-8 mb-5">
                 <div>
                   <p className="text-ink text-3xl sm:text-4xl font-black leading-none">£19</p>
-                  <p className="text-brand-green font-semibold text-sm mt-1">45-minute private session</p>
+                  <p className="text-brand-green font-semibold text-sm mt-1">45-minute private session, up to two people</p>
                 </div>
                 <div>
                   <p className="text-ink text-3xl sm:text-4xl font-black leading-none">£29</p>
-                  <p className="text-brand-green font-semibold text-sm mt-1">60-minute private session</p>
+                  <p className="text-brand-green font-semibold text-sm mt-1">60-minute private session, up to two people</p>
                 </div>
               </div>
+              <p className="text-ink text-sm font-bold mb-5">
+                Having a massage with us? Ask on the day for a 45-minute sauna straight after it for £10 (usually £19).
+              </p>
 
               <p className="text-ink text-sm font-black uppercase tracking-wide mb-2">Every session includes</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
@@ -230,12 +233,12 @@ export default function InfraredSaunaPage() {
             <h2 className="text-2xl font-bold text-page mb-4">What to expect on your first visit</h2>
             <ul className="space-y-2">
               {[
-                'Arrive 5 minutes early to settle in',
+                'Arrive 10 minutes early to settle in',
                 'Towels and water are provided',
                 'Your therapist will run you through the controls and answer any questions',
                 'Take your time during the session, you can step out and back in if you need to',
                 'Cool down and rehydrate properly before you leave',
-                'Optional: book a package that pairs your sauna session with a sports massage in the same visit',
+                'Having a massage too? Use the sauna straight after it, and ask on the day for the £10 sauna offer',
               ].map((step) => (
                 <li key={step} className="flex items-center gap-3 text-page-muted">
                   <span className="w-2 h-2 rounded-full bg-brand-teal flex-shrink-0" aria-hidden="true" />
@@ -272,11 +275,11 @@ export default function InfraredSaunaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href={ROUTES.services.sportsDeepTissueMassage} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Sports &amp; Deep Tissue Massage</p>
-                <p className="text-page-muted text-sm">Add hands-on work after your sauna. Heat first, then targeted soft tissue therapy.</p>
+                <p className="text-page-muted text-sm">Targeted hands-on work first, then the sauna straight after it. Ask on the day for a 45-minute sauna for £10.</p>
               </Link>
               <Link href={ROUTES.recoverySuite.recoveryPackages} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Recovery Packages</p>
-                <p className="text-page-muted text-sm">Save when you combine sports massage and sauna recovery as one visit. Packages from £85.</p>
+                <p className="text-page-muted text-sm">Sports massage followed by time in the sauna. Packages from £85.</p>
               </Link>
             </div>
           </section>
@@ -291,7 +294,7 @@ export default function InfraredSaunaPage() {
           <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-ink mb-4">Infrared sauna recovery in Archway, North London</h2>
             <p className="text-brand-green font-semibold mb-6">
-              The Recovery Suite is open in Archway, North London. Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, and sports massage recovery packages from £85. Available to book now.
+              Private Infrared &amp; Traditional Hybrid Sauna sessions from £19 for one or two people, and sports massage + sauna packages from £85.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}
