@@ -279,6 +279,7 @@ export default function NhsEmergencyServicesDiscountPage() {
                     'Recovery packages and Recovery Suite sessions',
                     'Restore+ memberships',
                     'Gift cards',
+                    'Pregnancy Massage, Reflexology and the MSK Scan + Clinical Massage',
                     'Any other promotional offer or discount',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
@@ -290,9 +291,6 @@ export default function NhsEmergencyServicesDiscountPage() {
               </div>
             </div>
             <p className="mt-4 text-page-muted text-sm">
-              Booking Pregnancy Massage, Reflexology or the MSK Scan + Clinical Massage? Please ask us before you book whether the discount applies.
-            </p>
-            <p className="mt-2 text-page-muted text-sm">
               One discount per session, and it cannot be combined with anything else. Our{' '}
               <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link>{' '}
               and{' '}

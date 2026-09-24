@@ -6,7 +6,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Massage Bundles Archway N19 | Save up to £150',
-  description: '5 or 10 session Sports & Deep Tissue Massage bundles in Archway. Save £25 to £150 against standard prices (£75 for 60 min, £110 for 90 min). 60 or 90 minute sessions.',
+  description: '5 or 10 session massage bundles in Archway for Sports & Deep Tissue, Advanced Clinical, Back & Neck MOT, Relaxation or MLD sessions. Save £25 to £150 against standard prices (£75 for 60 min, £110 for 90 min). 60 or 90 minute sessions.',
   path: '/services/massage-bundles',
 })
 
@@ -80,7 +80,7 @@ export default function MassageBundlesPage() {
             Invest in Your Long-Term Wellbeing
           </p>
           <p className="mt-4 text-lg text-page-muted max-w-2xl">
-            Regular treatment works better than the odd one-off session. Bundles let you pay for 5 or 10 Sports &amp; Deep Tissue Massage sessions up front at a lower price per session.
+            Regular treatment works better than the odd one-off session. Bundles let you pay for 5 or 10 sessions up front at a lower price per session. Use them for Sports &amp; Deep Tissue, Advanced Clinical, Back &amp; Neck MOT, Relaxation or MLD sessions of your bundle&apos;s length; the 10 &times; 90-minute bundle also covers Cupping and 2-Hour follow-up sessions.
           </p>
           <p className="mt-3 text-page-muted max-w-2xl">
             Savings are against our standard prices: £75 for a 60-minute session and £110 for a 90-minute session.

@@ -131,7 +131,7 @@ const treatments = [
     badge: 'Save',
     price: 'From £350',
     detail: '5 or 10 sessions',
-    description: '5 or 10 Sports & Deep Tissue Massage sessions at 60 or 90 minutes, saving up to £150 on standard prices. From £350 for 5 × 60 min.',
+    description: '5 or 10 sessions of Sports & Deep Tissue, Advanced Clinical, Back & Neck MOT, Relaxation or MLD at 60 or 90 minutes, saving up to £150 on standard prices. From £350 for 5 × 60 min.',
   },
 ]
 
@@ -299,7 +299,7 @@ export default function ServicesPage() {
               Give the gift of movement
             </h2>
             <p className="text-page-muted text-sm font-medium leading-relaxed flex-1 mb-5">
-              Perfect for friends and family recovering from injury or needing proper relaxation. Redeemable against any treatment or the Recovery Suite.
+              Perfect for friends and family recovering from injury or needing proper relaxation. Redeemable against any treatment, valid for 12 months.
             </p>
             <div>
               <Link href={ROUTES.giftCards} className="btn btn-primary text-sm">Buy a Gift Card</Link>

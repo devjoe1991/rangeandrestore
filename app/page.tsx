@@ -383,7 +383,7 @@ export default function HomePage() {
               Invest in your long-term wellbeing
             </h2>
             <p className="text-brand-green/80 mt-3 text-sm font-medium max-w-lg mx-auto">
-              5 or 10 Sports &amp; Deep Tissue Massage sessions at a lower price per session. Savings are against our standard £75 (60 min) and £110 (90 min) prices.
+              5 or 10 sessions at a lower price per session, for Sports &amp; Deep Tissue, Advanced Clinical, Back &amp; Neck MOT, Relaxation or MLD. Savings are against our standard £75 (60 min) and £110 (90 min) prices.
             </p>
           </div>
 

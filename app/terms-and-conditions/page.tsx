@@ -52,7 +52,7 @@ export default function TermsAndConditionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-page">4. Payment</h2>
             <ul className="space-y-3 list-disc list-inside">
-              <li>Payment is due at the time of your appointment unless otherwise agreed.</li>
+              <li>You can pay online when you book through our booking system, or at the clinic on the day of your appointment.</li>
               <li>We accept cash and card payments.</li>
               <li>Gift cards and bundle packages must be paid for in full at the time of purchase.</li>
               <li>Prices are displayed on our booking system and are subject to change. Your booked price will be honoured at the time of booking.</li>
@@ -75,7 +75,7 @@ export default function TermsAndConditionsPage() {
             <ul className="space-y-3 list-disc list-inside">
               <li>Gift cards are valid for 12 months from the date of purchase.</li>
               <li>Gift cards are non-refundable and cannot be exchanged for cash.</li>
-              <li>Gift cards are redeemable against any treatment at Range and Restore Sports Massage.</li>
+              <li>Gift cards are redeemable against any treatment at Range and Restore Sports Massage. They cannot be used for Recovery Suite (sauna) sessions.</li>
               <li>Lost or stolen gift cards cannot be replaced.</li>
               <li>Gift cards cannot be used to purchase other gift cards or bundle packages.</li>
             </ul>

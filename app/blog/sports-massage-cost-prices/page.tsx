@@ -63,7 +63,7 @@ const faqs = [
   },
   {
     q: "Are there cheaper sports massage options?",
-    a: "Yes. The Community Tuesday Clinic is a lower-priced clinic that runs on Tuesdays — £60 for 60 minutes and £85 for 90 minutes. If you come regularly, Sports & Deep Tissue massage bundles bring the per-session price down: a 5 × 60-minute bundle is £350 (£70 a session, £25 less than five standard £75 sessions) and a 10 × 60-minute bundle is £650 (£65 a session, £100 less). Gift cards are also available.",
+    a: "Yes. The Community Tuesday Clinic is a lower-priced clinic that runs on Tuesdays — £60 for 60 minutes and £85 for 90 minutes. If you come regularly, massage bundles bring the per-session price down: a 5 × 60-minute bundle is £350 (£70 a session, £25 less than five standard £75 sessions) and a 10 × 60-minute bundle is £650 (£65 a session, £100 less). Gift cards are also available.",
   },
 ]
 
@@ -166,7 +166,7 @@ export default function SportsMassageCostPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Massage bundles</h3>
           <p>
-            If you train regularly or you&rsquo;re managing an ongoing issue, <Link href={ROUTES.services.massageBundles} className="link-inline">massage bundles</Link> of Sports &amp; Deep Tissue sessions bring the per-session price down:
+            If you train regularly or you&rsquo;re managing an ongoing issue, <Link href={ROUTES.services.massageBundles} className="link-inline">massage bundles</Link> for Sports &amp; Deep Tissue, Advanced Clinical, Back &amp; Neck MOT, Relaxation or MLD sessions bring the per-session price down:
           </p>
           <ul className="space-y-2 list-disc list-inside">
             <li>5 × 60 minutes: £350 (£70 a session, £25 less than five standard £75 sessions)</li>

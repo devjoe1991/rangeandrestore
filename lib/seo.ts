@@ -443,7 +443,7 @@ export const businessSchema = {
       '@type': 'Offer',
       '@id': `${BASE_URL}/nhs-emergency-services-discount#offer`,
       name: 'NHS & Emergency Services Discount',
-      description: `${NHS_DISCOUNT.display} off each full-priced massage treatment for NHS staff, ambulance service staff, police, fire and rescue service staff and eligible health and social care workers. Book and pay the standard price, show a workplace ID or Blue Light Card at the clinic on the day, and the ${NHS_DISCOUNT.display} is refunded to the original payment method or held as credit towards the next session. Not available with the Community Tuesday Clinic, bundles, packages, memberships or other offers.`,
+      description: `${NHS_DISCOUNT.display} off each full-priced massage treatment for NHS staff, ambulance service staff, police, fire and rescue service staff and eligible health and social care workers. Book and pay the standard price, show a workplace ID or Blue Light Card at the clinic on the day, and the ${NHS_DISCOUNT.display} is refunded to the original payment method or held as credit towards the next session. Not available with Pregnancy Massage, Reflexology, the MSK Scan + Clinical Massage, the Community Tuesday Clinic, bundles, packages, memberships or other offers.`,
       url: `${BASE_URL}/nhs-emergency-services-discount`,
       discount: NHS_DISCOUNT.amount,
       discountCurrency: 'GBP',

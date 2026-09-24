@@ -14,7 +14,7 @@ const giftCardSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Range and Restore Gift Card',
-  description: 'Gift card for any amount, sent by email with a unique code. Redeemable against any treatment at Range and Restore in Archway, North London (not bundle packages). Valid for 12 months.',
+  description: 'Gift card for any amount, sent by email with a unique code. Redeemable against any treatment at Range and Restore in Archway, North London (not bundle packages or Recovery Suite sauna sessions). Valid for 12 months.',
   url: 'https://rangeandrestore.co.uk/gift-cards',
   brand: { '@type': 'Organization', name: 'Range and Restore Sports Massage' },
   offers: {
@@ -75,7 +75,7 @@ export default function GiftCardsPage() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-brand-teal font-bold mt-0.5">•</span>
-              Redeemable against any treatment at Range and Restore Sports Massage.
+              Redeemable against any treatment at Range and Restore Sports Massage. Not for Recovery Suite (sauna) sessions.
             </li>
             <li className="flex items-start gap-2">
               <span className="text-brand-teal font-bold mt-0.5">•</span>
