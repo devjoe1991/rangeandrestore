@@ -391,7 +391,7 @@ function RecoveryCard({ s, wideOnMobile }: { s: typeof recoveryServices[0]; wide
           alt={s.imageAlt}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 640px) 50vw, 33vw"
+          sizes={wideOnMobile ? '(max-width: 640px) 100vw, 33vw' : '(max-width: 640px) 50vw, 33vw'}
         />
       </Link>
       <div className="p-4 sm:p-5 flex flex-col flex-1">

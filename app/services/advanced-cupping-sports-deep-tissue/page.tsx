@@ -60,7 +60,7 @@ export default function AdvancedCuppingSportsDeepTissuePage() {
           </div>
           <div className="relative mt-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-2xl">
             <Image
-              src="/cupping-therapy-sports-deep-tissue-massage-back-range-and-restore-archway-north-london.jpg"
+              src="/Gallery/cupping-therapy-sports-deep-tissue-massage-back-range-and-restore-archway-north-london.jpg"
               alt="Cupping therapy set along the spine during a sports and deep tissue massage at Range and Restore, Archway, North London"
               fill
               sizes="(max-width: 640px) 100vw, 576px"
