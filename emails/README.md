@@ -34,10 +34,10 @@ Mailchimp's Customer Journey builder, which the API does not expose.
 - `community-roundup.html` — Overall "Our Archway Community" (logo grid + why local partners matter)
 
 **Service / conversion**
-- `service-recovery-suite.html` — Sauna + Normatec spotlight (photo strip + FAQ)
+- `service-recovery-suite.html` — Recovery Suite spotlight: sauna £19/£29, Normatec only in the £110 massage session (photo strip + FAQ)
 - `service-sports-pain.html` — Sports & deep-tissue / pain relief (photo strip + FAQ)
 - `service-community-tuesday-clinic.html` — Community Tuesday Clinic (60 min £60 / 90 min £85, every Tuesday; community-focused, not a discount)
-- `service-restore-memberships.html` — Restore+ Memberships (sauna £49/£79/£119 + performance £69/£130/£99/£179 price tiles; CTA is call/email, memberships are NOT bookable online)
+- `service-restore-memberships.html` — Restore+ Memberships (sauna £49/£79/£119 + Signature Treatment £70/£100/£179 price tiles; CTA is call/email, memberships are NOT bookable online)
 - `service-massage-bundles.html` — Massage Bundles (5/10 × 60 min £350/£650, 5/10 × 90 min £500/£950; save + per-session + validity; CTA to Jane `#packages`)
 - `event-marathon.html` — Marathon prep & recovery (reusable each season)
 - `gift-cards-bundles.html` — Gift cards + bundles
@@ -110,7 +110,9 @@ campaign-style content on this list by roughly 3-6x.
 
 ## Booking links (Jane), from `lib/constants.ts`
 - General / all services: `https://rangeandrestoresportsmassage.janeapp.co.uk/#/list`
-- Recovery Suite:         `…/#/recovery-suite`
+- Sauna (Recovery Suite): `…/#/infrared-hybrid-sauna`
+- Massage + Normatec £110: `…/#/discipline/16/treatment/76`
+- Single treatments:      `…/#/discipline/16/treatment/<id>` (see BOOKING_URLS; run `npm run check:booking` after any change in Jane)
 - Gift cards:             `…/online_gift_cards/new`
 - Bundles / packages:     `…/#packages`
 
