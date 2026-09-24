@@ -6,7 +6,9 @@
  * on this site and hand them to Google Ads as conversions:
  *   - `book`    → a Jane App "Book" link was clicked
  *   - `phone`   → the phone number (tel: link) was tapped
- *   - `contact` → the contact form was submitted successfully
+ *   - `contact` → an email (mailto:) link was clicked
+ *   - `whatsapp`→ a WhatsApp link was clicked (only reported to Ads once
+ *                 NEXT_PUBLIC_GADS_LABEL_WHATSAPP is set)
  *
  * Set the IDs in .env.local once the conversion actions exist in Google Ads
  * (Tools → Conversions). Until then every call here is a safe no-op, so the
@@ -26,6 +28,7 @@ export const CONVERSION_LABELS = {
   book: process.env.NEXT_PUBLIC_GADS_LABEL_BOOK,
   phone: process.env.NEXT_PUBLIC_GADS_LABEL_PHONE,
   contact: process.env.NEXT_PUBLIC_GADS_LABEL_CONTACT,
+  whatsapp: process.env.NEXT_PUBLIC_GADS_LABEL_WHATSAPP,
 } as const
 
 export type ConversionKey = keyof typeof CONVERSION_LABELS
@@ -45,10 +48,40 @@ export function trackConversion(key: ConversionKey) {
   if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
   if (!GADS_ID) return
 
-  const label = CONVERSION_LABELS[key]
+  // WhatsApp counts as a contact conversion until it has its own Ads label.
+  const label = CONVERSION_LABELS[key] ?? (key === 'whatsapp' ? CONVERSION_LABELS.contact : undefined)
   if (!label) return
 
   window.gtag('event', 'conversion', {
     send_to: `${GADS_ID}/${label}`,
   })
+}
+
+/**
+ * GA4 event names for the same four lead actions, so they show up in GA4 as
+ * well as in Google Ads. Mark them as key events in GA4 (Admin → Events).
+ */
+export const GA4_LEAD_EVENTS: Record<ConversionKey, string> = {
+  book: 'book_click',
+  phone: 'phone_click',
+  contact: 'email_click',
+  whatsapp: 'whatsapp_click',
+}
+
+/** Send an event to GA4 only (not to the Google Ads tag). */
+export function trackGa4Event(name: string, params: Record<string, unknown> = {}) {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
+  if (!GA4_ID) return
+  window.gtag('event', name, { ...params, send_to: GA4_ID })
+}
+
+/**
+ * Report the current page to GA4. The tag only sends a page view on the first
+ * load; the App Router changes pages without reloading, so every later page is
+ * reported here. Also called once when a visitor accepts cookies, so the page
+ * they accepted on is counted with full consent.
+ */
+export function trackGa4PageView() {
+  if (typeof window === 'undefined') return
+  trackGa4Event('page_view', { page_location: window.location.href, page_title: document.title })
 }

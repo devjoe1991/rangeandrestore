@@ -3,7 +3,7 @@
 import Script from 'next/script'
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
-import { GA4_ID, GADS_ID, trackConversion } from '@/lib/gtag'
+import { GA4_ID, GADS_ID, GA4_LEAD_EVENTS, trackConversion, trackGa4Event, trackGa4PageView, type ConversionKey } from '@/lib/gtag'
 import { META_PIXEL_ID, trackMetaLead, trackMetaPageView } from '@/lib/meta-pixel'
 import { CONSENT_STORAGE_KEY } from '@/lib/consent'
 import { BOOKING_BASE } from '@/lib/constants'
@@ -23,11 +23,13 @@ const JANE_DOMAIN = new URL(BOOKING_BASE).hostname
  *     until the same banner grants it. lib/consent.ts flips both together.
  *   - GA4 with cross-domain linking to the Jane booking site, so a visit that
  *     starts here and completes a booking on Jane is one attributed session.
- *   - Conversion tracking for the three on-site lead actions (book / phone /
- *     contact) via a single delegated click listener that covers every current
- *     and future page, reported to Google Ads and Meta together.
- *   - A Meta PageView on client-side route changes, which App Router performs
- *     without a document load.
+ *   - Conversion tracking for the four on-site lead actions (book / phone /
+ *     email / WhatsApp) via a single delegated click listener that covers every
+ *     current and future page, reported to GA4, Google Ads and Meta together.
+ *   - A GA4 page_view and a Meta PageView on client-side route changes, which
+ *     App Router performs without a document load. (GA4's own "page changes
+ *     based on browser history" option was found not to fire, Sep 2026; if it
+ *     is ever switched on in GA4, remove the page_view here to avoid doubles.)
  *
  * Renders nothing and loads no script unless one of NEXT_PUBLIC_GA4_ID,
  * NEXT_PUBLIC_GADS_ID or NEXT_PUBLIC_META_PIXEL_ID is set, so the site behaves
@@ -42,23 +44,23 @@ export function Analytics() {
   const isFirstPath = useRef(true)
 
   useEffect(() => {
-    if (!GADS_ID && !META_PIXEL_ID) return
+    if (!GA4_ID && !GADS_ID && !META_PIXEL_ID) return
 
     function handleClick(e: MouseEvent) {
       const anchor = (e.target as HTMLElement | null)?.closest('a')
       if (!anchor) return
 
       const href = anchor.getAttribute('href') ?? ''
-      if (href.startsWith('tel:')) {
-        trackConversion('phone')
-        trackMetaLead('phone')
-      } else if (href.startsWith('mailto:')) {
-        trackConversion('contact')
-        trackMetaLead('contact')
-      } else if (href.includes('janeapp.co.uk')) {
-        trackConversion('book')
-        trackMetaLead('book')
-      }
+      let key: ConversionKey | null = null
+      if (href.startsWith('tel:')) key = 'phone'
+      else if (href.startsWith('mailto:')) key = 'contact'
+      else if (href.includes('janeapp.co.uk')) key = 'book'
+      else if (href.includes('wa.me/') || href.includes('api.whatsapp.com')) key = 'whatsapp'
+      if (!key) return
+
+      trackConversion(key)
+      trackMetaLead(key)
+      trackGa4Event(GA4_LEAD_EVENTS[key], { link_url: href.split('?')[0] })
     }
 
     // Capture phase so we register the click even if other handlers stop it.
@@ -74,6 +76,9 @@ export function Analytics() {
       return
     }
     trackMetaPageView()
+    // Wait a tick so the new page's <title> is in place before it is reported.
+    const t = window.setTimeout(trackGa4PageView, 0)
+    return () => window.clearTimeout(t)
   }, [pathname])
 
   if (!GA4_ID && !GADS_ID && !META_PIXEL_ID) return null

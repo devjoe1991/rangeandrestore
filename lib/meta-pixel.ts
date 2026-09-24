@@ -22,7 +22,7 @@
 
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
 
-export type MetaLeadSource = 'book' | 'phone' | 'contact'
+export type MetaLeadSource = 'book' | 'phone' | 'contact' | 'whatsapp'
 
 declare global {
   interface Window {

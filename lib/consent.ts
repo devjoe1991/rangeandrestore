@@ -11,6 +11,8 @@
  * two in sync.
  */
 
+import { trackGa4PageView } from './gtag'
+
 export const CONSENT_STORAGE_KEY = 'rr-consent'
 
 export type ConsentChoice = 'granted' | 'denied'
@@ -58,4 +60,8 @@ export function setConsent(choice: ConsentChoice) {
   // PageView is already gone by the time someone accepts — re-send it, or the
   // visit never lands in any retargeting audience.
   if (choice === 'granted') window.fbq?.('track', 'PageView')
+
+  // GA4 only sent a cookieless ping for this page before the visitor chose, so
+  // report it again now that it can be counted properly.
+  if (choice === 'granted') trackGa4PageView()
 }

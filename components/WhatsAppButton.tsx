@@ -2,7 +2,6 @@
 
 import { useCallback, useState } from 'react'
 import { WHATSAPP_URL } from '@/lib/constants'
-import { trackConversion } from '@/lib/gtag'
 
 /**
  * Floating WhatsApp CTA, mounted once in the root layout so it appears on every
@@ -32,7 +31,6 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       onPointerDown={handlePress}
-      onClick={() => trackConversion('contact')}
       aria-label="Book on WhatsApp — message Range and Restore"
       title="Book on WhatsApp"
       className="wa-fab"
