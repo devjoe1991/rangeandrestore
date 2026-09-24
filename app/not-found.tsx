@@ -49,7 +49,7 @@ export default function NotFound() {
             href={BOOKING_URLS.general}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary"
+            className="btn btn-white"
           >
             Book Your Session
           </a>

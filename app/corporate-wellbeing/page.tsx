@@ -48,11 +48,11 @@ const faqs = [
   },
   {
     q: 'How much does corporate massage in London cost?',
-    a: 'It depends on how many staff you want to cover, how long each session is, how often, and whether we come to you or your team comes to the clinic. Tell us what you have in mind and we will send a tailored quote. For reference, our standard clinic treatments start at £50 for 30 minutes.',
+    a: 'It depends on how many staff you want to cover, how long each session is, how often, and whether we come to you or your team comes to the clinic. Tell us what you have in mind and we will send a tailored quote. For reference, clinic treatments start at £50 for a 30-minute Sports & Deep Tissue Massage.',
   },
   {
     q: 'Can our staff come to your clinic instead?',
-    a: 'Yes. Staff can book full treatments at our clinic at 130 Junction Road, Archway N19 5LB, a 3-minute walk from Archway tube on the Northern Line. We are open Monday to Friday 08:00 to 20:00 and weekends 09:00 to 17:00, so sessions can fit before or after work. You can also mix the two: on-site days for the whole team, and clinic sessions for anyone who needs more focused treatment.',
+    a: 'Yes. Staff can book full treatments at our clinic at 130 Junction Road, Archway N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line. We are open Monday to Friday 08:00 to 20:00 and weekends 09:00 to 17:00, so sessions can fit before or after work. You can also mix the two: on-site days for the whole team, and clinic sessions for anyone who needs more focused treatment.',
   },
   {
     q: 'Which parts of London do you cover for workplace massage?',

@@ -10,8 +10,8 @@ import { ROUTES } from '@/lib/routes'
 import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Gallery – Range and Restore Sports Massage Archway',
-  description: 'See inside Range and Restore Sports Massage in Archway: real clinic photos, treatment sessions and the environment behind every appointment.',
+  title: 'Gallery – Sports Massage Clinic Photos, Archway',
+  description: 'See inside Range and Restore Sports Massage in Archway: the treatment rooms, the sauna suite, treatments in progress and our team.',
   path: '/gallery',
 })
 
@@ -23,7 +23,7 @@ const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
 // Any new image dropped into public/Gallery is picked up automatically at
 // build time and appended after these with default alt text — add an entry
 // here when a photo deserves its own wording.
-const CURATED: Array<{ file: string; alt: string; caption: string }> = [
+const CURATED: Array<{ file: string; alt: string; caption: string; fit?: GalleryImage['fit'] }> = [
   // Treatment photos that also back the homepage service cards.
   { file: 'advanced-clinical-massage-assessment-treatment-room-range-and-restore-archway-north-london.jpg', alt: 'Carlos Bonvicine leading an assessment-led clinical massage session with the team in the treatment room at Range and Restore, Archway, North London', caption: 'Range and Restore — advanced clinical massage' },
   { file: 'back-neck-pain-mot-neck-massage-treatment-range-and-restore-archway-north-london.jpg', alt: 'Therapist supporting the head during neck and upper trapezius treatment as part of the Back and Neck Pain MOT at Range and Restore, Archway, North London', caption: 'Range and Restore — Back & Neck Pain MOT' },
@@ -37,26 +37,28 @@ const CURATED: Array<{ file: string; alt: string; caption: string }> = [
   { file: fileOf(SAUNA_PHOTOS.portrait.src), alt: SAUNA_PHOTOS.portrait.alt, caption: 'Range and Restore — inside the sauna' },
   { file: fileOf(SAUNA_PHOTOS.suite.src), alt: SAUNA_PHOTOS.suite.alt, caption: 'Range and Restore — the sauna room' },
   { file: fileOf(SAUNA_PHOTOS.shower.src), alt: SAUNA_PHOTOS.shower.alt, caption: 'Range and Restore — private shower' },
-  { file: 'IMG_1828.jpeg', alt: 'Sports massage treatment session at Range and Restore clinic, Archway, North London', caption: 'Range and Restore — treatment session' },
-  { file: 'IMG_1831.jpeg', alt: 'Professional massage therapy room at Range and Restore, 130 Junction Road, Archway', caption: 'Range and Restore — clinic interior' },
-  { file: 'IMG_1552.jpeg', alt: 'Deep tissue massage being performed at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — deep tissue massage' },
-  { file: 'IMG_1311.jpeg', alt: 'Sports massage therapist Carlos Bonvicine at work in Archway clinic', caption: 'Range and Restore — Carlos at work' },
-  { file: 'IMG_1309.jpeg', alt: 'Assessment-led soft tissue treatment at Range and Restore, Archway London', caption: 'Range and Restore — soft tissue treatment' },
-  { file: 'IMG_1275.jpeg', alt: 'Remedial massage therapy session at Range and Restore Sports Massage clinic', caption: 'Range and Restore — remedial massage' },
-  { file: 'IMG_1262.jpeg', alt: 'Professional treatment room and massage table at Range and Restore, Archway', caption: 'Range and Restore — treatment room' },
-  { file: 'IMG_1132.jpeg', alt: 'Sports massage for injury recovery at Range and Restore, North London', caption: 'Range and Restore — injury recovery massage' },
-  { file: 'IMG_1112.jpeg', alt: 'Hands-on sports massage therapy at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — hands-on therapy' },
-  { file: 'IMG_1393.JPG', alt: 'Clinical massage environment at Range and Restore, 130 Junction Road, Archway N19', caption: 'Range and Restore — clinical setting' },
-  { file: 'IMG_1387.JPG', alt: 'Full-body massage treatment at Range and Restore Sports Massage clinic, Archway', caption: 'Range and Restore — full-body treatment' },
-  { file: 'IMG_1382.JPG', alt: 'Sports and deep tissue massage at Range and Restore, Archway, London N19', caption: 'Range and Restore — sports massage' },
-  { file: 'IMG_1381.JPG', alt: 'Relaxation massage session at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — relaxation session' },
-  { file: 'IMG_1380.JPG', alt: 'Post-event sports massage recovery at Range and Restore, North London', caption: 'Range and Restore — recovery massage' },
-  { file: 'IMG_1371.JPG', alt: 'Personalised massage therapy at Range and Restore clinic, Archway London', caption: 'Range and Restore — personalised therapy' },
-  { file: 'FullSizeRender.jpeg', alt: 'Range and Restore Sports Massage clinic at 130 Junction Road, Archway, London N19 5LB', caption: 'Range and Restore — Archway clinic' },
-  { file: 'FullSizeRender (1).jpeg', alt: 'Inside Range and Restore Sports Massage, Archway — professional clinic environment', caption: 'Range and Restore — clinic environment' },
-  { file: 'FullSizeRender (2).jpeg', alt: 'Range and Restore Sports Massage treatment area, Archway, North London', caption: 'Range and Restore — treatment area' },
+  // Clinic photos, rooms first, then treatment.
+  { file: 'IMG_1371.JPG', alt: 'Carlos Bonvicine, Founder & Lead Therapist, sitting on the massage couch in the treatment room at Range and Restore, Archway', caption: 'Range and Restore — Carlos Bonvicine, Founder & Lead Therapist' },
+  { file: 'FullSizeRender.jpeg', alt: 'Treatment room with massage couch and anatomy posters at Range and Restore, 130 Junction Road, Archway, London N19 5LB', caption: 'Range and Restore — treatment room' },
+  { file: 'FullSizeRender (1).jpeg', alt: 'Massage couch, anatomy posters and framed certificates in the treatment room at Range and Restore, Archway', caption: 'Range and Restore — treatment room' },
   { file: 'WhatsApp Image 2026-05-17 at 18.09.48.jpeg', alt: 'Treatment room with massage couch and certifications at Range and Restore Sports Massage, Archway', caption: 'Range and Restore — inside the clinic' },
-  { file: 'incollage_save.jpg', alt: 'Range and Restore Sports Massage — therapy sessions at Archway clinic', caption: 'Range and Restore — therapy sessions' },
+  { file: 'IMG_1828.jpeg', alt: 'Empty treatment room with massage couch, chair and anatomy posters at Range and Restore, Archway, North London', caption: 'Range and Restore — treatment room' },
+  { file: 'IMG_1831.jpeg', alt: 'Treatment room with massage couch, desk and framed certificates at Range and Restore, 130 Junction Road, Archway', caption: 'Range and Restore — treatment room and desk' },
+  { file: 'FullSizeRender (2).jpeg', alt: 'Waiting area with sofas and the Range and Restore banner in the Reliable Scan building at 130 Junction Road, Archway', caption: 'Range and Restore — waiting area' },
+  { file: 'IMG_1552.jpeg', alt: 'Reception and waiting area in the Reliable Scan building at 130 Junction Road, Archway, where Range and Restore is based', caption: 'Range and Restore — reception and waiting area' },
+  { file: 'IMG_1393.JPG', alt: 'Client lying face down under a towel on the massage couch, ready for treatment, at Range and Restore, Archway N19', caption: 'Range and Restore — ready for treatment' },
+  { file: 'IMG_1387.JPG', alt: 'Client resting under a towel on the massage couch in the treatment room at Range and Restore, Archway', caption: 'Range and Restore — in the treatment room' },
+  { file: 'incollage_save.jpg', alt: "Before and after photos of a client's straight-leg raise on the massage couch at Range and Restore, Archway", caption: 'Range and Restore — before and after: straight-leg raise', fit: 'contain' },
+  { file: 'IMG_1380.JPG', alt: 'Client having cupping therapy on the back in the treatment room at Range and Restore, Archway', caption: 'Range and Restore — cupping therapy' },
+  { file: 'IMG_1382.JPG', alt: "Cupping cups along a client's spine in the treatment room at Range and Restore, Archway, London N19", caption: 'Range and Restore — cupping therapy' },
+  { file: 'IMG_1309.jpeg', alt: "Cupping cups on a client's upper back during treatment at Range and Restore, Archway", caption: 'Range and Restore — cupping on the upper back' },
+  { file: 'IMG_1311.jpeg', alt: "Cupping cups on a client's lower back, with the round marks cupping can leave on the skin, at Range and Restore, Archway", caption: 'Range and Restore — cupping therapy' },
+  { file: 'IMG_1381.JPG', alt: 'Close-up of cupping cups along the spine, with the round marks cupping can leave on the skin', caption: 'Range and Restore — cupping close-up' },
+  // Our team's professional cupping training course, in a training classroom — not the clinic.
+  { file: 'IMG_1275.jpeg', alt: 'Group holding certificates at the end of a professional cupping training course attended by the Range and Restore team, in a training classroom away from the clinic', caption: 'Team training course — certificates day (not at our clinic)' },
+  { file: 'IMG_1262.jpeg', alt: 'Hands-on cupping practice at a professional training course attended by the Range and Restore team, in a training classroom away from the clinic', caption: 'Team training course — hands-on practice (not at our clinic)' },
+  { file: 'IMG_1132.jpeg', alt: 'Cupping practice on massage couches at a professional training course attended by the Range and Restore team, away from the clinic', caption: 'Team training course — cupping practice (not at our clinic)' },
+  { file: 'IMG_1112.jpeg', alt: 'Tutor demonstrating cupping at a professional training course attended by the Range and Restore team, away from the clinic', caption: 'Team training course — tutor demonstration (not at our clinic)' },
 ]
 
 function getGalleryImages(): GalleryImage[] {
@@ -73,15 +75,16 @@ function getGalleryImages(): GalleryImage[] {
   const extras = files
     .filter((f) => !curatedNames.has(f))
     .sort()
-    .map((f, i) => ({
+    .map((f, i): (typeof CURATED)[number] => ({
       file: f,
       alt: `Range and Restore Sports Massage clinic photo ${i + 1} — Archway, North London`,
       caption: 'Range and Restore — Archway clinic',
     }))
-  return [...curated, ...extras].map(({ file, alt, caption }) => ({
+  return [...curated, ...extras].map(({ file, alt, caption, fit }) => ({
     src: `/Gallery/${file}`,
     alt,
     caption,
+    ...(fit ? { fit } : {}),
   }))
 }
 
@@ -91,7 +94,7 @@ const gallerySchema = {
   '@context': 'https://schema.org',
   '@type': 'ImageGallery',
   name: 'Range and Restore Sports Massage Gallery',
-  description: 'Real clinic photos from Range and Restore in Archway, North London — treatment sessions, the professional clinic environment, and the hands-on approach.',
+  description: 'Photos from Range and Restore in Archway, North London: the treatment rooms, the sauna suite, treatments in progress and our team.',
   url: 'https://rangeandrestore.co.uk/gallery',
   publisher: {
     '@type': 'Organization',
@@ -114,7 +117,7 @@ export default function GalleryPage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Gallery</h1>
           <p className="mt-3 text-xl text-page-muted">Inside Range and Restore Sports Massage, Archway</p>
           <p className="mt-4 text-page-muted opacity-80 max-w-2xl">
-            Real clinic photos from Range and Restore in Archway, North London — treatment sessions, the professional clinic environment, and the hands-on, assessment-led approach our therapists bring to every appointment.
+            Real photos from Range and Restore at 130 Junction Road, Archway: the treatment rooms, the sauna suite and treatments in progress. The last few are from a professional cupping course our team attended, not the clinic.
           </p>
         </div>
       </div>

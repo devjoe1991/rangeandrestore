@@ -78,42 +78,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What award has Range and Restore won?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Range and Restore Sports Massage was named New Sports Massage Clinic of the Year for 2026/27 at the London and South East England Prestige Awards.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who runs the Prestige Awards?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Prestige Awards celebrate independent businesses for exceptional service, innovation and client satisfaction within their local region. They are run by the team behind the Corporate LiveWire and LTG award platforms, which have recognised outstanding businesses for the past seventeen years, and coverage of the winners reaches more than one hundred thousand readers across print and digital formats throughout the UK.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How are Prestige Awards winners chosen?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Each nominee is reviewed by the Prestige Awards judging panel against the supporting information a business submits, its client reviews and testimonials, its online reputation and public feedback, its website and social media presence, and its overall standing within the industry.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How many clinics were considered in the category?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Prestige Awards nominations team confirmed there were sixteen other applicants in the New Sports Massage category. Range and Restore was selected as the winner.',
-      },
-    },
-    {
-      '@type': 'Question',
       name: 'Where is the award-winning clinic based?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Range and Restore is at 130 Junction Road, Archway, London N19 5LB, a few minutes from Archway station on the Northern line, serving Archway, Tufnell Park, Holloway, Islington, Finsbury Park and the wider North London area.',
+        text: 'Range and Restore is at 130 Junction Road, Archway, London N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line, serving Archway, Tufnell Park, Holloway, Islington, Finsbury Park and the wider North London area.',
       },
     },
     {
@@ -182,7 +150,7 @@ export default function AwardsPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">How winners are chosen</h2>
           <p>
-            Winners are not picked at random, and the result cannot be bought. Each nominee is reviewed by the Prestige Awards judging panel against a clear set of measures:
+            Each nominee is reviewed by the Prestige Awards judging panel against a clear set of measures:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-page-muted">
             <li><strong className="text-page">Supporting information</strong> submitted by each business.</li>
@@ -199,7 +167,7 @@ export default function AwardsPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">What this means for you</h2>
           <p>
-            The way we work does not change. Same assessment-led approach, same qualified hands, same prices. What the award gives you is a little more confidence that you are booking with a clinic that has been independently recognised for its treatment, its care and its results. If you have been in before, this recognition is partly yours. If you have not, it is a good reason to come and see us.
+            What the award gives you is a little more confidence that you are booking with a clinic that has been independently recognised for its treatment, its care and its results. If you have been in before, this recognition is partly yours. If you have not, it is a good reason to come and see us.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Recognised for the work, and the people behind it</h2>
@@ -208,7 +176,7 @@ export default function AwardsPage() {
             <Link href={ROUTES.team} className="link-cite">BTEC Level 5 team</Link>
             , the clients who trust us with their recovery, and the{' '}
             <Link href={ROUTES.community.index} className="link-cite">independent businesses across Archway</Link>{' '}
-            we work alongside. We are a community-focused clinic, and being recognised while staying rooted in our patch is exactly the way we wanted it.
+            we work alongside. We are a community-focused clinic, and we are glad to be recognised as one.
           </p>
 
           <div className="not-prose my-10 rounded-card border-2 border-brand-green bg-page-sage p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
@@ -227,29 +195,9 @@ export default function AwardsPage() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Award FAQs</h2>
 
-          <h3 className="text-lg font-bold text-page mt-6 mb-2">What award has Range and Restore won?</h3>
-          <p>
-            Range and Restore Sports Massage was named New Sports Massage Clinic of the Year for 2026/27 at the London and South East England Prestige Awards.
-          </p>
-
-          <h3 className="text-lg font-bold text-page mt-6 mb-2">Who runs the Prestige Awards?</h3>
-          <p>
-            The Prestige Awards celebrate independent businesses for exceptional service, innovation and client satisfaction within their local region. They are run by the team behind the Corporate LiveWire and LTG award platforms, which have recognised outstanding businesses for the past seventeen years, and coverage reaches more than one hundred thousand readers across the UK.
-          </p>
-
-          <h3 className="text-lg font-bold text-page mt-6 mb-2">How are Prestige Awards winners chosen?</h3>
-          <p>
-            Each nominee is reviewed by the judging panel against the supporting information submitted, client reviews and testimonials, online reputation and public feedback, website and social media presence, and overall standing within the industry.
-          </p>
-
-          <h3 className="text-lg font-bold text-page mt-6 mb-2">How many clinics were considered in the category?</h3>
-          <p>
-            The nominations team confirmed there were sixteen other applicants in the New Sports Massage category. Range and Restore was selected as the winner.
-          </p>
-
           <h3 className="text-lg font-bold text-page mt-6 mb-2">Where is the award-winning clinic based?</h3>
           <p>
-            130 Junction Road, Archway, London N19 5LB, a few minutes from Archway station on the Northern line, serving Archway, Tufnell Park, Holloway, Islington, Finsbury Park and the wider{' '}
+            130 Junction Road, Archway, London N19 5LB, a short walk from Archway and Tufnell Park stations on the Northern line, serving Archway, Tufnell Park, Holloway, Islington, Finsbury Park and the wider{' '}
             <Link href={ROUTES.areasServed.index} className="link-cite">North London area</Link>.
           </p>
 

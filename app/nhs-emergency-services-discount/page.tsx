@@ -32,7 +32,7 @@ const AREAS_SERVED = [
 ]
 
 const OFFER_DESCRIPTION =
-  `${NHS_DISCOUNT.display} off each full-priced massage treatment at Range and Restore Sports Massage, 130 Junction Road, Archway, London N19 5LB, for NHS staff, ambulance service staff, police, fire and rescue service staff and eligible health and social care workers. Clients book and pay the standard price, then show a valid workplace ID or Blue Light Card at the clinic on the day. Once verified, the ${NHS_DISCOUNT.display} is refunded to the original payment method or held as credit towards the next session. Not available on the Community Tuesday Clinic, massage bundles, recovery packages, memberships, gift cards or any other promotional offer.`
+  `${NHS_DISCOUNT.display} off each full-priced massage treatment at Range and Restore Sports Massage, 130 Junction Road, Archway, London N19 5LB, for NHS staff, ambulance service staff, police, fire and rescue service staff and eligible health and social care workers. Clients book as normal, then show a valid workplace ID or Blue Light Card at the clinic on the day. Once verified, ${NHS_DISCOUNT.display} comes off the session price; if the session has already been paid for, the ${NHS_DISCOUNT.display} is refunded to the original payment method or held as credit towards the next session. Range and Restore is not an official Blue Light Card partner. Not available on the Community Tuesday Clinic, massage bundles, recovery packages, memberships, gift cards or any other promotional offer.`
 
 const offerSchema = {
   '@context': 'https://schema.org',
@@ -100,12 +100,12 @@ const faqs = [
     a: 'NHS staff, ambulance service staff including London Ambulance Service, police officers and police staff, fire and rescue service staff, and eligible health and social care workers such as paramedics, nurses, midwives, healthcare assistants, care home staff and community care workers. If you are not sure whether your role qualifies, ring the clinic on ' + BUSINESS.phone + ' before you book.',
   },
   {
-    q: 'How do I get the discount if I pay the full price online?',
-    a: `Book and pay the normal price online, then show your ID at the start of your appointment. Once your therapist has checked it, you choose what happens to the ${NHS_DISCOUNT.display}: we refund it to the card you paid with, or we hold it as credit against your next session, whichever suits you.`,
+    q: 'How do I get the discount?',
+    a: `Book as normal, then show your ID at the start of your appointment. Once your therapist has checked it, ${NHS_DISCOUNT.display} comes off the price of that session. If you have already paid, you choose what happens to the ${NHS_DISCOUNT.display}: we refund it to the card you paid with, or hold it as credit against your next session.`,
   },
   {
     q: 'Can I use it alongside Community Tuesday, a bundle or another offer?',
-    a: 'No. The discount applies to full-priced massage treatments only, so it cannot be combined with the Community Tuesday Clinic, massage bundles, recovery packages, Restore+ memberships, gift cards or any other promotional offer. Those are already reduced prices.',
+    a: 'No. The discount applies to full-priced massage treatments only, so it cannot be combined with the Community Tuesday Clinic, massage bundles, recovery packages, Restore+ memberships, gift cards or any other promotional offer. Those have their own pricing.',
   },
   {
     q: 'Do I need to bring my ID every time?',
@@ -138,8 +138,8 @@ const acceptedId = [
 const steps = [
   {
     step: '1',
-    title: 'Book and pay as normal',
-    body: 'Choose any full-priced massage treatment online and pay the standard price. There is no code to enter and nothing to arrange beforehand.',
+    title: 'Book as normal',
+    body: 'Choose any full-priced massage treatment and book it the usual way. There is no code to enter and nothing to arrange beforehand.',
   },
   {
     step: '2',
@@ -149,7 +149,7 @@ const steps = [
   {
     step: '3',
     title: `Take the ${NHS_DISCOUNT.display} back`,
-    body: `Once verified, we refund the ${NHS_DISCOUNT.display} to the card you paid with, or hold it as credit towards your next session. Your choice.`,
+    body: `Once verified, ${NHS_DISCOUNT.display} comes off that session. If you have already paid, we refund it to your card or hold it as credit towards your next session. Your choice.`,
   },
 ]
 
@@ -165,7 +165,7 @@ export default function NhsEmergencyServicesDiscountPage() {
       <div className="bg-page-sage section-md">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="eyebrow-sm">
-            NHS &amp; Emergency Services &middot; Blue Light Card Accepted &middot; Archway N19
+            NHS &amp; Emergency Services &middot; Show your Blue Light Card or NHS ID &middot; Archway N19
           </p>
           <h1 className="text-4xl lg:text-5xl font-bold text-page mb-4">
             NHS &amp; Emergency Services Discount: {NHS_DISCOUNT.display} Off Every Full-Priced Massage
@@ -174,7 +174,10 @@ export default function NhsEmergencyServicesDiscountPage() {
             For NHS staff, ambulance, police, fire and rescue, and health and social care workers across North London.
           </p>
           <p className="mt-4 text-page-muted max-w-2xl">
-            Book and pay as normal, show your Blue Light Card or workplace ID at the clinic on the day, and we give you the {NHS_DISCOUNT.display} back &mdash; as a refund to your card, or as credit towards your next session. Every visit, all year.
+            Book as normal, show your Blue Light Card or workplace ID at the clinic on the day, {`and we take ${NHS_DISCOUNT.display} off.`} Every visit, all year.
+          </p>
+          <p className="mt-3 text-page-muted text-sm max-w-2xl">
+            Range and Restore is not an official Blue Light Card partner. The discount isn&apos;t claimed through the Blue Light Card app: we check your card or ID at the clinic and apply it ourselves.
           </p>
           <div className="mt-6">
             <BookingButton href={BOOKING_URLS.general} label="Book Your Session" />
@@ -223,7 +226,7 @@ export default function NhsEmergencyServicesDiscountPage() {
               ))}
             </div>
             <p className="mt-4 text-page-muted text-sm">
-              We ask for the full price up front because bookings are taken and paid through our online system, which has no way of checking your ID. Verifying in person is the only way we can be fair to everyone who is entitled to it.
+              Our online booking system has no way of checking your ID, so we check it in person at the clinic. That keeps it fair for everyone who is entitled to it.
             </p>
           </section>
 
@@ -255,9 +258,9 @@ export default function NhsEmergencyServicesDiscountPage() {
                     'Sports & Deep Tissue Massage',
                     'Advanced Clinical Massage',
                     'Back & Neck Pain MOT',
-                    'Cupping + Sports / Deep Tissue Massage',
+                    'Cupping + Sports Massage',
                     'Manual Lymphatic Drainage (MLD)',
-                    'Relaxation & Restorative Massage',
+                    'Relaxation Massage',
                     '2-Hour Pain Relief Massage',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
@@ -287,11 +290,14 @@ export default function NhsEmergencyServicesDiscountPage() {
               </div>
             </div>
             <p className="mt-4 text-page-muted text-sm">
+              Booking Pregnancy Massage, Reflexology or the MSK Scan + Clinical Massage? Please ask us before you book whether the discount applies.
+            </p>
+            <p className="mt-2 text-page-muted text-sm">
               One discount per session, and it cannot be combined with anything else. Our{' '}
               <Link href={ROUTES.services.communityTuesdayClinic} className="link-inline">Community Tuesday Clinic</Link>{' '}
               and{' '}
               <Link href={ROUTES.services.massageBundles} className="link-inline">massage bundles</Link>{' '}
-              are already reduced, so take whichever works out cheaper for you.
+              have their own pricing, so choose whichever works out cheaper for you.
             </p>
           </section>
 
@@ -299,7 +305,7 @@ export default function NhsEmergencyServicesDiscountPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Why we offer it</h2>
             <p className="text-page-muted mb-4">
-              Whittington Hospital is a seven minute walk up the hill from 130 Junction Road, and a lot of our regular clients work there. Between them, our clients cover long shifts on their feet, lifting and turning patients, driving ambulances and working nights &mdash; the kind of work that shows up as back, neck and shoulder pain.
+              Whittington Hospital is a short walk up the hill from 130 Junction Road, and a lot of our regular clients work there. Between them, our clients cover long shifts on their feet, lifting and turning patients, driving ambulances and working nights &mdash; the kind of work that shows up as back, neck and shoulder pain.
             </p>
             <p className="text-page-muted">
               We already donate treatments and gift vouchers to{' '}
@@ -326,7 +332,7 @@ export default function NhsEmergencyServicesDiscountPage() {
               Book your session and bring your ID
             </h2>
             <p className="text-brand-green font-semibold mb-6">
-              Assessment-led sports and clinical massage in Archway, North London. Open Monday to Friday 08:00&ndash;20:00 and weekends 09:00&ndash;17:00, three minutes from Archway tube, so a session fits either side of a shift.
+              Assessment-led sports and clinical massage in Archway, North London. Open Monday to Friday 08:00&ndash;20:00 and weekends 09:00&ndash;17:00, a short walk from Archway and Tufnell Park stations, so a session fits either side of a shift.
             </p>
             <BookingButton href={BOOKING_URLS.general} label="Book Your Session" />
           </section>

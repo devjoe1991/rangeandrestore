@@ -7,7 +7,7 @@ import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Socials – Follow Range and Restore Sports Massage',
+  title: 'Socials – Follow Our Archway Sports Massage Clinic',
   description:
     'Follow Range and Restore on Facebook, Instagram and Google for clinic updates, treatment tips, event appearances and recovery advice from Archway, North London.',
   path: '/socials',
@@ -36,7 +36,7 @@ const channels = [
   },
   {
     name: 'Google',
-    handle: 'Leave a review',
+    handle: 'See our Google reviews',
     description: 'See what clients across North London are saying about their sessions.',
     href: GOOGLE_URL,
     Icon: GoogleIcon,
@@ -52,7 +52,7 @@ export default function SocialsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl lg:text-5xl font-bold text-page">Follow Range and Restore</h1>
           <p className="mt-4 text-xl text-page-muted max-w-2xl">
-            Stay connected for clinic news, event coverage, recovery tips and updates from Carlos in Archway, North London.
+            Stay connected for clinic news, event coverage, recovery tips and updates from our team in Archway, North London.
           </p>
         </div>
       </div>
@@ -66,10 +66,9 @@ export default function SocialsPage() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-card overflow-hidden bg-card shadow-sm card-lift flex flex-col"
-              style={{ border: '2px solid #1a3d3a' }}
+              className="group rounded-card overflow-hidden bg-card shadow-sm card-lift flex flex-col border-2 border-brand-green"
             >
-              <div style={{ height: '4px', background: '#0f767a', width: '100%' }} />
+              <div className="h-1 w-full bg-brand-teal" />
               <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-green/10 text-brand-green group-hover:bg-brand-teal group-hover:text-white transition-colors">

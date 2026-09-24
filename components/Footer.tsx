@@ -153,7 +153,7 @@ export function Footer() {
                 ['Recovery Suite',         '/recovery-suite'],
                 ['Gallery',                '/gallery'],
                 ['Gift Cards',             '/gift-cards'],
-                ['Wellness Hub',           '/blog'],
+                ['Blog',                   '/blog'],
                 ['Our Archway Community',  '/community'],
                 ['Giving Back',            '/giving-back'],
                 ['Press & Media',          '/press'],

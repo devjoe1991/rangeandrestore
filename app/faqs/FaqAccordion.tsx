@@ -2,9 +2,10 @@
 
 import { useState } from 'react'
 
-import { faqs } from './data'
+import Link from 'next/link'
+import { faqs, type Faq } from './data'
 
-function FaqItem({ q, a }: { q: string; a: string }) {
+function FaqItem({ q, a, link }: Faq) {
   const [open, setOpen] = useState(false)
   return (
     <div className={`border-b border-page transition-colors ${open ? 'bg-sage/20' : ''}`}>
@@ -21,7 +22,22 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       </button>
       {open && (
         <div className="px-5 pb-5 text-page-muted leading-relaxed text-sm">
-          {a}
+          <p>{a}</p>
+          {link &&
+            (link.href.startsWith('/') ? (
+              <Link href={link.href} className="mt-2 inline-block font-semibold text-page underline underline-offset-2">
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block font-semibold text-page underline underline-offset-2"
+              >
+                {link.label}
+              </a>
+            ))}
         </div>
       )}
     </div>
@@ -32,7 +48,7 @@ export default function FaqAccordion() {
   return (
     <div className="bg-card rounded-2xl border border-page overflow-hidden shadow-sm">
       {faqs.map((faq) => (
-        <FaqItem key={faq.q} q={faq.q} a={faq.a} />
+        <FaqItem key={faq.q} {...faq} />
       ))}
     </div>
   )

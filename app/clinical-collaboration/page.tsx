@@ -128,7 +128,7 @@ export default function ClinicalCollaborationPage() {
               Book your initial session with one of our therapists and take the first step towards a clear diagnosis and effective, targeted treatment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <BookingButton label="Book Your Session" />
+              <BookingButton label="Book Your Session" variant="white" />
               <Link
                 href={ROUTES.contact}
                 className="inline-flex items-center justify-center rounded-md border-2 border-teal-tint text-teal-tint font-semibold px-6 py-3 hover:bg-page-sage hover:text-page transition-colors min-h-[44px]"

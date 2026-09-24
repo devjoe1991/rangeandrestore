@@ -47,10 +47,6 @@ const whittingtonPhotos: CharityPhoto[] = [
     alt: 'Carlos Bonvicine beside the Range and Restore massage couch and banner at a Whittington Health Charity fundraising event, Whittington Hospital, North London',
   },
   {
-    src: '/giving-back/carlos-bonvicine-sports-massage-lecture-theatre-whittington-health-charity-event-north-london.jpg',
-    alt: 'Carlos Bonvicine of Range and Restore treating a lower leg by the lecture theatre at a Whittington Health Charity fundraising event, North London',
-  },
-  {
     src: '/giving-back/carlos-bonvicine-back-shoulder-massage-whittington-health-charity-event-north-london.jpg',
     alt: 'Carlos Bonvicine of Range and Restore working on a back and shoulder at a Whittington Health Charity fundraising event, Whittington Hospital, North London',
   },
@@ -65,10 +61,6 @@ const whittingtonPhotos: CharityPhoto[] = [
   {
     src: '/giving-back/range-and-restore-sports-massage-station-whittington-hospital-charity-event-north-london.jpg',
     alt: 'The Range and Restore massage couch and banner set up for a Whittington Health Charity fundraising event at Whittington Hospital, North London',
-  },
-  {
-    src: '/giving-back/range-and-restore-sports-massage-whittington-hospital-charity-event-atrium-north-london.jpg',
-    alt: 'A taster sports massage under way at the Range and Restore station during a Whittington Health Charity fundraising event, Whittington Hospital, North London',
   },
 ]
 
@@ -100,11 +92,6 @@ const phabPhotos: CharityPhoto[] = [
   {
     src: '/giving-back/carlos-bonvicine-post-race-shoulder-massage-phab-runner-tcs-london-marathon.jpg',
     alt: 'Carlos Bonvicine of Range and Restore treating a Phab runner shoulder and arm after the race at the TCS London Marathon',
-    orientation: 'portrait',
-  },
-  {
-    src: '/giving-back/phab-runner-tcs-london-marathon-finisher-medal-post-race-massage-range-and-restore.jpg',
-    alt: 'A Phab runner holding their TCS London Marathon finisher medal during post-race sports massage from Range and Restore',
     orientation: 'portrait',
   },
   {
@@ -231,7 +218,7 @@ const faqs = [
   },
   {
     q: 'What does Range and Restore give to Whittington Health Charity?',
-    a: 'Sports massage treatments and gift vouchers as raffle prizes, plus Carlos working the fundraising days in person. At the Christmas Market we donated a 60 minute sports massage voucher worth £85, and Carlos gave free 10 minute taster massages in the hospital main entrance through the afternoon.',
+    a: 'Sports massage treatments and gift vouchers as raffle prizes, plus Carlos working the fundraising days in person. At the Christmas Market we donated a 60 minute sports massage voucher worth £75, and Carlos gave free 10 minute taster massages in the hospital main entrance through the afternoon.',
   },
   {
     q: 'What does Range and Restore do for Phab?',
@@ -265,7 +252,7 @@ export default function GivingBackPage() {
             Giving Back: The Charities We Support
           </h1>
           <p className="text-lg text-page-muted font-medium">
-            Two charities. Whittington Health Charity, for the hospital seven minutes up the hill from our door. And Phab, who bring disabled and non-disabled people together through clubs across the country.
+            Two charities. Whittington Health Charity, for the hospital just up the hill from our door. And Phab, who bring disabled and non-disabled people together through clubs across the country.
           </p>
         </div>
       </div>
@@ -297,10 +284,10 @@ export default function GivingBackPage() {
 
             <h3 className="text-lg font-bold text-page mt-6 mb-2">What we do</h3>
             <p>
-              We donate sports massage treatments and gift vouchers as raffle prizes. At the Christmas Market we put in a 60 minute sports massage voucher worth &pound;85, and Carlos worked the day, giving free 10 minute taster massages in the main entrance to staff coming off shift, patients and visitors.
+              We donate sports massage treatments and gift vouchers as raffle prizes. At the Christmas Market we put in a 60 minute sports massage voucher worth &pound;75, and Carlos worked the day, giving free 10 minute taster massages in the main entrance to staff coming off shift, patients and visitors.
             </p>
             <p>
-              The Whittington is a seven minute walk up the hill from 130 Junction Road, and a lot of our regular clients work there.
+              The Whittington is a short walk up the hill from 130 Junction Road, and a lot of our regular clients work there.
             </p>
           </CharityBlock>
 

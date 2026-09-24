@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
-import { BUSINESS, BOOKING_URLS } from '@/lib/constants'
+import { BUSINESS, BOOKING_URLS, WHATSAPP_URL } from '@/lib/constants'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Contact – Sports Massage Archway N19',
-  description: 'Get in touch with Range and Restore Sports Massage in Archway, North London. Call, email, or send a message to book or ask a question.',
+  description: 'Get in touch with Range and Restore Sports Massage in Archway, North London. Book online, call, WhatsApp or email us to book or ask a question.',
   path: '/contact',
 })
 
@@ -16,8 +16,8 @@ const contactSchema = {
   '@type': 'LocalBusiness',
   name: 'Range and Restore Sports Massage',
   url: 'https://rangeandrestore.co.uk',
-  telephone: '+447890716154',
-  email: 'carlos@rangeandrestore.co.uk',
+  telephone: BUSINESS.phoneTel,
+  email: BUSINESS.email,
   address: {
     '@type': 'PostalAddress',
     streetAddress: '130 Junction Road',
@@ -68,8 +68,8 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-bold text-page mb-3">Get in Touch</h2>
             <p className="text-page-muted mb-8">
-              The quickest way to book is online or by phone. Prefer to ask a question first?
-              Call or email Range and Restore directly — we&apos;ll get straight back to you.
+              The quickest way to book is online, by phone or on WhatsApp. Prefer to ask a question first?
+              Call, message or email Range and Restore directly and we&apos;ll get straight back to you.
             </p>
 
             {/* Primary actions */}
@@ -87,6 +87,14 @@ export default function ContactPage() {
                 className="btn btn-primary w-full text-base"
               >
                 Call {BUSINESS.phone}
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary w-full text-base"
+              >
+                Message us on WhatsApp
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
@@ -112,6 +120,13 @@ export default function ContactPage() {
               </div>
 
               <div>
+                <h3 className="font-semibold text-page mb-1">WhatsApp</h3>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:text-page font-medium min-h-[44px] inline-flex items-center">
+                  Message {BUSINESS.phone} on WhatsApp
+                </a>
+              </div>
+
+              <div>
                 <h3 className="font-semibold text-page mb-1">Email</h3>
                 <a href={`mailto:${BUSINESS.email}`} className="text-brand-teal hover:text-page font-medium min-h-[44px] inline-flex items-center">
                   {BUSINESS.email}
@@ -125,7 +140,7 @@ export default function ContactPage() {
                 Range and Restore is located at 130 Junction Road, Archway, London N19 5LB, within the same building as Reliable Scan, a private diagnostic ultrasound clinic.
               </p>
               <p className="text-page-muted text-sm">
-                A short walk from Archway tube (Northern Line). Easy to reach from Tufnell Park, Islington and across North London. Street parking is available nearby.
+                A short walk from Archway and Tufnell Park stations (Northern line). Easy to reach from Islington and across North London. Street parking is available nearby.
               </p>
             </div>
           </div>

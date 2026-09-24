@@ -93,7 +93,7 @@ export function GoogleReviews() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="section section-flush-b" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="reviews-heading">
+    <section ref={sectionRef} className="section section-flush-b bg-sand-deep" aria-labelledby="reviews-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
 
         <h2 id="reviews-heading" className="text-2xl sm:text-3xl lg:text-5xl font-black text-ink tracking-tight uppercase leading-none mb-8">

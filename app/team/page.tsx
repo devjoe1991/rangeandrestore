@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
 import { buildMetadata, personSchema, daraelPersonSchema, matejaPersonSchema, alisonPersonSchema, buildBreadcrumbs } from '@/lib/seo'
-import { RELIABLE_SCAN_URL } from '@/lib/constants'
+import { BOOKING_URLS, RELIABLE_SCAN_URL } from '@/lib/constants'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const MATEJA_PHOTO = '/mateja-bracko-mounti-sports-massage-soft-tissue-remedial-
 const ALISON_PHOTO = '/alison-isherwood-sports-massage-soft-tissue-therapist-range-and-restore-archway-north-london.jpeg'
 
 const CheckIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#0f767a' }} aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 flex-shrink-0 mt-0.5 text-brand-teal" aria-hidden="true">
     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
   </svg>
 )
@@ -136,11 +136,11 @@ export default function TeamPage() {
             </div>
 
             <div className="mt-10">
-              <BookingButton label="Book Your Session with Carlos" />
+              <BookingButton href={BOOKING_URLS.staffCarlos} label="Book Your Session with Carlos" />
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 lg:sticky lg:top-36">
             <div className="bg-page-sage rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-page mb-4">How Carlos Works</h3>
               <ul className="space-y-3">
@@ -204,7 +204,7 @@ export default function TeamPage() {
                 </p>
                 <p>
                   Alongside sports massage and soft tissue therapy, Alison has a particular interest in{' '}
-                  <Link href={ROUTES.services.pregnancyMassage} className="link-cite">Pregnancy Massage</Link>, providing safe, supportive treatments to help relieve the muscular and joint aches that commonly develop throughout pregnancy. She also offers Abdominal Massage, which may help relieve symptoms associated with IBS, bloating, stress and anxiety, muscle tension and abdominal discomfort.
+                  <Link href={ROUTES.services.pregnancyMassage} className="link-cite">Pregnancy Massage</Link>, providing safe, supportive treatments to help relieve the muscular and joint aches that commonly develop throughout pregnancy. She is also trained in Abdominal Massage, which some clients find helps with bloating, muscle tension and abdominal discomfort. Abdominal Massage can&rsquo;t be booked online yet, so ask us about it.
                 </p>
                 <p>
                   Recovery doesn&rsquo;t end when your appointment finishes. Where appropriate, Alison will provide practical advice, rehabilitation exercises and self-care recommendations to help you maintain the benefits of your treatment and reduce the likelihood of symptoms returning.
@@ -216,7 +216,7 @@ export default function TeamPage() {
                   'BTEC Level 5 Sports Massage & Soft Tissue Remedial Therapy (LSSM)',
                   'Graduate of the London School of Sports Massage',
                   'Specialist Interest in Pregnancy Massage',
-                  'Abdominal Massage',
+                  'Abdominal Massage (ask us about it)',
                 ].map((qual) => (
                   <div key={qual} className="flex items-start gap-2 text-page">
                     <CheckIcon />
@@ -226,11 +226,11 @@ export default function TeamPage() {
               </div>
 
               <div className="mt-10">
-                <BookingButton label="Book Your Session with Alison" />
+                <BookingButton href={BOOKING_URLS.staffAlison} label="Book Your Session with Alison" />
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 lg:sticky lg:top-36">
               <div className="bg-card border-2 border-page rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-page mb-4">How Alison Works</h3>
                 <ul className="space-y-3">
@@ -286,7 +286,7 @@ export default function TeamPage() {
                   His approach focuses on identifying and addressing the underlying causes of discomfort rather than simply treating symptoms. Using a combination of advanced sports massage, soft tissue therapy, rehabilitation-based techniques, and movement-focused treatment, he helps clients move better, recover faster, and return to the activities they enjoy with confidence.
                 </p>
                 <p>
-                  Known for his friendly, professional, and approachable manner, Darael is passionate about helping people achieve lasting improvements in their health, wellbeing, and physical performance.
+                  Known for his friendly, professional, and approachable manner, Darael focuses on helping people achieve lasting improvements in their health, wellbeing, and physical performance.
                 </p>
               </div>
 
@@ -305,11 +305,11 @@ export default function TeamPage() {
               </div>
 
               <div className="mt-10">
-                <BookingButton label="Book Your Session with Darael" />
+                <BookingButton href={BOOKING_URLS.staffDarael} label="Book Your Session with Darael" />
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 lg:sticky lg:top-36">
               <div className="bg-page-sage rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-page mb-4">How Darael Works</h3>
                 <ul className="space-y-3">
@@ -366,7 +366,7 @@ export default function TeamPage() {
                 Known for her calm, caring, and professional approach, Mateja takes the time to understand each client&rsquo;s goals, concerns, and lifestyle. Her focus is not only on relieving symptoms but also on helping clients move better, feel stronger, and enjoy a better quality of life.
               </p>
               <p>
-                Clients appreciate her friendly and supportive nature, as well as her ability to create a welcoming environment where they feel comfortable, listened to, and genuinely cared for throughout their treatment journey.
+                Clients appreciate her friendly and supportive nature, as well as her ability to create a welcoming environment where they feel comfortable, listened to, and genuinely cared for throughout their treatment.
               </p>
               <p>
                 Whether you&rsquo;re recovering from injury, struggling with everyday aches and pains, looking to improve mobility, or simply wanting to invest in your health and wellbeing, Mateja is committed to helping you move better, feel better, and live stronger.
@@ -383,7 +383,7 @@ export default function TeamPage() {
                 'SMRT — Soft Tissue Remedial Therapist',
                 'MSMA — Member of the Sports Massage Association',
                 'Qualified in Reflexology & Lymphatic Drainage Techniques',
-                'Indian Head Massage, Natural Lift Facial Massage & Emmett Technique',
+                'Also trained in Indian Head Massage, Natural Lift Facial Massage & Emmett Technique (ask us about these)',
               ].map((qual) => (
                 <div key={qual} className="flex items-start gap-2 text-page">
                   <CheckIcon />
@@ -393,18 +393,18 @@ export default function TeamPage() {
             </div>
 
             <div className="mt-10">
-              <BookingButton label="Book Your Session with Mateja" />
+              <BookingButton href={BOOKING_URLS.staffMateja} label="Book Your Session with Mateja" />
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 lg:sticky lg:top-36">
             <div className="bg-card border-2 border-page rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-page mb-4">How Mateja Works</h3>
               <ul className="space-y-3">
                 {[
                   { title: 'Personalised Treatment', desc: 'No two clients are the same — Mateja takes time to understand each person’s goals and builds an effective, personalised plan.' },
                   { title: 'Calm & Caring', desc: 'A calm, caring, and professional approach drawn from over 18 years working in therapeutic settings.' },
-                  { title: 'Broad Skill Set', desc: 'Soft tissue therapy alongside reflexology, pregnancy massage, Indian head massage, facial massage, and the Emmett Technique.' },
+                  { title: 'Broad Skill Set', desc: 'Soft tissue therapy alongside reflexology and pregnancy massage. She is also trained in Indian head massage, facial massage and the Emmett Technique: these aren’t bookable online yet, so ask us.' },
                   { title: 'Whole-Person Wellbeing', desc: 'Focused on reducing pain, improving mobility, supporting recovery, and enhancing overall wellbeing.' },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-3">

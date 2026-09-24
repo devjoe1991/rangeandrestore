@@ -7,6 +7,8 @@ export type GalleryImage = {
   src: string
   alt: string
   caption: string
+  /** 'contain' for photos whose edges carry text, e.g. a labelled collage. */
+  fit?: 'cover' | 'contain'
 }
 
 const PLACEHOLDER_COUNT = 12
@@ -59,13 +61,15 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
     <div>
       {/* ── Featured photo ────────────────────────────────────── */}
       <div ref={featuredRef} className="scroll-mt-24">
-        <figure className="rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] relative shadow-lg">
+        <figure className="rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] relative shadow-lg bg-ink">
           <Image
             key={selected}
             src={images[selected].src}
             alt={images[selected].alt}
             fill
-            className="object-cover transition-opacity duration-300"
+            // contain, not cover: many photos are portrait, and cropping them
+            // to 16:9 blew a ~1000px-wide original up to 1216px and cut it.
+            className="object-contain transition-opacity duration-300"
             sizes="(max-width: 1280px) 100vw, 1216px"
             priority
           />
@@ -101,7 +105,7 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
             className={`relative aspect-square rounded-lg overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal transition-all ${
               selected === i
                 ? 'ring-2 ring-brand-teal ring-offset-2 dark:ring-offset-surface-night opacity-100'
-                : 'opacity-70 hover:opacity-100'
+                : 'opacity-95 hover:opacity-100'
             }`}
             aria-label={`View: ${img.caption}`}
             aria-pressed={selected === i}
@@ -110,7 +114,7 @@ export function GalleryClient({ images }: { images: GalleryImage[] }) {
               src={img.src}
               alt={img.alt}
               fill
-              className="object-cover"
+              className={img.fit === 'contain' ? 'object-contain bg-page-alt' : 'object-cover'}
               sizes="(max-width: 640px) 33vw, (max-width: 1024px) 20vw, 200px"
             />
           </button>

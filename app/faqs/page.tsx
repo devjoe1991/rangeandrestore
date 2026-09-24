@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BookingButton } from '@/components/BookingButton'
+import { BUSINESS } from '@/lib/constants'
 import { buildMetadata, buildBreadcrumbs } from '@/lib/seo'
 import FaqAccordion from './FaqAccordion'
 import { faqs } from './data'
 import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Sports Massage FAQs – Range and Restore Archway',
-  description: 'Common questions about sports massage, deep tissue therapy and MLD at Range and Restore in Archway, North London. Find out what to expect before you book.',
+  title: 'Sports Massage FAQs – Archway, North London',
+  description: 'Prices, booking, cancellation, what to wear, the private sauna and more: common questions about massage at Range and Restore in Archway, North London.',
   path: '/faqs',
 })
 
@@ -40,7 +41,7 @@ export default function FAQsPage() {
             Whether you are new to massage, managing an injury, or just curious about booking, find your answer here.
           </p>
           <p className="mt-3 text-base text-page-muted opacity-80 max-w-xl">
-            Not sure which treatment is right for you? Call Range and Restore on <a href="tel:+447890716154" className="font-semibold text-page hover:underline">07890 716154</a>. We are happy to talk it through before you book.
+            Not sure which treatment is right for you? Call Range and Restore on <a href={`tel:${BUSINESS.phoneTel}`} className="font-semibold text-page hover:underline">{BUSINESS.phone}</a>. We are happy to talk it through before you book.
           </p>
         </div>
       </div>
@@ -56,7 +57,7 @@ export default function FAQsPage() {
             Get in touch and our team will be happy to help before you book.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <BookingButton label="Book Your Session" />
+            <BookingButton label="Book Your Session" variant="white" />
             <Link href={ROUTES.contact} className="btn btn-outline-white">
               Contact Us
             </Link>

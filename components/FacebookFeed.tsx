@@ -82,9 +82,25 @@ export function FacebookFeed() {
         <div className="flex justify-center">
           <div
             ref={wrapRef}
-            className="rounded-2xl overflow-hidden shadow-md w-full max-w-[500px] bg-white"
+            className="relative rounded-2xl overflow-hidden shadow-md w-full max-w-[500px] bg-card"
             style={{ height: 600 }}
           >
+            {/* Fallback sits behind the embed. Ad blockers and strict privacy
+                settings hide or block the Facebook frame, and without this the
+                visitor would see an empty box. */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8 text-center">
+              <p className="text-page-muted text-sm">
+                If the Facebook feed doesn&apos;t load here, you can see our posts on Facebook itself.
+              </p>
+              <a
+                href={PAGE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary text-sm"
+              >
+                See our Facebook page →
+              </a>
+            </div>
             {inView && width !== null && (
               <iframe
                 key={width}
@@ -92,6 +108,7 @@ export function FacebookFeed() {
                 src={buildSrc(width)}
                 width={width}
                 height={600}
+                className="relative"
                 style={{ border: 'none', overflow: 'hidden', display: 'block', width: '100%', height: '100%' }}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 title="Range and Restore Sports Massage on Facebook"
