@@ -8,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Infrared Sauna in Archway, North London | Recovery & Pain Relief',
-  description: 'Private Full Spectrum Infrared Hybrid Sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and better mobility. Full spectrum infrared and traditional heat. Private sessions for up to two people from £19.',
+  description: 'Private Full Spectrum Infrared Hybrid Sauna in Archway, North London for muscle recovery, pain relief, reduced stiffness and better mobility. Full spectrum infrared and traditional heat. Private 60-minute sessions for up to two people, £19, with a private shower in the Recovery Room.',
   path: '/recovery-suite/infrared-sauna',
   image: `${BASE_URL}${SAUNA_PHOTOS.front.src}`,
 })
@@ -40,8 +40,7 @@ const serviceSchema = {
   ],
   serviceType: 'Infrared Sauna',
   offers: [
-    { '@type': 'Offer', price: '19.00', priceCurrency: 'GBP', name: 'Infrared & Traditional Hybrid Sauna – 45 Minutes' },
-    { '@type': 'Offer', price: '29.00', priceCurrency: 'GBP', name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes' },
+    { '@type': 'Offer', price: '19.00', priceCurrency: 'GBP', name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes' },
   ],
 }
 
@@ -61,7 +60,7 @@ const faqs = [
   },
   {
     q: 'How long is a typical session?',
-    a: 'You can book a private 45-minute session for £19 or a private 60-minute session for £29. The full hour gives you plenty of time to settle in, switch between traditional and infrared heat, and properly switch off.',
+    a: 'Sessions are a private 60 minutes for £19 (per session, not per person). The full hour gives you plenty of time to settle in, switch between traditional and infrared heat, and properly switch off.',
   },
   {
     q: 'Can I bring someone with me?',
@@ -136,7 +135,7 @@ export default function InfraredSaunaPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Your private Infrared Hybrid Sauna</h2>
             <p className="text-page-muted mb-4">
-              Experience the benefits of our private Full Spectrum Infrared Hybrid Sauna at Range and Restore Sports Massage in Archway, North London. Our premium infrared sauna combines advanced full spectrum infrared technology with a traditional sauna experience to help you relax, recover and recharge in complete privacy.
+              Experience the benefits of our private Full Spectrum Infrared Hybrid Sauna at Range and Restore Sports Massage in Archway, North London. Our premium infrared sauna combines advanced full spectrum infrared technology with a traditional sauna experience to help you relax, recover and recharge in complete privacy. The Recovery Room now includes its own private shower, so you can cool off and freshen up without leaving the room.
             </p>
 
             <div className="bg-accent rounded-2xl p-6 sm:p-8">
@@ -144,10 +143,6 @@ export default function InfraredSaunaPage() {
               <div className="flex flex-wrap gap-8 mb-5">
                 <div>
                   <p className="text-ink text-3xl sm:text-4xl font-black leading-none">£19</p>
-                  <p className="text-brand-green font-semibold text-sm mt-1">45-minute private session, up to two people</p>
-                </div>
-                <div>
-                  <p className="text-ink text-3xl sm:text-4xl font-black leading-none">£29</p>
                   <p className="text-brand-green font-semibold text-sm mt-1">60-minute private session, up to two people</p>
                 </div>
               </div>
@@ -158,7 +153,8 @@ export default function InfraredSaunaPage() {
               <p className="text-ink text-sm font-black uppercase tracking-wide mb-2">Every session includes</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
                 {[
-                  'Exclusive use of our private, air-conditioned recovery suite',
+                  'Exclusive use of our private, air-conditioned Recovery Room',
+                  'A private shower in the room',
                   'Fresh towels',
                   'Chilled drinking water',
                   'A Bluetooth speaker for your own music or podcast',
@@ -293,7 +289,7 @@ export default function InfraredSaunaPage() {
           <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-ink mb-4">Infrared sauna recovery in Archway, North London</h2>
             <p className="text-brand-green font-semibold mb-6">
-              Private Infrared &amp; Traditional Hybrid Sauna sessions from £19 for one or two people, and sports massage + sauna packages from £85.
+              Private 60-minute Infrared &amp; Traditional Hybrid Sauna sessions for £19 for one or two people, and sports massage + sauna packages from £85.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}

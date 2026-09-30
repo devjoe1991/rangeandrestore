@@ -247,7 +247,7 @@ export default function NormatecCompressionRecoveryArchwayPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Use the Normatec at Range and Restore</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Normatec is booked as a 90-minute Sports Massage + Normatec session for &pound;110: 60 minutes of sports massage, then 30 minutes of Normatec compression. The infrared hybrid sauna is booked separately, from &pound;19 for a private 45-minute session, and gift cards are available.
+            Normatec is booked as a 90-minute Sports Massage + Normatec session for &pound;110: 60 minutes of sports massage, then 30 minutes of Normatec compression. The infrared hybrid sauna is booked separately, &pound;19 for a private 60-minute session, and gift cards are available.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a

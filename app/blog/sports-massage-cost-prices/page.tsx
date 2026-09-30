@@ -119,7 +119,7 @@ export default function SportsMassageCostPage() {
 
           <p><strong className="text-page">Recovery Suite</strong></p>
           <ul className="space-y-2 list-disc list-inside">
-            <li><Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link>: 45 minutes £19, 60 minutes £29 (private, up to two people, price per session)</li>
+            <li><Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Infrared Hybrid Sauna</Link>: 60 minutes £19 (private, up to two people, price per session)</li>
             <li><Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link>: 90 minutes £110 (60 minutes of sports massage, then 30 minutes of Normatec compression)</li>
           </ul>
 

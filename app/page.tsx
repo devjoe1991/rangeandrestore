@@ -111,7 +111,7 @@ const services = [
     title: 'Infrared Hybrid Sauna',
     price: 'From £19',
     problem: 'Sore, stressed and not sleeping well?',
-    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private sessions from £19, plus Restore+ monthly memberships.',
+    solution: 'Two-person Vidalux hybrid cabin with traditional and full-spectrum infrared heat. Private 60-minute sessions for £19, plus Restore+ monthly memberships.',
     href: '/recovery-suite/infrared-sauna',
     bookingHref: BOOKING_URLS.recoverySuite,
     image: SAUNA_PHOTOS.front.src,
@@ -301,7 +301,7 @@ export default function HomePage() {
       <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-ink text-sm font-bold leading-snug">
-            <span className="font-black">Recovery Suite:</span>{' '}private Infrared Hybrid Sauna from £19, plus Restore+ sauna &amp; treatment memberships.
+            <span className="font-black">Recovery Suite:</span>{' '}private Infrared Hybrid Sauna (60 minutes, £19), plus Restore+ sauna &amp; treatment memberships.
           </span>
         </div>
       </div>
@@ -314,7 +314,7 @@ export default function HomePage() {
               The Recovery Suite at Range and Restore
             </h2>
             <p className="text-teal-tint/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
-              A private hybrid infrared and traditional sauna room at the clinic, from £19 a session for one or two people. Normatec full body compression is part of our £110 Sports Massage + Normatec package.
+              A private hybrid infrared and traditional sauna room at the clinic, £19 for a 60-minute session for one or two people, with its own private shower. Normatec full body compression is part of our £110 Sports Massage + Normatec package.
             </p>
           </div>
 
@@ -322,7 +322,7 @@ export default function HomePage() {
             {[
               {
                 title: 'Infrared Hybrid Sauna',
-                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat. Private sessions from £19.',
+                desc: 'Two person Vidalux hybrid cabin. Traditional and full spectrum infrared heat. Private 60-minute sessions for £19.',
                 href: '/recovery-suite/infrared-sauna',
               },
               {
@@ -332,7 +332,7 @@ export default function HomePage() {
               },
               {
                 title: 'Recovery Sessions & Memberships',
-                desc: 'Private sauna sessions from £19, sports massage recovery packages from £85, plus Restore+ monthly memberships.',
+                desc: 'Private 60-minute sauna sessions for £19, sports massage recovery packages from £85, plus Restore+ monthly memberships.',
                 href: '/recovery-suite/recovery-packages',
               },
             ].map((card) => (

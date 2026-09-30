@@ -211,7 +211,7 @@ export default function SportsMassageArchwayLocalGuidePage() {
           </ul>
 
           <p>
-            The sauna is a private session, booked on its own: 45 minutes for &pound;19 or 60 minutes for &pound;29. Normatec comes as part of a 90-minute Sports Massage + Normatec session for &pound;110 (60 minutes of massage, then 30 minutes of Normatec). The <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page shows how massage, sauna and Normatec fit together.
+            The sauna is a private session, booked on its own: 60 minutes for &pound;19. Normatec comes as part of a 90-minute Sports Massage + Normatec session for &pound;110 (60 minutes of massage, then 30 minutes of Normatec). The <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page shows how massage, sauna and Normatec fit together.
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">When sports massage isn&apos;t the right first step</h2>

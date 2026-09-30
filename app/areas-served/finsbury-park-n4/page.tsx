@@ -57,7 +57,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What’s the best massage after a long run or race?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A 60- or 90-minute sports and deep tissue session (£75 or £110), ideally a day or two after the event rather than immediately. After bigger efforts, many runners add a private infrared sauna session (from £19) or book the 90-minute Sports Massage + Normatec session (£110) in the Recovery Suite.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A 60- or 90-minute sports and deep tissue session (£75 or £110), ideally a day or two after the event rather than immediately. After bigger efforts, many runners add a private infrared sauna session (60 minutes, £19) or book the 90-minute Sports Massage + Normatec session (£110) in the Recovery Suite.' },
     },
     {
       '@type': 'Question',
@@ -104,7 +104,7 @@ export default function FinsburyParkN4Page() {
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Treatments most-booked by Finsbury Park clients</h2>
           <p>
-            Runners typically book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110) to work through the posterior chain &mdash; calves, hamstrings, glutes and lower back &mdash; plus the hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> and <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon massage guide</Link> cover the detail. After big efforts, many add a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> session (from £19) or book the 90-minute <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link> session (£110).
+            Runners typically book a 60- or 90-minute <Link href={ROUTES.services.sportsDeepTissueMassage} className="link-inline">sports and deep tissue massage</Link> (£75 or £110) to work through the posterior chain &mdash; calves, hamstrings, glutes and lower back &mdash; plus the hip flexors and quads. Our <Link href={ROUTES.blog.sportsMassageForRunners} className="link-inline">runners&apos; guide</Link> and <Link href={ROUTES.blog.marathonSportsMassageArchway} className="link-inline">marathon massage guide</Link> cover the detail. After big efforts, many add a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> session (60 minutes, £19) or book the 90-minute <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Sports Massage + Normatec</Link> session (£110).
           </p>
 
           <h2 className="text-2xl font-bold text-page mt-8 mb-3">Finsbury Park and the wider catchment</h2>
@@ -130,7 +130,7 @@ export default function FinsburyParkN4Page() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">What&apos;s the best massage after a long run or race?</h3>
-              <p>A 60- or 90-minute sports and deep tissue session (£75 or £110), ideally a day or two after the event rather than immediately. After bigger efforts, many runners add a private infrared sauna session (from £19) or book the 90-minute Sports Massage + Normatec session (£110) in the Recovery Suite.</p>
+              <p>A 60- or 90-minute sports and deep tissue session (£75 or £110), ideally a day or two after the event rather than immediately. After bigger efforts, many runners add a private infrared sauna session (60 minutes, £19) or book the 90-minute Sports Massage + Normatec session (£110) in the Recovery Suite.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-page mb-2">Do you treat cyclists and commuters from N4?</h3>

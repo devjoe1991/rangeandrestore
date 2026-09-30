@@ -251,7 +251,7 @@ export default function ServicesPage() {
               Recover properly, under the same roof
             </h2>
             <p className="text-teal-tint/80 text-sm sm:text-base font-medium max-w-2xl mx-auto">
-              A private recovery and wellness space alongside the treatment rooms. <span className="font-bold text-white">Infrared Hybrid Sauna from £19, recovery packages from £85, plus Restore+ monthly memberships.</span>
+              A private recovery and wellness space alongside the treatment rooms. <span className="font-bold text-white">Infrared Hybrid Sauna (60 minutes, £19), recovery packages from £85, plus Restore+ monthly memberships.</span>
             </p>
           </div>
 

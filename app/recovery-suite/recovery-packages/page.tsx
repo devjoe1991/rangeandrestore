@@ -8,7 +8,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Sessions in Archway London | Infrared Sauna, Massage Packages & Memberships',
-  description: 'Private Infrared & Traditional Hybrid Sauna sessions from £19, sports massage + sauna packages from £85, a £110 sports massage + Normatec package, plus Restore+ sauna and Signature Treatment memberships at Range and Restore, Archway.',
+  description: 'Private Infrared & Traditional Hybrid Sauna sessions (60 minutes, £19), sports massage + sauna packages from £85, a £110 sports massage + Normatec package, plus Restore+ sauna and Signature Treatment memberships at Range and Restore, Archway.',
   path: '/recovery-suite/recovery-packages',
 })
 
@@ -41,8 +41,7 @@ const parentServiceSchema = {
     '@type': 'OfferCatalog',
     name: 'Recovery Sessions',
     itemListElement: [
-      { '@type': 'Offer', price: '19.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared & Traditional Hybrid Sauna – 45 Minutes' } },
-      { '@type': 'Offer', price: '29.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes' } },
+      { '@type': 'Offer', price: '19.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes' } },
       { '@type': 'Offer', price: '85.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (30 Minutes) + Infrared Hybrid Sauna (45 Minutes)' } },
       { '@type': 'Offer', price: '90.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Infrared Hybrid Sauna (30 Minutes)' } },
       { '@type': 'Offer', price: '110.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Normatec Compression Therapy (30 Minutes)' } },
@@ -52,21 +51,12 @@ const parentServiceSchema = {
 
 const saunaSessions = [
   {
-    name: 'Infrared & Traditional Hybrid Sauna – 45 Minutes',
-    sequence: '45 min · private sauna room, up to two people',
-    price: '£19',
-    desc: 'A private 45 minutes in the Full Spectrum Infrared Hybrid Sauna, with the room to yourself. The price is per session, not per person. The easiest way to fit recovery in around training or a busy week.',
-    detailHref: ROUTES.recoverySuite.infraredSauna,
-    bookingHref: BOOKING_URLS.recoverySuite,
-  },
-  {
     name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes',
-    sequence: '60 min · private sauna room, up to two people',
-    price: '£29',
-    desc: 'A full hour to settle in, switch between traditional and infrared heat, and properly switch off. Our most popular standalone sauna session.',
+    sequence: '60 min · private sauna room with shower, up to two people',
+    price: '£19',
+    desc: 'A full hour in the Full Spectrum Infrared Hybrid Sauna, with the room and its private shower to yourself. Settle in, switch between traditional and infrared heat, and properly switch off. The price is per session, not per person.',
     detailHref: ROUTES.recoverySuite.infraredSauna,
     bookingHref: BOOKING_URLS.recoverySuite,
-    popular: true,
   },
 ]
 
@@ -150,7 +140,7 @@ const signatureMemberships = [
 const faqs = [
   {
     q: 'Can I book just a sauna session on its own?',
-    a: 'Yes. The private Infrared & Traditional Hybrid Sauna is a core part of the Recovery Suite. Book a 45-minute session for £19 or a 60-minute session for £29 without committing to a longer combined visit. It\'s the easiest entry point into the suite.',
+    a: 'Yes. The private Infrared & Traditional Hybrid Sauna is a core part of the Recovery Suite. Book a private 60-minute session for £19 without committing to a longer combined visit. It\'s the easiest entry point into the suite.',
   },
   {
     q: 'What\'s the difference between the massage and sauna package and the massage and Normatec package?',
@@ -300,7 +290,7 @@ export default function RecoverySessionsPage() {
             Recovery Sessions in Archway, North London
           </h1>
           <p className="text-2xl lg:text-3xl font-semibold text-page-muted">
-            Private Infrared &amp; Traditional Hybrid Sauna sessions from £19, sports massage + sauna packages from £85, the £110 Sports Massage + Normatec package, and Restore+ monthly memberships.
+            Private Infrared &amp; Traditional Hybrid Sauna sessions (60 minutes, £19), sports massage + sauna packages from £85, the £110 Sports Massage + Normatec package, and Restore+ monthly memberships.
           </p>
           <div className="mt-6">
             <a
@@ -466,7 +456,7 @@ export default function RecoverySessionsPage() {
           <section className="bg-accent rounded-2xl p-8 text-center sm:text-left">
             <h2 className="text-2xl font-black text-ink mb-4">Recovery Sessions at Range and Restore</h2>
             <p className="text-brand-green font-semibold mb-6">
-              Private Infrared &amp; Traditional Hybrid Sauna sessions from £19 and sports massage packages from £85 in Archway, North London, with Restore+ memberships available on request.
+              Private Infrared &amp; Traditional Hybrid Sauna sessions (60 minutes, £19) and sports massage packages from £85 in Archway, North London, with Restore+ memberships available on request.
             </p>
             <a
               href={BOOKING_URLS.recoverySuite}

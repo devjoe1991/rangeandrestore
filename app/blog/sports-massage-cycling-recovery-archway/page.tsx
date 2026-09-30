@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     q: 'How does the infrared sauna help a cyclist specifically?',
-    a: 'A few ways. The heat helps relax the hip flexors, lumbar fascia and shoulders that have been held in cycling position all day, so they let go more easily without anything being pushed. Heat also encourages circulation. The bigger one is winding down. After a long ride your system is wound up and your sleep can suffer. A 45 or 60 minute session in the Vidalux hybrid sauna helps you relax, and many people find they sleep better afterwards. Better sleep is where most of the actual recovery happens.',
+    a: 'A few ways. The heat helps relax the hip flexors, lumbar fascia and shoulders that have been held in cycling position all day, so they let go more easily without anything being pushed. Heat also encourages circulation. The bigger one is winding down. After a long ride your system is wound up and your sleep can suffer. A 60-minute session in the Vidalux hybrid sauna helps you relax, and many people find they sleep better afterwards. Better sleep is where most of the actual recovery happens.',
   },
   {
     q: 'How does Normatec compression help cyclists?',
@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: 'Can I combine sports massage, sauna and Normatec compression in one visit?',
-    a: 'Yes. Normatec always comes with a massage: the 90-minute Sports Massage + Normatec session is 60 minutes of hands-on sports massage, then 30 minutes of Normatec, for £110. The sauna is booked separately (45 minutes £19, 60 minutes £29), so you can book a sauna session straight after to wind down. The Recovery Packages page shows the options.',
+    a: 'Yes. Normatec always comes with a massage: the 90-minute Sports Massage + Normatec session is 60 minutes of hands-on sports massage, then 30 minutes of Normatec, for £110. The sauna is booked separately (60 minutes, £19), so you can book a sauna session straight after to wind down. The Recovery Packages page shows the options.',
   },
   {
     q: 'Do I need to be a serious cyclist to use the Recovery Suite kit?',
@@ -237,7 +237,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
           <ul className="space-y-2 list-disc list-inside">
             <li><strong>Sports massage first</strong> to release the specific tight spots. Glutes, lumbar fascia, neck and pec minor are the cyclist-specific bits.</li>
             <li><strong>Normatec compression next.</strong> In the 90-minute Sports Massage + Normatec session (&pound;110), the last 30 minutes are in the Normatec, and many riders find their quads, calves and hip flexors feel lighter afterwards. See the <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">Normatec compression page</Link> for the full setup.</li>
-            <li><strong>Infrared sauna last</strong> to wind down. After a long ride the system is wound up, and a 45 or 60 minute session in the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Vidalux hybrid sauna</Link> helps you relax. Many people find they sleep better afterwards. The sauna is booked separately: 45 minutes &pound;19, 60 minutes &pound;29.</li>
+            <li><strong>Infrared sauna last</strong> to wind down. After a long ride the system is wound up, and a 60-minute session in the <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">Vidalux hybrid sauna</Link> helps you relax. Many people find they sleep better afterwards. The sauna is booked separately: 60 minutes, &pound;19.</li>
           </ul>
 
           <p>
@@ -309,7 +309,7 @@ export default function SportsMassageCyclingRecoveryArchwayPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Book your cycling recovery session in Archway</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Sports massage for cyclists at 130 Junction Road, Archway. Infrared sauna sessions from &pound;19, and Normatec with the 90-minute Sports Massage + Normatec session for &pound;110.
+            Sports massage for cyclists at 130 Junction Road, Archway. Infrared sauna sessions (60 minutes, &pound;19), and Normatec with the 90-minute Sports Massage + Normatec session for &pound;110.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a

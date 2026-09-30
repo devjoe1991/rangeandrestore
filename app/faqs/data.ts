@@ -43,7 +43,7 @@ export const faqs: Faq[] = [
   },
   {
     q: 'Can I book the sauna on its own?',
-    a: 'Yes. A private sauna session in our Recovery Suite is £19 for 45 minutes or £29 for 60 minutes. The suite is yours for the session, for up to two people, and the price is per session. It is sauna only: Normatec compression comes only with the Sports Massage + Normatec package.',
+    a: 'Yes. A private sauna session in our Recovery Suite is £19 for 60 minutes. The suite is yours for the session, for up to two people, and the price is per session. It is sauna only: Normatec compression comes only with the Sports Massage + Normatec package.',
     link: { href: ROUTES.recoverySuite.infraredSauna, label: 'About the sauna' },
   },
   {

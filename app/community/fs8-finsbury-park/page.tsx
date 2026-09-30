@@ -169,7 +169,7 @@ export default function Fs8FinsburyParkPartnerPage() {
               <strong className="text-page">Joined-up advice.</strong> Tell your therapist you train at FS8 and your home plan can be built around the classes you already go to. Tell your FS8 trainer what we found and they can adjust the movements for you.
             </li>
             <li>
-              <strong className="text-page">Recovery between classes.</strong> Our <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in Archway has a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> (from £19 on its own), useful after a hard week of training, and Normatec <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression therapy</Link> as part of the 90-minute Sports Massage + Normatec session (£110).
+              <strong className="text-page">Recovery between classes.</strong> Our <Link href={ROUTES.recoverySuite.index} className="link-inline">Recovery Suite</Link> in Archway has a private <Link href={ROUTES.recoverySuite.infraredSauna} className="link-inline">infrared sauna</Link> (60 minutes, £19 on its own), useful after a hard week of training, and Normatec <Link href={ROUTES.recoverySuite.compressionTherapy} className="link-inline">compression therapy</Link> as part of the 90-minute Sports Massage + Normatec session (£110).
             </li>
           </ul>
 

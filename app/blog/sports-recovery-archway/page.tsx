@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'Can an infrared sauna help muscle recovery?',
-    a: "Many athletes use heat to unwind after hard sessions. An infrared hybrid sauna session helps you relax, and many people find they sleep better afterwards, which is the part of recovery that actually rebuilds you. Sessions are 45 minutes (£19) or 60 minutes (£29), and it pairs well with a massage.",
+    a: "Many athletes use heat to unwind after hard sessions. An infrared hybrid sauna session helps you relax, and many people find they sleep better afterwards, which is the part of recovery that actually rebuilds you. Sessions are 60 minutes for £19, and it pairs well with a massage.",
   },
   {
     q: 'When should I get a sports massage before an event?',
@@ -138,7 +138,7 @@ export default function SportsRecoveryPage() {
 
           <h3 className="text-xl font-bold text-page mt-6 mb-2">Prices</h3>
           <ul className="space-y-2 list-disc list-inside">
-            <li><strong>Infrared Hybrid Sauna</strong>: 45 minutes &pound;19, 60 minutes &pound;29 (sauna only).</li>
+            <li><strong>Infrared Hybrid Sauna</strong>: 60 minutes &pound;19 (sauna only).</li>
             <li><strong>Sports Massage + Normatec</strong>: 90 minutes, &pound;110 (60 minutes of sports massage, then 30 minutes of Normatec).</li>
             <li><strong>Sports Massage + Sauna</strong>: &pound;85 for a 30-minute massage and a 45-minute sauna, or &pound;90 for a 60-minute massage and a 30-minute sauna.</li>
           </ul>
@@ -194,7 +194,7 @@ export default function SportsRecoveryPage() {
         <div className="mt-12 bg-accent rounded-2xl p-8 text-center sm:text-left">
           <h2 className="text-2xl font-black text-ink mb-4">Recover like you train</h2>
           <p className="text-brand-green font-semibold mb-6">
-            Sports massage, Normatec compression and infrared sauna, under one roof in Archway, North London. Sauna sessions from &pound;19; Sports Massage + Normatec &pound;110 for 90 minutes.
+            Sports massage, Normatec compression and infrared sauna, under one roof in Archway, North London. Sauna sessions (60 minutes, &pound;19); Sports Massage + Normatec &pound;110 for 90 minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:flex-wrap">
             <a

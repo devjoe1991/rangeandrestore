@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: 'How do I book time on the Normatec?',
-    a: 'Book the Sports Massage + Normatec package online: 90 minutes for £110, a 60-minute sports massage followed by 30 minutes on the Normatec. This is the only way to use the Normatec. There is no standalone Normatec session, and a £19 or £29 sauna session does not include it.',
+    a: 'Book the Sports Massage + Normatec package online: 90 minutes for £110, a 60-minute sports massage followed by 30 minutes on the Normatec. This is the only way to use the Normatec. There is no standalone Normatec session, and a £19 sauna session does not include it.',
   },
   {
     q: 'Do I need to undress?',
@@ -155,7 +155,7 @@ export default function CompressionTherapyPage() {
             <p className="text-page-muted text-sm mt-4">
               Looking for the sauna? Private{' '}
               <Link href={ROUTES.recoverySuite.infraredSauna} className="text-brand-teal underline">Infrared Hybrid Sauna</Link>{' '}
-              sessions are £19 for 45 minutes or £29 for 60 minutes, and don&apos;t include the Normatec.
+              sessions are £19 for 60 minutes, and don&apos;t include the Normatec.
             </p>
           </section>
 

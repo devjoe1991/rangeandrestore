@@ -10,7 +10,7 @@ import { ROUTES } from '@/lib/routes'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Recovery Suite – Infrared Hybrid Sauna & Compression Therapy in Archway London',
-  description: 'Recovery and wellness suite at Range and Restore, Archway. Infrared Hybrid Sauna and Normatec compression. Private sauna sessions from £19, recovery packages from £85, plus Restore+ memberships.',
+  description: 'Recovery and wellness suite at Range and Restore, Archway. Infrared Hybrid Sauna and Normatec compression. Private 60-minute sauna sessions for £19, recovery packages from £85, plus Restore+ memberships.',
   path: '/recovery-suite',
 })
 
@@ -76,7 +76,7 @@ export default function RecoverySuitePage() {
             A dedicated space for recovery and wellness, designed around the same assessment-led care you already trust at the clinic.
           </p>
           <p className="mt-3 text-teal-tint/70 max-w-2xl">
-            Private Infrared &amp; Traditional Hybrid Sauna sessions from £19 (the whole room for you, up to two people), sports massage + sauna packages from £85, Normatec compression as part of our £110 sports massage package, and Restore+ monthly memberships.
+            Private Infrared &amp; Traditional Hybrid Sauna sessions (60 minutes, £19) (the whole room for you, up to two people), sports massage + sauna packages from £85, Normatec compression as part of our £110 sports massage package, and Restore+ monthly memberships.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 items-center">
             <a href={BOOKING_URLS.recoverySuite} target="_blank" rel="noopener noreferrer" className="btn btn-white">Book a Sauna Session</a>
@@ -96,7 +96,7 @@ export default function RecoverySuitePage() {
             The private sauna room sits at the quiet back of the clinic at 130 Junction Road, with its own shower. It is yours alone for the length of your session.
           </p>
           <p className="text-page-muted font-medium">
-            Alongside the hands-on sports and soft tissue work our team offers, the Recovery Suite adds two pieces of recovery kit. A two person hybrid infrared sauna, which you can book on its own or after a massage. And a Normatec 3 Full Body compression system for the legs, hips and arms, used as the last 30 minutes of our 90-minute Sports Massage + Normatec package.
+            Alongside the hands-on sports and soft tissue work our team offers, the Recovery Suite adds two pieces of recovery kit. A two person hybrid infrared sauna, which you can book on its own or after a massage, in a private Recovery Room with its own shower. And a Normatec 3 Full Body compression system for the legs, hips and arms, used as the last 30 minutes of our 90-minute Sports Massage + Normatec package.
           </p>
         </div>
       </div>
@@ -130,7 +130,7 @@ export default function RecoverySuitePage() {
           />
           <RecoverySuiteCard
             title="Recovery Sessions & Packages"
-            summary="Private Infrared Hybrid Sauna sessions from £19, sports massage + sauna packages from £85, the £110 Sports Massage + Normatec package, plus Restore+ monthly memberships. Pick the level that suits you."
+            summary="Private Infrared Hybrid Sauna sessions (60 minutes, £19), sports massage + sauna packages from £85, the £110 Sports Massage + Normatec package, plus Restore+ monthly memberships. Pick the level that suits you."
             href={ROUTES.recoverySuite.recoveryPackages}
             image={SAUNA_PHOTOS.suite.src}
             imageAlt={SAUNA_PHOTOS.suite.alt}
@@ -149,7 +149,7 @@ export default function RecoverySuitePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { step: '01', title: 'Standalone recovery', desc: 'A private Infrared & Traditional Hybrid Sauna session from £19, for one or two people. Quick to fit in around training or a busy week, no massage needed.' },
+              { step: '01', title: 'Standalone recovery', desc: 'A private Infrared & Traditional Hybrid Sauna session (60 minutes, £19), for one or two people. Quick to fit in around training or a busy week, no massage needed.' },
               { step: '02', title: 'Recovery with massage', desc: 'Sports massage followed by the sauna (from £85), or by Normatec compression (£110). Or ask on the day for a 45-minute sauna for £10 after any massage.' },
               { step: '03', title: 'Become a member', desc: 'Restore+ sauna and Signature Treatment memberships, from £49 a month. Set up personally — call or email to join.' },
             ].map((item) => (
