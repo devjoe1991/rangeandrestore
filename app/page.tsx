@@ -84,8 +84,8 @@ const services = [
     solution: 'An extended session gives your therapist the time to work through every area properly for deeper, lasting results.',
     href: '/services/2-hour-pain-relief-massage',
     bookingHref: BOOKING_URLS.twoHourRelief,
-    image: '/2-hour-pain-relief-massage-neck-shoulder-treatment-range-and-restore-archway-north-london.jpg',
-    imageAlt: 'Carlos Bonvicine working through the neck and shoulder during an extended pain relief massage at Range and Restore, Archway, North London',
+    image: '/2-hour-pain-relief-massage-treatment-room-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Client resting under a towel on the treatment table before an extended pain relief massage at Range and Restore, Archway, North London',
   },
   {
     title: 'Manual Lymphatic Drainage',
