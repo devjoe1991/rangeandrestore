@@ -74,8 +74,8 @@ const services = [
     solution: 'Integrated cupping plus sports and deep tissue therapy decompresses fascia, releases adhesions and accelerates recovery.',
     href: '/services/advanced-cupping-sports-deep-tissue',
     bookingHref: BOOKING_URLS.cuppingSportsDeepTissue,
-    image: '/cupping-therapy-sports-deep-tissue-massage-back-range-and-restore-archway-north-london.jpg',
-    imageAlt: 'Cupping therapy set along the spine during a sports and deep tissue massage at Range and Restore, Archway, North London',
+    image: '/cupping-therapy-back-treatment-room-range-and-restore-archway-north-london.jpg',
+    imageAlt: 'Cupping therapy along the spine and back in the treatment room at Range and Restore, Archway, North London',
   },
   {
     title: '2-Hour Pain Relief Massage',
