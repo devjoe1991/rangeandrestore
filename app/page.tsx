@@ -33,7 +33,7 @@ const services = [
     solution: 'Diagnostic MSK ultrasound with Reliable Scan, then a 60-minute clinical massage guided by the findings. Scan, written report and treatment under one roof.',
     href: '/services/msk-ultrasound-clinical-massage',
     bookingHref: BOOKING_URLS.mskUltrasoundMassage,
-    image: '/msk-ultrasound-clinical-massage-treatment-room-range-and-restore-archway-north-london.jpg',
+    image: '/clinical-massage-treatment-room-range-and-restore-archway-north-london.jpg',
     imageAlt: 'Treatment room at Range and Restore, Archway, where MSK ultrasound scans and clinical massage take place, 130 Junction Road, North London',
   },
   {
