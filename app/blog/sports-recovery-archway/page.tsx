@@ -140,7 +140,7 @@ export default function SportsRecoveryPage() {
           <ul className="space-y-2 list-disc list-inside">
             <li><strong>Infrared Hybrid Sauna</strong>: 60 minutes &pound;19 (sauna only).</li>
             <li><strong>Sports Massage + Normatec</strong>: 90 minutes, &pound;110 (60 minutes of sports massage, then 30 minutes of Normatec).</li>
-            <li><strong>Sports Massage + Sauna</strong>: &pound;85 for a 30-minute massage and a 45-minute sauna, or &pound;90 for a 60-minute massage and a 30-minute sauna.</li>
+            <li><strong>Sports Massage + Sauna</strong>: &pound;85 for a 30-minute massage and a 60-minute sauna, or &pound;90 for a 60-minute massage and a 60-minute sauna.</li>
           </ul>
           <p>
             You can see the massage and sauna options side by side on our <Link href={ROUTES.recoverySuite.recoveryPackages} className="link-inline">Recovery Packages</Link> page.

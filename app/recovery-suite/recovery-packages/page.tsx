@@ -42,8 +42,8 @@ const parentServiceSchema = {
     name: 'Recovery Sessions',
     itemListElement: [
       { '@type': 'Offer', price: '19.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Infrared & Traditional Hybrid Sauna – 60 Minutes' } },
-      { '@type': 'Offer', price: '85.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (30 Minutes) + Infrared Hybrid Sauna (45 Minutes)' } },
-      { '@type': 'Offer', price: '90.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Infrared Hybrid Sauna (30 Minutes)' } },
+      { '@type': 'Offer', price: '85.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (30 Minutes) + Infrared Hybrid Sauna (60 Minutes)' } },
+      { '@type': 'Offer', price: '90.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Infrared Hybrid Sauna (60 Minutes)' } },
       { '@type': 'Offer', price: '110.00', priceCurrency: 'GBP', itemOffered: { '@type': 'Service', name: 'Sports Massage (60 Minutes) + Normatec Compression Therapy (30 Minutes)' } },
     ],
   },
@@ -62,17 +62,17 @@ const saunaSessions = [
 
 const massageRecovery = [
   {
-    name: 'Sports Massage + Sauna – 75 Minutes',
-    sequence: '30 min sports massage + 45 min sauna',
-    total: '75 minutes total',
+    name: 'Sports Massage + Sauna – 90 Minutes',
+    sequence: '30 min sports massage + 60 min sauna',
+    total: '90 minutes total',
     price: '£85',
-    desc: 'Targeted hands-on work on the area that needs it, then a full 45 minutes in the sauna. Ideal for a focused problem area plus proper recovery time.',
+    desc: 'Targeted hands-on work on the area that needs it, then a full 60 minutes in the sauna. Ideal for a focused problem area plus proper recovery time.',
     bookingHref: BOOKING_URLS.packageSaunaMassage,
   },
   {
-    name: 'Sports Massage + Sauna – 90 Minutes',
-    sequence: '60 min sports massage + 30 min sauna',
-    total: '90 minutes total',
+    name: 'Sports Massage + Sauna – 120 Minutes',
+    sequence: '60 min sports massage + 60 min sauna',
+    total: '120 minutes total',
     price: '£90',
     desc: 'A full-hour sports massage followed by heat in the sauna. The deeper option after races, big training blocks or busy weeks.',
     bookingHref: BOOKING_URLS.packageSaunaMassage,
@@ -92,14 +92,14 @@ const saunaMemberships = [
     name: 'Restore+ Infrared Sauna Essential',
     price: '£49',
     period: '/month',
-    detail: '4 × 45-minute Infrared & Traditional Hybrid Sauna sessions',
+    detail: '4 × 60-minute Infrared & Traditional Hybrid Sauna sessions',
     desc: 'Ideal for reducing muscle tension, easing aches and pains, improving recovery and supporting your overall wellbeing.',
   },
   {
     name: 'Restore+ Infrared Sauna Plus',
     price: '£79',
     period: '/month',
-    detail: '8 × 45-minute Infrared & Traditional Hybrid Sauna sessions',
+    detail: '8 × 60-minute Infrared & Traditional Hybrid Sauna sessions',
     desc: 'Perfect for regular recovery, improving circulation and helping your body perform at its best.',
     popular: true,
   },
@@ -107,7 +107,7 @@ const saunaMemberships = [
     name: 'Restore+ Infrared Sauna Unlimited',
     price: '£119',
     period: '/month',
-    detail: 'Unlimited 45-minute Infrared & Traditional Hybrid Sauna sessions',
+    detail: 'Unlimited 60-minute Infrared & Traditional Hybrid Sauna sessions',
     desc: 'The ultimate recovery membership for those who want unlimited access to relax, recover and recharge whenever you need.',
   },
 ]
@@ -144,15 +144,15 @@ const faqs = [
   },
   {
     q: 'What\'s the difference between the massage and sauna package and the massage and Normatec package?',
-    a: 'Both start with a full 60-minute sports massage. The £90 package finishes with 30 minutes in the Infrared Hybrid Sauna, while the £110 package finishes with 30 minutes on the Hyperice Normatec 3 Full Body compression system. Choose the sauna for heat-based recovery, or the Normatec if you\'d like compression on your legs after a long run, ride or leg session.',
+    a: 'Both start with a full 60-minute sports massage. The £90 package finishes with 60 minutes in the Infrared Hybrid Sauna, while the £110 package finishes with 30 minutes on the Hyperice Normatec 3 Full Body compression system. Choose the sauna for heat-based recovery, or the Normatec if you\'d like compression on your legs after a long run, ride or leg session.',
   },
   {
     q: 'How do the Restore+ memberships work?',
-    a: 'Restore+ memberships are monthly plans. The Infrared Sauna memberships give you a set number of 45-minute sauna sessions each month (or unlimited on the top tier), and the Signature Treatment memberships give you one or two Signature Treatments a month at a saving on the usual price. Memberships are set up personally rather than bought online, so give us a call or drop us an email to join.',
+    a: 'Restore+ memberships are monthly plans. The Infrared Sauna memberships give you a set number of 60-minute sauna sessions each month (or unlimited on the top tier), and the Signature Treatment memberships give you one or two Signature Treatments a month at a saving on the usual price. Memberships are set up personally rather than bought online, so give us a call or drop us an email to join.',
   },
   {
     q: 'Is there another way to add the sauna to a massage?',
-    a: 'Yes. After any massage with us, you can ask on the day for a 45-minute sauna straight after it for £10 (usually £19). That applies to bundle clients too.',
+    a: 'Yes. After any massage with us, you can ask on the day for a 60-minute sauna straight after it for £10 (usually £19). That applies to bundle clients too.',
   },
   {
     q: 'How much total time should I block out?',
@@ -329,7 +329,7 @@ export default function RecoverySessionsPage() {
               No commitment. Book a private sauna session on its own, or pair a sports massage with the sauna or with Normatec compression.
             </p>
             <p className="text-page-muted mt-3 font-semibold">
-              Having a massage with us? Ask on the day for a 45-minute sauna straight after it for £10 (usually £19).
+              Having a massage with us? Ask on the day for a 60-minute sauna straight after it for £10 (usually £19).
             </p>
           </section>
 
@@ -364,7 +364,7 @@ export default function RecoverySessionsPage() {
             <span className="eyebrow block mb-2">Restore+ Memberships</span>
             <h2 className="text-2xl font-bold text-page mb-3">Restore+ Infrared Sauna Memberships</h2>
             <p className="text-page-muted mb-6">
-              Monthly sauna access for anyone who wants recovery to be a habit rather than a one-off. Every session is a private 45 minutes in the Infrared &amp; Traditional Hybrid Sauna.
+              Monthly sauna access for anyone who wants recovery to be a habit rather than a one-off. Every session is a private 60 minutes in the Infrared &amp; Traditional Hybrid Sauna.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {saunaMemberships.map((m) => (
@@ -440,7 +440,7 @@ export default function RecoverySessionsPage() {
           <section>
             <h2 className="text-2xl font-bold text-page mb-4">Already on a massage bundle?</h2>
             <p className="text-page-muted">
-              Bundle clients get the same sauna offer as everyone else: after any massage, ask on the day for a 45-minute sauna straight after it for £10 (usually £19). See the
+              Bundle clients get the same sauna offer as everyone else: after any massage, ask on the day for a 60-minute sauna straight after it for £10 (usually £19). See the
               {' '}<Link href={ROUTES.services.massageBundles} className="text-brand-teal underline">Massage Bundles page</Link>{' '}
               for current bundle options.
             </p>

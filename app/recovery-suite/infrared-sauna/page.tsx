@@ -147,7 +147,7 @@ export default function InfraredSaunaPage() {
                 </div>
               </div>
               <p className="text-ink text-sm font-bold mb-5">
-                Having a massage with us? Ask on the day for a 45-minute sauna straight after it for £10 (usually £19).
+                Having a massage with us? Ask on the day for a 60-minute sauna straight after it for £10 (usually £19).
               </p>
 
               <p className="text-ink text-sm font-black uppercase tracking-wide mb-2">Every session includes</p>
@@ -270,7 +270,7 @@ export default function InfraredSaunaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link href={ROUTES.services.sportsDeepTissueMassage} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Sports &amp; Deep Tissue Massage</p>
-                <p className="text-page-muted text-sm">Targeted hands-on work first, then the sauna straight after it. Ask on the day for a 45-minute sauna for £10.</p>
+                <p className="text-page-muted text-sm">Targeted hands-on work first, then the sauna straight after it. Ask on the day for a 60-minute sauna for £10.</p>
               </Link>
               <Link href={ROUTES.recoverySuite.recoveryPackages} className="bg-card border-2 border-brand-green rounded-xl p-5 card-lift block">
                 <p className="font-bold text-page mb-1">Recovery Packages</p>

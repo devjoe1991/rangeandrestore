@@ -395,8 +395,7 @@ export const businessSchema = {
       url: `${BASE_URL}/recovery-suite/infrared-sauna`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '19', priceCurrency: 'GBP', description: '45 minutes, private session' },
-        { '@type': 'PriceSpecification', price: '29', priceCurrency: 'GBP', description: '60 minutes, private session' },
+        { '@type': 'PriceSpecification', price: '19', priceCurrency: 'GBP', description: '60 minutes, private session' },
       ],
     },
     {
@@ -406,8 +405,8 @@ export const businessSchema = {
       url: `${BASE_URL}/recovery-suite/recovery-packages`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'PriceSpecification', price: '85', priceCurrency: 'GBP', description: '30 minute sports massage + 45 minute sauna recovery (75 minutes total)' },
-        { '@type': 'PriceSpecification', price: '90', priceCurrency: 'GBP', description: '60 minute sports massage + 30 minute sauna recovery (90 minutes total)' },
+        { '@type': 'PriceSpecification', price: '85', priceCurrency: 'GBP', description: '30 minute sports massage + 60 minute sauna recovery (90 minutes total)' },
+        { '@type': 'PriceSpecification', price: '90', priceCurrency: 'GBP', description: '60 minute sports massage + 60 minute sauna recovery (120 minutes total)' },
       ],
     },
     {
@@ -423,13 +422,13 @@ export const businessSchema = {
     {
       '@type': 'Offer',
       name: 'Restore+ Infrared Sauna Memberships',
-      description: 'Monthly Infrared & Traditional Hybrid Sauna memberships. Essential (4 × 45-minute sessions), Plus (8 × 45-minute sessions) and Unlimited (unlimited 45-minute sessions). Set up personally, not bookable online.',
+      description: 'Monthly Infrared & Traditional Hybrid Sauna memberships. Essential (4 × 60-minute sessions), Plus (8 × 60-minute sessions) and Unlimited (unlimited 60-minute sessions). Set up personally, not bookable online.',
       url: `${BASE_URL}/recovery-suite/recovery-packages`,
       priceCurrency: 'GBP',
       priceSpecification: [
-        { '@type': 'UnitPriceSpecification', price: '49', priceCurrency: 'GBP', unitText: 'MON', description: 'Essential — 4 × 45-minute sauna sessions per month' },
-        { '@type': 'UnitPriceSpecification', price: '79', priceCurrency: 'GBP', unitText: 'MON', description: 'Plus — 8 × 45-minute sauna sessions per month' },
-        { '@type': 'UnitPriceSpecification', price: '119', priceCurrency: 'GBP', unitText: 'MON', description: 'Unlimited — unlimited 45-minute sauna sessions per month' },
+        { '@type': 'UnitPriceSpecification', price: '49', priceCurrency: 'GBP', unitText: 'MON', description: 'Essential — 4 × 60-minute sauna sessions per month' },
+        { '@type': 'UnitPriceSpecification', price: '79', priceCurrency: 'GBP', unitText: 'MON', description: 'Plus — 8 × 60-minute sauna sessions per month' },
+        { '@type': 'UnitPriceSpecification', price: '119', priceCurrency: 'GBP', unitText: 'MON', description: 'Unlimited — unlimited 60-minute sauna sessions per month' },
       ],
     },
     {

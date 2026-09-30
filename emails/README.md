@@ -34,7 +34,7 @@ Mailchimp's Customer Journey builder, which the API does not expose.
 - `community-roundup.html` — Overall "Our Archway Community" (logo grid + why local partners matter)
 
 **Service / conversion**
-- `service-recovery-suite.html` — Recovery Suite spotlight: sauna £19/£29, Normatec only in the £110 massage session (photo strip + FAQ)
+- `service-recovery-suite.html` — Recovery Suite spotlight: sauna £19 for 60 min, Normatec only in the £110 massage session (photo strip + FAQ)
 - `service-sports-pain.html` — Sports & deep-tissue / pain relief (photo strip + FAQ)
 - `service-community-tuesday-clinic.html` — Community Tuesday Clinic (60 min £60 / 90 min £85, every Tuesday; community-focused, not a discount)
 - `service-restore-memberships.html` — Restore+ Memberships (sauna £49/£79/£119 + Signature Treatment £70/£100/£179 price tiles; CTA is call/email, memberships are NOT bookable online)
