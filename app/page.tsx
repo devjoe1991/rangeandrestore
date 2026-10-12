@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { getImageProps } from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
+import { HeroVideo } from '@/components/HeroVideo'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
@@ -24,6 +25,19 @@ export const metadata: Metadata = buildMetadata({
     `Sports massage clinic in Archway N19 with a team of BTEC Level 5 therapists. Rated ${REVIEW_RATING} from ${REVIEW_COUNT} Google reviews. Pain relief, injury recovery, mobility. Book online, sports massage from £50.`,
   path: '/',
 })
+
+/* Hero media: one 16:9 cut for md and up, one 5:4 cut for phones. Each has a
+   poster (.jpg) and a muted loop (.mp4) made from the same frames. */
+const HERO_MEDIA = '/hero/range-and-restore-sports-massage-team-archway-north-london'
+const HERO_MEDIA_CLASS = 'absolute inset-0 w-full h-full object-cover object-top'
+const heroPosterCommon = {
+  alt: 'The Range and Restore team of sports massage therapists at the clinic in Archway, North London',
+  sizes: '100vw',
+  loading: 'eager',
+  fetchPriority: 'high',
+} as const
+const { props: { srcSet: heroPosterDesktop } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}.jpg`, width: 1920, height: 1080 })
+const { props: { srcSet: heroPosterMobile, ...heroPosterProps } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}-mobile.jpg`, width: 1350, height: 1080 })
 
 const services = [
   {
@@ -209,31 +223,31 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
 
       {/* ── 1. HERO ──────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ minHeight: '560px' }} aria-label="Hero">
-        <Image
-          src="/carlos-bonvicine-sports-massage-archway-hero.jpg"
-          alt="Carlos Bonvicine, sports massage therapist and founder of Range and Restore, Archway, North London"
-          fill
-          className="object-cover object-[center_10%]"
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-brand-green/60" />
+      {/* The poster is the video's first frame, so the swap from image to video
+          is invisible. Below lg the media sits across the top and the text
+          tucks up under it; from lg it fills the hero with the text over its
+          lower third. Sizing and the tint live in globals.css (.home-hero*). */}
+      <section className="home-hero relative overflow-hidden bg-brand-green" aria-label="Hero">
+        <div className="home-hero-media relative overflow-hidden lg:absolute lg:inset-0">
+          <picture>
+            <source media="(min-width: 768px)" srcSet={heroPosterDesktop} sizes={heroPosterCommon.sizes} />
+            <img {...heroPosterProps} srcSet={heroPosterMobile} alt={heroPosterProps.alt} className={HERO_MEDIA_CLASS} />
+          </picture>
+          <HeroVideo desktopSrc={`${HERO_MEDIA}.mp4`} mobileSrc={`${HERO_MEDIA}-mobile.mp4`} className={HERO_MEDIA_CLASS} />
+          <div aria-hidden="true" className="home-hero-tint absolute inset-0" />
+        </div>
 
-        <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-8 sm:pt-24 sm:pb-10" style={{ minHeight: '660px' }}>
+        <div className="relative flex flex-col items-center text-center px-4 -mt-12 pb-8 lg:mt-0 lg:h-full lg:justify-end lg:pb-12">
 
-          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed mt-48 sm:mt-64">
+          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed">
             Sports Massage <span className="text-accent">&amp;</span> Soft Tissue Remedial Therapy
           </p>
-          <p className="text-white/90 text-sm sm:text-base mb-4 max-w-xl leading-relaxed font-semibold">
+          <p className="text-white/90 text-sm sm:text-base mb-3 md:mb-4 max-w-xl leading-relaxed font-semibold">
             Archway, North London.<br />
             A team of <span className="font-black text-white">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
           </p>
 
-
-
-          <div className="flex flex-row gap-3 justify-center flex-wrap mb-4">
+          <div className="flex flex-row gap-3 justify-center flex-wrap mb-3 md:mb-4">
             <BookingButton label="Book Your Session" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}

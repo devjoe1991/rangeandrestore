@@ -443,6 +443,40 @@ input, select, textarea {
   .wa-glyph-spin { animation: none; }
 }
 
+/* ── Homepage hero media ──────────────────────────────────── */
+/* Phones get the 5:4 cut and tablets the 16:9 cut, both shown whole across the
+   top. From lg the media fills the hero instead: as tall as the 16:9 frame,
+   but never more than 78% of the screen so the whole hero sits above the fold
+   under the header, and never too short for the text. */
+.home-hero-media { aspect-ratio: 5 / 4; }
+@media (min-width: 768px) {
+  .home-hero-media { aspect-ratio: 16 / 9; }
+}
+@media (min-width: 1024px) {
+  .home-hero { height: min(56.25vw, 78vh); min-height: 34rem; }
+  .home-hero-media { aspect-ratio: auto; }
+}
+
+/* The brand-green wash over the media. Light over the faces at the top,
+   solid by the bottom edge, where the text sits and the section colour takes over. */
+.home-hero-tint {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-brand-green) 20%, transparent) 0%,
+    color-mix(in srgb, var(--color-brand-green) 40%, transparent) 45%,
+    color-mix(in srgb, var(--color-brand-green) 85%, transparent) 80%,
+    var(--color-brand-green) 100%
+  );
+}
+
+/* iOS draws a play button over a video it refuses to autoplay (Low Power Mode).
+   The hero video is decoration, so it never shows native controls. */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 /* ── Sitewide offer bar ───────────────────────────────────── */
 /*
   Sits above the sticky header on every page (see components/OfferBar.tsx).
