@@ -243,7 +243,7 @@ export default function HomePage() {
           above and Services below, so the three read as one calm block: text on
           the left, the one action on the right (stacked and centred on phones). */}
       <section className="bg-sand-deep border-t border-brand-green/10" aria-label="Introduction">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-6 md:py-8 flex flex-col items-center text-center gap-5 md:flex-row md:justify-between md:text-left md:gap-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8 flex flex-col items-center text-center gap-5 md:flex-row md:justify-between md:text-left md:gap-10">
           <div>
             <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-brand-teal mb-2">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
@@ -271,7 +271,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
+      <section className="section section-flush-t bg-sand-deep" aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1
             className="font-extrabold text-page tracking-tighter sm:tracking-tight uppercase text-center whitespace-nowrap mb-7 -mx-2 sm:mx-0"
@@ -314,7 +314,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 2.2 RECOVERY SUITE BANNER ───────────────────────── */}
-      <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
+      <div className="bg-accent py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-ink text-sm font-bold leading-snug">
             <span className="font-black">Recovery Suite:</span>{' '}private Infrared Hybrid Sauna (60 minutes, £19), plus Restore+ sauna &amp; treatment memberships.
@@ -378,7 +378,7 @@ export default function HomePage() {
 
 
       {/* ── 2.5 PROMO BLOCK ───────────────────────────────────── */}
-      <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
+      <section className="bg-accent py-8">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left">
             <h2 className="text-2xl font-black text-ink tracking-tight mb-1">Give the gift of movement</h2>
@@ -464,7 +464,7 @@ export default function HomePage() {
               '5-Star Rated on Google Reviews'
             ].map((item) => (
               <div key={item} className="flex items-start gap-4 bg-card p-5 rounded-xl border-2 border-page card-lift">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0" style={{ color: '#0f767a' }} aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 text-brand-teal" aria-hidden="true">
                   <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                 </svg>
                 <span className="text-sm font-bold text-page leading-snug">{item}</span>
