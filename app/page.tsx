@@ -239,33 +239,34 @@ export default function HomePage() {
       <AwardStrip />
 
       {/* ── 1.6 INTRO + BOOKING ROW ──────────────────────────── */}
-      {/* Used to sit over the hero photo. In its own row so nothing covers the video. */}
-      <section className="bg-brand-green" aria-label="Introduction">
-        <div className="flex flex-col items-center text-center px-4 py-6 md:py-8">
+      {/* Used to sit over the hero photo. Same sand surface as the award strip
+          above and Services below, so the three read as one calm block: text on
+          the left, the one action on the right (stacked and centred on phones). */}
+      <section className="bg-sand-deep border-t border-brand-green/10" aria-label="Introduction">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-6 md:py-8 flex flex-col items-center text-center gap-5 md:flex-row md:justify-between md:text-left md:gap-10">
+          <div>
+            <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-brand-teal mb-2">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
+              Archway · North London · N19 5LB
+            </p>
+            <p className="font-extrabold text-ink tracking-tight text-xl sm:text-2xl leading-snug">
+              Sports Massage <span className="text-brand-teal">&amp;</span> Soft Tissue Remedial Therapy
+            </p>
+            <p className="text-muted text-sm sm:text-base mt-1 leading-relaxed">
+              A team of <span className="font-bold text-ink">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
+            </p>
+          </div>
 
-          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed">
-            Sports Massage <span className="text-accent">&amp;</span> Soft Tissue Remedial Therapy
-          </p>
-          <p className="text-white/90 text-sm sm:text-base mb-3 md:mb-4 max-w-xl leading-relaxed font-semibold">
-            Archway, North London.<br />
-            A team of <span className="font-black text-white">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
-          </p>
-
-          <div className="flex flex-row gap-3 justify-center flex-wrap mb-3 md:mb-4">
-            <BookingButton label="Book Your Session" />
+          <div className="flex flex-row gap-3 flex-shrink-0">
+            <BookingButton label="Book Your Session" variant="solid" />
             <a
               href={`tel:${BUSINESS.phoneTel}`}
               aria-label="Call Range and Restore to book"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-brand-teal/60 hover:bg-white/25 hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 text-ink border border-brand-teal/50 hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
             >
               <PhoneIcon />
             </a>
           </div>
-
-          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-brand-teal/60">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
-            Archway · North London · N19 5LB
-          </span>
         </div>
       </section>
 
