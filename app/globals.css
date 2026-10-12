@@ -444,28 +444,24 @@ input, select, textarea {
 }
 
 /* ── Homepage hero media ──────────────────────────────────── */
-/* Phones get the 5:4 cut and tablets the 16:9 cut, both shown whole across the
-   top. From lg the media fills the hero instead: as tall as the 16:9 frame,
-   but never more than 78% of the screen so the whole hero sits above the fold
-   under the header, and never too short for the text. */
-.home-hero-media { aspect-ratio: 5 / 4; }
+/* Phones get the 5:4 cut and tablets the 16:9 cut, both shown whole. From lg
+   the hero is as tall as the 16:9 frame but never more than 70% of the screen,
+   so the award strip and the booking row under it still start above the fold. */
+.home-hero { aspect-ratio: 5 / 4; }
 @media (min-width: 768px) {
-  .home-hero-media { aspect-ratio: 16 / 9; }
+  .home-hero { aspect-ratio: 16 / 9; }
 }
 @media (min-width: 1024px) {
-  .home-hero { height: min(56.25vw, 78vh); min-height: 34rem; }
-  .home-hero-media { aspect-ratio: auto; }
+  .home-hero { aspect-ratio: auto; height: min(56.25vw, 70vh); }
 }
 
-/* The brand-green wash over the media. Light over the faces at the top,
-   solid by the bottom edge, where the text sits and the section colour takes over. */
+/* A light brand-green wash over the video. Nothing sits on top of it now, so
+   it only needs to tie the footage to the green row below. */
 .home-hero-tint {
   background: linear-gradient(
     to bottom,
-    color-mix(in srgb, var(--color-brand-green) 20%, transparent) 0%,
-    color-mix(in srgb, var(--color-brand-green) 40%, transparent) 45%,
-    color-mix(in srgb, var(--color-brand-green) 85%, transparent) 80%,
-    var(--color-brand-green) 100%
+    color-mix(in srgb, var(--color-brand-green) 15%, transparent),
+    color-mix(in srgb, var(--color-brand-green) 40%, transparent)
   );
 }
 

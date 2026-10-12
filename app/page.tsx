@@ -223,21 +223,25 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
 
       {/* ── 1. HERO ──────────────────────────────────────────── */}
-      {/* The poster is the video's first frame, so the swap from image to video
-          is invisible. Below lg the media sits across the top and the text
-          tucks up under it; from lg it fills the hero with the text over its
-          lower third. Sizing and the tint live in globals.css (.home-hero*). */}
+      {/* Video only, nothing on top of it. The poster is the video's first frame,
+          so the swap from image to video is invisible. Sizing and the tint
+          live in globals.css (.home-hero*). */}
       <section className="home-hero relative overflow-hidden bg-brand-green" aria-label="Hero">
-        <div className="home-hero-media relative overflow-hidden lg:absolute lg:inset-0">
-          <picture>
-            <source media="(min-width: 768px)" srcSet={heroPosterDesktop} sizes={heroPosterCommon.sizes} />
-            <img {...heroPosterProps} srcSet={heroPosterMobile} alt={heroPosterProps.alt} className={HERO_MEDIA_CLASS} />
-          </picture>
-          <HeroVideo desktopSrc={`${HERO_MEDIA}.mp4`} mobileSrc={`${HERO_MEDIA}-mobile.mp4`} className={HERO_MEDIA_CLASS} />
-          <div aria-hidden="true" className="home-hero-tint absolute inset-0" />
-        </div>
+        <picture>
+          <source media="(min-width: 768px)" srcSet={heroPosterDesktop} sizes={heroPosterCommon.sizes} />
+          <img {...heroPosterProps} srcSet={heroPosterMobile} alt={heroPosterProps.alt} className={HERO_MEDIA_CLASS} />
+        </picture>
+        <HeroVideo desktopSrc={`${HERO_MEDIA}.mp4`} mobileSrc={`${HERO_MEDIA}-mobile.mp4`} className={HERO_MEDIA_CLASS} />
+        <div aria-hidden="true" className="home-hero-tint absolute inset-0" />
+      </section>
 
-        <div className="relative flex flex-col items-center text-center px-4 -mt-12 pb-8 lg:mt-0 lg:h-full lg:justify-end lg:pb-12">
+      {/* ── 1.5 AWARD STRIP ──────────────────────────────────── */}
+      <AwardStrip />
+
+      {/* ── 1.6 INTRO + BOOKING ROW ──────────────────────────── */}
+      {/* Used to sit over the hero photo. In its own row so nothing covers the video. */}
+      <section className="bg-brand-green" aria-label="Introduction">
+        <div className="flex flex-col items-center text-center px-4 py-6 md:py-8">
 
           <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed">
             Sports Massage <span className="text-accent">&amp;</span> Soft Tissue Remedial Therapy
@@ -264,9 +268,6 @@ export default function HomePage() {
           </span>
         </div>
       </section>
-
-      {/* ── 1.5 AWARD STRIP ──────────────────────────────────── */}
-      <AwardStrip />
 
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
       <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
