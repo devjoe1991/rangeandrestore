@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { getImageProps } from 'next/image'
 import { BookingButton } from '@/components/BookingButton'
+import { HeroVideo } from '@/components/HeroVideo'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
@@ -24,6 +25,19 @@ export const metadata: Metadata = buildMetadata({
     `Sports massage clinic in Archway N19 with a team of BTEC Level 5 therapists. Rated ${REVIEW_RATING} from ${REVIEW_COUNT} Google reviews. Pain relief, injury recovery, mobility. Book online, sports massage from £50.`,
   path: '/',
 })
+
+/* Hero media: one 16:9 cut for md and up, one 5:4 cut for phones. Each has a
+   poster (.jpg) and a muted loop (.mp4) made from the same frames. */
+const HERO_MEDIA = '/hero/range-and-restore-sports-massage-team-archway-north-london'
+const HERO_MEDIA_CLASS = 'absolute inset-0 w-full h-full object-cover object-top'
+const heroPosterCommon = {
+  alt: 'The Range and Restore team of sports massage therapists at the clinic in Archway, North London',
+  sizes: '100vw',
+  loading: 'eager',
+  fetchPriority: 'high',
+} as const
+const { props: { srcSet: heroPosterDesktop } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}.jpg`, width: 1920, height: 1080 })
+const { props: { srcSet: heroPosterMobile, ...heroPosterProps } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}-mobile.jpg`, width: 1350, height: 1080 })
 
 const services = [
   {
@@ -209,60 +223,64 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
 
       {/* ── 1. HERO ──────────────────────────────────────────── */}
-      <section className="relative overflow-hidden" style={{ minHeight: '560px' }} aria-label="Hero">
-        <Image
-          src="/carlos-bonvicine-sports-massage-archway-hero.jpg"
-          alt="Carlos Bonvicine, sports massage therapist and founder of Range and Restore, Archway, North London"
-          fill
-          className="object-cover object-[center_10%]"
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-brand-green/60" />
-
-        <div className="relative flex flex-col items-center justify-end text-center px-4 pt-16 pb-8 sm:pt-24 sm:pb-10" style={{ minHeight: '660px' }}>
-
-          <p className="font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl mb-1 max-w-2xl leading-relaxed mt-48 sm:mt-64">
-            Sports Massage <span className="text-accent">&amp;</span> Soft Tissue Remedial Therapy
-          </p>
-          <p className="text-white/90 text-sm sm:text-base mb-4 max-w-xl leading-relaxed font-semibold">
-            Archway, North London.<br />
-            A team of <span className="font-black text-white">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
-          </p>
-
-
-
-          <div className="flex flex-row gap-3 justify-center flex-wrap mb-4">
-            <BookingButton label="Book Your Session" />
-            <a
-              href={`tel:${BUSINESS.phoneTel}`}
-              aria-label="Call Range and Restore to book"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/15 text-white backdrop-blur-sm border border-brand-teal/60 hover:bg-white/25 hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
-            >
-              <PhoneIcon />
-            </a>
-          </div>
-
-          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full backdrop-blur-sm border border-brand-teal/60">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
-            Archway · North London · N19 5LB
-          </span>
-        </div>
+      {/* Video only, nothing on top of it. The poster is the video's first frame,
+          so the swap from image to video is invisible. Sizing and the tint
+          live in globals.css (.home-hero*). */}
+      <section className="home-hero relative overflow-hidden bg-brand-green" aria-label="Hero">
+        <picture>
+          <source media="(min-width: 768px)" srcSet={heroPosterDesktop} sizes={heroPosterCommon.sizes} />
+          <img {...heroPosterProps} srcSet={heroPosterMobile} alt={heroPosterProps.alt} className={HERO_MEDIA_CLASS} />
+        </picture>
+        <HeroVideo desktopSrc={`${HERO_MEDIA}.mp4`} mobileSrc={`${HERO_MEDIA}-mobile.mp4`} className={HERO_MEDIA_CLASS} />
+        <div aria-hidden="true" className="home-hero-tint absolute inset-0" />
       </section>
 
       {/* ── 1.5 AWARD STRIP ──────────────────────────────────── */}
       <AwardStrip />
 
+      {/* ── 1.6 INTRO + BOOKING ROW ──────────────────────────── */}
+      {/* Used to sit over the hero photo. Same sand surface as the award strip
+          above and Services below, so the three read as one calm block: text on
+          the left, the one action on the right (stacked and centred on phones). */}
+      <section className="bg-sand-deep border-t border-brand-green/10" aria-label="Introduction">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8 flex flex-col items-center text-center gap-5 md:flex-row md:justify-between md:text-left md:gap-10">
+          <div>
+            <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-brand-teal mb-2">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
+              Archway · North London · N19 5LB
+            </p>
+            {/* The page's h1: it says what the clinic does and where. The slogan
+                below is styled bigger but is a tagline, not the page title. */}
+            <h1 className="font-extrabold text-ink tracking-tight text-xl sm:text-2xl leading-snug text-balance">
+              Sports Massage <span className="text-brand-teal">&amp;</span> Soft Tissue Remedial Therapy in Archway
+            </h1>
+            <p className="text-muted text-sm sm:text-base mt-1 leading-relaxed">
+              A team of <span className="font-bold text-ink">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
+            </p>
+          </div>
+
+          <div className="flex flex-row gap-3 flex-shrink-0">
+            <BookingButton label="Book Your Session" variant="solid" />
+            <a
+              href={`tel:${BUSINESS.phoneTel}`}
+              aria-label="Call Range and Restore to book"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-white/60 text-ink border border-brand-teal/50 hover:bg-white hover:border-brand-teal hover:shadow-lg hover:-translate-y-[1px] transition-all"
+            >
+              <PhoneIcon />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
-      <section className="section" style={{ backgroundColor: '#F2EDE4' }} aria-labelledby="treatments-heading">
+      <section className="section section-flush-t bg-sand-deep" aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1
+          <p
             className="font-extrabold text-page tracking-tighter sm:tracking-tight uppercase text-center whitespace-nowrap mb-7 -mx-2 sm:mx-0"
             style={{ fontSize: 'clamp(0.8rem, 4.3vw, 3.5rem)' }}
           >
             Move Better. Feel Better. Live Stronger.
-          </h1>
+          </p>
           <h2 id="treatments-heading" className="sr-only">Sports Massage Treatments and Recovery in Archway</h2>
           <SwipeCarousel
             label="Sports massage treatments and recovery"
@@ -298,7 +316,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 2.2 RECOVERY SUITE BANNER ───────────────────────── */}
-      <div style={{ backgroundColor: '#7dd94a' }} className="py-3 px-4">
+      <div className="bg-accent py-3 px-4">
         <div className="mx-auto max-w-7xl flex items-center justify-center gap-3 text-center">
           <span className="text-ink text-sm font-bold leading-snug">
             <span className="font-black">Recovery Suite:</span>{' '}private Infrared Hybrid Sauna (60 minutes, £19), plus Restore+ sauna &amp; treatment memberships.
@@ -362,7 +380,7 @@ export default function HomePage() {
 
 
       {/* ── 2.5 PROMO BLOCK ───────────────────────────────────── */}
-      <section className="py-8" style={{ backgroundColor: '#7dd94a' }}>
+      <section className="bg-accent py-8">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left">
             <h2 className="text-2xl font-black text-ink tracking-tight mb-1">Give the gift of movement</h2>
@@ -448,7 +466,7 @@ export default function HomePage() {
               '5-Star Rated on Google Reviews'
             ].map((item) => (
               <div key={item} className="flex items-start gap-4 bg-card p-5 rounded-xl border-2 border-page card-lift">
-                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0" style={{ color: '#0f767a' }} aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="currentColor" className="flex-shrink-0 text-brand-teal" aria-hidden="true">
                   <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                 </svg>
                 <span className="text-sm font-bold text-page leading-snug">{item}</span>

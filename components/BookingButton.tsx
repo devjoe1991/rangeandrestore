@@ -5,7 +5,7 @@ interface BookingButtonProps {
   href?: string
   label?: string
   className?: string
-  variant?: 'primary' | 'white' | 'outline-white'
+  variant?: 'primary' | 'solid' | 'white' | 'outline-white'
 }
 
 export function BookingButton({
@@ -16,6 +16,7 @@ export function BookingButton({
 }: BookingButtonProps) {
   const variantClass = {
     primary: 'btn-primary',
+    solid: 'btn-solid',
     white: 'btn-white',
     'outline-white': 'btn-outline-white',
   }[variant]

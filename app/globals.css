@@ -283,6 +283,10 @@ input, select, textarea {
   transform: translateY(-1px);
 }
 
+/* Solid brand-green pill: the one main action on a light surface. */
+.btn-solid { background: var(--color-brand-green); color: #fff; border-color: var(--color-brand-green); }
+.btn-solid:hover { background: var(--color-brand-teal); border-color: var(--color-brand-teal); transform: translateY(-1px); }
+
 .btn-outline-white { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
 .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
@@ -441,6 +445,36 @@ input, select, textarea {
   .wa-fab { transition: none; }
   .wa-fab:hover, .wa-fab:active { transform: none; }
   .wa-glyph-spin { animation: none; }
+}
+
+/* ── Homepage hero media ──────────────────────────────────── */
+/* Phones get the 5:4 cut and tablets the 16:9 cut, both shown whole. From lg
+   the hero is as tall as the 16:9 frame but never more than 70% of the screen,
+   so the award strip and the booking row under it still start above the fold. */
+.home-hero { aspect-ratio: 5 / 4; }
+@media (min-width: 768px) {
+  .home-hero { aspect-ratio: 16 / 9; }
+}
+@media (min-width: 1024px) {
+  .home-hero { aspect-ratio: auto; height: min(56.25vw, 70vh); }
+}
+
+/* A light brand-green wash over the video. Nothing sits on top of it now, so
+   it only needs to tie the footage to the green row below. */
+.home-hero-tint {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-brand-green) 15%, transparent),
+    color-mix(in srgb, var(--color-brand-green) 40%, transparent)
+  );
+}
+
+/* iOS draws a play button over a video it refuses to autoplay (Low Power Mode).
+   The hero video is decoration, so it never shows native controls. */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 
 /* ── Sitewide offer bar ───────────────────────────────────── */
