@@ -249,9 +249,11 @@ export default function HomePage() {
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742z" clipRule="evenodd" /></svg>
               Archway · North London · N19 5LB
             </p>
-            <p className="font-extrabold text-ink tracking-tight text-xl sm:text-2xl leading-snug">
-              Sports Massage <span className="text-brand-teal">&amp;</span> Soft Tissue Remedial Therapy
-            </p>
+            {/* The page's h1: it says what the clinic does and where. The slogan
+                below is styled bigger but is a tagline, not the page title. */}
+            <h1 className="font-extrabold text-ink tracking-tight text-xl sm:text-2xl leading-snug text-balance">
+              Sports Massage <span className="text-brand-teal">&amp;</span> Soft Tissue Remedial Therapy in Archway
+            </h1>
             <p className="text-muted text-sm sm:text-base mt-1 leading-relaxed">
               A team of <span className="font-bold text-ink">BTEC Level 5</span> qualified therapists, led by founder Carlos Bonvicine.
             </p>
@@ -273,12 +275,12 @@ export default function HomePage() {
       {/* ── 2. SERVICES ──────────────────────────────────────── */}
       <section className="section section-flush-t bg-sand-deep" aria-labelledby="treatments-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1
+          <p
             className="font-extrabold text-page tracking-tighter sm:tracking-tight uppercase text-center whitespace-nowrap mb-7 -mx-2 sm:mx-0"
             style={{ fontSize: 'clamp(0.8rem, 4.3vw, 3.5rem)' }}
           >
             Move Better. Feel Better. Live Stronger.
-          </h1>
+          </p>
           <h2 id="treatments-heading" className="sr-only">Sports Massage Treatments and Recovery in Archway</h2>
           <SwipeCarousel
             label="Sports massage treatments and recovery"
