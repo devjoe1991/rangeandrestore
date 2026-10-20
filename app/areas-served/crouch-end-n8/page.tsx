@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Crouch End N8',
   description: 'Sports, deep tissue and clinical massage in Archway for Crouch End, London N8. A direct 41 bus with no tube required.',
   url: `${BASE_URL}/areas-served/crouch-end-n8`,
-  telephone: '+447890716154',
+  telephone: '+447940039818',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

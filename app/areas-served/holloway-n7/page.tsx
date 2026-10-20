@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Holloway N7',
   description: 'Sports, deep tissue and clinical massage in Archway for residents and workers in Holloway, London N7. Straight up Holloway Road from the Nag’s Head.',
   url: `${BASE_URL}/areas-served/holloway-n7`,
-  telephone: '+447890716154',
+  telephone: '+447940039818',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

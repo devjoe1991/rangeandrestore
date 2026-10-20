@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Highgate N6',
   description: 'Sports, deep tissue and clinical massage in Archway for Highgate, London N6. Just down Highgate Hill — cyclist and Hampstead Heath runner recovery.',
   url: `${BASE_URL}/areas-served/highgate-n6`,
-  telephone: '+447890716154',
+  telephone: '+447940039818',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

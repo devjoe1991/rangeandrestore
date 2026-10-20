@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — Upper Holloway N19',
   description: 'Local sports, deep tissue and clinical massage in Upper Holloway, London N19 — the same postcode as the clinic, walking distance on Junction Road.',
   url: `${BASE_URL}/areas-served/upper-holloway-n19`,
-  telephone: '+447890716154',
+  telephone: '+447940039818',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

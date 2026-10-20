@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Islington N1',
   description: 'Assessment-led sports, deep tissue and clinical massage in Archway for Islington, London N1. Direct bus from Angel and Upper Street.',
   url: `${BASE_URL}/areas-served/islington-n1`,
-  telephone: '+447890716154',
+  telephone: '+447940039818',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

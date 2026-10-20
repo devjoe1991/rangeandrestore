@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Finsbury Park N4',
   description: 'Sports massage and running recovery in Archway for Finsbury Park, London N4. Parkrun and cyclist recovery, deep tissue work and injury treatment.',
   url: `${BASE_URL}/areas-served/finsbury-park-n4`,
-  telephone: '+447890716154',
+  telephone: '+447940039818',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',
