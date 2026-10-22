@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — Archway N19',
   description: 'Assessment-led sports massage, deep tissue therapy and clinical massage in Archway, London N19. A short walk from Archway and Tufnell Park stations.',
   url: `${BASE_URL}/areas-served/archway-n19`,
-  telephone: '+447940039818',
+  telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

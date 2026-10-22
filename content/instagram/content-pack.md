@@ -4,7 +4,7 @@
 Read `content/canva_plan.md` first for colours, fonts and the five templates (T1–T5).
 
 **Handle:** @rangeandrestore · **Booking:** rangeandrestoresportsmassage.janeapp.co.uk
-**Clinic:** 130 Junction Road, Archway, London N19 5LB · 07940 039818 · carlos@rangeandrestore.co.uk
+**Clinic:** 130 Junction Road, Archway, London N19 5LB · 07890 716154 · carlos@rangeandrestore.co.uk
 
 ---
 
@@ -306,7 +306,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 >
 > Every session is a private 45 minutes in the Infrared & Traditional Hybrid Sauna, with the suite to yourself. There's only one room and sessions run on availability, so members get first pick of the diary.
 >
-> Memberships are set up personally rather than bought online. Give us a call on 07940 039818 or email carlos@rangeandrestore.co.uk and we'll sort it.
+> Memberships are set up personally rather than bought online. Give us a call on 07890 716154 or email carlos@rangeandrestore.co.uk and we'll sort it.
 - **Tags:** `#InfraredSauna #SaunaLondon #SaunaMembership #Archway #N19 #NorthLondon #RecoveryRoom #WellbeingLondon #RangeAndRestore`
 
 ### C3 — Restore+ Performance memberships
@@ -324,7 +324,7 @@ Use 10–15 per post. Mix one line from each relevant bank. Rotate — don't pas
 >
 > Built for people who've worked out that treatment every few weeks beats one panic booking when something goes properly wrong.
 >
-> Set up personally — call 07940 039818 or email carlos@rangeandrestore.co.uk.
+> Set up personally — call 07890 716154 or email carlos@rangeandrestore.co.uk.
 - **Tags:** `#SportsMassage #MassageMembership #Archway #N19 #NorthLondon #DeepTissueMassage #RecoveryRoom #LondonRunners #RangeAndRestore`
 
 ### C4 — Massage bundles

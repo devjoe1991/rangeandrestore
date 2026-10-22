@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Stroud Green N4',
   description: 'Sports, deep tissue and clinical massage in Archway for Stroud Green, London N4. Runner and cyclist recovery and injury treatment, a short bus ride away.',
   url: `${BASE_URL}/areas-served/stroud-green-n4`,
-  telephone: '+447940039818',
+  telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',
