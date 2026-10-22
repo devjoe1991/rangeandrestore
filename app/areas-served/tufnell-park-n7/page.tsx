@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Tufnell Park N7',
   description: 'Sports and clinical massage in Archway for residents of Tufnell Park, N7. Cycling and running recovery, deep tissue work and chronic pain treatment.',
   url: `${BASE_URL}/areas-served/tufnell-park-n7`,
-  telephone: '+447940039818',
+  telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

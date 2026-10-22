@@ -214,7 +214,7 @@ export const businessSchema = {
   },
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 4 },
   url: BASE_URL,
-  telephone: '+447940039818',
+  telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
   image: `${BASE_URL}/range-and-restore-sports-massage-clinic-130-junction-road-archway-london.jpeg`,
   address: {

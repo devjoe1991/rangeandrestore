@@ -22,7 +22,7 @@ const localBusinessSchema = {
   name: 'Range and Restore Sports Massage — serving Kentish Town NW5',
   description: 'Sports, deep tissue and clinical massage in Archway for Kentish Town, London NW5. A direct 134 bus up Fortess Road — Heath runner and gym recovery.',
   url: `${BASE_URL}/areas-served/kentish-town-nw5`,
-  telephone: '+447940039818',
+  telephone: '+447890716154',
   email: 'carlos@rangeandrestore.co.uk',
   address: {
     '@type': 'PostalAddress',

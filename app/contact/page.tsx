@@ -28,7 +28,7 @@ const contactSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+447940039818',
+    telephone: '+447890716154',
     contactType: 'reservations',
     availableLanguage: 'English',
   },
