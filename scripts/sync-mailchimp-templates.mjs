@@ -67,6 +67,7 @@ const NAME_MAP = {
   'gallery-showcase': 'Range and Restore — Gallery Showcase',
   // Seasonal / holiday / event (batch 2)
   'seasonal-christmas': 'Range and Restore — Christmas',
+  'seasonal-christmas-gift-cards': 'Range and Restore — Christmas Gift Cards',
   'seasonal-new-year': 'Range and Restore — New Year',
   'seasonal-closure-notice': 'Range and Restore — Closure Notice (editable)',
   'seasonal-black-friday': 'Range and Restore — Black Friday',

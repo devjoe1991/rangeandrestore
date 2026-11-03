@@ -58,6 +58,7 @@ const CAMPAIGNS = {
   'Range and Restore — Newsletter / Recovery Notes': { subject: 'Recovery Notes from Range and Restore', preview: 'A recovery tip, and what is new in the clinic.', send: 'Evergreen / monthly' },
   'Range and Restore — Re-engagement / Rebooking': { subject: 'It has been a while', preview: 'Your body misses good hands. Pick up where you left off.', send: 'Evergreen / lapsed clients' },
   'Range and Restore — Thank You / Google Review': { subject: 'Thank you, from all of us at Range and Restore', preview: 'A quick check-in, and a small favour if you have two minutes.', send: 'One-off / Engaged + Lukewarm only', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
+  'Range and Restore — Christmas Gift Cards': { subject: 'Book in before December, and a gift sorted', preview: 'Gift cards for any treatment, including the sauna. Valid 12 months, delivered straight away.', send: 'Early-mid November / Engaged + Lukewarm', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
   'Range and Restore — Corporate Wellbeing': { subject: 'Massage for your workplace', preview: 'On-site or at the clinic, tailored to your team. Worth forwarding to whoever looks after wellbeing at work.', send: 'After site deploy / Engaged + Lukewarm', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
   // Community / collaboration (evergreen)
   'Range and Restore — Community × Dynamic Spud': { subject: 'Two Archway independents looking after you', preview: 'Recovery and good food, the same week in Archway.', send: 'Evergreen' },
