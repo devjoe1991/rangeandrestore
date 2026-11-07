@@ -45,8 +45,8 @@ export const BUSINESS = {
   founder: 'Carlos Bonvicine',
   founderTitle: 'Founder & Lead Therapist',
   address: '130 Junction Road, Archway, London N19 5LB',
-  phone: '07890 716154',
-  phoneTel: '+447890716154',
+  phone: '07852 208095',
+  phoneTel: '+447852208095',
   email: 'carlos@rangeandrestore.co.uk',
 } as const
 
