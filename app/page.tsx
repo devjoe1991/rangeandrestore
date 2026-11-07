@@ -31,13 +31,13 @@ export const metadata: Metadata = buildMetadata({
 const HERO_MEDIA = '/hero/range-and-restore-sports-massage-team-archway-north-london'
 const HERO_MEDIA_CLASS = 'absolute inset-0 w-full h-full object-cover object-top'
 const heroPosterCommon = {
-  alt: 'The Range and Restore team of sports massage therapists at the clinic in Archway, North London',
+  alt: 'The Range and Restore sports massage clinic on Junction Road in Archway, North London',
   sizes: '100vw',
   loading: 'eager',
   fetchPriority: 'high',
 } as const
-const { props: { srcSet: heroPosterDesktop } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}.jpg`, width: 1920, height: 1080 })
-const { props: { srcSet: heroPosterMobile, ...heroPosterProps } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}-mobile.jpg`, width: 1350, height: 1080 })
+const { props: { srcSet: heroPosterDesktop } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}.jpg`, width: 1024, height: 576 })
+const { props: { srcSet: heroPosterMobile, ...heroPosterProps } } = getImageProps({ ...heroPosterCommon, src: `${HERO_MEDIA}-mobile.jpg`, width: 720, height: 576 })
 
 const services = [
   {
