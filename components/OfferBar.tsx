@@ -1,16 +1,14 @@
-import { BOOKING_URLS } from '@/lib/constants'
+import Link from 'next/link'
+import { ROUTES } from '@/lib/routes'
 
 /**
- * Sitewide announcement bar for the £10 infrared sauna add-on, rendered above
+ * Sitewide announcement bar for the 2026 Early Black Friday offer, rendered above
  * the sticky header on every page.
  *
  * The whole bar is the link, so the click target is the full width rather than
- * just the pill — the pill is a visual affordance inside it. It points at the
- * general Jane booking list rather than at the sauna booking page: the add-on
- * is taken at the clinic on the day, so the action we want is "book the
- * treatment". Because the href is a janeapp.co.uk URL, the delegated listener
- * in components/Analytics.tsx counts a click as a `book` conversion with no
- * extra wiring.
+ * just the pill — the pill is a visual affordance inside it. It points to the
+ * internal offer page, where the full eligibility and redemption details sit
+ * alongside a direct booking button.
  *
  * The copy is written twice, short for phones and full for sm and up, so the
  * bar stays two or three tight lines at 390px instead of wrapping into a wall
@@ -22,56 +20,52 @@ import { BOOKING_URLS } from '@/lib/constants'
  */
 export function OfferBar() {
   return (
-    <a
-      href={BOOKING_URLS.general}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Book your treatment and add 45 minutes of infrared sauna straight afterwards for £10, usually £19"
+    <Link
+      href={ROUTES.offers.blackFridayEarlyAccess}
+      aria-label="Early Black Friday access: get a free 45-minute private infrared sauna session with every qualifying 60 or 90-minute massage booked from 9 to 30 November 2026. View offer details"
       className="offer-bar group block"
     >
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-2 sm:py-2.5 flex items-center justify-center gap-2.5 sm:gap-4">
 
-        <HeatIcon />
+        <GiftIcon />
 
         <div className="min-w-0 text-left sm:text-center">
           <p className="text-white font-extrabold tracking-tight leading-tight text-[0.8125rem] sm:text-[0.9375rem]">
-            Extend your recovery
+            Early Black Friday access
             <span className="hidden sm:inline text-white/80">
-              {' '}— 45 minutes of infrared sauna straight after your massage
+              {' '}— free 45-minute private infrared sauna with every 60 or 90-minute massage
             </span>
           </p>
 
           <p className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-1 sm:justify-center text-xs leading-tight">
-            <span className="rounded-full bg-accent-light px-2 py-[0.09375rem] text-ink font-black">£10</span>
-            <span className="text-white/70 font-semibold">
-              usually <span className="line-through">£19</span>
-            </span>
-            <span className="text-white/60 font-medium sm:hidden">· 45 min sauna after any massage · ask on the day</span>
+            <span className="rounded-full bg-accent-light px-2 py-[0.09375rem] text-ink font-black">FREE SAUNA</span>
+            <span className="text-white/60 font-medium sm:hidden">· with every 60 or 90-min massage · 9–30 Nov</span>
             <span className="hidden sm:inline text-white/60 font-medium">
-              · stay warm, unwind and keep the circulation going
+              · book 9–30 November 2026
             </span>
-            <span className="hidden sm:inline text-white/60 font-medium">· just ask on the day</span>
           </p>
         </div>
 
         <span className="offer-bar-cta">
-          Book<span className="hidden sm:inline"> your treatment</span>{' '}
+          View<span className="hidden sm:inline"> offer</span>{' '}
           <span aria-hidden="true">&rarr;</span>
         </span>
       </div>
-    </a>
+    </Link>
   )
 }
 
 /** Heat rising off a surface — the sauna cue, drawn rather than set as an emoji. */
-function HeatIcon() {
+function GiftIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round"
       className="hidden sm:block text-accent-light flex-shrink-0" aria-hidden="true">
-      <path d="M8.5 13.5c0-2.4 2.4-3.4 2.4-5.8C10.9 5.8 9.5 4.4 9.5 3c2.9 1 5.8 3.4 5.8 6.8 0 1.4-.5 2.4-.5 3.4" />
-      <path d="M5.5 17.2c1.6-1 3.6-1.5 6.5-1.5s4.9.5 6.5 1.5" />
-      <path d="M5.5 20.7c1.6-1 3.6-1.5 6.5-1.5s4.9.5 6.5 1.5" />
+      <path d="M20 12v10H4V12" />
+      <path d="M2 7h20v5H2z" />
+      <path d="M12 22V7" />
+      <path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Z" />
+      <path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z" />
     </svg>
   )
 }
