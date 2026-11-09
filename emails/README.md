@@ -41,6 +41,7 @@ Mailchimp's Customer Journey builder, which the API does not expose.
 - `service-massage-bundles.html` — Massage Bundles (5/10 × 60 min £350/£650, 5/10 × 90 min £500/£950; save + per-session + validity; CTA to Jane `#packages`)
 - `event-marathon.html` — Marathon prep & recovery (reusable each season)
 - `gift-cards-bundles.html` — Gift cards + bundles
+- `offer-black-friday-early-access.html` — 9–30 Nov 2026: free 45-minute private infrared sauna with every qualifying 60/90-minute massage booking
 - `announcement.html` — Flexible "Now open" style, merge-field slots
 - `gallery-showcase.html` — Photo-led clinic showcase (swipe strips + FAQ)
 

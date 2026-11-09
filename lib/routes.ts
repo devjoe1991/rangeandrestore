@@ -21,6 +21,9 @@ export const ROUTES = {
   givingBack: '/giving-back',
   home: '/',
   nhsEmergencyServicesDiscount: '/nhs-emergency-services-discount',
+  offers: {
+    blackFridayEarlyAccess: '/offers/black-friday-early-access',
+  },
   press: '/press',
   privacyPolicy: '/privacy-policy',
   socials: '/socials',
