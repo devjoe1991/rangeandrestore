@@ -78,6 +78,7 @@ const CAMPAIGNS = {
   'Range and Restore — Book a Session': { subject: 'Book Your Session at Range and Restore', preview: 'Personalised, assessment-led treatment for pain relief, mobility, injury recovery, and long-term results.', send: 'Evergreen' },
   'Range and Restore — Marathon / Event Recovery': { subject: 'Marathon prep and recovery', preview: 'Pre-race preparation and post-race recovery.', send: 'Race season' },
   'Range and Restore — Gift Cards & Bundles': { subject: 'Give the gift of recovery', preview: 'Gift cards and massage bundles.', send: 'Evergreen' },
+  'Range and Restore — Early Black Friday 2026': { subject: 'Your recovery, our treat 🖤', preview: 'Book a 60 or 90-minute massage and enjoy a free 45-minute private infrared sauna session.', send: '9 Nov 2026 / Engaged + Lukewarm', segments: [SEGMENTS.engaged, SEGMENTS.lukewarm] },
   'Range and Restore — Announcement (flexible)': { subject: 'News from Range and Restore', preview: 'A quick update from the clinic.', send: 'Flexible / reusable' },
   'Range and Restore — Award / Prestige 2026': { subject: 'We have been named Clinic of the Year', preview: 'Recognised at the 2026/27 London and South East England Prestige Awards.', send: 'On award announcement' },
   'Range and Restore — Gallery Showcase': { subject: 'A look inside Range and Restore', preview: 'The clinic, the Recovery Suite, and what to expect.', send: 'Evergreen' },

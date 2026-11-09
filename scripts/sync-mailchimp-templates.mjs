@@ -61,6 +61,7 @@ const NAME_MAP = {
   'team-introduction': 'Range and Restore — Meet the Team',
   'event-marathon': 'Range and Restore — Marathon / Event Recovery',
   'gift-cards-bundles': 'Range and Restore — Gift Cards & Bundles',
+  'offer-black-friday-early-access': 'Range and Restore — Early Black Friday 2026',
   'announcement': 'Range and Restore — Announcement (flexible)',
   'announcement-carlos-annual-leave': 'Range and Restore — Carlos Annual Leave Aug 2026',
   'award-prestige-2026': 'Range and Restore — Award / Prestige 2026',
@@ -96,7 +97,12 @@ async function mc(path, opts = {}) {
   const text = await res.text()
   let json
   try { json = text ? JSON.parse(text) : {} } catch { json = { raw: text } }
-  if (!res.ok) throw new Error(`${res.status} ${json.title || ''}: ${json.detail || text}`)
+  if (!res.ok) {
+    const fieldErrors = Array.isArray(json.errors)
+      ? ` ${json.errors.map(error => `${error.field}: ${error.message}`).join('; ')}`
+      : ''
+    throw new Error(`${res.status} ${json.title || ''}: ${json.detail || text}${fieldErrors}`)
+  }
   return json
 }
 
