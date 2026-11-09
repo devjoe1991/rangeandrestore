@@ -6,6 +6,7 @@ import { HeroVideo } from '@/components/HeroVideo'
 import { GoogleReviews } from '@/components/GoogleReviews'
 import { FacebookFeed } from '@/components/FacebookFeed'
 import { AwardStrip } from '@/components/AwardStrip'
+import { BlackFridayPromo } from '@/components/BlackFridayPromo'
 import { CardCarousel } from '@/components/CardCarousel'
 import { SaunaRoomCard } from '@/components/SaunaRoomStrip'
 import { SAUNA_PHOTOS } from '@/components/SaunaPhotos'
@@ -18,6 +19,10 @@ import { BOOKING_URLS, BUSINESS } from '@/lib/constants'
 import { businessSchema, websiteSchema, buildMetadata, REVIEW_COUNT, REVIEW_RATING } from '@/lib/seo'
 import { faqs } from '@/app/faqs/data'
 import { ROUTES } from '@/lib/routes'
+
+/* Re-render hourly so the Black Friday banner drops off the live site on its
+   own once the offer window closes (see BLACK_FRIDAY_PROMO.endsAt). */
+export const revalidate = 3600
 
 export const metadata: Metadata = buildMetadata({
   title: 'Sports Massage Archway N19 | BTEC L5 Therapists',
@@ -234,6 +239,9 @@ export default function HomePage() {
         <HeroVideo desktopSrc={`${HERO_MEDIA}.mp4`} mobileSrc={`${HERO_MEDIA}-mobile.mp4`} className={HERO_MEDIA_CLASS} />
         <div aria-hidden="true" className="home-hero-tint absolute inset-0" />
       </section>
+
+      {/* ── 1.4 BLACK FRIDAY EARLY ACCESS ────────────────────── */}
+      <BlackFridayPromo />
 
       {/* ── 1.5 AWARD STRIP ──────────────────────────────────── */}
       <AwardStrip />

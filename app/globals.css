@@ -545,3 +545,12 @@ input, select, textarea {
   .offer-bar::after { animation: none; }
   .offer-bar-cta { transition: none; }
 }
+
+/* Black Friday early access banner (components/BlackFridayPromo.tsx): a warm
+   teal-and-lime glow on the near-black panel, so it reads as a campaign. */
+.bf-promo-glow {
+  background:
+    radial-gradient(60% 90% at 88% 15%, rgba(183, 217, 104, 0.16), transparent 65%),
+    radial-gradient(55% 80% at 5% 110%, rgba(15, 118, 122, 0.45), transparent 70%);
+  pointer-events: none;
+}
