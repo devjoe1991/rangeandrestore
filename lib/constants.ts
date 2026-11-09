@@ -95,7 +95,7 @@ export const CORPORATE_ENQUIRY_URL = `mailto:${BUSINESS.email}?subject=${encodeU
  * text, so change both together.
  */
 export const BLACK_FRIDAY_PROMO = {
-  window: '9 to 30 November',
+  window: '9–30 November',
   endsAt: '2026-12-01T00:00:00Z',
   saunaUseBy: '31 December 2026',
 } as const
