@@ -76,7 +76,6 @@ const NAME_MAP = {
   'seasonal-mothering-sunday': 'Range and Restore — Mothering Sunday',
   'seasonal-fathers-day': "Range and Restore — Father's Day",
   'offer-fathers-day': "Range and Restore — Father's Day Offer",
-  'offer-black-friday-early-access': 'Range and Restore — Black Friday Early Access',
   'seasonal-st-patricks': "Range and Restore — St Patrick's Day",
   'seasonal-st-georges': "Range and Restore — St George's Day",
   'seasonal-easter': 'Range and Restore — Easter',

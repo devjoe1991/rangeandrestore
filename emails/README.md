@@ -5,7 +5,7 @@ Branded, email-safe HTML campaign templates synced to Mailchimp via
 then pushed to Mailchimp as **templates**. Nothing is ever sent automatically.
 Preview and test-send yourself from the Mailchimp UI.
 
-## The library (account us20)
+## The library (16 templates, all live in Mailchimp, account us20)
 
 **Core lifecycle**
 - `welcome.html` — Welcome / onboarding (photo strip + FAQ)
@@ -51,7 +51,6 @@ Mailchimp's Customer Journey builder, which the API does not expose.
 - `seasonal-halloween.html` · `seasonal-bonfire-night.html` · `seasonal-summer-bank-holiday.html`
 - `seasonal-clocks-change.html` · `seasonal-marathon-day.html`
 - `seasonal-black-friday.html` · `seasonal-cyber-monday.html` (commercial, editable `*|OFFER|*` slot)
-- `offer-black-friday-early-access.html` — Black Friday early access (9 to 30 Nov 2026): free 45 minute private infrared sauna with **every** 60 min (£75) or 90 min (£110) massage booking, not one per client. Sauna before or after the massage (subject to availability) or another day up to 31 Dec 2026. Two Book Now buttons to the Jane general list. Offer dates are plain text in the file and in `BLACK_FRIDAY_PROMO` in `lib/constants.ts`, which also drives the homepage banner. Draft targets Engaged + Lukewarm.
 - `seasonal-closure-notice.html` — universal editable closure (`*|CLOSURE_REASON|*`, `*|CLOSED_FROM|*`, `*|REOPEN_DATE|*`, `*|CLOSURE_NOTE|*`)
 - `event-arsenal-champions.html` — North London / football-community celebration (red accents, no club marks)
 

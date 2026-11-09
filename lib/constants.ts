@@ -80,31 +80,6 @@ export const CORPORATE_ENQUIRY_URL = `mailto:${BUSINESS.email}?subject=${encodeU
   CORPORATE_ENQUIRY_SUBJECT,
 )}&body=${encodeURIComponent(CORPORATE_ENQUIRY_MESSAGE).replace(/'/g, '%27')}`
 
-/**
- * Black Friday early access: a free 45-minute private infrared sauna with every
- * qualifying massage booking (60 min £75 or 90 min £110) made during the
- * window, not one per client. The sauna can be taken before or after the
- * massage, subject to availability, or booked for another day up to
- * `saunaUseBy`.
- *
- * `endsAt` is the first instant the offer is over (midnight at the end of 30
- * November; UTC and London are the same in winter). BlackFridayPromo renders
- * nothing from then on, and the homepage revalidates hourly so the banner
- * leaves the live site without a redeploy. The email template in
- * emails/offer-black-friday-early-access.html repeats these dates as plain
- * text, so change both together.
- */
-export const BLACK_FRIDAY_PROMO = {
-  window: '9–30 November',
-  endsAt: '2026-12-01T00:00:00Z',
-  saunaUseBy: '31 December 2026',
-} as const
-
-/** True until `BLACK_FRIDAY_PROMO.endsAt`. A function so the clock is read at render, not import. */
-export function isBlackFridayPromoLive(now: number = Date.now()): boolean {
-  return now < Date.parse(BLACK_FRIDAY_PROMO.endsAt)
-}
-
 export const NAV_ITEMS = [
   { label: 'About', href: '/about' },
   { label: 'Awards', href: '/awards' },
