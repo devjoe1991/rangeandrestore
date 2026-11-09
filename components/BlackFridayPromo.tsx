@@ -48,7 +48,7 @@ export function BlackFridayPromo() {
               id="black-friday-heading"
               className="mt-3 text-balance text-3xl font-black leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl"
             >
-              Your recovery, <span className="text-accent-light">our treat!</span>
+              Your recovery, <span className="text-accent-light">our treat.</span>
             </h2>
 
             <p className="mx-auto mt-4 max-w-xl text-sm font-medium leading-relaxed text-teal-tint sm:text-base md:mx-0">
@@ -86,14 +86,11 @@ export function BlackFridayPromo() {
               <br />
               infrared sauna session
             </p>
-            <p className="mt-2 text-xs font-bold text-brand-green/80">
-              Relax, recover and warm right through.
-            </p>
 
             <BookingButton
               label="Book Now"
               variant="solid"
-              className="mt-5 w-full sm:w-auto sm:px-10"
+              className="mt-6 w-full sm:w-auto sm:px-10"
             />
             <p className="mt-3 text-[0.7rem] font-semibold text-brand-green/75">
               Offer runs {BLACK_FRIDAY_PROMO.window}
